@@ -18,7 +18,7 @@ Payjoin lets us build transactions with inputs from another owner that break tha
 
 ### Scan a Unified QR Code
 
-This ia BIP21 URI with a payjoin parameter. If the scanner does not support payjoin, it can still fall back to the address.
+This is a BIP21 [unified URI](https://bitcoinqr.dev/) with a payjoin parameter. Even if a wallet does not support payjoin, it can still fall back to the address.
 
 ![BIP21 URI with payjoin parmeter](./hrf-pj-qr.png)
 
@@ -51,29 +51,32 @@ Because of payjoin, any of the following outcomes are plausible:
 
 The possibility of that Alice and Bob may have both contributed via payjoin breaks the heuristic analysis used to harm bitcoin privacy. Payjoin not only makes it more difficult for someone looking at payjoin user history to figure out exactly how much money changed hands, it does so for every other transaction with two outputs too because it looks no different.
 
-## How to Payjoin
+## Use Payjoin with your Stack
 
 ### Send Payjoin
 
-There are a number of softwares which [support sending payjoin](https://en.bitcoin.it/wiki/PayJoin_adoption).
+Sending payjoin is a simple flow compared to lightning. It works anywhere with internet:
 
-1. Construct transaction as normal as a PSBT
-2. Request the receiver process it over HTTP
-3. Privacy is preserved.
+1. HTTP request a payjoin by sending a fallback transaction to the unified URI
+2. Sign and broadcast the payjoin transaction response
+3. Enjoy privacy and know you helped the whole network
 
 Make sure your front end accepts bip21 payjoin uris. There is a huge number of reasons they improve your users' experience anyhow.
 
-#### Support Sending Payjoin in my Wallet
+[Read the SDK docs ▶](https://docs.rs/payjoin/latest/payjoin/sender/index.html)
 
-Check out the payjoin SDK [sender documentation](https://docs.rs/payjoin/latest/payjoin/sender/index.html) for details.
+### Receive Payjoin
 
-### Request Payjoin
+Requesting payjoin requires a hot wallet and a public `https://` or `.onion` server endpoint.
 
-Requesting payjoin is more involved. As of today, doing so requires a hot wallet and a public `https://` or `.onion` endpoint. BTCPayServer and JoinMarket support it as does the alpha [payjoin-client tool for bitcoind](https://github.com/chaincase-app/payjoin/tree/master/payjoin-client).
+1. Share a payjoin URI or QR code
+2. Listen for a payjoin request
+3. Respond with a payjoin proposal, having added receiver input
+4. Wait for the sender to broadcast the transaction
 
-#### Support Requesting Payjoin in my wallet
+Payjoin is a great fit for lightning nodes since they already depend on hot wallets on always-online servers.
 
-Check out the payjoin crate [receiver documentation](https://docs.rs/payjoin/latest/payjoin/receiver/index.html) for details. Lightning software is a great fit for payjoin since nodes already depend on hot wallets and public servers.
+[Read the SDK docs ▶](https://docs.rs/payjoin/latest/payjoin/receiver/index.html)
 
 #### Serverless Payjoin
 
