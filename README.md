@@ -1,50 +1,46 @@
-# Payjoin: Private Bitcoin by Default
+# Payjoin: Zero Mix Privacy
 
-Bitcoin privacy solutions have been covert, interactive minefields that require users to deep dive into research to have any benefit. Even after, they don't run out of ways to shoot themselves in the foot.
-Payjoin brings privacy to bitcoin without much change at all to the expected experience. To make use of it, first we need wallet interoperability. Payjoin requires online interaction like lightning, and it fits inside [unified QRs](https://bitcoinqr.dev/). Payjoin will take off when wallets support sending and receiving to QRs with payjoin parameters.
+Payjoin brings privacy to bitcoin without changing the expected experience. It helps everyone, even those who don't use it. Payjoin transactions look normal and still confuse chain surveillance.
+
+Payjoin is easy to integrate, but can only take off when software supports sending and receiving.
 
 ## The Problem
 
-Asking users to take steps to preserve their privacy as is like asking them to be asset managers.
-Bitcoin transfers leave permanent records that can cause serious harm. privacy is a prerequisite to freedom. "Privacy in an open society requires anonymous transaction systems."
+Satoshi said that transactions with multiple inputs "necessarily reveal that their inputs were owned by the same owner" in the bitcoin whitepaper. That assumes transactions only have one funding source.
 
-Satoshi said it himself, transactions with multiple inputs "necessarily reveal that their inputs were owned by the same owner." And so typical bitcoin transactions leak privacy about the history of their funds.
+Surveillance companies use this assumption to creep on bitcoin users.
 
 ## A Solution
 
-Turn on privacy by default with an optional BIP21 parameter
+Payjoin lets us build transactions with inputs from another owner that break that "common ownership assumption." It works as a default for wallets that support it because it has a seamless fallback inside of the BIP 21 unified payment standard.
 
-[BIP 21] defines a scheme to create a bitcoin "payment link." By default, it includes an on-chain address to send funds to.
+## How to Payjoin
 
-BIP 21 was designed to be extensible. The spec allows for optional parameters in the URI. Those parameters allow us to specify a way to receive private payments
+### Scan a Unified QR Code
 
-## Examples
-
-### Unified QRs for Bitcoin
-
-BIP21 URI with payjoin parameter
+This ia BIP21 URI with a payjoin parameter. If the scanner does not support payjoin, it can still fall back to the address.
 
 ![BIP21 URI with payjoin parmeter](./hrf-pj-qr.png)
 
 Raw Data
 
 ```bip21
-bitcoin:bc1qcvsr6k3tpvlgn9hgtz97ltx6gtpxvdmyyqpgmv?amount=0.00419206&pj=https://btcpay.hrf.org/BTC/pj
+bitcoin:BC1QCVSR6K3TPVLGN9HGTZ97LTX6GTPXVDMYYQPGMV?pj=HTTPS://BTCPAY.HRF.ORG/BTC/pj
 ```
 
-BIP21 URI with BOLT 11 invoice
+Thi BIP21 URI has both a lightning invoice and a payjoin parameter.
 
-![BIP21 URI with BOLT 11 invoice](https://bitcoinqr.dev/qr-bip21-bolt11.png)
+![BIP21 URI with BOLT 11 invoice](./ln-pj.png)
 
 Raw Data
 
 ```bip21
-bitcoin:BC1QYLH3U67J673H6Y6ALV70M0PL2YZ53TZHVXGG7U?amount=0.00001&label=sbddesign%3A%20For%20lunch%20Tuesday&message=For%20lunch%20Tuesday&lightning=LNBC10U1P3PJ257PP5YZTKWJCZ5FTL5LAXKAV23ZMZEKAW37ZK6KMV80PK4XAEV5QHTZ7QDPDWD3XGER9WD5KWM36YPRX7U3QD36KUCMGYP282ETNV3SHJCQZPGXQYZ5VQSP5USYC4LK9CHSFP53KVCNVQ456GANH60D89REYKDNGSMTJ6YW3NHVQ9QYYSSQJCEWM5CJWZ4A6RFJX77C490YCED6PEMK0UPKXHY89CMM7SCT66K8GNEANWYKZGDRWRFJE69H9U5U0W57RRCSYSAS7GADWMZXC8C6T0SPJAZUP6
+bitcoin:BC1QCVSR6K3TPVLGN9HGTZ97LTX6GTPXVDMYYQPGMV?lightning=LNBC10U1P3PJ257PP5YZTKWJCZ5FTL5LAXKAV23ZMZEKAW37ZK6KMV80PK4XAEV5QHTZ7QDPDWD3XGER9WD5KWM36YPRX7U3QD36KUCMGYP282ETNV3SHJCQZPGXQYZ5VQSP5USYC4LK9CHSFP53KVCNVQ456GANH60D89REYKDNGSMTJ6YW3NHVQ9QYYSSQJCEWM5CJWZ4A6RFJX77C490YCED6PEMK0UPKXHY89CMM7SCT66K8GNEANWYKZGDRWRFJE69H9U5U0W57RRCSYSAS7GADWMZXC8C6T0SPJAZUP6&pj=HTTPS://BTCPAY.HRF.ORG/BTC/pj
 ```
 
 BIP 21 URI with BOLT 11 invoice and payjoin parameter
 
-### A payjoin *candidate*
+### How is it private?
 
 The following [transaction](https://mempool.space/tx/58d68b22ab96b87a11c1fbd3090fee23f96f71a4115f96210ba776d0ae7d8d55) conforms to *unnecessary input heuristic*. That means it contributes more inputs than are typical for the outputs it produces. Sometimes a single user makes transactions like this to [minimize future fees by merging coins](https://bitcoin.design/guide/how-it-works/coin-selection/#minimize-future-fees-merge-coins). Merging coins also connects their histories, hurting otherwise preserved privacy. Two parties may come together to merge using payjoin instead to save fees and privacy at the same time.
 
@@ -60,7 +56,7 @@ Any of the following analyses are plausible:
 - Bob had input 0, Alice had input 1. Bob was paid 90,326 sats to output 0, Alice took output 1 as change.
 - Bob had input 0, Alice had input 1. Bob was paid 1,507,082 sats to output 1, Alice took output 0 as change.
 
-The possibility of that Alice and Bob may have both contributed via payjoin breaks common input ownership heuristic, the only privacy problem left open in the bitcoin paper. Payjoin not only makes it more difficult for someone looking at payjoin user history to figure out exactly how much money changed hands, it does so for every other transaction with two outputs.
+The possibility of that Alice and Bob may have both contributed via payjoin breaks common input ownership heuristic, the only privacy problem left open in the bitcoin paper. Payjoin not only makes it more difficult for someone looking at payjoin user history to figure out exactly how much money changed hands, it does so for every other transaction with two outputs too because it looks no different.
 
 ## How to Payjoin
 
