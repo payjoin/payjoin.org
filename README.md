@@ -90,7 +90,7 @@ The "hot wallet" limitation may also be removed with an asynchronous payjoin pro
 
 ## Terminology
 
-- Payjoin - This two-party transaction breaks the common-input ownership heuristic singled out by satoshi as the open privacy problem in the bitcoin whitepaper.
+- Payjoin - This two-party transaction breaks the common-input ownership heuristic singled out by Satoshi as the open privacy problem in the bitcoin whitepaper.
 - P2EP (Pay-to-endpoint) - The method for two parties to create a payjoin over the internet
 - Bitcoin URI - Universal Resource Identifier
 - Unnecessary Input Heuristic - An assumption used by chain surveillance that there are more inputs than necessary to make what is assumed to be the primary transfer
