@@ -49,7 +49,7 @@ Because of payjoin, any of the following outcomes are plausible:
 - Bob had input 0, Alice had input 1. Bob was paid 90,326 sats to output 0, Alice took output 1 as change.
 - Bob had input 0, Alice had input 1. Bob was paid 1,507,082 sats to output 1, Alice took output 0 as change.
 
-The possibility of that Alice and Bob may have both contributed via payjoin breaks the heuristic analysis used to harm bitcoin privacy. Payjoin not only makes it more difficult for someone looking at payjoin user history to figure out exactly how much money changed hands, it does so for every other transaction with two outputs too because it looks no different.
+The possibility of that Alice and Bob may have both contributed via payjoin breaks the heuristic analysis used to harm bitcoin privacy. Payjoin not only makes it more difficult for someone looking at payjoin user history to figure out exactly how much money changed hands, it does so for every other transaction with many inputs and two outputs too. It looks no different.
 
 ## Use Payjoin with your Stack
 
