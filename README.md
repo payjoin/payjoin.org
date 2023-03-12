@@ -30,6 +30,8 @@ bitcoin:BC1QCVSR6K3TPVLGN9HGTZ97LTX6GTPXVDMYYQPGMV?pj=HTTPS://BTCPAY.HRF.ORG/BTC
 
 ### Try the Demo
 
+Let's check out a payjoin flow. Bob is on the left trying to purchase some jewelry without his peers finding out. The merchant's point of sale is on the right. Click Bob's screen to scan the QR code and see just how easy it is to payjoin.
+
 <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2F7BpOmi30JgG6gIaE0T7fL4%2FPayjoin-Designs-Bitcoin-Wallet-UI-Kit-%2526-Design-System%3Fpage-id%3D4263%253A62592%26node-id%3D4954%253A70101%26viewport%3D-4364%252C-2385%252C0.48%26scaling%3Dmin-zoom%26starting-point-node-id%3D4954%253A70101" allowfullscreen></iframe>
 
 ### How is it private?
