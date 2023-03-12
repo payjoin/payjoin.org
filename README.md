@@ -4,6 +4,8 @@ Payjoin brings privacy to bitcoin without changing the expected experience. It h
 
 Payjoin is easy to integrate, but can only take off when software supports sending and receiving.
 
+<a href="#send"><button name="start">Start with sending</button></a>
+
 ## The Problem
 
 Satoshi said that transactions with multiple inputs "necessarily reveal that their inputs were owned by the same owner" in the bitcoin whitepaper. That assumes transactions only have one funding source.
@@ -61,7 +63,9 @@ The possibility of that Alice and Bob may have both contributed via payjoin brea
 
 ### Send Payjoin
 
-Sending payjoin is a simple flow compared to lightning. It works anywhere with internet:
+<a id="send"></a>
+
+Sending payjoin is simple compared to lightning. It works anywhere with internet:
 
 1. HTTP request a payjoin by sending a fallback transaction to the unified URI
 2. Sign and broadcast the payjoin transaction response
@@ -69,7 +73,7 @@ Sending payjoin is a simple flow compared to lightning. It works anywhere with i
 
 Make sure your front end accepts bip21 payjoin uris. There is a huge number of reasons they improve your users' experience anyhow.
 
-[Read the SDK docs ▶](https://docs.rs/payjoin/latest/payjoin/sender/index.html)
+<a href="https://docs.rs/payjoin/latest/payjoin/sender/index.html" target="_blank"><button name="send">Read the SDK docs ▶</button></a>
 
 ### Receive Payjoin
 
@@ -82,7 +86,7 @@ Requesting payjoin requires a hot wallet and a public `https://` or `.onion` ser
 
 Payjoin is a great fit for lightning nodes since they already depend on hot wallets on always-online servers.
 
-[Read the SDK docs ▶](https://docs.rs/payjoin/latest/payjoin/receiver/index.html)
+<a href="https://docs.rs/payjoin/latest/payjoin/receiver/index.html" target="_blank"><button name="receive">Read the SDK docs ▶</button></a>
 
 #### Serverless Payjoin
 
