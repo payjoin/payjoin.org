@@ -2,7 +2,7 @@
 
 Payjoin brings privacy to bitcoin without changing the expected experience. It helps everyone, even those who don't use it. Payjoin transactions look normal and still confuse chain surveillance.
 
-Payjoin is easy to integrate, but can only take off when software supports sending and receiving.
+Payjoin is easy to integrate, but can only take off when software supports sending and receiving via [the BIP 78 spec](https://github.com/bitcoin/bips/blob/master/bip-0078.mediawiki).
 
 <a href="#send"><button name="start">Start with sending</button></a>
 
