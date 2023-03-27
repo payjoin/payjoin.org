@@ -10,7 +10,8 @@ Payjoin is easy to integrate, but can only take off when software supports sendi
 
 Satoshi said that transactions with multiple inputs "necessarily reveal that their inputs were owned by the same owner" in the bitcoin whitepaper. That assumes transactions only have one funding source.
 
-Surveillance companies use this assumption to creep on bitcoin users.
+Surveillance companies use th
+assumption to creep on bitcoin users.
 
 ## A Solution
 
@@ -71,7 +72,7 @@ Sending payjoin is simple compared to lightning. It works anywhere with internet
 2. Sign and broadcast the payjoin transaction response
 3. Enjoy privacy and know you helped the whole network
 
-Make sure your front end accepts bip21 payjoin uris. There is a huge number of reasons they improve your users' experience anyhow.
+Make sure your front end accepts bip21 payjoin uris. There are a huge number of reasons they improve your users' experience anyhow.
 
 <a href="https://docs.rs/payjoin/latest/payjoin/sender/index.html" target="_blank"><button name="send">Read the SDK docs ▶</button></a>
 
