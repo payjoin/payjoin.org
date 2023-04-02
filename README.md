@@ -89,11 +89,13 @@ Payjoin is a great fit for lightning nodes since they already depend on hot wall
 
 <a href="https://docs.rs/payjoin/latest/payjoin/receiver/index.html" target="_blank"><button name="receive">Read the SDK docs ▶</button></a>
 
-#### Serverless Payjoin
+## Future Plans
+
+### Serverless Payjoin
 
 There is a [public proposal](https://gist.github.com/DanGould/243e418752fff760c9f6b23bba8a32f9) to allow anyone to receive a payjoin without running a public server. In order to advance Serverless Payjoin into a formal BIP specification we need your help with a second, independent implementation. Please share, leave your comments, and [join the development chat](https://t.me/chaincase/4109) to help.
 
-#### Async Payjoin
+### Async Payjoin
 
 The "hot wallet" limitation may also be removed with an asynchronous payjoin protocol that lets the sender and receiver wait to receive signatures.
 
