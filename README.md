@@ -114,3 +114,10 @@ The "hot wallet" limitation may also be removed with an asynchronous payjoin pro
 - [github](https://github.com/payjoin)
 - [chat on telegram](https://t.me/chaincase/1)
 - [roadmap](https://github.com/orgs/payjoin/projects/1)
+
+
+## Resources
+
+- [The BIP 78 Payjoin Spec](https://github.com/bitcoin/bips/blob/master/bip-0078.mediawiki)
+- [The Payjoin Experence: Design Guide Case Study](https://bitcoin.design/guide/case-studies/payjoin/)
+- [PayJoin Adoption wiki table](https://en.bitcoin.it/wiki/PayJoin_adoption)
