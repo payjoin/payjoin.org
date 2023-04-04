@@ -1,4 +1,4 @@
-# Payjoin: Privacy Without Mixing
+# Payjoin: Privacy without Mixing
 
 Payjoin brings privacy to bitcoin without changing the expected experience. It helps everyone, even those who don't use it. Payjoin transactions look normal and still confuse chain surveillance.
 
@@ -112,5 +112,5 @@ The "hot wallet" limitation may also be removed with an asynchronous payjoin pro
 ## Join the Discussion and Contribute
 
 - [github](https://github.com/payjoin)
-- [telegram](https://t.me/chaincase/1)
+- [chat on telegram](https://t.me/chaincase/1)
 - [roadmap](https://github.com/orgs/payjoin/projects/1)
