@@ -114,6 +114,7 @@ The "hot wallet" limitation may also be removed with an asynchronous payjoin pro
 - [github](https://github.com/payjoin)
 - [chat on telegram](https://t.me/chaincase/1)
 - [roadmap](https://github.com/orgs/payjoin/projects/1)
+- [support payjoin directly](https://geyser.fund/project/payjoin/)
 
 
 ## Resources
