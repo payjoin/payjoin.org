@@ -2,7 +2,7 @@
 
 Payjoin brings privacy to bitcoin without changing the expected experience. It helps everyone, even those who don't use it. Payjoin transactions look normal and still confuse chain surveillance.
 
-Payjoin is easy to integrate, but can only take off when software supports sending and receiving via [the BIP 78 spec](https://github.com/bitcoin/bips/blob/master/bip-0078.mediawiki).
+Payjoin is easy to integrate, but can only take off when software supports sending and receiving via [the BIP 78 standard](https://github.com/bitcoin/bips/blob/master/bip-0078.mediawiki).
 
 <a href="#send"><button name="start">Start with sending</button></a>
 
@@ -10,8 +10,7 @@ Payjoin is easy to integrate, but can only take off when software supports sendi
 
 Satoshi said that transactions with multiple inputs "necessarily reveal that their inputs were owned by the same owner" in the bitcoin whitepaper. That assumes transactions only have one funding source.
 
-Surveillance companies use th
-assumption to creep on bitcoin users.
+Surveillance companies use this assumption to creep on bitcoin users.
 
 ## A Solution
 
@@ -21,15 +20,21 @@ Payjoin lets us build transactions with inputs from another owner that break tha
 
 ### Scan a Unified QR Code
 
-This is a BIP21 [unified URI](https://bitcoinqr.dev/) with a payjoin parameter. Even if a wallet does not support payjoin, it can still fall back to the address.
+This is a BIP21 [unified URI](https://bitcoinqr.dev/) with a payjoin parameter. Even if a wallet does not support payjoin, it can still fall back to the address to make a successful transfer.
 
-![BIP21 URI with payjoin parmeter](./hrf-pj-qr.png)
+![BIP21 URI with payjoin parmeter](./do-payjoin-org.png)
 
 Raw Data
 
 ```bip21
-bitcoin:BC1QCVSR6K3TPVLGN9HGTZ97LTX6GTPXVDMYYQPGMV?pj=HTTPS://BTCPAY.HRF.ORG/BTC/pj
+bitcoin:BC1Q74ACVCYYUMNY0PR9M676WXRVRYQUC86J3T7G6P?amount=0.0006942&pj=https://do.payjoin.org
 ```
+
+This particular BIP21 will go to to payjoin.org's cold wallet. By using payjoin, you can get a unique address for your support to keep that private. Yes, even though we use a cold wallet. Cool ❄️!
+
+#### Payjoin as a Reusable Payment Code
+
+When using the code above, a successful payjoin will replace the BIP21 address with a substitute unique to your transfer. Both sender and receiver get enhanced privacy since nobody else knows about the substitue address. If someone looks up the address from the code above, they will not find the payjoin. In this way, it protects privacy like a static payment code or a stealth address.
 
 ### Try the Demo
 
@@ -115,7 +120,6 @@ The "hot wallet" limitation may also be removed with an asynchronous payjoin pro
 - [chat on telegram](https://t.me/chaincase/1)
 - [roadmap](https://github.com/orgs/payjoin/projects/1)
 - [support payjoin directly](https://geyser.fund/project/payjoin/)
-
 
 ## Resources
 
