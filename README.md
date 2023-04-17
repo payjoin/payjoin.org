@@ -1,6 +1,6 @@
 # Payjoin: Privacy sans Mixing
 
-Payjoin brings privacy to bitcoin without changing the expected experience. It helps everyone, even those who don't use it. Payjoin transactions look normal and still foil chain surveillance.
+Payjoin brings privacy to bitcoin without changing the way you're used to using it. Payjoin transactions don't look any different from normal activity so they boost everyone's privacy, even those who don't payjoin, and foil chain surveillance.
 
 Payjoin is easy to integrate, but can only take off when software supports sending and receiving via [the BIP 78 standard](https://github.com/bitcoin/bips/blob/master/bip-0078.mediawiki).
 
