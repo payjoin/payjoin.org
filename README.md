@@ -1,6 +1,6 @@
-# Payjoin: Privacy without Mixing
+# Payjoin: Privacy sans Mixing
 
-Payjoin brings privacy to bitcoin without changing the expected experience. It helps everyone, even those who don't use it. Payjoin transactions look normal and still confuse chain surveillance.
+Payjoin brings privacy to bitcoin without changing the expected experience. It helps everyone, even those who don't use it. Payjoin transactions look normal and still foil chain surveillance.
 
 Payjoin is easy to integrate, but can only take off when software supports sending and receiving via [the BIP 78 standard](https://github.com/bitcoin/bips/blob/master/bip-0078.mediawiki).
 
@@ -10,7 +10,7 @@ Payjoin is easy to integrate, but can only take off when software supports sendi
 
 Satoshi said that transactions with multiple inputs "necessarily reveal that their inputs were owned by the same owner" in the bitcoin whitepaper. That assumes transactions only have one funding source.
 
-Surveillance companies use this assumption to creep on bitcoin users.
+This assumption is the basis of bitcoin surveillance.
 
 ## A Solution
 
