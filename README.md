@@ -114,10 +114,15 @@ The "hot wallet" limitation may also be removed with an asynchronous payjoin pro
 - Unnecessary Input Heuristic - An assumption used by chain surveillance that there are more inputs than necessary to make what is assumed to be the primary transfer
 - Common input ownership heuristic - The assumption that inputs to a transaction necessarily belong to the same entity
 
-## Join the Discussion and Contribute
+## Join the Discussion
 
 - [github](https://github.com/payjoin)
 - [chat on telegram](https://t.me/chaincase/1)
+
+<iframe src="https://payjoin.substack.com/embed" width="480" height="320" style="border:1px solid #EEE; background:white;" frameborder="0" scrolling="no"></iframe>
+
+## Contribute
+
 - [roadmap](https://github.com/orgs/payjoin/projects/1)
 - [support payjoin directly](https://geyser.fund/project/payjoin/)
 
