@@ -117,7 +117,7 @@ The "hot wallet" limitation may also be removed with an asynchronous payjoin pro
 ## Join the Discussion
 
 - [github](https://github.com/payjoin)
-- [chat on discord]([https://t.me/chaincase/1](https://discord.gg/6rJD9R684h))
+- [chat on discord](https://discord.gg/6rJD9R684h)
 
 <iframe src="https://payjoin.substack.com/embed" width="480" height="320" style="border:1px solid #EEE; background:white;" frameborder="0" scrolling="no"></iframe>
 
