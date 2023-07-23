@@ -79,7 +79,7 @@ Sending payjoin is simple compared to lightning. It works anywhere with internet
 
 Make sure your front end accepts bip21 payjoin uris. There are a huge number of reasons they improve your users' experience anyhow.
 
-<a href="https://docs.rs/payjoin/latest/payjoin/sender/index.html" target="_blank"><button name="send">Read the SDK docs ▶</button></a>
+<a href="https://docs.rs/payjoin/latest/payjoin/send/index.html" target="_blank"><button name="send">Read the SDK docs ▶</button></a>
 
 ### Receive Payjoin
 
@@ -92,7 +92,7 @@ Requesting payjoin requires a hot wallet and a public `https://` or `.onion` ser
 
 Payjoin is a great fit for lightning nodes since they already depend on hot wallets on always-online servers.
 
-<a href="https://docs.rs/payjoin/latest/payjoin/receiver/index.html" target="_blank"><button name="receive">Read the SDK docs ▶</button></a>
+<a href="https://docs.rs/payjoin/latest/payjoin/receive/index.html" target="_blank"><button name="receive">Read the SDK docs ▶</button></a>
 
 ## Future Plans
 
