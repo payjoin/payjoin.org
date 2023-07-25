@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	--app-background: #ffffff;
+	--app-color: #000000;
+	--app-primary: #f75394;
+	@apply ease-in-out duration-300;
+}
+:root.dark {
+	--app-background: #1e1e1e;
+	--app-color: #ffffff;
+	@apply ease-in-out duration-300;
+}
+html {
+	@apply antialiased;
+	background-color: var(--app-background);
+	color: var(--app-color);
+}
