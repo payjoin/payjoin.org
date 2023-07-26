@@ -1,7 +1,7 @@
 <script>
 	import Link from '../components/Link.svelte';
 	import { toggleDarkMode } from '$lib/theme';
-	import Icon from './Icon/Icon.svelte';
+	import Icon from '../components/Icon/Icon.svelte';
 </script>
 
 <ul class="flex justify-end m-6 gap-4 items-center">

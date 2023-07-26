@@ -1,11 +1,11 @@
 {
-  "extend": {
-    "colors": {
-      "transparent": "transparent",
-      "current": "currentColor",
-      "primary": {
-        "DEFAULT": "#f75394"
-      }
-    }
-  }
+	"extend": {
+		"colors": {
+			"transparent": "transparent",
+			"current": "currentColor",
+			"primary": {
+				"DEFAULT": "#f75394"
+			}
+		}
+	}
 }

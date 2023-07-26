@@ -6,5 +6,5 @@
 </script>
 
 <span class={`flex ${$$props.class || 'h-6 text-primary'} aspect-square`}>
-	{@html icons[name]}
+	{icons[name]}
 </span>

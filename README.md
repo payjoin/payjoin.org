@@ -44,7 +44,7 @@ Let's check out a payjoin flow. Bob is on the left trying to purchase some jewel
 
 ### How is it private?
 
-The following [transaction](https://mempool.space/tx/58d68b22ab96b87a11c1fbd3090fee23f96f71a4115f96210ba776d0ae7d8d55) conforms to *unnecessary input heuristic*. It contributes more inputs than are typical for the outputs it produces. It could be a payjoin, but we can't know for sure.
+The following [transaction](https://mempool.space/tx/58d68b22ab96b87a11c1fbd3090fee23f96f71a4115f96210ba776d0ae7d8d55) conforms to _unnecessary input heuristic_. It contributes more inputs than are typical for the outputs it produces. It could be a payjoin, but we can't know for sure.
 
 It's normal to make transactions like this to [minimize future fees by merging coins](https://bitcoin.design/guide/how-it-works/coin-selection/#minimize-future-fees-merge-coins). Merging coins connects their histories and hurts privacy if this is not a payjoin.
 
