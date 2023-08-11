@@ -2,7 +2,9 @@
 	import Icon from '../components/Icon/Icon.svelte';
 </script>
 
-<section class="text-center flex items-center justify-center flex-col w-full">
+<section
+	class="h-screen pt-20 border border-red-300 text-center flex items-center justify-between flex-col w-4/5"
+>
 	<div>
 		<h1>Better Bitcoin Transactions</h1>
 		<h5 class="text-2xl">
@@ -10,51 +12,12 @@
 			once
 		</h5>
 	</div>
-	<a href="#why" class="flex flex-col justify-center items-cente">
+	<a href="#why" class="flex flex-col justify-center">
 		<p class="text-primary">Why Payjoin?</p>
 		<Icon class="h-20 border border-red-300" name="arrowJoin" />
 	</a>
 </section>
 
-<section class="text-center flex items-center justify-center flex-col w-full">
-	<div>
-		<h1>Better Bitcoin Transactions</h1>
-		<h5 class="text-2xl">
-			Payjoin is a simple protocol that can scale Bitcoin, save fees, and preserve privacy all at
-			once
-		</h5>
-	</div>
-	<a href="#why" class="flex flex-col justify-center items-cente">
-		<p class="text-primary">Why Payjoin?</p>
-		<Icon class="h-20 border border-red-300" name="arrowJoin" />
-	</a>
-</section>
-<section class="text-center flex items-center justify-center flex-col w-full">
-	<div>
-		<h1>Better Bitcoin Transactions</h1>
-		<h5 class="text-2xl">
-			Payjoin is a simple protocol that can scale Bitcoin, save fees, and preserve privacy all at
-			once
-		</h5>
-	</div>
-	<a href="#why" class="flex flex-col justify-center items-cente">
-		<p class="text-primary">Why Payjoin?</p>
-		<Icon class="h-20 border border-red-300" name="arrowJoin" />
-	</a>
-</section>
-<section class="text-center flex items-center justify-center flex-col w-full">
-	<div>
-		<h1>Better Bitcoin Transactions</h1>
-		<h5 class="text-2xl">
-			Payjoin is a simple protocol that can scale Bitcoin, save fees, and preserve privacy all at
-			once
-		</h5>
-	</div>
-	<a href="#why" class="flex flex-col justify-center items-cente">
-		<p class="text-primary">Why Payjoin?</p>
-		<Icon class="h-20 border border-red-300" name="arrowJoin" />
-	</a>
-</section>
 <section id="why">
 	<h2>Why Payjoin?</h2>
 </section>

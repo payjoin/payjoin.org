@@ -3,8 +3,7 @@
 	import Nav from '../features/Nav.svelte';
 </script>
 
-<Nav />
-
-<main class="flex flex-col mx-auto w-4/5 h-screen" on:scroll={() => console.log('asdf')}>
+<main class="flex flex-col mx-auto items-center">
+	<Nav />
 	<slot />
 </main>
