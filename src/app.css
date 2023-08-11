@@ -20,7 +20,7 @@ html {
 	color: var(--app-color);
 }
 body {
-	background-image: url('/images/stefano-bucciarelli-59HOF9zHKNs-unsplash\ 1.png');
+	background-image: url('/images/plasma.png');
 	background-repeat: no-repeat;
 	background-size: cover;
 	@apply h-screen w-screen;
