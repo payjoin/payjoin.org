@@ -6,11 +6,10 @@
 </script>
 
 <div class="w-4/5 flex flex-col gap-8">
-	<section class="h-screen pt-20 pb-8 flex items-center justify-between flex-col">
+	<section class="h-screen pt-10 pb-8 flex items-center justify-between flex-col">
 		<div>
 			<!-- TODO: some clever quip with "pay" and "join" concepts -->
-			<!-- <h1>Pay it Forward</h1> -->
-			<h1>Join the Movement</h1>
+			<h1>Better Bitcoin Transactions</h1>
 			<h5 class="text-2xl">
 				Payjoin is a simple protocol that can scale Bitcoin, save fees, and preserve privacy all at
 				once
@@ -22,8 +21,8 @@
 		</a>
 	</section>
 	<!-- TODO: flex col on large screen -->
-	<section id="why" class="flex sm:flex-col">
-		<div class="flex flex-col">
+	<section id="why" class="flex flex-col lg:flex-row gap-8">
+		<div class="flex flex-col flex-1">
 			<h2>The Problem</h2>
 			<p>
 				Satoshi said that transactions with multiple inputs "necessarily reveal that their inputs
@@ -32,7 +31,7 @@
 				companies use this revelation to creep on bitcoin users.
 			</p>
 		</div>
-		<div class="flex flex-col text-[#F75394]">
+		<div class="flex flex-col text-[#F75394] flex-1">
 			<h2 class="pink">The Solution</h2>
 			<p>
 				Payjoin joins sender and receiver inputs in the one transaction. Batching like this reduces
@@ -46,7 +45,7 @@
 			</p>
 		</div>
 	</section>
-	<section>
+	<!-- <section>
 		<h2>How to Payjoin</h2>
 		<h3>Scan a Unified QR Code</h3>
 		<p>
@@ -56,8 +55,8 @@
 			payjoin, you can get a unique address for your support to keep that private. Yes, even though we
 			use a cold wallet. Cool ❄️!
 		</p>
-	</section>
-	<section class="flex gap-4 sm:flex-col">
+	</section> -->
+	<section class="flex gap-4 flex-col lg:flex-row">
 		<div>
 			<h2>Try the Demo</h2>
 			<p>
@@ -183,70 +182,76 @@
 			><Button secondary>Read the SDK docs</Button></Link
 		>
 	</section>
-	<section class="grid grid-cols-2 gap-x-8">
-		<h2 class="col-span-2">Future Plans</h2>
-		<h3>Serverless Payjoin</h3>
-		<h3>Async Payjoin</h3>
+	<section class="flex flex-col">
+		<h2>Future Plans</h2>
+		<div class="flex flex-col lg:flex-row">
+			<div class="flex flex-col flex-1">
+				<h3>Serverless Payjoin</h3>
+				<p>
+					There is a public proposal to allow anyone to receive a payjoin without running a public
+					server. In order to advance Serverless Payjoin into a formal BIP specification we need
+					your help with a second, independent implementation. Please share, leave your comments,
+					and join the development chat to help.
+				</p>
+			</div>
+			<div class="flex flex-col flex-1">
+				<h3>Async Payjoin</h3>
 
-		<p>
-			There is a public proposal to allow anyone to receive a payjoin without running a public
-			server. In order to advance Serverless Payjoin into a formal BIP specification we need your
-			help with a second, independent implementation. Please share, leave your comments, and join
-			the development chat to help.
-		</p>
-		<p>
-			The “hot wallet” limitation may also be removed with an asynchronous payjoin protocol that
-			lets the sender and receiver wait to receive signatures.
-		</p>
+				<p>
+					The “hot wallet” limitation may also be removed with an asynchronous payjoin protocol that
+					lets the sender and receiver wait to receive signatures.
+				</p>
+			</div>
+		</div>
 	</section>
 	<section>
 		<h2>Get Involved</h2>
-		<p>
-			We need your help to make payjoin a reality. If you are a developer, please check out the SDK
+		<p>We need your help to make payjoin a reality. If you are:</p>
+		<ul class="list-disc list-inside">
+			<li>
+				<strong>Developer</strong>: Check out the <Link
+					target="_blank"
+					href="https://payjoindevkit.org/">SDK</Link
+				>
+			</li>
+			<li>
+				<strong>Designer</strong>: See the <Link
+					target="_blank"
+					href="https://www.figma.com/file/WTqXA6ykLOYEyo2N3wfCGZ/payjoin-%F0%9F%94%97-Design-(Copy)?type=design&node-id=0%3A1&mode=design&t=lpbNqWuNvwXjUnbK-1"
+					>Figma</Link
+				>
+			</li>
+			<li><strong>Anyone Else:</strong> Spread the word!</li>
+		</ul>
+		<!-- If you are a developer, please check out the SDK
 			and leave your feedback. If you are a designer, please help us make the user experience
 			amazing. If you are a writer, please help us explain payjoin to the world. If you are a
 			merchant, please consider accepting payjoin. If you are a user, please ask your wallet
-			provider to support payjoin.
-		</p>
+			provider to support payjoin. -->
 	</section>
-	<section class="flex">
-		<div class="flex flex-col">
-			<p>Docs</p>
-			<Link target="_blank" href="https://docs.rs/payjoin/latest/payjoin/send/index.html"
-				>Introduction</Link
-			>
-			<Link target="_blank" href="https://docs.rs/payjoin/latest/payjoin/send/index.html"
-				>Send and Receive Test Payjoins</Link
-			>
-
-			<Link target="_blank" href="https://docs.rs/payjoin/latest/payjoin/send/index.html"
-				>Examples</Link
-			>
-			<Link target="_blank" href="https://docs.rs/payjoin/latest/payjoin/send/index.html"
-				>Support</Link
-			>
-		</div>
+	<section class="flex gap-4 justify-between mb-10">
 		<div class="flex flex-col">
 			<p>Community</p>
-			<Link target="_blank" href="https://docs.rs/payjoin/latest/payjoin/send/index.html"
-				>Discord</Link
-			>
+			<Link target="_blank" href="">Discord</Link>
 			<Link target="_blank" href="https://docs.rs/payjoin/latest/payjoin/send/index.html"
 				>GitHub</Link
 			>
-
-			<Link target="_blank" href="https://docs.rs/payjoin/latest/payjoin/send/index.html"
-				>Telegram</Link
-			>
+			<Link target="_blank" href="https://payjoin.substack.com">Newsletter</Link>
 		</div>
 		<div class="flex flex-col">
-			<p>More</p>
-			<Link target="_blank" href="https://docs.rs/payjoin/latest/payjoin/send/index.html">PDK</Link>
-			<Link target="_blank" href="https://docs.rs/payjoin/latest/payjoin/send/index.html">Blog</Link
+			<p>Contribute</p>
+			<Link target="_blank" href="https://github.com/orgs/payjoin/projects/1">Roadmap</Link>
+			<Link target="_blank" href="https://geyser.fund/project/payjoin/">Donate</Link>
+			<!-- <Link target="_blank">Spread the Word!</Link> -->
+		</div>
+		<div class="flex flex-col">
+			<p>Resources</p>
+			<Link target="_blank" href="https://payjoindevkit.org/">Payjoin Dev Kit</Link>
+			<Link target="_blank" href="https://en.bitcoin.it/wiki/PayJoin_adoption"
+				>Payjoin Adoption</Link
 			>
-
-			<Link target="_blank" href="https://docs.rs/payjoin/latest/payjoin/send/index.html"
-				>Medium</Link
+			<Link target="_blank" href="https://bitcoin.design/guide/case-studies/payjoin/"
+				>Case Study</Link
 			>
 		</div>
 	</section>
@@ -283,6 +288,6 @@
 		}
 	}
 	.animate-smooth-bounce {
-		animation: smooth-bounce 2.5s infinite;
+		animation: smooth-bounce 2s infinite;
 	}
 </style>

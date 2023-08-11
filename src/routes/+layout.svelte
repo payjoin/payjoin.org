@@ -4,6 +4,6 @@
 </script>
 
 <main class="flex flex-col mx-auto items-center">
-	<Nav />
+	<!-- <Nav /> -->
 	<slot />
 </main>
