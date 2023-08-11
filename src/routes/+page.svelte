@@ -1,26 +1,146 @@
 <script>
 	import Icon from '../components/Icon/Icon.svelte';
+	import Link from '../components/Link.svelte';
 </script>
 
-<section
-	class="h-screen pt-20 border border-red-300 text-center flex items-center justify-between flex-col w-4/5"
->
-	<div>
-		<h1>Better Bitcoin Transactions</h1>
-		<h5 class="text-2xl">
-			Payjoin is a simple protocol that can scale Bitcoin, save fees, and preserve privacy all at
-			once
-		</h5>
-	</div>
-	<a href="#why" class="flex flex-col justify-center">
-		<p class="text-primary">Why Payjoin?</p>
-		<Icon class="h-20 border border-red-300" name="arrowJoin" />
-	</a>
-</section>
+<div class="w-4/5 flex flex-col gap-8">
+	<section class="h-screen pt-20 pb-8 flex items-center justify-between flex-col">
+		<div>
+			<h1>Better <span class="text-[#f2a900] rotate-180">₿</span>itcoin Transactions</h1>
+			<h5 class="text-2xl">
+				Payjoin is a simple protocol that can scale Bitcoin, save fees, and preserve privacy all at
+				once
+			</h5>
+		</div>
+		<a href="#why" class="flex flex-col justify-center">
+			<p class="text-primary">Why Payjoin?</p>
+			<Icon class="h-20" name="arrowJoin" />
+		</a>
+	</section>
+	<!-- TODO: flex col on large screen -->
+	<section id="why" class="flex sm:flex-col">
+		<div class="flex flex-col">
+			<h2>The Problem</h2>
+			<p>
+				Satoshi said that transactions with multiple inputs "necessarily reveal that their inputs
+				were owned by the same owner" in the bitcoin whitepaper. For legacy bitcoin software, this
+				tends to be true. As a result, you end up spending more than you have to and Surveillance
+				companies use this revelation to creep on bitcoin users.
+			</p>
+		</div>
+		<div class="flex flex-col text-[#F75394]">
+			<h2 class="pink">The Solution</h2>
+			<p>
+				Payjoin joins sender and receiver inputs in the one transaction. Batching like this reduces
+				fees and packs more payment activity, scaling bitcoin. Joining inputs from many owners
+				breaks that assumption Satoshi warned us about. You wallet can payjoins when you spend
+				without having you make any decisions. And if your walelt doesn't support it, it has a
+				seamless fallback inside of <Link
+					href="https://github.com/bitcoin/bips/blob/master/bip-0021.mediawiki"
+					target="_blank">the BIP 21 unified payment standard</Link
+				>.
+			</p>
+		</div>
+	</section>
+	<section>
+		<h2>How to Payjoin</h2>
+		<h3>Scan a Unified QR Code</h3>
+		<p>
+			This is a <Link href="https://bitcoinqr.dev/" target="_blank">BIP21 unified URI</Link> with a payjoin
+			parameter. Even if a wallet does not support payjoin, it can still fall back to the address to
+			make a successful transfer. This particular BIP21 will go to to payjoin.org’s cold wallet. By using
+			payjoin, you can get a unique address for your support to keep that private. Yes, even though we
+			use a cold wallet. Cool ❄️!
+		</p>
+	</section>
+	<section class="flex gap-4 sm:flex-col">
+		<div>
+			<h2>Try the Demo</h2>
+			<p>
+				Let's check out a payjoin flow. Bob is on the left trying to purchase some jewelry without
+				his peers finding out. The merchant's point of sale is on the right. Click Bob's screen to
+				scan the QR code and see just how easy it is to payjoin.
+			</p>
+		</div>
+		<div>
+			<iframe
+				title="Payjoin Demo"
+				class="w-full h-96"
+				style="border: 1px solid rgba(0, 0, 0, 0.1);"
+				src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2F7BpOmi30JgG6gIaE0T7fL4%2FPayjoin-Designs-Bitcoin-Wallet-UI-Kit-%2526-Design-System%3Fpage-id%3D4263%253A62592%26node-id%3D4954%253A70101%26viewport%3D-4364%252C-2385%252C0.48%26scaling%3Dmin-zoom%26starting-point-node-id%3D4954%253A70101"
+				allowfullscreen
+			/>
+		</div>
+	</section>
+	<section class="flex flex-col gap-4">
+		<h3>How is it private?</h3>
 
-<section id="why">
-	<h2>Why Payjoin?</h2>
-</section>
+		<p>
+			The following <a
+				href="https://mempool.space/tx/58d68b22ab96b87a11c1fbd3090fee23f96f71a4115f96210ba776d0ae7d8d55"
+				>transaction</a
+			>
+			conforms to <em>unnecessary input heuristic</em>. It contributes more inputs than are typical
+			for the outputs it produces. It could be a payjoin, but we can’t know for sure.
+		</p>
+
+		<p>
+			It’s normal to make transactions like this to <a
+				href="https://bitcoin.design/guide/how-it-works/coin-selection/#minimize-future-fees-merge-coins"
+				>minimize future fees by merging coins</a
+			>. Merging coins connects their histories and hurts privacy if this is not a payjoin.
+		</p>
+
+		<p>
+			By using payjoin, two parties come together to merge coins, save fees, and enhance privacy at
+			the same time.
+		</p>
+
+		<code
+			class="my-8 flex p-4 text-[#F75394] gap-4 rounded-xl text-xs justify-between bg-[#401D29] self-center"
+		>
+			<div class="flex flex-col gap-4">
+				<span>input 0: 198,209 sats</span>
+				<span>input 1: 1,797,496 sats</span>
+			</div>
+			<div class="flex flex-col justify-center items-center gap-4">🔀</div>
+			<div class="flex flex-col gap-4">
+				<span> output 0: 288,535 sats</span>
+				<span> output 1: 1,705,291 sats</span>
+			</div>
+		</code>
+		<p>Because of payjoin, any of the following outcomes are plausible:</p>
+		<ul class="list-disc font-bold">
+			<li>
+				Alice had input 0 and input 1.
+				<br /><span>She paid Bob output 0 and made output 1 as change</span>
+			</li>
+			<li>
+				Alice had input 0 and input 1. <br />
+				<span>She paid Bob output 1 and made output 0 as change</span>
+			</li>
+			<li>
+				Bob had input 0, Alice had input 1. <br /><span
+					>Bob was paid 90,326 sats to output 0, Alice took output</span
+				>
+				1 as change.
+			</li>
+			<li>
+				Bob had input 0, Alice had input 1.<br /><span
+					>Bob was paid 1,507,082 sats to output 1, Alice took output 0 as change.</span
+				>
+			</li>
+		</ul>
+
+		<p>
+			The possibility of that Alice and Bob may have both contributed via payjoin breaks the
+			heuristic analysis used to harm bitcoin privacy. Payjoin not only makes it more difficult for
+			someone looking at payjoin user history to figure out exactly how much money changed hands, it
+			does so for every other transaction with many inputs and two outputs too. It looks no
+			different.
+		</p>
+	</section>
+</div>
 
 <style lang="postcss">
 	h1 {
@@ -29,7 +149,16 @@
 	h2 {
 		@apply text-4xl my-4 text-white;
 	}
+	h3 {
+		@apply text-2xl my-2 text-white;
+	}
+	.pink {
+		@apply text-[#F75394];
+	}
 	h5 {
 		@apply text-2xl;
+	}
+	ul > li > span {
+		@apply font-normal;
 	}
 </style>

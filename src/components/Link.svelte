@@ -4,7 +4,7 @@
 	$: rel = target === '_blank' ? 'noopener noreferrer' : '';
 </script>
 
-<a {href} {rel}>
+<a {href} {target} {rel}>
 	<slot />
 </a>
 
