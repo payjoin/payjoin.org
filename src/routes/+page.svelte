@@ -16,7 +16,7 @@
 				once
 			</h5>
 		</div>
-		<a href="#why" class="flex flex-col gap-2 justify-center">
+		<a href="#why" class="flex flex-col gap-2 justify-center animate-smooth-bounce">
 			<p class="text-primary">Why Payjoin?</p>
 			<Icon class="h-20" name="arrowJoin" />
 		</a>
@@ -198,15 +198,8 @@
 			The “hot wallet” limitation may also be removed with an asynchronous payjoin protocol that
 			lets the sender and receiver wait to receive signatures.
 		</p>
-		<!-- <div class="flex">
-			<div class="flex flex-col">
-
-			</div>
-			<div class="flex flex-col">
-	
-			</div>
-		</div> -->
 	</section>
+	<section />
 </div>
 
 <style lang="postcss">
@@ -227,5 +220,19 @@
 	}
 	ul > li > span {
 		@apply font-normal;
+	}
+	@keyframes smooth-bounce {
+		0%,
+		100% {
+			transform: translateY(-5%);
+			animation-timing-function: ease-in-out;
+		}
+		50% {
+			transform: none;
+			animation-timing-function: ease-in-out;
+		}
+	}
+	.animate-smooth-bounce {
+		animation: smooth-bounce 2.5s infinite;
 	}
 </style>
