@@ -20,7 +20,6 @@ html {
 	color: var(--app-color);
 }
 body {
-	background-image: url('/images/plasma.png');
 	background-repeat: no-repeat;
 	background-size: cover;
 	@apply h-screen w-screen;
