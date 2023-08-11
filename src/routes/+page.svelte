@@ -9,7 +9,8 @@
 	<section class="h-screen pt-10 pb-8 flex items-center justify-between flex-col">
 		<div>
 			<!-- TODO: some clever quip with "pay" and "join" concepts -->
-			<h1>Better Bitcoin Transactions</h1>
+			<h1>Payjoin</h1>
+			<h2>Better Bitcoin Transactions</h2>
 			<h5 class="text-2xl">
 				Payjoin is a simple protocol that can scale Bitcoin, save fees, and preserve privacy all at
 				once
