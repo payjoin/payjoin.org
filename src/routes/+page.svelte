@@ -58,7 +58,7 @@
 		</p>
 	</section> -->
 	<section class="flex gap-4 flex-col lg:flex-row">
-		<div>
+		<div class="flex-1">
 			<h2>Try the Demo</h2>
 			<p>
 				Let's check out a payjoin flow. Bob is on the left trying to purchase some jewelry without
@@ -66,7 +66,7 @@
 				scan the QR code and see just how easy it is to payjoin.
 			</p>
 		</div>
-		<div>
+		<div class="flex-1">
 			<iframe
 				title="Payjoin Demo"
 				class="w-full h-96"
@@ -205,30 +205,33 @@
 			</div>
 		</div>
 	</section>
-	<section>
-		<h2>Get Involved</h2>
-		<p>We need your help to make payjoin a reality. If you are:</p>
-		<ul class="list-disc list-inside">
-			<li>
-				<strong>Developer</strong>: Check out the <Link
-					target="_blank"
-					href="https://payjoindevkit.org/">SDK</Link
-				>
-			</li>
-			<li>
-				<strong>Designer</strong>: See the <Link
-					target="_blank"
-					href="https://www.figma.com/file/WTqXA6ykLOYEyo2N3wfCGZ/payjoin-%F0%9F%94%97-Design-(Copy)?type=design&node-id=0%3A1&mode=design&t=lpbNqWuNvwXjUnbK-1"
-					>Figma</Link
-				>
-			</li>
-			<li><strong>Anyone Else:</strong> Spread the word!</li>
-		</ul>
-		<!-- If you are a developer, please check out the SDK
-			and leave your feedback. If you are a designer, please help us make the user experience
-			amazing. If you are a writer, please help us explain payjoin to the world. If you are a
-			merchant, please consider accepting payjoin. If you are a user, please ask your wallet
-			provider to support payjoin. -->
+	<section class="flex justify-between">
+		<div>
+			<h2>Get Involved</h2>
+			<p>We need your help to make payjoin a reality. If you are:</p>
+			<ul class="list-disc list-inside">
+				<li>
+					<strong>Developer</strong>: Check out the <Link
+						target="_blank"
+						href="https://payjoindevkit.org/">SDK</Link
+					>
+				</li>
+				<li>
+					<strong>Designer</strong>: See the <Link
+						target="_blank"
+						href="https://www.figma.com/file/WTqXA6ykLOYEyo2N3wfCGZ/payjoin-%F0%9F%94%97-Design-(Copy)?type=design&node-id=0%3A1&mode=design&t=lpbNqWuNvwXjUnbK-1"
+						>Figma</Link
+					>
+				</li>
+				<li><strong>Anyone Else:</strong> Spread the word!</li>
+			</ul>
+			<!-- If you are a developer, please check out the SDK
+				and leave your feedback. If you are a designer, please help us make the user experience
+				amazing. If you are a writer, please help us explain payjoin to the world. If you are a
+				merchant, please consider accepting payjoin. If you are a user, please ask your wallet
+				provider to support payjoin. -->
+		</div>
+		<img class="w-1/2" src="/images/uncle-satoshi.jpg" alt="Satoshi Needs Your Help!" />
 	</section>
 	<section class="flex gap-4 justify-between mb-10">
 		<div class="flex flex-col">
