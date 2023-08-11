@@ -1,4 +1,5 @@
 <script>
+	import Button from '../components/Button.svelte';
 	import Capsule from '../components/Capsule.svelte';
 	import Icon from '../components/Icon/Icon.svelte';
 	import Link from '../components/Link.svelte';
@@ -8,8 +9,8 @@
 	<section class="h-screen pt-20 pb-8 flex items-center justify-between flex-col">
 		<div>
 			<!-- TODO: some clever quip with "pay" and "join" concepts -->
-			<h1>Join the Movement</h1>
 			<!-- <h1>Pay it Forward</h1> -->
+			<h1>Join the Movement</h1>
 			<h5 class="text-2xl">
 				Payjoin is a simple protocol that can scale Bitcoin, save fees, and preserve privacy all at
 				once
@@ -143,22 +144,68 @@
 			different.
 		</p>
 	</section>
-	<section class="flex">
-		<h2>Use Payjoin with your Stack</h2>
-		<div class="flex flex-col">
-			<h3>Send Payjoin</h3>
-			<p>Sending payjoin is simple compared to lightning. It works anywhere with internet:</p>
+	<section class="grid grid-cols-2 gap-4">
+		<h2 class="col-span-2">Use Payjoin with your Stack</h2>
+		<h3>Send Payjoin</h3>
+		<h3>Receive Payjoin</h3>
+		<p>Sending payjoin is simple compared to lightning. It works anywhere with internet:</p>
+		<p>Requesting payjoin requires a hot wallet and a public https:// or .onion server endpoint:</p>
+		<ul class="list-decimal pl-4">
+			<li>
+				<Capsule>HTTP</Capsule> request a <Capsule>payjoin</Capsule> by sending a fallback transaction
+				to the unified URI
+			</li>
+			<li>Sign and broadcast the payjoin transaction response</li>
+			<li>Enjoy privacy and know you helped the whole network</li>
+		</ul>
+		<ul class="list-decimal pl-4">
+			<li>
+				Share a <Capsule>payjoin</Capsule> URI or QR code
+			</li>
+			<li>Listen for a payjoin request</li>
+			<li>Respond with a payjoin proposal, having added receiver input</li>
+			<li>Wait for the sender to broadcast the transaction</li>
+		</ul>
+		<p>
+			Make sure your front end accepts bip21 payjoin uris. There are a huge number of reasons they
+			improve your users’ experience anyhow.
+		</p>
+		<p>
+			PayJoin is a great fit for lightning nodes since they already depend on hot wallets on
+			always-online servers.
+		</p>
+		<!-- FIXME: maybe we should have just one link for send & receive? -->
+		<!-- TODO: icon svg -->
+		<Link target="_blank" href="https://docs.rs/payjoin/latest/payjoin/send/index.html"
+			><Button secondary>Read the SDK docs</Button></Link
+		>
+		<Link target="_blank" href="https://docs.rs/payjoin/latest/payjoin/receive/index.html"
+			><Button secondary>Read the SDK docs</Button></Link
+		>
+	</section>
+	<section class="grid grid-cols-2 gap-x-8">
+		<h2 class="col-span-2">Future Plans</h2>
+		<h3>Serverless Payjoin</h3>
+		<h3>Async Payjoin</h3>
 
-			<ul>
-				<li>
-					<Capsule>HTTP</Capsule> request a <Capsule>payjoin</Capsule> by sending a fallback transaction
-					to the unified URI
-				</li>
-			</ul>
-		</div>
-		<div class="flex flex-col">
-			<h3>Receive Payjoin</h3>
-		</div>
+		<p>
+			There is a public proposal to allow anyone to receive a payjoin without running a public
+			server. In order to advance Serverless Payjoin into a formal BIP specification we need your
+			help with a second, independent implementation. Please share, leave your comments, and join
+			the development chat to help.
+		</p>
+		<p>
+			The “hot wallet” limitation may also be removed with an asynchronous payjoin protocol that
+			lets the sender and receiver wait to receive signatures.
+		</p>
+		<!-- <div class="flex">
+			<div class="flex flex-col">
+
+			</div>
+			<div class="flex flex-col">
+	
+			</div>
+		</div> -->
 	</section>
 </div>
 

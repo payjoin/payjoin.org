@@ -10,7 +10,7 @@
 
 <style lang="postcss">
 	button {
-		@apply rounded-lg text-white p-3;
+		@apply rounded-lg text-white p-2;
 		@apply bg-primary;
 	}
 
