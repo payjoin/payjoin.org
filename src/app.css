@@ -7,6 +7,7 @@
 	--app-color: #000000;
 	--app-primary: #f75394;
 	@apply ease-in-out duration-300;
+	@apply text-xl text-[#BFBFBF];
 }
 :root.dark {
 	--app-background: #0f0f0f;
@@ -21,6 +22,6 @@ html {
 body {
 	background-image: url('/images/stefano-bucciarelli-59HOF9zHKNs-unsplash\ 1.png');
 	background-repeat: no-repeat;
-	background-size: contain;
+	background-size: cover;
 	@apply h-screen w-screen;
 }
