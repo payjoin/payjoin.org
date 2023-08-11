@@ -1,4 +1,5 @@
 <script>
+	import Capsule from '../components/Capsule.svelte';
 	import Icon from '../components/Icon/Icon.svelte';
 	import Link from '../components/Link.svelte';
 </script>
@@ -6,13 +7,15 @@
 <div class="w-4/5 flex flex-col gap-8">
 	<section class="h-screen pt-20 pb-8 flex items-center justify-between flex-col">
 		<div>
-			<h1>Better <span class="text-[#f2a900] rotate-180">₿</span>itcoin Transactions</h1>
+			<!-- TODO: some clever quip with "pay" and "join" concepts -->
+			<h1>Join the Movement</h1>
+			<!-- <h1>Pay it Forward</h1> -->
 			<h5 class="text-2xl">
 				Payjoin is a simple protocol that can scale Bitcoin, save fees, and preserve privacy all at
 				once
 			</h5>
 		</div>
-		<a href="#why" class="flex flex-col justify-center">
+		<a href="#why" class="flex flex-col gap-2 justify-center">
 			<p class="text-primary">Why Payjoin?</p>
 			<Icon class="h-20" name="arrowJoin" />
 		</a>
@@ -139,6 +142,23 @@
 			does so for every other transaction with many inputs and two outputs too. It looks no
 			different.
 		</p>
+	</section>
+	<section class="flex">
+		<h2>Use Payjoin with your Stack</h2>
+		<div class="flex flex-col">
+			<h3>Send Payjoin</h3>
+			<p>Sending payjoin is simple compared to lightning. It works anywhere with internet:</p>
+
+			<ul>
+				<li>
+					<Capsule>HTTP</Capsule> request a <Capsule>payjoin</Capsule> by sending a fallback transaction
+					to the unified URI
+				</li>
+			</ul>
+		</div>
+		<div class="flex flex-col">
+			<h3>Receive Payjoin</h3>
+		</div>
 	</section>
 </div>
 
