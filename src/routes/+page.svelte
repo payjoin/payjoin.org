@@ -199,7 +199,57 @@
 			lets the sender and receiver wait to receive signatures.
 		</p>
 	</section>
-	<section />
+	<section>
+		<h2>Get Involved</h2>
+		<p>
+			We need your help to make payjoin a reality. If you are a developer, please check out the SDK
+			and leave your feedback. If you are a designer, please help us make the user experience
+			amazing. If you are a writer, please help us explain payjoin to the world. If you are a
+			merchant, please consider accepting payjoin. If you are a user, please ask your wallet
+			provider to support payjoin.
+		</p>
+	</section>
+	<section class="flex">
+		<div class="flex flex-col">
+			<p>Docs</p>
+			<Link target="_blank" href="https://docs.rs/payjoin/latest/payjoin/send/index.html"
+				>Introduction</Link
+			>
+			<Link target="_blank" href="https://docs.rs/payjoin/latest/payjoin/send/index.html"
+				>Send and Receive Test Payjoins</Link
+			>
+
+			<Link target="_blank" href="https://docs.rs/payjoin/latest/payjoin/send/index.html"
+				>Examples</Link
+			>
+			<Link target="_blank" href="https://docs.rs/payjoin/latest/payjoin/send/index.html"
+				>Support</Link
+			>
+		</div>
+		<div class="flex flex-col">
+			<p>Community</p>
+			<Link target="_blank" href="https://docs.rs/payjoin/latest/payjoin/send/index.html"
+				>Discord</Link
+			>
+			<Link target="_blank" href="https://docs.rs/payjoin/latest/payjoin/send/index.html"
+				>GitHub</Link
+			>
+
+			<Link target="_blank" href="https://docs.rs/payjoin/latest/payjoin/send/index.html"
+				>Telegram</Link
+			>
+		</div>
+		<div class="flex flex-col">
+			<p>More</p>
+			<Link target="_blank" href="https://docs.rs/payjoin/latest/payjoin/send/index.html">PDK</Link>
+			<Link target="_blank" href="https://docs.rs/payjoin/latest/payjoin/send/index.html">Blog</Link
+			>
+
+			<Link target="_blank" href="https://docs.rs/payjoin/latest/payjoin/send/index.html"
+				>Medium</Link
+			>
+		</div>
+	</section>
 </div>
 
 <style lang="postcss">
