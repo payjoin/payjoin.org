@@ -20,7 +20,6 @@ html {
 	color: var(--app-color);
 }
 body {
-	background-image: url('%sveltekit.assets%/images/stefano-bucciarelli-59HOF9zHKNs-unsplash\ 1.png');
 	background-repeat: no-repeat;
 	background-size: cover;
 	@apply h-screen w-screen;
