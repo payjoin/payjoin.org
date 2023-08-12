@@ -6,7 +6,7 @@
 </script>
 
 <div class="w-4/5 flex flex-col gap-8">
-	<section class="h-screen pt-10 pb-8 flex items-center justify-between flex-col">
+	<section class="h-screen pt-24 pb-8 flex items-center justify-between flex-col">
 		<div>
 			<!-- TODO: some clever quip with "pay" and "join" concepts -->
 			<h1>Payjoin</h1>
