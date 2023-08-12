@@ -10,15 +10,13 @@
 		<div>
 			<!-- TODO: some clever quip with "pay" and "join" concepts -->
 			<h1>Payjoin</h1>
-			<h2>Better Bitcoin Transactions</h2>
 			<h5 class="text-2xl">
-				Payjoin is a simple protocol that can scale Bitcoin, save fees, and preserve privacy all at
-				once
+				A simple protocol that can scale Bitcoin, save fees, and preserve privacy all at once
 			</h5>
 		</div>
-		<a href="#why" class="flex flex-col gap-4 justify-center">
+		<a href="#why" class="flex flex-col gap-4 justify-center animate-smooth-bounce">
 			<p class="text-primary">Why Payjoin?</p>
-			<Icon class="h-20 flex justify-center" name="arrowJoin" />
+			<Icon class="h-20 flex justify-center " name="arrowJoin" />
 		</a>
 	</section>
 	<!-- TODO: flex col on large screen -->
