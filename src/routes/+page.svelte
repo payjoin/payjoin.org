@@ -1,8 +1,11 @@
 <script>
+	import { base } from '$app/paths';
 	import Button from '../components/Button.svelte';
 	import Capsule from '../components/Capsule.svelte';
 	import Icon from '../components/Icon/Icon.svelte';
 	import Link from '../components/Link.svelte';
+
+	$: console.log({ base });
 </script>
 
 <div class="w-4/5 flex flex-col gap-8">
@@ -231,7 +234,7 @@
 				merchant, please consider accepting payjoin. If you are a user, please ask your wallet
 				provider to support payjoin. -->
 		</div>
-		<img class="w-2/5" src="/images/uncle-satoshi.jpg" alt="Satoshi Needs Your Help!" />
+		<img class="w-2/5" src={`${base}/images/uncle-satoshi.jpg`} alt="Satoshi Needs Your Help!" />
 	</section>
 	<section class="flex gap-4 justify-between mb-10">
 		<div class="flex flex-col">
