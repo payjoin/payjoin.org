@@ -1,11 +1,8 @@
 <script>
-	import { base } from '$app/paths';
 	import Button from '../components/Button.svelte';
 	import Capsule from '../components/Capsule.svelte';
 	import Icon from '../components/Icon/Icon.svelte';
 	import Link from '../components/Link.svelte';
-
-	$: console.log({ base });
 </script>
 
 <div class="w-4/5 flex flex-col gap-8">
@@ -13,15 +10,13 @@
 		<div>
 			<!-- TODO: some clever quip with "pay" and "join" concepts -->
 			<h1>Payjoin</h1>
-			<h2>Better Bitcoin Transactions</h2>
 			<h5 class="text-2xl">
-				Payjoin is a simple protocol that can scale Bitcoin, save fees, and preserve privacy all at
-				once
+				A simple protocol that can scale Bitcoin, save fees, and preserve privacy all at once
 			</h5>
 		</div>
-		<a href="#why" class="flex flex-col gap-2 justify-center animate-smooth-bounce">
+		<a href="#why" class="flex flex-col gap-4 justify-center animate-smooth-bounce">
 			<p class="text-primary">Why Payjoin?</p>
-			<Icon class="h-20" name="arrowJoin" />
+			<Icon class="h-20 flex justify-center " name="arrowJoin" />
 		</a>
 	</section>
 	<!-- TODO: flex col on large screen -->
@@ -234,7 +229,7 @@
 				merchant, please consider accepting payjoin. If you are a user, please ask your wallet
 				provider to support payjoin. -->
 		</div>
-		<img class="w-2/5" src={`${base}/images/uncle-satoshi.jpg`} alt="Satoshi Needs Your Help!" />
+		<img class="w-2/5" src={`/images/uncle-satoshi.jpg`} alt="Satoshi Needs Your Help!" />
 	</section>
 	<section class="flex gap-4 justify-between mb-10">
 		<div class="flex flex-col">
