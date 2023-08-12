@@ -205,7 +205,7 @@
 			</div>
 		</div>
 	</section>
-	<section class="flex justify-between">
+	<section class="flex flex-col lg:justify-around items-center gap-4 lg:flex-row">
 		<div>
 			<h2>Get Involved</h2>
 			<p>We need your help to make payjoin a reality. If you are:</p>
@@ -231,7 +231,7 @@
 				merchant, please consider accepting payjoin. If you are a user, please ask your wallet
 				provider to support payjoin. -->
 		</div>
-		<img class="w-1/2" src="/images/uncle-satoshi.jpg" alt="Satoshi Needs Your Help!" />
+		<img class="w-2/5" src="/images/uncle-satoshi.jpg" alt="Satoshi Needs Your Help!" />
 	</section>
 	<section class="flex gap-4 justify-between mb-10">
 		<div class="flex flex-col">
