@@ -34,13 +34,9 @@
 			<h2 class="pink">The Solution</h2>
 			<p>
 				Payjoin joins sender and receiver inputs in the one transaction. Batching like this reduces
-				fees and packs more payment activity, scaling bitcoin. Joining inputs from many owners
-				breaks that assumption Satoshi warned us about. You wallet can payjoins when you spend
-				without having you make any decisions. And if your walelt doesn't support it, it has a
-				seamless fallback inside of <Link
-					href="https://github.com/bitcoin/bips/blob/master/bip-0021.mediawiki"
-					target="_blank">the BIP 21 unified payment standard</Link
-				>.
+				fees and packs more payment activity together, scaling bitcoin. Joining inputs from many owners
+				breaks that assumption Satoshi warned us about. Supporting wallets payjoin by default
+				whever they can. If they can't payjoin, they fall back to oldschool payments without error.
 			</p>
 		</div>
 	</section>
