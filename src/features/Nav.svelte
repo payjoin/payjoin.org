@@ -43,6 +43,17 @@
 <nav
 	class="fixed w-full flex justify-between transition-all duration-500 bg-opacity-90 items-center p-4 z-10"
 >
+	<h3 class="text-3xl text-white hidden md:inline"><a href="/">Payjoin</a></h3>
+	<ul class="hidden justify-end gap-4 items-center text-xl md:flex">
+		<li><Link href="#">Why</Link></li>
+		<li><Link href="#">How to</Link></li>
+		<li><Link href="#">Demo</Link></li>
+		<li><Link href="#">Privacy</Link></li>
+		<li><Link href="#">Dev kit</Link></li>
+		<li><Link href="#">Join</Link></li>
+		<!-- TODO: light mode styling -->
+		<!-- <li><button on:click={toggleDarkMode}><Icon name="moon" /></button></li> -->
+	</ul>
 	<!-- Hamburger menu -->
 	{#if !open}
 		<div class="flex justify-between w-full md:hidden">
@@ -65,17 +76,11 @@
 				<button on:click={handleClose}>
 					<Icon class="flex h-6 text-white" name="close" />
 				</button>
-				<h3 class="text-3xl text-white"><a href="/">Payjoin</a></h3>
-				<ul class="hidden justify-end items-center text-xl md:flex">
-					<li><Link href="#">Why</Link></li>
-					<li><Link href="#">How to</Link></li>
-					<li><Link href="#">Demo</Link></li>
-					<li><Link href="#">Privacy</Link></li>
-					<li><Link href="#">Dev kit</Link></li>
-					<li><Link href="#">Join</Link></li>
-					<!-- TODO: light mode styling -->
-					<!-- <li><button on:click={toggleDarkMode}><Icon name="moon" /></button></li> -->
-				</ul>
+
+				<!-- FIXME: choppy transitioning -->
+				<h3 class="text-3xl text-white">
+					<a href="/">Payjoin</a>
+				</h3>
 				<ul class="flex flex-col gap-4 items-center text-2xl">
 					<li><Link href="#">Why</Link></li>
 					<li><Link href="#">How to</Link></li>
