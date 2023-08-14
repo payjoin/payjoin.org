@@ -9,7 +9,9 @@
 	<section class="h-screen pt-24 pb-8 flex items-center justify-between flex-col">
 		<div>
 			<!-- TODO: some clever quip with "pay" and "join" concepts -->
-			<h1>Payjoin</h1>
+			<!-- Pay it forward -->
+			<!-- Join the fight -->
+			<h1>Better Bitcoin Transactions</h1>
 			<h5 class="text-2xl">
 				A simple protocol that can scale Bitcoin, save fees, and preserve privacy all at once
 			</h5>
@@ -36,7 +38,7 @@
 				Payjoin joins sender and receiver inputs in the one transaction. Batching like this reduces
 				fees and packs more payment activity, scaling bitcoin. Joining inputs from many owners
 				breaks that assumption Satoshi warned us about. You wallet can payjoins when you spend
-				without having you make any decisions. And if your walelt doesn't support it, it has a
+				without having you make any decisions. And if your wallet doesn't support it, it has a
 				seamless fallback inside of <Link
 					href="https://github.com/bitcoin/bips/blob/master/bip-0021.mediawiki"
 					target="_blank">the BIP 21 unified payment standard</Link
@@ -169,7 +171,7 @@
 			improve your users’ experience anyhow.
 		</p>
 		<p>
-			PayJoin is a great fit for lightning nodes since they already depend on hot wallets on
+			Payjoin is a great fit for lightning nodes since they already depend on hot wallets on
 			always-online servers.
 		</p>
 		<!-- FIXME: maybe we should have just one link for send & receive? -->
