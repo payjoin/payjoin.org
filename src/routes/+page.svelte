@@ -264,7 +264,7 @@
 
 <style lang="postcss">
 	h1 {
-		@apply text-6xl my-4 text-white;
+		@apply text-4xl sm:text-6xl my-4 text-white;
 	}
 	h2 {
 		@apply text-4xl my-4 text-white;
