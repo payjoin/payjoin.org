@@ -5,7 +5,7 @@
 	import Link from '../components/Link.svelte';
 </script>
 
-<div class="w-4/5 flex flex-col gap-8">
+<div class="w-4/5 flex flex-col">
 	<section class="h-screen pt-24 pb-8 flex items-center justify-between flex-col">
 		<div>
 			<!-- TODO: some clever quip with "pay" and "join" concepts -->
@@ -22,7 +22,7 @@
 		</a>
 	</section>
 	<!-- TODO: flex col on large screen -->
-	<section id="why" class="flex flex-col lg:flex-row gap-8">
+	<section id="why" class="flex flex-col lg:flex-row gap-8 pt-24">
 		<div class="flex flex-col flex-1">
 			<h2>The Problem</h2>
 			<p>
@@ -57,7 +57,7 @@
 			use a cold wallet. Cool ❄️!
 		</p>
 	</section> -->
-	<section class="flex gap-4 flex-col lg:flex-row">
+	<section id="demo" class="flex gap-4 flex-col lg:flex-row pt-24">
 		<div class="flex-1">
 			<h2>Try the Demo</h2>
 			<p>
@@ -76,8 +76,8 @@
 			/>
 		</div>
 	</section>
-	<section class="flex flex-col gap-4">
-		<h3>How is it private?</h3>
+	<section id="privacy" class="flex flex-col gap-4 pt-24">
+		<h2>How is it private?</h2>
 
 		<p>
 			The following <a
@@ -144,7 +144,7 @@
 			different.
 		</p>
 	</section>
-	<section class="grid grid-cols-2 gap-4">
+	<section id="how-to" class="grid grid-cols-2 gap-4 pt-24">
 		<h2 class="col-span-2">Use Payjoin with your Stack</h2>
 		<h3>Send Payjoin</h3>
 		<h3>Receive Payjoin</h3>
@@ -183,7 +183,7 @@
 			><Button secondary>Read the SDK docs</Button></Link
 		>
 	</section>
-	<section class="flex flex-col">
+	<section id="future-plans" class="flex flex-col pt-24">
 		<h2>Future Plans</h2>
 		<div class="flex flex-col lg:flex-row">
 			<div class="flex flex-col flex-1">
@@ -205,8 +205,11 @@
 			</div>
 		</div>
 	</section>
-	<section class="flex flex-col lg:justify-around items-center gap-4 lg:flex-row">
-		<div>
+	<section
+		id="get-involved"
+		class="flex flex-col lg:justify-around items-center gap-4 lg:flex-row pt-24"
+	>
+		<div class="self-start flex-1">
 			<h2>Get Involved</h2>
 			<p>We need your help to make payjoin a reality. If you are:</p>
 			<ul class="list-disc list-inside">
@@ -231,15 +234,13 @@
 				merchant, please consider accepting payjoin. If you are a user, please ask your wallet
 				provider to support payjoin. -->
 		</div>
-		<img class="w-2/5" src={`/images/uncle-satoshi.jpg`} alt="Satoshi Needs Your Help!" />
+		<img class="w-2/5" src={`/images/uncle-satoshi.png`} alt="Satoshi Needs Your Help!" />
 	</section>
-	<section class="flex gap-4 justify-between mb-10">
+	<section class="flex gap-4 justify-between mb-10 pt-24">
 		<div class="flex flex-col">
 			<p>Community</p>
-			<Link target="_blank" href="">Discord</Link>
-			<Link target="_blank" href="https://docs.rs/payjoin/latest/payjoin/send/index.html"
-				>GitHub</Link
-			>
+			<Link target="_blank" href="https://discord.gg/HrTwfxQG">Discord</Link>
+			<Link target="_blank" href="https://github.com/payjoin">GitHub</Link>
 			<Link target="_blank" href="https://payjoin.substack.com">Newsletter</Link>
 		</div>
 		<div class="flex flex-col">
