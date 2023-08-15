@@ -45,12 +45,12 @@
 >
 	<h3 class="text-3xl text-white hidden md:inline"><a href="/">Payjoin</a></h3>
 	<ul class="hidden justify-end gap-4 items-center text-xl md:flex">
-		<li><Link href="#">Why</Link></li>
-		<li><Link href="#">How to</Link></li>
-		<li><Link href="#">Demo</Link></li>
-		<li><Link href="#">Privacy</Link></li>
-		<li><Link href="#">Dev kit</Link></li>
-		<li><Link href="#">Join</Link></li>
+		<li><Link href="#why">Why</Link></li>
+		<li><Link href="#demo">Demo</Link></li>
+		<li><Link href="#privacy">Privacy</Link></li>
+		<li><Link href="#how-to">How to</Link></li>
+		<li><Link href="#future-plans">Future Plans</Link></li>
+		<li><Link href="#get-involved">Get Involved</Link></li>
 		<!-- TODO: light mode styling -->
 		<!-- <li><button on:click={toggleDarkMode}><Icon name="moon" /></button></li> -->
 	</ul>
@@ -82,12 +82,12 @@
 					<a href="/">Payjoin</a>
 				</h3>
 				<ul class="flex flex-col gap-4 items-center text-2xl">
-					<li><Link href="#">Why</Link></li>
-					<li><Link href="#">How to</Link></li>
-					<li><Link href="#">Demo</Link></li>
-					<li><Link href="#">Privacy</Link></li>
-					<li><Link href="#">Dev kit</Link></li>
-					<li><Link href="#">Join</Link></li>
+					<li><Link href="#why">Why</Link></li>
+					<li><Link href="#demo">Demo</Link></li>
+					<li><Link href="#privacy">Privacy</Link></li>
+					<li><Link href="#how-to">How to</Link></li>
+					<li><Link href="#future-plans">Future Plans</Link></li>
+					<li><Link href="#get-involved">Get Involved</Link></li>
 				</ul>
 			</div>
 		</div>
