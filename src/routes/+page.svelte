@@ -1,6 +1,9 @@
 <script>
 	import Button from '../components/Button.svelte';
 	import Capsule from '../components/Capsule.svelte';
+	import H1 from '../components/Header/H1.svelte';
+	import H2 from '../components/Header/H2.svelte';
+	import H3 from '../components/Header/H3.svelte';
 	import Icon from '../components/Icon/Icon.svelte';
 	import Link from '../components/Link.svelte';
 </script>
@@ -8,13 +11,11 @@
 <div class="w-4/5 flex flex-col">
 	<section class="h-screen pt-24 pb-8 flex items-center justify-between flex-col">
 		<div>
-			<!-- TODO: some clever quip with "pay" and "join" concepts -->
-			<!-- Pay it forward -->
-			<!-- Join the fight -->
-			<h1>Better Bitcoin Transactions</h1>
-			<h5 class="text-2xl">
-				A simple protocol that can scale Bitcoin, save fees, and preserve privacy all at once
-			</h5>
+			<H1>Better Bitcoin Transactions</H1>
+			<H3 colorClass=""
+				>A simple protocol that can scale Bitcoin, save fees, and preserve privacy all at once</H3
+			>
+			<a href="#nowhere"><H3>Ask your wallet to implement it!</H3></a>
 		</div>
 		<a href="#why" class="flex flex-col gap-4 justify-center animate-smooth-bounce">
 			<p class="text-primary">Why Payjoin?</p>
@@ -22,18 +23,61 @@
 		</a>
 	</section>
 	<!-- TODO: flex col on large screen -->
-	<section id="why" class="flex flex-col lg:flex-row gap-8 pt-24">
-		<div class="flex flex-col flex-1">
-			<h2>The Problem</h2>
+	<section id="why" class="flex flex-col gap-8 pt-24">
+		<div class="flex flex-col">
+			<H2>The Problem</H2>
+			<div class="flex flex-col md:grid grid-cols-3 gap-4">
+				<div>
+					<H3>Privacy</H3>
+					<p>Transactions histories are typically easily traceable.</p>
+				</div>
+				<div>
+					<H3>Scaling</H3>
+					<p>
+						Bitcoin’s blockchain processes about 7 transactions per second, as block space is
+						scarce.
+					</p>
+				</div>
+				<div>
+					<H3>Fees</H3>
+					<p>Many transactions can occur for a single fee.</p>
+				</div>
+			</div>
+		</div>
+		<div class="flex flex-col text-primary">
+			<H2 colorClass="text-primary">The Solution</H2>
+			<div class="flex flex-col md:grid grid-cols-3 gap-4">
+				<div>
+					<H3 colorClass="text-primary">Privacy Enhanced</H3>
+					<p>Transactions histories are typically easily traceable.</p>
+				</div>
+				<div>
+					<H3 colorClass="text-primary">Scaling Upgraded</H3>
+					<p>
+						Payjoin can settle many transactions at once, saving time spent waiting for block
+						confirmations and allowing higher throughput.
+					</p>
+				</div>
+				<div>
+					<H3 colorClass="text-primary">Fees Saved</H3>
+					<p>
+						Normally, one fee is paid for a single transaction, which frequently fluctuates based on
+						demand and is often untenable for small purchases.
+					</p>
+				</div>
+			</div>
+		</div>
+		<!-- <div class="flex flex-col flex-1">
+			<H2>The Problem</H2>
 			<p>
 				Satoshi said that transactions with multiple inputs "necessarily reveal that their inputs
 				were owned by the same owner" in the bitcoin whitepaper. For legacy bitcoin software, this
-				tends to be true. As a result, you end up spending more than you have to and Surveillance
+				tends to be true. As a result, you end up spending more than you have to and surveillance
 				companies use this revelation to creep on bitcoin users.
 			</p>
 		</div>
 		<div class="flex flex-col text-[#F75394] flex-1">
-			<h2 class="pink">The Solution</h2>
+			<H2 class="pink">The Solution</H2>
 			<p>
 				Payjoin joins sender and receiver inputs in the one transaction. Batching like this reduces
 				fees and packs more payment activity, scaling bitcoin. Joining inputs from many owners
@@ -44,11 +88,11 @@
 					target="_blank">the BIP 21 unified payment standard</Link
 				>.
 			</p>
-		</div>
+		</div> -->
 	</section>
 	<!-- <section>
-		<h2>How to Payjoin</h2>
-		<h3>Scan a Unified QR Code</h3>
+		<H2>How to Payjoin</H2>
+		<H3>Scan a Unified QR Code</H3>
 		<p>
 			This is a <Link href="https://bitcoinqr.dev/" target="_blank">BIP21 unified URI</Link> with a payjoin
 			parameter. Even if a wallet does not support payjoin, it can still fall back to the address to
@@ -59,7 +103,7 @@
 	</section> -->
 	<section id="demo" class="flex gap-4 flex-col lg:flex-row pt-24">
 		<div class="flex-1">
-			<h2>Try the Demo</h2>
+			<H2>Try the Demo</H2>
 			<p>
 				Let's check out a payjoin flow. Bob is on the left trying to purchase some jewelry without
 				his peers finding out. The merchant's point of sale is on the right. Click Bob's screen to
@@ -77,8 +121,7 @@
 		</div>
 	</section>
 	<section id="privacy" class="flex flex-col gap-4 pt-24">
-		<h2>How is it private?</h2>
-
+		<H2>How is it private?</H2>
 		<p>
 			The following <a
 				href="https://mempool.space/tx/58d68b22ab96b87a11c1fbd3090fee23f96f71a4115f96210ba776d0ae7d8d55"
@@ -99,7 +142,7 @@
 			By using payjoin, two parties come together to merge coins, save fees, and enhance privacy at
 			the same time.
 		</p>
-
+		<!-- TODO: add #F75394 to tailwind colors -->
 		<code
 			class="my-8 flex p-4 text-[#F75394] gap-4 rounded-xl text-xs justify-between bg-[#401D29] self-center"
 		>
@@ -145,9 +188,9 @@
 		</p>
 	</section>
 	<section id="how-to" class="grid grid-cols-2 gap-4 pt-24">
-		<h2 class="col-span-2">Use Payjoin with your Stack</h2>
-		<h3>Send Payjoin</h3>
-		<h3>Receive Payjoin</h3>
+		<H2 class="col-span-2">Use Payjoin with your Stack</H2>
+		<H3>Send Payjoin</H3>
+		<H3>Receive Payjoin</H3>
 		<p>Sending payjoin is simple compared to lightning. It works anywhere with internet:</p>
 		<p>Requesting payjoin requires a hot wallet and a public https:// or .onion server endpoint:</p>
 		<ul class="list-decimal pl-4">
@@ -184,10 +227,10 @@
 		>
 	</section>
 	<section id="future-plans" class="flex flex-col pt-24">
-		<h2>Future Plans</h2>
+		<H2>Future Plans</H2>
 		<div class="flex flex-col lg:flex-row">
 			<div class="flex flex-col flex-1">
-				<h3>Serverless Payjoin</h3>
+				<H3>Serverless Payjoin</H3>
 				<p>
 					There is a public proposal to allow anyone to receive a payjoin without running a public
 					server. In order to advance Serverless Payjoin into a formal BIP specification we need
@@ -196,7 +239,7 @@
 				</p>
 			</div>
 			<div class="flex flex-col flex-1">
-				<h3>Async Payjoin</h3>
+				<H3>Async Payjoin</H3>
 
 				<p>
 					The “hot wallet” limitation may also be removed with an asynchronous payjoin protocol that
@@ -210,13 +253,16 @@
 		class="flex flex-col lg:justify-around items-center gap-4 lg:flex-row pt-24"
 	>
 		<div class="self-start flex-1">
-			<h2>Get Involved</h2>
-			<p>We need your help to make payjoin a reality. If you are:</p>
+			<H2>Get Involved</H2>
+			<H3>Pay it forward. Join the movement.</H3>
+			<p>
+				Payjoin has many benefits for Bitcoin, we need your help to get wallets to integrate it!
+			</p>
 			<ul class="list-disc list-inside">
 				<li>
-					<strong>Developer</strong>: Check out the <Link
+					<strong>Developer</strong>: Check out <Link
 						target="_blank"
-						href="https://payjoindevkit.org/">SDK</Link
+						href="https://payjoindevkit.org/">Payjoin Dev Kit (PDK)</Link
 					>
 				</li>
 				<li>
@@ -263,21 +309,6 @@
 </div>
 
 <style lang="postcss">
-	h1 {
-		@apply text-4xl sm:text-6xl my-4 text-white;
-	}
-	h2 {
-		@apply text-4xl my-4 text-white;
-	}
-	h3 {
-		@apply text-2xl my-2 text-white;
-	}
-	.pink {
-		@apply text-[#F75394];
-	}
-	h5 {
-		@apply text-2xl;
-	}
 	ul > li > span {
 		@apply font-normal;
 	}
