@@ -4,13 +4,15 @@ import arrowJoin from './svg/arrowJoin.svg?raw';
 import close from './svg/close.svg?raw';
 import hamburger from './svg/hamburger.svg?raw';
 import externalLink from './svg/externalLink.svg?raw';
+import lightning from './svg/lightning.svg?raw';
 
 const icons = {
 	moon,
 	arrowJoin,
 	close,
 	hamburger,
-	externalLink
+	externalLink,
+	lightning
 };
 
 export type IconName = keyof typeof icons;

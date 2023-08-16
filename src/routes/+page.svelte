@@ -99,6 +99,22 @@
 				</div>
 			</div>
 		</div>
+		<div>
+			<H2 class="inline-flex items-end gap-2"
+				>Lightning Compatible <Icon name="lightning" class="flex w-8 text-primary" /></H2
+			>
+			<H3><i>Open all your channels at once</i></H3>
+			<p>Combining payjoin with the Lightning Network opens up new possibilities for bitcoin.</p>
+			<p>With payjoin, lightning nodes could:</p>
+			<ul class="list-disc list-inside">
+				<li>Fund and open any number of channels in one transaction</li>
+				<li>Auto-open new channels when transactions are sent to them</li>
+			</ul>
+			Saving time, fees, and preserving privacy. See the <Link
+				target="_blank"
+				href="https://github.com/payjoin/nolooking">Nolooking</Link
+			> project for an example.
+		</div>
 	</section>
 	<!-- <section>
 		<H2>How to Payjoin</H2>
