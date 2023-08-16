@@ -5,6 +5,8 @@ import close from './svg/close.svg?raw';
 import hamburger from './svg/hamburger.svg?raw';
 import externalLink from './svg/externalLink.svg?raw';
 import lightning from './svg/lightning.svg?raw';
+import monad from './svg/monad.svg?raw';
+import spiral from './svg/spiral.svg?raw';
 
 const icons = {
 	moon,
@@ -12,7 +14,9 @@ const icons = {
 	close,
 	hamburger,
 	externalLink,
-	lightning
+	lightning,
+	monad,
+	spiral
 };
 
 export type IconName = keyof typeof icons;
