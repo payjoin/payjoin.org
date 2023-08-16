@@ -46,7 +46,7 @@
 	<h3 class="text-3xl text-white hidden md:inline"><a href="/">Payjoin</a></h3>
 	<ul class="hidden justify-end gap-4 items-center text-xl md:flex">
 		<li><Link href="#why">Why</Link></li>
-		<li><Link href="#demo">Demo</Link></li>
+		<li><Link href="#ux">Demo</Link></li>
 		<li><Link href="#privacy">Privacy</Link></li>
 		<li><Link href="#how-to">How to</Link></li>
 		<li><Link href="#future-plans">Future Plans</Link></li>

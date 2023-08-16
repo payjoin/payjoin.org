@@ -29,14 +29,23 @@
 			<Icon class="h-20 flex justify-center " name="arrowJoin" />
 		</a>
 	</section>
-	<!-- TODO: flex col on large screen -->
 	<section id="why" class="flex flex-col gap-8 pt-24">
-		<div class="flex flex-col">
+		<div class="flex flex-col gap-4">
 			<H2>The Problem</H2>
+			<p>
+				Satoshi said that transactions with multiple inputs "necessarily reveal that their inputs
+				were owned by the same owner" in the bitcoin whitepaper. For legacy bitcoin software, this
+				tends to be true. As a result, you end up spending more than you have to and surveillance
+				companies use this revelation to creep on bitcoin users.
+			</p>
 			<div class="flex flex-col md:grid grid-cols-3 gap-4">
 				<div>
 					<H3>Privacy</H3>
-					<p>Transactions histories are typically easily traceable.</p>
+
+					<p>
+						Transaction histories are normally easy to trace, allowing chain surveillance companies
+						to spy on bitcoin users.
+					</p>
 				</div>
 				<div>
 					<H3>Scaling</H3>
@@ -54,8 +63,18 @@
 				</div>
 			</div>
 		</div>
-		<div class="flex flex-col text-primary">
+		<div class="flex flex-col text-primary gap-4">
 			<H2 colorClass="text-primary">The Solution</H2>
+			<p>
+				Payjoin joins sender and receiver inputs in the one transaction. Batching like this reduces
+				fees and packs more payment activity, scaling bitcoin. Joining inputs from many owners
+				breaks that assumption Satoshi warned us about. Your wallet can payjoin when you spend
+				without having you make any decisions. And if your wallet doesn't support it, it has a
+				seamless fallback inside of <Link
+					href="https://github.com/bitcoin/bips/blob/master/bip-0021.mediawiki"
+					target="_blank">the BIP 21 unified payment standard</Link
+				>.
+			</p>
 			<div class="flex flex-col md:grid grid-cols-3 gap-8">
 				<div>
 					<H3 colorClass="text-primary">Privacy Enhanced</H3>
@@ -73,32 +92,13 @@
 				</div>
 				<div>
 					<H3 colorClass="text-primary">Fees Saved</H3>
-					<p>Many transactions can occur for a single fee.</p>
+					<p>
+						As a byproduct of the scaling improvements, now many transactions can occur for a single
+						fee.
+					</p>
 				</div>
 			</div>
 		</div>
-		<!-- <div class="flex flex-col flex-1">
-			<H2>The Problem</H2>
-			<p>
-				Satoshi said that transactions with multiple inputs "necessarily reveal that their inputs
-				were owned by the same owner" in the bitcoin whitepaper. For legacy bitcoin software, this
-				tends to be true. As a result, you end up spending more than you have to and surveillance
-				companies use this revelation to creep on bitcoin users.
-			</p>
-		</div>
-		<div class="flex flex-col text-[#F75394] flex-1">
-			<H2 class="pink">The Solution</H2>
-			<p>
-				Payjoin joins sender and receiver inputs in the one transaction. Batching like this reduces
-				fees and packs more payment activity, scaling bitcoin. Joining inputs from many owners
-				breaks that assumption Satoshi warned us about. Your wallet can payjoin when you spend
-				without having you make any decisions. And if your wallet doesn't support it, it has a
-				seamless fallback inside of <Link
-					href="https://github.com/bitcoin/bips/blob/master/bip-0021.mediawiki"
-					target="_blank">the BIP 21 unified payment standard</Link
-				>.
-			</p>
-		</div> -->
 	</section>
 	<!-- <section>
 		<H2>How to Payjoin</H2>

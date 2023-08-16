@@ -9,7 +9,7 @@
 </script>
 
 <a {href} {target} {rel}>
-	<span class="flex gap-2 items-center">
+	<span class="inline-flex gap-2 items-center">
 		<slot />
 		{#if icon}
 			<Icon name={icon} class="flex h-6" />
