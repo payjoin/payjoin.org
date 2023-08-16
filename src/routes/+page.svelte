@@ -33,7 +33,10 @@
 	</section>
 	<section id="why" class="flex flex-col gap-8 pt-24">
 		<div class="flex flex-col gap-4">
-			<H2>The Problem</H2>
+			<div class="flex gap-2 items-center">
+				<Icon class="flex h-10 text-white" name="spiral" />
+				<H2>The Problem</H2>
+			</div>
 			<p>
 				Satoshi said that transactions with multiple inputs "necessarily reveal that their inputs
 				were owned by the same owner" in the bitcoin whitepaper. For legacy bitcoin software, this
@@ -66,7 +69,10 @@
 			</div>
 		</div>
 		<div class="flex flex-col text-primary gap-4">
-			<H2 colorClass="text-primary">The Solution</H2>
+			<div class="flex gap-2 items-center">
+				<Icon class="flex h-10 " name="monad" />
+				<H2 colorClass="text-primary">The Solution</H2>
+			</div>
 			<p>
 				Payjoin joins sender and receiver inputs in the one transaction. Batching like this reduces
 				fees and packs more payment activity, scaling bitcoin. Joining inputs from many owners

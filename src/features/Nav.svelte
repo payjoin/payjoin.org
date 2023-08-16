@@ -60,7 +60,7 @@
 	{#if !open}
 		<div class="flex justify-between w-full md:hidden">
 			<h3 class="text-3xl text-white self-start">
-				<a href="/">Payjoin</a>
+				<a class="flex gap-2 items-center" href="/"><Icon name="monad" />Payjoin</a>
 			</h3>
 
 			<button class="flex items-center" on:click={handleOpen}>
@@ -81,7 +81,7 @@
 
 				<!-- FIXME: choppy transitioning -->
 				<h3 class="text-3xl text-white">
-					<a href="/">Payjoin</a>
+					<a class="flex gap-2 items-center" href="/"><Icon name="monad" />Payjoin</a>
 				</h3>
 				<ul class="flex flex-col gap-4 items-center text-2xl">
 					<li><Link href="#why">Why</Link></li>
