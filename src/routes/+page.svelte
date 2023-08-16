@@ -94,15 +94,14 @@
 				<div>
 					<H3 colorClass="text-primary">Scaling Upgraded</H3>
 					<p>
-						Payjoin can settle many transactions at once, saving time spent waiting for block
-						confirmations and allowing higher throughput.
+						Payjoin settles many transfers together in one transaction, saving time spent waiting for block
+						confirmations and enabling higher throughput.
 					</p>
 				</div>
 				<div>
 					<H3 colorClass="text-primary">Fees Saved</H3>
 					<p>
-						As a byproduct of the scaling improvements, now many transactions can occur for a single
-						fee.
+						As a byproduct of the scaling improvements, the many transfers inside each payjoin share the fees of a single transaction.
 					</p>
 				</div>
 			</div>
