@@ -4,19 +4,26 @@
 	import H1 from '../components/Header/H1.svelte';
 	import H2 from '../components/Header/H2.svelte';
 	import H3 from '../components/Header/H3.svelte';
+	import H5 from '../components/Header/H5.svelte';
 	import Icon from '../components/Icon/Icon.svelte';
 	import Link from '../components/Link.svelte';
 </script>
 
 <div class="w-4/5 flex flex-col">
 	<section class="h-screen pt-24 pb-8 flex items-center justify-between flex-col">
-		<div>
+		<div class="w-4/5">
 			<H1>Better Bitcoin Transactions</H1>
 			<H3 colorClass=""
-				>A simple protocol that can scale Bitcoin, save fees, and preserve privacy all at once</H3
+				>A simple protocol that can scale Bitcoin, save fees, and preserve privacy, without changing
+				how you use it.</H3
 			>
-			<a href="#nowhere"><H3>Ask your wallet to implement it!</H3></a>
+			<H5 colorClass="">
+				Help improve Bitcoin by <Link href="#nowhere" target="_blank" icon="externalLink"
+					>asking your wallet to implement payjoin!</Link
+				></H5
+			>
 		</div>
+
 		<a href="#why" class="flex flex-col gap-4 justify-center animate-smooth-bounce">
 			<p class="text-primary">Why Payjoin?</p>
 			<Icon class="h-20 flex justify-center " name="arrowJoin" />
@@ -40,16 +47,22 @@
 				</div>
 				<div>
 					<H3>Fees</H3>
-					<p>Many transactions can occur for a single fee.</p>
+					<p>
+						Normally, one fee is paid for a single transaction, which frequently fluctuates based on
+						demand and is often untenable for small purchases.
+					</p>
 				</div>
 			</div>
 		</div>
 		<div class="flex flex-col text-primary">
 			<H2 colorClass="text-primary">The Solution</H2>
-			<div class="flex flex-col md:grid grid-cols-3 gap-4">
+			<div class="flex flex-col md:grid grid-cols-3 gap-8">
 				<div>
 					<H3 colorClass="text-primary">Privacy Enhanced</H3>
-					<p>Transactions histories are typically easily traceable.</p>
+					<p>
+						By cleverly taking advantage of transaction structure, payjoin allows for enhanced
+						privacy for everyone ― even for those who don’t use it ― foiling chain surveillance.
+					</p>
 				</div>
 				<div>
 					<H3 colorClass="text-primary">Scaling Upgraded</H3>
@@ -60,10 +73,7 @@
 				</div>
 				<div>
 					<H3 colorClass="text-primary">Fees Saved</H3>
-					<p>
-						Normally, one fee is paid for a single transaction, which frequently fluctuates based on
-						demand and is often untenable for small purchases.
-					</p>
+					<p>Many transactions can occur for a single fee.</p>
 				</div>
 			</div>
 		</div>
@@ -101,23 +111,31 @@
 			use a cold wallet. Cool ❄️!
 		</p>
 	</section> -->
-	<section id="demo" class="flex gap-4 flex-col lg:flex-row pt-24">
-		<div class="flex-1">
-			<H2>Try the Demo</H2>
-			<p>
-				Let's check out a payjoin flow. Bob is on the left trying to purchase some jewelry without
-				his peers finding out. The merchant's point of sale is on the right. Click Bob's screen to
-				scan the QR code and see just how easy it is to payjoin.
-			</p>
+	<section id="ux" class="flex gap-4 flex-col pt-24">
+		<div>
+			<div class="flex-1">
+				<H2>Payjoin User Experience</H2>
+				<p>
+					Let's check out a payjoin flow. Bob is on the left trying to purchase some jewelry without
+					his peers finding out. The merchant's point of sale is on the right. Click Bob's screen to
+					scan the QR code and see just how easy it is to payjoin.
+				</p>
+			</div>
+			<div class="flex-1">
+				<iframe
+					title="Payjoin Demo"
+					class="w-full h-96"
+					style="border: 1px solid rgba(0, 0, 0, 0.1);"
+					src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2F7BpOmi30JgG6gIaE0T7fL4%2FPayjoin-Designs-Bitcoin-Wallet-UI-Kit-%2526-Design-System%3Fpage-id%3D4263%253A62592%26node-id%3D4954%253A70101%26viewport%3D-4364%252C-2385%252C0.48%26scaling%3Dmin-zoom%26starting-point-node-id%3D4954%253A70101"
+					allowfullscreen
+				/>
+			</div>
 		</div>
-		<div class="flex-1">
-			<iframe
-				title="Payjoin Demo"
-				class="w-full h-96"
-				style="border: 1px solid rgba(0, 0, 0, 0.1);"
-				src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2F7BpOmi30JgG6gIaE0T7fL4%2FPayjoin-Designs-Bitcoin-Wallet-UI-Kit-%2526-Design-System%3Fpage-id%3D4263%253A62592%26node-id%3D4954%253A70101%26viewport%3D-4364%252C-2385%252C0.48%26scaling%3Dmin-zoom%26starting-point-node-id%3D4954%253A70101"
-				allowfullscreen
-			/>
+		<div>
+			<!-- TODO: edit -->
+			As you can see, Bob's wallet automatically payjoined. He didn't have to do anything. The merchant
+			got paid and Bob's privacy was preserved. The merchant's wallet didn't have to do anything either.
+			It just received a payjoin transaction. It's that easy.
 		</div>
 	</section>
 	<section id="privacy" class="flex flex-col gap-4 pt-24">
@@ -253,7 +271,7 @@
 		class="flex flex-col lg:justify-around items-center gap-4 lg:flex-row pt-24"
 	>
 		<div class="self-start flex-1">
-			<H2>Get Involved</H2>
+			<H2>We need your help!</H2>
 			<H3>Pay it forward. Join the movement.</H3>
 			<p>
 				Payjoin has many benefits for Bitcoin, we need your help to get wallets to integrate it!

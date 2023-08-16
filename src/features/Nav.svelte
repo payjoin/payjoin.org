@@ -83,7 +83,7 @@
 				</h3>
 				<ul class="flex flex-col gap-4 items-center text-2xl">
 					<li><Link href="#why">Why</Link></li>
-					<li><Link href="#demo">Demo</Link></li>
+					<li><Link href="#ux">Demo</Link></li>
 					<li><Link href="#privacy">Privacy</Link></li>
 					<li><Link href="#how-to">How to</Link></li>
 					<li><Link href="#future-plans">Future Plans</Link></li>
