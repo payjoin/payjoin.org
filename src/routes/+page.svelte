@@ -18,8 +18,10 @@
 				how you use it.</H3
 			>
 			<H5 colorClass="">
-				Help improve Bitcoin by <Link href="#nowhere" target="_blank" icon="externalLink"
-					>asking your wallet to implement payjoin!</Link
+				Help improve Bitcoin by <Link
+					href="https://en.bitcoin.it/wiki/PayJoin_adoption"
+					target="_blank"
+					icon="externalLink">asking your wallet to implement payjoin!</Link
 				></H5
 			>
 		</div>
@@ -147,12 +149,16 @@
 				/>
 			</div>
 		</div>
-		<div>
-			<!-- TODO: edit -->
-			As you can see, Bob's wallet automatically payjoined. He didn't have to do anything. The merchant
-			got paid and Bob's privacy was preserved. The merchant's wallet didn't have to do anything either.
-			It just received a payjoin transaction. It's that easy.
-		</div>
+		<p>
+			As you can see, Bob's wallet automatically payjoined. Neither he nor the merchant had to do
+			anything, and their privacy was preserved. It's that easy.
+		</p>
+		<p>
+			Therefore, the biggest barrier to payjoin adoption is not UX, but <Link
+				href="https://en.bitcoin.it/wiki/PayJoin_adoption"
+				target="_blank">wallet integration</Link
+			>
+		</p>
 	</section>
 	<section id="privacy" class="flex flex-col gap-4 pt-24">
 		<H2>How is it private?</H2>
@@ -290,7 +296,8 @@
 			<H2>We need your help!</H2>
 			<H3>Pay it forward. Join the movement.</H3>
 			<p>
-				Payjoin has many benefits for Bitcoin, we need your help to get wallets to integrate it!
+				Payjoin has many benefits for Bitcoin and doesn't require much, we need your help to get
+				wallets to support it!
 			</p>
 			<ul class="list-disc list-inside">
 				<li>
@@ -306,15 +313,15 @@
 						>Figma</Link
 					>
 				</li>
-				<li><strong>Anyone Else:</strong> Spread the word!</li>
+				<li>
+					<strong>Anyone Else:</strong> Ask your <Link
+						href="https://en.bitcoin.it/wiki/PayJoin_adoption"
+						target="_blank">wallet provider to integrate it</Link
+					>!
+				</li>
 			</ul>
-			<!-- If you are a developer, please check out the SDK
-				and leave your feedback. If you are a designer, please help us make the user experience
-				amazing. If you are a writer, please help us explain payjoin to the world. If you are a
-				merchant, please consider accepting payjoin. If you are a user, please ask your wallet
-				provider to support payjoin. -->
 		</div>
-		<img class="w-2/5" src={`/images/uncle-satoshi.png`} alt="Satoshi Needs Your Help!" />
+		<img class="w-2/5" src={`/images/uncle-satoshi-payjoin.png`} alt="Satoshi Needs Your Help!" />
 	</section>
 	<section class="flex gap-4 justify-between mb-10 pt-24">
 		<div class="flex flex-col">

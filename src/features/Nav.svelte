@@ -43,7 +43,9 @@
 <nav
 	class="fixed w-full flex justify-between transition-all duration-500 bg-opacity-90 items-center p-4 z-10"
 >
-	<h3 class="text-3xl text-white hidden md:inline"><a href="/">Payjoin</a></h3>
+	<h3 class="text-3xl text-white hidden md:inline">
+		<a class="flex gap-2 items-center" href="/"><Icon name="monad" />Payjoin</a>
+	</h3>
 	<ul class="hidden justify-end gap-4 items-center text-xl md:flex">
 		<li><Link href="#why">Why</Link></li>
 		<li><Link href="#ux">Demo</Link></li>
