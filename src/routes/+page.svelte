@@ -331,7 +331,7 @@
 	<section class="flex gap-4 justify-between mb-10 pt-24">
 		<div class="flex flex-col">
 			<p>Community</p>
-			<Link target="_blank" href="https://discord.gg/HrTwfxQG">Discord</Link>
+			<Link target="_blank" href="https://discord.gg/6rJD9R684h">Discord</Link>
 			<Link target="_blank" href="https://github.com/payjoin">GitHub</Link>
 			<Link target="_blank" href="https://payjoin.substack.com">Newsletter</Link>
 		</div>
