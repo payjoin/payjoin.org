@@ -5,7 +5,8 @@
 			"current": "currentColor",
 			"primary": {
 				"DEFAULT": "#f75394"
-			}
+			},
+			"background": "#0f0f0f"
 		}
 	}
 }

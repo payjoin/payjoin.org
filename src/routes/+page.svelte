@@ -7,6 +7,7 @@
 	import H5 from '../components/Header/H5.svelte';
 	import Icon from '../components/Icon/Icon.svelte';
 	import Link from '../components/Link.svelte';
+	import AdoptionTable from '../features/AdoptionTable.svelte';
 </script>
 
 <div class="w-4/5 flex flex-col">
@@ -14,7 +15,7 @@
 		<div class="w-4/5">
 			<H1>Better Bitcoin Transactions</H1>
 			<H3 colorClass=""
-				>A simple protocol that can scale Bitcoin, save fees, and preserve privacy, without changing
+				>A simple protocol that can preserve privacy, scale Bitcoin, and save fees, without changing
 				how you use it.</H3
 			>
 			<H5 colorClass="">
@@ -94,14 +95,15 @@
 				<div>
 					<H3 colorClass="text-primary">Scaling Upgraded</H3>
 					<p>
-						Payjoin settles many transfers together in one transaction, saving time spent waiting for block
-						confirmations and enabling higher throughput.
+						Payjoin settles many transfers together in one transaction, saving time spent waiting
+						for block confirmations and enabling higher throughput.
 					</p>
 				</div>
 				<div>
 					<H3 colorClass="text-primary">Fees Saved</H3>
 					<p>
-						As a byproduct of the scaling improvements, the many transfers inside each payjoin share the fees of a single transaction.
+						As a byproduct of the scaling improvements, the many transfers inside each payjoin share
+						the fees of a single transaction.
 					</p>
 				</div>
 			</div>
@@ -271,6 +273,14 @@
 			><Button secondary>Read the SDK docs</Button></Link
 		>
 	</section>
+	<section id="adoption" class="flex flex-col pt-24">
+		<H2>Supporting Wallets</H2>
+		<H3
+			>A list of wallets that support sending or receiving payjoin. We need your help growing this
+			list!</H3
+		>
+		<AdoptionTable />
+	</section>
 	<section id="future-plans" class="flex flex-col pt-24">
 		<H2>Future Plans</H2>
 		<div class="flex flex-col lg:flex-row">
@@ -299,7 +309,6 @@
 	>
 		<div class="self-start flex-1">
 			<H2>We need your help!</H2>
-			<H3>Pay it forward. Join the movement.</H3>
 			<p>
 				Payjoin has many benefits for Bitcoin and doesn't require much, we need your help to get
 				wallets to support it!
