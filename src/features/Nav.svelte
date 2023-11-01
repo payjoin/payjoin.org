@@ -51,6 +51,7 @@
 		<li><Link href="#ux">Demo</Link></li>
 		<li><Link href="#privacy">Privacy</Link></li>
 		<li><Link href="#how-to">How to</Link></li>
+		<li><Link href="#adoption">Supporting Wallets</Link></li>
 		<li><Link href="#future-plans">Future Plans</Link></li>
 		<li><Link href="#get-involved">Get Involved</Link></li>
 		<!-- TODO: light mode styling -->

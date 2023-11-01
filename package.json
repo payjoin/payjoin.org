@@ -38,7 +38,7 @@
 		"*.{js,ts,svelte,css,md,json}": [
 			"prettier --write",
 			"eslint --fix",
-			"tsc --noEmit"
+			"bash -c 'yarn run check'"
 		]
 	}
 }
