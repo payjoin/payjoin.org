@@ -11,7 +11,9 @@
 	import WalletCard from '../features/WalletCard.svelte';
 
 	const privateWallets = WALLET_ADOPTION.filter((wallet) => wallet.sending || wallet.sending);
-	const surveilledWallets = WALLET_ADOPTION.filter((wallet) => !wallet.sending && !wallet.sending);
+	const surveillableWallets = WALLET_ADOPTION.filter(
+		(wallet) => !wallet.sending && !wallet.sending
+	);
 </script>
 
 <div class="w-4/5 flex flex-col">
@@ -290,7 +292,7 @@
 		</div>
 		<div class="flex gap-12 max-md:flex-col">
 			<WalletCard wallets={privateWallets} />
-			<WalletCard bad wallets={surveilledWallets} />
+			<WalletCard bad wallets={surveillableWallets} />
 		</div>
 	</section>
 	<section id="future-plans" class="flex flex-col pt-24">
