@@ -1,4 +1,5 @@
 <script>
+	import { WALLET_ADOPTION } from '$lib/constants';
 	import Button from '../components/Button.svelte';
 	import Capsule from '../components/Capsule.svelte';
 	import H1 from '../components/Header/H1.svelte';
@@ -7,7 +8,12 @@
 	import H5 from '../components/Header/H5.svelte';
 	import Icon from '../components/Icon/Icon.svelte';
 	import Link from '../components/Link.svelte';
-	import AdoptionTable from '../features/AdoptionTable.svelte';
+	import WalletCard from '../features/WalletCard.svelte';
+
+	const privateWallets = WALLET_ADOPTION.filter((wallet) => wallet.sending || wallet.sending);
+	const surveillableWallets = WALLET_ADOPTION.filter(
+		(wallet) => !wallet.sending && !wallet.sending
+	);
 </script>
 
 <div class="w-4/5 flex flex-col">
@@ -19,12 +25,15 @@
 				how you use it.</H3
 			>
 			<H5 colorClass="">
-				Help improve Bitcoin by <Link
+				Help improve Bitcoin by
+				<Link
 					href="https://en.bitcoin.it/wiki/PayJoin_adoption"
 					target="_blank"
-					icon="externalLink">asking your wallet to implement payjoin!</Link
-				></H5
-			>
+					icon="externalLink"
+				>
+					asking your wallet to implement payjoin!
+				</Link>
+			</H5>
 		</div>
 
 		<a href="#why" class="flex flex-col gap-4 justify-center animate-smooth-bounce">
@@ -275,11 +284,16 @@
 	</section>
 	<section id="adoption" class="flex flex-col pt-24">
 		<H2>Supporting Wallets</H2>
-		<H3
-			>A list of wallets that support sending or receiving payjoin. We need your help growing this
-			list!</H3
-		>
-		<AdoptionTable />
+		<div class="mb-4">
+			<H3
+				>A list of wallets that support sending or receiving payjoin. We need your help growing this
+				list!</H3
+			>
+		</div>
+		<div class="flex gap-12 max-md:flex-col">
+			<WalletCard wallets={privateWallets} />
+			<WalletCard bad wallets={surveillableWallets} />
+		</div>
 	</section>
 	<section id="future-plans" class="flex flex-col pt-24">
 		<H2>Future Plans</H2>
