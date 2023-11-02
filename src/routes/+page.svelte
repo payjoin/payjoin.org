@@ -288,9 +288,7 @@
 				list!</H3
 			>
 		</div>
-
-		<!-- <AdoptionTable /> -->
-		<div class="flex w-full gap-12 overflow-visible">
+		<div class="flex gap-12 max-md:flex-col">
 			<WalletCard wallets={privateWallets} />
 			<WalletCard bad wallets={surveilledWallets} />
 		</div>

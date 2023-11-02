@@ -6,8 +6,12 @@
 	export let wallets: AcceptedWallet[] = [];
 </script>
 
-<div class={`flex gap-12 p-4 ${bad ? 'bg-red-400' : 'bg-green-300'}`}>
-	{#each wallets as { name, href }}
-		<LinkTag {href} {bad} text={name} />
-	{/each}
+<div class="flex-1">
+	<div
+		class={`flex  gap-4 p-4 items-end rounded-3xl flex-wrap ${bad ? 'bg-red-400' : 'bg-green-300'}`}
+	>
+		{#each wallets as { name, href }}
+			<LinkTag {href} {bad} text={name} />
+		{/each}
+	</div>
 </div>
