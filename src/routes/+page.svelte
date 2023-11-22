@@ -38,10 +38,10 @@
 
 		<a
 			href="#why"
-			class="flex flex-col gap-4 justify-center hover:translate-y-2 duration-200 transition-all"
+			class="flex flex-col gap-4 justify-center hover:translate-y-1 duration-200 transition-all"
 		>
 			<p class="text-primary">Why Payjoin?</p>
-			<Icon class="h-20 flex justify-center " name="arrowJoin" />
+			<Icon class="h-20 flex justify-center" name="arrowJoin" />
 		</a>
 	</section>
 	<section id="why" class="flex flex-col gap-8 pt-24">
