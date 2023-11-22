@@ -5,10 +5,15 @@
 	export let href = '#';
 	export let target = '_self';
 	export let icon: IconName | undefined = undefined;
+	export let textwhite = false;
 	$: rel = target === '_blank' ? 'noopener noreferrer' : '';
+
+	$: clazz = `${
+		textwhite ? 'text-white hover:text-primary' : 'text-primary hover:text-pink-300'
+	} transition-all inline`;
 </script>
 
-<a {href} {target} {rel}>
+<a class={clazz} {href} {target} {rel}>
 	<span class="inline-flex gap-2 items-center">
 		<slot />
 		{#if icon}
@@ -16,12 +21,3 @@
 		{/if}
 	</span>
 </a>
-
-<style lang="postcss">
-	a:hover {
-		@apply dark:text-pink-300 text-pink-800 transition-all;
-	}
-	a {
-		@apply text-primary transition-all inline;
-	}
-</style>
