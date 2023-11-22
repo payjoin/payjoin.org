@@ -47,13 +47,13 @@
 		<a class="flex gap-2 items-center" href="/"><Icon name="monad" />Payjoin</a>
 	</h3>
 	<ul class="hidden justify-end gap-4 items-center text-xl md:flex">
-		<li><Link href="#why">Why</Link></li>
-		<li><Link href="#ux">Demo</Link></li>
-		<li><Link href="#privacy">Privacy</Link></li>
-		<li><Link href="#how-to">How to</Link></li>
-		<li><Link href="#adoption">Supporting Wallets</Link></li>
-		<li><Link href="#future-plans">Future Plans</Link></li>
-		<li><Link href="#get-involved">Get Involved</Link></li>
+		<li><Link textwhite href="#why">Why</Link></li>
+		<li><Link textwhite href="#ux">Demo</Link></li>
+		<li><Link textwhite href="#privacy">Privacy</Link></li>
+		<li><Link textwhite href="#how-to">How to</Link></li>
+		<li><Link textwhite href="#adoption">Supporting Wallets</Link></li>
+		<li><Link textwhite href="#future-plans">Future Plans</Link></li>
+		<li><Link textwhite href="#get-involved">Get Involved</Link></li>
 		<!-- TODO: light mode styling -->
 		<!-- <li><button on:click={toggleDarkMode}><Icon name="moon" /></button></li> -->
 	</ul>
