@@ -173,7 +173,8 @@ If there is a wallet you’d like to see adopt payjoin or you are a wallet devel
 		<H3>Payjoin can bring many benefits to Bitcoin, but it needs your help</H3>
 	</div>
 	<H3
-		>Join our <Link href="https://payjoin.substack.com/">newsletter</Link> to stay up to date with payjoin
-		development</H3
+		>Join our <Link href="https://payjoin.substack.com/">newsletter</Link> or the <Link
+			href="https://discord.gg/6rJD9R684h">Discord</Link
+		> to stay up to date with payjoin development</H3
 	>
 </section>
