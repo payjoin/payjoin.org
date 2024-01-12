@@ -9,6 +9,8 @@ import monad from './svg/monad.svg?raw';
 import spiral from './svg/spiral.svg?raw';
 import arrow from './svg/arrow.svg?raw';
 import check from './svg/check.svg?raw';
+import plus from './svg/plus.svg?raw';
+import minus from './svg/minus.svg?raw';
 
 const icons = {
 	moon,
@@ -20,7 +22,9 @@ const icons = {
 	monad,
 	spiral,
 	arrow,
-	check
+	check,
+	plus,
+	minus
 };
 
 export type IconName = keyof typeof icons;

@@ -8,11 +8,35 @@
 	import { WALLET_ADOPTION } from '@/lib/constants';
 	import WalletCard from '@features/WalletCard.svelte';
 	import H3 from '@/components/Header/H3.svelte';
+	import { slide } from 'svelte/transition';
 
 	const privateWallets = WALLET_ADOPTION.filter((wallet) => wallet.sending || wallet.sending);
 	const surveillableWallets = WALLET_ADOPTION.filter(
 		(wallet) => !wallet.sending && !wallet.sending
 	);
+
+	let faqs = [
+		{
+			question: 'Does this require changes to Bitcoin?',
+			answer:
+				'No. Payjoin was designed with ease of adoption in mind, and requiring consensus changes would be slow and difficult. Payjoin works as a protocol on top of Bitcoin.',
+			open: false
+		},
+		{
+			question: 'Why isn’t there much adoption yet?',
+			answer:
+				'One of the great things about payjoin is that it doesn’t require any consensus changes to Bitcoin. The flip side is that it’s up to individual wallets to implement it, and historically there haven’t been many tools to assist developers. Payjoin Dev Kit (PDK) aims to solve this problem as the de-facto library for payjoin, and it includes payjoin-cli as a reference implementation.\n\n\
+Another barrier has been that the first version of payjoin required an HTTPS server for a receiver to be running at the time a sender wanted to make a payment. This practically limited payjoin’s utility to always-online wallets such as merchants. But with the recent release of payjoin V2, receivers can create payjoin transactions asynchronously while offline. This opens up adoption to all types of wallets.\n\n\
+If there is a wallet you’d like to see adopt payjoin or you are a wallet developer and who’d like to integrate it, checkout our tutorials or reach out to us for help!',
+			open: false
+		},
+		{
+			question: 'Can I add Payjoin to my wallet right now using Payjoin Dev Kit?',
+			answer:
+				'PDK currently only supports wallets that use Rust. However, we are creating bindings to other languages to allow it to be used across all sorts of different applications, including mobile apps. The Python bindings are nearly complete!',
+			open: false
+		}
+	];
 </script>
 
 <section class="w-full h-screen flex items-center justify-center">
@@ -78,5 +102,47 @@
 			>
 			<WalletCard wallets={privateWallets} />
 		</div>
+	</div>
+
+	<span class="flex flex-col items-center text-lg"
+		>If you are a developer seeking to enhance your wallet with payjoin, check out<Link
+			href="https://payjoindevkit.org/"><strong>Payjoin Dev Kit</strong></Link
+		></span
+	>
+</section>
+
+<section class="bg-tertiary w-full flex flex-col gap-12 items-center py-16 text-white">
+	<H1>FAQ</H1>
+	<div class="flex flex-col gap-8 w-3/4">
+		{#each faqs as { question, answer, open }, i}
+			<Card>
+				<div class="flex justify-between items-center whitespace-pre">
+					<H3>{question}</H3>
+					<button class="w-4" on:click={() => (faqs[i].open = !open)}
+						><Icon name={open ? 'minus' : 'plus'} class="text-white " /></button
+					>
+				</div>
+				<span in:slide|local out:slide|local class={open ? '' : 'hidden'}>{answer}</span>
+			</Card>
+		{/each}
+
+		<Card>
+			<div class="flex justify-between items-center">
+				<H3>Does this require changes to Bitcoin?</H3>
+				<Icon name="plus" class="text-white w-4" />
+			</div>
+		</Card>
+		<Card>
+			<div class="flex justify-between items-center">
+				<H3>Does this require changes to Bitcoin?</H3>
+				<Icon name="plus" class="text-white w-4" />
+			</div>
+		</Card>
+		<Card>
+			<div class="flex justify-between items-center">
+				<H3>Does this require changes to Bitcoin?</H3>
+				<Icon name="plus" class="text-white w-4" />
+			</div>
+		</Card>
 	</div>
 </section>
