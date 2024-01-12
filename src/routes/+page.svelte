@@ -8,7 +8,6 @@
 	import { WALLET_ADOPTION } from '@/lib/constants';
 	import WalletCard from '@features/WalletCard.svelte';
 	import H3 from '@/components/Header/H3.svelte';
-	import { slide } from 'svelte/transition';
 
 	const privateWallets = WALLET_ADOPTION.filter((wallet) => wallet.sending || wallet.sending);
 	const surveillableWallets = WALLET_ADOPTION.filter(
@@ -39,12 +38,16 @@ If there is a wallet you’d like to see adopt payjoin or you are a wallet devel
 	];
 </script>
 
-<section class="w-full h-screen flex items-center justify-center">
+<section
+	class="w-full h-full max-sm:mb-4 sm:h-screen flex items-center justify-center max-sm:pt-24"
+>
 	<div class="flex flex-col gap-4 items-center text-center w-2/3">
 		<Icon name="monad" class="w-24 text-primary" />
 		<H1>Payjoin</H1>
-		<H2>A simple protocol to scale Bitcoin, save fees, and preserve privacy all at once</H2>
-		<div class="flex gap-4 w-1/2 justify-center">
+		<h2 class="text-2xl text-white sm:text-4xl">
+			A simple protocol to scale Bitcoin, save fees, and preserve privacy all at once
+		</h2>
+		<div class="flex flex-col w-full sm:flex-row gap-4 sm:w-1/2 justify-center">
 			<a class="w-full" href="/learn"><Button wide>Get Started</Button></a>
 			<a class="w-full" href="/devkit"><Button wide secondary>Developer Kit</Button></a>
 		</div>
@@ -53,7 +56,7 @@ If there is a wallet you’d like to see adopt payjoin or you are a wallet devel
 
 <section class="bg-tertiary w-full flex flex-col gap-20 items-center py-16">
 	<H1>Why Payjoin?</H1>
-	<div class="flex gap-12 w-3/4">
+	<div class="flex-col sm:flex sm:gap-12 gap-4 w-3/4">
 		<Card>
 			<div class="flex flex-col gap-2 text-white">
 				<strong>Preserves Privacy</strong>
@@ -88,17 +91,33 @@ If there is a wallet you’d like to see adopt payjoin or you are a wallet devel
 </section>
 
 <section class="bg-secondary w-full flex flex-col gap-12 items-center py-16 text-white">
+	<H1>User Experience</H1>
+	<div class="w-full sm:w-1/2">
+		<iframe
+			title="Payjoin Demo"
+			class="w-full h-96"
+			style="border: 1px solid rgba(0, 0, 0, 0.1);"
+			src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2F7BpOmi30JgG6gIaE0T7fL4%2FPayjoin-Designs-Bitcoin-Wallet-UI-Kit-%2526-Design-System%3Fpage-id%3D4263%253A62592%26node-id%3D4954%253A70101%26viewport%3D-4364%252C-2385%252C0.48%26scaling%3Dmin-zoom%26starting-point-node-id%3D4954%253A70101"
+			allowfullscreen
+		/>
+	</div>
+</section>
+
+<section class="bg-secondary w-full flex flex-col gap-12 items-center py-16 text-white text-center">
 	<H1>Supporting Wallets</H1>
-	<div class="flex gap-8 w-3/4">
+	<div class="flex sm:flex-row flex-col-reverse gap-8 w-3/4">
 		<div class="flex flex-col gap-2 w-full items-center">
-			<H3 class="flex gap-2 items-center"
-				>Not yet supporting payjoin<Icon name="close" class="text-red-300 w-4" /></H3
+			<H3 class="flex flex-col sm:flex-row gap-2 items-center"
+				>Not yet supporting payjoin<Icon name="close" class="text-red-300 w-8 sm:w-4" /></H3
 			>
 			<WalletCard bad wallets={surveillableWallets} />
 		</div>
 		<div class="flex flex-col gap-2 w-full items-center">
-			<H3 class="flex gap-2 items-center"
-				>Supports sending or receiving payjoin<Icon name="check" class="text-green-400 w-4" /></H3
+			<H3 class="flex gap-2 items-center sm:flex-row flex-col"
+				>Supports sending or receiving payjoin<Icon
+					name="check"
+					class="text-green-400 w-8 sm:w-4"
+				/></H3
 			>
 			<WalletCard wallets={privateWallets} />
 		</div>
@@ -116,13 +135,17 @@ If there is a wallet you’d like to see adopt payjoin or you are a wallet devel
 	<div class="flex flex-col gap-8 w-3/4">
 		{#each faqs as { question, answer, open }, i}
 			<Card>
-				<div class="flex justify-between items-center whitespace-pre">
-					<H3>{question}</H3>
-					<button class="w-4" on:click={() => (faqs[i].open = !open)}
-						><Icon name={open ? 'minus' : 'plus'} class="text-white " /></button
+				<!-- svelte-ignore a11y-click-events-have-key-events -->
+				<!-- svelte-ignore a11y-no-static-element-interactions -->
+				<span class="cursor-pointer" on:click={() => (faqs[i].open = !open)}>
+					<div
+						class="flex justify-between items-center flex-col sm:flex-row max-sm:text-center max-sm:gap-4"
 					>
-				</div>
-				<span in:slide|local out:slide|local class={open ? '' : 'hidden'}>{answer}</span>
+						<H3>{question}</H3>
+						<Icon name={open ? 'minus' : 'plus'} class="text-white  w-6 sm:w-4" />
+					</div>
+					<span class={open ? '' : 'hidden'}>{answer}</span>
+				</span>
 			</Card>
 		{/each}
 	</div>
