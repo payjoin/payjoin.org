@@ -36,9 +36,12 @@
 			</H5>
 		</div>
 
-		<a href="#why" class="flex flex-col gap-4 justify-center animate-smooth-bounce">
+		<a
+			href="#why"
+			class="flex flex-col gap-4 justify-center hover:translate-y-1 duration-200 transition-all"
+		>
 			<p class="text-primary">Why Payjoin?</p>
-			<Icon class="h-20 flex justify-center " name="arrowJoin" />
+			<Icon class="h-20 flex justify-center" name="arrowJoin" />
 		</a>
 	</section>
 	<section id="why" class="flex flex-col gap-8 pt-24">
@@ -78,13 +81,13 @@
 				</div>
 			</div>
 		</div>
-		<div class="flex flex-col text-primary gap-4">
+		<div class="flex flex-col gap-4">
 			<div class="flex gap-2 items-center">
-				<Icon class="flex h-10 " name="monad" />
-				<H2 colorClass="text-primary">The Solution</H2>
+				<Icon class="flex h-10 text-primary" name="monad" />
+				<H2>The Solution</H2>
 			</div>
 			<p>
-				Payjoin joins sender and receiver inputs in the one transaction. Batching like this reduces
+				Payjoin joins sender and receiver inputs in one transaction. Batching like this reduces
 				fees and packs more payment activity, scaling bitcoin. Joining inputs from many owners
 				breaks that assumption Satoshi warned us about. Your wallet can payjoin when you spend
 				without having you make any decisions. And if your wallet doesn't support it, it has a
@@ -95,21 +98,21 @@
 			</p>
 			<div class="flex flex-col md:grid grid-cols-3 gap-8">
 				<div>
-					<H3 colorClass="text-primary">Privacy Enhanced</H3>
+					<H3>Privacy Enhanced</H3>
 					<p>
 						By cleverly taking advantage of transaction structure, payjoin allows for enhanced
 						privacy for everyone ― even for those who don’t use it ― foiling chain surveillance.
 					</p>
 				</div>
 				<div>
-					<H3 colorClass="text-primary">Scaling Upgraded</H3>
+					<H3>Scaling Upgraded</H3>
 					<p>
 						Payjoin settles many transfers together in one transaction, saving time spent waiting
 						for block confirmations and enabling higher throughput.
 					</p>
 				</div>
 				<div>
-					<H3 colorClass="text-primary">Fees Saved</H3>
+					<H3>Fees Saved</H3>
 					<p>
 						As a byproduct of the scaling improvements, the many transfers inside each payjoin share
 						the fees of a single transaction.
@@ -119,8 +122,8 @@
 		</div>
 		<div>
 			<H2 class="inline-flex items-end gap-2"
-				>Lightning Compatible <Icon name="lightning" class="flex w-8 text-primary" /></H2
-			>
+				><Icon name="lightning" class="flex w-8 text-primary" /> Lightning Compatible
+			</H2>
 			<H3><i>Open all your channels at once</i></H3>
 			<p>Combining payjoin with the Lightning Network opens up new possibilities for bitcoin.</p>
 			<p>With payjoin, lightning nodes could:</p>
@@ -134,17 +137,6 @@
 			> project for an example.
 		</div>
 	</section>
-	<!-- <section>
-		<H2>How to Payjoin</H2>
-		<H3>Scan a Unified QR Code</H3>
-		<p>
-			This is a <Link href="https://bitcoinqr.dev/" target="_blank">BIP21 unified URI</Link> with a payjoin
-			parameter. Even if a wallet does not support payjoin, it can still fall back to the address to
-			make a successful transfer. This particular BIP21 will go to to payjoin.org’s cold wallet. By using
-			payjoin, you can get a unique address for your support to keep that private. Yes, even though we
-			use a cold wallet. Cool ❄️!
-		</p>
-	</section> -->
 	<section id="ux" class="flex gap-4 flex-col pt-24">
 		<div>
 			<div class="flex-1">
