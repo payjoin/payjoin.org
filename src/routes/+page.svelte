@@ -110,7 +110,9 @@ If there is a wallet you’d like to see adopt payjoin or you are a wallet devel
 	class="bg-secondary w-full flex flex-col gap-4 sm:gap-12 items-center py-16 text-white text-center"
 >
 	<H1>Supporting Wallets</H1>
-	<div class="flex gap-8 w-full bg-tertiary justify-center items-center">
+	<div
+		class="flex flex-col sm:flex-row max-sm:py-4 gap-8 w-full bg-tertiary justify-center items-center"
+	>
 		<img src="/images/bitmask.svg" alt="bitmasklogo" class="max-w-[200px]" />
 		<img src="/images/bluewallet.svg" alt="bluewallet logo" />
 		<img src="/images/btcpay.svg" alt="btcpayserver logo" />
