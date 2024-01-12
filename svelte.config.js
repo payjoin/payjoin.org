@@ -21,6 +21,12 @@ const config = {
 		}),
 		paths: {
 			base: dev ? '' : process.env.BASE_PATH
+		},
+		alias: {
+			'@': './src',
+			'@components': './src/components',
+			'@features': './src/features',
+			'@lib': './src/lib'
 		}
 	}
 };
