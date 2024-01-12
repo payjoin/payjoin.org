@@ -49,14 +49,16 @@ If there is a wallet you’d like to see adopt payjoin or you are a wallet devel
 		</h2>
 		<div class="flex flex-col w-full sm:flex-row gap-4 sm:w-1/2 justify-center">
 			<a class="w-full" href="/learn"><Button wide>Get Started</Button></a>
-			<a class="w-full" href="/devkit"><Button wide secondary>Developer Kit</Button></a>
+			<a class="w-full" href="https://payjoindevkit.org/"
+				><Button wide secondary>Developer Kit</Button></a
+			>
 		</div>
 	</div>
 </section>
 
-<section class="bg-tertiary w-full flex flex-col gap-20 items-center py-16">
+<section class="bg-tertiary w-full flex flex-col gap-4 sm:gap-14 items-center py-16">
 	<H1>Why Payjoin?</H1>
-	<div class="flex-col sm:flex sm:gap-12 gap-4 w-3/4">
+	<div class="flex flex-col sm:flex-row sm:gap-12 gap-4 w-3/4">
 		<Card>
 			<div class="flex flex-col gap-2 text-white">
 				<strong>Preserves Privacy</strong>
@@ -90,8 +92,9 @@ If there is a wallet you’d like to see adopt payjoin or you are a wallet devel
 	</div>
 </section>
 
-<section class="bg-secondary w-full flex flex-col gap-12 items-center py-16 text-white">
+<section class="bg-secondary w-full flex flex-col gap-4 sm:gap-12 items-center py-16 text-white">
 	<H1>User Experience</H1>
+	<H3>Click through the Figma below to see how simple it can be to payjoin!</H3>
 	<div class="w-full sm:w-1/2">
 		<iframe
 			title="Payjoin Demo"
@@ -103,8 +106,18 @@ If there is a wallet you’d like to see adopt payjoin or you are a wallet devel
 	</div>
 </section>
 
-<section class="bg-secondary w-full flex flex-col gap-12 items-center py-16 text-white text-center">
+<section
+	class="bg-secondary w-full flex flex-col gap-4 sm:gap-12 items-center py-16 text-white text-center"
+>
 	<H1>Supporting Wallets</H1>
+	<div class="flex gap-8 w-full bg-tertiary justify-center items-center">
+		<img src="/images/bitmask.svg" alt="bitmasklogo" class="max-w-[200px]" />
+		<img src="/images/bluewallet.svg" alt="bluewallet logo" />
+		<img src="/images/btcpay.svg" alt="btcpayserver logo" />
+		<img src="/images/joinmarket.png" alt="joinmarket logo" class="max-w-[200px]" />
+		<img src="/images/sparrow.png" alt="sparrow logo" class="max-w-[75px]" />
+		<img src="/images/wasabi.svg" alt="wasabi logo" />
+	</div>
 	<div class="flex sm:flex-row flex-col-reverse gap-8 w-3/4">
 		<div class="flex flex-col gap-2 w-full items-center">
 			<H3 class="flex flex-col sm:flex-row gap-2 items-center"
@@ -130,7 +143,7 @@ If there is a wallet you’d like to see adopt payjoin or you are a wallet devel
 	>
 </section>
 
-<section class="bg-tertiary w-full flex flex-col gap-12 items-center py-16 text-white">
+<section class="bg-tertiary w-full flex flex-col gap-4 sm:gap-12 items-center py-16 text-white">
 	<H1>FAQ</H1>
 	<div class="flex flex-col gap-8 w-3/4">
 		{#each faqs as { question, answer, open }, i}
@@ -151,7 +164,9 @@ If there is a wallet you’d like to see adopt payjoin or you are a wallet devel
 	</div>
 </section>
 
-<section class="bg-secondary w-full flex flex-col gap-12 items-center py-16 text-white">
+<section
+	class="bg-secondary w-full flex flex-col gap-4 sm:gap-12 items-center py-16 text-white max-sm:text-center"
+>
 	<div class="flex flex-col items-center">
 		<H1>Pay it Forward</H1>
 		<H1>Join the Community</H1>
