@@ -7,9 +7,8 @@
 >
 	<div class="flex flex-col">
 		<strong>Learn</strong>
-		<Link href="/learn">Get Started</Link>
+		<Link href="https://payjoindevkit.org/introduction/">Get Started</Link>
 		<Link href="https://payjoindevkit.org/">Developer Kit</Link>
-		<Link href="https://brandonlucas.net/articles/bitcoin/payjoin">Payjoin Explained</Link>
 		<Link href="https://bitcoin.design/guide/case-studies/payjoin/">Case Study</Link>
 	</div>
 	<div class="flex flex-col">

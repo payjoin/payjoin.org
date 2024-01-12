@@ -48,7 +48,9 @@ If there is a wallet you’d like to see adopt payjoin or you are a wallet devel
 			A simple protocol to scale Bitcoin, save fees, and preserve privacy all at once
 		</h2>
 		<div class="flex flex-col w-full sm:flex-row gap-4 sm:w-1/2 justify-center">
-			<a class="w-full" href="/learn"><Button wide>Get Started</Button></a>
+			<a class="w-full" href="https://payjoindevkit.org/introduction/"
+				><Button wide>Get Started</Button></a
+			>
 			<a class="w-full" href="https://payjoindevkit.org/"
 				><Button wide secondary>Developer Kit</Button></a
 			>
@@ -66,7 +68,7 @@ If there is a wallet you’d like to see adopt payjoin or you are a wallet devel
 					>Payjoin preserves privacy by breaking common assumptions made for traditional
 					transactions used to spy on bitcoin users
 				</span>
-				<Link href="/learn/privacy">Learn More<Icon name="arrow" class="w-4" /></Link>
+				<!-- <Link href="/learn/privacy">Learn More<Icon name="arrow" class="w-4" /></Link> -->
 			</div>
 		</Card>
 		<Card>
@@ -76,7 +78,7 @@ If there is a wallet you’d like to see adopt payjoin or you are a wallet devel
 					>Payjoin can settle many transactions at once, allowing higher throughput, time savings,
 					and opportunistically lower fees
 				</span>
-				<Link href="/learn">Learn More<Icon name="arrow" class="w-4" /></Link>
+				<!-- <Link href="/learn">Learn More<Icon name="arrow" class="w-4" /></Link> -->
 			</div>
 		</Card>
 		<Card>
@@ -86,7 +88,7 @@ If there is a wallet you’d like to see adopt payjoin or you are a wallet devel
 					>Payjoin allows Lightning nodes to fund and open all their channels in one transaction
 					while maintaining privacy
 				</span>
-				<Link href="/learn">Learn More<Icon name="arrow" class="w-4" /></Link>
+				<!-- <Link href="/learn">Learn More<Icon name="arrow" class="w-4" /></Link> -->
 			</div>
 		</Card>
 	</div>
@@ -109,7 +111,7 @@ If there is a wallet you’d like to see adopt payjoin or you are a wallet devel
 <section
 	class="bg-secondary w-full flex flex-col gap-4 sm:gap-12 items-center py-16 text-white text-center"
 >
-	<H1>Supporting Wallets</H1>
+	<H1>Wallets Using Payjoin</H1>
 	<div
 		class="flex flex-col sm:flex-row max-sm:py-4 gap-8 w-full bg-tertiary justify-center items-center"
 	>

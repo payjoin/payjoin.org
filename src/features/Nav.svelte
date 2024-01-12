@@ -44,11 +44,9 @@
 		<a class="flex gap-2 items-center" href="/"><Icon name="monad" /></a>
 	</h3>
 	<ul class="hidden justify-end gap-4 items-center text-xl md:flex">
-		<li><Link textwhite href="/learn">Learn</Link></li>
-		<li><Link textwhite href="/community">Community</Link></li>
-		<li><Link textwhite href="/blog">Blog</Link></li>
-		<!-- TODO: light mode styling -->
-		<!-- <li><button on:click={toggleDarkMode}><Icon name="moon" /></button></li> -->
+		<li><Link textwhite href="https://payjoindevkit.org/introduction/">Learn</Link></li>
+		<li><Link textwhite href="https://discord.gg/6rJD9R684h">Discord</Link></li>
+		<li><Link textwhite href="https://payjoin.substack.com/">Blog</Link></li>
 	</ul>
 	<!-- Hamburger menu -->
 	{#if !open}
@@ -73,9 +71,9 @@
 					<a class="flex gap-2 items-center" href="/"><Icon name="monad" /></a>
 				</h3>
 				<ul class="flex flex-col gap-4 items-center text-2xl">
-					<li><Link textwhite href="/learn">Learn</Link></li>
-					<li><Link textwhite href="/community">Community</Link></li>
-					<li><Link textwhite href="/blog">Blog</Link></li>
+					<li><Link textwhite href="https://payjoindevkit.org/introduction/">Learn</Link></li>
+					<li><Link textwhite href="https://discord.gg/6rJD9R684h">Discord</Link></li>
+					<li><Link textwhite href="https://payjoin.substack.com/">Blog</Link></li>
 				</ul>
 			</div>
 		</div>
