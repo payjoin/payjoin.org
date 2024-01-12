@@ -125,24 +125,17 @@ If there is a wallet you’d like to see adopt payjoin or you are a wallet devel
 				<span in:slide|local out:slide|local class={open ? '' : 'hidden'}>{answer}</span>
 			</Card>
 		{/each}
-
-		<Card>
-			<div class="flex justify-between items-center">
-				<H3>Does this require changes to Bitcoin?</H3>
-				<Icon name="plus" class="text-white w-4" />
-			</div>
-		</Card>
-		<Card>
-			<div class="flex justify-between items-center">
-				<H3>Does this require changes to Bitcoin?</H3>
-				<Icon name="plus" class="text-white w-4" />
-			</div>
-		</Card>
-		<Card>
-			<div class="flex justify-between items-center">
-				<H3>Does this require changes to Bitcoin?</H3>
-				<Icon name="plus" class="text-white w-4" />
-			</div>
-		</Card>
 	</div>
+</section>
+
+<section class="bg-secondary w-full flex flex-col gap-12 items-center py-16 text-white">
+	<div class="flex flex-col items-center">
+		<H1>Pay it Forward</H1>
+		<H1>Join the Community</H1>
+		<H3>Payjoin can bring many benefits to Bitcoin, but it needs your help</H3>
+	</div>
+	<H3
+		>Join our <Link href="https://payjoin.substack.com/">newsletter</Link> to stay up to date with payjoin
+		development</H3
+	>
 </section>
