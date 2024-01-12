@@ -10,7 +10,7 @@
 	@apply text-xl text-[#BFBFBF];
 }
 :root.dark {
-	--app-background: #0f0f0f;
+	--app-background: #46192b;
 	--app-color: #ffffff;
 	@apply ease-in-out duration-300;
 }
