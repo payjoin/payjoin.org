@@ -32,7 +32,7 @@ If there is a wallet you’d like to see adopt payjoin or you are a wallet devel
 		{
 			question: 'Can I add Payjoin to my wallet right now using Payjoin Dev Kit?',
 			answer:
-				'PDK currently only supports wallets that use Rust. However, we are creating bindings to other languages to allow it to be used across all sorts of different applications, including mobile apps. The Python bindings are nearly complete!',
+				'PDK currently only supports wallets that use Rust. However, we are creating bindings to other languages to allow it to be used across all sorts of different applications, including mobile apps.',
 			open: false
 		}
 	];
@@ -97,7 +97,7 @@ If there is a wallet you’d like to see adopt payjoin or you are a wallet devel
 <section class="bg-secondary w-full flex flex-col gap-4 sm:gap-12 items-center py-16 text-white">
 	<H1>User Experience</H1>
 	<H3>Click through the Figma below to see how simple it can be to payjoin!</H3>
-	<div class="w-full sm:w-1/2">
+	<div class="w-4/5 sm:w-1/2">
 		<iframe
 			title="Payjoin Demo"
 			class="w-full h-96"
