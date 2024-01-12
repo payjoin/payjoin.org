@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { browser } from '$app/environment';
-	import { slide } from 'svelte/transition';
 	import Link from '../components/Link.svelte';
 	import Icon from '../components/Icon/Icon.svelte';
 	import { clickOutside } from '$lib/events';
@@ -63,12 +62,7 @@
 			</button>
 		</div>
 	{:else}
-		<div
-			class="md:hidden flex items-center w-full"
-			in:slide|local
-			out:slide|local
-			use:clickOutside={handleClose}
-		>
+		<div class="md:hidden flex items-center w-full" use:clickOutside={handleClose}>
 			<div class="flex flex-col items-center justify-center h-full gap-4 w-full">
 				<button on:click={handleClose}>
 					<Icon class="flex h-6 text-white" name="close" />
