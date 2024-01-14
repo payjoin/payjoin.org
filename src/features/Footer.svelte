@@ -8,15 +8,15 @@
 	<div class="flex flex-col">
 		<strong>Learn</strong>
 		<Link href="https://payjoindevkit.org/introduction/">Get Started</Link>
-		<Link href="https://payjoindevkit.org/">Developer Kit</Link>
+		<Link href="https://payjoindevkit.org/">Payjoin Dev Kit</Link>
 		<Link href="https://bitcoin.design/guide/case-studies/payjoin/">Case Study</Link>
 	</div>
 	<div class="flex flex-col">
 		<strong>Community</strong>
-		<Link href="https://payjoin.substack.com/">Blog</Link>
+		<Link href="https://payjoin.substack.com/">News</Link>
 		<Link href="https://discord.gg/6rJD9R684h">Discord</Link>
 		<Link href="https://twitter.com/payjoindevkit">Twitter</Link>
-		<Link href="https://github.com/payjoin">Github</Link>
+		<Link href="https://github.com/payjoin">GitHub</Link>
 	</div>
 	<div class="flex flex-col">
 		<strong>Support</strong>

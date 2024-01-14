@@ -39,14 +39,14 @@
 
 <svelte:window bind:scrollY={y} />
 
-<nav class="fixed w-full flex justify-between bg-opacity-90 items-center p-4 z-10">
+<nav class="fixed w-full flex justify-between bg-opacity-90 items-center p-4 z-10 left-0">
 	<h3 class="text-3xl text-white hidden md:inline">
 		<a class="flex gap-2 items-center" href="/"><Icon name="monad" /></a>
 	</h3>
 	<ul class="hidden justify-end gap-4 items-center text-xl md:flex">
-		<li><Link textwhite href="https://payjoindevkit.org/introduction/">Learn</Link></li>
+		<li><Link textwhite href="https://payjoindevkit.org/introduction/">Dev Kit</Link></li>
 		<li><Link textwhite href="https://discord.gg/6rJD9R684h">Discord</Link></li>
-		<li><Link textwhite href="https://payjoin.substack.com/">Blog</Link></li>
+		<li><Link textwhite href="https://payjoin.substack.com/">News</Link></li>
 	</ul>
 	<!-- Hamburger menu -->
 	{#if !open}
@@ -71,9 +71,9 @@
 					<a class="flex gap-2 items-center" href="/"><Icon name="monad" /></a>
 				</h3>
 				<ul class="flex flex-col gap-4 items-center text-2xl">
-					<li><Link textwhite href="https://payjoindevkit.org/introduction/">Learn</Link></li>
+					<li><Link textwhite href="https://payjoindevkit.org/introduction/">Dev Kit</Link></li>
 					<li><Link textwhite href="https://discord.gg/6rJD9R684h">Discord</Link></li>
-					<li><Link textwhite href="https://payjoin.substack.com/">Blog</Link></li>
+					<li><Link textwhite href="https://payjoin.substack.com/">News</Link></li>
 				</ul>
 			</div>
 		</div>
