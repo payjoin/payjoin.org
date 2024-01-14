@@ -59,7 +59,7 @@ If there is a wallet you’d like to see adopt payjoin or you are a wallet devel
 </section>
 
 <section class="bg-tertiary w-full flex flex-col gap-4 sm:gap-14 items-center py-16">
-	<H1>Why Payjoin?</H1>
+	<H2>Why Payjoin?</H2>
 	<div class="flex flex-col sm:flex-row sm:gap-12 gap-4 w-3/4">
 		<Card>
 			<div class="flex flex-col gap-2 text-white">
@@ -95,8 +95,8 @@ If there is a wallet you’d like to see adopt payjoin or you are a wallet devel
 </section>
 
 <section class="bg-secondary w-full flex flex-col gap-4 sm:gap-12 items-center py-16 text-white">
-	<H1>User Experience</H1>
-	<H3>Click through the Figma below to see how simple it can be to payjoin!</H3>
+	<H2>Try it Yourself</H2>
+	<H3>Click through the app below to see all it takes to payjoin</H3>
 	<div class="w-4/5 sm:w-1/2">
 		<iframe
 			title="Payjoin Demo"
@@ -111,7 +111,7 @@ If there is a wallet you’d like to see adopt payjoin or you are a wallet devel
 <section
 	class="bg-secondary w-full flex flex-col gap-4 sm:gap-12 items-center py-16 text-white text-center"
 >
-	<H1>Wallets Using Payjoin</H1>
+	<H2>Wallets Using Payjoin</H2>
 	<div
 		class="flex flex-col sm:flex-row max-sm:py-4 gap-8 w-full bg-tertiary justify-center items-center"
 	>
@@ -145,7 +145,7 @@ If there is a wallet you’d like to see adopt payjoin or you are a wallet devel
 </section>
 
 <section class="bg-tertiary w-full flex flex-col gap-4 sm:gap-12 items-center py-16 text-white">
-	<H1>FAQ</H1>
+	<H2>FAQ</H2>
 	<div class="flex flex-col gap-8 w-3/4">
 		{#each faqs as { question, answer, open }, i}
 			<Card>
@@ -172,10 +172,10 @@ If there is a wallet you’d like to see adopt payjoin or you are a wallet devel
 	class="bg-secondary w-full flex flex-col gap-4 sm:gap-12 items-center py-16 text-white max-sm:text-center"
 >
 	<div class="flex flex-col items-center">
-		<H1>Pay it Forward</H1>
-		<H1>Join the Community</H1>
-		<H3>Payjoin can bring many benefits to Bitcoin, but it needs your help</H3>
+		<H2>Pay it Forward</H2>
+		<H2>Join the Community</H2>
 	</div>
+	<H3>Payjoin can bring many benefits to Bitcoin, but it needs your help</H3>
 	<H3
 		>Join our <Link href="https://payjoin.substack.com/">newsletter</Link> or the <Link
 			href="https://discord.gg/6rJD9R684h">Discord</Link
