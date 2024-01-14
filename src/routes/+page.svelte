@@ -161,7 +161,9 @@ If there is a wallet you’d like to see adopt payjoin or you are a wallet devel
 						<H3>{question}</H3>
 						<Icon name={open ? 'minus' : 'plus'} class="text-white  w-6 sm:w-4" />
 					</div>
-					<span class={open ? '' : 'hidden'}>{answer}</span>
+					<div class={open ? 'mt-4' : 'hidden'}>
+						<span>{answer}</span>
+					</div>
 				</span>
 			</Card>
 		{/each}
