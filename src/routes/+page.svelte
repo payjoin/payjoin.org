@@ -122,7 +122,7 @@ If there is a wallet you’d like to see adopt payjoin or you are a wallet devel
 		<img src="/images/sparrow.png" alt="sparrow logo" class="max-w-[75px]" />
 		<img src="/images/wasabi.svg" alt="wasabi logo" />
 	</div>
-	<div class="flex sm:flex-row flex-col-reverse gap-8 w-3/4">
+	<div class="flex sm:flex-row flex-col gap-8 w-3/4">
 		<div class="flex flex-col gap-2 w-full items-center">
 			<H3 class="flex gap-2 items-center sm:flex-row flex-col"
 				><Icon name="check" class="text-green-400 w-8 sm:w-4" />Supports Payjoin</H3
