@@ -13,7 +13,7 @@
 	</div>
 	<div class="flex flex-col">
 		<strong>Community</strong>
-		<Link href="https://payjoin.substack.com/">Blog</Link>
+		<Link href="https://payjoin.substack.com/">News</Link>
 		<Link href="https://discord.gg/6rJD9R684h">Discord</Link>
 		<Link href="https://twitter.com/payjoindevkit">Twitter</Link>
 		<Link href="https://github.com/payjoin">Github</Link>

@@ -46,7 +46,7 @@
 	<ul class="hidden justify-end gap-4 items-center text-xl md:flex">
 		<li><Link textwhite href="https://payjoindevkit.org/introduction/">Learn</Link></li>
 		<li><Link textwhite href="https://discord.gg/6rJD9R684h">Discord</Link></li>
-		<li><Link textwhite href="https://payjoin.substack.com/">Blog</Link></li>
+		<li><Link textwhite href="https://payjoin.substack.com/">News</Link></li>
 	</ul>
 	<!-- Hamburger menu -->
 	{#if !open}
@@ -73,7 +73,7 @@
 				<ul class="flex flex-col gap-4 items-center text-2xl">
 					<li><Link textwhite href="https://payjoindevkit.org/introduction/">Learn</Link></li>
 					<li><Link textwhite href="https://discord.gg/6rJD9R684h">Discord</Link></li>
-					<li><Link textwhite href="https://payjoin.substack.com/">Blog</Link></li>
+					<li><Link textwhite href="https://payjoin.substack.com/">News</Link></li>
 				</ul>
 			</div>
 		</div>
