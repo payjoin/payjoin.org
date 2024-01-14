@@ -39,7 +39,7 @@
 
 <svelte:window bind:scrollY={y} />
 
-<nav class="fixed w-full flex justify-between bg-opacity-90 items-center p-4 z-10">
+<nav class="fixed w-full flex justify-between bg-opacity-90 items-center p-4 z-10 left-0">
 	<h3 class="text-3xl text-white hidden md:inline">
 		<a class="flex gap-2 items-center" href="/"><Icon name="monad" /></a>
 	</h3>
