@@ -20,10 +20,10 @@ export const WALLET_ADOPTION: AcceptedWallet[] = [
 		receiving: false
 	},
 	{
-		name: 'Bitcoin Core',
-		href: 'https://bitcoin.org/en/bitcoin-core/',
-		sending: false,
-		receiving: false
+		name: 'Bitcoin Core (payjoin-cli)',
+		href: 'https://crates.io/crates/payjoin-cli',
+		sending: true,
+		receiving: true
 	},
 	{
 		name: 'Bitcoin Knots',
