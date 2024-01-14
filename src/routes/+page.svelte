@@ -122,21 +122,18 @@ If there is a wallet you’d like to see adopt payjoin or you are a wallet devel
 		<img src="/images/sparrow.png" alt="sparrow logo" class="max-w-[75px]" />
 		<img src="/images/wasabi.svg" alt="wasabi logo" />
 	</div>
-	<div class="flex sm:flex-row flex-col-reverse gap-8 w-3/4">
-		<div class="flex flex-col gap-2 w-full items-center">
-			<H3 class="flex flex-col sm:flex-row gap-2 items-center"
-				>Not yet supporting payjoin<Icon name="close" class="text-red-300 w-8 sm:w-4" /></H3
-			>
-			<WalletCard bad wallets={surveillableWallets} />
-		</div>
+	<div class="flex sm:flex-row flex-col gap-8 w-3/4">
 		<div class="flex flex-col gap-2 w-full items-center">
 			<H3 class="flex gap-2 items-center sm:flex-row flex-col"
-				>Supports sending or receiving payjoin<Icon
-					name="check"
-					class="text-green-400 w-8 sm:w-4"
-				/></H3
+				><Icon name="check" class="text-green-400 w-8 sm:w-4" />Supports Payjoin</H3
 			>
 			<WalletCard wallets={privateWallets} />
+		</div>
+		<div class="flex flex-col gap-2 w-full items-center">
+			<H3 class="flex flex-col sm:flex-row gap-2 items-center"
+				><Icon name="close" class="text-red-300 w-8 sm:w-4" />Needs a nudge</H3
+			>
+			<WalletCard bad wallets={surveillableWallets} />
 		</div>
 	</div>
 
