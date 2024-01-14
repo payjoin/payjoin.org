@@ -25,14 +25,14 @@
 			question: 'Why doesn’t my wallet support Payjoin yet?',
 			answer:
 				'One of the great things about payjoin is that it doesn’t require any consensus changes to Bitcoin. The flip side is that it’s up to individual wallets to implement it, and historically there haven’t been many tools to assist developers. Payjoin Dev Kit (PDK) aims to solve this problem as the de-facto library for payjoin, and it includes payjoin-cli as a reference implementation.\n\n\
-Another barrier has been that the first version of payjoin required an HTTPS server for a receiver to be running at the time a sender wanted to make a payment. This practically limited payjoin’s utility to always-online wallets such as merchants. But with the recent development of Payjoin V2, receivers can create payjoin transactions asynchronously while offline. This opens up adoption to all types of wallets.\n\n\
-If there is a wallet you’d like to see adopt payjoin or you are a wallet developer and who’d like to integrate it, checkout our tutorials or reach out to us for help!',
+Another barrier has been that the first version of payjoin required an HTTPS server for a receiver to be running at the time a sender wanted to make a payment. This practically limited payjoin’s utility to always-online wallets such as merchants. But with the recent development of <a href="https://github.com/bitcoin/bips/pull/1483" target="_blank" class="underline">Payjoin V2</a>, receivers can create payjoin transactions asynchronously while offline. This opens up adoption to all types of wallets.\n\n\
+If there is a wallet you’d like to see adopt payjoin or you are a wallet developer and who’d like to integrate it, check out our tutorials or reach out to us for help!',
 			open: false
 		},
 		{
 			question: 'Can I add Payjoin to my wallet right now using Payjoin Dev Kit?',
 			answer:
-				'PDK currently only supports wallets that use Rust. However, we are creating bindings to other languages to allow it to be used across all sorts of different applications, including mobile apps.',
+				'<a href="https://payjoindevkit.org" target="_blank" class="underline">PDK</a> is a Rust library to help your wallet use Payjoin. If your wallet uses another language, we are creating bindings to other languages so it can be used across all sorts of different applications, including mobile apps. The Python bindings are nearly complete.',
 			open: false
 		}
 	];
@@ -162,7 +162,8 @@ If there is a wallet you’d like to see adopt payjoin or you are a wallet devel
 						<Icon name={open ? 'minus' : 'plus'} class="text-white  w-6 sm:w-4" />
 					</div>
 					<div class={open ? 'mt-4' : 'hidden'}>
-						<span>{answer}</span>
+						<!-- eslint-disable-next-line svelte/no-at-html-tags -->
+						<span>{@html answer}</span>
 					</div>
 				</span>
 			</Card>
