@@ -2,18 +2,6 @@ import type { AcceptedWallet } from './types';
 
 export const WALLET_ADOPTION: AcceptedWallet[] = [
 	{
-		name: 'Armory',
-		href: 'https://www.bitcoinarmory.com/',
-		sending: false,
-		receiving: false
-	},
-	{
-		name: 'bcoin',
-		href: 'https://bcoin.io/',
-		sending: false,
-		receiving: false
-	},
-	{
 		name: 'BDK-CLI',
 		href: 'https://github.com/bitcoindevkit/bdk-cli/pull/156',
 		sending: false,
@@ -24,18 +12,6 @@ export const WALLET_ADOPTION: AcceptedWallet[] = [
 		href: 'https://crates.io/crates/payjoin-cli',
 		sending: true,
 		receiving: true
-	},
-	{
-		name: 'Bitcoin Knots',
-		href: 'https://bitcoinknots.org/',
-		sending: false,
-		receiving: false
-	},
-	{
-		name: 'Bitcoin Wallet for Android',
-		href: 'https://play.google.com/store/apps/details?id=de.schildbach.wallet',
-		sending: false,
-		receiving: false
 	},
 	{
 		name: 'BitMask',
@@ -51,7 +27,7 @@ export const WALLET_ADOPTION: AcceptedWallet[] = [
 	},
 	{
 		name: 'Blixt Wallet',
-		href: 'https://blixtwallet.github.io/',
+		href: 'https://github.com/hsjoberg/blixt-wallet/issues/1262',
 		sending: false,
 		receiving: false
 	},
@@ -68,20 +44,8 @@ export const WALLET_ADOPTION: AcceptedWallet[] = [
 		receiving: false
 	},
 	{
-		name: 'Brainbow',
-		href: 'https://github.com/Bitcoin-Brainbow/Brainbow',
-		sending: false,
-		receiving: false
-	},
-	{
-		name: 'Breadwallet',
-		href: 'https://play.google.com/store/apps/details?id=com.breadwallet',
-		sending: false,
-		receiving: false
-	},
-	{
-		name: 'BTC.com',
-		href: 'https://btc.com/',
+		name: 'Boltz',
+		href: 'https://github.com/BoltzExchange/boltz-backend/issues/449',
 		sending: false,
 		receiving: false
 	},
@@ -92,6 +56,12 @@ export const WALLET_ADOPTION: AcceptedWallet[] = [
 		receiving: true
 	},
 	{
+		name: 'Bull Bitcoin',
+		href: 'https://github.com/SatoshiPortal/bullbitcoin-mobile/issues',
+		sending: false,
+		receiving: false
+	},
+	{
 		name: 'Casa',
 		href: 'https://casa.io/',
 		sending: false,
@@ -99,37 +69,25 @@ export const WALLET_ADOPTION: AcceptedWallet[] = [
 	},
 	{
 		name: 'Core Lightning',
-		href: 'https://corelightning.org/',
-		sending: false,
-		receiving: false
-	},
-	{
-		name: 'Coinomi',
-		href: 'https://www.coinomi.com/en/',
-		sending: false,
-		receiving: false
-	},
-	{
-		name: 'Eclair',
-		href: 'https://electrum.org/',
+		href: 'https://github.com/payjoin/nolooking/issues/67',
 		sending: false,
 		receiving: false
 	},
 	{
 		name: 'Electrum',
-		href: 'https://electrum.org/',
+		href: 'https://github.com/spesmilo/electrum/issues/6585',
 		sending: false,
 		receiving: false
 	},
 	{
 		name: 'Envoy',
-		href: 'https://foundationdevices.com/envoy/',
+		href: 'https://github.com/Foundation-Devices/envoy/pull/84',
 		sending: false,
 		receiving: false
 	},
 	{
 		name: 'Fedimint',
-		href: 'https://fedimint.org/',
+		href: 'https://github.com/fedimint/fedimint/discussions/1764',
 		sending: false,
 		receiving: false
 	},
@@ -141,25 +99,19 @@ export const WALLET_ADOPTION: AcceptedWallet[] = [
 	},
 	{
 		name: 'Fully Noded',
-		href: 'https://fullynoded.app/',
+		href: 'https://github.com/Fonta1n3/FullyNoded/issues/126',
 		sending: false,
 		receiving: false
 	},
 	{
 		name: 'Gordian Wallet',
-		href: 'https://github.com/BlockchainCommons/GordianWallet-iOS',
-		sending: false,
-		receiving: false
-	},
-	{
-		name: 'Guarda Wallet',
-		href: 'https://guarda.com/',
+		href: 'https://github.com/orgs/BlockchainCommons/discussions/49',
 		sending: false,
 		receiving: false
 	},
 	{
 		name: 'JAM',
-		href: 'https://jamapp.org/',
+		href: 'https://github.com/joinmarket-webui/jam/issues/406',
 		sending: false,
 		receiving: false
 	},
@@ -171,25 +123,19 @@ export const WALLET_ADOPTION: AcceptedWallet[] = [
 	},
 	{
 		name: 'Liana',
-		href: 'https://wizardsardine.com/liana/',
+		href: 'https://github.com/wizardsardine/liana/issues/534',
 		sending: false,
 		receiving: false
 	},
 	{
-		name: 'LND',
-		href: 'https://docs.lightning.engineering/lightning-network-tools/lnd',
-		sending: false,
-		receiving: false
+		name: 'LND (nolooking)',
+		href: 'https://github.com/payjoin/nolooking',
+		sending: true,
+		receiving: true
 	},
 	{
 		name: 'Mutiny Wallet',
-		href: 'https://www.mutinywallet.com/',
-		sending: false,
-		receiving: false
-	},
-	{
-		name: 'Mycelium',
-		href: 'https://wallet.mycelium.com/',
+		href: 'https://github.com/MutinyWallet/mutiny-node/issues/194',
 		sending: false,
 		receiving: false
 	},
@@ -201,13 +147,7 @@ export const WALLET_ADOPTION: AcceptedWallet[] = [
 	},
 	{
 		name: 'Phoenix',
-		href: 'https://phoenix.acinq.co/',
-		sending: false,
-		receiving: false
-	},
-	{
-		name: 'Samourai Wallet',
-		href: 'https://samouraiwallet.com/',
+		href: 'https://github.com/ACINQ/phoenix/issues/161',
 		sending: false,
 		receiving: false
 	},
@@ -219,25 +159,13 @@ export const WALLET_ADOPTION: AcceptedWallet[] = [
 	},
 	{
 		name: 'Stack Wallet',
-		href: 'https://stackwallet.com/',
+		href: 'https://github.com/cypherstack/stack_wallet/issues/445',
 		sending: false,
 		receiving: false
 	},
 	{
 		name: 'Trezor Suite',
 		href: 'https://trezor.io/trezor-suite',
-		sending: false,
-		receiving: false
-	},
-	{
-		name: 'Trust Wallet',
-		href: 'https://trustwallet.com/',
-		sending: false,
-		receiving: false
-	},
-	{
-		name: 'Vortex',
-		href: 'https://lnvortex.com/',
 		sending: false,
 		receiving: false
 	},
