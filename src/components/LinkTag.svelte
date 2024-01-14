@@ -7,7 +7,7 @@
 <a
 	{href}
 	class={`${
-		bad ? 'bg-red-100' : 'bg-green-100'
+		bad ? 'bg-orange-100 cursor-text' : 'bg-green-100'
 	} no-underline rounded-xl px-3 p-2 hover:scale-105 transition-all duration-200 ease-in-out`}
 	target="_blank"
 	rel="noreferrer noopener"
