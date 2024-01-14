@@ -124,14 +124,14 @@ If there is a wallet you’d like to see adopt payjoin or you are a wallet devel
 	</div>
 	<div class="flex sm:flex-row flex-col gap-8 w-3/4">
 		<div class="flex flex-col gap-2 w-full items-center">
-			<H3 class="flex gap-2 items-center sm:flex-row flex-col"
+			<H3 class="flex gap-4 items-center sm:flex-row flex-col"
 				><Icon name="check" class="text-green-400 w-8 sm:w-4" />Supports Payjoin</H3
 			>
 			<WalletCard wallets={privateWallets} />
 		</div>
 		<div class="flex flex-col gap-2 w-full items-center">
-			<H3 class="flex flex-col sm:flex-row gap-2 items-center"
-				><Icon name="close" class="text-red-300 w-8 sm:w-4" />Needs a nudge</H3
+			<H3 class="flex flex-col sm:flex-row gap-4 items-center"
+				><Icon name="megaphone" class="text-orange-300 w-8 sm:w-4" />Needs a nudge</H3
 			>
 			<WalletCard bad wallets={surveillableWallets} />
 		</div>

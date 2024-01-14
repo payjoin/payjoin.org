@@ -11,6 +11,7 @@ import arrow from './svg/arrow.svg?raw';
 import check from './svg/check.svg?raw';
 import plus from './svg/plus.svg?raw';
 import minus from './svg/minus.svg?raw';
+import megaphone from './svg/megaphone.svg?raw';
 
 const icons = {
 	moon,
@@ -24,7 +25,8 @@ const icons = {
 	arrow,
 	check,
 	plus,
-	minus
+	minus,
+	megaphone
 };
 
 export type IconName = keyof typeof icons;

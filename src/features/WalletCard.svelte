@@ -9,7 +9,7 @@
 <div class="flex-1">
 	<div
 		class={`flex gap-4 p-4 items-center rounded-3xl flex-wrap ${
-			bad ? 'bg-red-300' : 'bg-green-400'
+			bad ? 'bg-orange-300' : 'bg-green-400'
 		}`}
 	>
 		{#each wallets as { name, href }}
