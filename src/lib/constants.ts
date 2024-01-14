@@ -63,7 +63,7 @@ export const WALLET_ADOPTION: AcceptedWallet[] = [
 	},
 	{
 		name: 'BlueWallet',
-		href: 'https://bluewallet.io/',
+		href: 'https://twitter.com/bluewalletio/status/1313822205286010883',
 		sending: true,
 		receiving: false
 	},
@@ -87,7 +87,7 @@ export const WALLET_ADOPTION: AcceptedWallet[] = [
 	},
 	{
 		name: 'BTCPay Server',
-		href: 'https://btcpayserver.org/',
+		href: 'https://docs.btcpayserver.org/Payjoin/',
 		sending: true,
 		receiving: true
 	},
@@ -165,7 +165,7 @@ export const WALLET_ADOPTION: AcceptedWallet[] = [
 	},
 	{
 		name: 'JoinMarket',
-		href: 'https://joinmarket.net/',
+		href: 'https://joinmarket-org.github.io/joinmarket-clientserver/PAYJOIN.html',
 		sending: true,
 		receiving: true
 	},
@@ -213,7 +213,7 @@ export const WALLET_ADOPTION: AcceptedWallet[] = [
 	},
 	{
 		name: 'Sparrow Wallet',
-		href: 'https://www.sparrowwallet.com/',
+		href: 'https://sparrowwallet.com/docs/spending-privately.html',
 		sending: true,
 		receiving: false
 	},
@@ -243,7 +243,7 @@ export const WALLET_ADOPTION: AcceptedWallet[] = [
 	},
 	{
 		name: 'Wasabi Wallet',
-		href: 'https://wasabiwallet.app/',
+		href: 'https://docs.wasabiwallet.io/using-wasabi/PayJoin.html',
 		sending: true,
 		receiving: false
 	},
