@@ -65,7 +65,7 @@ If there is a wallet you’d like to see adopt payjoin or you are a wallet devel
 	<div class="flex flex-col sm:flex-row sm:gap-12 gap-4 w-3/4">
 		<Card>
 			<div class="flex flex-col gap-2 text-white">
-				<strong>Preserves Privacy</strong>
+				<strong>Preserve Privacy</strong>
 				<span
 					>Payjoin preserves privacy by breaking common assumptions made for traditional
 					transactions used to spy on bitcoin users
@@ -75,7 +75,7 @@ If there is a wallet you’d like to see adopt payjoin or you are a wallet devel
 		</Card>
 		<Card>
 			<div class="flex flex-col gap-2 text-white">
-				<strong>Low Fees, High Scaling</strong>
+				<strong>Scale Bitcoin, Lower Fees</strong>
 				<span
 					>Payjoin can settle many transactions at once, allowing higher throughput, time savings,
 					and opportunistically lower fees
@@ -85,7 +85,7 @@ If there is a wallet you’d like to see adopt payjoin or you are a wallet devel
 		</Card>
 		<Card>
 			<div class="flex flex-col gap-2 text-white">
-				<strong>Augments Lightning</strong>
+				<strong>Augment Lightning</strong>
 				<span
 					>Payjoin allows Lightning nodes to fund and open all their channels in one transaction
 					while maintaining privacy
