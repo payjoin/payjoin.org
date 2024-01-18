@@ -114,12 +114,18 @@ If there is a wallet you’d like to see adopt payjoin or you are a wallet devel
 	<div
 		class="flex flex-col sm:flex-row max-sm:py-4 gap-8 w-full bg-tertiary justify-center items-center"
 	>
-		<img src="/images/bitmask.svg" alt="bitmasklogo" class="max-w-[200px]" />
-		<img src="/images/bluewallet.svg" alt="bluewallet logo" />
-		<img src="/images/btcpay.svg" alt="btcpayserver logo" />
-		<img src="/images/joinmarket.png" alt="joinmarket logo" class="max-w-[200px]" />
-		<img src="/images/sparrow.png" alt="sparrow logo" class="max-w-[75px]" />
-		<img src="/images/wasabi.svg" alt="wasabi logo" />
+		<a href="https://bitmask.app"
+			><img src="/images/bitmask.svg" alt="bitmasklogo" class="max-w-[200px]" /></a
+		>
+		<a href="https://bluewallet.io"><img src="/images/bluewallet.svg" alt="bluewallet logo" /></a>
+		<a href="https://btcpayserver.org"><img src="/images/btcpay.svg" alt="btcpayserver logo" /></a>
+		<a href="https://joinmarket.net"
+			><img src="/images/joinmarket.png" alt="joinmarket logo" class="max-w-[200px]" /></a
+		>
+		<a href="https://sparrowwallet.com"
+			><img src="/images/sparrow.png" alt="sparrow logo" class="max-w-[75px]" /></a
+		>
+		<a href="https://wasabiwallet.app"><img src="/images/wasabi.svg" alt="wasabi logo" /></a>
 	</div>
 	<div class="flex sm:flex-row flex-col gap-8 w-3/4">
 		<div class="flex flex-col gap-2 w-full items-center">
