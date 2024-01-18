@@ -12,8 +12,8 @@
 		<div>
 			Satoshi left exactly one privacy problem open in the whitepaper, that transactions with
 			multiple inputs "necessarily reveal that their inputs were owned by the same owner." In early
-			bitcoin software, this was true. But nothing prevents one from making a transaction with
-			inputs from multiple sources. Payjoin is the simplest way to do that.
+			bitcoin software, this was true. But no consensus rule prevents transactions with inputs from
+			multiple sources. Payjoin is the simplest solution.
 		</div>
 		<br />
 		<div>

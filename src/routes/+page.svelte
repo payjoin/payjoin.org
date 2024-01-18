@@ -45,12 +45,11 @@ If there is a wallet you’d like to see adopt payjoin or you are a wallet devel
 		<Icon name="monad" class="w-24 text-primary" />
 		<H1>Payjoin</H1>
 		<h2 class="text-2xl text-white sm:text-4xl">
-			A simple protocol to scale Bitcoin, save fees, and preserve privacy all at once
+			Scale Bitcoin, save fees, and preserve privacy all at once
 		</h2>
+		<br />
 		<div class="flex flex-col w-full sm:flex-row gap-4 sm:w-1/2 justify-center">
-			<a class="w-full" href="https://payjoindevkit.org/introduction/"
-				><Button wide>Get Started</Button></a
-			>
+			<a class="w-full" href="#why-payjoin"><Button wide>Learn More</Button></a>
 			<a class="w-full" href="https://payjoindevkit.org/"
 				><Button wide secondary>Developer Kit</Button></a
 			>
@@ -58,36 +57,38 @@ If there is a wallet you’d like to see adopt payjoin or you are a wallet devel
 	</div>
 </section>
 
-<section class="bg-tertiary w-full flex flex-col gap-4 sm:gap-14 items-center py-16">
+<section
+	id="why-payjoin"
+	class="bg-tertiary w-full flex flex-col gap-4 sm:gap-14 items-center py-16"
+>
 	<H2>Why Payjoin?</H2>
 	<div class="flex flex-col sm:flex-row sm:gap-12 gap-4 w-3/4">
 		<Card>
 			<div class="flex flex-col gap-2 text-white">
-				<strong>Preserves Privacy</strong>
-				<span
-					>Payjoin preserves privacy by breaking common assumptions made for traditional
-					transactions used to spy on bitcoin users
-				</span>
+				<h3 class="font-bold">Preserve Privacy</h3>
+				<p>
+					Payjoin preserves privacy by breaking the most common method used to spy on bitcoin users
+				</p>
 				<Link href="/privacy">Learn More<Icon name="arrow" class="w-4" /></Link>
 			</div>
 		</Card>
 		<Card>
 			<div class="flex flex-col gap-2 text-white">
-				<strong>Low Fees, High Scaling</strong>
-				<span
-					>Payjoin can settle many transactions at once, allowing higher throughput, time savings,
-					and opportunistically lower fees
-				</span>
+				<h3 class="font-bold">Scale Bitcoin, Lower Fees</h3>
+				<p>
+					Payjoin can settle many transactions at once, allowing higher throughput, time savings,
+					and lower fees
+				</p>
 				<Link href="/scale">Learn More<Icon name="arrow" class="w-4" /></Link>
 			</div>
 		</Card>
 		<Card>
 			<div class="flex flex-col gap-2 text-white">
-				<strong>Augments Lightning</strong>
-				<span
-					>Payjoin allows Lightning nodes to fund and open all their channels in one transaction
+				<h3 class="font-bold">Augment Lightning</h3>
+				<p>
+					Payjoin enables Lightning nodes to fund and open all their channels in one transaction
 					while maintaining privacy
-				</span>
+				</p>
 				<Link href="/lightning">Learn More<Icon name="arrow" class="w-4" /></Link>
 			</div>
 		</Card>
@@ -173,10 +174,10 @@ If there is a wallet you’d like to see adopt payjoin or you are a wallet devel
 		<H2>Pay it Forward</H2>
 		<H2>Join the Community</H2>
 	</div>
-	<H3>Payjoin can bring many benefits to Bitcoin, but it needs your help</H3>
-	<H3
-		>Join our <Link href="https://payjoin.substack.com/">newsletter</Link> or the <Link
+	<p class="text-2xl my-2">Payjoin can bring many benefits to Bitcoin, but it needs your help</p>
+	<p class="text-2xl my-2">
+		Join our <Link href="https://payjoin.substack.com/">newsletter</Link> and the <Link
 			href="https://discord.gg/6rJD9R684h">Discord</Link
-		> to stay up to date with payjoin development</H3
-	>
+		> to stay up to date with payjoin development
+	</p>
 </section>
