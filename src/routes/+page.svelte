@@ -45,7 +45,7 @@ If there is a wallet you’d like to see adopt payjoin or you are a wallet devel
 		<Icon name="monad" class="w-24 text-primary" />
 		<H1>Payjoin</H1>
 		<h2 class="text-2xl text-white sm:text-4xl">
-			A simple protocol to scale Bitcoin, save fees, and preserve privacy all at once
+			Scale Bitcoin, save fees, and preserve privacy all at once
 		</h2>
 		<br />
 		<div class="flex flex-col w-full sm:flex-row gap-4 sm:w-1/2 justify-center">
@@ -176,10 +176,10 @@ If there is a wallet you’d like to see adopt payjoin or you are a wallet devel
 		<H2>Pay it Forward</H2>
 		<H2>Join the Community</H2>
 	</div>
-	<H3>Payjoin can bring many benefits to Bitcoin, but it needs your help</H3>
-	<H3
-		>Join our <Link href="https://payjoin.substack.com/">newsletter</Link> or the <Link
+	<p class="text-2xl my-2">Payjoin can bring many benefits to Bitcoin, but it needs your help</p>
+	<p class="text-2xl my-2">
+		Join our <Link href="https://payjoin.substack.com/">newsletter</Link> and the <Link
 			href="https://discord.gg/6rJD9R684h">Discord</Link
-		> to stay up to date with payjoin development</H3
-	>
+		> to stay up to date with payjoin development
+	</p>
 </section>
