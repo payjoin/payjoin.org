@@ -48,9 +48,7 @@ If there is a wallet you’d like to see adopt payjoin or you are a wallet devel
 			A simple protocol to scale Bitcoin, save fees, and preserve privacy all at once
 		</h2>
 		<div class="flex flex-col w-full sm:flex-row gap-4 sm:w-1/2 justify-center">
-			<a class="w-full" href="https://payjoindevkit.org/introduction/"
-				><Button wide>Get Started</Button></a
-			>
+			<a class="w-full" href="#why-payjoin"><Button wide>Learn More</Button></a>
 			<a class="w-full" href="https://payjoindevkit.org/"
 				><Button wide secondary>Developer Kit</Button></a
 			>
@@ -58,7 +56,10 @@ If there is a wallet you’d like to see adopt payjoin or you are a wallet devel
 	</div>
 </section>
 
-<section class="bg-tertiary w-full flex flex-col gap-4 sm:gap-14 items-center py-16">
+<section
+	id="why-payjoin"
+	class="bg-tertiary w-full flex flex-col gap-4 sm:gap-14 items-center py-16"
+>
 	<H2>Why Payjoin?</H2>
 	<div class="flex flex-col sm:flex-row sm:gap-12 gap-4 w-3/4">
 		<Card>
