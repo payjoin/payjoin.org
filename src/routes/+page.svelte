@@ -99,7 +99,7 @@ If there is a wallet you’d like to see adopt payjoin or you are a wallet devel
 	<H3>Click through the app below to see all it takes to payjoin</H3>
 	<iframe
 		title="Payjoin Demo"
-		class="w-full h-screen"
+		class="w-full h-[66vh]"
 		style="border: 1px solid rgba(0, 0, 0, 0.1);"
 		src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2F7BpOmi30JgG6gIaE0T7fL4%2FPayjoin-Designs-Bitcoin-Wallet-UI-Kit-%2526-Design-System%3Fpage-id%3D4263%253A62592%26node-id%3D4954%253A70101%26viewport%3D-4364%252C-2385%252C0.48%26scaling%3Dmin-zoom%26starting-point-node-id%3D4954%253A70101"
 		allowfullscreen
