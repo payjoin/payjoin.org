@@ -112,10 +112,10 @@ If there is a wallet you’d like to see adopt payjoin or you are a wallet devel
 >
 	<H2>Wallets Using Payjoin</H2>
 	<div
-		class="flex flex-col xl:flex-row max-lg:py-4 gap-8 w-full bg-tertiary justify-center items-center"
+		class="flex flex-col xl:flex-row max-xl:py-4 gap-8 w-full bg-tertiary justify-center items-center"
 	>
 		<a href="https://bitmask.app"
-			><img src="/images/bitmask.svg" alt="bitmasklogo" class="max-w-[200px]" /></a
+			><img src="/images/bitmask.svg" alt="bitmasklogo" class="max-w-[200px] w-full h-full" /></a
 		>
 		<a href="https://bluewallet.io"><img src="/images/bluewallet.svg" alt="bluewallet logo" /></a>
 		<a href="https://btcpayserver.org"><img src="/images/btcpay.svg" alt="btcpayserver logo" /></a>
