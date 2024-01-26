@@ -1,13 +1,13 @@
 <script lang="ts">
 	import Icon from '@components/Icon/Icon.svelte';
 	import H1 from '@components/Header/H1.svelte';
-	import H2 from '@components/Header/H2.svelte';
 	import Button from '@components/Button.svelte';
 	import Card from '@components/Card.svelte';
 	import Link from '@components/Link.svelte';
 	import { WALLET_ADOPTION } from '@/lib/constants';
 	import WalletCard from '@features/WalletCard.svelte';
 	import H3 from '@/components/Header/H3.svelte';
+	import H2 from '@/components/Header/H2.svelte';
 
 	const privateWallets = WALLET_ADOPTION.filter((wallet) => wallet.sending || wallet.sending);
 	const surveillableWallets = WALLET_ADOPTION.filter(
@@ -62,7 +62,7 @@ If there is a wallet you’d like to see adopt payjoin or you are a wallet devel
 	class="bg-tertiary w-full flex flex-col gap-4 sm:gap-14 items-center py-16"
 >
 	<H2>Why Payjoin?</H2>
-	<div class="flex flex-col sm:flex-row sm:gap-12 gap-4 w-3/4">
+	<div class="flex flex-col lg:flex-row sm:gap-12 gap-4 w-3/4">
 		<Card>
 			<div class="flex flex-col gap-2 text-white">
 				<h3 class="font-bold">Preserve Privacy</h3>
@@ -112,10 +112,10 @@ If there is a wallet you’d like to see adopt payjoin or you are a wallet devel
 >
 	<H2>Wallets Using Payjoin</H2>
 	<div
-		class="flex flex-col sm:flex-row max-sm:py-4 gap-8 w-full bg-tertiary justify-center items-center"
+		class="flex flex-col xl:flex-row max-xl:py-4 gap-8 w-full bg-tertiary justify-center items-center"
 	>
 		<a href="https://bitmask.app"
-			><img src="/images/bitmask.svg" alt="bitmasklogo" class="max-w-[200px]" /></a
+			><img src="/images/bitmask.svg" alt="bitmasklogo" class="max-w-[200px] w-full h-full" /></a
 		>
 		<a href="https://bluewallet.io"><img src="/images/bluewallet.svg" alt="bluewallet logo" /></a>
 		<a href="https://btcpayserver.org"><img src="/images/btcpay.svg" alt="btcpayserver logo" /></a>
@@ -127,7 +127,7 @@ If there is a wallet you’d like to see adopt payjoin or you are a wallet devel
 		>
 		<a href="https://wasabiwallet.app"><img src="/images/wasabi.svg" alt="wasabi logo" /></a>
 	</div>
-	<div class="flex sm:flex-row flex-col gap-8 w-3/4">
+	<div class="flex xl:flex-row flex-col gap-8 w-3/4">
 		<div class="flex flex-col gap-2 w-full items-center">
 			<H3 class="flex gap-4 items-center sm:flex-row flex-col"
 				><Icon name="check" class="text-green-400 w-8 sm:w-4" />Supports Payjoin</H3
