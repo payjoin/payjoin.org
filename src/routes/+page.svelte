@@ -1,13 +1,13 @@
 <script lang="ts">
 	import Icon from '@components/Icon/Icon.svelte';
 	import H1 from '@components/Header/H1.svelte';
-	import H2 from '@components/Header/H2.svelte';
 	import Button from '@components/Button.svelte';
 	import Card from '@components/Card.svelte';
 	import Link from '@components/Link.svelte';
 	import { WALLET_ADOPTION } from '@/lib/constants';
 	import WalletCard from '@features/WalletCard.svelte';
 	import H3 from '@/components/Header/H3.svelte';
+	import H2 from '@/components/Header/H2.svelte';
 
 	const privateWallets = WALLET_ADOPTION.filter((wallet) => wallet.sending || wallet.sending);
 	const surveillableWallets = WALLET_ADOPTION.filter(
