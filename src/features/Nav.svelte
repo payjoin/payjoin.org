@@ -56,7 +56,7 @@
 			</h3>
 
 			<button class="flex items-center" on:click={handleOpen}>
-				<Icon class="flex h-6 text-white" name="hamburger" />
+				<Icon class="flex h-6 w-6 text-white" name="hamburger" />
 			</button>
 		</div>
 	{:else}
