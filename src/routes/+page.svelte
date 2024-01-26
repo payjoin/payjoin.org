@@ -42,7 +42,7 @@ If there is a wallet you’d like to see adopt payjoin or you are a wallet devel
 	class="w-full h-full max-sm:mb-4 sm:h-screen flex items-center justify-center max-sm:pt-24"
 >
 	<div class="flex flex-col gap-4 items-center text-center w-2/3">
-		<Icon name="monad" class="w-24 text-primary" />
+		<Icon name="monad" class="h-24 w-24 text-primary" />
 		<H1>Payjoin</H1>
 		<h2 class="text-2xl text-white sm:text-4xl">
 			Scale Bitcoin, save fees, and preserve privacy all at once
