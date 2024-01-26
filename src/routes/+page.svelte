@@ -62,7 +62,7 @@ If there is a wallet you’d like to see adopt payjoin or you are a wallet devel
 	class="bg-tertiary w-full flex flex-col gap-4 sm:gap-14 items-center py-16"
 >
 	<H2>Why Payjoin?</H2>
-	<div class="flex flex-col sm:flex-row sm:gap-12 gap-4 w-3/4">
+	<div class="flex flex-col lg:flex-row sm:gap-12 gap-4 w-3/4">
 		<Card>
 			<div class="flex flex-col gap-2 text-white">
 				<h3 class="font-bold">Preserve Privacy</h3>
