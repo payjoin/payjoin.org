@@ -63,7 +63,7 @@
 		<div class="md:hidden flex items-center w-full" use:clickOutside={handleClose}>
 			<div class="flex flex-col items-center justify-center h-full gap-4 w-full">
 				<button on:click={handleClose}>
-					<Icon class="flex h-6 text-white" name="close" />
+					<Icon class="flex h-6 w-6 text-white" name="close" />
 				</button>
 
 				<!-- FIXME: choppy transitioning -->

@@ -17,7 +17,7 @@
 	<span class="inline-flex gap-2 items-center">
 		<slot />
 		{#if icon}
-			<Icon name={icon} class="flex h-6" />
+			<Icon name={icon} class="flex h-6 w-6" />
 		{/if}
 	</span>
 </a>
