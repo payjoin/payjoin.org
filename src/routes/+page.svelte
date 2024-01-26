@@ -112,7 +112,7 @@ If there is a wallet you’d like to see adopt payjoin or you are a wallet devel
 >
 	<H2>Wallets Using Payjoin</H2>
 	<div
-		class="flex flex-col sm:flex-row max-sm:py-4 gap-8 w-full bg-tertiary justify-center items-center"
+		class="flex flex-col xl:flex-row max-lg:py-4 gap-8 w-full bg-tertiary justify-center items-center"
 	>
 		<a href="https://bitmask.app"
 			><img src="/images/bitmask.svg" alt="bitmasklogo" class="max-w-[200px]" /></a
