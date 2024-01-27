@@ -136,7 +136,7 @@ export const WALLET_ADOPTION: AcceptedWallet[] = [
 	{
 		name: 'Mutiny Wallet',
 		href: 'https://github.com/MutinyWallet/mutiny-node/issues/194',
-		sending: false,
+		sending: true,
 		receiving: false
 	},
 	{
