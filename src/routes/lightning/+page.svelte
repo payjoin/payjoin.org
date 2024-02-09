@@ -53,7 +53,11 @@
 			create transactions with multiple UTXOs, it can effectively batch transactions and open
 			multiple channels at once.
 		</div>
-		<img src="images/lightning-payjoin.png" alt="Lightning Channel Open with Payjoin" />
+		<img
+			src="images/lightning-payjoin.png"
+			alt="Lightning Channel Open with Payjoin"
+			class="w-2/3 mx-auto max-md:w-full"
+		/>
 		<div>
 			Payjoin also preserves privacy by removing the on-chain footprint (the size of your channels
 			and who you open channels with) normally left by lightning channels. A transaction sent over a
