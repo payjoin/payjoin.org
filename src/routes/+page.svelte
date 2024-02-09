@@ -112,8 +112,11 @@ If there is a wallet you’d like to see adopt payjoin or you are a wallet devel
 >
 	<H2>Wallets Using Payjoin</H2>
 	<div
-		class="flex flex-col xl:flex-row max-xl:py-4 gap-8 w-full bg-tertiary justify-center items-center"
+		class="flex flex-col xl:flex-row max-xl:py-4 gap-8 w-full bg-tertiary justify-center items-center px-4"
 	>
+		<a href="https://www.mutinywallet.com/">
+			<img src="/images/mutiny.svg" alt="mutiny logo" class="max-w-[200px] w-full h-full" />
+		</a>
 		<a href="https://bitmask.app"
 			><img src="/images/bitmask.svg" alt="bitmasklogo" class="max-w-[200px] w-full h-full" /></a
 		>
