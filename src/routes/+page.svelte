@@ -128,7 +128,7 @@ If there is a wallet you’d like to see adopt payjoin or you are a wallet devel
 		<a href="https://sparrowwallet.com"
 			><img src="/images/sparrow.png" alt="sparrow logo" class="max-w-[75px]" /></a
 		>
-		<a href="https://wasabiwallet.app"><img src="/images/wasabi.svg" alt="wasabi logo" /></a>
+		<a href="https://wasabiwallet.io"><img src="/images/wasabi.svg" alt="wasabi logo" /></a>
 	</div>
 	<div class="flex xl:flex-row flex-col gap-8 w-3/4">
 		<div class="flex flex-col gap-2 w-full items-center">
