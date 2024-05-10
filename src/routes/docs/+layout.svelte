@@ -17,8 +17,6 @@
 </script>
 
 <div class="mt-12 w-full h-full flex justify-between">
-	<!-- <Button on:click={handleOpen}>open</Button> -->
-	<!-- {#if open} -->
 	<Sidebar class="sticky top-12 h-full bg-secondary w-full">
 		<SidebarWrapper class="bg-secondary">
 			<SidebarGroup class="bg-secondary">
