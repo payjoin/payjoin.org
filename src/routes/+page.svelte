@@ -39,7 +39,7 @@ If there is a wallet you’d like to see adopt payjoin or you are a wallet devel
 </script>
 
 <section
-	class="w-full h-full max-sm:mb-4 sm:h-screen flex items-center justify-center max-sm:pt-24"
+	class="w-full h-full max-sm:mb-4 sm:h-screen items-center flex justify-center max-sm:pt-24"
 >
 	<div class="flex flex-col gap-4 items-center text-center w-2/3">
 		<Icon name="monad" class="h-24 w-24 text-primary" />
@@ -49,7 +49,7 @@ If there is a wallet you’d like to see adopt payjoin or you are a wallet devel
 		</h2>
 		<br />
 		<div class="flex flex-col w-full sm:flex-row gap-4 sm:w-1/2 justify-center">
-			<a class="w-full" href="#why-payjoin"><Button wide>Learn More</Button></a>
+			<a class="w-full" href="/docs/intro"><Button wide>Learn More</Button></a>
 			<a class="w-full" href="https://payjoindevkit.org/"
 				><Button wide secondary>Developer Kit</Button></a
 			>

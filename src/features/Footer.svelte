@@ -3,7 +3,7 @@
 </script>
 
 <footer
-	class="bg-secondary px-4 w-full flex flex-wrap sm:justify-evenly items-start justify-center sm:flex-row gap-8 sm:gap-12 sm:py-16 py-4 text-white"
+	class="bg-secondary px-4 w-full flex flex-wrap sm:justify-evenly items-start justify-center sm:flex-row gap-8 sm:gap-12 sm:py-16 py-4 text-white z-10"
 >
 	<div class="flex flex-col">
 		<strong>Learn</strong>
