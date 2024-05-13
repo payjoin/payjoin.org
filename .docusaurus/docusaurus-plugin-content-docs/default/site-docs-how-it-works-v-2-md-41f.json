@@ -1,0 +1,29 @@
+{
+  "id": "how-it-works/v2",
+  "title": "Payjoin v2 (BIP 77)",
+  "description": "Serverless, asynchronous payjoin",
+  "source": "@site/docs/how-it-works/v2.md",
+  "sourceDirName": "how-it-works",
+  "slug": "/how-it-works/v2",
+  "permalink": "/docs/how-it-works/v2",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/how-it-works/v2.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "sidebar_position": 4,
+    "title": "Payjoin v2 (BIP 77)",
+    "description": "Serverless, asynchronous payjoin"
+  },
+  "sidebar": "learnSidebar",
+  "previous": {
+    "title": "Payjoin v1 (BIP 78)",
+    "permalink": "/docs/how-it-works/v1"
+  },
+  "next": {
+    "title": "Tutorials",
+    "permalink": "/docs/category/tutorials"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "title": "How it Works",
+  "description": "Learn the technical details of the payjoin protocol",
+  "slug": "/category/how-it-works",
+  "permalink": "/docs/category/how-it-works",
+  "navigation": {
+    "previous": {
+      "title": "Introduction",
+      "permalink": "/docs/intro"
+    },
+    "next": {
+      "title": "Payjoin v1 (BIP 78)",
+      "permalink": "/docs/how-it-works/v1"
+    }
+  }
+}

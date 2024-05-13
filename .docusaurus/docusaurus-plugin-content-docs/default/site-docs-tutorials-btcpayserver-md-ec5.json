@@ -1,0 +1,28 @@
+{
+  "id": "tutorials/btcpayserver",
+  "title": "BTCPay Server",
+  "description": "Docusaurus can manage multiple versions of your docs.",
+  "source": "@site/docs/tutorials/btcpayserver.md",
+  "sourceDirName": "tutorials",
+  "slug": "/tutorials/btcpayserver",
+  "permalink": "/docs/tutorials/btcpayserver",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/tutorials/btcpayserver.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "sidebar_position": 3,
+    "title": "BTCPay Server"
+  },
+  "sidebar": "learnSidebar",
+  "previous": {
+    "title": "JoinMarket",
+    "permalink": "/docs/tutorials/joinmarket"
+  },
+  "next": {
+    "title": "Applications",
+    "permalink": "/docs/category/applications"
+  }
+}

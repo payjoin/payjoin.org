@@ -1,0 +1,16 @@
+{
+  "title": "Applications",
+  "description": "5 minutes to learn the most important Docusaurus concepts.",
+  "slug": "/category/applications",
+  "permalink": "/docs/category/applications",
+  "navigation": {
+    "previous": {
+      "title": "BTCPay Server",
+      "permalink": "/docs/tutorials/btcpayserver"
+    },
+    "next": {
+      "title": "Lightning",
+      "permalink": "/docs/applications/lightning"
+    }
+  }
+}

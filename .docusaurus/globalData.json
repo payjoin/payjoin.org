@@ -1,0 +1,78 @@
+{
+  "docusaurus-plugin-content-docs": {
+    "default": {
+      "path": "/docs",
+      "versions": [
+        {
+          "name": "current",
+          "label": "Next",
+          "isLast": true,
+          "path": "/docs",
+          "mainDocId": "intro",
+          "docs": [
+            {
+              "id": "applications/lightning",
+              "path": "/docs/applications/lightning",
+              "sidebar": "learnSidebar"
+            },
+            {
+              "id": "how-it-works/v1",
+              "path": "/docs/how-it-works/v1",
+              "sidebar": "learnSidebar"
+            },
+            {
+              "id": "how-it-works/v2",
+              "path": "/docs/how-it-works/v2",
+              "sidebar": "learnSidebar"
+            },
+            {
+              "id": "intro",
+              "path": "/docs/intro",
+              "sidebar": "learnSidebar"
+            },
+            {
+              "id": "tutorials/btcpayserver",
+              "path": "/docs/tutorials/btcpayserver",
+              "sidebar": "learnSidebar"
+            },
+            {
+              "id": "tutorials/joinmarket",
+              "path": "/docs/tutorials/joinmarket",
+              "sidebar": "learnSidebar"
+            },
+            {
+              "id": "tutorials/payjoin-cli",
+              "path": "/docs/tutorials/payjoin-cli",
+              "sidebar": "learnSidebar"
+            },
+            {
+              "id": "/category/how-it-works",
+              "path": "/docs/category/how-it-works",
+              "sidebar": "learnSidebar"
+            },
+            {
+              "id": "/category/tutorials",
+              "path": "/docs/category/tutorials",
+              "sidebar": "learnSidebar"
+            },
+            {
+              "id": "/category/applications",
+              "path": "/docs/category/applications",
+              "sidebar": "learnSidebar"
+            }
+          ],
+          "draftIds": [],
+          "sidebars": {
+            "learnSidebar": {
+              "link": {
+                "path": "/docs/intro",
+                "label": "intro"
+              }
+            }
+          }
+        }
+      ],
+      "breadcrumbs": true
+    }
+  }
+}

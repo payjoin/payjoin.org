@@ -1,31 +1,30 @@
-// import theme from './src/theme';
-// /** @type {import('tailwindcss').Config} */
-// export default {
-// 	content: ['./src/**/*.{html,js,svelte,ts}'],
-// 	theme,
-// 	plugins: [],
-// 	darkMode: 'class'
-// };
-import theme from './src/theme';
+// const { fontFamily } = require("tailwindcss/defaultTheme");
 
-const config = {
-	content: [
-		'./src/**/*.{html,js,svelte,ts}',
-		'./node_modules/flowbite-svelte/**/*.{html,js,svelte,ts}'
-	],
-	plugins: [require('flowbite/plugin')],
-
-	darkMode: 'class',
-
-	theme
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  corePlugins: {
+    preflight: false,
+    container: false,
+  },
+  darkMode: ["class", '[data-theme="dark"]'],
+  content: ["./src/**/*.{jsx,tsx,html,md,mdx}"],
+  theme: {
+    extend: {
+      colors: {
+        transparent: "transparent",
+        current: "currentColor",
+        primary: {
+          DEFAULT: "#f75394",
+        },
+        secondary: {
+          DEFAULT: "#46192b",
+        },
+        tertiary: {
+          DEFAULT: "#6A394C",
+        },
+        background: "#0f0f0f",
+      },
+    },
+  },
+  plugins: [],
 };
-
-module.exports = config;
-
-// /** @type {import('tailwindcss').Config} */
-// export default {
-// 	content: ['./src/**/*.{html,js,svelte,ts}'],
-// 	theme,
-// 	plugins: [],
-// 	darkMode: 'class'
-// };
