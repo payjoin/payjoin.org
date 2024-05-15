@@ -4,14 +4,14 @@ import styles from "./styles.module.css";
 
 type FeatureItem = {
   title: string;
-  Svg: React.ComponentType<React.ComponentProps<"svg">>;
+  Svg?: React.ComponentType<React.ComponentProps<"svg">>;
   description: JSX.Element;
 };
 
 const FeatureList: FeatureItem[] = [
   {
     title: "Scaling",
-    Svg: require("@site/static/img/undraw_docusaurus_mountain.svg").default,
+    Svg: require("@site/static/img/ngu.svg").default,
     description: (
       <>
         Have multiple payments to make? Payjoin allows you to do them all in one
@@ -21,7 +21,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: "Savings",
-    Svg: require("@site/static/img/undraw_docusaurus_tree.svg").default,
+    Svg: require("@site/static/img/bitcoin-moneybag.svg").default,
     description: (
       <>
         Save money and time by batching or consolidating when fees are low. Fund
@@ -32,7 +32,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: "Privacy",
-    Svg: require("@site/static/img/undraw_docusaurus_react.svg").default,
+    Svg: require("@site/static/img/superhero.svg").default,
     description: (
       <>
         Preserve privacy by breaking the most common-input-ownership heuristic —
@@ -45,9 +45,10 @@ const FeatureList: FeatureItem[] = [
 function Feature({ title, Svg, description }: FeatureItem) {
   return (
     <div className={clsx("col col--4")}>
-      <div className="text--center">
+      {Svg && <div className="text--center">
         <Svg className={styles.featureSvg} role="img" />
-      </div>
+      </div>}
+      
       <div className="text--center padding-horiz--md">
         <Heading as="h3">{title}</Heading>
         <p>{description}</p>

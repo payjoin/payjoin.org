@@ -51,49 +51,13 @@
             "href": "/docs/tutorials/payjoin-cli",
             "docId": "tutorials/payjoin-cli",
             "unlisted": false
-          },
-          {
-            "type": "link",
-            "label": "JoinMarket",
-            "href": "/docs/tutorials/joinmarket",
-            "docId": "tutorials/joinmarket",
-            "unlisted": false
-          },
-          {
-            "type": "link",
-            "label": "BTCPay Server",
-            "href": "/docs/tutorials/btcpayserver",
-            "docId": "tutorials/btcpayserver",
-            "unlisted": false
           }
         ],
         "href": "/docs/category/tutorials"
-      },
-      {
-        "type": "category",
-        "label": "Applications",
-        "collapsible": true,
-        "collapsed": true,
-        "items": [
-          {
-            "type": "link",
-            "label": "Lightning",
-            "href": "/docs/applications/lightning",
-            "docId": "applications/lightning",
-            "unlisted": false
-          }
-        ],
-        "href": "/docs/category/applications"
       }
     ]
   },
   "docs": {
-    "applications/lightning": {
-      "id": "applications/lightning",
-      "title": "Lightning",
-      "description": "Learn how payjoin can enhance lightning",
-      "sidebar": "learnSidebar"
-    },
     "how-it-works/v1": {
       "id": "how-it-works/v1",
       "title": "Payjoin v1 (BIP 78)",
@@ -112,22 +76,10 @@
       "description": "Payjoin is a protocol for creating collaborative transactions between a sender (Alice) and a receiver (Bob). It is simple, requires no changes to bitcoin, can operate without any manual interaction from the user, and has a variety of benefits and use cases, including:",
       "sidebar": "learnSidebar"
     },
-    "tutorials/btcpayserver": {
-      "id": "tutorials/btcpayserver",
-      "title": "BTCPay Server",
-      "description": "Docusaurus can manage multiple versions of your docs.",
-      "sidebar": "learnSidebar"
-    },
-    "tutorials/joinmarket": {
-      "id": "tutorials/joinmarket",
-      "title": "JoinMarket",
-      "description": "Let's translate docs/intro.md to French.",
-      "sidebar": "learnSidebar"
-    },
     "tutorials/payjoin-cli": {
       "id": "tutorials/payjoin-cli",
       "title": "payjoin-cli",
-      "description": "Enough talk, let's do a payjoin! Payjoin Dev Kit (PDK) ships with a reference implementation to demonstrate sender and receiver functionality, called payjoin-cli. It supports both version 1 and version 2.",
+      "description": "Learn how to do a payjoin with the reference implementation",
       "sidebar": "learnSidebar"
     }
   }

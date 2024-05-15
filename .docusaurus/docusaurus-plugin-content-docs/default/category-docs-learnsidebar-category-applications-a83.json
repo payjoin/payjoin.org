@@ -5,8 +5,8 @@
   "permalink": "/docs/category/applications",
   "navigation": {
     "previous": {
-      "title": "BTCPay Server",
-      "permalink": "/docs/tutorials/btcpayserver"
+      "title": "payjoin-cli",
+      "permalink": "/docs/tutorials/payjoin-cli"
     },
     "next": {
       "title": "Lightning",

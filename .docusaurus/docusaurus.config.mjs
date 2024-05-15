@@ -64,20 +64,6 @@ export default {
           "label": "Learn"
         },
         {
-          "to": "/blog",
-          "label": "Blog",
-          "position": "left"
-        },
-        {
-          "to": "/resources",
-          "label": "Resources",
-          "position": "left"
-        },
-        {
-          "type": "search",
-          "position": "right"
-        },
-        {
           "href": "https://payjoindevkit.org/",
           "label": "PDK",
           "position": "right"
@@ -345,14 +331,6 @@ export default {
           }
         }
       ]
-    },
-    "algolia": {
-      "appId": "test",
-      "apiKey": "test",
-      "indexName": "test_index",
-      "contextualSearch": true,
-      "searchParameters": {},
-      "searchPagePath": "search"
     },
     "docs": {
       "versionPersistence": "localStorage",

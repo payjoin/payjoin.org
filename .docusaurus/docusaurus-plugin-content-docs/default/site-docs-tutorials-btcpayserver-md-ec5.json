@@ -18,8 +18,8 @@
   },
   "sidebar": "learnSidebar",
   "previous": {
-    "title": "JoinMarket",
-    "permalink": "/docs/tutorials/joinmarket"
+    "title": "payjoin-cli",
+    "permalink": "/docs/tutorials/payjoin-cli"
   },
   "next": {
     "title": "Applications",

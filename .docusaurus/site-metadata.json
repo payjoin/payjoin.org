@@ -27,11 +27,6 @@
       "name": "@docusaurus/theme-classic",
       "version": "3.0.1"
     },
-    "docusaurus-theme-search-algolia": {
-      "type": "package",
-      "name": "@docusaurus/theme-search-algolia",
-      "version": "3.0.1"
-    },
     "tailwind-plugin": {
       "type": "local"
     }

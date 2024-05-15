@@ -1,6 +1,7 @@
 ---
 sidebar_position: 1
 title: payjoin-cli
+description: Learn how to do a payjoin with the reference implementation
 ---
 
 Enough talk, let's do a payjoin! [Payjoin Dev Kit (PDK)](https://payjoindevkit.org/) ships with a reference implementation to demonstrate sender and receiver functionality, called `payjoin-cli`. It supports both version 1 and version 2.

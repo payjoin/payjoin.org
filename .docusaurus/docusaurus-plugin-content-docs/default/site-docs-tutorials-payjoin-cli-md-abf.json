@@ -1,7 +1,7 @@
 {
   "id": "tutorials/payjoin-cli",
   "title": "payjoin-cli",
-  "description": "Enough talk, let's do a payjoin! Payjoin Dev Kit (PDK) ships with a reference implementation to demonstrate sender and receiver functionality, called payjoin-cli. It supports both version 1 and version 2.",
+  "description": "Learn how to do a payjoin with the reference implementation",
   "source": "@site/docs/tutorials/payjoin-cli.md",
   "sourceDirName": "tutorials",
   "slug": "/tutorials/payjoin-cli",
@@ -14,15 +14,12 @@
   "sidebarPosition": 1,
   "frontMatter": {
     "sidebar_position": 1,
-    "title": "payjoin-cli"
+    "title": "payjoin-cli",
+    "description": "Learn how to do a payjoin with the reference implementation"
   },
   "sidebar": "learnSidebar",
   "previous": {
     "title": "Tutorials",
     "permalink": "/docs/category/tutorials"
-  },
-  "next": {
-    "title": "JoinMarket",
-    "permalink": "/docs/tutorials/joinmarket"
   }
 }

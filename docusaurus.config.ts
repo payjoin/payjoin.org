@@ -76,12 +76,8 @@ const config: Config = {
           position: "left",
           label: "Learn",
         },
-        { to: "/blog", label: "Blog", position: "left" },
-        { to: "/resources", label: "Resources", position: "left" },
-        {
-          type: "search",
-          position: "right",
-        },
+        // { to: "/blog", label: "Blog", position: "left" },
+        // { to: "/resources", label: "Resources", position: "left" },
         { href: "https://payjoindevkit.org/", label: "PDK", position: "right" },
         {
           href: "https://discord.gg/y4y4G3Jm",
@@ -147,11 +143,11 @@ const config: Config = {
       darkTheme: prismThemes.dracula,
       additionalLanguages: ["bash"]
     },
-    algolia: {
-      appId: "test",
-      apiKey: "test",
-      indexName: "test_index",
-    },
+    // algolia: {
+    //   appId: "test",
+    //   apiKey: "test",
+    //   indexName: "test_index",
+    // },
   } satisfies Preset.ThemeConfig,
 };
 

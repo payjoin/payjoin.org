@@ -98,34 +98,17 @@ export default [
     exact: true
   },
   {
-    path: '/search',
-    component: ComponentCreator('/search', '161'),
-    exact: true
-  },
-  {
     path: '/docs',
-    component: ComponentCreator('/docs', 'fca'),
+    component: ComponentCreator('/docs', 'cf7'),
     routes: [
       {
         path: '/docs',
-        component: ComponentCreator('/docs', 'b33'),
+        component: ComponentCreator('/docs', '059'),
         routes: [
           {
             path: '/docs',
-            component: ComponentCreator('/docs', 'cc9'),
+            component: ComponentCreator('/docs', '643'),
             routes: [
-              {
-                path: '/docs/applications/lightning',
-                component: ComponentCreator('/docs/applications/lightning', '5d2'),
-                exact: true,
-                sidebar: "learnSidebar"
-              },
-              {
-                path: '/docs/category/applications',
-                component: ComponentCreator('/docs/category/applications', 'ec9'),
-                exact: true,
-                sidebar: "learnSidebar"
-              },
               {
                 path: '/docs/category/how-it-works',
                 component: ComponentCreator('/docs/category/how-it-works', 'c3d'),
@@ -153,18 +136,6 @@ export default [
               {
                 path: '/docs/intro',
                 component: ComponentCreator('/docs/intro', 'b1e'),
-                exact: true,
-                sidebar: "learnSidebar"
-              },
-              {
-                path: '/docs/tutorials/btcpayserver',
-                component: ComponentCreator('/docs/tutorials/btcpayserver', 'ea3'),
-                exact: true,
-                sidebar: "learnSidebar"
-              },
-              {
-                path: '/docs/tutorials/joinmarket',
-                component: ComponentCreator('/docs/tutorials/joinmarket', '2fa'),
                 exact: true,
                 sidebar: "learnSidebar"
               },

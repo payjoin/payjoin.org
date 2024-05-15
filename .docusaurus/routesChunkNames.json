@@ -186,32 +186,18 @@
     },
     "content": "content---markdown-page-393-028"
   },
-  "/search-161": {
-    "__comp": "__comp---theme-search-page-1-a-4-d6f",
-    "__context": {
-      "plugin": "plugin---search-7-aa-926"
-    }
-  },
-  "/docs-fca": {
+  "/docs-cf7": {
     "__comp": "__comp---theme-docs-root-5-e-9-0b6",
     "__context": {
       "plugin": "plugin---docs-997-4f5"
     }
   },
-  "/docs-b33": {
+  "/docs-059": {
     "__comp": "__comp---theme-doc-version-roota-7-b-5de",
     "version": "version---docs-935-398"
   },
-  "/docs-cc9": {
+  "/docs-643": {
     "__comp": "__comp---theme-doc-roota-94-67a"
-  },
-  "/docs/applications/lightning-5d2": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-applications-lightningf-5-a-aab"
-  },
-  "/docs/category/applications-ec9": {
-    "__comp": "__comp---theme-doc-category-generated-index-page-14-e-640",
-    "categoryGeneratedIndex": "categoryGeneratedIndex---docs-category-applicationsf-86-0f3"
   },
   "/docs/category/how-it-works-c3d": {
     "__comp": "__comp---theme-doc-category-generated-index-page-14-e-640",
@@ -232,14 +218,6 @@
   "/docs/intro-b1e": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-intro-0-e-3-be1"
-  },
-  "/docs/tutorials/btcpayserver-ea3": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-tutorials-btcpayserverec-5-666"
-  },
-  "/docs/tutorials/joinmarket-2fa": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-tutorials-joinmarketb-0-f-725"
   },
   "/docs/tutorials/payjoin-cli-a3c": {
     "__comp": "__comp---theme-doc-item-178-a40",
