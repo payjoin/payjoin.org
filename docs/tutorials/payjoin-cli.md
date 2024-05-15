@@ -68,13 +68,13 @@ regtest-util
 You should see some output like:
 ```shell
 77df377a06c87c6ba2e3ccec51bc2be30cb23c95b876b89ce2231e78d3ecfdaa
-[/Users/brandonlucas/.cargo/registry/src/index.crates.io-6f17d22bba15001f/regtest-util-0.1.0/src/main.rs:51:5] &wallets = []
-[/Users/brandonlucas/.cargo/registry/src/index.crates.io-6f17d22bba15001f/regtest-util-0.1.0/src/main.rs:53:9] "creating sender wallet" = "creating sender wallet"
-[/Users/brandonlucas/.cargo/registry/src/index.crates.io-6f17d22bba15001f/regtest-util-0.1.0/src/main.rs:59:9] "creating receiver wallet" = "creating receiver wallet"
-[/Users/brandonlucas/.cargo/registry/src/index.crates.io-6f17d22bba15001f/regtest-util-0.1.0/src/main.rs:93:5] "sender balance: {}" = "sender balance: {}"
-[/Users/brandonlucas/.cargo/registry/src/index.crates.io-6f17d22bba15001f/regtest-util-0.1.0/src/main.rs:93:5] sender_client.get_balances().unwrap().mine.trusted.to_btc() = 5050.0
-[/Users/brandonlucas/.cargo/registry/src/index.crates.io-6f17d22bba15001f/regtest-util-0.1.0/src/main.rs:97:5] "receiver balance: {}" = "receiver balance: {}"
-[/Users/brandonlucas/.cargo/registry/src/index.crates.io-6f17d22bba15001f/regtest-util-0.1.0/src/main.rs:97:5] receiver_client.get_balances().unwrap().mine.trusted.to_btc() = 50.0
+[/Users/username/.cargo/registry/src/index.crates.io-6f17d22bba15001f/regtest-util-0.1.0/src/main.rs:51:5] &wallets = []
+[/Users/username/.cargo/registry/src/index.crates.io-6f17d22bba15001f/regtest-util-0.1.0/src/main.rs:53:9] "creating sender wallet" = "creating sender wallet"
+[/Users/username/.cargo/registry/src/index.crates.io-6f17d22bba15001f/regtest-util-0.1.0/src/main.rs:59:9] "creating receiver wallet" = "creating receiver wallet"
+[/Users/username/.cargo/registry/src/index.crates.io-6f17d22bba15001f/regtest-util-0.1.0/src/main.rs:93:5] "sender balance: {}" = "sender balance: {}"
+[/Users/username/.cargo/registry/src/index.crates.io-6f17d22bba15001f/regtest-util-0.1.0/src/main.rs:93:5] sender_client.get_balances().unwrap().mine.trusted.to_btc() = 5050.0
+[/Users/username/.cargo/registry/src/index.crates.io-6f17d22bba15001f/regtest-util-0.1.0/src/main.rs:97:5] "receiver balance: {}" = "receiver balance: {}"
+[/Users/username/.cargo/registry/src/index.crates.io-6f17d22bba15001f/regtest-util-0.1.0/src/main.rs:97:5] receiver_client.get_balances().unwrap().mine.trusted.to_btc() = 50.0
 ```
 
 If you see this, both your wallets have been setup and funded correctly on `localhost:18443/sender` and `localhost:18443/receiver`.
