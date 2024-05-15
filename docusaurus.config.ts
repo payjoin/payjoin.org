@@ -145,10 +145,11 @@ const config: Config = {
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
+      additionalLanguages: ["bash"]
     },
     algolia: {
-      appId: "0CMHNGVUX0",
-      apiKey: "fb8a8bf7f10a789e5c28ae7be4f70512",
+      appId: "test",
+      apiKey: "test",
       indexName: "test_index",
     },
   } satisfies Preset.ThemeConfig,

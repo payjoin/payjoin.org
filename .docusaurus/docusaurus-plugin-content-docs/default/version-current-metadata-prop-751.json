@@ -127,7 +127,7 @@
     "tutorials/payjoin-cli": {
       "id": "tutorials/payjoin-cli",
       "title": "payjoin-cli",
-      "description": "todo",
+      "description": "Enough talk, let's do a payjoin! Payjoin Dev Kit (PDK) ships with a reference implementation to demonstrate sender and receiver functionality, called payjoin-cli. It supports both version 1 and version 2.",
       "sidebar": "learnSidebar"
     }
   }
