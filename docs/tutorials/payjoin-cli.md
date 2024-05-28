@@ -1,4 +1,6 @@
-Enough talk, let's do a payjoin! [Payjoin Dev Kit (PDK)](https://payjoindevkit.org/) ships with a reference implementation to demonstrate sender and receiver functionality, called `payjoin-cli`. It supports both version 1 and version 2.
+Enough talk, let's do a payjoin! 
+
+[Payjoin Dev Kit (PDK)](https://payjoindevkit.org/) ships with a reference implementation to demonstrate sender and receiver functionality, called `payjoin-cli`. It supports both version 1 and version 2.
 
 In this tutorial, we'll look at doing both a version 1 and a version 2 send and receive using `payjoin-cli`. Let's get started!
 ### Prerequisites
