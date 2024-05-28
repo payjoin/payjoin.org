@@ -2,7 +2,7 @@ Enough talk, let's do a payjoin! [Payjoin Dev Kit (PDK)](https://payjoindevkit.o
 
 In this tutorial, we'll look at doing both a version 1 and a version 2 send and receive using `payjoin-cli`. Let's get started!
 ### Prerequisites
-First, make sure you've read through and understand how [payjoin v1](./how-it-works/v1) and [payjoin v2](./how-it-works/v2) work. We will be performing the v2 flow below:
+First, make sure you've read through and understand how [payjoin v1](/docs/how-it-works/v1) and [payjoin v2](/docs/how-it-works/v2) work. We will be performing the v2 flow below:
 
 Next, ensure you have [`cargo`](https://doc.rust-lang.org/cargo/getting-started/installation.html) and [Docker](https://docs.docker.com/get-docker/) installed. Then, install [`payjoin-cli`](https://github.com/payjoin/rust-payjoin/tree/master/payjoin-cli):
 ```shell
