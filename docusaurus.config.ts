@@ -4,8 +4,8 @@ import type * as Preset from "@docusaurus/preset-classic";
 import tailwindPlugin from "./plugins/tailwind-config.cjs";
 
 const config: Config = {
-  title: "My Site",
-  tagline: "Dinosaurs are cool",
+  title: "Payjoin",
+  tagline: "Scale Bitcoin, save fees, preserve privacy",
   favicon: "img/monad.png",
 
   // Set the production url of your site here
