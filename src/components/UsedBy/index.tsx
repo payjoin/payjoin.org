@@ -62,7 +62,7 @@ export default function WalletsUsingPayjoin() {
       </div> */}
       <div className="flex flex-col gap-2 text-2xl">
         <span>If you are a developer seeking to enhance your wallet with Payjoin, check out</span>
-        <a className="font-bold" href="https://payjoindevkit.org">Payjoin Dev kit</a>
+        <a className="font-bold" target="_blank" href="https://payjoindevkit.org">Payjoin Dev kit</a>
       </div>
     </section>
   );
