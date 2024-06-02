@@ -26,16 +26,15 @@ export default function HeaderContent() {
       <h1 className="text-7xl">Payjoin</h1>
       <div className="flex flex-col">
         <h2 className="text-4xl">
-          Scale Bitcoin, save fees, preserve privacy.
+          Scale Bitcoin, save fees, and preserve privacy all at once.
         </h2>
-        <h2 className="text-4xl italic">By Default.</h2>
       </div>
       <div className="flex gap-4 flex-col sm:flex-row">
         <a href="/docs/intro">
           <Button variant="primary">Learn More</Button>
         </a>
         <a href="https://payjoindevkit.org/">
-          <Button variant="secondary">Payjoin Dev Kit</Button>
+          <Button variant="secondary">Developer Kit</Button>
         </a>
       </div>
     </div>

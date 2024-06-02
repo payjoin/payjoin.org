@@ -10,33 +10,29 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: "Scaling",
-    Svg: require("@site/static/img/ngu.svg").default,
+    title: "Preserve Privacy",
+    // Svg: require("@site/static/img/ngu.svg").default,
     description: (
       <>
-        Have multiple payments to make? Payjoin allows you to do them all in one
-        transaction, while also consolidating the receiver's UTXOs.
+       Payjoin preserves privacy by breaking the most common method used to spy on bitcoin users
       </>
     ),
   },
   {
-    title: "Savings",
-    Svg: require("@site/static/img/bitcoin-moneybag.svg").default,
+    title: "Scale Bitcoin, lower fees",
+    // Svg: require("@site/static/img/bitcoin-moneybag.svg").default,
     description: (
       <>
-        Save money and time by batching or consolidating when fees are low. Fund
-        and open all your Lightning channels with one transaction, paying one
-        fee.
+       Payjoin can settle many transactions at once, allowing higher throughput, time savings, and lower fees
       </>
     ),
   },
   {
-    title: "Privacy",
-    Svg: require("@site/static/img/superhero.svg").default,
+    title: "Augment Lightning",
+    // Svg: require("@site/static/img/superhero.svg").default,
     description: (
       <>
-        Preserve privacy by breaking the most common-input-ownership heuristic —
-        the most common method used to spy on bitcoin users.
+        Payjoin enables Lightning nodes to fund and open all their channels in one transaction while maintaining privacy
       </>
     ),
   },
@@ -61,7 +57,7 @@ export default function HomepageFeatures(): JSX.Element {
   return (
     <div className="min-h-screen">
       <section className={styles.features}>
-        <h2 className="text-6xl">Benefits</h2>
+        <h2 className="text-6xl">Why Payjoin?</h2>
         <div className="container">
           <div className="row">
             {FeatureList.map((props, idx) => (

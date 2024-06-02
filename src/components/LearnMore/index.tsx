@@ -3,29 +3,19 @@ import { Button } from "../HeaderContent";
 export function LearnMore() {
   return (
     <section className="flex flex-col justify-center gap-32 min-h-screen mb-40 w-full">
-      {/* <div className="flex flex-col items-center gap-12"> */}
-      <h1 className="text-6xl">Ready to go down the Rabbit Hole?</h1>
-      <span className="text-4xl  font-extrabold">
-        Try the <a href="/docs/intro">tutorial</a>, join the{" "}
-        <a target="_blank" href="https://discord.gg/y4y4G3Jm">
-          Discord
-        </a>
-        , check out{" "}
-        <a target="_blank" href="https://payjoindevkit.org/">
-          PDK
-        </a>
-        , or{" "}
-        <a target="_blank" href="https://geyser.fund/project/payjoin/">
-          Donate
-        </a>
-      </span>
-      {/* </div> */}
-
       <div>
+        <h1 className="text-7xl">Pay it Forward</h1>
+        <h1 className="text-7xl">Join the Community</h1>
+      </div>
+      <span className="text-4xl">Payjoin can bring many benefits to Bitcoin, but it needs your help</span>
+      <span className="text-4xl">
+        Join our <a href="https://payjoin.substack.com/">newsletter</a> and the <a href="https://discord.gg/uxVTTEu6">Discord</a> to stay up to date with Payjoin development
+      </span>
+      {/* <div>
         <a href="/docs/intro">
           <Button variant="primary">Get Started</Button>
         </a>
-      </div>
+      </div> */}
     </section>
   );
 }
