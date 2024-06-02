@@ -1,6 +1,7 @@
 export default function FigmaDemo() {
   return (
-    <section className="w-4/5 flex flex-col gap-16 min-h-screen">
+    <div className="min-h-screen bg-tertiary w-full flex justify-center">
+    <section className="flex flex-col gap-24 my-20 w-4/5">
       <h2 className="text-6xl">Try it Yourself</h2>
       <span className="text-4xl">
         Click through the app to see all it takes to payjoin
@@ -13,5 +14,7 @@ export default function FigmaDemo() {
         allowfullscreen
       />
     </section>
+      </div>
+
   );
 }

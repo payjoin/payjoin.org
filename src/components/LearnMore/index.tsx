@@ -1,11 +1,10 @@
-import { Button } from "../HeaderContent";
-
 export function LearnMore() {
   return (
-    <section className="flex flex-col justify-center gap-32 min-h-screen mb-40 w-full">
+    <div className="min-h-screen w-full flex justify-center">
+    <section className="flex flex-col gap-24 my-20 w-4/5">
       <div>
-        <h1 className="text-7xl">Pay it Forward</h1>
-        <h1 className="text-7xl">Join the Community</h1>
+        <h1 className="text-6xl max-md:text-5xl">Pay it Forward</h1>
+        <h1 className="text-6xl max-md:text-5xl">Join the Community</h1>
       </div>
       <span className="text-4xl">Payjoin can bring many benefits to Bitcoin, but it needs your help</span>
       <span className="text-4xl">
@@ -17,5 +16,6 @@ export function LearnMore() {
         </a>
       </div> */}
     </section>
+    </div>
   );
 }
