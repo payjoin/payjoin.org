@@ -85,8 +85,13 @@ const config: Config = {
           position: "right",
         },
         {
+          href: "https://payjoin.substack.com/",
+          label: "News",
+          position: "right",
+        },
+        {
           href: "https://github.com/payjoin",
-          label: "GitHub",
+          label: "Github",
           position: "right",
         },
       ],
@@ -130,7 +135,7 @@ const config: Config = {
               to: "/blog",
             },
             {
-              label: "GitHub",
+              label: "Github",
               href: "https://github.com/payjoin",
             },
           ],
