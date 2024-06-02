@@ -9,7 +9,7 @@ export function LearnMore() {
       </div>
       <span className="text-4xl">Payjoin can bring many benefits to Bitcoin, but it needs your help</span>
       <span className="text-4xl">
-        Join our <a href="https://payjoin.substack.com/">newsletter</a> and the <a href="https://discord.gg/uxVTTEu6">Discord</a> to stay up to date with Payjoin development
+        Join our <a href="https://payjoin.substack.com/">newsletter</a> and the <a href="https://discord.gg/6rJD9R684h">Discord</a> to stay up to date with Payjoin development
       </span>
       {/* <div>
         <a href="/docs/intro">

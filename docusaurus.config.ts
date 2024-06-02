@@ -80,7 +80,7 @@ const config: Config = {
         // { to: "/resources", label: "Resources", position: "left" },
         { href: "https://payjoindevkit.org/", label: "Dev Kit", position: "right" },
         {
-          href: "https://discord.gg/y4y4G3Jm",
+          href: "https://discord.gg/6rJD9R684h",
           label: "Discord",
           position: "right",
         },
@@ -91,7 +91,7 @@ const config: Config = {
         },
         {
           href: "https://github.com/payjoin",
-          label: "Github",
+          label: "GitHub",
           position: "right",
         },
       ],
@@ -100,11 +100,15 @@ const config: Config = {
       style: "dark",
       links: [
         {
-          title: "Docs",
+          title: "Learn",
           items: [
             {
-              label: "Intro",
-              to: "/docs/intro",
+              label: "Payjoin Dev Kit",
+              to: "https://payjoindevkit.org/",
+            },
+            {
+              label: "Case Study",
+              to: "https://bitcoin.design/guide/case-studies/payjoin/",
             },
           ],
         },
@@ -112,32 +116,43 @@ const config: Config = {
           title: "Community",
           items: [
             {
-              label: "Discord",
-              href: "https://discord.gg/y4y4G3Jm",
+              label: "Newsletter",
+              href: "https://payjoin.substack.com/",
             },
-            // TODO
+            {
+              label: "Discord",
+              href: "https://discord.gg/6rJD9R684h",
+            },
             {
               label: "Twitter",
-              href: "https://twitter.com/docusaurus",
+              href: "https://twitter.com/payjoindevkit",
             },
             // TODO
+            // {
+            //   label: "Nostr",
+            //   href: "https://primal.net",
+            // },
             {
-              label: "Nostr",
-              href: "https://primal.net",
+              label: "GitHub",
+              href: "https://github.com/payjoin",
             },
           ],
         },
         {
           title: "More",
           items: [
+            // {
+            //   label: "Blog",
+            //   to: "/blog",
+            // },
             {
-              label: "Blog",
-              to: "/blog",
+              label: "Donate",
+              href: "https://geyser.fund/project/payjoin/"
             },
             {
-              label: "Github",
-              href: "https://github.com/payjoin",
-            },
+              label: "Roadmap",
+              href: "https://github.com/orgs/payjoin/projects/1"
+            }
           ],
         },
       ],
