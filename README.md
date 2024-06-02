@@ -1,14 +1,9 @@
-## main branch
+# [payjoin.org](https://payjoin.org)
 
-- tailwindcss configured
-- Algolia Docsearch configured
+Official website for the Payjoin protocol.
 
-## tailwind-css branch
-
-- tailwindcss configured
-
-## Docker command
-
-```
-docker run -it --env-file=./.env -e "CONFIG=$(cat ./algolia.config.json | jq -r tostring)" algolia/docsearch-scraper
+To run locally:
+```shell
+yarn
+yarn start
 ```
