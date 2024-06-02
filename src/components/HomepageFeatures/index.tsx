@@ -16,7 +16,7 @@ const FeatureList: FeatureItem[] = [
        Payjoin preserves privacy by breaking the most common method used to spy on bitcoin users
       </>
     ),
-    link: "/docs/privacy"
+    link: "/docs/why-payjoin/privacy"
   },
   {
     title: "Scale Bitcoin, lower fees",
@@ -26,7 +26,7 @@ const FeatureList: FeatureItem[] = [
        Payjoin can settle many transactions at once, allowing higher throughput, time savings, and lower fees
       </>
     ),
-    link: "/docs/scaling"
+    link: "/docs/why-payjoin/scaling"
   },
   {
     title: "Augment Lightning",
@@ -36,7 +36,7 @@ const FeatureList: FeatureItem[] = [
         Payjoin enables Lightning nodes to fund and open all their channels in one transaction while maintaining privacy
       </>
     ),
-    link: "/docs/lightning"
+    link: "/docs/why-payjoin/lightning"
   },
 ];
 

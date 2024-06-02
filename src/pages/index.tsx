@@ -1,9 +1,9 @@
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
-import WhyPayjoin from "../components/WhyPayjoin";
+import WhyPayjoin from "../components/HomepageFeatures";
 import HeaderContent from "../components/HeaderContent";
 import FigmaDemo from "../components/FigmaDemo";
-import WalletsUsingPayjoin from "../components/WalletsUsingPayjoin";
+import WalletsUsingPayjoin from "../components/UsedBy";
 import { LearnMore } from "../components/LearnMore";
 
 export default function Home(): JSX.Element {
