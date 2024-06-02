@@ -104,11 +104,11 @@ const config: Config = {
           items: [
             {
               label: "Payjoin Dev Kit",
-              to: "https://payjoindevkit.org/",
+              href: "https://payjoindevkit.org/",
             },
             {
               label: "Case Study",
-              to: "https://bitcoin.design/guide/case-studies/payjoin/",
+              href: "https://bitcoin.design/guide/case-studies/payjoin/",
             },
           ],
         },
