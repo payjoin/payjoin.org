@@ -1,8 +1,8 @@
 .DS_Store
 node_modules
+.docusaurus
 /build
 /.svelte-kit
-/.docusaurus
 /package
 .env
 .env.*

@@ -2,7 +2,7 @@
 node_modules
 /build
 /package
-/.docusaurus
+.docusaurus
 .env
 .env.*
 !.env.example
