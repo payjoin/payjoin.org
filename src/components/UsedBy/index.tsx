@@ -51,7 +51,7 @@ export default function WalletsUsingPayjoin() {
           <img src="/img/wasabi.svg" alt="wasabi logo" />
         </a>
       </Marquee>
-      <div>
+      {/* <div>
         <a href="https://payjoindevkit.org/" target="_blank">
           <button className="font-extrabold  bg-gradient-to-r bg-secondary border-white border-2 border-solid shadow-[0px_0px_10px_10px_rgba(0,0,0,0.3)] shadow-primary hover:scale-105 transition-all p-8 rounded-lg cursor-pointer text-5xl ">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-white">
@@ -59,7 +59,7 @@ export default function WalletsUsingPayjoin() {
             </span>
           </button>
         </a>
-      </div>
+      </div> */}
       <div className="flex flex-col gap-2 text-2xl">
         <span>If you are a developer seeking to enhance your wallet with Payjoin, check out</span>
         <a className="font-bold" href="https://payjoindevkit.org">Payjoin Dev kit</a>
