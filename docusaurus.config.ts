@@ -29,7 +29,27 @@ const config: Config = {
     defaultLocale: "en",
     locales: ["en"],
   },
-  plugins: [tailwindPlugin],
+  plugins: [tailwindPlugin,
+    [
+      '@docusaurus/plugin-client-redirects',
+      {
+        redirects: [
+          {
+            to: '/docs/why-payjoin/lightning', // New URL
+            from: '/lightning', // Old URL
+          },
+          {
+            to: '/docs/why-payjoin/scaling',
+            from: '/scale',
+          },
+          {
+            to: '/docs/why-payjoin/privacy',
+            from: '/privacy',
+          },
+        ],
+      },
+    ],
+  ],
   presets: [
     [
       "classic",
