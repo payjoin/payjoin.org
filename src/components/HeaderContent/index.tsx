@@ -32,7 +32,7 @@ export default function HeaderContent() {
         <a href="#whypayjoin">
           <Button variant="primary">Learn More</Button>
         </a>
-        <a href="https://payjoindevkit.org/">
+        <a target="_blank" href="https://payjoindevkit.org/">
           <Button variant="secondary">Developer Kit</Button>
         </a>
       </div>
