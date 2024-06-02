@@ -1,6 +1,6 @@
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
-import HomepageFeatures from "../components/HomepageFeatures";
+import WhyPayjoin from "../components/WhyPayjoin";
 import HeaderContent from "../components/HeaderContent";
 import FigmaDemo from "../components/FigmaDemo";
 import WalletsUsingPayjoin from "../components/WalletsUsingPayjoin";
@@ -14,9 +14,9 @@ export default function Home(): JSX.Element {
       description="Description will go into a meta tag in <head />"
     >
       <main className="text-center bg-secondary">
-        <div className="flex flex-col items-center max-sm:mx-10 max-sm:gap-20 max-sm:mt-10">
+        <div className="flex flex-col items-center max-sm:gap-20">
           <HeaderContent />
-          <HomepageFeatures />
+          <WhyPayjoin />
           <WalletsUsingPayjoin />
           <FigmaDemo />
           <LearnMore />

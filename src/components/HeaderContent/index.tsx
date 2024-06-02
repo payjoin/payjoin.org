@@ -16,13 +16,12 @@ export function Button({ children, variant }) {
 
 export default function HeaderContent() {
   return (
-    <div className="min-h-screen flex items-center justify-center flex-col gap-8">
+    <div className="min-h-screen flex items-center justify-center flex-col gap-8 max-sm:m-20">
       <img
         src="/svg/monad.svg"
         alt="Monad Logo"
         className="w-32 text-primary"
       />
-
       <h1 className="text-7xl">Payjoin</h1>
       <div className="flex flex-col">
         <h2 className="text-4xl">
@@ -30,7 +29,7 @@ export default function HeaderContent() {
         </h2>
       </div>
       <div className="flex gap-4 flex-col sm:flex-row">
-        <a href="/docs/intro">
+        <a href="#whypayjoin">
           <Button variant="primary">Learn More</Button>
         </a>
         <a href="https://payjoindevkit.org/">
