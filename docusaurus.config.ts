@@ -70,12 +70,12 @@ const config: Config = {
         src: "img/monad.png",
       },
       items: [
-        // {
-        //   type: "docSidebar",
-        //   sidebarId: "learnSidebar",
-        //   position: "left",
-        //   label: "Learn",
-        // },
+        {
+          type: "docSidebar",
+          sidebarId: "learnSidebar",
+          position: "left",
+          label: "Learn",
+        },
         // { to: "/blog", label: "Blog", position: "left" },
         // { to: "/resources", label: "Resources", position: "left" },
         { href: "https://payjoindevkit.org/", label: "Dev Kit", position: "right" },
