@@ -1,6 +1,9 @@
-To run:
+# [payjoin.org](https://payjoin.org)
 
-```
-yarn
-yarn run dev
+Official website for the Payjoin protocol.
+
+To run locally:
+```shell
+yarn install
+yarn start
 ```
