@@ -10,11 +10,6 @@ export function LearnMore() {
       <span className="text-4xl">
         Join our <a target="_blank" href="https://payjoin.substack.com/">newsletter</a> and the <a target="_blank" href="https://discord.gg/6rJD9R684h">Discord</a> to stay up to date with Payjoin development
       </span>
-      {/* <div>
-        <a href="/docs/intro">
-          <Button variant="primary">Get Started</Button>
-        </a>
-      </div> */}
     </section>
     </div>
   );

@@ -145,11 +145,6 @@ const config: Config = {
               label: "Twitter",
               href: "https://twitter.com/payjoindevkit",
             },
-            // TODO
-            // {
-            //   label: "Nostr",
-            //   href: "https://primal.net",
-            // },
             {
               label: "GitHub",
               href: "https://github.com/payjoin",
