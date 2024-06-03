@@ -96,8 +96,6 @@ const config: Config = {
           position: "left",
           label: "Learn",
         },
-        // { to: "/blog", label: "Blog", position: "left" },
-        // { to: "/resources", label: "Resources", position: "left" },
         { href: "https://payjoindevkit.org/", label: "Dev Kit", position: "right" },
         {
           href: "https://discord.gg/6rJD9R684h",
@@ -161,10 +159,6 @@ const config: Config = {
         {
           title: "More",
           items: [
-            // {
-            //   label: "Blog",
-            //   to: "/blog",
-            // },
             {
               label: "Donate",
               href: "https://geyser.fund/project/payjoin/"
@@ -183,11 +177,6 @@ const config: Config = {
       darkTheme: prismThemes.dracula,
       additionalLanguages: ["bash"]
     },
-    // algolia: {
-    //   appId: "test",
-    //   apiKey: "test",
-    //   indexName: "test_index",
-    // },
   } satisfies Preset.ThemeConfig,
 };
 
