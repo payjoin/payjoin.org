@@ -33,7 +33,7 @@ Payjoin can save money and time by batching transactions when fees are low. Most
 
 Payjoin performs a consolidation on _every_ payment. While wallets today make this a manual, interactive experience, this can easily be the default for wallets that integrate Payjoin. Bitcoin users wouldn't have to worry about taking this extra step as it can be automated for them.
 
-Payjoin can also save time in Lightning Network channel opens by turning the two step process of creating and funding a lightning node [into one step](https://brandonlucas.net/articles/bitcoin/payjoin#:~:text=Lightning%20and%20Payjoin%3A%20A%20Perfect%20Match).
+Payjoin can also save time in Lightning Network channel opens by turning the two step process of creating and funding a lightning node [into one step](./why-payjoin/lightning.md).
 
 ### Scaling
 
