@@ -31,7 +31,7 @@ export default function WalletsUsingPayjoin() {
         <a href="https://btcpayserver.org">
           <img src="/img/btcpay.svg" alt="btcpayserver logo" />
         </a>
-        <a href="https://joinmarket.net">
+        <a href="https://github.com/JoinMarket-Org/joinmarket-clientserver">
           <img
             src="/img/joinmarket.png"
             alt="joinmarket logo"
