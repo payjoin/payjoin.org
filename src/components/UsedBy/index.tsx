@@ -9,7 +9,7 @@ export default function WalletsUsingPayjoin() {
  
       </div>
       <Marquee
-        className="bg-tertiary w-32"
+        className="bg-tertiary w-32 h-[12vh]"
         gradient={true}
         gradientColor="#46192b"
       >
@@ -17,14 +17,12 @@ export default function WalletsUsingPayjoin() {
           <img
             src="/img/mutiny.svg"
             alt="Mutinywallet Logo"
-            className="max-w-[200px] w-full h-full"
           />
         </a>
         <a href="https://bitmask.app">
           <img
             src="/img/bitmask.svg"
             alt="bitmasklogo"
-            className="max-w-[200px] w-full h-full"
           />
         </a>
         <a href="https://bluewallet.io">
@@ -37,14 +35,12 @@ export default function WalletsUsingPayjoin() {
           <img
             src="/img/joinmarket.png"
             alt="joinmarket logo"
-            className="max-w-[200px]"
           />
         </a>
         <a href="https://sparrowwallet.com">
           <img
             src="/img/sparrow.png"
             alt="sparrow logo"
-            className="max-w-[75px]"
           />
         </a>
         <a href="https://wasabiwallet.io">

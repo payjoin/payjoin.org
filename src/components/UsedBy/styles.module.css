@@ -1,3 +1,4 @@
 img {
   @apply mx-10;
+  height: 8vh;
 }
