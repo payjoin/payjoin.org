@@ -11,7 +11,7 @@ export default function Home(): JSX.Element {
   return (
     <Layout
       title={siteConfig.title}
-      description="Description will go into a meta tag in <head />"
+      description="Scale Bitcoin, save fees, and preserve privacy all at once."
     >
       <main className="text-center bg-secondary">
         <div className="flex flex-col items-center max-sm:gap-20">
