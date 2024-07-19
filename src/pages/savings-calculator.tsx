@@ -10,6 +10,7 @@ export default function SavingsCalculator(): JSX.Element {
   const [outputCount, setOutputCount] = useState<number>(1);
   const [recipientCount, setRecipientCount] = useState<number>(1);
   const [isDisabled, setIsDisabled] = useState<boolean>(true);
+  const [txVBytes, setTxVBytes] = useState<number>(0);
 
   const scriptTypes = [
     { value: ScriptType.P2PKH, label: "P2PKH" },
@@ -26,7 +27,7 @@ export default function SavingsCalculator(): JSX.Element {
       alert("Please enter a valid number greater than 0.");
       return;
     }
-    processForm(inputScript, inputCount, outputCount, recipientCount);
+    setTxVBytes(processForm(inputScript, inputCount, outputCount, recipientCount));
   }
 
   useEffect(() => {
