@@ -15,12 +15,40 @@ export enum ScriptType {
   P2TR = "P2TR",
 }
 
-// total tx cost without batching: r𝑏 + r𝑖 + r𝑜
-// total tx cost with batching: 𝑏 + 𝑖 + r𝑜
-const totalCost = (b: number, i: number, o: number, r: number, isBatching = false) => 
-  isBatching 
-    ? b + i + r * o
-    : r * b + r * i + r * o;
+// See definitions here: https://gist.github.com/thebrandonlucas/fb4283bef3df51b88a85ae974488d81f
+enum TxType {
+  Standard = "Standard",
+  Batch = "Batch",
+  Payjoin = "Payjoin",
+}
+
+// Variables:
+// b = base cost
+// i = per input cost
+// o = per output cost
+// r = recipient count
+// p = recipient input count (payjoin only)
+// di = depositor input count (payjoin only)
+// do = depositor output count (payjoin only)
+
+// total tx cost without batching: r(b + i) + 2ro
+// total tx cost with batching: b + i + ro + o
+// total tx cost with payjoin: b + p(i) + di(i) + ro + do(o) + o
+const totalCost = (b: number, i: number, o: number, r: number, type: TxType, p?: number, di?: number, _do?: number) => {
+  switch (type) {
+    case TxType.Standard:
+      return r * (b +  i) + 2 * r * o;
+    case TxType.Batch: 
+      return b + i + r * o + o;
+    case TxType.Payjoin: 
+      if (!p || !di || !_do) {
+        throw new Error("Payjoin requires recipient input count, depositor input count, and depositor output count");
+      }
+      return b + p * i + di * i + r * o + _do * o + o;
+  }
+}
+ 
+ 
 
 // TODO: payjoin recipient/cut-through formula
 
@@ -57,20 +85,22 @@ function getPerOutputCost(inputScript: ScriptType) {
   }
 }
 
-function getVbytes(script: ScriptType, inputCount: number, outputCount: number, recipientCount: number, isBatching: boolean) {
+function getVbytes(script: ScriptType, inputCount: number, outputCount: number, recipientCount: number, 
+  type: TxType, payjoinRecipientInputCount?: number, depositorInputCount?: number, depositorOutputCount?: number) {
   const perInputCost = getPerInputCost(script) * inputCount;
   const perOutputCost = getPerOutputCost(script) * outputCount;
   const baseCost = getBaseCost(script);
-  const vbytes = totalCost(baseCost, perInputCost, perOutputCost, recipientCount, isBatching);
-  console.log({ baseCost, perInputCost, perOutputCost, recipientCount, isBatching, vbytes });
+  const vbytes = totalCost(baseCost, perInputCost, perOutputCost, recipientCount, type, payjoinRecipientInputCount, depositorInputCount, depositorOutputCount);
+  console.log({ baseCost, perInputCost, perOutputCost, recipientCount, type, vbytes });
 
   return vbytes;
 }
 
-export function getUnbatchedAndBatchedVbytes(script: ScriptType, inputCount: number, outputCount: number, recipientCount: number) {
-  const vbytesUnbatched = getVbytes(script, inputCount, outputCount, recipientCount, false);
-  const vbytesBatched = getVbytes(script, inputCount, outputCount, recipientCount, true);
+export function getVbytesForEachTxType(script: ScriptType, inputCount: number, outputCount: number, recipientCount: number, payjoinRecipientInputCount: number, depositorInputCount: number, depositorOutputCount: number) {
+  const vbytesUnbatched = getVbytes(script, inputCount, outputCount, recipientCount, TxType.Standard);
+  const vbytesBatched = getVbytes(script, inputCount, outputCount, recipientCount, TxType.Batch);
+  const vbytesPayjoined = getVbytes(script, inputCount, outputCount, recipientCount, TxType.Payjoin, payjoinRecipientInputCount, depositorInputCount, depositorOutputCount);
 
-  console.log({vbytesBatched, vbytesUnbatched})
-  return { vbytesBatched, vbytesUnbatched };
+  // console.log({vbytesBatched, vbytesUnbatched, vbytesPayjoined})
+  return { vbytesBatched, vbytesUnbatched, vbytesPayjoined };
 }

@@ -3,35 +3,31 @@ import * as echarts from 'echarts';
 import { useEffect, useState } from 'react';
 import ReactECharts from 'echarts-for-react';
 
-export default function BatchBar({unbatchedVbytes, batchedVbytes}: {unbatchedVbytes: number, batchedVbytes: number}): JSX.Element {
-
+export default function BatchBar({unbatchedVbytes, batchedVbytes, payjoinVbytes}: {unbatchedVbytes: number, batchedVbytes: number, payjoinVbytes: number}): JSX.Element {
   const [option, setOption] = useState<echarts.EChartsOption | undefined>(undefined);
 
-
   useEffect(() => {
-
     setOption({
       xAxis: {
         type: 'category',
-        data: ['Unbatched', 'Batched']
+        data: ['Unbatched', 'Batched', 'Payjoin']
       },
       yAxis: {
         type: 'value'
       },
       series: [
         {
-          data: [unbatchedVbytes, batchedVbytes],
+          data: [
+            {value: unbatchedVbytes, itemStyle: {color: '#ffe751'}}, 
+            {value: batchedVbytes, itemStyle: {color: '#81e86a'}},
+            {value: payjoinVbytes, itemStyle: {color: '#ff6f6f'}}
+          ],
           type: 'bar'
         }
       ]
-    }); 
+    });  
+  }, [unbatchedVbytes, batchedVbytes, payjoinVbytes]);
 
- 
-  
-  }, [unbatchedVbytes, batchedVbytes]);
-
-  console.log(unbatchedVbytes, batchedVbytes, {option});
-
-    return batchedVbytes !== undefined && unbatchedVbytes !== undefined && !!option ? <ReactECharts option={option}/>: <>nada</>;
-  }
+  return option && <ReactECharts option={option}/>;
+}
   
