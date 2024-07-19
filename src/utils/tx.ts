@@ -69,12 +69,7 @@ function calculateTxVBytesBatching(inputScript: ScriptType, inputCount: number, 
   return Math.ceil(txVBytes);
 }
 
-export function processForm() {
-  const scriptType = (document.getElementById('input_script') as HTMLInputElement).value as ScriptType; // assuming both inputs and outputs are of same script type
-  const inputCount = parseInt((document.getElementById('input_count') as HTMLInputElement).value);
-  const outputCount = parseInt((document.getElementById('output_count') as HTMLInputElement).value);
-  const recipientCount = parseInt((document.getElementById('recipient_count') as HTMLInputElement).value);
-
+export function processForm(scriptType: ScriptType, inputCount: number, outputCount: number, recipientCount: number) {
   // In most cases the input size is predictable. For multisig inputs we need to perform a detailed calculation
   let inputSize = 0; // in virtual bytes
   let inputWitnessSize = 0;
