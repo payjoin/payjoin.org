@@ -2,11 +2,11 @@
 const P2PKH_IN_SIZE = 148;
 const P2PKH_OUT_SIZE = 34;
 const P2PKH_OVERHEAD = 10;
-const P2WPKH_IN_SIZE = 67.75;
+const P2WPKH_IN_SIZE = 68;
 const P2WPKH_OUT_SIZE = 31;
 const P2WPKH_OVERHEAD = 10.5;
-const P2TR_OUT_SIZE = 43;
 const P2TR_IN_SIZE = 57.5;
+const P2TR_OUT_SIZE = 43;
 const P2TR_OVERHEAD = 10.5;
 
 export enum ScriptType {
@@ -15,12 +15,12 @@ export enum ScriptType {
   P2TR = "P2TR",
 }
 
-// total tx cost without batching: r𝑏 + r𝑖 + 2r𝑜 + 1
-// total tx cost with batching: 𝑏 + 𝑖 + r𝑜 + 1
+// total tx cost without batching: r𝑏 + r𝑖 + r𝑜
+// total tx cost with batching: 𝑏 + 𝑖 + r𝑜
 const formula = (b: number, i: number, o: number, r: number, isBatching = false) => 
   isBatching 
-    ? b + i + r * o + 1 
-    : r * b + r * i + 2 * r * o + 1;
+    ? b + i + r * o
+    : r * b + r * i + r * o;
 
 
 function getBaseCost(inputScript: ScriptType) {
@@ -61,12 +61,15 @@ function getVbytes(script: ScriptType, inputCount: number, outputCount: number, 
   const perOutputCost = getPerOutputCost(script) * outputCount;
   const baseCost = getBaseCost(script);
   const vbytes = formula(baseCost, perInputCost, perOutputCost, recipientCount, isBatching);
-  return Math.ceil(vbytes);
+  console.log({ baseCost, perInputCost, perOutputCost, recipientCount, isBatching, vbytes });
+
+  return vbytes;
 }
 
 export function getUnbatchedAndBatchedVbytes(script: ScriptType, inputCount: number, outputCount: number, recipientCount: number) {
-  const vbytesNonBatched = getVbytes(script, inputCount, outputCount, recipientCount, false);
+  const vbytesUnbatched = getVbytes(script, inputCount, outputCount, recipientCount, false);
   const vbytesBatched = getVbytes(script, inputCount, outputCount, recipientCount, true);
 
-  return {vbytesBatched, vbytesNonBatched};
+  console.log({vbytesBatched, vbytesUnbatched})
+  return { vbytesBatched, vbytesUnbatched };
 }

@@ -1,6 +1,6 @@
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
-import { processForm, ScriptType, } from "../utils/tx";
+import { getUnbatchedAndBatchedVbytes, ScriptType, } from "../utils/tx";
 import { useEffect, useState } from "react";
 
 export default function SavingsCalculator(): JSX.Element {
@@ -10,7 +10,8 @@ export default function SavingsCalculator(): JSX.Element {
   const [outputCount, setOutputCount] = useState<number>(1);
   const [recipientCount, setRecipientCount] = useState<number>(1);
   const [isDisabled, setIsDisabled] = useState<boolean>(true);
-  const [txVBytes, setTxVBytes] = useState<number>(0);
+  const [unbatchedVbytes, setUnbatchedVbytes] = useState<number>(0);
+  const [batchedVbytes, setBatchedVbytes] = useState<number>(0);
 
   const scriptTypes = [
     { value: ScriptType.P2PKH, label: "P2PKH" },
@@ -27,7 +28,9 @@ export default function SavingsCalculator(): JSX.Element {
       alert("Please enter a valid number greater than 0.");
       return;
     }
-    setTxVBytes(processForm(inputScript, inputCount, outputCount, recipientCount));
+    const { vbytesUnbatched, vbytesBatched } = getUnbatchedAndBatchedVbytes(inputScript, inputCount, outputCount, recipientCount);
+    setUnbatchedVbytes(vbytesUnbatched);
+    setBatchedVbytes(vbytesBatched);
   }
 
   useEffect(() => {
@@ -74,7 +77,8 @@ export default function SavingsCalculator(): JSX.Element {
               </div>
               <button type="submit" disabled={isDisabled} onClick={handleSubmit}>Calculate</button><br/><br/><br/>
               {/* Transaction size in raw bytes: <span id="txBytes"></span><br/> */}
-              Transaction size in virtual bytes: <span>{txVBytes}</span><br/>
+              Transaction size in virtual bytes without batching: <span>{unbatchedVbytes}</span><br/>
+              Transaction size in virtual bytes with batching: <span>{batchedVbytes}</span><br/>
               {/* Transaction size in weight units: <span id="txWeight"></span><br/><br/> */}
               {/* <p>Which size should you use for calculating fee estimates?<br/>
                 Estimates should be in <a href="https://medium.com/@murchandamus/psa-wrong-fee-rates-on-block-explorers-48390cbfcc74">satoshis per virtual byte.</a></p> */}
