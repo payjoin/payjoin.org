@@ -17,11 +17,12 @@ export enum ScriptType {
 
 // total tx cost without batching: r𝑏 + r𝑖 + r𝑜
 // total tx cost with batching: 𝑏 + 𝑖 + r𝑜
-const formula = (b: number, i: number, o: number, r: number, isBatching = false) => 
+const totalCost = (b: number, i: number, o: number, r: number, isBatching = false) => 
   isBatching 
     ? b + i + r * o
     : r * b + r * i + r * o;
 
+// TODO: payjoin recipient/cut-through formula
 
 function getBaseCost(inputScript: ScriptType) {
   switch (inputScript) {
@@ -60,7 +61,7 @@ function getVbytes(script: ScriptType, inputCount: number, outputCount: number, 
   const perInputCost = getPerInputCost(script) * inputCount;
   const perOutputCost = getPerOutputCost(script) * outputCount;
   const baseCost = getBaseCost(script);
-  const vbytes = formula(baseCost, perInputCost, perOutputCost, recipientCount, isBatching);
+  const vbytes = totalCost(baseCost, perInputCost, perOutputCost, recipientCount, isBatching);
   console.log({ baseCost, perInputCost, perOutputCost, recipientCount, isBatching, vbytes });
 
   return vbytes;

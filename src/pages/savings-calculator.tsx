@@ -2,6 +2,7 @@ import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
 import { getUnbatchedAndBatchedVbytes, ScriptType, } from "../utils/tx";
 import { useEffect, useState } from "react";
+import BatchBar from "../components/Charts/BatchBar/bar";
 
 export default function SavingsCalculator(): JSX.Element {
   const { siteConfig } = useDocusaurusContext();
@@ -44,48 +45,54 @@ export default function SavingsCalculator(): JSX.Element {
     >
       <div className="flex flex-col justify-center mx-24 items-center bg-red">
         <span>Payjoin provides a unique opportunity for receiver-side savings.</span>
-        <form role="form" action="javascript:void(0);">
-          <div>
+        <div className="flex gap-12">
+          <form role="form" action="javascript:void(0);">
             <div>
               <div>
-                <label htmlFor="input_script">Input script type</label>
+                <div>
+                  <label htmlFor="input_script">Input script type</label>
+                  <div >
+                    <select id="input_script" onChange={(e) => setInputScript(e.target.value as ScriptType)} value={inputScript}>
+                      {scriptTypes.map((scriptType) => (
+                        <option key={scriptType.value} value={scriptType.value}>{scriptType.label}</option>
+                      ))}
+                    </select>
+                  </div>
+                </div>
                 <div >
-                  <select id="input_script" onChange={(e) => setInputScript(e.target.value as ScriptType)} value={inputScript}>
-                    {scriptTypes.map((scriptType) => (
-                      <option key={scriptType.value} value={scriptType.value}>{scriptType.label}</option>
-                    ))}
-                  </select>
+                  <label>Number of inputs</label>
+                  <div>
+                    <input type="number" min={1} value={inputCount} onChange={(e) => setInputCount(parseInt(e.target.value))} />
+                  </div>
                 </div>
-              </div>
-              <div >
-                <label>Number of inputs</label>
                 <div>
-                  <input type="number" min={1} value={inputCount} onChange={(e) => setInputCount(parseInt(e.target.value))} />
+                  <label>Number of outputs</label>
+                  <div>
+                    <input type="number" min={1} value={outputCount} onChange={(e) => setOutputCount(parseInt(e.target.value))} />
+                  </div>
                 </div>
-              </div>
-              <div>
-                <label>Number of outputs</label>
                 <div>
-                  <input type="number" min={1} value={outputCount} onChange={(e) => setOutputCount(parseInt(e.target.value))} />
+                  <label>Number of recipients</label>
+                  <div>
+                    <input type="number" min={1} value={recipientCount} onChange={(e) => setRecipientCount(parseInt(e.target.value))}  />
+                  </div>
                 </div>
+                <button type="submit" disabled={isDisabled} onClick={handleSubmit}>Calculate</button><br/><br/><br/>
+                {/* Transaction size in raw bytes: <span id="txBytes"></span><br/> */}
+                Transaction size in virtual bytes without batching: <span>{unbatchedVbytes}</span><br/>
+                Transaction size in virtual bytes with batching: <span>{batchedVbytes}</span><br/>
+                {/* Transaction size in weight units: <span id="txWeight"></span><br/><br/> */}
+                {/* <p>Which size should you use for calculating fee estimates?<br/>
+                  Estimates should be in <a href="https://medium.com/@murchandamus/psa-wrong-fee-rates-on-block-explorers-48390cbfcc74">satoshis per virtual byte.</a></p> */}
               </div>
-              <div>
-                <label>Number of recipients</label>
-                <div>
-                  <input type="number" min={1} value={recipientCount} onChange={(e) => setRecipientCount(parseInt(e.target.value))}  />
-                </div>
-              </div>
-              <button type="submit" disabled={isDisabled} onClick={handleSubmit}>Calculate</button><br/><br/><br/>
-              {/* Transaction size in raw bytes: <span id="txBytes"></span><br/> */}
-              Transaction size in virtual bytes without batching: <span>{unbatchedVbytes}</span><br/>
-              Transaction size in virtual bytes with batching: <span>{batchedVbytes}</span><br/>
-              {/* Transaction size in weight units: <span id="txWeight"></span><br/><br/> */}
-              {/* <p>Which size should you use for calculating fee estimates?<br/>
-                Estimates should be in <a href="https://medium.com/@murchandamus/psa-wrong-fee-rates-on-block-explorers-48390cbfcc74">satoshis per virtual byte.</a></p> */}
             </div>
+          </form>
+          <div className="w-full h-full">
+
+          <BatchBar unbatchedVbytes={unbatchedVbytes} batchedVbytes={batchedVbytes} />
           </div>
-        </form>
-      </div>
+        </div>
+     </div>
     </Layout>
   );
 }
