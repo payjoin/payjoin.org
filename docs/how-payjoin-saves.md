@@ -2,66 +2,87 @@
 sidebar_position: 1
 ---
 
-# How Can Payjoin Save 1/3 the Cost of Transacting?
+# How Can Payjoin Save 1/3 of the Cost of Transacting?
 
-Payjoin can save more than 1/3 of the cost of making normal transactions by batching them together.
+Payment batching is the most common way for high-volume settlement services like exchanges and payment processors to save fees. But it has been limited to one party, the sender, combining multiple sends together. Ideally, multiple types of transfers could all be combined together. Imagine your deposit to an exchange was batched with others' withdrawals. This combination saves significant overhead compared to making individual transfers. It also results in better preserved privacy since, like bitcoin itself, only inputs and outputs are recorded, but less information about which inputs and outputs are clustered would be revealed, breaking the [common input heuristic](https://en.bitcoin.it/wiki/Common-input-ownership_heuristic)
 
-Payjoin lets a sender and receiver combine their transactions when they use Bitcoin. This doesn't just save money. It fixes the biggest privacy problem the Bitcoin network has at the same time.
+Transactions compete to get included in blocks according to network fees they pay since each block is limited to a fixed weight. At a high level, each transaction weight pays some base costs (𝑏), per-input costs (𝑖) and per-output costs (𝑜). In reality not all inputs and outputs have equal cost but the principle can be explained assuming they do, and be backed up by real examples.
 
-Imagine Alice would like to send some sats to Bob. Before Payjoin, she'd make a transaction that looks like this:
-
-```
-Alice 500,000 sats  ->  200,000 sats to Bob
-                        292,387 sats to Alice
-
-(7,613 sats are fees for 152.25 vB at 50 sat/vB)
-```
-
-To understand the transaction, know that Bitcoin transactions spend stacks of bitcoin called [unspent transaction outputs (UTXOs)](https://unchained.com/blog/what-is-a-utxo-bitcoin/) to make new transaction outputs. To hold some bitcoin is to control a UTXO. UTXOs have their own denominations like banknotes, but they can hold any amount.
-
-So Alice makes one new UTXO to Bob, and another that holds the change to herself, since UTXOs must be spent completely. The difference between the inputs and outputs is paid to the miners as fees.
-
-Before he gets paid by Alice, Bob knows he wants to consolidate the bitcoin from Alice with other bitcoin to Charlie, perhaps to exchange for local currency.
+Take a fictional exchange with 5 BTC in their treasury selling 1 bitcoin each to Alice, bob, and Carol for example.
 
 ```
-Bob 200,000 sats ->  491,575 sats to Charlie
-Bob 300,000 sats 
-
-(8,425 sats are fees for 168.5 vB at 50 sat/vB)
+Exchange 5 btc  ->  1 btc to Alice
+                   ~4 btc minus fees to Exchange
 ```
 
-Space in the blockchain is limited, and transactions pay for base costs of the transaction header, costs for each input and costs for each output. Making these two transactions costs:
-
-*2 × base costs + 3 × input costs + 3 × output costs*
-
-If Bob knows he needs to pay Charlie, he can Payjoin with Alice to save loads of fees.
-
-Their Payjoin looks like this
-
 ```
-Alice 500,000 sats ->  500,000 sats to Charlie
-Bob   300,000 sats     289,412 sats to Alice
-
-(10,588 sats are fees for 211.25 vB at 50 sat/vB)
+Exchange 4 btc  ->  1 btc to Bob
+                   ~3 btc minus fees to Exchange
 ```
 
-Since Alice's payment to Bob "[cut-through](https://bitcointalk.org/index.php?topic=281848.0)" to Charlie,
+```
+Exchange 3 btc  ->  1 btc to Carol
+                   ~2 btc minus fees to Exchange
+```
 
-1. Bob never had to spend fees on an output from Alice
-2. Bob saved the fixed costs of making a second transaction
-3. Alice and Bob have better privacy.
+Each transaction would cost the exchange 𝑏 + 𝑖 + 2𝑜, and they would pass the fees onto their customers in order to make a profit. The sum of these costs would be 3𝑏 + 3𝑖 + 6𝑜, which would come out of the final ~2 BTC change the exchange keeps in the end.
 
-If Charlie knows that Payjoin happens, Charlie can't know for sure that transaction inputs all came from Bob, or if he spent an old-school transaction. Nobody can assume all inputs to transactions come from one person anymore.
+## Old-school Payment Batching
 
-The Payjoin only cost
+Batching helps the exchange save time and money in two ways. First, the overall cost to post such a transaction is cheaper than the cost of making three individual transactions to produce the same result. Second, a single unspent output can fund multiple withdrawals without waiting for each one to settle.
+
+your typical exchange withdrawal looks like this:
+
+```
+Exchange 5 btc  ->   1 btc to Alice
+                     1 btc to Bob
+                     1 btc to Carol
+                    ~2 btc minus fees to Exchange
+```
+
+All else being equal, an exchange making this batch instead of three separate transactions will only pay 𝑏 + 𝑖 + 4𝑜 in fees, saving 2𝑏 + 2𝑖 + 2𝑜 compared to 3𝑏 + 3𝑖 + 6𝑜, at least 33% cheaper than making those three transactions separately. Second, the exchange does not have to wait for each withdrawal to settle before paying out the next one since they can service them all with a single UTXO. Sure, the exchange could keep multiple UTXOs ready for spending, but that is always going come at the cost of making even more transactions in preparation.
+
+## Payjoin Payment Batching
+
+What if Dave the depositor can payjoin? He gets a benefit of breaking some privacy heuristics, and he can save the exchange some fees that might be able to be pased on to him. Payjoin lets the exchange fund withdrawals with Dave's deposit in the same transaction.
+
+```
+Dave     3 btc  ->  1 btc to Alice
+Exchange 2 btc      1 btc to Bob
+                    1 btc to Carol
+                   ~2 btc minus fees to Exchange
+```
+
+𝑏 + 2𝑖 + 4𝑜
+
+Since Dave's sweep to the exchange "[cut-through](https://bitcointalk.org/index.php?topic=281848.0)" to Alice, Bob, and Carol,
+
+1. The exchange never had to take on a new UTXO from Dave's deposit and pay fees to spend it.
+2. The exchange saved the fixed costs of making a second transaction, since Dave paid them.
+3. All parties enjoy better privacy since deposits and withdrawals are indistinguishable from an exchange consolidation, and these batched transactions are indistinguishable from individual transactions.
+
+Dave knows that Payjoin was used, but not which outputs are withdrawals vs consolidations.
+The Exchange can see everything as it could before, but an outside observer cannot without that information being leaked.
+Alice, Bob, and Carol can't tell whether or not all inputs came from the exchange or include an outsider's deposit. They know they got paid and that's their main concern.
+
+In total, the payjoin only cost
 
 *1 × base costs + 2 × input costs + 2 × output costs*
 
-saving at least 1/3 of the cost of a regular transaction.[^1]
+saving at least 1/3 of the cost of a regular transaction, and fees were split between Dave and the Exchange by custom.[^1]
 
-Any old Bob will need to combine outputs or make many transactions to spend his bitcoin. Payjoin combines Bob's old output with the payment to save him the trouble. If he knows he will need to pay Charlie ahead of time, Payjoin can cut-through transactions to save even more.
+## Future Payjoin Batching
 
-Sure, Alice pays for one more input than she would normally here. But if she receives Payjoins she will save fees over time, too. She wants to do her part to scale bitcoin and save the network's privacy. As long as Alice and Bob can Payjoin, they'll both save money and get privacy benefits by default.
+Bitcoin technically allows even more depositors to batch their transactions, too. Even though today's version of Payjoin only allows Dave to pay the exchange, future versions of Payjoin will allow others pay the exchange and each other in the same transaction too. More batching means more saving, and potentially more privacy too.
+
+```
+Dave     3 btc  ->  1 btc to Alice
+Erin     1 btc      1 btc to Bob
+Frank    2 btc      1 btc to Carol
+Exchange 2 btc     ~5 btc minus fees to Exchange
+```
+
+However, such transactions are more difficult to coordinate, so it will take an effort to develop this new protocol and get it deployed. Integrating Payjoin V2 can save money, improve privacy, and help get to the next iteration that massively fixes bitcoin's privacy through batching. Batching Bitcoin, saving sats, and preserving privacy seem like different goals, but with a little communication, the three goals can be achieved in every single transaction.
 
 [^1]: Let 𝑏 represent fixed costs, 𝑖 represent input costs, and 𝑜 represent output costs. The cost of the unbatched transactions is 2𝑏 + 3i + 3o. The cost of the batched transactions is 2𝑏 + 2𝑖 + 2𝑜. Thus, the savings from batching is calculated as 1/3(2𝑏 + 3𝑖 + 3𝑜) = 2/3(𝑏) + 𝑖 + 𝑜, which is less than 𝑏 + 𝑖 + 𝑜. In this example The unbatched virtual weight is 152.25 vB + 168.5 vB = 320.75 vB. The payjoin batched virtual weight is 211.25 vB. (211.25 vB / 320.75 vB) = ~0.66, so making these transactions without batching is over 1/3 smaller than with batching. Put another way (320.75 / 211.25 vB) = ~1.51, so making these transactions without batching costs more than 50% more than the cost of making them with payjoin.
 
