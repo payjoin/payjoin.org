@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # How Can Payjoin Save 1/3 of the Cost of Transacting?
 
-Payment batching is the most common way for high-volume settlement services like exchanges and payment processors to save fees. But it has been limited to one party, the sender, combining multiple sends together. Ideally, multiple types of transfers could all be combined together. Imagine your deposit to an exchange was batched with others' withdrawals. This combination saves significant overhead compared to making individual transfers. It also results in better preserved privacy since, like bitcoin itself, only inputs and outputs are recorded, but less information about which inputs and outputs are clustered would be revealed, breaking the [common input heuristic](https://en.bitcoin.it/wiki/Common-input-ownership_heuristic)
+Payment batching is the most common way for high-volume settlement services like exchanges and payment processors to save fees. But it has been limited to one party, the sender, combining multiple sends together. Ideally, multiple types of transfers could all be combined together. Imagine your deposit to an exchange was batched with others' withdrawals. This combination saves significant overhead compared to making individual transfers, [scaling Bitcoin](./why-payjoin/scaling). It also results in better preserved [privacy](./why-payjoin/privacy) since, like bitcoin itself, only inputs and outputs are recorded, but less information about which inputs and outputs are clustered would be revealed, breaking the [common input heuristic](https://en.bitcoin.it/wiki/Common-input-ownership_heuristic)
 
 Transactions compete to get included in blocks according to network fees they pay since each block is limited to a fixed weight. At a high level, each transaction weight pays some base costs (𝑏), per-input costs (𝑖) and per-output costs (𝑜). In reality not all inputs and outputs have equal cost but the principle can be explained assuming they do, and be backed up by real examples.
 
@@ -55,7 +55,7 @@ Exchange 2 btc      1 btc to Bob
 
 𝑏 + 2𝑖 + 4𝑜
 
-Since Dave's sweep to the exchange "[cut-through](https://bitcointalk.org/index.php?topic=281848.0)" to Alice, Bob, and Carol,
+Since Dave's sweep to the exchange "[cut-through](./why-payjoin/scaling#transaction-cut-through)" to Alice, Bob, and Carol,
 
 1. The exchange never had to take on a new UTXO from Dave's deposit and pay fees to spend it.
 2. The exchange saved the fixed costs of making a second transaction, since Dave paid them.

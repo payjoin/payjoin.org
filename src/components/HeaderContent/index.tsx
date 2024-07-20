@@ -29,7 +29,7 @@ export default function HeaderContent() {
         </h2>
       </div>
       <div className="flex gap-4 flex-col sm:flex-row">
-        <a href="#whypayjoin">
+        <a href="./docs/how-payjoin-saves">
           <Button variant="primary">Learn More</Button>
         </a>
         <a target="_blank" href="https://payjoindevkit.org/">
