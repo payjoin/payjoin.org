@@ -68,4 +68,4 @@ The _Client_ is trying to make a request to the _Target_ such that the Target ca
 
 That is to say Payjoin v2 enables all of the functionality of Payjoin v1 without the client burdens. The most costly operations are outsourced to an untrusted third party so that even a mobile device can do Payjoin.
 
-To learn more about Payjoin v2, dive into [BIP 77](https://github.com/bitcoin/bips/pull/1483) or complete one of the [tutorials](/tutorials).
+To learn more about Payjoin v2, dive into [BIP 77](https://github.com/bitcoin/bips/pull/1483) or complete one of the [tutorials](./category/tutorials).
