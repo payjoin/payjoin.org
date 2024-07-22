@@ -8,7 +8,7 @@ Payment batching is the most common way for high-volume settlement services like
 
 Transactions compete to get included in blocks according to network fees they pay since block space is limited. At a high level, each transaction pays for base costs (𝑏), per-input costs (𝑖) and per-output costs (𝑜). In reality not all inputs and outputs have equal cost but the principle can be understood assuming they do, and be backed up by real examples.
 
-Take a fictional exchange with 5 BTC in their treasury selling 1 bitcoin each to Alice, Bob, and Carol for example.
+Take a fictional exchange with a 4 BTC coin in their treasury selling 1 bitcoin each to Alice, Bob, and Carol for example.
 
 ```
 Exchange 4 btc  ->  1 btc to Alice
