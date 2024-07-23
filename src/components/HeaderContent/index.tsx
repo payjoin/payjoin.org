@@ -1,5 +1,6 @@
-// Button component that accounts for the differences between the two buttons using props
-// Using the given tailwind classes below
+import Marquee from "react-fast-marquee";
+
+// Button component remains unchanged
 export function Button({ children, variant }) {
   return (
     <button
@@ -13,6 +14,16 @@ export function Button({ children, variant }) {
     </button>
   );
 }
+
+const Testimonial = ({ text, name, image }) => (
+  <div className="flex flex-col items-start mx-4 w-96 bg-tertiary rounded-lg p-6 shadow-lg">
+    <p className="text-lg mb-4 text-left">{text}</p>
+    <div className="flex items-center">
+      <img src={image} alt={name} className="w-12 h-12 rounded-full mr-4" />
+      <p className="font-bold text-primary">{name}</p>
+    </div>
+  </div>
+);
 
 export default function HeaderContent() {
   return (
@@ -35,6 +46,34 @@ export default function HeaderContent() {
         <a target="_blank" href="https://payjoindevkit.org/">
           <Button variant="secondary">Developer Kit</Button>
         </a>
+      </div>
+      <div className="w-full mt-16">
+        <Marquee
+          gradient={true}
+          gradientColor="#46192b"
+          speed={90}
+        >
+          <Testimonial
+            text="Payjoin usage improves the privacy of all bitcoiners by breaking the common input ownership heuristic - you can no longer assume all inputs belong to the sender."
+            name="ODELL"
+            image="https://avatars.githubusercontent.com/u/50266466?v=4"
+          />
+          <Testimonial
+            text="Payjoin doesn't even have to be widely used to make the common input ownership heuristic unusable. Since payjoins are indistinguishable on-chain, it should suffice to have payjoin optionally available in most wallets."
+            name="El Flaco"
+            image="https://pbs.twimg.com/profile_images/1361820690270273541/wAHR6yPI_400x400.jpg"
+          />
+          <Testimonial
+            text="More payjoin adoption would be a good thing. payjoin = https"
+            name="Gigi"
+            image="https://dergigi.com/assets/images/avatar.jpg"
+          />
+          <Testimonial
+            text="Wallet side p2p PayJoin is the future IMO... Bitcoin needs more PayJoin and p2p capable PayJoin wallet interop."
+            name="Adam Back"
+            image="https://pbs.twimg.com/profile_images/1364645619705511936/IGTT_tnL_400x400.jpg"
+          />
+        </Marquee>
       </div>
     </div>
   );
