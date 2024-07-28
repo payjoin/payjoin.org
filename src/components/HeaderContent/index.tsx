@@ -27,7 +27,7 @@ const Testimonial = ({ text, name, image }) => (
 
 export default function HeaderContent() {
   return (
-    <div className="min-h-screen flex items-center justify-center flex-col gap-8 max-sm:m-20">
+    <div className="min-h-screen flex items-center justify-center flex-col gap-8 max-sm:m-20 overflow-hidden w-screen">
       <img
         src="/svg/monad.svg"
         alt="Monad Logo"
@@ -47,7 +47,7 @@ export default function HeaderContent() {
           <Button variant="secondary">Developer Kit</Button>
         </a>
       </div>
-      <div className="w-full mt-16">
+      <div className="w-full overflow-hidden mt-16">
         <Marquee
           gradient={true}
           gradientColor="#46192b"
