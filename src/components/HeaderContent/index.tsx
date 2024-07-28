@@ -4,7 +4,7 @@ import Marquee from "react-fast-marquee";
 export function Button({ children, variant }) {
   return (
     <button
-      className={`text-2xl text-white px-12 py-4 rounded-lg cursor-pointer transition-all w-80 ${
+      className={`text-xl text-white px-12 py-4 rounded-lg cursor-pointer transition-all w-80 ${
         variant === "primary"
           ? "bg-primary  hover:bg-pink-500 border-none"
           : "border-solid bg-secondary border-white hover:border-pink-200 hover:text-pink-200"
@@ -17,9 +17,9 @@ export function Button({ children, variant }) {
 
 const Testimonial = ({ text, name, image }) => (
   <div className="flex flex-col items-start mx-4 w-96 bg-tertiary rounded-lg p-6 shadow-lg">
-    <p className="text-lg mb-4 text-left">{text}</p>
+    <p className="text-sm mb-4 text-left">{text}</p>
     <div className="flex items-center">
-      <img src={image} alt={name} className="w-12 h-12 rounded-full mr-4" />
+      <img src={image} alt={name} className="w-8 h-8 rounded-full mr-4" />
       <p className="font-bold text-primary">{name}</p>
     </div>
   </div>
@@ -27,15 +27,15 @@ const Testimonial = ({ text, name, image }) => (
 
 export default function HeaderContent() {
   return (
-    <div className="min-h-screen flex items-center justify-center flex-col gap-8 max-sm:m-20 overflow-hidden w-screen">
+    <div className="min-h-screen flex items-center justify-center flex-col gap-4 max-sm:m-20 overflow-hidden w-screen">
       <img
         src="/svg/monad.svg"
         alt="Monad Logo"
-        className="w-32 text-primary"
+        className="w-24 text-primary"
       />
-      <h1 className="text-7xl">Payjoin</h1>
+      <h1 className="text-6xl">Payjoin</h1>
       <div className="flex flex-col">
-        <h2 className="text-4xl">
+        <h2 className="text-2xl">
           Scale Bitcoin, save fees, and preserve privacy all at once.
         </h2>
       </div>
@@ -47,7 +47,7 @@ export default function HeaderContent() {
           <Button variant="secondary">Developer Kit</Button>
         </a>
       </div>
-      <div className="w-full overflow-hidden mt-16">
+      <div className="w-full overflow-hidden">
         <Marquee
           gradient={true}
           gradientColor="#46192b"
