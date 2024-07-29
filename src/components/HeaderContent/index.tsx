@@ -51,7 +51,7 @@ export default function HeaderContent() {
         <Marquee
           gradient={true}
           gradientColor="#46192b"
-          speed={90}
+   
         >
           <Testimonial
             text="Payjoin usage improves the privacy of all bitcoiners by breaking the common input ownership heuristic - you can no longer assume all inputs belong to the sender."
