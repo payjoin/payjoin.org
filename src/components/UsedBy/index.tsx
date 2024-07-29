@@ -14,7 +14,7 @@ export default function WalletsUsingPayjoin() {
         <h1 className="text-6xl">Wallets Using Payjoin</h1>
       </div>
       <Marquee
-        className="bg-tertiary w-32 h-[12vh]"
+        className="bg-tertiary w-32 h-[24vh]"
         gradient={true}
         gradientColor="#46192b"
       >
