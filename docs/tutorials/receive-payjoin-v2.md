@@ -4,6 +4,8 @@ We'll demostrate how you can receive an asynchronous [BIP 77: Payjoin Version 2]
 
 The network parameters could be changed to support any Bitcoin network, but this tutorial will use the Bitcoin Signet network. We will ignore most errors and Payjoin Session persistence for simplicity. Reference the [`payjoin-cli` source](https://github.com/payjoin/rust-payjoin/tree/master/payjoin-cli) reference implementation for more information on those implementation details.
 
+See the [video tutorial](https://www.youtube.com/watch?v=pybCDYbrgeQ) for a detailed follow along companion.
+
 ## Configure OHTTP Keys
 
 First, you must bootstrap Oblivious HTTP (OHTTP) to connect to the Payjoin Directory without revealing your IP address.
