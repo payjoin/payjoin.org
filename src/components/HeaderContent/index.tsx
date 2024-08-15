@@ -75,6 +75,13 @@ export default function HeaderContent() {
               name="Adam Back"
               image="https://pbs.twimg.com/profile_images/1364645619705511936/IGTT_tnL_400x400.jpg"
             />
+            <Testimonial
+              text="Using Payjoin when spending is so underrated.
+
+The ability to break common-input-ownership heuristic *and* completely obfuscate amount sent is extremely powerful."
+              name="Seth For Privacy"
+              image="https://pbs.twimg.com/profile_images/1507020330954489862/MNnJ320U_400x400.jpg"
+            />
           </div>
         </Marquee>
       </div>
