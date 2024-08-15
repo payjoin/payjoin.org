@@ -17,10 +17,10 @@ export function Button({ children, variant }) {
 
 const Testimonial = ({ text, name, image }) => (
   <div className="flex flex-col items-start justify-between gap-4 mx-4 w-96 bg-tertiary rounded-lg p-6 shadow-lg">
-    <blockquote className="border-l-secondary text-left italic font-bold text-xs">{text}</blockquote>
+    <blockquote className="border-l-secondary text-left italic text-sm">{text}</blockquote>
     <div className="flex items-center">
       <img src={image} alt={name} className="w-8 h-8 rounded-full mr-4" />
-      <span className="font-bold text-primary text-center">{name}</span>
+      <span className="font-bold">{name}</span>
     </div>
   </div>
 );
@@ -63,7 +63,7 @@ export default function HeaderContent() {
             <Testimonial
               text="Payjoin doesn't even have to be widely used to make the common input ownership heuristic unusable. Since payjoins are indistinguishable on-chain, it should suffice to have payjoin optionally available in most wallets."
               name="El Flaco"
-              image="https://pbs.twimg.com/profile_images/1361820690270273541/wAHR6yPI_400x400.jpg"
+              image="https://pbs.twimg.com/profile_images/1819046599768612871/S2BADZaw_400x400.jpg"
             />
             <Testimonial
               text="More payjoin adoption would be a good thing. payjoin = https"
