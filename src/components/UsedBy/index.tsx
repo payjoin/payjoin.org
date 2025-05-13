@@ -18,10 +18,10 @@ export default function WalletsUsingPayjoin() {
         gradient={true}
         gradientColor="#46192b"
       >
-        <WalletLogo href="https://www.mutinywallet.com/" src="/img/mutiny.svg" alt="Mutinywallet Logo" />
         <WalletLogo href="https://bitmask.app" src="/img/bitmask.svg" alt="bitmasklogo" />
         <WalletLogo href="https://bluewallet.io" src="/img/bluewallet.svg" alt="bluewallet logo" />
         <WalletLogo href="https://btcpayserver.org" src="/img/btcpay.svg" alt="btcpayserver logo" />
+        <WalletLogo href="https://cakewallet.com" src="/img/cakewallet.svg" alt="Cake Wallet logo" />
         <WalletLogo href="https://github.com/JoinMarket-Org/joinmarket-clientserver" src="/img/joinmarket.png" alt="joinmarket logo" />
         <WalletLogo href="https://sparrowwallet.com" src="/img/sparrow.png" alt="sparrow logo" />
         <WalletLogo href="https://wasabiwallet.io" src="/img/wasabi.svg" alt="wasabi logo" />
