@@ -12,7 +12,7 @@ BIP 77 is still a draft BIP. Use at your own risk!
 
 ### Motivation
 
-Payjoin version 2 ([BIP 77](https://github.com/bitcoin/bips/blob/bc3123e1dab1c5b08d6f934b11b4d741107ac386/bip-0077.mediawiki)) is a draft BIP designed to improve on the limitations of version 1. In version 1, a receiver was required to host a server from which to receive requests from a sender as well as to modify the **Original PSBT** from the sender into a **Payjoin PSBT**.
+Payjoin version 2 ([BIP 77](https://github.com/bitcoin/bips/blob/792e5852506ddc545559894754eec5a05da7a7bb/bip-0077.md)) is a draft BIP designed to improve on the limitations of version 1. In version 1, a receiver was required to host a server from which to receive requests from a sender as well as to modify the **Original PSBT** from the sender into a **Payjoin PSBT**.
 
 Payjoin v2 eliminates this receiver requirement by outsourcing the server hosting to an untrusted third party. This "Payjoin Directory" server is dead simple and has one task — store pending payments from the sender, and forward them to and from the receiver when the other party comes back online. These Payjoin payloads are small, ephemeral, and encrypted, so a malicious directory cannot snoop on or forge message contents.
 
@@ -44,7 +44,7 @@ At a high level (and omitting some important detail), a Payjoin v2 transaction t
 - **Receiver**: Once the receiver is online, it sends `/receive` requests to await updates from the subdirectory. The receiver decrypts and authenticates the response which it checks according to [the receiver checklist](https://github.com/bitcoin/bips/blob/master/bip-0078.mediawiki#receivers-original-psbt-checklist). It updates the `Original PSBT` to include new signed inputs and outputs, invalidating sender signatures, and may adjust the fee. The result is called the `Payjoin PSBT`.
 - The `Payjoin PSBT` is encrypted, encapsulated in OHTTP, and sent to the directory's OHTTP Gateway.
 - **Sender**: The sender awaits a `Payjoin PSBT` response from the receiver, polling until the response is available.
-- **Sender**: The sender validates the `Payjoin PSBT` according to [the sender checklist](https://github.com/bitcoin/bips/blob/bc3123e1dab1c5b08d6f934b11b4d741107ac386/bip-0077.mediawiki#senders-payjoin-psbt-checklist), signs its inputs and broadcasts the transaction to the Bitcoin network.
+- **Sender**: The sender validates the `Payjoin PSBT` according to [the sender checklist](https://github.com/bitcoin/bips/blob/792e5852506ddc545559894754eec5a05da7a7bb/bip-0077.md#senders-proposal-psbt-checklist), signs its inputs and broadcasts the transaction to the Bitcoin network.
 
 Each message between Sender/Receiver client and Directory happens over OHTTP to protect metadata.
 
