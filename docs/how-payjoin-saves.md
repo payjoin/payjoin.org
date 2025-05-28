@@ -88,7 +88,7 @@ Alice, Bob, Carol, Erin, or any outside observer can't tell whether or not all i
 
 ## Future Payjoin Batching
 
-Bitcoin technically allows even more depositors to batch their transactions together too. Even though today's version of Payjoin only allows Dave to pay the exchange, future versions of Payjoin will allow others pay the exchange and each other in the same transaction too. More batching means more saving, and potentially more privacy too.
+Bitcoin technically allows even more depositors to batch their transactions together too. Even though today's version of Payjoin only allows Dave to pay the exchange, future versions of Payjoin will allow others to pay the exchange and each other in the same transaction too. More batching means more saving, and potentially more privacy too.
 
 ```
 Dave     3 btc  ->  1 btc to Alice
