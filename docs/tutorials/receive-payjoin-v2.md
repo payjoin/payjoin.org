@@ -10,7 +10,7 @@ See the [video tutorial](https://www.youtube.com/watch?v=pybCDYbrgeQ) for a deta
 
 First, you must bootstrap Oblivious HTTP (OHTTP) to connect to the Payjoin Directory without revealing your IP address.
 
-Payojoin receivers must communicate with a Payjoin Directory via an Oblivious HTTP Relay. In order to speak OHTTP an OHTTP Key Configuration must be obtained. When TLS is available, this can be done through the HTTP CONNECT bootstrap mechanism as follows.
+Payjoin receivers must communicate with a Payjoin Directory via an Oblivious HTTP Relay. In order to speak OHTTP, an OHTTP Key Configuration must be obtained. When TLS is available, this can be done through the HTTP CONNECT bootstrap mechanism as follows.
 
 Create a new project depending on the following:
 
@@ -226,6 +226,6 @@ Once inputs are added, the Payjoin needs to be signed and returned to the sender
 }
 ```
 
-That's all it takes to receive a Version 2 Payjoin. The looping allows a sender to send a proposal and receive a Payjoin in an asynchronous way. When you run this program it will output a Payjoin URI and listen for a proposal. When the sender sends a proposal, it will be validated and the inputs will be added to the proposal. The final Payjoin will be signed first by the receiver, then by the receiver and broadcast to the network.
+That's all it takes to receive a Version 2 Payjoin. The looping allows a sender to send a proposal and receive a Payjoin in an asynchronous way. When you run this program it will output a Payjoin URI and listen for a proposal. When the sender sends a proposal, it will be validated and the inputs will be added to the proposal. The final Payjoin will be signed first by the receiver, then by the sender and broadcast to the network.
 
 Check your work by checking the source code for this [tutorial](https://github.com/payjoin/receive-payjoin-v2).
