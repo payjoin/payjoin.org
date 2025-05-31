@@ -6,7 +6,7 @@ description: The initial payjoin flow
 
 :::warning
 
-This version is now deprecated in favor of [Async Payjoin (version 2)](./payjoin-v2-bip-77.md). However, everything defined here is backward-compatible and relevant to v2, so read on!
+This version is now deprecated in favor of [Async Payjoin (version 2)](./payjoin-v2-bip-77.md). However, everything defined here is backward-compatible and relevant to v2, so read on.
 
 :::
 
