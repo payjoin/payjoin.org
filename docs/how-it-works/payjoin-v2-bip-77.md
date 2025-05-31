@@ -1,24 +1,24 @@
 ---
 sidebar_position: 4
-title: Payjoin V2 (BIP 77)
-description: Serverless, asynchronous payjoin
+title: Async Payjoin (BIP 77, V2)
+description: Serverless, Asynchronous Payjoin
 ---
 
-:::note
+:::info
 
-BIP 77 is still a draft BIP. Use at your own risk!
+[BIP 77](https://github.com/bitcoin/bips/blob/master/bip-0077.md) has been merged and is now the recommended approach for Payjoins
 
 :::
 
 ### Motivation
 
-Payjoin version 2 ([BIP 77](https://github.com/bitcoin/bips/blob/792e5852506ddc545559894754eec5a05da7a7bb/bip-0077.md)) is a draft BIP designed to improve on the limitations of version 1. In version 1, a receiver was required to host a server from which to receive requests from a sender as well as to modify the **Original PSBT** from the sender into a **Payjoin PSBT**.
+Payjoin version 2 ([BIP 77](https://github.com/bitcoin/bips/blob/master/bip-0077.md)) is a BIP designed to improve on the limitations of version 1. In version 1, a receiver was required to host a server from which to receive requests from a sender as well as to modify the **Original PSBT** from the sender into a **Payjoin PSBT**.
 
 Payjoin v2 eliminates this receiver requirement by outsourcing the server hosting to an untrusted third party. This "Payjoin Directory" server is dead simple and has one task — store pending payments from the sender, and forward them to and from the receiver when the other party comes back online. These Payjoin payloads are small, ephemeral, and encrypted, so a malicious directory cannot snoop on or forge message contents.
 
-To make this work, in lieu of hosting a server themselves, the receiver starts a session assigned a _subdirectory_ which will store and forward the encrypted payjoin payloads between the sender and receiver.
+To make this work, in lieu of hosting a server themselves, the receiver starts a session assigned a _mailbox_ which will store and forward the encrypted payjoin payloads between the sender and receiver.
 
-That's all well and good, but what about the IP address metadata being sent to the payjoin directory? After all, even if the untrusted directory couldn't see the plaintext transaction data, couldn't it see the sender and receiver's IP addresses? Without further protection yes it could, but Payjoin v2 makes use of a novel protocol called [Oblivious HTTP](https://www.fastly.com/blog/enabling-privacy-on-the-internet-with-oblivious-http) (OHTTP) to strip client-identifying metadata from the request before it reaches the directory.
+That's all well and good, but what about the IP address metadata being sent to the Payjoin Directory? After all, even if the untrusted directory couldn't see the plaintext transaction data, couldn't it see the sender and receiver's IP addresses? Without further protection, yes it could, but Payjoin v2 makes use of a novel protocol called [Oblivious HTTP](https://www.fastly.com/blog/enabling-privacy-on-the-internet-with-oblivious-http) (OHTTP) to strip client-identifying metadata from the request before it reaches the directory.
 
 Aside from these two changes in the means of communicating the transaction, the v2 protocol takes on the same shape as v1, and is even backwards-compatible.
 
