@@ -6,7 +6,7 @@ description: Serverless, Asynchronous Payjoin
 
 :::info
 
-[BIP 77](https://github.com/bitcoin/bips/blob/master/bip-0077.md) has been merged and is now the recommended approach for Payjoins
+[BIP 77](https://github.com/bitcoin/bips/blob/master/bip-0077.md) has been merged and is now the recommended approach for Payjoin.
 
 :::
 
