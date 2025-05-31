@@ -14,7 +14,7 @@ description: Serverless, Asynchronous Payjoin
 
 Payjoin version 2 ([BIP 77](https://github.com/bitcoin/bips/blob/master/bip-0077.md)) is a BIP designed to improve on the limitations of version 1. In version 1, a receiver was required to host a server from which to receive requests from a sender as well as to modify the **Original PSBT** from the sender into a **Payjoin PSBT**.
 
-Payjoin v2 eliminates this receiver requirement by outsourcing the server hosting to an untrusted third party. This "Payjoin Directory" server is dead simple and has one task — store pending payments from the sender, and forward them to and from the receiver when the other party comes back online. These Payjoin payloads are small, ephemeral, and encrypted, so a malicious directory cannot snoop on or forge message contents.
+Payjoin v2 eliminates this receiver requirement by outsourcing the server hosting to an untrusted third party called the _Payjoin Directory_. This server is dead simple and has one task — store pending payments from the sender, and forward them to and from the receiver when the other party comes back online. These Payjoin payloads are small, ephemeral, and encrypted, so a malicious directory cannot snoop on or forge message contents.
 
 To make this work, in lieu of hosting a server themselves, the receiver starts a session assigned a _mailbox_ which will store and forward the encrypted Payjoin payloads between the sender and receiver.
 
@@ -36,12 +36,12 @@ All requests made to the directory by the sender or receiver are done using OHTT
 
 At a high level (and omitting some important detail), a Payjoin v2 transaction takes the following steps:
 
-- **Receiver**: Sends their Payjoin session pubkey to the directory to initialize a session at a new subdirectory.
-- **Receiver**: Out of band, the receiver shares a [Bitcoin URI](https://github.com/bitcoin/bips/blob/master/bip-0021.mediawiki) with the sender including a `pj` query parameter itself containing an HTTP URL to the subdirectory. The `pj` URL fragment includes an `ohttp` parameter containing the directory's public key.
+- **Receiver**: Sends their Payjoin session pubkey to the directory to initialize a session at a new mailbox.
+- **Receiver**: Out of band, the receiver shares a [Bitcoin URI](https://github.com/bitcoin/bips/blob/master/bip-0021.mediawiki) with the sender including a `pj` query parameter itself containing an HTTP URL to the mailbox. The `pj` URL fragment includes an `ohttp` parameter containing the directory's public key.
 - **Sender**: Creates an **Original PSBT** and sends it to the directory alongside Hybrid Public Key Encryption (HPKE) keys to establish end-to-end encryption between sender and receiver.
 - **Sender**: Continues to [long poll](https://javascript.info/long-polling) this request in order to await a response from the directory containing a `Payjoin PSBT`. It stops after a designated expiration time.
-- The encrypted request is stored in the **subdirectory**.
-- **Receiver**: Once the receiver is online, it sends `/receive` requests to await updates from the subdirectory. The receiver decrypts and authenticates the response which it checks according to [the receiver checklist](https://github.com/bitcoin/bips/blob/master/bip-0078.mediawiki#receivers-original-psbt-checklist). It updates the `Original PSBT` to include new signed inputs and outputs, invalidating sender signatures, and may adjust the fee. The result is called the `Payjoin PSBT`.
+- The encrypted request is stored in the **mailbox**.
+- **Receiver**: Once the receiver is online, it sends `/receive` requests to await updates from the mailbox. The receiver decrypts and authenticates the response which it checks according to [the receiver checklist](https://github.com/bitcoin/bips/blob/master/bip-0078.mediawiki#receivers-original-psbt-checklist). It updates the `Original PSBT` to include new signed inputs and outputs, invalidating sender signatures, and may adjust the fee. The result is called the `Payjoin PSBT`.
 - The `Payjoin PSBT` is encrypted, encapsulated in OHTTP, and sent to the directory's OHTTP Gateway.
 - **Sender**: The sender awaits a `Payjoin PSBT` response from the receiver, polling until the response is available.
 - **Sender**: The sender validates the `Payjoin PSBT` according to [the sender checklist](https://github.com/bitcoin/bips/blob/792e5852506ddc545559894754eec5a05da7a7bb/bip-0077.md#senders-proposal-psbt-checklist), signs its inputs and broadcasts the transaction to the Bitcoin network.
