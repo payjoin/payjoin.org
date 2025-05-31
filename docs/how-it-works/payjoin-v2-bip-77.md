@@ -36,8 +36,8 @@ All requests made to the directory by the sender or receiver are done using OHTT
 
 At a high level (and omitting some important detail), a Payjoin v2 transaction takes the following steps:
 
-- **Receiver**: Sends their Payjoin session pubkey to the directory to initialize a session at a new mailbox.
-- **Receiver**: Out of band, the receiver shares a [Bitcoin URI](https://github.com/bitcoin/bips/blob/master/bip-0021.mediawiki) with the sender including a `pj` query parameter itself containing an HTTP URL to the mailbox. The `pj` URL fragment includes an `ohttp` parameter containing the directory's public key.
+- **Receiver**: Sends their Payjoin Session pubkey to the directory to initialize a session at a new mailbox.
+- **Receiver**: Out of band, the receiver shares a [Bitcoin URI](https://github.com/bitcoin/bips/blob/master/bip-0021.mediawiki) with the sender including a `pj` query parameter itself containing an HTTP URL to the mailbox. It also contains [fragment](https://github.com/bitcoin/bips/blob/master/bip-0077.md#receiver-fragment-parameters) parameters containing the information needed for the sender to setup encrypted communication with the receiver outlined in the next step.
 - **Sender**: Creates an **Original PSBT** and sends it to the directory alongside Hybrid Public Key Encryption (HPKE) keys to establish end-to-end encryption between sender and receiver.
 - **Sender**: Continues to [long poll](https://javascript.info/long-polling) this request in order to await a response from the directory containing a `Proposal PSBT`. It stops after a designated expiration time.
 - The encrypted request is stored in the **mailbox**.
