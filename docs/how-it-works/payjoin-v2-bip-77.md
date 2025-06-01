@@ -36,7 +36,7 @@ All requests made to the directory by the sender or receiver are done using OHTT
 
 A Payjoin v2 transaction takes the following steps:
 
-- **Receiver**: Generates an ephemeral Hybrid Public Key Encryption (HPKE) key for the Payjoin session. The public key determines the [mailbox ID the sender should use](https://en.wikipedia.org/wiki/Pigeon-hole_messagebox) to deliver the **Original PSBT**.
+- **Receiver**: Generates an ephemeral [Hybrid Public Key Encryption (HPKE)](https://www.rfc-editor.org/rfc/rfc9180.html) key for the Payjoin session. The public key determines the [mailbox ID the sender should use](https://en.wikipedia.org/wiki/Pigeon-hole_messagebox) to deliver the **Original PSBT**.
 - **Receiver**: Out of band, the receiver shares a [Bitcoin URI](https://github.com/bitcoin/bips/blob/master/bip-0021.mediawiki) with the sender including a `pj` query parameter itself containing an HTTP URL to the mailbox. It also contains [fragment parameters](https://github.com/bitcoin/bips/blob/master/bip-0077.md#receiver-fragment-parameters) containing the information needed for the sender to set up encrypted communication with the receiver outlined in the next step.
 - **Sender**: Creates an **Original PSBT**, generates a random HPKE key for the encryption of the receiver's reply. Everything is HPKE end-to-end encrypted using the Receiver's key, and this encrypted message is posted to the mailbox using OHTTP.
 - **Sender**: Starts to [long poll](https://javascript.info/long-polling) the reply mailbox waiting for a response from the receiver containing a `Proposal PSBT`. It stops after a designated expiration time.
