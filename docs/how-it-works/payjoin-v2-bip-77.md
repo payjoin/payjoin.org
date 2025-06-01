@@ -12,7 +12,7 @@ description: Asynchronous Payjoin
 
 ### Motivation
 
-Payjoin version 2 ([BIP 77](https://github.com/bitcoin/bips/blob/master/bip-0077.md)) is a BIP designed to improve on the limitations of version 1. In version 1, a receiver was required to host a server to which a sender could submit the **Original PSBT** in an HTTP request, and to immediately respond to the sender's request with a **Proposal PSBT**.
+Payjoin version 2 ([BIP 77](https://github.com/bitcoin/bips/blob/master/bip-0077.md)) is designed to improve on the limitations of version 1 ([BIP 78](https://github.com/bitcoin/bips/blob/master/bip-0078.mediawiki)). In version 1, a receiver was required to host a server to which a sender could submit the **Original PSBT** in an HTTP request, and to immediately respond to the sender's request with a **Proposal PSBT**.
 
 Payjoin v2 eliminates this receiver requirement by outsourcing the server hosting to an untrusted third party called the _Payjoin Directory_. This server is dead simple and has one task — store pending payments from the sender, and forward them to and from the receiver when the other party comes back online. These Payjoin payloads are small, ephemeral, and encrypted, so a malicious directory cannot snoop on or forge message contents.
 
