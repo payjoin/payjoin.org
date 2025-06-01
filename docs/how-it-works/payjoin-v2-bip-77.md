@@ -1,7 +1,7 @@
 ---
 sidebar_position: 4
 title: Async Payjoin (BIP 77, V2)
-description: Serverless, Asynchronous Payjoin
+description: Asynchronous Payjoin
 ---
 
 :::info
