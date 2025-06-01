@@ -14,9 +14,9 @@ description: Asynchronous Payjoin
 
 Payjoin version 2 ([BIP 77](https://github.com/bitcoin/bips/blob/master/bip-0077.md)) is designed to improve on the limitations of version 1 ([BIP 78](https://github.com/bitcoin/bips/blob/master/bip-0078.mediawiki)). In version 1, a receiver was required to host a server to which a sender could submit the **Original PSBT** in an HTTP request, and to immediately respond to the sender's request with a **Proposal PSBT**.
 
-Payjoin v2 eliminates this receiver requirement by outsourcing the server hosting to an untrusted third party called the _Payjoin Directory_. This server is dead simple and has one task — store pending payments from the sender, and forward them to and from the receiver when the other party comes back online. These Payjoin payloads are small, ephemeral, and encrypted, so a malicious directory cannot snoop on or forge message contents.
+Payjoin v2 eliminates this receiver requirement by outsourcing the server hosting to an untrusted third party called the **Payjoin Directory**. This server is dead simple and has one task — store pending payments from the sender, and forward them to and from the receiver when the other party comes back online. These Payjoin payloads are small, ephemeral, and encrypted, so a malicious directory cannot snoop on or forge message contents.
 
-To make this work, in lieu of hosting a server themselves, the receiver starts a session with randomly chosen _mailboxes_ which will store and forward the encrypted Payjoin payloads between the sender and receiver.
+To make this work, in lieu of hosting a server themselves, the receiver starts a session with randomly chosen **mailboxes** which will store and forward the encrypted Payjoin payloads between the sender and receiver.
 
 That's all well and good, but what about the IP address metadata being sent to the Payjoin Directory? After all, even if the untrusted directory couldn't see the plaintext transaction data, couldn't it see the sender and receiver's IP addresses? Without further protection, yes it could, but Payjoin v2 makes use of a novel protocol called [Oblivious HTTP](https://www.fastly.com/blog/enabling-privacy-on-the-internet-with-oblivious-http) (OHTTP) to hide client-identifying metadata from the request before it reaches the directory.
 
@@ -34,7 +34,7 @@ All requests made to the directory by the sender or receiver are done using OHTT
 
 :::
 
-At a high level (and omitting some important detail), a Payjoin v2 transaction takes the following steps:
+A Payjoin v2 transaction takes the following steps:
 
 - **Receiver**: Generates an ephemeral Hybrid Public Key Encryption (HPKE) key for the Payjoin session. The public key determines the [mailbox ID the sender should use](https://en.wikipedia.org/wiki/Pigeon-hole_messagebox) to deliver the **Original PSBT**.
 - **Receiver**: Out of band, the receiver shares a [Bitcoin URI](https://github.com/bitcoin/bips/blob/master/bip-0021.mediawiki) with the sender including a `pj` query parameter itself containing an HTTP URL to the mailbox. It also contains [fragment parameters](https://github.com/bitcoin/bips/blob/master/bip-0077.md#receiver-fragment-parameters) containing the information needed for the sender to set up encrypted communication with the receiver outlined in the next step.
