@@ -30,7 +30,7 @@ Payjoin v2 removes barriers to adoption by eliminating the need for the sender a
 
 :::info
 
-All requests made to the directory by the sender or receiver are done using OHTTP, so that the directory doesn't know any of their identifying metadata. OHTTP is explained below.
+All requests made to the directory by the sender or receiver are done using [OHTTP](#oblivous-http-ohttp), so that the directory doesn't know any of their identifying metadata. OHTTP is explained below.
 
 :::
 
