@@ -18,7 +18,7 @@ Payjoin v2 eliminates this receiver requirement by outsourcing the server hostin
 
 To make this work, in lieu of hosting a server themselves, the receiver starts a session with randomly chosen **mailboxes** which will store and forward the encrypted Payjoin payloads between the sender and receiver.
 
-That's all well and good, but what about the IP address metadata being sent to the Payjoin Directory? After all, even if the untrusted directory couldn't see the plaintext transaction data, couldn't it see the sender and receiver's IP addresses? Without further protection, yes it could, but Payjoin v2 makes use of a novel protocol called [Oblivious HTTP](https://www.fastly.com/blog/enabling-privacy-on-the-internet-with-oblivious-http) (OHTTP) to hide client-identifying metadata from the request before it reaches the directory.
+That's all well and good, but what about the IP address metadata being sent to the Payjoin Directory? After all, even if the untrusted directory couldn't see the plaintext transaction data, couldn't it see the sender and receiver's IP addresses? Without further protection, yes it could, but Payjoin v2 makes use of a novel protocol called [Oblivious HTTP](https://www.fastly.com/blog/enabling-privacy-on-the-internet-with-oblivious-http) (OHTTP) to avoid revealing client-identifying metadata from the request before it reaches the directory.
 
 Aside from these two changes in the means of communicating the transaction, the v2 protocol takes on the same shape as v1, and is even backwards-compatible.
 
