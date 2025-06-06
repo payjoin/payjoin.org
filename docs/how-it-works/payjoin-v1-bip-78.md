@@ -1,12 +1,12 @@
 ---
 sidebar_position: 2
-title: Payjoin V1 (BIP 78)
+title: Synchronous Payjoin (BIP 78, V1)
 description: The initial payjoin flow
 ---
 
 :::warning
 
-This version will be deprecated in favor of [Payjoin version 2](./payjoin-v2-bip-77.md). However, everything defined here is backward-compatible and relevant to v2, so read on!
+This version is now deprecated in favor of [Async Payjoin (version 2)](./payjoin-v2-bip-77.md). However, everything defined here is backward-compatible and relevant to v2, so read on.
 
 :::
 
