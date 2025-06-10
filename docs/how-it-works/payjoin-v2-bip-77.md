@@ -26,7 +26,26 @@ Payjoin v2 removes barriers to adoption by eliminating the need for the sender a
 
 ### Protocol
 
-![Payjoin V2 Flow](./img/v2.png)
+```mermaid
+sequenceDiagram
+    title Async Payjoin Sequence Diagram
+    participant R as Receiver
+    participant D as Directory
+    participant S as Sender
+    participant N as Network
+    R-)S:  Payjoin URI (BIP 21) out of band
+    R-->>D: Poll GET Requests<br/>for Original PSBT
+    activate D 
+    S->>D: POST Request<br/>Original PSBT
+    D->>R: GET Response<br/>Original PSBT
+    deactivate D
+    S-->>D: Poll GET Requests<br/>for Proposal PSBT
+    activate D
+    R->>D: POST Request<br/>Proposal PSBT
+    D->>S: GET Response<br/>Proposal PSBT
+    deactivate D
+    S->>N: Broadcast Payjoin
+```
 
 :::info
 
