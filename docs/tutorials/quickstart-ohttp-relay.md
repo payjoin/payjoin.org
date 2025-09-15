@@ -13,7 +13,7 @@ Install docker, nginx and the ningx stream module on a fresh Ubuntu server:
 ```sh
 sudo apt update && sudo apt upgrade -y # Ubuntu
 
-sudo apt install -y docker.io nginx libnginx-mod-stream #libnginx-mod-stream gives us access to the nginx stream module
+sudo apt install -y docker.io nginx libnginx-mod-stream # libnginx-mod-stream gives us access to the nginx stream module
 
 sudo systemctl start docker nginx
 sudo systemctl enable docker nginx
@@ -39,7 +39,7 @@ Edit the existing `nginx.conf`.
 
 ```sh 
 #/etc/nginx/nginx.conf
-load_module /usr/lib/nginx/modules/ngx_mod_stream.so;
+load_module /usr/lib/nginx/modules/ngx_stream_module.so;
 error_log /var/log/nginx/error.log debug;
 pid /var/run/nginx.pid;
 
@@ -70,8 +70,15 @@ stream {
 We need a valid TLS certificate from a Certificate Authority. The simplest option is to use [certbot](https://certbot.eff.org/instructions).
 Once certbot is installed, we can obtain a certificate but because we are using the stream module we will need to ensure that the certificate path is correct as certbot cannot correct this automatically in this case.
 
+> [!NOTE]
+> Ensure the server allows access on PORT `:80` as certbot uses http when validating certs
+
 ```sh
-sudo certbot certonly --standalone -d example.com
+sudo apt install certbot
+
+sudo systemctl stop nginx # turning off nginx ensures port 80 is free 
+
+sudo certbot certonly --standalone -d example.com # replace with your domain
 ```
 
 Confirm that the path to your ssl_cert and key are correct in your nginx.conf.
@@ -84,7 +91,7 @@ ssl_certificate_key /etc/letsencrypt/live/example.com/privkey.pem;
 Restart your nginx service.
 
 ```sh
-sudo systemctl restart nginx
+sudo systemctl start nginx
 ```
 
 ## Automating ssl certification renewal
@@ -95,7 +102,11 @@ With automated renewal the server will update its ssl cert without any need for 
 Check that your ssl renewal can be done cleanly.
 
 ```sh
+sudo systemctl stop nginx
+
 sudo certbot renew --dry-run
+
+sudo systemctl start nginx
 ```
 
 Now create a new crontab file to make a cron jobs from.
