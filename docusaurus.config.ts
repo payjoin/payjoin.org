@@ -71,6 +71,8 @@ const config: Config = {
           // Remove this to remove the "edit this page" links.
           editUrl:
             "https://github.com/payjoin/payjoin.org",
+          blogSidebarTitle: 'All posts',
+          blogSidebarCount: 'ALL',
         },
         theme: {
           customCss: "./src/css/custom.css",
@@ -116,6 +118,7 @@ const config: Config = {
           label: "GitHub",
           position: "right",
         },
+        { to: 'blog', label: 'Blog', position: 'left' }, // or position: 'right'
       ],
     },
     footer: {
