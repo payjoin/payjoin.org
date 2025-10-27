@@ -2,12 +2,14 @@
 title: Automatically Refresh Liana Inheritance Timelocks with Payjoin
 description: Liana combines Payjoin and time locked inheritance to help you keep your Bitcoin private now and safe for those who'll need it later.
 date: 2025-04-16
-authors:
-  - name: Armin Sabouri
+authors: arminsabouri
 tags: [privacy, integrations, cut-through]
 ---
 
+
 [Liana](https://wizardsardine.com/liana/) secures bitcoin such that after time passes, if and only if you haven't yet spent your coins, your heirs can spend them. This condition is called a "timelock" contract. To prevent unintentional activation of this inheritance policy, these timelocked coins require periodic refreshing by being spent into a new timelock. Liana's Payjoin integration automates timelock refresh as payments are received, boosting privacy and cutting costs.
+
+<!-- truncate -->
 
 Timelock contracts define some time in the future when funds can be spent by heirs. Before that, only the primary owner can spend the funds. However, there's a catch: most users do not frequently spend their Bitcoin. A [2024 study](https://www.sciencedirect.com/science/article/pii/S0378437124008045) found that the age of unspent coins follows a power-law distribution (see Figure 3 that study). In practice, this means coins are typically either spent soon after receipt or held for long periods. [Data also suggests](https://charts.bitbo.io/hodl-waves/) that most coins remain unspent for months or years. To avoid unintentionally triggering a recovery path, users often resort to reconciliation of their coins to reset timelocks.
 

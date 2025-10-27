@@ -20,9 +20,11 @@ const config: Config = {
   projectName: "payjoin.org", // Usually your repo name.
 
   onBrokenLinks: "throw",
-  onBrokenMarkdownLinks: "warn",
   markdown: {
     mermaid: true,
+    hooks: {
+      onBrokenMarkdownLinks: "warn"
+    }
   },
   themes: ['@docusaurus/theme-mermaid'],
 
