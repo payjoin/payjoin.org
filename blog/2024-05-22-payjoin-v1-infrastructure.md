@@ -2,12 +2,14 @@
 title: Notes on Payjoin V1 Infrastructure
 description: A guide on setting up a payjoin receiver on signet
 date: 2024-05-22
-authors:
-  - name: spacebear
+authors: spacebear
 tags: [PDK, Infrastructure]
 ---
 
+
 [Payjoin V1](https://github.com/bitcoin/bips/blob/master/bip-0078.mediawiki) coordinates transactions between two parties who communicate over a public server endpoint secured by either TLS or Tor hidden service hosted by the receiver. This requires setting up either an HTTPS proxy or a Tor proxy when testing payjoins across different implementations.
+
+<!-- truncate -->
 
 ## Setting up a HTTPS payjoin server with nginx
 

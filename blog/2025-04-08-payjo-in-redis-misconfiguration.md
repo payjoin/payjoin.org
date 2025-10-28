@@ -2,10 +2,10 @@
 title: "Payjo.in Directory Security Incident: Misconfiguration May Have Exposed Some Payjoin v1 Messages"
 description: Due to a docker misconfiguration the `payjo.in` directory server had an open redis database, allowing unauthorized parties to observe exchanges between pairs of senders which only support BIP 78 and receivers which support BIP 77.
 date: 2025-04-08
-authors:
-  - name: Yuval Kogman
+authors: nothingmuch
 tags: [security]
 ---
+
 
 Due to a docker misconfiguration, the `payjo.in` directory server had an open
 redis database, allowing unauthorized parties to observe exchanges between pairs
@@ -15,6 +15,8 @@ Some payjoins which used the backwards compatibility of BIP 77 receivers with
 BIP 78 senders during this period may thus not have the common input ownership
 heuristic protection they otherwise would, but the unauthorized access does
 not change the nature of the risk regarding the user custody of funds.
+
+<!-- truncate -->
 
 ## Background
 

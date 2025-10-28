@@ -2,12 +2,14 @@
 title: "PDK: A Payjoin SDK"
 description: Learn how PDK makes using Payjoin easy and the direction it will develop in our new blog.
 date: 2023-06-27
-authors:
-  - name: Dan Gould
+authors: dangould
 tags: [Bitcoin, PDK]
 ---
 
+
 PDK is here to make Payjoin a drop in upgrade for all software touching Bitcoin. I cover the project's history, why you should consider it to add Payjoin to your stack, and some of the project's priorities moving forward. The PDK team will be updating this new blog with development updates, feature forecasts and the details of releases.
+
+<!-- truncate -->
 
 ## What is PDK?
 
