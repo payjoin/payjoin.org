@@ -75,6 +75,12 @@ const config: Config = {
             "https://github.com/payjoin/payjoin.org/blob/master",
           blogSidebarTitle: 'All posts',
           blogSidebarCount: 'ALL',
+          feedOptions: {
+            type: "all",
+            title: "Payjoin Foundation Blog",
+            description: "Updates on Payjoin research and integrations.",
+            language: "en",
+          },
         },
         theme: {
           customCss: "./src/css/custom.css",
