@@ -2,10 +2,10 @@
 title: Yuval Kogman Joins Payjoin Foundation as Advisor
 description: Payjoin Foundation Appoints Spiral Bitcoin Wizard to Advisory Board
 date: 2025-09-23
-authors:
-  - name: Dan Gould
+authors: dangould
 tags: [Announcement, Foundation, Advisor]
 ---
+
 
 Spiral Bitcoin Wizard and longtime Bitcoin privacy developer Yuval Kogman joins
 Payjoin Foundation as the first Advisory Board member. He draws on more than two
@@ -17,6 +17,8 @@ DoS prevention protocol. His subsequent
 implementations](https://groups.google.com/g/bitcoindev/c/CbfbEGozG7c),
 including those touting WabiSabi integration, demonstrates his commitment to the
 underlying principles.
+
+<!-- truncate -->
 
 Prior to his current focus on Payjoin, Yuval had already been working on a decentralized, multiparty
 transaction batching protocol. We have joined forces to develop [this
@@ -58,7 +60,7 @@ solutions where everybody wins and invests heavily in budding talent.
 He is uncompromising when it comes to his values, so his advice keeps us
 focused on the mission.
 
-[Spiral](spiral.xyz)'s unwavering support for the Payjoin mission began in 2023, when they initially
+[Spiral](https://spiral.xyz)'s unwavering support for the Payjoin mission began in 2023, when they initially
 [extended me a grant](https://nitter.net/spiralbtc/status/1747663472836431925) to lead Payjoin development. Since then, they have
 funded multiple developers, including [Spacebear](https://nitter.net/spiralbtc/status/1961473589049245895), our team's integrations
 expert. Payjoin also owes a debt of gratitude to Spiral for their

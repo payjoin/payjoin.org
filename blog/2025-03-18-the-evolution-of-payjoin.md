@@ -2,12 +2,14 @@
 title: "The Evolution of Payjoin: From Two-Party Protocol to Multiparty Framework"
 description: "Learn how Payjoin is evolving from a simple two-party protocol into a sophisticated multiparty transaction batching framework"
 date: "2025-03-18"
-authors:
-  - name: Conor Okus
+authors: conorokus
 tags: [V3]
 ---
 
+
 Payjoin is a transformative protocol that enables wallets to communicate and create collaborative, smarter, and more efficient Bitcoin transactions. It offers payment batching technology that exchanges and payment processors can use to [save on fees](https://payjoin.org/docs/how-payjoin-saves) and protect their own and their users' financial [privacy](https://payjoin.org/docs/why-payjoin/privacy) while [scaling](https://payjoin.org/docs/why-payjoin/scaling) Bitcoin.
+
+<!-- truncate -->
 
 BTCPayServer already supports PayJoin and in 2024, the project made significant progress with the implementation of [Async Payjoin in the Bull Bitcoin Mobile Wallet](https://www.bullbitcoin.com/blog/bull-bitcoin-wallet-payjoin) and ongoing development work in [Cake Wallet](https://github.com/cake-tech/cake_wallet/pull/1889).
 
@@ -21,7 +23,7 @@ Building on this idea, [Bustapay (BIP 79)](https://github.com/bitcoin/bips/blob/
 
 ## Payjoin V1 (BIP 78): The Foundation
 
-Building on Bustapay, [Payjoin V1 (BIP 78)](https://payjoin.org/docs/how-it-works/payjoin-v1-bip-78) refined sender-receiver transaction collaboration into an even more practical and extensible protocol. By standardizing wallet communication over an HTTP protocol, the standard Bitcoin URI request format, and leveraging [Partially Signed Bitcoin Transactions (PSBT)]((https://en.bitcoin.it/wiki/BIP_0174)), BIP 78 made adopting [the Payjoin experience](https://bitcoin.design/guide/case-studies/payjoin/) interoperable across different wallets and hardware devices.
+Building on Bustapay, [Payjoin V1 (BIP 78)](https://payjoin.org/docs/how-it-works/payjoin-v1-bip-78) refined sender-receiver transaction collaboration into an even more practical and extensible protocol. By standardizing wallet communication over an HTTP protocol, the standard Bitcoin URI request format, and leveraging [Partially Signed Bitcoin Transactions (PSBT)](https://en.bitcoin.it/wiki/BIP_0174), BIP 78 made adopting [the Payjoin experience](https://bitcoin.design/guide/case-studies/payjoin/) interoperable across different wallets and hardware devices.
 
 However, Payjoin V1 has limitations. It requires both sender and receiver to be online simultaneously (synchronous communication), and for the receiver to host a server to facilitate coordination. Despite these challenges, real-world implementations of Payjoin in payment processing software demonstrate its viability, laying the groundwork for improved interactive transaction batching.
 

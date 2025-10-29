@@ -1,0 +1,31 @@
+dangould:
+  name: Dan Gould
+  url: https://github.com/DanGould
+  image_url: https://github.com/DanGould.png
+  email: d@ngould.dev
+  socials:
+    github: DanGould
+
+nothingmuch:
+  name: Yuval Kogman
+  url: https://github.com/nothingmuch
+  image_url: https://github.com/nothingmuch.png
+  socials:
+    github: nothingmuch
+
+arminsabouri:
+  name: Armin Sabouri
+  url: https://github.com/arminsabouri
+  image_url: https://github.com/arminsabouri.png
+  socials:
+    github: arminsabouri
+
+spacebear:
+  name: spacebear
+  url: https://github.com/spacebear21
+  image_url: https://github.com/spacebear21.png
+  socials:
+    github: spacebear21
+
+conorokus:
+  name: Conor Okus

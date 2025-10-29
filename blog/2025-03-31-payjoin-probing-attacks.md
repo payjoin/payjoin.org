@@ -2,10 +2,10 @@
 title: "Payjoin Probing Attacks: Facts, Mitigations, and Why Payjoin Still Wins for Privacy"
 description: ""
 date: "2025-03-31"
-authors:
-  - name: Dan Gould
+authors: dangould
 tags: [privacy, integrations]
 ---
+
 
 The following is a conclusive address of concerns around UTXO probing attacks on
 Payjoin, clarification of why current mitigations are effective, and definitive
@@ -15,6 +15,7 @@ transfers and improves privacy by disrupting common blockchain surveillance
 heuristics. While probing attacks exist in theory, they're costly to pull off,
 mitigated in practice, and are not a meaningful barrier to adoption.
 
+<!-- truncate -->
 
 ## The Probing Attack Explained
 
@@ -28,9 +29,7 @@ The earliest payjoin specifications explicitly address these attacks. See these 
 79](https://github.com/bitcoin/bips/blob/master/bip-0079.mediawiki#contributed-input-choice)
 and [in BIP 78](https://github.com/bitcoin/bips/blob/master/bip-0078.mediawiki#on-the-receiver-side-utxo-probing-attack).
 
-
 ## Current Probing Mitigations
-
 
 ### Minimum-value Policy
 
@@ -48,7 +47,6 @@ sender's fallback fee.
 Receivers may choose only to respond to senders providing a fallback transaction
 transferring the receiver a minimum amount. If a sender aborts, the receiver may
 broadcast, costing the sender their transfer amount plus fees.
-
 
 ### Fallback Broadcast
 
@@ -68,20 +66,17 @@ as an additional precaution. A broadcast may be triggered manually or
 automatically after an appropriate amount of time passes, for example, after an Async
 Payjoin session expires.
 
-
 ### Input Replay
 
 Automated payment processors should respond to senders using fallback transactions containing
 the same sender inputs with the same receiver input of their own. This secures
 the floor cost imposed by the above mitigations.
 
-
 ### Session Policy Binding
 
 In Async Payjoin, receive sessions are bound to the bitcoin URI used to request them.
 Receivers may bind specific policies to specific URIs given to
 individual senders depending on the perceived level of trust.
-
 
 ## Refuting Core Concerns
 
@@ -124,7 +119,6 @@ individual senders depending on the perceived level of trust.
 - **Improves global privacy**: Payjoins can look like non-payjoins,
   compounding difficulty for surveillance adversaries.
 
-
 ## Edge Cases and Real-World Context
 
 Attacks exist in theory, particularly if implementation guidelines aren't
@@ -134,14 +128,12 @@ Payjoin Dev Kit guides implementors to make misuse difficult.
 While subtle attacks like dusting do occur on Bitcoin, probing Payjoin at scale
 is costly and practically limited.
 
-
 ## How to Secure your Payjoin Implementation
 
 - Use Payjoin Dev Kit to follow best practices by default.
 - For custom implementations, follow the BIP guidelines and mitigation checklist in this article.
 - Ask the Payjoin Dev Kit team for help to ensure your implementation takes
   appropriate precautions like request persistence and fallback broadcast.
-
 
 ## Why Payjoin Wins
 
