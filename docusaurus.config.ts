@@ -170,6 +170,10 @@ const config: Config = {
           title: "More",
           items: [
             {
+              label: "Supporters",
+              to: "/supporters"
+            },
+            {
               label: "Donate",
               href: "https://geyser.fund/project/payjoin/"
             },
