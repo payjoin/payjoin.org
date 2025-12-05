@@ -3,7 +3,7 @@ title: Thank you, Cake Wallet
 description: Recognizing Cake Wallet's leadership and support in Bitcoin privacy
 date: 2025-12-05
 authors:
-  - name: dangould
+  - name: Dan Gould
 tags: [Announcement, Supporter, Privacy]
 ---
 
