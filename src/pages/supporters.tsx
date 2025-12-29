@@ -41,6 +41,10 @@ export default function Supporters(): JSX.Element {
                   <img src="/img/supporters/btrust.jpg" alt="Btrust" />
                   ₿trust
                 </a>
+                <a href="https://www.cakewallet.com/" target="_blank" rel="nofollow noopener">
+                  <img src="/img/supporters/cake.png" alt="Cake Wallet" />
+                  Cake Wallet
+                </a>
               </div>
             </div>
 
