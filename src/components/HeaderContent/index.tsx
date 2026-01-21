@@ -57,31 +57,42 @@ export default function HeaderContent() {
           <div className="flex items-start">
             <Testimonial
               text="Payjoin usage improves the privacy of all bitcoiners by breaking the common input ownership heuristic - you can no longer assume all inputs belong to the sender."
-              name="ODELL"
+              name="Matt Odell, Chairman, Co-Founder, OpenSats, Ten31"
               image="https://avatars.githubusercontent.com/u/50266466?v=4"
             />
             <Testimonial
               text="Payjoin doesn't even have to be widely used to make the common input ownership heuristic unusable. Since payjoins are indistinguishable on-chain, it should suffice to have payjoin optionally available in most wallets."
-              name="El Flaco"
+              name="Kemal Yaşar, CEO, Blink"
               image="https://pbs.twimg.com/profile_images/1819046599768612871/S2BADZaw_400x400.jpg"
             />
             <Testimonial
               text="More payjoin adoption would be a good thing. payjoin = https"
-              name="Gigi"
+              name="Gigi, President, OpenSats"
               image="https://dergigi.com/assets/images/avatar.jpg"
             />
             <Testimonial
               text="Wallet side p2p PayJoin is the future IMO... Bitcoin needs more PayJoin and p2p capable PayJoin wallet interop."
-              name="Adam Back"
+              name="Adam Back, CEO, Blockstream"
               image="https://pbs.twimg.com/profile_images/1364645619705511936/IGTT_tnL_400x400.jpg"
             />
             <Testimonial
               text="Using Payjoin when spending is so underrated.
 
 The ability to break common-input-ownership heuristic *and* completely obfuscate amount sent is extremely powerful."
-              name="Seth For Privacy"
+              name="Seth For Privacy, VP of Operations, Cake"
               image="https://pbs.twimg.com/profile_images/1507020330954489862/MNnJ320U_400x400.jpg"
             />
+            <Testimonial
+              text="Payjoin adoption improves the privacy of even the people who don’t use it."
+              name="Arthur Hayes, Co-founder, BitMEX"
+              image="https://pbs.twimg.com/profile_images/1945370420191875072/o5Ep8CTf.png"
+            />
+            <Testimonial
+              text="Imagine if an exchange somehow managed to make every Bitcoin deposit a Payjoin by default... Valhalla secured."
+              name="Francis Pouliot, CEO, Bull Bitcoin"
+              image="https://nitter.net/pic/pbs.twimg.com%2Fprofile_images%2F1749492773990916096%2FLL6AQfdo.jpg"
+            />
+            
           </div>
         </Marquee>
       </div>
