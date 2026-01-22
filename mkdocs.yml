@@ -1,0 +1,12 @@
+site_name: Payjoin Integration Tracker
+
+theme:
+  name: material
+
+plugins:
+  - search
+  - table-reader
+
+nav:
+  - Home: index.md
+  - Integrations: integrations.md

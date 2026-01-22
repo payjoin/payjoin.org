@@ -1,0 +1,1400 @@
+-
+  name: Boltz
+  status: Draft Integration
+  priority: null
+  estimated_value: "$20,000.00"
+  company: null
+  last_contact: null
+  expected_close: null
+  phone: null
+  email: null
+  account_owner: null
+  added: "December 4, 2022 8:39 AM"
+  bounty: "$800.00"
+  language: "TypeScript, WASM"
+-
+  name: Koji & Yuya
+  status: Negotiation
+  priority: null
+  estimated_value: "$5,000.00"
+  company: Diamond hands
+  last_contact: "December 3, 2022"
+  expected_close: null
+  phone: null
+  email: null
+  account_owner: null
+  added: "December 4, 2022 8:56 AM"
+  bounty: null
+  language: "TypeScript, WASM"
+-
+  name: Francis
+  status: Beta 💪
+  priority: High
+  estimated_value: "$100,000.00"
+  company: Bull Bitcoin
+  last_contact: "April 3, 2023"
+  expected_close: null
+  phone: null
+  email: null
+  account_owner: null
+  added: "December 4, 2022 8:58 AM"
+  bounty: null
+  language: "Flutter, Rust"
+-
+  name: Zach Herbert
+  status: Draft Integration
+  priority: null
+  estimated_value: "$2,000.00"
+  company: Foundation Devices
+  last_contact: null
+  expected_close: null
+  phone: null
+  email: null
+  account_owner: null
+  added: "December 4, 2022 8:59 AM"
+  bounty: null
+  language: "Flutter, Rust"
+-
+  name: Adam Belican
+  status: Contacted
+  priority: null
+  estimated_value: "$100,000.00"
+  company: Relai
+  last_contact: null
+  expected_close: null
+  phone: null
+  email: null
+  account_owner: null
+  added: "December 4, 2022 9:00 AM"
+  bounty: null
+  language: null
+-
+  name: Swan
+  status: Lead
+  priority: null
+  estimated_value: "$500,000.00"
+  company: null
+  last_contact: null
+  expected_close: null
+  phone: null
+  email: null
+  account_owner: null
+  added: "December 4, 2022 9:00 AM"
+  bounty: null
+  language: null
+-
+  name: "N0izecore/jojoxmr, Sethforprivacy, Justin Ehrenhofer"
+  status: Beta 💪
+  priority: null
+  estimated_value: "$100,000.00"
+  company: Cake Wallet
+  last_contact: "February 4, 2023"
+  expected_close: null
+  phone: null
+  email: null
+  account_owner: null
+  added: "December 4, 2022 9:00 AM"
+  bounty: null
+  language: Flutter
+-
+  name: Alex Lieshman
+  status: Contacted
+  priority: null
+  estimated_value: "$300,000.00"
+  company: River
+  last_contact: null
+  expected_close: null
+  phone: null
+  email: null
+  account_owner: null
+  added: "December 4, 2022 9:00 AM"
+  bounty: null
+  language: null
+-
+  name: "Steve Lee, Miles, Michael Rihani"
+  status: Qualified
+  priority: null
+  estimated_value: "$1,000,000.00"
+  company: "Cash App,"
+  last_contact: null
+  expected_close: null
+  phone: null
+  email: null
+  account_owner: null
+  added: "December 4, 2022 9:00 AM"
+  bounty: null
+  language: Rust
+-
+  name: Tom Kirkpatrick
+  status: Negotiation
+  priority: null
+  estimated_value: "$100,000.00"
+  company: Strike
+  last_contact: null
+  expected_close: null
+  phone: null
+  email: null
+  account_owner: null
+  added: "December 4, 2022 9:00 AM"
+  bounty: null
+  language: "C#"
+-
+  name: Ben Price @abitcoinperson
+  status: Contacted
+  priority: null
+  estimated_value: "$50,000.00"
+  company: The Bitcoin Company
+  last_contact: null
+  expected_close: null
+  phone: null
+  email: null
+  account_owner: null
+  added: "December 4, 2022 9:01 AM"
+  bounty: null
+  language: Scala
+-
+  name: Evan Kaloudis
+  status: Negotiation
+  priority: null
+  estimated_value: "$20,000.00"
+  company: Zeus
+  last_contact: null
+  expected_close: null
+  phone: null
+  email: null
+  account_owner: null
+  added: "December 4, 2022 9:01 AM"
+  bounty: null
+  language: "React Native, UniFFI"
+-
+  name: CZ
+  status: Lead
+  priority: null
+  estimated_value: "$10,000,000.00"
+  company: Binance
+  last_contact: null
+  expected_close: null
+  phone: null
+  email: null
+  account_owner: null
+  added: "December 4, 2022 9:03 AM"
+  bounty: null
+  language: null
+-
+  name: Casinos
+  status: Lead
+  priority: null
+  estimated_value: null
+  company: null
+  last_contact: null
+  expected_close: null
+  phone: null
+  email: null
+  account_owner: null
+  added: "December 4, 2022 9:04 AM"
+  bounty: null
+  language: null
+-
+  name: Brandon St. Lucas (onboarding)
+  status: Negotiation
+  priority: null
+  estimated_value: null
+  company: Voltage
+  last_contact: null
+  expected_close: null
+  phone: null
+  email: null
+  account_owner: null
+  added: "December 4, 2022 9:12 AM"
+  bounty: null
+  language: null
+-
+  name: Dennis @d11n
+  status: Qualified
+  priority: null
+  estimated_value: "$6,000.00"
+  company: BTCPay
+  last_contact: null
+  expected_close: null
+  phone: null
+  email: null
+  account_owner: null
+  added: "December 5, 2022 2:21 AM"
+  bounty: null
+  language: "C#, Rust"
+-
+  name: Hunter Trujillo
+  status: Beta 💪
+  priority: null
+  estimated_value: "$2,000.00"
+  company: bitmask-core
+  last_contact: null
+  expected_close: null
+  phone: null
+  email: null
+  account_owner: null
+  added: "December 5, 2022 10:28 PM"
+  bounty: null
+  language: Rust
+-
+  name: nolooking LND
+  status: Beta 💪
+  priority: null
+  estimated_value: null
+  company: null
+  last_contact: null
+  expected_close: null
+  phone: null
+  email: null
+  account_owner: null
+  added: "December 11, 2022 3:36 AM"
+  bounty: null
+  language: Rust
+-
+  name: payjoin-cli
+  status: Beta 💪
+  priority: null
+  estimated_value: null
+  company: null
+  last_contact: null
+  expected_close: null
+  phone: null
+  email: null
+  account_owner: null
+  added: "December 13, 2022 9:05 PM"
+  bounty: null
+  language: Rust
+-
+  name: "John Carvalho, Riza"
+  status: Contacted
+  priority: null
+  estimated_value: null
+  company: Bitkit
+  last_contact: null
+  expected_close: null
+  phone: null
+  email: null
+  account_owner: null
+  added: "December 14, 2022 2:27 AM"
+  bounty: null
+  language: "React Native, Rust"
+-
+  name: Roy Sheinfeld
+  status: Contacted
+  priority: null
+  estimated_value: null
+  company: Breez
+  last_contact: null
+  expected_close: null
+  phone: null
+  email: null
+  account_owner: null
+  added: "December 14, 2022 2:31 AM"
+  bounty: null
+  language: null
+-
+  name: Joseph Kelly
+  status: Lead
+  priority: null
+  estimated_value: null
+  company: Unchained Capital
+  last_contact: null
+  expected_close: null
+  phone: null
+  email: null
+  account_owner: null
+  added: "December 14, 2022 2:37 AM"
+  bounty: null
+  language: null
+-
+  name: Max Hillebrand
+  status: Negotiation
+  priority: null
+  estimated_value: "$5,000.00"
+  company: Wasabi
+  last_contact: null
+  expected_close: null
+  phone: null
+  email: null
+  account_owner: null
+  added: "December 14, 2022 10:14 PM"
+  bounty: null
+  language: "C#, UniFFI"
+-
+  name: Craig Raw
+  status: Contacted
+  priority: null
+  estimated_value: "$5,000.00"
+  company: Sparrow
+  last_contact: null
+  expected_close: null
+  phone: null
+  email: null
+  account_owner: null
+  added: "December 14, 2022 10:14 PM"
+  bounty: null
+  language: "Java, UniFFI"
+-
+  name: Prime Trust
+  status: Lead
+  priority: null
+  estimated_value: null
+  company: null
+  last_contact: null
+  expected_close: null
+  phone: null
+  email: null
+  account_owner: null
+  added: "December 15, 2022 3:13 AM"
+  bounty: null
+  language: null
+-
+  name: Rearden Code
+  status: Contacted
+  priority: null
+  estimated_value: null
+  company: BitGo
+  last_contact: null
+  expected_close: null
+  phone: null
+  email: null
+  account_owner: null
+  added: "December 15, 2022 3:13 AM"
+  bounty: null
+  language: null
+-
+  name: Brian Armstrong
+  status: Lead
+  priority: null
+  estimated_value: null
+  company: Coinbase
+  last_contact: null
+  expected_close: null
+  phone: null
+  email: null
+  account_owner: null
+  added: "December 15, 2022 3:13 AM"
+  bounty: null
+  language: null
+-
+  name: "Jon Chester https://twitter.com/JonChest"
+  status: Lead
+  priority: null
+  estimated_value: null
+  company: Bitwage
+  last_contact: null
+  expected_close: null
+  phone: null
+  email: null
+  account_owner: null
+  added: "December 28, 2022 6:27 AM"
+  bounty: null
+  language: null
+-
+  name: "@KatieTheRussian"
+  status: Lead
+  priority: null
+  estimated_value: null
+  company: Plan B Passport
+  last_contact: null
+  expected_close: null
+  phone: null
+  email: null
+  account_owner: null
+  added: "December 28, 2022 6:27 AM"
+  bounty: null
+  language: null
+-
+  name: Hugo Nunchuk 📝
+  status: Qualified
+  priority: null
+  estimated_value: null
+  company: null
+  last_contact: null
+  expected_close: null
+  phone: null
+  email: null
+  account_owner: null
+  added: "February 3, 2023 4:26 AM"
+  bounty: null
+  language: "C, c++"
+-
+  name: Anint
+  status: Contacted
+  priority: null
+  estimated_value: null
+  company: "Bithive (Keeper, Hexa, BitcoinTribe)"
+  last_contact: null
+  expected_close: null
+  phone: null
+  email: null
+  account_owner: null
+  added: "February 3, 2023 4:27 AM"
+  bounty: null
+  language: TypeScript
+-
+  name: OpenNode
+  status: Contacted
+  priority: null
+  estimated_value: null
+  company: null
+  last_contact: null
+  expected_close: null
+  phone: null
+  email: null
+  account_owner: null
+  added: "February 9, 2023 10:11 PM"
+  bounty: null
+  language: null
+-
+  name: Louis Liu
+  status: Contacted
+  priority: null
+  estimated_value: null
+  company: Mimesis Capital
+  last_contact: null
+  expected_close: null
+  phone: null
+  email: null
+  account_owner: null
+  added: "February 12, 2023 11:17 PM"
+  bounty: null
+  language: null
+-
+  name: Muun batching
+  status: Lead
+  priority: null
+  estimated_value: "$100,000.00"
+  company: null
+  last_contact: null
+  expected_close: null
+  phone: null
+  email: null
+  account_owner: null
+  added: "February 14, 2023 1:12 AM"
+  bounty: null
+  language: null
+-
+  name: P2p exchanges
+  status: Lead
+  priority: null
+  estimated_value: null
+  company: null
+  last_contact: null
+  expected_close: null
+  phone: null
+  email: null
+  account_owner: null
+  added: "February 17, 2023 7:02 AM"
+  bounty: null
+  language: null
+-
+  name: Tether
+  status: Lead
+  priority: null
+  estimated_value: null
+  company: null
+  last_contact: null
+  expected_close: null
+  phone: null
+  email: null
+  account_owner: null
+  added: "February 18, 2023 4:49 AM"
+  bounty: null
+  language: null
+-
+  name: Bitcoin Treasuries.net
+  status: Lead
+  priority: null
+  estimated_value: null
+  company: null
+  last_contact: null
+  expected_close: null
+  phone: null
+  email: null
+  account_owner: null
+  added: "February 18, 2023 4:49 AM"
+  bounty: null
+  language: null
+-
+  name: Start9Labs
+  status: Lead
+  priority: null
+  estimated_value: null
+  company: null
+  last_contact: null
+  expected_close: null
+  phone: null
+  email: null
+  account_owner: null
+  added: "February 24, 2023 12:06 AM"
+  bounty: null
+  language: null
+-
+  name: Michael Bumi
+  status: Contacted
+  priority: null
+  estimated_value: null
+  company: Alby
+  last_contact: null
+  expected_close: null
+  phone: null
+  email: null
+  account_owner: null
+  added: "February 24, 2023 12:19 AM"
+  bounty: null
+  language: null
+-
+  name: "Ben Carman, Tony"
+  status: Lost
+  priority: null
+  estimated_value: null
+  company: Mutiny Wallet
+  last_contact: null
+  expected_close: null
+  phone: null
+  email: null
+  account_owner: null
+  added: "February 24, 2023 12:35 AM"
+  bounty: null
+  language: Rust
+-
+  name: "Eric Sirion, Justin Moon"
+  status: Qualified
+  priority: null
+  estimated_value: null
+  company: Fedimint
+  last_contact: null
+  expected_close: null
+  phone: null
+  email: null
+  account_owner: null
+  added: "February 24, 2023 11:36 PM"
+  bounty: null
+  language: null
+-
+  name: Calle
+  status: Contacted
+  priority: null
+  estimated_value: null
+  company: Cashu
+  last_contact: null
+  expected_close: null
+  phone: null
+  email: null
+  account_owner: null
+  added: "February 25, 2023 12:07 AM"
+  bounty: null
+  language: null
+-
+  name: Trading Platforms
+  status: Lead
+  priority: null
+  estimated_value: null
+  company: null
+  last_contact: null
+  expected_close: null
+  phone: null
+  email: null
+  account_owner: null
+  added: "February 27, 2023 10:41 PM"
+  bounty: null
+  language: null
+-
+  name: Brokerage
+  status: Lead
+  priority: null
+  estimated_value: null
+  company: null
+  last_contact: null
+  expected_close: null
+  phone: null
+  email: null
+  account_owner: null
+  added: "February 27, 2023 10:42 PM"
+  bounty: null
+  language: null
+-
+  name: Lending Service
+  status: Lead
+  priority: null
+  estimated_value: null
+  company: null
+  last_contact: null
+  expected_close: null
+  phone: null
+  email: null
+  account_owner: null
+  added: "February 27, 2023 10:42 PM"
+  bounty: null
+  language: null
+-
+  name: Custodial Wallet Service
+  status: Lead
+  priority: null
+  estimated_value: null
+  company: null
+  last_contact: null
+  expected_close: null
+  phone: null
+  email: null
+  account_owner: null
+  added: "February 27, 2023 10:42 PM"
+  bounty: null
+  language: null
+-
+  name: NVK’s CoinBunker
+  status: Contacted
+  priority: null
+  estimated_value: null
+  company: Coinkite
+  last_contact: null
+  expected_close: null
+  phone: null
+  email: null
+  account_owner: null
+  added: "February 28, 2023 12:41 AM"
+  bounty: null
+  language: null
+-
+  name: Ibex
+  status: Lead
+  priority: null
+  estimated_value: null
+  company: Ibex
+  last_contact: null
+  expected_close: null
+  phone: null
+  email: null
+  account_owner: null
+  added: "February 28, 2023 12:45 AM"
+  bounty: null
+  language: null
+-
+  name: MyCitadel
+  status: Lead
+  priority: null
+  estimated_value: null
+  company: null
+  last_contact: null
+  expected_close: null
+  phone: null
+  email: null
+  account_owner: null
+  added: "February 28, 2023 1:59 AM"
+  bounty: null
+  language: null
+-
+  name: Escape to El Salvador
+  status: Contacted
+  priority: null
+  estimated_value: null
+  company: null
+  last_contact: null
+  expected_close: null
+  phone: null
+  email: null
+  account_owner: null
+  added: "February 28, 2023 1:59 AM"
+  bounty: null
+  language: null
+-
+  name: Descriptor Wallet
+  status: Contacted
+  priority: null
+  estimated_value: null
+  company: null
+  last_contact: null
+  expected_close: null
+  phone: null
+  email: null
+  account_owner: null
+  added: "February 28, 2023 6:30 AM"
+  bounty: null
+  language: null
+-
+  name: Bitcoin Pro
+  status: Lead
+  priority: null
+  estimated_value: null
+  company: null
+  last_contact: null
+  expected_close: null
+  phone: null
+  email: null
+  account_owner: null
+  added: "February 28, 2023 6:30 AM"
+  bounty: null
+  language: null
+-
+  name: Bram Dufour
+  status: Qualified
+  priority: null
+  estimated_value: null
+  company: Kumuly
+  last_contact: null
+  expected_close: null
+  phone: null
+  email: null
+  account_owner: null
+  added: "March 1, 2023 9:24 PM"
+  bounty: null
+  language: null
+-
+  name: Electrum via Plugin
+  status: Negotiation
+  priority: null
+  estimated_value: null
+  company: null
+  last_contact: null
+  expected_close: null
+  phone: null
+  email: null
+  account_owner: null
+  added: "March 17, 2023 1:22 AM"
+  bounty: null
+  language: Python
+-
+  name: "BDK-CLI, Steve Meyers"
+  status: Beta 💪
+  priority: High
+  estimated_value: "$1,000.00"
+  company: null
+  last_contact: "March 14, 2023"
+  expected_close: null
+  phone: null
+  email: null
+  account_owner: null
+  added: "March 21, 2023 10:55 PM"
+  bounty: null
+  language: Rust
+-
+  name: Hampus
+  status: Negotiation
+  priority: null
+  estimated_value: null
+  company: Blixt
+  last_contact: "April 3, 2023"
+  expected_close: null
+  phone: null
+  email: null
+  account_owner: null
+  added: "March 28, 2023 3:38 AM"
+  bounty: null
+  language: "React Native, UniFFI"
+-
+  name: fiatjaf
+  status: Qualified
+  priority: null
+  estimated_value: null
+  company: ZBD OBW
+  last_contact: null
+  expected_close: null
+  phone: null
+  email: null
+  account_owner: null
+  added: "March 28, 2023 3:41 AM"
+  bounty: null
+  language: "Scala, UniFFI"
+-
+  name: Nick Farrow
+  status: Lost
+  priority: null
+  estimated_value: null
+  company: Satsale (python)
+  last_contact: null
+  expected_close: null
+  phone: null
+  email: null
+  account_owner: null
+  added: "March 28, 2023 10:50 PM"
+  bounty: null
+  language: "Python, UniFFI"
+-
+  name: "Mattias, Rob Hamilton"
+  status: Qualified
+  priority: null
+  estimated_value: null
+  company: Trident Wallet
+  last_contact: null
+  expected_close: null
+  phone: null
+  email: null
+  account_owner: null
+  added: "March 30, 2023 3:54 AM"
+  bounty: null
+  language: null
+-
+  name: BenTheCarman
+  status: Lost
+  priority: null
+  estimated_value: null
+  company: Vortex (scala)
+  last_contact: null
+  expected_close: null
+  phone: null
+  email: null
+  account_owner: null
+  added: "March 30, 2023 4:10 AM"
+  bounty: null
+  language: null
+-
+  name: Michael Atwood
+  status: Contacted
+  priority: High
+  estimated_value: null
+  company: Oshi App
+  last_contact: null
+  expected_close: null
+  phone: null
+  email: null
+  account_owner: null
+  added: "March 30, 2023 4:11 AM"
+  bounty: null
+  language: null
+-
+  name: Eril (Best in Slot)
+  status: Contacted
+  priority: null
+  estimated_value: null
+  company: null
+  last_contact: null
+  expected_close: null
+  phone: null
+  email: null
+  account_owner: null
+  added: "March 30, 2023 4:11 AM"
+  bounty: null
+  language: null
+-
+  name: Sergej Kotliar
+  status: Contacted
+  priority: High
+  estimated_value: null
+  company: Bitrefill
+  last_contact: "April 3, 2023"
+  expected_close: null
+  phone: null
+  email: null
+  account_owner: null
+  added: "March 30, 2023 4:28 AM"
+  bounty: null
+  language: null
+-
+  name: Gigi? Adam Gibson
+  status: Qualified
+  priority: null
+  estimated_value: "$2,000.00"
+  company: "JAM (python) Bitcoin Design,"
+  last_contact: null
+  expected_close: null
+  phone: null
+  email: null
+  account_owner: null
+  added: "April 2, 2023 3:00 AM"
+  bounty: null
+  language: null
+-
+  name: RideTheLightning
+  status: Lead
+  priority: null
+  estimated_value: null
+  company: null
+  last_contact: null
+  expected_close: null
+  phone: null
+  email: null
+  account_owner: null
+  added: "April 3, 2023 2:37 AM"
+  bounty: null
+  language: null
+-
+  name: ThunderHub
+  status: Lead
+  priority: null
+  estimated_value: null
+  company: null
+  last_contact: null
+  expected_close: null
+  phone: null
+  email: null
+  account_owner: null
+  added: "April 3, 2023 2:39 AM"
+  bounty: null
+  language: null
+-
+  name: Zap
+  status: Lead
+  priority: null
+  estimated_value: null
+  company: Zaphq
+  last_contact: null
+  expected_close: null
+  phone: null
+  email: null
+  account_owner: null
+  added: "April 3, 2023 2:40 AM"
+  bounty: null
+  language: null
+-
+  name: Spark Lightning Wallet
+  status: Lead
+  priority: null
+  estimated_value: null
+  company: null
+  last_contact: null
+  expected_close: null
+  phone: null
+  email: null
+  account_owner: null
+  added: "April 3, 2023 2:41 AM"
+  bounty: null
+  language: null
+-
+  name: Thunderbiscuit
+  status: Contacted
+  priority: null
+  estimated_value: null
+  company: Padawan (Kotlin)
+  last_contact: null
+  expected_close: null
+  phone: null
+  email: null
+  account_owner: null
+  added: "April 4, 2023 3:41 AM"
+  bounty: null
+  language: null
+-
+  name: SideSwap
+  status: Lead
+  priority: null
+  estimated_value: null
+  company: null
+  last_contact: null
+  expected_close: null
+  phone: null
+  email: null
+  account_owner: null
+  added: "April 4, 2023 11:16 AM"
+  bounty: null
+  language: null
+-
+  name: Wallet of Satoshi
+  status: Lead
+  priority: null
+  estimated_value: null
+  company: null
+  last_contact: null
+  expected_close: null
+  phone: null
+  email: null
+  account_owner: null
+  added: "April 4, 2023 11:34 AM"
+  bounty: null
+  language: null
+-
+  name: Geyser
+  status: Lead
+  priority: null
+  estimated_value: null
+  company: null
+  last_contact: null
+  expected_close: null
+  phone: null
+  email: null
+  account_owner: null
+  added: "April 5, 2023 6:15 AM"
+  bounty: null
+  language: null
+-
+  name: null
+  status: Lead
+  priority: null
+  estimated_value: null
+  company: Coinify
+  last_contact: null
+  expected_close: null
+  phone: null
+  email: null
+  account_owner: null
+  added: "April 30, 2023 12:42 AM"
+  bounty: null
+  language: null
+-
+  name: Portico Exchange
+  status: Lead
+  priority: null
+  estimated_value: null
+  company: null
+  last_contact: null
+  expected_close: null
+  phone: null
+  email: null
+  account_owner: null
+  added: "May 8, 2023 8:17 PM"
+  bounty: null
+  language: null
+-
+  name: Cashu / Nuststash
+  status: Lead
+  priority: null
+  estimated_value: null
+  company: null
+  last_contact: null
+  expected_close: null
+  phone: null
+  email: null
+  account_owner: null
+  added: "May 11, 2023 7:45 PM"
+  bounty: null
+  language: null
+-
+  name: Gamma (ordinals)
+  status: Lead
+  priority: null
+  estimated_value: null
+  company: null
+  last_contact: null
+  expected_close: null
+  phone: null
+  email: null
+  account_owner: null
+  added: "May 19, 2023 2:35 AM"
+  bounty: null
+  language: null
+-
+  name: Ordinal Hub
+  status: Lead
+  priority: null
+  estimated_value: null
+  company: null
+  last_contact: null
+  expected_close: null
+  phone: null
+  email: null
+  account_owner: null
+  added: "May 19, 2023 2:35 AM"
+  bounty: null
+  language: null
+-
+  name: Xverse
+  status: Lead
+  priority: null
+  estimated_value: null
+  company: null
+  last_contact: null
+  expected_close: null
+  phone: null
+  email: null
+  account_owner: null
+  added: "May 19, 2023 2:36 AM"
+  bounty: null
+  language: null
+-
+  name: R-Sync FireBolt
+  status: Contacted
+  priority: null
+  estimated_value: null
+  company: AreaLayer
+  last_contact: null
+  expected_close: null
+  phone: null
+  email: null
+  account_owner: null
+  added: "May 19, 2023 2:41 AM"
+  bounty: null
+  language: null
+-
+  name: "Edouard, Antoine"
+  status: Draft Integration
+  priority: null
+  estimated_value: null
+  company: WizardSardine / Liana
+  last_contact: null
+  expected_close: null
+  phone: null
+  email: null
+  account_owner: null
+  added: "May 21, 2023 4:24 AM"
+  bounty: null
+  language: Rust
+-
+  name: Bria (Nicolas Burtley)
+  status: Draft Integration
+  priority: null
+  estimated_value: null
+  company: Galoy / Blink / Bria
+  last_contact: null
+  expected_close: null
+  phone: null
+  email: null
+  account_owner: null
+  added: "June 30, 2023 4:24 AM"
+  bounty: "$3,000.00"
+  language: Rust
+-
+  name: Galoy (Nicolas Burtley)
+  status: Negotiation
+  priority: null
+  estimated_value: null
+  company: null
+  last_contact: null
+  expected_close: null
+  phone: null
+  email: null
+  account_owner: null
+  added: "July 7, 2023 10:32 PM"
+  bounty: null
+  language: WASM
+-
+  name: Portico Exchange
+  status: Contacted
+  priority: null
+  estimated_value: null
+  company: Portico Exchange
+  last_contact: null
+  expected_close: null
+  phone: null
+  email: null
+  account_owner: null
+  added: "July 17, 2023 9:41 AM"
+  bounty: null
+  language: "TypeScript, WASM"
+-
+  name: utxo-one
+  status: Lead
+  priority: null
+  estimated_value: null
+  company: nodeless
+  last_contact: null
+  expected_close: null
+  phone: null
+  email: null
+  account_owner: null
+  added: "August 1, 2023 1:22 AM"
+  bounty: null
+  language: null
+-
+  name: Tre
+  status: Contacted
+  priority: null
+  estimated_value: null
+  company: null
+  last_contact: null
+  expected_close: null
+  phone: null
+  email: null
+  account_owner: null
+  added: "August 4, 2023 11:34 AM"
+  bounty: null
+  language: null
+-
+  name: Trezor Suite
+  status: Lead
+  priority: null
+  estimated_value: null
+  company: Trezor
+  last_contact: null
+  expected_close: null
+  phone: null
+  email: null
+  account_owner: null
+  added: "August 4, 2023 11:34 AM"
+  bounty: null
+  language: "TypeScript, WASM"
+-
+  name: thesimplekid (Brendan)
+  status: Draft Integration
+  priority: null
+  estimated_value: null
+  company: Cashu Dev Kit
+  last_contact: null
+  expected_close: null
+  phone: null
+  email: null
+  account_owner: null
+  added: "August 14, 2024 10:17 PM"
+  bounty: null
+  language: Rust
+-
+  name: Bitcoin Core (W0xit)
+  status: Negotiation
+  priority: null
+  estimated_value: null
+  company: null
+  last_contact: null
+  expected_close: null
+  phone: null
+  email: null
+  account_owner: null
+  added: "November 19, 2024 10:44 AM"
+  bounty: null
+  language: c++
+-
+  name: LDK-Node
+  status: Draft Integration
+  priority: null
+  estimated_value: null
+  company: null
+  last_contact: null
+  expected_close: null
+  phone: null
+  email: null
+  account_owner: null
+  added: "November 19, 2024 10:55 AM"
+  bounty: null
+  language: null
+-
+  name: null
+  status: Lead
+  priority: null
+  estimated_value: null
+  company: null
+  last_contact: null
+  expected_close: null
+  phone: null
+  email: null
+  account_owner: null
+  added: "November 19, 2024 10:55 AM"
+  bounty: null
+  language: null
+-
+  name: Bernard Parah
+  status: Contacted
+  priority: null
+  estimated_value: null
+  company: BitNob
+  last_contact: null
+  expected_close: null
+  phone: null
+  email: null
+  account_owner: null
+  added: "September 4, 2025 1:33 AM"
+  bounty: null
+  language: null
+-
+  name: "Fortris (John, Noah, Saxon)"
+  status: Contacted
+  priority: null
+  estimated_value: null
+  company: null
+  last_contact: null
+  expected_close: null
+  phone: null
+  email: null
+  account_owner: null
+  added: "September 4, 2025 1:33 AM"
+  bounty: null
+  language: null
+-
+  name: "Bitment (Jordan, Kendall)"
+  status: Qualified
+  priority: null
+  estimated_value: null
+  company: null
+  last_contact: null
+  expected_close: null
+  phone: null
+  email: null
+  account_owner: null
+  added: "September 4, 2025 1:33 AM"
+  bounty: null
+  language: null
+-
+  name: Alpen (Simanta)
+  status: Qualified
+  priority: null
+  estimated_value: null
+  company: null
+  last_contact: null
+  expected_close: null
+  phone: null
+  email: null
+  account_owner: null
+  added: "October 9, 2025 3:41 AM"
+  bounty: null
+  language: null
+-
+  name: Citrea (Aristotle Mannan)
+  status: Contacted
+  priority: null
+  estimated_value: null
+  company: null
+  last_contact: null
+  expected_close: null
+  phone: null
+  email: null
+  account_owner: null
+  added: "October 9, 2025 3:41 AM"
+  bounty: null
+  language: null
+-
+  name: Bitcoin Safe
+  status: Contacted
+  priority: null
+  estimated_value: null
+  company: null
+  last_contact: null
+  expected_close: null
+  phone: null
+  email: null
+  account_owner: null
+  added: "October 9, 2025 4:08 AM"
+  bounty: null
+  language: null
+-
+  name: Aqua (Samson)
+  status: Contacted
+  priority: null
+  estimated_value: null
+  company: null
+  last_contact: null
+  expected_close: null
+  phone: null
+  email: null
+  account_owner: null
+  added: "October 9, 2025 4:15 AM"
+  bounty: null
+  language: null
+-
+  name: Ray Yousef
+  status: Lead
+  priority: null
+  estimated_value: null
+  company: noones.com
+  last_contact: null
+  expected_close: null
+  phone: null
+  email: null
+  account_owner: null
+  added: "November 23, 2025 3:22 AM"
+  bounty: null
+  language: null
+-
+  name: null
+  status: Lead
+  priority: null
+  estimated_value: null
+  company: null
+  last_contact: null
+  expected_close: null
+  phone: null
+  email: null
+  account_owner: null
+  added: "November 23, 2025 3:22 AM"
+  bounty: null
+  language: null
+-
+  name: Onekey
+  status: Contacted
+  priority: null
+  estimated_value: null
+  company: "https://github.com/OneKeyHQ/app-monorepo"
+  last_contact: null
+  expected_close: null
+  phone: null
+  email: null
+  account_owner: null
+  added: "January 22, 2026 2:41 PM"
+  bounty: null
+  language: null
