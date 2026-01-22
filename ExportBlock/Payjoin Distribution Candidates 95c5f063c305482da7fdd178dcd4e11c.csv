@@ -1,0 +1,101 @@
+﻿Name,Status,Priority,Estimated Value,Company,Last Contact,Expected Close,Phone,Email,Account Owner,Added,Bounty,Language
+Boltz,Draft Integration,,"$20,000.00",,,,,,,"December 4, 2022 8:39 AM",$800.00,"TypeScript, WASM"
+Koji & Yuya,Negotiation,,"$5,000.00",Diamond hands,"December 3, 2022",,,,,"December 4, 2022 8:56 AM",,"TypeScript, WASM"
+Francis,Beta 💪,High,"$100,000.00",Bull Bitcoin,"April 3, 2023",,,,,"December 4, 2022 8:58 AM",,"Flutter, Rust"
+Zach Herbert,Draft Integration,,"$2,000.00",Foundation Devices,,,,,,"December 4, 2022 8:59 AM",,"Flutter, Rust"
+Adam Belican,Contacted,,"$100,000.00",Relai,,,,,,"December 4, 2022 9:00 AM",,
+Swan,Lead,,"$500,000.00",,,,,,,"December 4, 2022 9:00 AM",,
+"N0izecore/jojoxmr, Sethforprivacy, Justin Ehrenhofer",Beta 💪,,"$100,000.00",Cake Wallet,"February 4, 2023",,,,,"December 4, 2022 9:00 AM",,Flutter
+Alex Lieshman,Contacted,,"$300,000.00",River,,,,,,"December 4, 2022 9:00 AM",,
+"Steve Lee, Miles, Michael Rihani",Qualified,,"$1,000,000.00","Cash App, ",,,,,,"December 4, 2022 9:00 AM",,Rust
+Tom Kirkpatrick,Negotiation,,"$100,000.00",Strike,,,,,,"December 4, 2022 9:00 AM",,C#
+Ben Price @abitcoinperson,Contacted,,"$50,000.00",The Bitcoin Company,,,,,,"December 4, 2022 9:01 AM",,Scala
+Evan Kaloudis,Negotiation,,"$20,000.00",Zeus,,,,,,"December 4, 2022 9:01 AM",,"React Native, UniFFI"
+CZ,Lead,,"$10,000,000.00",Binance,,,,,,"December 4, 2022 9:03 AM",,
+Casinos,Lead,,,,,,,,,"December 4, 2022 9:04 AM",,
+Brandon St. Lucas (onboarding),Negotiation,,,Voltage,,,,,,"December 4, 2022 9:12 AM",,
+Dennis @d11n,Qualified,,"$6,000.00",BTCPay,,,,,,"December 5, 2022 2:21 AM",,"C#, Rust"
+Hunter Trujillo,Beta 💪,,"$2,000.00",bitmask-core,,,,,,"December 5, 2022 10:28 PM",,Rust
+nolooking LND,Beta 💪,,,,,,,,,"December 11, 2022 3:36 AM",,Rust
+payjoin-cli,Beta 💪,,,,,,,,,"December 13, 2022 9:05 PM",,Rust
+"John Carvalho, Riza",Contacted,,,Bitkit,,,,,,"December 14, 2022 2:27 AM",,"React Native, Rust"
+Roy Sheinfeld,Contacted,,,Breez,,,,,,"December 14, 2022 2:31 AM",,
+Joseph Kelly,Lead,,,Unchained Capital,,,,,,"December 14, 2022 2:37 AM",,
+Max Hillebrand,Negotiation,,"$5,000.00",Wasabi,,,,,,"December 14, 2022 10:14 PM",,"C#, UniFFI"
+Craig Raw,Contacted,,"$5,000.00",Sparrow,,,,,,"December 14, 2022 10:14 PM",,"Java, UniFFI"
+Prime Trust,Lead,,,,,,,,,"December 15, 2022 3:13 AM",,
+Rearden Code,Contacted,,,BitGo,,,,,,"December 15, 2022 3:13 AM",,
+Brian Armstrong,Lead,,,Coinbase,,,,,,"December 15, 2022 3:13 AM",,
+Jon Chester https://twitter.com/JonChest,Lead,,,Bitwage,,,,,,"December 28, 2022 6:27 AM",,
+@KatieTheRussian,Lead,,,Plan B Passport,,,,,,"December 28, 2022 6:27 AM",,
+Hugo Nunchuk 📝,Qualified,,,,,,,,,"February 3, 2023 4:26 AM",,"C, c++"
+Anint,Contacted,,,"Bithive (Keeper, Hexa, BitcoinTribe)",,,,,,"February 3, 2023 4:27 AM",,TypeScript
+OpenNode,Contacted,,,,,,,,,"February 9, 2023 10:11 PM",,
+Louis Liu,Contacted,,,Mimesis Capital,,,,,,"February 12, 2023 11:17 PM",,
+Muun batching,Lead,,"$100,000.00",,,,,,,"February 14, 2023 1:12 AM",,
+P2p exchanges,Lead,,,,,,,,,"February 17, 2023 7:02 AM",,
+Tether,Lead,,,,,,,,,"February 18, 2023 4:49 AM",,
+Bitcoin Treasuries.net,Lead,,,,,,,,,"February 18, 2023 4:49 AM",,
+Start9Labs,Lead,,,,,,,,,"February 24, 2023 12:06 AM",,
+Michael Bumi,Contacted,,,Alby,,,,,,"February 24, 2023 12:19 AM",,
+"Ben Carman, Tony",Lost,,,Mutiny Wallet,,,,,,"February 24, 2023 12:35 AM",,Rust
+"Eric Sirion, Justin Moon",Qualified,,,Fedimint,,,,,,"February 24, 2023 11:36 PM",,
+Calle,Contacted,,,Cashu,,,,,,"February 25, 2023 12:07 AM",,
+Trading Platforms,Lead,,,,,,,,,"February 27, 2023 10:41 PM",,
+Brokerage,Lead,,,,,,,,,"February 27, 2023 10:42 PM",,
+Lending Service,Lead,,,,,,,,,"February 27, 2023 10:42 PM",,
+Custodial Wallet Service,Lead,,,,,,,,,"February 27, 2023 10:42 PM",,
+NVK’s CoinBunker,Contacted,,,Coinkite,,,,,,"February 28, 2023 12:41 AM",,
+Ibex,Lead,,,Ibex,,,,,,"February 28, 2023 12:45 AM",,
+MyCitadel,Lead,,,,,,,,,"February 28, 2023 1:59 AM",,
+Escape to El Salvador,Contacted,,,,,,,,,"February 28, 2023 1:59 AM",,
+Descriptor Wallet,Contacted,,,,,,,,,"February 28, 2023 6:30 AM",,
+Bitcoin Pro,Lead,,,,,,,,,"February 28, 2023 6:30 AM",,
+Bram Dufour,Qualified,,,Kumuly,,,,,,"March 1, 2023 9:24 PM",,
+"Electrum via Plugin ",Negotiation,,,,,,,,,"March 17, 2023 1:22 AM",,Python
+"BDK-CLI, Steve Meyers",Beta 💪,High,"$1,000.00",,"March 14, 2023",,,,,"March 21, 2023 10:55 PM",,Rust
+Hampus,Negotiation,,,Blixt,"April 3, 2023",,,,,"March 28, 2023 3:38 AM",,"React Native, UniFFI"
+fiatjaf,Qualified,,,ZBD OBW,,,,,,"March 28, 2023 3:41 AM",,"Scala, UniFFI"
+Nick Farrow,Lost,,,Satsale (python),,,,,,"March 28, 2023 10:50 PM",,"Python, UniFFI"
+"Mattias, Rob Hamilton",Qualified,,,Trident Wallet,,,,,,"March 30, 2023 3:54 AM",,
+BenTheCarman,Lost,,,Vortex (scala),,,,,,"March 30, 2023 4:10 AM",,
+Michael Atwood,Contacted,High,,Oshi App,,,,,,"March 30, 2023 4:11 AM",,
+Eril (Best in Slot),Contacted,,,,,,,,,"March 30, 2023 4:11 AM",,
+Sergej Kotliar,Contacted,High,,Bitrefill,"April 3, 2023",,,,,"March 30, 2023 4:28 AM",,
+Gigi? Adam Gibson,Qualified,,"$2,000.00","JAM (python) Bitcoin Design,",,,,,,"April 2, 2023 3:00 AM",,
+RideTheLightning,Lead,,,,,,,,,"April 3, 2023 2:37 AM",,
+ThunderHub,Lead,,,,,,,,,"April 3, 2023 2:39 AM",,
+"Zap ",Lead,,,Zaphq,,,,,,"April 3, 2023 2:40 AM",,
+Spark Lightning Wallet,Lead,,,,,,,,,"April 3, 2023 2:41 AM",,
+Thunderbiscuit,Contacted,,,Padawan (Kotlin),,,,,,"April 4, 2023 3:41 AM",,
+SideSwap,Lead,,,,,,,,,"April 4, 2023 11:16 AM",,
+Wallet of Satoshi,Lead,,,,,,,,,"April 4, 2023 11:34 AM",,
+Geyser,Lead,,,,,,,,,"April 5, 2023 6:15 AM",,
+,Lead,,,Coinify,,,,,,"April 30, 2023 12:42 AM",,
+Portico Exchange,Lead,,,,,,,,,"May 8, 2023 8:17 PM",,
+Cashu / Nuststash,Lead,,,,,,,,,"May 11, 2023 7:45 PM",,
+Gamma (ordinals),Lead,,,,,,,,,"May 19, 2023 2:35 AM",,
+Ordinal Hub,Lead,,,,,,,,,"May 19, 2023 2:35 AM",,
+Xverse,Lead,,,,,,,,,"May 19, 2023 2:36 AM",,
+R-Sync FireBolt,Contacted,,,AreaLayer,,,,,,"May 19, 2023 2:41 AM",,
+"Edouard, Antoine",Draft Integration,,,WizardSardine / Liana,,,,,,"May 21, 2023 4:24 AM",,Rust
+Bria (Nicolas Burtley),Draft Integration,,,Galoy / Blink / Bria,,,,,,"June 30, 2023 4:24 AM","$3,000.00",Rust
+Galoy (Nicolas Burtley),Negotiation,,,,,,,,,"July 7, 2023 10:32 PM",,WASM
+Portico Exchange,Contacted,,,Portico Exchange,,,,,,"July 17, 2023 9:41 AM",,"TypeScript, WASM"
+utxo-one,Lead,,,nodeless,,,,,,"August 1, 2023 1:22 AM",,
+Tre,Contacted,,,,,,,,,"August 4, 2023 11:34 AM",,
+Trezor Suite,Lead,,,Trezor,,,,,,"August 4, 2023 11:34 AM",,"TypeScript, WASM"
+thesimplekid (Brendan),Draft Integration,,,Cashu Dev Kit,,,,,,"August 14, 2024 10:17 PM",,Rust
+Bitcoin Core (W0xit),Negotiation,,,,,,,,,"November 19, 2024 10:44 AM",,c++
+LDK-Node,Draft Integration,,,,,,,,,"November 19, 2024 10:55 AM",,
+,Lead,,,,,,,,,"November 19, 2024 10:55 AM",,
+Bernard Parah,Contacted,,,BitNob,,,,,,"September 4, 2025 1:33 AM",,
+"Fortris (John, Noah, Saxon)",Contacted,,,,,,,,,"September 4, 2025 1:33 AM",,
+"Bitment (Jordan, Kendall)",Qualified,,,,,,,,,"September 4, 2025 1:33 AM",,
+Alpen (Simanta),Qualified,,,,,,,,,"October 9, 2025 3:41 AM",,
+Citrea (Aristotle Mannan),Contacted,,,,,,,,,"October 9, 2025 3:41 AM",,
+Bitcoin Safe,Contacted,,,,,,,,,"October 9, 2025 4:08 AM",,
+Aqua (Samson),Contacted,,,,,,,,,"October 9, 2025 4:15 AM",,
+Ray Yousef,Lead,,,noones.com,,,,,,"November 23, 2025 3:22 AM",,
+,Lead,,,,,,,,,"November 23, 2025 3:22 AM",,
+Onekey,Contacted,,,https://github.com/OneKeyHQ/app-monorepo,,,,,,"January 22, 2026 2:41 PM",,
