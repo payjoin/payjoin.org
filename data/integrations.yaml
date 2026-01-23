@@ -212,19 +212,28 @@
   bounty: null
   language: null
 -
-  name: "Steve Lee, Miles, Michael Rihani"
+# Cash App - Exchange / Custodian
+-
+  name: Cash App
+  class: exchange_custodian
   status: engaged
-  priority: null
-  estimated_value: "$1,000,000.00"
-  company: "Cash App,"
-  last_contact: null
-  expected_close: null
-  phone: null
-  email: null
-  account_owner: null
-  added: "December 4, 2022 9:00 AM"
-  bounty: null
   language: Rust
+  custody: custodial
+  estimated_value: "$1,000,000.00"
+  owner:
+    internal: null
+    external: "Steve Lee, Miles, Michael Rihani"
+  scores:
+    leverage: 5
+    feasibility: 1
+    maintenance: 4
+  spec_feedback: rigorous
+  blocker: Case study
+  notes: "Massive mainstream user base. Have allies at Block but high bars. So many users that real-world feedback would be invaluable."
+  contact:
+    name: "Steve Lee, Miles, Michael Rihani"
+    last_contact: null
+  added: "December 4, 2022 9:00 AM"
 -
 # Strike - Lightning / Exchange
 -
@@ -243,6 +252,7 @@
     feasibility: 3
     maintenance: 5
   spec_feedback: rigorous
+  blocker: C# bindings
   notes: "Massive exchange, huge signal if they adopt. Relationship in place but no C# bindings yet (not hard). No other exchange example - BB Exchange first would increase feasibility. Operating business that would spread the model. High maintenance - they'd have demands."
   contact:
     name: Tom Kirkpatrick
@@ -280,6 +290,7 @@
     feasibility: 3
     maintenance: 4
   spec_feedback: already_covered
+  blocker: JS release / Channel Open example
   notes: "Real users, popular self-custodial LN wallet, influential in sovereign crowd. JS bindings exist but LN bits might be tricky. Maybe swaps-to-payjoin easier than native integration. Unclear how it plays with LND/CLightning backends. Evan is eager when presented as easy to do. SF only 2 because JS - channels/wallets already fed back."
   contact:
     name: Evan Kaloudis
@@ -330,25 +341,35 @@
     feasibility: 3
     spec_feedback: already_covered
     maintenance: 3
+  blocker: 1.0 audit
   notes: "Big LN infrastructure provider but not huge. Tech is there, they just want an audit. SF low because it's just channels at scale - get leverage feedback not spec feedback."
   contact:
     name: Brandon St. Lucas
     last_contact: null
   added: "December 4, 2022 9:12 AM"
 -
-  name: Dennis @d11n
+# BTCPay Server - Payment Processor
+-
+  name: BTCPay Server
+  class: payment_processor
   status: engaged
-  priority: null
-  estimated_value: "$6,000.00"
-  company: BTCPay
-  last_contact: null
-  expected_close: null
-  phone: null
-  email: null
-  account_owner: null
-  added: "December 5, 2022 2:21 AM"
-  bounty: null
   language: "C#, Rust"
+  custody: self_custodial
+  estimated_value: "$6,000.00"
+  owner:
+    internal: null
+    external: Nicolas Dorier
+  scores:
+    leverage: 4
+    feasibility: 2
+    maintenance: 1
+  spec_feedback: real_usage
+  blocker: C# bindings
+  notes: "Almost as big as an exchange for merchant infra. Need C# bindings, evaluating plugin approach. Culture can be odd but they'd maintain it. Lots of users but limited use case except cold wallet stuff. Dennis @d11n also knows some."
+  contact:
+    name: Nicolas Dorier
+    last_contact: null
+  added: "December 5, 2022 2:21 AM"
 # bitmask-core - On Chain Wallet (status uncertain)
 -
   name: bitmask-core
@@ -503,6 +524,7 @@
     feasibility: 4
     spec_feedback: already_covered
     maintenance: 1
+  blocker: C# bindings
   notes: "Already kind of supports Payjoin (v1) so incremental leverage is low. Easy-ish update - just need C# bindings and copy another on-chain's arch with db. Do they have a real db?"
   contact:
     name: Max Hillebrand
@@ -593,19 +615,27 @@
   bounty: null
   language: null
 -
-  name: Hugo Nunchuk 📝
+# Nunchuk - On Chain Wallet (multisig)
+-
+  name: Nunchuk
+  class: on_chain_wallet
   status: engaged
-  priority: null
-  estimated_value: null
-  company: null
-  last_contact: null
-  expected_close: null
-  phone: null
-  email: null
-  account_owner: null
+  language: "C, C++"
+  custody: self_custodial
+  owner:
+    internal: null
+    external: Hugo
+  scores:
+    leverage: 3
+    feasibility: 2
+    maintenance: 2
+  spec_feedback: real_usage
+  blocker: C++ bindings
+  notes: "Multisig-focused wallet, sophisticated high-value users. Similar situation to Liana & BTCPay - need bindings + new integration."
+  contact:
+    name: Hugo
+    last_contact: null
   added: "February 3, 2023 4:26 AM"
-  bounty: null
-  language: "C, c++"
 -
   name: Anint
   status: Contacted
@@ -747,19 +777,27 @@
   bounty: null
   language: Rust
 -
-  name: "Eric Sirion, Justin Moon"
+# Fedimint - Mint (federated ecash)
+-
+  name: Fedimint
+  class: mint
   status: engaged
-  priority: null
-  estimated_value: null
-  company: Fedimint
-  last_contact: null
-  expected_close: null
-  phone: null
-  email: null
-  account_owner: null
+  language: Rust
+  custody: custodial
+  owner:
+    internal: null
+    external: "Eric Sirion, Obi (CEO)"
+  scores:
+    leverage: 4
+    feasibility: 3
+    maintenance: 2
+  spec_feedback: rigorous
+  blocker: Consensus signing PoC
+  notes: "Almost as big as exchange, makes massive news. Need to figure out federation consensus on signing payjoins. Have buy-in with dpc, Eric Sirion, and Obi (CEO). Justin Moon is gone. High spec feedback value - would test abstract consensus persistence across federation."
+  contact:
+    name: "Eric Sirion, dpc, Obi"
+    last_contact: null
   added: "February 24, 2023 11:36 PM"
-  bounty: null
-  language: null
 -
   name: Calle
   status: Contacted
@@ -915,19 +953,27 @@
   bounty: null
   language: null
 -
-  name: Bram Dufour
+# Kumuly - Lightning Wallet
+-
+  name: Kumuly
+  class: lightning
   status: engaged
-  priority: null
-  estimated_value: null
-  company: Kumuly
-  last_contact: null
-  expected_close: null
-  phone: null
-  email: null
-  account_owner: null
-  added: "March 1, 2023 9:24 PM"
-  bounty: null
   language: null
+  custody: self_custodial
+  owner:
+    internal: null
+    external: Bram Dufour
+  scores:
+    leverage: 1
+    feasibility: 2
+    maintenance: 3
+  spec_feedback: unknown
+  blocker: Bram's time
+  notes: "Collaborator's project. Self-custodial Lightning wallet (Kumuly Pocket), Belgium-based. Still in beta, not widely deployed yet."
+  contact:
+    name: Bram Dufour
+    last_contact: null
+  added: "March 1, 2023 9:24 PM"
 -
 # Electrum - On Chain Wallet (plugin)
 -
@@ -945,6 +991,7 @@
     feasibility: 4
     spec_feedback: already_covered
     maintenance: 2
+  blocker: Sending PoC plugin attempt
   notes: "Everyone has Electrum but manual plugin install sucks. Doubt they'd ship Rust toolchain plugin by default - if plugins easier than expected, leverage creeps to 4. Already have Python bindings. Just another on-chain wallet for SF. Unknown plugin territory but Payjoin doesn't need much maintenance."
   contact:
     name: null
@@ -1004,25 +1051,21 @@
     feasibility: 4
     spec_feedback: already_covered
     maintenance: 2
+  blocker: JS release / Channel Open example w/ 1.0
   notes: "Smaller than Zeus, lower crowd. Higher feasibility than Zeus - just channel open on WASM. Basically nolooking on the phone, not a remote for other nodes. Question: how does this match with LDK-Node integration? Should be a little harder than LDK-Node."
   contact:
     name: Hampus
     last_contact: "April 3, 2023"
   added: "March 28, 2023 3:38 AM"
 -
-  name: fiatjaf
-  status: engaged
-  priority: null
-  estimated_value: null
-  company: ZBD OBW
-  last_contact: null
-  expected_close: null
-  phone: null
-  email: null
-  account_owner: null
-  added: "March 28, 2023 3:41 AM"
-  bounty: null
+  name: ZBD OBW
+  status: lost
   language: "Scala, UniFFI"
+  notes: "Seems dead. Not visible on fiatjaf's github front page."
+  contact:
+    name: fiatjaf
+    last_contact: null
+  added: "March 28, 2023 3:41 AM"
 -
   name: Nick Farrow
   status: Lost
@@ -1038,19 +1081,27 @@
   bounty: null
   language: "Python, UniFFI"
 -
-  name: "Mattias, Rob Hamilton"
+# Trident Wallet - On Chain Wallet (insured custody)
+-
+  name: Trident Wallet
+  class: on_chain_wallet
   status: engaged
-  priority: null
-  estimated_value: null
-  company: Trident Wallet
-  last_contact: null
-  expected_close: null
-  phone: null
-  email: null
-  account_owner: null
+  language: Rust
+  custody: self_custodial
+  owner:
+    internal: null
+    external: "Mattias, Rob Hamilton"
+  scores:
+    leverage: 3
+    feasibility: 1
+    maintenance: 3
+  spec_feedback: real_usage
+  blocker: Their open source launch OR new interest from Rob
+  notes: "Anchor Watch's insured bitcoin self-custody product. Closed source, hangups about interactivity complications. Rob Hamilton is a huge payjoin supporter on twitter. Similar difficulty to Liana but letting Liana go first."
+  contact:
+    name: "Mattias, Rob Hamilton"
+    last_contact: null
   added: "March 30, 2023 3:54 AM"
-  bounty: null
-  language: null
 -
   name: BenTheCarman
   status: Lost
@@ -1107,20 +1158,22 @@
   added: "March 30, 2023 4:28 AM"
   bounty: null
   language: null
--
-  name: Gigi? Adam Gibson
+- name: JAM
+  class: on_chain_wallet
   status: engaged
-  priority: null
-  estimated_value: "$2,000.00"
-  company: "JAM (python) Bitcoin Design,"
-  last_contact: null
-  expected_close: null
-  phone: null
-  email: null
-  account_owner: null
-  added: "April 2, 2023 3:00 AM"
-  bounty: null
-  language: null
+  language: Python
+  scores:
+    leverage: 1
+    feasibility: 3
+    maintenance: 2
+  spec_feedback: already_covered
+  blocker: Writing Python PoC
+  notes: JoinMarket frontend. Have bindings but FE work needed. Team doesn't have consistent owner.
+  contact:
+    name: Adam Gibson
+  owner:
+    name: Dan Gould
+    internal: true
 -
   name: RideTheLightning
   status: prospect
@@ -1514,6 +1567,7 @@
     feasibility: 2
     spec_feedback: rigorous
     maintenance: 3
+  blocker: C++ bindings (for PoC) OR UX Design story
   notes: "THE reference implementation - maximum leverage if Core supports Payjoin. Have buy-in but it's hard. Can show PoC with C++ bindings to up feasibility over time. Rigorous spec feedback. Core has high maintenance but ideally handing it off."
   contact:
     name: W0xit
@@ -1595,34 +1649,35 @@
   added: "September 4, 2025 1:33 AM"
   bounty: null
   language: null
--
-  name: "Bitment (Jordan, Kendall)"
+- name: Bitment
   status: engaged
-  priority: null
-  estimated_value: null
-  company: null
-  last_contact: null
-  expected_close: null
-  phone: null
-  email: null
-  account_owner: null
-  added: "September 4, 2025 1:33 AM"
-  bounty: null
-  language: null
--
-  name: Alpen (Simanta)
+  language: TypeScript
+  scores:
+    leverage: 3
+    feasibility: 5
+    maintenance: 1
+  blocker: Playing with the software
+  notes: Accounting software - testing payjoin awareness. Case study for Bull Bitcoin Exchange accounting.
+  contact:
+    name: Jordan, Kendall
+  owner:
+    name: Dan Gould
+    internal: true
+
+- name: Alpen
   status: engaged
-  priority: null
-  estimated_value: null
-  company: null
-  last_contact: null
-  expected_close: null
-  phone: null
-  email: null
-  account_owner: null
-  added: "October 9, 2025 3:41 AM"
-  bounty: null
-  language: null
+  language: Rust
+  scores:
+    leverage: 3
+    feasibility: 3
+    maintenance: 4
+  blocker: Their open source launch
+  notes: VC-backed L2, pre-mainnet. Like Ark - peg in/out via hacky bridge mechanism. Haven't attempted integration yet.
+  contact:
+    name: Simanta
+  owner:
+    name: Dan Gould
+    internal: true
 -
   name: Citrea (Aristotle Mannan)
   status: Contacted

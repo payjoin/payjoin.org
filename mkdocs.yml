@@ -2,11 +2,22 @@ site_name: Payjoin Integration Tracker
 
 theme:
   name: material
+  palette:
+    scheme: slate
+    primary: orange
+  features:
+    - content.tabs.link
 
 plugins:
   - search
-  - table-reader
+  - macros
 
 nav:
   - Home: index.md
   - Integrations: integrations.md
+
+markdown_extensions:
+  - tables
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
