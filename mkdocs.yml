@@ -2,11 +2,16 @@ site_name: Payjoin Integration Tracker
 
 theme:
   name: material
+  logo: assets/logo.svg
+  favicon: assets/logo.png
   palette:
     scheme: slate
-    primary: orange
+    primary: pink
   features:
     - content.tabs.link
+
+extra_css:
+  - stylesheets/extra.css
 
 plugins:
   - search
