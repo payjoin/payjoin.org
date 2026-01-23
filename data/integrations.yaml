@@ -59,8 +59,8 @@
   scores:
     leverage: 5
     feasibility: 5
-    spec_feedback: 4
     maintenance: 3
+  spec_feedback: real_usage
   notes: "High leverage as reference implementation and close team relationship. First integration, guinea pig status increases maintenance. Real usage surfaces spec issues."
   next_artifact:
     type: pr
@@ -123,10 +123,10 @@
     internal: Dan Gould
     external: Zach Herbert
   scores:
-    leverage: 1  # merged w/ ecosystem_impact (was L:1, EI:2)
+    leverage: 1
     feasibility: 3
-    spec_feedback: 2
     maintenance: 1
+  spec_feedback: already_covered
   next_artifact:
     type: issue
     description: "Payjoin integration tracking issue"
@@ -152,7 +152,7 @@
   language: null
 -
   name: Swan
-  status: Lead
+  status: prospect
   priority: null
   estimated_value: "$500,000.00"
   company: null
@@ -185,8 +185,8 @@
   scores:
     leverage: 5
     feasibility: 5
-    spec_feedback: 2
     maintenance: 2
+  spec_feedback: already_covered
   notes: "Big name in privacy wallet space. 500k users edges leverage to 5. Early adopter true fan - donates to project. Multi-coin (shitcoin) wallet limits leverage somewhat. Poor testing/feedback ability but low maintenance burden."
   next_artifact:
     type: pr
@@ -213,7 +213,7 @@
   language: null
 -
   name: "Steve Lee, Miles, Michael Rihani"
-  status: Qualified
+  status: engaged
   priority: null
   estimated_value: "$1,000,000.00"
   company: "Cash App,"
@@ -230,7 +230,7 @@
 -
   name: Strike
   class: lightning
-  status: negotiation
+  status: engaged
   language: "C#"
   custody: custodial
   native_http_client: true
@@ -241,8 +241,8 @@
   scores:
     leverage: 5
     feasibility: 3
-    spec_feedback: 5
     maintenance: 5
+  spec_feedback: rigorous
   notes: "Massive exchange, huge signal if they adopt. Relationship in place but no C# bindings yet (not hard). No other exchange example - BB Exchange first would increase feasibility. Operating business that would spread the model. High maintenance - they'd have demands."
   contact:
     name: Tom Kirkpatrick
@@ -267,7 +267,7 @@
 -
   name: Zeus
   class: lightning
-  status: negotiation
+  status: engaged
   language: "React Native, UniFFI"
   custody: self_custodial
   native_http_client: true
@@ -278,8 +278,8 @@
   scores:
     leverage: 3
     feasibility: 3
-    spec_feedback: 2
     maintenance: 4
+  spec_feedback: already_covered
   notes: "Real users, popular self-custodial LN wallet, influential in sovereign crowd. JS bindings exist but LN bits might be tricky. Maybe swaps-to-payjoin easier than native integration. Unclear how it plays with LND/CLightning backends. Evan is eager when presented as easy to do. SF only 2 because JS - channels/wallets already fed back."
   contact:
     name: Evan Kaloudis
@@ -287,7 +287,7 @@
   added: "December 4, 2022 9:01 AM"
 -
   name: CZ
-  status: Lead
+  status: prospect
   priority: null
   estimated_value: "$10,000,000.00"
   company: Binance
@@ -301,7 +301,7 @@
   language: null
 -
   name: Casinos
-  status: Lead
+  status: prospect
   priority: null
   estimated_value: null
   company: null
@@ -318,7 +318,7 @@
 -
   name: Voltage
   class: lightning
-  status: negotiation
+  status: engaged
   language: null
   custody: custodial
   native_http_client: true
@@ -328,7 +328,7 @@
   scores:
     leverage: 4
     feasibility: 3
-    spec_feedback: 1
+    spec_feedback: already_covered
     maintenance: 3
   notes: "Big LN infrastructure provider but not huge. Tech is there, they just want an audit. SF low because it's just channels at scale - get leverage feedback not spec feedback."
   contact:
@@ -337,7 +337,7 @@
   added: "December 4, 2022 9:12 AM"
 -
   name: Dennis @d11n
-  status: Qualified
+  status: engaged
   priority: null
   estimated_value: "$6,000.00"
   company: BTCPay
@@ -370,8 +370,8 @@
   scores:
     leverage: 1
     feasibility: 2
-    spec_feedback: 3
     maintenance: 3
+  spec_feedback: unknown
   notes: "Small userbase, relatively unknown project without economic momentum. Had relationship but they moved on and are no longer open source. RGB stuff is interesting but unclear if we'd integrate. Maintenance could be high due to RGB complexity."
   next_artifact:
     type: message
@@ -403,8 +403,8 @@
   scores:
     leverage: 1
     feasibility: 5
-    spec_feedback: 5
     maintenance: 3
+  spec_feedback: rigorous
   notes: "Reference implementation for LN channel opens via Payjoin. Nobody uses it but proved LN channel opens were possible. Dusty Daemon has a gist discussing LN channel opens w/ Payjoin. LN complexity increases maintenance."
   next_artifact:
     type: pr
@@ -435,8 +435,8 @@
   scores:
     leverage: 5
     feasibility: 5
-    spec_feedback: 5
     maintenance: 1
+  spec_feedback: rigorous
   notes: "THE reference implementation. Every feature gets tested here first. We own it, it's our baby. Low maintenance since we control everything."
   next_artifact:
     type: pr
@@ -473,7 +473,7 @@
   language: null
 -
   name: Joseph Kelly
-  status: Lead
+  status: prospect
   priority: null
   estimated_value: null
   company: Unchained Capital
@@ -490,7 +490,7 @@
 -
   name: Wasabi
   class: on_chain_wallet
-  status: negotiation
+  status: engaged
   language: "C#, UniFFI"
   custody: self_custodial
   native_http_client: true
@@ -501,7 +501,7 @@
   scores:
     leverage: 2
     feasibility: 4
-    spec_feedback: 1
+    spec_feedback: already_covered
     maintenance: 1
   notes: "Already kind of supports Payjoin (v1) so incremental leverage is low. Easy-ish update - just need C# bindings and copy another on-chain's arch with db. Do they have a real db?"
   contact:
@@ -524,7 +524,7 @@
   language: "Java, UniFFI"
 -
   name: Prime Trust
-  status: Lead
+  status: prospect
   priority: null
   estimated_value: null
   company: null
@@ -552,7 +552,7 @@
   language: null
 -
   name: Brian Armstrong
-  status: Lead
+  status: prospect
   priority: null
   estimated_value: null
   company: Coinbase
@@ -566,7 +566,7 @@
   language: null
 -
   name: "Jon Chester https://twitter.com/JonChest"
-  status: Lead
+  status: prospect
   priority: null
   estimated_value: null
   company: Bitwage
@@ -580,7 +580,7 @@
   language: null
 -
   name: "@KatieTheRussian"
-  status: Lead
+  status: prospect
   priority: null
   estimated_value: null
   company: Plan B Passport
@@ -594,7 +594,7 @@
   language: null
 -
   name: Hugo Nunchuk 📝
-  status: Qualified
+  status: engaged
   priority: null
   estimated_value: null
   company: null
@@ -650,7 +650,7 @@
   language: null
 -
   name: Muun batching
-  status: Lead
+  status: prospect
   priority: null
   estimated_value: "$100,000.00"
   company: null
@@ -664,7 +664,7 @@
   language: null
 -
   name: P2p exchanges
-  status: Lead
+  status: prospect
   priority: null
   estimated_value: null
   company: null
@@ -678,7 +678,7 @@
   language: null
 -
   name: Tether
-  status: Lead
+  status: prospect
   priority: null
   estimated_value: null
   company: null
@@ -692,7 +692,7 @@
   language: null
 -
   name: Bitcoin Treasuries.net
-  status: Lead
+  status: prospect
   priority: null
   estimated_value: null
   company: null
@@ -706,7 +706,7 @@
   language: null
 -
   name: Start9Labs
-  status: Lead
+  status: prospect
   priority: null
   estimated_value: null
   company: null
@@ -748,7 +748,7 @@
   language: Rust
 -
   name: "Eric Sirion, Justin Moon"
-  status: Qualified
+  status: engaged
   priority: null
   estimated_value: null
   company: Fedimint
@@ -776,7 +776,7 @@
   language: null
 -
   name: Trading Platforms
-  status: Lead
+  status: prospect
   priority: null
   estimated_value: null
   company: null
@@ -790,7 +790,7 @@
   language: null
 -
   name: Brokerage
-  status: Lead
+  status: prospect
   priority: null
   estimated_value: null
   company: null
@@ -804,7 +804,7 @@
   language: null
 -
   name: Lending Service
-  status: Lead
+  status: prospect
   priority: null
   estimated_value: null
   company: null
@@ -818,7 +818,7 @@
   language: null
 -
   name: Custodial Wallet Service
-  status: Lead
+  status: prospect
   priority: null
   estimated_value: null
   company: null
@@ -846,7 +846,7 @@
   language: null
 -
   name: Ibex
-  status: Lead
+  status: prospect
   priority: null
   estimated_value: null
   company: Ibex
@@ -860,7 +860,7 @@
   language: null
 -
   name: MyCitadel
-  status: Lead
+  status: prospect
   priority: null
   estimated_value: null
   company: null
@@ -902,7 +902,7 @@
   language: null
 -
   name: Bitcoin Pro
-  status: Lead
+  status: prospect
   priority: null
   estimated_value: null
   company: null
@@ -916,7 +916,7 @@
   language: null
 -
   name: Bram Dufour
-  status: Qualified
+  status: engaged
   priority: null
   estimated_value: null
   company: Kumuly
@@ -933,7 +933,7 @@
 -
   name: Electrum
   class: on_chain_wallet
-  status: negotiation
+  status: engaged
   language: Python
   custody: self_custodial
   native_http_client: true
@@ -943,7 +943,7 @@
   scores:
     leverage: 3
     feasibility: 4
-    spec_feedback: 1
+    spec_feedback: already_covered
     maintenance: 2
   notes: "Everyone has Electrum but manual plugin install sucks. Doubt they'd ship Rust toolchain plugin by default - if plugins easier than expected, leverage creeps to 4. Already have Python bindings. Just another on-chain wallet for SF. Unknown plugin territory but Payjoin doesn't need much maintenance."
   contact:
@@ -974,8 +974,8 @@
   scores:
     leverage: 1
     feasibility: 5
-    spec_feedback: 2
     maintenance: 1
+  spec_feedback: already_covered
   notes: "Testing tool, nobody uses it. BB Mobile dart example already proves BDK integration path better. Just a copy of payjoin-cli with slight impl differences. Good engineers at BDK at least. If we make it stateless-ish, could provide good spec feedback applicable to bitcoin-cli."
   next_artifact:
     type: post
@@ -992,7 +992,7 @@
 -
   name: Blixt
   class: lightning
-  status: negotiation
+  status: engaged
   language: "React Native, UniFFI"
   custody: self_custodial
   native_http_client: true
@@ -1002,7 +1002,7 @@
   scores:
     leverage: 3
     feasibility: 4
-    spec_feedback: 2
+    spec_feedback: already_covered
     maintenance: 2
   notes: "Smaller than Zeus, lower crowd. Higher feasibility than Zeus - just channel open on WASM. Basically nolooking on the phone, not a remote for other nodes. Question: how does this match with LDK-Node integration? Should be a little harder than LDK-Node."
   contact:
@@ -1011,7 +1011,7 @@
   added: "March 28, 2023 3:38 AM"
 -
   name: fiatjaf
-  status: Qualified
+  status: engaged
   priority: null
   estimated_value: null
   company: ZBD OBW
@@ -1039,7 +1039,7 @@
   language: "Python, UniFFI"
 -
   name: "Mattias, Rob Hamilton"
-  status: Qualified
+  status: engaged
   priority: null
   estimated_value: null
   company: Trident Wallet
@@ -1109,7 +1109,7 @@
   language: null
 -
   name: Gigi? Adam Gibson
-  status: Qualified
+  status: engaged
   priority: null
   estimated_value: "$2,000.00"
   company: "JAM (python) Bitcoin Design,"
@@ -1123,7 +1123,7 @@
   language: null
 -
   name: RideTheLightning
-  status: Lead
+  status: prospect
   priority: null
   estimated_value: null
   company: null
@@ -1137,7 +1137,7 @@
   language: null
 -
   name: ThunderHub
-  status: Lead
+  status: prospect
   priority: null
   estimated_value: null
   company: null
@@ -1151,7 +1151,7 @@
   language: null
 -
   name: Zap
-  status: Lead
+  status: prospect
   priority: null
   estimated_value: null
   company: Zaphq
@@ -1165,7 +1165,7 @@
   language: null
 -
   name: Spark Lightning Wallet
-  status: Lead
+  status: prospect
   priority: null
   estimated_value: null
   company: null
@@ -1193,7 +1193,7 @@
   language: null
 -
   name: SideSwap
-  status: Lead
+  status: prospect
   priority: null
   estimated_value: null
   company: null
@@ -1207,7 +1207,7 @@
   language: null
 -
   name: Wallet of Satoshi
-  status: Lead
+  status: prospect
   priority: null
   estimated_value: null
   company: null
@@ -1221,7 +1221,7 @@
   language: null
 -
   name: Geyser
-  status: Lead
+  status: prospect
   priority: null
   estimated_value: null
   company: null
@@ -1235,7 +1235,7 @@
   language: null
 -
   name: null
-  status: Lead
+  status: prospect
   priority: null
   estimated_value: null
   company: Coinify
@@ -1249,7 +1249,7 @@
   language: null
 -
   name: Portico Exchange
-  status: Lead
+  status: prospect
   priority: null
   estimated_value: null
   company: null
@@ -1263,7 +1263,7 @@
   language: null
 -
   name: Cashu / Nuststash
-  status: Lead
+  status: prospect
   priority: null
   estimated_value: null
   company: null
@@ -1277,7 +1277,7 @@
   language: null
 -
   name: Gamma (ordinals)
-  status: Lead
+  status: prospect
   priority: null
   estimated_value: null
   company: null
@@ -1291,7 +1291,7 @@
   language: null
 -
   name: Ordinal Hub
-  status: Lead
+  status: prospect
   priority: null
   estimated_value: null
   company: null
@@ -1305,7 +1305,7 @@
   language: null
 -
   name: Xverse
-  status: Lead
+  status: prospect
   priority: null
   estimated_value: null
   company: null
@@ -1355,7 +1355,7 @@
   scores:
     leverage: 3  # merged w/ ecosystem_impact (was L:4, EI:3)
     feasibility: 3
-    spec_feedback: 4
+    spec_feedback: real_usage
     maintenance: 4
   next_artifact:
     type: pr
@@ -1389,7 +1389,7 @@
   scores:
     leverage: 3  # merged w/ ecosystem_impact (was L:5, EI:3)
     feasibility: 4
-    spec_feedback: 5
+    spec_feedback: rigorous
     maintenance: 3
   next_artifact:
     type: pr
@@ -1423,7 +1423,7 @@
   language: "TypeScript, WASM"
 -
   name: utxo-one
-  status: Lead
+  status: prospect
   priority: null
   estimated_value: null
   company: nodeless
@@ -1451,7 +1451,7 @@
   language: null
 -
   name: Trezor Suite
-  status: Lead
+  status: prospect
   priority: null
   estimated_value: null
   company: Trezor
@@ -1487,7 +1487,7 @@
   scores:
     leverage: 3
     feasibility: 2
-    spec_feedback: 2
+    spec_feedback: already_covered
     maintenance: 4
   next_artifact:
     type: message
@@ -1502,7 +1502,7 @@
 -
   name: Bitcoin Core
   class: on_chain_wallet
-  status: negotiation
+  status: engaged
   language: "C++"
   custody: self_custodial
   native_http_client: false
@@ -1512,7 +1512,7 @@
   scores:
     leverage: 5
     feasibility: 2
-    spec_feedback: 5
+    spec_feedback: rigorous
     maintenance: 3
   notes: "THE reference implementation - maximum leverage if Core supports Payjoin. Have buy-in but it's hard. Can show PoC with C++ bindings to up feasibility over time. Rigorous spec feedback. Core has high maintenance but ideally handing it off."
   contact:
@@ -1543,7 +1543,7 @@
   scores:
     leverage: 4
     feasibility: 4
-    spec_feedback: 2
+    spec_feedback: already_covered
     maintenance: 2
   next_artifact:
     type: pr
@@ -1555,7 +1555,7 @@
   added: "November 19, 2024 10:55 AM"
 -
   name: null
-  status: Lead
+  status: prospect
   priority: null
   estimated_value: null
   company: null
@@ -1597,7 +1597,7 @@
   language: null
 -
   name: "Bitment (Jordan, Kendall)"
-  status: Qualified
+  status: engaged
   priority: null
   estimated_value: null
   company: null
@@ -1611,7 +1611,7 @@
   language: null
 -
   name: Alpen (Simanta)
-  status: Qualified
+  status: engaged
   priority: null
   estimated_value: null
   company: null
@@ -1667,7 +1667,7 @@
   language: null
 -
   name: Ray Yousef
-  status: Lead
+  status: prospect
   priority: null
   estimated_value: null
   company: noones.com
@@ -1681,7 +1681,7 @@
   language: null
 -
   name: null
-  status: Lead
+  status: prospect
   priority: null
   estimated_value: null
   company: null

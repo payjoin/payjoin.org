@@ -98,15 +98,19 @@ One of:
 
 Score each integration 1–5 on:
 
-| Factor | Description |
-|--------|-------------|
-| **Leverage** | How many other integrations benefit |
-| **Feasibility** | Can ship in ≤90 days |
-| **Impact** | Wallet share, transaction volume |
-| **Spec feedback** | Will this integration stress-test the spec? |
-| **Maintenance** | Lower is better (1 = low maintenance) |
+| Factor | Weight | Description |
+|--------|--------|-------------|
+| **Leverage** | 6x | How many other integrations benefit / ecosystem impact |
+| **Feasibility** | 2x | Can ship in ≤90 days |
+| **Maintenance** | -1x | Lower is better (1 = low maintenance) |
 
-**Sort by**: `(Leverage + Impact + Feasibility) – Maintenance`
+**Formula**: `6L + 2F - M`
+
+**Spec Feedback** (qualitative, not in formula):
+- `rigorous` - Will stress-test the spec (Core, Strike)
+- `real_usage` - Real users surfacing issues (BB Mobile, Cake)
+- `already_covered` - Similar to existing integrations
+- `unknown` - Uncertain what we'd learn
 
 ---
 
@@ -134,6 +138,12 @@ blocker: their_engineering_time
 owner:
   internal: Spacebear
   external: "Konstantin @ Cake"
+scores:
+  leverage: 5
+  feasibility: 5
+  maintenance: 2
+spec_feedback: real_usage
+notes: "Context and rationale for scores"
 next_artifact:
   type: pr
   description: "1.0 update PR"
@@ -193,14 +203,15 @@ After pushing, enable Pages in GitHub UI:
 
 | Status | Meaning |
 |--------|---------|
-| `lead` | Initial prospect |
+| `prospect` | We identified them |
 | `contacted` | Reached out |
-| `qualified` | Confirmed interest/fit |
-| `negotiation` | Discussing terms |
+| `engaged` | Mutual interest confirmed |
 | `draft` | Technical work started |
 | `beta` | Integration in testing |
 | `live` | Shipped |
+| `stalled` | Blocked, unclear path forward |
 | `lost` | Did not proceed |
+| `duplicate` | Covered by another integration |
 
 ---
 
