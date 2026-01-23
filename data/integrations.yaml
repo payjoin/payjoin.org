@@ -1,59 +1,141 @@
+# Boltz - Swap Service
 -
   name: Boltz
-  status: Draft Integration
-  priority: null
-  estimated_value: "$20,000.00"
-  company: null
-  last_contact: null
-  expected_close: null
-  phone: null
-  email: null
-  account_owner: null
-  added: "December 4, 2022 8:39 AM"
-  bounty: "$800.00"
+  class: swap_service
+  status: draft
   language: "TypeScript, WASM"
+  custody: self_custodial
+  native_http_client: true
+  capabilities:
+    sending: true
+    receive_consolidation: true
+    cut_through: false
+    channel_open: false
+    async_status: false
+    fallback: false
+    ohttp_relay_rotation: false
+  sync_method: full_node
+  blocker: release_1.0
+  owner:
+    name: Spacebear
+    internal: true
+    spof: null
+  next_artifact:
+    type: pr
+    description: "working PR"
+    url: null
+  estimated_value: "$20,000.00"
+  bounty: "$800.00"
+  added: "December 4, 2022 8:39 AM"
 -
   name: Koji & Yuya
-  status: Negotiation
+  status: duplicate
   priority: null
   estimated_value: "$5,000.00"
   company: Diamond hands
   last_contact: "December 3, 2022"
-  expected_close: null
-  phone: null
-  email: null
-  account_owner: null
   added: "December 4, 2022 8:56 AM"
-  bounty: null
   language: "TypeScript, WASM"
+  notes: "Diamond Hands is just Boltz. If Boltz updates, they get it. Not a separate integration target."
+  duplicate_of: Boltz
+# Bull Bitcoin Mobile - On Chain Wallet
 -
-  name: Francis
-  status: Beta 💪
-  priority: High
+  name: Bull Bitcoin Mobile
+  class: on_chain_wallet
+  status: beta
+  language: "Flutter, Rust"
+  custody: self_custodial
+  native_http_client: planned
+  capabilities:
+    sending: true
+    receive_consolidation: true
+    cut_through: possible
+    channel_open: false
+  sync_method: esplora
+  blocker: our_engineering_time
+  owner:
+    internal: Spacebear
+    external: Francis
+  scores:
+    leverage: 5
+    feasibility: 5
+    spec_feedback: 4
+    maintenance: 3
+  notes: "High leverage as reference implementation and close team relationship. First integration, guinea pig status increases maintenance. Real usage surfaces spec issues."
+  next_artifact:
+    type: pr
+    description: "Spacebear PR upgrading to 1.0"
+    url: null
+  contact:
+    name: Francis
+    last_contact: "April 3, 2023"
   estimated_value: "$100,000.00"
-  company: Bull Bitcoin
-  last_contact: "April 3, 2023"
-  expected_close: null
-  phone: null
-  email: null
-  account_owner: null
   added: "December 4, 2022 8:58 AM"
-  bounty: null
-  language: "Flutter, Rust"
+
+# Bull Bitcoin Exchange - Exchange / Custodian
 -
-  name: Zach Herbert
-  status: Draft Integration
-  priority: null
-  estimated_value: "$2,000.00"
-  company: Foundation Devices
-  last_contact: null
-  expected_close: null
-  phone: null
-  email: null
-  account_owner: null
-  added: "December 4, 2022 8:59 AM"
-  bounty: null
+  name: Bull Bitcoin Exchange
+  class: exchange_custodian
+  status: draft
+  language: NodeJS
+  custody: custodial
+  native_http_client: null
+  capabilities:
+    sending: planned
+    receive_consolidation: planned
+    cut_through: false
+    channel_open: false
+  sync_method: full_node
+  blocker: their_engineering_time
+  owner:
+    name: Spacebear
+    internal: true
+    spof: null
+  next_artifact:
+    type: pr
+    description: "PR from Bull Bitcoin (or questions/check-in)"
+    url: null
+  contact:
+    name: Francis
+    last_contact: "April 3, 2023"
+  estimated_value: "$100,000.00"
+  priority: High
+  added: "December 4, 2022 8:58 AM"
+# Foundation Devices - On Chain Wallet (Passport HW, Envoy SW)
+-
+  name: Foundation Devices
+  class: on_chain_wallet
+  status: draft
   language: "Flutter, Rust"
+  custody: self_custodial
+  native_http_client: null
+  capabilities:
+    sending: planned
+    receive_consolidation: planned
+    cut_through: false
+    channel_open: false
+    async_status: false
+    fallback: false
+    ohttp_relay_rotation: false
+  sync_method: esplora
+  blocker: reopening_relationship_cold_wallet_example
+  owner:
+    internal: Dan Gould
+    external: Zach Herbert
+  scores:
+    leverage: 1  # merged w/ ecosystem_impact (was L:1, EI:2)
+    feasibility: 3
+    spec_feedback: 2
+    maintenance: 1
+  next_artifact:
+    type: issue
+    description: "Payjoin integration tracking issue"
+    url: null
+  contact:
+    name: Zach Herbert
+    last_contact: null
+  estimated_value: "$2,000.00"
+  added: "December 4, 2022 8:59 AM"
 -
   name: Adam Belican
   status: Contacted
@@ -82,20 +164,39 @@
   added: "December 4, 2022 9:00 AM"
   bounty: null
   language: null
+# Cake Wallet - On Chain Wallet
 -
-  name: "N0izecore/jojoxmr, Sethforprivacy, Justin Ehrenhofer"
-  status: Beta 💪
-  priority: null
-  estimated_value: "$100,000.00"
-  company: Cake Wallet
-  last_contact: "February 4, 2023"
-  expected_close: null
-  phone: null
-  email: null
-  account_owner: null
-  added: "December 4, 2022 9:00 AM"
-  bounty: null
+  name: Cake Wallet
+  class: on_chain_wallet
+  status: beta
   language: Flutter
+  custody: self_custodial
+  native_http_client: planned
+  capabilities:
+    sending: true
+    receive_consolidation: true
+    cut_through: false
+    channel_open: false
+  sync_method: esplora
+  blocker: their_engineering_time_and_our_release
+  owner:
+    internal: Spacebear
+    external: Konstantin @ Cake
+  scores:
+    leverage: 5
+    feasibility: 5
+    spec_feedback: 2
+    maintenance: 2
+  notes: "Big name in privacy wallet space. 500k users edges leverage to 5. Early adopter true fan - donates to project. Multi-coin (shitcoin) wallet limits leverage somewhat. Poor testing/feedback ability but low maintenance burden."
+  next_artifact:
+    type: pr
+    description: "1.0 update PR"
+    url: null
+  contact:
+    name: "N0izecore/jojoxmr, Sethforprivacy, Justin Ehrenhofer"
+    last_contact: "February 4, 2023"
+  estimated_value: "$100,000.00"
+  added: "December 4, 2022 9:00 AM"
 -
   name: Alex Lieshman
   status: Contacted
@@ -125,19 +226,28 @@
   bounty: null
   language: Rust
 -
-  name: Tom Kirkpatrick
-  status: Negotiation
-  priority: null
-  estimated_value: "$100,000.00"
-  company: Strike
-  last_contact: null
-  expected_close: null
-  phone: null
-  email: null
-  account_owner: null
-  added: "December 4, 2022 9:00 AM"
-  bounty: null
+# Strike - Lightning / Exchange
+-
+  name: Strike
+  class: lightning
+  status: negotiation
   language: "C#"
+  custody: custodial
+  native_http_client: true
+  estimated_value: "$100,000.00"
+  owner:
+    internal: null
+    external: Tom Kirkpatrick
+  scores:
+    leverage: 5
+    feasibility: 3
+    spec_feedback: 5
+    maintenance: 5
+  notes: "Massive exchange, huge signal if they adopt. Relationship in place but no C# bindings yet (not hard). No other exchange example - BB Exchange first would increase feasibility. Operating business that would spread the model. High maintenance - they'd have demands."
+  contact:
+    name: Tom Kirkpatrick
+    last_contact: null
+  added: "December 4, 2022 9:00 AM"
 -
   name: Ben Price @abitcoinperson
   status: Contacted
@@ -153,19 +263,28 @@
   bounty: null
   language: Scala
 -
-  name: Evan Kaloudis
-  status: Negotiation
-  priority: null
-  estimated_value: "$20,000.00"
-  company: Zeus
-  last_contact: null
-  expected_close: null
-  phone: null
-  email: null
-  account_owner: null
-  added: "December 4, 2022 9:01 AM"
-  bounty: null
+# Zeus - Lightning Wallet
+-
+  name: Zeus
+  class: lightning
+  status: negotiation
   language: "React Native, UniFFI"
+  custody: self_custodial
+  native_http_client: true
+  estimated_value: "$20,000.00"
+  owner:
+    internal: null
+    external: Evan Kaloudis
+  scores:
+    leverage: 3
+    feasibility: 3
+    spec_feedback: 2
+    maintenance: 4
+  notes: "Real users, popular self-custodial LN wallet, influential in sovereign crowd. JS bindings exist but LN bits might be tricky. Maybe swaps-to-payjoin easier than native integration. Unclear how it plays with LND/CLightning backends. Evan is eager when presented as easy to do. SF only 2 because JS - channels/wallets already fed back."
+  contact:
+    name: Evan Kaloudis
+    last_contact: null
+  added: "December 4, 2022 9:01 AM"
 -
   name: CZ
   status: Lead
@@ -195,19 +314,27 @@
   bounty: null
   language: null
 -
-  name: Brandon St. Lucas (onboarding)
-  status: Negotiation
-  priority: null
-  estimated_value: null
-  company: Voltage
-  last_contact: null
-  expected_close: null
-  phone: null
-  email: null
-  account_owner: null
-  added: "December 4, 2022 9:12 AM"
-  bounty: null
+# Voltage - Lightning Infrastructure
+-
+  name: Voltage
+  class: lightning
+  status: negotiation
   language: null
+  custody: custodial
+  native_http_client: true
+  owner:
+    internal: null
+    external: Brandon St. Lucas
+  scores:
+    leverage: 4
+    feasibility: 3
+    spec_feedback: 1
+    maintenance: 3
+  notes: "Big LN infrastructure provider but not huge. Tech is there, they just want an audit. SF low because it's just channels at scale - get leverage feedback not spec feedback."
+  contact:
+    name: Brandon St. Lucas
+    last_contact: null
+  added: "December 4, 2022 9:12 AM"
 -
   name: Dennis @d11n
   status: Qualified
@@ -222,48 +349,100 @@
   added: "December 5, 2022 2:21 AM"
   bounty: null
   language: "C#, Rust"
+# bitmask-core - On Chain Wallet (status uncertain)
 -
-  name: Hunter Trujillo
-  status: Beta 💪
-  priority: null
-  estimated_value: "$2,000.00"
-  company: bitmask-core
-  last_contact: null
-  expected_close: null
-  phone: null
-  email: null
-  account_owner: null
-  added: "December 5, 2022 10:28 PM"
-  bounty: null
+  name: bitmask-core
+  class: on_chain_wallet
+  status: beta
   language: Rust
+  custody: self_custodial
+  native_http_client: false
+  capabilities:
+    sending: true
+    receive_consolidation: false
+    cut_through: false
+    channel_open: false
+  sync_method: esplora
+  blocker: "no longer open source (?)"
+  owner:
+    internal: Dan Gould
+    external: Gideon
+  scores:
+    leverage: 1
+    feasibility: 2
+    spec_feedback: 3
+    maintenance: 3
+  notes: "Small userbase, relatively unknown project without economic momentum. Had relationship but they moved on and are no longer open source. RGB stuff is interesting but unclear if we'd integrate. Maintenance could be high due to RGB complexity."
+  next_artifact:
+    type: message
+    description: "re-engagement message"
+    url: null
+  contact:
+    name: Gideon
+    last_contact: null
+  estimated_value: "$2,000.00"
+  added: "December 5, 2022 10:28 PM"
+# nolooking LND - Lightning
 -
   name: nolooking LND
-  status: Beta 💪
-  priority: null
-  estimated_value: null
-  company: null
-  last_contact: null
-  expected_close: null
-  phone: null
-  email: null
-  account_owner: null
-  added: "December 11, 2022 3:36 AM"
-  bounty: null
+  class: lightning
+  status: beta
   language: Rust
+  custody: self_custodial
+  native_http_client: true
+  capabilities:
+    sending: true
+    receive_consolidation: false
+    cut_through: true
+    channel_open: true
+  sync_method: full_node
+  blocker: pdk_1.0
+  owner:
+    internal: Dan Gould
+    external: null
+  scores:
+    leverage: 1
+    feasibility: 5
+    spec_feedback: 5
+    maintenance: 3
+  notes: "Reference implementation for LN channel opens via Payjoin. Nobody uses it but proved LN channel opens were possible. Dusty Daemon has a gist discussing LN channel opens w/ Payjoin. LN complexity increases maintenance."
+  next_artifact:
+    type: pr
+    description: "update payjoin 1.0 PR"
+    url: null
+  added: "December 11, 2022 3:36 AM"
+# payjoin-cli - On Chain Wallet (reference implementation)
 -
   name: payjoin-cli
-  status: Beta 💪
-  priority: null
-  estimated_value: null
-  company: null
-  last_contact: null
-  expected_close: null
-  phone: null
-  email: null
-  account_owner: null
-  added: "December 13, 2022 9:05 PM"
-  bounty: null
+  class: on_chain_wallet
+  status: beta
   language: Rust
+  custody: self_custodial
+  native_http_client: true
+  capabilities:
+    sending: true
+    receive_consolidation: true
+    cut_through: false
+    channel_open: false
+    async_status: true
+    fallback: false
+    ohttp_relay_rotation: true
+  sync_method: full_node
+  blocker: fallback_pr
+  owner:
+    internal: Zealsham
+    external: null
+  scores:
+    leverage: 5
+    feasibility: 5
+    spec_feedback: 5
+    maintenance: 1
+  notes: "THE reference implementation. Every feature gets tested here first. We own it, it's our baby. Low maintenance since we control everything."
+  next_artifact:
+    type: pr
+    description: "Fallback PR"
+    url: null
+  added: "December 13, 2022 9:05 PM"
 -
   name: "John Carvalho, Riza"
   status: Contacted
@@ -307,19 +486,28 @@
   bounty: null
   language: null
 -
-  name: Max Hillebrand
-  status: Negotiation
-  priority: null
-  estimated_value: "$5,000.00"
-  company: Wasabi
-  last_contact: null
-  expected_close: null
-  phone: null
-  email: null
-  account_owner: null
-  added: "December 14, 2022 10:14 PM"
-  bounty: null
+# Wasabi - On Chain Wallet (privacy/coinjoin)
+-
+  name: Wasabi
+  class: on_chain_wallet
+  status: negotiation
   language: "C#, UniFFI"
+  custody: self_custodial
+  native_http_client: true
+  estimated_value: "$5,000.00"
+  owner:
+    internal: null
+    external: Max Hillebrand
+  scores:
+    leverage: 2
+    feasibility: 4
+    spec_feedback: 1
+    maintenance: 1
+  notes: "Already kind of supports Payjoin (v1) so incremental leverage is low. Easy-ish update - just need C# bindings and copy another on-chain's arch with db. Do they have a real db?"
+  contact:
+    name: Max Hillebrand
+    last_contact: null
+  added: "December 14, 2022 10:14 PM"
 -
   name: Craig Raw
   status: Contacted
@@ -741,47 +929,86 @@
   bounty: null
   language: null
 -
-  name: Electrum via Plugin
-  status: Negotiation
-  priority: null
-  estimated_value: null
-  company: null
-  last_contact: null
-  expected_close: null
-  phone: null
-  email: null
-  account_owner: null
-  added: "March 17, 2023 1:22 AM"
-  bounty: null
+# Electrum - On Chain Wallet (plugin)
+-
+  name: Electrum
+  class: on_chain_wallet
+  status: negotiation
   language: Python
+  custody: self_custodial
+  native_http_client: true
+  owner:
+    internal: null
+    external: null
+  scores:
+    leverage: 3
+    feasibility: 4
+    spec_feedback: 1
+    maintenance: 2
+  notes: "Everyone has Electrum but manual plugin install sucks. Doubt they'd ship Rust toolchain plugin by default - if plugins easier than expected, leverage creeps to 4. Already have Python bindings. Just another on-chain wallet for SF. Unknown plugin territory but Payjoin doesn't need much maintenance."
+  contact:
+    name: null
+    last_contact: null
+  added: "March 17, 2023 1:22 AM"
+# BDK-CLI - On Chain Wallet
 -
-  name: "BDK-CLI, Steve Meyers"
-  status: Beta 💪
-  priority: High
-  estimated_value: "$1,000.00"
-  company: null
-  last_contact: "March 14, 2023"
-  expected_close: null
-  phone: null
-  email: null
-  account_owner: null
-  added: "March 21, 2023 10:55 PM"
-  bounty: null
+  name: BDK-CLI
+  class: on_chain_wallet
+  status: beta
   language: Rust
+  custody: self_custodial
+  native_http_client: true
+  capabilities:
+    sending: true
+    receive_consolidation: true
+    cut_through: false
+    channel_open: false
+    async_status: false
+    fallback: false
+    ohttp_relay_rotation: false
+  sync_method: esplora
+  blocker: async_status
+  owner:
+    internal: Brandon Lucas
+    external: Steve Meyers
+  scores:
+    leverage: 1
+    feasibility: 5
+    spec_feedback: 2
+    maintenance: 1
+  notes: "Testing tool, nobody uses it. BB Mobile dart example already proves BDK integration path better. Just a copy of payjoin-cli with slight impl differences. Good engineers at BDK at least. If we make it stateless-ish, could provide good spec feedback applicable to bitcoin-cli."
+  next_artifact:
+    type: post
+    description: "BDK-CLI release post from payjoin"
+    url: null
+  contact:
+    name: Steve Meyers
+    last_contact: "March 14, 2023"
+  estimated_value: "$1,000.00"
+  priority: High
+  added: "March 21, 2023 10:55 PM"
 -
-  name: Hampus
-  status: Negotiation
-  priority: null
-  estimated_value: null
-  company: Blixt
-  last_contact: "April 3, 2023"
-  expected_close: null
-  phone: null
-  email: null
-  account_owner: null
-  added: "March 28, 2023 3:38 AM"
-  bounty: null
+# Blixt - Lightning Wallet
+-
+  name: Blixt
+  class: lightning
+  status: negotiation
   language: "React Native, UniFFI"
+  custody: self_custodial
+  native_http_client: true
+  owner:
+    internal: null
+    external: Hampus
+  scores:
+    leverage: 3
+    feasibility: 4
+    spec_feedback: 2
+    maintenance: 2
+  notes: "Smaller than Zeus, lower crowd. Higher feasibility than Zeus - just channel open on WASM. Basically nolooking on the phone, not a remote for other nodes. Question: how does this match with LDK-Node integration? Should be a little harder than LDK-Node."
+  contact:
+    name: Hampus
+    last_contact: "April 3, 2023"
+  added: "March 28, 2023 3:38 AM"
 -
   name: fiatjaf
   status: Qualified
@@ -1104,48 +1331,82 @@
   added: "May 19, 2023 2:41 AM"
   bounty: null
   language: null
+# WizardSardine / Liana - On Chain Wallet (timelock recovery)
 -
-  name: "Edouard, Antoine"
-  status: Draft Integration
-  priority: null
-  estimated_value: null
-  company: WizardSardine / Liana
-  last_contact: null
-  expected_close: null
-  phone: null
-  email: null
-  account_owner: null
+  name: Liana
+  class: on_chain_wallet
+  status: draft
+  language: Rust
+  custody: self_custodial
+  native_http_client: planned
+  capabilities:
+    sending: planned
+    receive_consolidation: planned
+    cut_through: false
+    channel_open: false
+    async_status: false
+    fallback: false
+    ohttp_relay_rotation: false
+  sync_method: electrum
+  blocker: bens_poc_receive_pr
+  owner:
+    internal: Ben Alen
+    external: Pyth
+  scores:
+    leverage: 3  # merged w/ ecosystem_impact (was L:4, EI:3)
+    feasibility: 3
+    spec_feedback: 4
+    maintenance: 4
+  next_artifact:
+    type: pr
+    description: "Ben's PoC receive PR"
+    url: null
+  contact:
+    name: "Edouard, Antoine"
+    last_contact: null
   added: "May 21, 2023 4:24 AM"
-  bounty: null
-  language: Rust
+# Bria (Galoy) - Exchange / Custodian (wallet infrastructure)
 -
-  name: Bria (Nicolas Burtley)
-  status: Draft Integration
-  priority: null
-  estimated_value: null
-  company: Galoy / Blink / Bria
-  last_contact: null
-  expected_close: null
-  phone: null
-  email: null
-  account_owner: null
-  added: "June 30, 2023 4:24 AM"
+  name: Bria
+  class: exchange_custodian
+  status: draft
+  language: Rust
+  custody: custodial
+  native_http_client: true
+  capabilities:
+    sending: planned
+    receive_consolidation: planned
+    cut_through: false
+    channel_open: false
+    async_status: false
+    fallback: false
+    ohttp_relay_rotation: false
+  sync_method: full_node
+  blocker: our_engineering_time
+  owner:
+    internal: Dan Gould
+    external: Justin Carter
+  scores:
+    leverage: 3  # merged w/ ecosystem_impact (was L:5, EI:3)
+    feasibility: 4
+    spec_feedback: 5
+    maintenance: 3
+  next_artifact:
+    type: pr
+    description: "Payjoin integration PR"
+    url: null
+  contact:
+    name: Nicolas Burtley
+    last_contact: null
   bounty: "$3,000.00"
-  language: Rust
+  added: "June 30, 2023 4:24 AM"
 -
-  name: Galoy (Nicolas Burtley)
-  status: Negotiation
-  priority: null
-  estimated_value: null
-  company: null
-  last_contact: null
-  expected_close: null
-  phone: null
-  email: null
-  account_owner: null
-  added: "July 7, 2023 10:32 PM"
-  bounty: null
+  name: Galoy
+  status: duplicate
   language: WASM
+  added: "July 7, 2023 10:32 PM"
+  duplicate_of: Bria
+  notes: "Galoy backend is same as Bria. Challenge is human/deployment - getting the bank to actually deploy Bria. Blink app is a separate front-end (like Bitcoin Beach) that could be its own entry if needed."
 -
   name: Portico Exchange
   status: Contacted
@@ -1202,48 +1463,96 @@
   added: "August 4, 2023 11:34 AM"
   bounty: null
   language: "TypeScript, WASM"
+# Cashu Dev Kit - Mint (ecash)
 -
-  name: thesimplekid (Brendan)
-  status: Draft Integration
-  priority: null
-  estimated_value: null
-  company: Cashu Dev Kit
-  last_contact: null
-  expected_close: null
-  phone: null
-  email: null
-  account_owner: null
-  added: "August 14, 2024 10:17 PM"
-  bounty: null
+  name: Cashu Dev Kit
+  class: mint
+  status: draft
   language: Rust
+  custody: custodial
+  native_http_client: true
+  capabilities:
+    sending: planned
+    receive_consolidation: planned
+    cut_through: false
+    channel_open: false
+    async_status: false
+    fallback: false
+    ohttp_relay_rotation: false
+  sync_method: full_node
+  blocker: contacting_thesimplekid_for_1.0_update
+  owner:
+    internal: Dan Gould
+    external: thesimplekid (Brendan)
+  scores:
+    leverage: 3
+    feasibility: 2
+    spec_feedback: 2
+    maintenance: 4
+  next_artifact:
+    type: message
+    description: "Contact thesimplekid for 1.0 update"
+    url: null
+  contact:
+    name: "thesimplekid (Brendan)"
+    last_contact: null
+  added: "August 14, 2024 10:17 PM"
 -
-  name: Bitcoin Core (W0xit)
-  status: Negotiation
-  priority: null
-  estimated_value: null
-  company: null
-  last_contact: null
-  expected_close: null
-  phone: null
-  email: null
-  account_owner: null
+# Bitcoin Core - On Chain Wallet (reference implementation)
+-
+  name: Bitcoin Core
+  class: on_chain_wallet
+  status: negotiation
+  language: "C++"
+  custody: self_custodial
+  native_http_client: false
+  owner:
+    internal: null
+    external: W0xit
+  scores:
+    leverage: 5
+    feasibility: 2
+    spec_feedback: 5
+    maintenance: 3
+  notes: "THE reference implementation - maximum leverage if Core supports Payjoin. Have buy-in but it's hard. Can show PoC with C++ bindings to up feasibility over time. Rigorous spec feedback. Core has high maintenance but ideally handing it off."
+  contact:
+    name: W0xit
+    last_contact: null
   added: "November 19, 2024 10:44 AM"
-  bounty: null
-  language: c++
+# LDK-Node - Lightning
 -
   name: LDK-Node
-  status: Draft Integration
-  priority: null
-  estimated_value: null
-  company: null
-  last_contact: null
-  expected_close: null
-  phone: null
-  email: null
-  account_owner: null
+  class: lightning
+  status: draft
+  language: Rust
+  custody: self_custodial
+  native_http_client: true
+  capabilities:
+    sending: planned
+    receive_consolidation: planned
+    cut_through: false
+    channel_open: true
+    async_status: false
+    fallback: false
+    ohttp_relay_rotation: false
+  sync_method: "esplora, electrum, or full_node"
+  blocker: async_persist_api_pr
+  owner:
+    internal: Camillarhi
+    external: null
+  scores:
+    leverage: 4
+    feasibility: 4
+    spec_feedback: 2
+    maintenance: 2
+  next_artifact:
+    type: pr
+    description: "Camillarhi's PR building on async persist API"
+    url: "https://github.com/lightningdevkit/ldk-node/pull/746"
+  contact:
+    name: null
+    last_contact: null
   added: "November 19, 2024 10:55 AM"
-  bounty: null
-  language: null
 -
   name: null
   status: Lead

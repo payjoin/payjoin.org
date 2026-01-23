@@ -1,137 +1,246 @@
 # Project: Payjoin Integrations Tracker
 
-Turn a CSV export of Payjoin integrations into a GitHub Pages site using **MkDocs Material**, rendering the data as a table from a canonical YAML file.
-
-Assume
-- A CSV export already exists at the repo in ExportBlock folder (e.g. `integrations.csv`)
-- This repo is otherwise empty
-
-
-The end state should be:
-- Canonical data stored as YAML
-- A rendered table on a docs site
-- Deployed automatically via GitHub Pages (GitHub Actions)
+Track Payjoin integration candidates with canonical YAML data rendered via MkDocs Material on GitHub Pages.
 
 ---
 
-# Tasks (in order)
+## Purpose
 
-## 1. Repo scaffold
+This tracker exists to:
+1. **Decide sequencing** - Which integrations to prioritize
+2. **Observe progress** - Without heroic effort, via observable artifacts
+3. **Maintain canonical data** - Reviewable in PRs, renderable to a site
 
-Create the following structure:
+---
+
+## Integration Classification
+
+Every integration fits exactly one **primary class**.
+
+**Principle**: Categorize by the most complicated function, but no more complicated. If it can do Lightning and isn't something more specific (Exchange, Mint, etc.), it's Lightning.
+
+| Class | What it means | Payjoin relevance | Examples |
+|-------|--------------|-------------------|----------|
+| **On Chain Wallet** | Self-custodial Bitcoin-only wallet | Sender and/or receiver | Sparrow, Wasabi, Bitcoin Core, BDK-CLI, payjoin-cli |
+| **Exchange / Custodian** | Custodial exchange, broker, or banking | High-volume send/receive, batching | Bull Bitcoin, Binance, Swan, River, Galoy/Blink/Bria |
+| **Lightning** | Anything LN-capable (unless more specific) | Channel opens, consolidation | Zeus, Breez, Alby, Strike, LDK-Node, Blixt |
+| **Mint** | Ecash mint | On-chain settlements | Cashu, Fedimint |
+| **Payment Processor** | Merchant payment infrastructure | Receiving at scale | BTCPayServer, OpenNode |
+| **Swap Service** | Atomic/submarine swaps | Cross-chain/layer settlement | Boltz, Portico |
+
+---
+
+## Protocol Surface Checklist
+
+For each integration, track which Payjoin capabilities are relevant:
+
+### Capabilities
+- [ ] **Sending** - Can initiate Payjoin as sender
+- [ ] **Receive Consolidation** - Receiver adds inputs to batch/consolidate UTXOs
+- [ ] **Cut-through** - Receiver replaces output to forward payment (transaction cut-through)
+- [ ] **Channel Open** - Receiver opens Lightning channel with incoming payment
+- [ ] **Async Status** - Supports async Payjoin v2 status checking
+- [ ] **Fallback** - Graceful fallback to standard transaction
+- [ ] **OHTTP Relay Rotation** - Rotates OHTTP relays for privacy
+
+### Native HTTP Client
+Does the integration use a native HTTP client (fetch)? `true`, `false`, or `planned`.
+
+### Sync Method
+Document how the integration syncs: `full node`, `electrum`, `esplora`, `SPV`, `custodial`, etc.
+
+### Error Handling
+Qualitative notes on how failures are handled. Examples:
+- "Retry-safe with idempotent requests"
+- "Falls back to standard transaction on timeout"
+- "No graceful degradation"
+
+---
+
+## Core Questions Per Integration
+
+Answer these for every lead:
+
+### 1. What can they integrate today?
+- Custodial or self-custodial?
+- Do they have a native HTTP client?
+
+This determines **feasibility** without relying on roadmap promises.
+
+### 2. What's the blocking constraint?
+Pick the primary blocker:
+- Engineering time
+- Product priority
+- Legal/compliance
+- UX risk
+- Missing infra (library / spec / test vectors)
+
+> If they say "time" but have no open issues → not real.
+
+### 3. What's the next observable artifact?
+One of:
+- PR
+- Issue
+- Test vector
+- Design doc
+- Prototype branch
+
+> If you can't name it, it's not progress.
+
+### 4. Who owns it?
+- Name or role
+- External vs internal to Payjoin project
+- Single point of failure?
+
+---
+
+## Priority Scoring
+
+Score each integration 1–5 on:
+
+| Factor | Description |
+|--------|-------------|
+| **Leverage** | How many other integrations benefit |
+| **Feasibility** | Can ship in ≤90 days |
+| **Impact** | Wallet share, transaction volume |
+| **Spec feedback** | Will this integration stress-test the spec? |
+| **Maintenance** | Lower is better (1 = low maintenance) |
+
+**Sort by**: `(Leverage + Impact + Feasibility) – Maintenance`
+
+---
+
+## YAML Schema
+
+Each integration lives in `data/integrations.yaml` or individual files under `integrations/`.
+
+```yaml
+name: Cake Wallet
+class: on_chain_wallet
+status: beta
+language: Flutter
+custody: self_custodial
+native_http_client: planned
+capabilities:
+  sending: true
+  receive_consolidation: true
+  cut_through: false
+  channel_open: false
+  async_status: false
+  fallback: false
+  ohttp_relay_rotation: false
+sync_method: esplora
+blocker: their_engineering_time
+owner:
+  internal: Spacebear
+  external: "Konstantin @ Cake"
+next_artifact:
+  type: pr
+  description: "1.0 update PR"
+  url: null
+contact:
+  name: N0izecore, Sethforprivacy
+  last_contact: 2023-02-04
+```
+
+---
+
+## Data Storage
+
+- **Source of truth**: YAML in this repository
+- **Rendered view**: MkDocs Material site on GitHub Pages
+- **Updates**: Via pull requests (reviewable)
+
+---
+
+## Site Structure
+
+```
 .
 ├── mkdocs.yml
 ├── docs/
-│ ├── index.md
-│ └── integrations.md
+│   ├── index.md          # What this tracker is
+│   └── integrations.md   # Table rendered from YAML
 ├── data/
-│ └── integrations.yaml
-├── .github/
-│ └── workflows/
-│ └── deploy.yml
-└── integrations.csv
-
-
-Do NOT delete the CSV yet.
+│   └── integrations.yaml # Canonical data
+└── .github/
+    └── workflows/
+        └── deploy.yml    # GitHub Pages deployment
+```
 
 ---
 
-## 2. Convert CSV → YAML
-
-- Read `integrations.csv`
-- Convert each row into a YAML list entry
-- Preserve all columns as keys
-- Normalize keys to `snake_case`
-- Output to `data/integrations.yaml`
-
-If a column is empty, still include the key with a null value.
-
-This YAML file is the **single source of truth** going forward.
-
----
-
-## 3. MkDocs configuration
-
-Create `mkdocs.yml` with:
-- `material` theme
-- `search` plugin
-- `table-reader` plugin enabled
-- Clean, minimal config (no extra features)
-
-Site title can be something neutral like:
-> Payjoin Integration Tracker
-
----
-
-## 4. Docs pages
-
-### `docs/index.md`
-- Short explanation of what this tracker is
-- State that data is canonical and lives in the repo
-- Mention that updates happen via PRs
-
-### `docs/integrations.md`
-- Render the table directly from `data/integrations.yaml`
-- Use the table-reader plugin (no manual tables)
-- No hardcoded data in Markdown
-
----
-
-## 5. GitHub Pages deployment
-
-Create a GitHub Actions workflow that:
-- Runs on `push` to `main`
-- Installs Python + MkDocs Material + table-reader
-- Builds the site
-- Deploys to GitHub Pages
-
-Use the standard MkDocs → Pages pattern.
-Do NOT use deprecated `gh-pages` actions.
-
----
-
-## 6. Constraints / style
+## Constraints
 
 - Prefer clarity over cleverness
 - No JavaScript, no React, no custom tooling
-- Everything must be reviewable in PRs
-- Assume non-technical contributors may edit YAML later
+- Everything reviewable in PRs
+- Non-technical contributors may edit YAML
+- No time estimates in planning
 
 ---
 
-# Deliverables
+## GitHub Pages Setup
 
-When done, output:
-1. All created file contents (verbatim)
-2. A brief checklist of **manual steps I must do in GitHub UI** to finish setup (Pages enablement)
-
-Do not include explanations beyond that.
-
+After pushing, enable Pages in GitHub UI:
+1. Settings → Pages
+2. Source: GitHub Actions
+3. The deploy workflow handles the rest
 
 ---
 
-## To-replace Project Overview
+## Status Pipeline
 
-This repository tracks Payjoin integration candidates - a CRM-style pipeline for Bitcoin wallet and service providers who may integrate the Payjoin protocol. The data includes contact information, integration status, estimated value, and programming languages used by each candidate.
+| Status | Meaning |
+|--------|---------|
+| `lead` | Initial prospect |
+| `contacted` | Reached out |
+| `qualified` | Confirmed interest/fit |
+| `negotiation` | Discussing terms |
+| `draft` | Technical work started |
+| `beta` | Integration in testing |
+| `live` | Shipped |
+| `lost` | Did not proceed |
 
-## To-replace Data Structure
+---
 
-The CSV files in `ExportBlock-*/` contain integration candidate data with the following fields:
-- **Name**: Contact person(s)
+## Session State (Resume Here)
 
-- **Priority**: High or blank
-- **Estimated Value**: Potential deal value
-- **Company**: Organization name
-- **Last Contact**: Date of last communication
-- **Language**: Programming languages used (relevant for integration: Rust, TypeScript, WASM, Flutter, React Native, UniFFI, Python, C#, etc.)
-- **Bounty**: Integration bounty amount if applicable
+**Last updated**: 2026-01-23
 
-## Integration Status Pipeline (to replace)
+### Completed (migrated to new schema)
+- [x] Bull Bitcoin Mobile (beta, on_chain_wallet)
+- [x] Bull Bitcoin Exchange (draft, exchange_custodian)
+- [x] Cake Wallet (beta, on_chain_wallet)
+- [x] bitmask-core (beta, on_chain_wallet) - status uncertain, may be closed source
+- [x] nolooking LND (beta, lightning)
+- [x] payjoin-cli (beta, on_chain_wallet)
+- [x] BDK-CLI (beta, on_chain_wallet)
+- [x] Boltz (draft, swap_service)
+- [x] Foundation Devices (draft, on_chain_wallet)
+- [x] Liana / WizardSardine (draft, on_chain_wallet)
+- [x] Bria / Galoy (draft, exchange_custodian)
+- [x] Cashu Dev Kit (draft, mint)
+- [x] LDK-Node (draft, lightning)
 
-1. Lead - Initial prospect
-2. Contacted - Reached out
-3. Qualified - Confirmed interest/fit
-4. Negotiation - Discussing terms
-5. Draft Integration - Technical work started
-6. Beta 💪 - Integration in testing
-7. Lost - Did not proceed
+### Next up (Negotiation tier)
+- [ ] Diamond hands (Koji & Yuya)
+- [ ] Strike (Tom Kirkpatrick)
+- [ ] Zeus (Evan Kaloudis)
+- [ ] Wasabi (Max Hillebrand)
+- [ ] Electrum via Plugin
+- [ ] Blixt (Hampus)
+- [ ] Galoy (separate from Bria)
+- [ ] Bitcoin Core (W0xit)
+
+### Remaining tiers
+- Qualified (10 entries)
+- Contacted (25+ entries)
+- Lead (40+ entries)
+
+### Schema changes made this session
+1. Renamed `own_networking_stack` → `native_http_client`
+2. Dropped `psbt_control` as a tracked field
+3. Added capabilities: `async_status`, `fallback`, `ohttp_relay_rotation`
+4. Split Bull Bitcoin into Mobile + Exchange
+5. Changed "non-custodial" → "self-custodial" terminology
