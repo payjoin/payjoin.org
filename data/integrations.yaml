@@ -1,3 +1,79 @@
+# River - Exchange
+- name: River
+  class: exchange_custodian
+  status: prospect
+  language: Elixir
+  custody: custodial
+  scores:
+    leverage: 5
+    feasibility: 1
+    maintenance: 5
+  spec_feedback: real_usage
+  blocker: Elixir bindings + behind other exchanges
+  notes: Huge Bitcoin-only exchange. Alex Lieshman. Elixir backend - no idea how to bind.
+  contact:
+    name: Alex Lieshman
+  owner:
+    name: Dan Gould
+    internal: true
+
+# Relai - Exchange (Swiss)
+- name: Relai
+  class: exchange_custodian
+  status: prospect
+  language: unknown
+  custody: custodial
+  scores:
+    leverage: 4
+    feasibility: 1
+    maintenance: 3
+  spec_feedback: already_covered
+  blocker: Behind Cash App, need competitive pressure
+  notes: Swiss exchange. Adam Belican. Smaller than River. Somewhat surveillance-focused.
+  contact:
+    name: Adam Belican
+  owner:
+    name: Dan Gould
+    internal: true
+
+# Bitrefill - Merchant/Gift Cards
+- name: Bitrefill
+  class: payment_processor
+  status: prospect
+  language: "Node.js, React"
+  custody: custodial
+  scores:
+    leverage: 4
+    feasibility: 3
+    maintenance: 2
+  spec_feedback: real_usage
+  blocker: Outreach + JS integration
+  notes: Major Bitcoin merchant. High volume gift card/refill service. Node.js backend, JS bindings exist.
+  contact:
+    name: Sergej Kotliar
+  owner:
+    name: Dan Gould
+    internal: true
+
+# Coinkite Store - Hardware Wallet Merchant
+- name: Coinkite Store
+  class: on_chain_wallet
+  status: prospect
+  language: "Python, MicroPython"
+  custody: self_custodial
+  scores:
+    leverage: 3
+    feasibility: 1
+    maintenance: 1
+  spec_feedback: already_covered
+  blocker: They fund us but store doesn't even support LN yet
+  notes: Coldcard maker. NVK. Products support payjoin but custom store doesn't. Very low maintenance if we get it.
+  contact:
+    name: NVK
+  owner:
+    name: Dan Gould
+    internal: true
+
 # BlueWallet - Lightning/On-Chain Wallet (Mobile)
 - name: BlueWallet
   class: lightning
@@ -299,7 +375,7 @@
     internal: Dan Gould
     external: Zach Herbert
   scores:
-    leverage: 1
+    leverage: 2
     feasibility: 3
     maintenance: 1
   spec_feedback: already_covered
@@ -401,7 +477,7 @@
     external: "Steve Lee, Miles, Michael Rihani"
   scores:
     leverage: 5
-    feasibility: 1
+    feasibility: 2
     maintenance: 4
   spec_feedback: rigorous
   blocker: Case study
