@@ -44,3 +44,12 @@ def define_env(env):
         if inverted:
             colors = {1: '🔵', 2: '🟢', 3: '🟡', 4: '🟠', 5: '🔴'}
         return colors.get(value, '⚪')
+
+    @env.filter
+    def truncate(text, length=50):
+        """Truncate text with ellipsis."""
+        if not text:
+            return '-'
+        if len(text) <= length:
+            return text
+        return text[:length].rsplit(' ', 1)[0] + '…'
