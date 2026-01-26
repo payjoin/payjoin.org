@@ -420,6 +420,7 @@
 # bitmask-core - On Chain Wallet (status uncertain)
 -
   name: bitmask-core
+  tracking_issue: https://github.com/diba-io/bitmask-core/pull/121
   class: on_chain_wallet
   status: beta
   language: Rust
@@ -1054,6 +1055,7 @@
 # BDK-CLI - On Chain Wallet
 -
   name: BDK-CLI
+  tracking_issue: https://github.com/bitcoindevkit/bdk-cli/pull/156
   class: on_chain_wallet
   status: beta
   language: Rust
