@@ -1,3 +1,156 @@
+# Lexe - Lightning Wallet
+- name: Lexe
+  class: lightning
+  status: engaged
+  language: Rust
+  custody: self_custodial
+  scores:
+    leverage: 2
+    feasibility: 3
+    maintenance: 3
+  spec_feedback: real_usage
+  blocker: Evaluating async callbacks
+  notes: Rust wallet, needed async API (which we mostly have). Evaluating callback approach.
+  contact:
+    name: Max Fang
+  owner:
+    name: Spacebear
+    internal: true
+
+# Proton Wallet - On Chain Wallet
+- name: Proton Wallet
+  class: on_chain_wallet
+  status: prospect
+  language: unknown
+  custody: self_custodial
+  scores:
+    leverage: 2
+    feasibility: 4
+    maintenance: 3
+  spec_feedback: already_covered
+  blocker: Need to convince - wallet not their main focus
+  notes: Proton's Bitcoin wallet. Need convincing more than technical work. Wallet not main focus but may become solid funder.
+  contact:
+    name: Dingchao Lu
+  owner:
+    name: Dan Gould
+    internal: true
+
+# Ledger Live - Hardware Wallet Software
+- name: Ledger Live
+  tracking_issue: https://github.com/payjoin/rust-payjoin/issues/942
+  class: on_chain_wallet
+  status: engaged
+  language: TypeScript
+  custody: self_custodial
+  scores:
+    leverage: 5
+    feasibility: 2
+    maintenance: 3
+  spec_feedback: real_usage
+  blocker: no_std support + TypeScript bindings
+  notes: Millions of users. Salvatore Ingala asked directly in our repo - internal champion with sway.
+  contact:
+    name: Salvatore Ingala
+  owner:
+    name: Dan Gould
+    internal: true
+
+# Breez - Lightning SDK
+- name: Breez
+  class: lightning
+  status: prospect
+  language: Rust
+  custody: self_custodial
+  scores:
+    leverage: 4
+    feasibility: 3
+    maintenance: 3
+  spec_feedback: real_usage
+  blocker: SDK integration approach
+  notes: SDK used by many apps - multiplier effect. Rust-friendly. Roy Sheinfeld.
+  contact:
+    name: Roy Sheinfeld
+  owner:
+    name: Dan Gould
+    internal: true
+
+# Kraken - Exchange
+- name: Kraken
+  class: exchange_custodian
+  status: prospect
+  language: unknown
+  custody: custodial
+  scores:
+    leverage: 5
+    feasibility: 1
+    maintenance: 4
+  spec_feedback: real_usage
+  blocker: Corporate outreach + unknown stack
+  notes: Massive exchange. Would be huge signal. Unknown tech stack, big corp difficulty.
+  contact:
+    name: null
+  owner:
+    name: Dan Gould
+    internal: true
+
+# Swan - Exchange (Bitcoin-only)
+- name: Swan
+  class: exchange_custodian
+  status: prospect
+  language: unknown
+  custody: custodial
+  scores:
+    leverage: 3
+    feasibility: 2
+    maintenance: 2
+  spec_feedback: already_covered
+  blocker: Outreach + stack discovery
+  notes: Bitcoin-only exchange, aligned values, DCA focused. Cory Klippsten. Reachable.
+  contact:
+    name: Cory Klippsten
+  owner:
+    name: Dan Gould
+    internal: true
+
+# Trezor Suite - Hardware Wallet Software
+- name: Trezor Suite
+  class: on_chain_wallet
+  status: prospect
+  language: TypeScript
+  custody: self_custodial
+  scores:
+    leverage: 4
+    feasibility: 2
+    maintenance: 3
+  spec_feedback: already_covered
+  blocker: Corporate + TypeScript integration
+  notes: Major HW wallet software. Huge user base. TypeScript - need good JS/TS bindings.
+  contact:
+    name: null
+  owner:
+    name: Dan Gould
+    internal: true
+
+# LNbits - Lightning Accounting
+- name: LNbits
+  class: lightning
+  status: prospect
+  language: Python
+  custody: custodial
+  scores:
+    leverage: 2
+    feasibility: 4
+    maintenance: 1
+  spec_feedback: already_covered
+  blocker: Python integration
+  notes: LN accounting/extensions platform. Python - we have bindings. Easy win potential.
+  contact:
+    name: null
+  owner:
+    name: Dan Gould
+    internal: true
+
 # River - Exchange
 - name: River
   class: exchange_custodian
