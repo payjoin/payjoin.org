@@ -19,6 +19,7 @@
 
 # FullyNoded - On Chain Wallet (iOS)
 - name: FullyNoded
+  tracking_issue: https://github.com/Fonta1n3/FullyNoded/issues/271
   class: on_chain_wallet
   status: engaged
   language: Swift
@@ -39,6 +40,7 @@
 # Boltz - Swap Service
 -
   name: Boltz
+  tracking_issue: https://github.com/payjoin/rust-payjoin/issues/1205
   class: swap_service
   status: draft
   language: "TypeScript, WASM"
@@ -84,6 +86,7 @@
 # Bull Bitcoin Mobile - On Chain Wallet
 -
   name: Bull Bitcoin Mobile
+  tracking_issue: https://github.com/payjoin/rust-payjoin/issues/1206
   class: on_chain_wallet
   status: beta
   language: "Flutter, Rust"
@@ -147,6 +150,7 @@
 # Foundation Devices - On Chain Wallet (Passport HW, Envoy SW)
 -
   name: Foundation Devices
+  tracking_issue: https://github.com/Foundation-Devices/envoy/issues/83
   class: on_chain_wallet
   status: draft
   language: "Flutter, Rust"
@@ -553,6 +557,7 @@
 # Wasabi - On Chain Wallet (privacy/coinjoin)
 -
   name: Wasabi
+  tracking_issue: https://github.com/WalletWasabi/WalletWasabi/issues/13628
   class: on_chain_wallet
   status: engaged
   language: "C#, UniFFI"
@@ -827,6 +832,7 @@
 # Fedimint - Mint (federated ecash)
 -
   name: Fedimint
+  tracking_issue: https://github.com/fedimint/fedimint/discussions/1764
   class: mint
   status: engaged
   language: Rust
@@ -1025,6 +1031,7 @@
 # Electrum - On Chain Wallet (plugin)
 -
   name: Electrum
+  tracking_issue: https://github.com/spesmilo/electrum/issues/6585
   class: on_chain_wallet
   status: engaged
   language: Python
@@ -1085,6 +1092,7 @@
 # Blixt - Lightning Wallet
 -
   name: Blixt
+  tracking_issue: https://github.com/hsjoberg/blixt-wallet/issues/1262
   class: lightning
   status: engaged
   language: "React Native, UniFFI"
@@ -1206,6 +1214,7 @@
   bounty: null
   language: null
 - name: JAM
+  tracking_issue: https://github.com/joinmarket-webui/jam/issues/406
   class: on_chain_wallet
   status: engaged
   language: Python
@@ -1434,6 +1443,7 @@
 # WizardSardine / Liana - On Chain Wallet (timelock recovery)
 -
   name: Liana
+  tracking_issue: https://github.com/payjoin/rust-payjoin/issues/1204
   class: on_chain_wallet
   status: draft
   language: Rust
@@ -1468,6 +1478,7 @@
 # Bria (Galoy) - Exchange / Custodian (wallet infrastructure)
 -
   name: Bria
+  tracking_issue: https://github.com/GaloyMoney/bria/issues/266
   class: exchange_custodian
   status: draft
   language: Rust
@@ -1601,6 +1612,7 @@
 # Bitcoin Core - On Chain Wallet (reference implementation)
 -
   name: Bitcoin Core
+  tracking_issue: https://github.com/bitcoin/bitcoin/issues/33684
   class: on_chain_wallet
   status: engaged
   language: "C++"
@@ -1623,6 +1635,7 @@
 # LDK-Node - Lightning
 -
   name: LDK-Node
+  tracking_issue: https://github.com/lightningdevkit/ldk-node/pull/746
   class: lightning
   status: draft
   language: Rust
