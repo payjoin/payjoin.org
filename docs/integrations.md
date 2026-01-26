@@ -1,10 +1,10 @@
 # Integrations
 
-Priority: **6L + 2F - M** | Legend: 🔵 best → 🔴 worst (M inverted: 🔵 = low maintenance)
+**Score = 6🎯 + 2⚡ − 🔧** | 🎯 Leverage · ⚡ Feasibility · 🔧 Maintenance | 🔵 best → 🔴 worst
 
 ## Scored Integrations
 
-| Name | Blocker | Score | L | F | M | Status | Spec |
+| Name | Blocker | Score | 🎯 | ⚡ | 🔧 | Status | Spec |
 |------|---------|------:|:-:|:-:|:-:|--------|------|
 {% for i in scored_integrations() -%}
 | {% if i.tracking_issue %}[**{{ i.name }}**]({{ i.tracking_issue }}){% else %}**{{ i.name }}**{% endif %} | {{ i.blocker or '❓ needs blocker' }} | {{ i.priority_score }} | {{ i.scores.leverage | score_color }} | {{ i.scores.feasibility | score_color }} | {{ i.scores.maintenance | score_color(inverted=True) }} | {{ i.status }} | {{ i.spec_feedback or '-' }} |
