@@ -1,3 +1,93 @@
+# Phoenix - Lightning Wallet (ACINQ)
+- name: Phoenix
+  tracking_issue: https://github.com/ACINQ/phoenix/issues/161
+  class: lightning
+  status: prospect
+  language: Kotlin
+  custody: self_custodial
+  scores:
+    leverage: 4
+    feasibility: 2
+    maintenance: 3
+  spec_feedback: real_usage
+  blocker: Kotlin bindings
+  notes: Popular mobile LN wallet from ACINQ. Large user base. Need Kotlin/JVM bindings.
+  owner:
+    name: Dan Gould
+    internal: true
+
+# Eclair - Lightning Node (ACINQ)
+- name: Eclair
+  tracking_issue: https://github.com/ACINQ/eclair/pull/2275
+  class: lightning
+  status: prospect
+  language: Scala
+  custody: self_custodial
+  scores:
+    leverage: 3
+    feasibility: 2
+    maintenance: 3
+  spec_feedback: real_usage
+  blocker: Scala/JVM bindings
+  notes: ACINQ's Lightning implementation. Solid team but Scala is niche for bindings.
+  owner:
+    name: Dan Gould
+    internal: true
+
+# Specter Desktop - On Chain Wallet (HWW-focused)
+- name: Specter Desktop
+  tracking_issue: https://github.com/cryptoadvance/specter-desktop/issues/1369
+  class: on_chain_wallet
+  status: prospect
+  language: Python
+  custody: self_custodial
+  scores:
+    leverage: 3
+    feasibility: 4
+    maintenance: 2
+  spec_feedback: already_covered
+  blocker: Python integration attempt
+  notes: Popular among self-custody users with hardware wallets. Python bindings exist.
+  owner:
+    name: Dan Gould
+    internal: true
+
+# Stack Wallet - On Chain Wallet (multi-coin)
+- name: Stack Wallet
+  tracking_issue: https://github.com/cypherstack/stack_wallet/issues/445
+  class: on_chain_wallet
+  status: prospect
+  language: Flutter
+  custody: self_custodial
+  scores:
+    leverage: 2
+    feasibility: 3
+    maintenance: 2
+  spec_feedback: already_covered
+  blocker: Flutter/Dart bindings
+  notes: Multi-coin wallet with smaller Bitcoin-only user base. Need Dart bindings.
+  owner:
+    name: Dan Gould
+    internal: true
+
+# bitcoin-s - Scala Bitcoin Library
+- name: bitcoin-s
+  tracking_issue: https://github.com/bitcoin-s/bitcoin-s/issues/1362
+  class: on_chain_wallet
+  status: prospect
+  language: Scala
+  custody: self_custodial
+  scores:
+    leverage: 2
+    feasibility: 2
+    maintenance: 3
+  spec_feedback: already_covered
+  blocker: Scala/JVM bindings
+  notes: Scala Bitcoin library. Niche ecosystem but maintained.
+  owner:
+    name: Dan Gould
+    internal: true
+
 # Green - On Chain Wallet (Blockstream)
 - name: Green
   class: on_chain_wallet
@@ -420,6 +510,7 @@
 # bitmask-core - On Chain Wallet (status uncertain)
 -
   name: bitmask-core
+  tracking_issue: https://github.com/diba-io/bitmask-core/pull/121
   class: on_chain_wallet
   status: beta
   language: Rust
@@ -1054,6 +1145,7 @@
 # BDK-CLI - On Chain Wallet
 -
   name: BDK-CLI
+  tracking_issue: https://github.com/bitcoindevkit/bdk-cli/pull/156
   class: on_chain_wallet
   status: beta
   language: Rust
