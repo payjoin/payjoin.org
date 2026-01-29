@@ -4,6 +4,25 @@ Track Payjoin integration candidates with canonical YAML data rendered via MkDoc
 
 ---
 
+## Local Dev Server
+
+```bash
+# One-time setup (venv already exists at /tmp/yaml-test after first run)
+python3 -m venv /tmp/yaml-test
+/tmp/yaml-test/bin/python -m ensurepip --upgrade
+/tmp/yaml-test/bin/pip install mkdocs mkdocs-material mkdocs-macros-plugin pyyaml
+
+# Build only
+/tmp/yaml-test/bin/mkdocs build
+
+# Serve locally (default port 8000)
+/tmp/yaml-test/bin/mkdocs serve
+```
+
+If port 8000 is busy, use `-a 127.0.0.1:PORT`. Kill with `lsof -ti:PORT | xargs kill`.
+
+---
+
 ## Purpose
 
 This tracker exists to:

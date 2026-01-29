@@ -1878,6 +1878,42 @@
   added: "July 7, 2023 10:32 PM"
   duplicate_of: Bria
   notes: "Galoy backend is same as Bria. Challenge is human/deployment - getting the bank to actually deploy Bria. Blink app is a separate front-end (like Bitcoin Beach) that could be its own entry if needed."
+# Blink - Lightning (Galoy-based community banking app)
+-
+  name: Blink
+  tracking_issue: https://github.com/blinkbitcoin/blink-mobile/issues/3355
+  class: lightning
+  status: engaged
+  language: TypeScript
+  custody: custodial
+  native_http_client: true
+  capabilities:
+    sending: planned
+    receive_consolidation: planned
+    cut_through: false
+    channel_open: false
+    async_status: false
+    fallback: false
+    ohttp_relay_rotation: false
+  sync_method: custodial
+  blocker: bria_integration_first
+  owner:
+    internal: Dan Gould
+    external: null
+  scores:
+    leverage: 3
+    feasibility: 3
+    maintenance: 2
+  spec_feedback: real_usage
+  notes: "Galoy-based community banking app (Bitcoin Beach wallet). Shares Bria payout backend with Galoy but has its own app backend. Payjoin integration likely flows through Bria for on-chain, so Bria landing first de-risks this. Real users in El Salvador and elsewhere give real_usage feedback. Leverage 3 because community banking is a distinct use case but not a massive multiplier. Feasibility 3 - depends on Bria landing but TypeScript app layer is straightforward. Maintenance 2 - custodial simplifies things."
+  next_artifact:
+    type: issue
+    description: "Payjoin support tracking issue"
+    url: "https://github.com/blinkbitcoin/blink-mobile/issues/3355"
+  contact:
+    name: null
+    last_contact: null
+  added: "January 29, 2026"
 -
   name: Portico Exchange
   status: Contacted
