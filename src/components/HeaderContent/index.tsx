@@ -1,4 +1,5 @@
 import Marquee from "react-fast-marquee";
+import styles from "./styles.module.css";
 
 // Button component remains unchanged
 export function Button({ children, variant }) {
@@ -15,14 +16,19 @@ export function Button({ children, variant }) {
   );
 }
 
-const Testimonial = ({ text, name, image }) => (
-  <div className="flex flex-col items-start justify-between gap-4 mx-4 w-96 bg-tertiary rounded-lg p-6 shadow-lg">
-    <blockquote className="border-l-secondary text-left italic text-sm">{text}</blockquote>
-    <div className="flex items-center">
-      <img src={image} alt={name} className="w-8 h-8 rounded-full mr-4" />
-      <span className="font-bold">{name}</span>
-    </div>
-  </div>
+/*
+ * ADDING A NEW WALLET LOGO:
+ * 1. Add logo image to /static/img/ (PNG or SVG)
+ * 2. Crop image tightly - no excess padding
+ * 3. For square/tall logos (aspect ratio < 2:1), add text prop for visual balance
+ *    Example: text="Wallet Name"
+ * 4. Wide horizontal logos (aspect ratio > 2:1) don't need text
+ */
+const WalletLogo = ({ href, src, alt, text }) => (
+  <a href={href} className="flex items-center gap-3 mx-10 no-underline hover:no-underline">
+    <img className={styles.logoImg} src={src} alt={alt} />
+    {text && <span className={styles.logoText}>{text}</span>}
+  </a>
 );
 
 export default function HeaderContent() {
@@ -49,42 +55,20 @@ export default function HeaderContent() {
           </a>
         </div>
       </div>
-      <div className="w-full overflow-hidden">
-        <Marquee
-          gradient={true}
-          gradientColor="#46192b"   
-        >
-          <div className="flex items-start">
-            <Testimonial
-              text="Payjoin usage improves the privacy of all bitcoiners by breaking the common input ownership heuristic - you can no longer assume all inputs belong to the sender."
-              name="ODELL"
-              image="https://avatars.githubusercontent.com/u/50266466?v=4"
-            />
-            <Testimonial
-              text="Payjoin doesn't even have to be widely used to make the common input ownership heuristic unusable. Since payjoins are indistinguishable on-chain, it should suffice to have payjoin optionally available in most wallets."
-              name="El Flaco"
-              image="https://pbs.twimg.com/profile_images/1819046599768612871/S2BADZaw_400x400.jpg"
-            />
-            <Testimonial
-              text="More payjoin adoption would be a good thing. payjoin = https"
-              name="Gigi"
-              image="https://dergigi.com/assets/images/avatar.jpg"
-            />
-            <Testimonial
-              text="Wallet side p2p PayJoin is the future IMO... Bitcoin needs more PayJoin and p2p capable PayJoin wallet interop."
-              name="Adam Back"
-              image="https://pbs.twimg.com/profile_images/1364645619705511936/IGTT_tnL_400x400.jpg"
-            />
-            <Testimonial
-              text="Using Payjoin when spending is so underrated.
-
-The ability to break common-input-ownership heuristic *and* completely obfuscate amount sent is extremely powerful."
-              name="Seth For Privacy"
-              image="https://pbs.twimg.com/profile_images/1507020330954489862/MNnJ320U_400x400.jpg"
-            />
-          </div>
-        </Marquee>
-      </div>
+      <Marquee
+        className="bg-tertiary w-32 h-[24vh]"
+        gradient={true}
+        gradientColor="#46192b"
+      >
+        <WalletLogo href="https://bitmask.app" src="/img/bitmask.svg" alt="bitmasklogo" />
+        <WalletLogo href="https://bluewallet.io" src="/img/bluewallet.svg" alt="bluewallet logo" />
+        <WalletLogo href="https://btcpayserver.org" src="/img/btcpay.svg" alt="btcpayserver logo" />
+        <WalletLogo href="https://cakewallet.com" src="/img/cakewallet.svg" alt="Cake Wallet logo" />
+        <WalletLogo href="https://wallet.bullbitcoin.com" src="/img/bullbitcoin.png" alt="BULL wallet logo" />
+        <WalletLogo href="https://github.com/JoinMarket-Org/joinmarket-clientserver" src="/img/joinmarket.png" alt="joinmarket logo" />
+        <WalletLogo href="https://sparrowwallet.com" src="/img/sparrow.png" alt="sparrow logo" text="Sparrow Wallet" />
+        <WalletLogo href="https://wasabiwallet.io" src="/img/wasabi.svg" alt="wasabi logo" />
+      </Marquee>
     </div>
   );
 }
