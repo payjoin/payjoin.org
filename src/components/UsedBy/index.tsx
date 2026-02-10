@@ -32,7 +32,7 @@ export default function WalletsUsingPayjoin() {
         <WalletLogo href="https://bluewallet.io" src="/img/bluewallet.svg" alt="bluewallet logo" />
         <WalletLogo href="https://btcpayserver.org" src="/img/btcpay.svg" alt="btcpayserver logo" />
         <WalletLogo href="https://cakewallet.com" src="/img/cakewallet.svg" alt="Cake Wallet logo" />
-        <WalletLogo href="https://wallet.bullbitcoin.com" src="/img/bullbitcoin.png" alt="Bull Bitcoin logo" text="BULL" />
+        <WalletLogo href="https://wallet.bullbitcoin.com" src="/img/bullbitcoin.png" alt="BULL wallet logo" />
         <WalletLogo href="https://github.com/JoinMarket-Org/joinmarket-clientserver" src="/img/joinmarket.png" alt="joinmarket logo" />
         <WalletLogo href="https://sparrowwallet.com" src="/img/sparrow.png" alt="sparrow logo" text="Sparrow Wallet" />
         <WalletLogo href="https://wasabiwallet.io" src="/img/wasabi.svg" alt="wasabi logo" />
