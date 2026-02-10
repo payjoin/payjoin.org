@@ -12,13 +12,13 @@ const Testimonial = ({ text, name, image }) => (
 
 export default function Testimonials() {
   return (
-    <section className="flex flex-col justify-center gap-12 min-h-[50vh] mb-20 w-full">
+    <section className="flex flex-col items-center justify-center gap-12 py-20 w-full">
       <h2 className="text-4xl">What people are saying</h2>
       <Marquee
         gradient={true}
         gradientColor="#46192b"
       >
-        <div className="flex items-start">
+        <div className="flex items-stretch">
           <Testimonial
             text="Payjoin usage improves the privacy of all bitcoiners by breaking the common input ownership heuristic - you can no longer assume all inputs belong to the sender."
             name="ODELL"
