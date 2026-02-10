@@ -2223,3 +2223,23 @@
   added: "January 22, 2026 2:41 PM"
   bounty: null
   language: null
+# Cove - On Chain Wallet (Mobile)
+- name: Cove
+  tracking_issue: https://github.com/bitcoinppl/cove
+  class: on_chain_wallet
+  status: engaged
+  language: "Swift, Kotlin"
+  custody: self_custodial
+  scores:
+    leverage: 2
+    feasibility: 3
+    maintenance: 2
+  spec_feedback: already_covered
+  blocker: Swift/Kotlin bindings
+  notes: Mobile Bitcoin wallet. Needs Swift and Kotlin bindings for integration.
+  contact:
+    name: Praveen
+  owner:
+    name: Dan Gould
+    internal: true
+  added: "February 10, 2026"
