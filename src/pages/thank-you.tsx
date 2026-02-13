@@ -13,7 +13,7 @@ export default function ThankYou(): JSX.Element {
             Questions about your donation?{" "}
             <a href="mailto:donate@payjoin.org">donate@payjoin.org</a>
           </p>
-          <a href="/" style={{ display: "inline-block", marginTop: "24px", color: "#4a9eff" }}>
+          <a href="/" style={{ display: "inline-block", marginTop: "24px" }}>
             Back to payjoin.org
           </a>
         </div>
