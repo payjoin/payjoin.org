@@ -37,6 +37,19 @@ const config: Config = {
   },
   plugins: [tailwindPlugin,
     [
+      '@docusaurus/plugin-content-blog',
+      {
+        id: 'press',
+        routeBasePath: 'press',
+        path: './press',
+        blogTitle: 'Press Releases',
+        blogDescription: 'Official press releases from Payjoin Foundation',
+        blogSidebarTitle: 'All releases',
+        blogSidebarCount: 'ALL',
+        showReadingTime: false,
+      },
+    ],
+    [
       '@docusaurus/plugin-client-redirects',
       {
         redirects: [
@@ -169,6 +182,10 @@ const config: Config = {
         {
           title: "More",
           items: [
+            {
+              label: "Press",
+              to: "/press"
+            },
             {
               label: "Supporters",
               to: "/supporters"
