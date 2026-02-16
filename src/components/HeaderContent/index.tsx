@@ -1,6 +1,5 @@
 import Marquee from "react-fast-marquee";
 import styles from "./styles.module.css";
-import { SubscribeForm } from "../SubscribeForm";
 
 // Button component remains unchanged
 export function Button({ children, variant }) {
@@ -51,7 +50,9 @@ export default function HeaderContent() {
           <a href="./docs/how-payjoin-saves">
             <Button variant="primary">Learn More</Button>
           </a>
-          <SubscribeForm variant="inline" />
+          <a href="./docs/integrate">
+            <Button variant="secondary">Integrate</Button>
+          </a>
         </div>
       </div>
       <Marquee
