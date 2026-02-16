@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Payjoin Foundation: Infrastructure Partner Brief</title>
+<style>
+  @page {
+    size: letter;
+    margin: 0.65in 0.75in;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #1a1a1a;
+    line-height: 1.6;
+    font-size: 10pt;
+    background: #fff;
+  }
+
+  /* Header */
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 12px;
+    border-bottom: 2.5px solid #F75390;
+    margin-bottom: 20px;
+  }
+  .header-left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .header-left svg { width: 24px; height: 24px; }
+  .header-left span {
+    font-size: 9pt;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #1a1a1a;
+  }
+  .header-right {
+    font-size: 9pt;
+    color: #777;
+    font-style: italic;
+  }
+
+  /* Hero */
+  .hero {
+    text-align: center;
+    margin: 28px 0 32px;
+  }
+  .hero h1 {
+    font-size: 22pt;
+    font-weight: 800;
+    color: #1a1a1a;
+    margin-bottom: 6px;
+    line-height: 1.2;
+  }
+  .hero p {
+    font-size: 11pt;
+    color: #555;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  /* Sections */
+  .section { margin-bottom: 18px; }
+  .section h2 {
+    font-size: 12.5pt;
+    color: #C93265;
+    margin-bottom: 6px;
+    padding-bottom: 4px;
+    border-bottom: 1px solid #e8e8e8;
+  }
+  .section p { margin-bottom: 6px; color: #333; }
+  .section ul {
+    padding-left: 20px;
+    margin-bottom: 6px;
+  }
+  .section li {
+    margin-bottom: 6px;
+    color: #333;
+  }
+  .section strong { color: #1a1a1a; }
+  .section code {
+    background: #fdf0f4;
+    color: #C93265;
+    padding: 1px 4px;
+    border-radius: 3px;
+    font-size: 9.5pt;
+    font-family: "SF Mono", "Fira Code", Consolas, monospace;
+  }
+
+  /* Trust model box */
+  .trust-box {
+    background: #fdf0f4;
+    border-left: 4px solid #F75390;
+    padding: 14px 18px;
+    border-radius: 0 6px 6px 0;
+    margin-top: 6px;
+  }
+  .trust-box h2 {
+    border: none;
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 6px;
+  }
+  .trust-box p { margin-bottom: 4px; }
+  .trust-box p:last-child { margin-bottom: 0; }
+
+  /* Table */
+  .req-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 8px;
+    font-size: 9.5pt;
+  }
+  .req-table th {
+    background: #F75390;
+    color: #fff;
+    text-align: left;
+    padding: 7px 10px;
+    font-size: 8.5pt;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .req-table td {
+    padding: 7px 10px;
+    color: #333;
+    border-bottom: 1px solid #eee;
+  }
+  .req-table tr:nth-child(odd) td { background: #fafafa; }
+  .req-table tr:nth-child(even) td { background: #f3f3f3; }
+  .req-table tr:last-child td { border-bottom: none; }
+
+  /* FAQ */
+  .faq-item { margin-bottom: 12px; }
+  .faq-q {
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 2px;
+  }
+  .faq-a { color: #444; }
+
+  /* CTA */
+  .cta {
+    background: #F75390;
+    color: #fff;
+    padding: 20px;
+    border-radius: 6px;
+    text-align: center;
+    margin: 24px 0 18px;
+  }
+  .cta h2 {
+    color: #fff;
+    border: none;
+    font-size: 14pt;
+    margin-bottom: 6px;
+    padding: 0;
+  }
+  .cta a { color: #fff; font-weight: 600; }
+  .cta p { color: rgba(255,255,255,0.9); margin-bottom: 4px; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    padding-top: 12px;
+    border-top: 1px solid #ddd;
+    color: #999;
+    font-size: 8.5pt;
+  }
+  .footer a { color: #777; text-decoration: none; }
+
+  /* Page break hint between FAQ items to avoid orphans */
+  .section, .trust-box, .cta { break-inside: avoid; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-left">
+    <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M18 36C27.9411 36 36 27.9411 36 18C36 8.05888 27.9411 0 18 0C8.05888 0 0 8.05888 0 18C0 27.9411 8.05888 36 18 36ZM3.79975 9.77472C2.32541 12.2837 1.58824 15.0254 1.58824 18C1.58824 20.9616 2.31894 23.7034 3.78035 26.2253C5.25469 28.7343 7.24635 30.7259 9.75532 32.2003C12.2772 33.6746 15.0254 34.4118 18 34.4118C20.9616 34.4118 23.6969 33.6811 26.2059 32.2197C28.7278 30.7453 30.7259 28.7537 32.2003 26.2447C33.6746 23.7228 34.4118 20.9746 34.4118 18C34.4118 15.0384 33.6746 12.3031 32.2003 9.79412C30.7388 7.27222 28.7472 5.27409 26.2253 3.79975C23.7163 2.32541 20.9746 1.58824 18 1.58824C15.0384 1.58824 12.2966 2.32541 9.77472 3.79975C7.26575 5.26116 5.27409 7.25282 3.79975 9.77472ZM15.8079 15.7691C15.213 16.364 14.9155 17.1076 14.9155 18C14.9155 18.8794 15.213 19.6166 15.8079 20.2115C16.4157 20.8064 17.1464 21.1039 18 21.1039C18.8665 21.1039 19.5972 20.8064 20.1921 20.2115C20.8 19.6037 21.1039 18.8665 21.1039 18C21.1039 17.1335 20.8064 16.3963 20.2115 15.7885C19.6166 15.1677 18.8794 14.8573 18 14.8573C17.1335 14.8573 16.4028 15.1612 15.8079 15.7691ZM5.56508 25.1777C4.2718 22.9533 3.62516 20.5607 3.62516 18C3.62516 15.4652 4.2524 13.0985 5.50688 10.8999C6.7743 8.68836 8.52023 6.92303 10.7447 5.60388C12.9691 4.28473 15.3876 3.62516 18 3.62516C20.5866 3.62516 22.9921 4.27826 25.2165 5.58448C27.4539 6.8907 29.2063 8.64956 30.4737 10.8611C31.7541 13.0597 32.3942 15.4393 32.3942 18C32.3942 20.5866 31.7411 22.9856 30.4349 25.1971C29.1416 27.4086 27.3892 29.161 25.1777 30.4543C22.9662 31.7347 20.5736 32.3748 18 32.3748C15.4522 32.3748 13.0661 31.7282 10.8417 30.4349C8.61723 29.1416 6.85836 27.3892 5.56508 25.1777Z" fill="#F75390"/></svg>
+    <span>Payjoin Foundation</span>
+  </div>
+  <div class="header-right">Infrastructure Partner Brief</div>
+</div>
+
+<div class="hero">
+  <h1>Run Payjoin Infrastructure</h1>
+  <p>Deploy lightweight, zero-custody infrastructure that strengthens Bitcoin privacy for everyone</p>
+</div>
+
+<div class="section">
+  <h2>What Is Payjoin Mailroom?</h2>
+  <p><code>payjoin-mailroom</code> is a single, lightweight binary that bundles the two server-side roles required by Async Payjoin (<a href="https://github.com/bitcoin/bips/blob/master/bip-0077.md">BIP 77</a>):</p>
+  <ul>
+    <li><strong>Payjoin Directory</strong>: a store-and-forward mailbox that holds small, ephemeral, end-to-end encrypted payloads so a sender and receiver can complete a payjoin asynchronously (they don't need to be online at the same time).</li>
+    <li><strong>OHTTP Relay</strong>: a simple HTTP proxy that separates client IP addresses from the directory, preventing the directory from correlating users with their network identity. No loopbacks between the relay and directory within the same instance.</li>
+  </ul>
+  <p>Together, these two components are the backbone that makes Async Payjoin work for <em>every</em> wallet.</p>
+</div>
+
+<div class="section">
+  <h2>Why Does This Matter?</h2>
+  <p>Payjoin breaks the most damaging assumption in on-chain surveillance: that all inputs to a transaction belong to one person. By letting sender and receiver batch into a single transaction, payjoin makes chain analysis dramatically harder, and <strong>unlike mixing, Payjoin looks like any typical transaction.</strong></p>
+  <p>Async Payjoin removed the last barrier to adoption: receivers no longer need to run servers. But this convenience depends on directory and relay infrastructure existing. Today, only a small handful of operators run these services. A single point of failure is a single point of censorship.</p>
+</div>
+
+<div class="section">
+  <h2>Why Does It Matter Who Runs This?</h2>
+  <p>Bitcoin privacy infrastructure works best when it's operated by entities that can sustain it long-term. The ideal operators are organizations with the resources, jurisdiction, and institutional will to keep infrastructure online: companies with legal counsel, organizations in privacy-respecting jurisdictions, and entities with a track record of supporting open-source infrastructure.</p>
+  <p>We don't need a sprawling network of operators. Fewer directories means a larger anonymity set. The more users share a single directory, the harder traffic analysis becomes. But we do need <strong>a few more resilient operators</strong> for redundancy and resistance to censorship.</p>
+</div>
+
+<div class="section">
+  <div class="trust-box">
+    <h2>Trust Model: YOU SEE NOTHING</h2>
+    <p>All Async Payjoin payloads are end-to-end encrypted with HPKE. The directory cannot read, forge, or correlate transaction contents. The OHTTP relay only sees encrypted blobs and never learns who is paying whom. No loopbacks between relay and directory roles.</p>
+    <p><strong>You never touch bitcoin. You never see transactions. Zero custody risk.</strong></p>
+  </div>
+</div>
+
+<div class="section">
+  <h2>What You Need</h2>
+  <table class="req-table">
+    <thead>
+      <tr><th>Requirement</th><th>Details</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>Server</strong></td><td>A $5/month VPS is sufficient. Minimal CPU and RAM.</td></tr>
+      <tr><td><strong>Domain + TLS</strong></td><td>A domain name with TLS. ACME is built in for automatic certificate provisioning.</td></tr>
+      <tr><td><strong>Storage</strong></td><td>Very minimal. Only config details are persisted. Payjoin payloads are ephemeral.</td></tr>
+      <tr><td><strong>Deployment</strong></td><td>Docker image, Nix flake, or build from source. Inline config supported.</td></tr>
+      <tr><td><strong>Bitcoin Node</strong></td><td><strong>Not required.</strong> Pure relay infrastructure. No chain access needed.</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="section">
+  <h2>FAQ</h2>
+
+  <div class="faq-item">
+    <p class="faq-q">Can the operator steal or censor bitcoin?</p>
+    <p class="faq-a">No. The service never holds keys, constructs transactions, or accesses a bitcoin node. Payloads are encrypted end-to-end. The worst an operator can do is go offline, in which case wallets automatically fall back to the typical (non-payjoin) transaction by using the address included in the Bitcoin URI. No funds are ever at risk.</p>
+  </div>
+
+  <div class="faq-item">
+    <p class="faq-q">What is the service comparable to, architecturally?</p>
+    <p class="faq-a">Think of a CDN or encrypted email relay. You forward opaque, encrypted blobs between parties. You cannot inspect, modify, or correlate the contents. Even a fully compromised operator learns nothing useful.</p>
+  </div>
+
+  <div class="faq-item">
+    <p class="faq-q">What about OFAC compliance?</p>
+    <p class="faq-a">payjoin-mailroom supports configurable IP address filtering for all requests regardless of protocol version. Async Payjoin sessions are encrypted end-to-end and opaque by design. For optional legacy v1 backwards-compatibility, where requests are plaintext, additional direct address screening is built in. Operators can enforce their own compliance policies without any changes to the protocol.</p>
+  </div>
+
+  <div class="faq-item">
+    <p class="faq-q">What data does the operator see?</p>
+    <p class="faq-a">Aggregate metrics only: raw mailbox counts (roughly two per payjoin session). The operator doesn't see payload contents, Bitcoin addresses, or sender/receiver identity. OHTTP blinds client IP from the directory, and all payloads are encrypted end-to-end. This is less visibility than even Signal has running their own infrastructure, since Signal registers phone numbers and sees payload sizes. payjoin-mailroom does neither.</p>
+  </div>
+
+  <div class="faq-item">
+    <p class="faq-q">Is there a revenue model?</p>
+    <p class="faq-a">Public-good infrastructure. Running a mailroom is a reputation signal that your organization takes Bitcoin privacy seriously. The spec includes optional DoS-prevention auth tokens for the future, but current load is minimal.</p>
+  </div>
+
+  <div class="faq-item">
+    <p class="faq-q">Who uses this infrastructure today?</p>
+    <p class="faq-a">Bull Bitcoin (first mobile wallet with Async Payjoin send + receive), Cake Wallet, and the payjoin-cli reference implementation all depend on this infrastructure, with more integrations in progress. The flagship directory is payjo.in, with OHTTP relays run by a few community members.</p>
+  </div>
+</div>
+
+<div class="cta">
+  <h2>Get Started</h2>
+  <p><a href="https://github.com/payjoin/rust-payjoin/tree/master/payjoin-mailroom">github.com/payjoin/rust-payjoin/tree/master/payjoin-mailroom</a></p>
+  <p>Questions? Reach out at <a href="https://payjoin.org">payjoin.org</a> or open a Discussion on <a href="https://github.com/payjoin/rust-payjoin/discussions">GitHub</a>.</p>
+</div>
+
+<div class="footer">
+  <a href="https://payjoin.org">payjoin.org</a> · <a href="https://github.com/payjoin/rust-payjoin">github.com/payjoin/rust-payjoin</a> · <a href="https://github.com/bitcoin/bips/blob/master/bip-0077.md">BIP 77</a>
+</div>
+
+</body>
+</html>
