@@ -130,11 +130,6 @@ const config: Config = {
           position: "right",
         },
         {
-          href: "https://payjoin.substack.com/",
-          label: "News",
-          position: "right",
-        },
-        {
           href: "https://github.com/payjoin",
           label: "GitHub",
           position: "right",
@@ -192,7 +187,7 @@ const config: Config = {
             },
             {
               label: "Donate",
-              href: "https://geyser.fund/project/payjoin/"
+              to: "/donate"
             },
             {
               label: "Roadmap",

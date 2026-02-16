@@ -2,28 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
-/* You can override the default Infima variables here. */
-:root {
-  --ifm-color-primary: #46192b;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
-  --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
-  background-color: #242526;
-}
+/*
+ * Payjoin brand colors:
+ *   primary: #f75394 (pink)
+ *   secondary: #46192b (dark burgundy)
+ *   tertiary: #6A394C (medium burgundy)
+ *
+ * Infima shades generated from #f75394.
+ * Light mode is disabled (dark mode forced in docusaurus.config.ts).
+ */
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme="dark"] {
   --ifm-color-primary: #f75394;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
+  --ifm-color-primary-dark: #f63382;
+  --ifm-color-primary-darker: #f52379;
+  --ifm-color-primary-darkest: #d70b60;
+  --ifm-color-primary-light: #f873a6;
+  --ifm-color-primary-lighter: #f983af;
+  --ifm-color-primary-lightest: #fbb3cd;
+  --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+
+}
+
+.footer--dark {
+  --ifm-footer-background-color: #2a1520;
+  --ifm-footer-link-color: #ddd;
+  --ifm-footer-title-color: #fff;
 }
