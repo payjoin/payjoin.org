@@ -123,7 +123,6 @@ const config: Config = {
           position: "left",
           label: "Learn",
         },
-        { href: "https://payjoindevkit.org/", label: "Dev Kit", position: "right" },
         {
           href: "https://discord.gg/6rJD9R684h",
           label: "Discord",
@@ -144,10 +143,6 @@ const config: Config = {
           title: "Learn",
           items: [
             {
-              label: "Payjoin Dev Kit",
-              href: "https://payjoindevkit.org/",
-            },
-            {
               label: "Case Study",
               href: "https://bitcoin.design/guide/case-studies/payjoin/",
             },
@@ -157,8 +152,8 @@ const config: Config = {
           title: "Community",
           items: [
             {
-              label: "Newsletter",
-              href: "https://payjoin.substack.com/",
+              label: "Updates",
+              href: "https://buttondown.com/payjoin",
             },
             {
               label: "Discord",
