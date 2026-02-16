@@ -1,5 +1,6 @@
 import Marquee from "react-fast-marquee";
 import styles from "./styles.module.css";
+import { SubscribeForm } from "../SubscribeForm";
 
 // Button component remains unchanged
 export function Button({ children, variant }) {
@@ -46,13 +47,11 @@ export default function HeaderContent() {
             Scale Bitcoin, save fees, and preserve privacy all at once.
           </h2>
         </div>
-        <div className="flex gap-4 flex-col sm:flex-row">
+        <div className="flex gap-4 flex-col sm:flex-row items-center">
           <a href="./docs/how-payjoin-saves">
             <Button variant="primary">Learn More</Button>
           </a>
-          <a target="_blank" href="https://payjoindevkit.org/">
-            <Button variant="secondary">Developer Kit</Button>
-          </a>
+          <SubscribeForm variant="inline" />
         </div>
       </div>
       <Marquee

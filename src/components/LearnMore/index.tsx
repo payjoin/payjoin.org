@@ -1,15 +1,19 @@
+import { SubscribeForm } from "../SubscribeForm";
+
 export function LearnMore() {
   return (
     <div className="min-h-screen w-full flex justify-center">
     <section className="flex flex-col gap-24 my-20 w-4/5">
       <div>
-        <h1 className="text-6xl max-md:text-5xl">Pay it Forward</h1>
-        <h1 className="text-6xl max-md:text-5xl">Join the Community</h1>
+        <h1 className="text-6xl max-md:text-5xl">Stay in the Loop</h1>
       </div>
-      <span className="text-4xl">Payjoin can bring many benefits to Bitcoin, but it needs your help</span>
-      <span className="text-4xl">
-        Join our <a target="_blank" href="https://payjoin.substack.com/">newsletter</a> and the <a target="_blank" href="https://discord.gg/6rJD9R684h">Discord</a> to stay up to date with Payjoin development
-      </span>
+      <span className="text-4xl">Get updates on Payjoin development, integrations, and research.</span>
+      <div className="flex flex-col gap-8">
+        <SubscribeForm variant="stacked" />
+        <span className="text-2xl">
+          Join the <a target="_blank" href="https://discord.gg/6rJD9R684h">Discord</a> to chat with the community
+        </span>
+      </div>
     </section>
     </div>
   );
