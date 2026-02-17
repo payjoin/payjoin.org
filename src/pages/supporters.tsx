@@ -38,7 +38,7 @@ export default function Supporters(): JSX.Element {
                   Maelstrom
                 </a>
                 <a href="https://www.btrust.tech/" target="_blank" rel="nofollow noopener">
-                  <img src="/img/supporters/btrust.jpg" alt="Btrust" />
+                  <img src="/img/supporters/btrust.svg" alt="Btrust" />
                   ₿trust
                 </a>
                 <a href="https://www.cakewallet.com/" target="_blank" rel="nofollow noopener">
