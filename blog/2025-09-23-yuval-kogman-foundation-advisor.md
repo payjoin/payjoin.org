@@ -1,4 +1,5 @@
 ---
+image: /img/og/2025-09-23-yuval-kogman-foundation-advisor.png
 title: Yuval Kogman Joins Payjoin Foundation as Advisor
 description: Payjoin Foundation Appoints Spiral Bitcoin Wizard to Advisory Board
 date: 2025-09-23

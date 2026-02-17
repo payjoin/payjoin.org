@@ -14,8 +14,8 @@ export default function Supporters(): JSX.Element {
           <div className="col col--8 col--offset-2">
             <h1>Supporters</h1>
             <p>
-              The Payjoin project is proudly supported by a number of organizations. If you'd like to become a supporter
-              please reach out at: <a href="mailto:hello@payjoin.org">hello@payjoin.org</a>
+              The Payjoin project is proudly supported by a number of organizations. If you'd like to become a supporter,
+              please visit our <a href="/donate">donate page</a>.
             </p>
 
             <h2>2025</h2>

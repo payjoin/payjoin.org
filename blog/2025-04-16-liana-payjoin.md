@@ -1,4 +1,5 @@
 ---
+image: /img/og/2025-04-16-liana-payjoin.png
 title: Automatically Refresh Liana Inheritance Timelocks with Payjoin
 description: Liana combines Payjoin and time locked inheritance to help you keep your Bitcoin private now and safe for those who'll need it later.
 date: 2025-04-16

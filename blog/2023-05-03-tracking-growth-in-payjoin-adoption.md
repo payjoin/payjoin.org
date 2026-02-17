@@ -1,4 +1,5 @@
 ---
+image: /img/og/2023-05-03-tracking-growth-in-payjoin-adoption.png
 title: Tracking Growth in Payjoin Adoption
 description: Dual-funding, Cahoots, ... SNICKER, and LNURL?
 date: 2023-05-03

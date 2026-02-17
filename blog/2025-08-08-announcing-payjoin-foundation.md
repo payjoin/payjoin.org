@@ -1,4 +1,5 @@
 ---
+image: /img/og/2025-08-08-announcing-payjoin-foundation.png
 title: Announcing Payjoin Foundation
 description: Launching our non-profit organization to recruit and accept donations
 date: 2025-08-08

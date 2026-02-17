@@ -1,4 +1,5 @@
 ---
+image: /img/og/2023-05-09-interactive-payment-batching-is-better.png
 title: Interactive Payment Batching is Better
 description: Payjoin for More Than Privacy
 date: 2023-05-09

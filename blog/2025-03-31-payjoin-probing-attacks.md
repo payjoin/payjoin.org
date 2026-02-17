@@ -1,4 +1,5 @@
 ---
+image: /img/og/2025-03-31-payjoin-probing-attacks.png
 title: "Payjoin Probing Attacks: Facts, Mitigations, and Why Payjoin Still Wins for Privacy"
 description: ""
 date: "2025-03-31"

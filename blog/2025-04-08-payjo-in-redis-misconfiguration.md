@@ -1,4 +1,5 @@
 ---
+image: /img/og/2025-04-08-payjo-in-redis-misconfiguration.png
 title: "Payjo.in Directory Security Incident: Misconfiguration May Have Exposed Some Payjoin v1 Messages"
 description: Due to a docker misconfiguration the `payjo.in` directory server had an open redis database, allowing unauthorized parties to observe exchanges between pairs of senders which only support BIP 78 and receivers which support BIP 77.
 date: 2025-04-08

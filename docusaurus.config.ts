@@ -123,6 +123,7 @@ const config: Config = {
           position: "left",
           label: "Learn",
         },
+        { to: "/donate", label: "Donate", position: "right" },
         { href: "https://payjoindevkit.org/", label: "Dev Kit", position: "right" },
         {
           href: "https://discord.gg/6rJD9R684h",

@@ -1,4 +1,5 @@
 ---
+image: /img/og/2025-12-05-thank-you-cake-wallet.png
 title: Thank you, Cake Wallet
 description: Recognizing Cake Wallet's leadership and support in Bitcoin privacy
 date: 2025-12-05

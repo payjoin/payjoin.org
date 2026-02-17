@@ -1,4 +1,5 @@
 ---
+image: /img/og/2023-06-05-june-payjoin-media-multitudes.png
 title: June Payjoin Media Multitudes
 description: PDK, TFTC, BDK Integration, Payjoin + Nostr, A Payjoin V2 Protocol, the Boston Bitcoin Scene and UX Research
 date: 2023-06-05

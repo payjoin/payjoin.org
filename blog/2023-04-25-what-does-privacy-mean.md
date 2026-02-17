@@ -1,4 +1,5 @@
 ---
+image: /img/og/2023-04-25-what-does-privacy-mean.png
 title: What Does Privacy Mean?
 description: We want encryption for trade. What is that?
 date: 2023-04-25
