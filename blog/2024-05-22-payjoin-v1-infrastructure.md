@@ -1,4 +1,5 @@
 ---
+image: /img/og/2024-05-22-payjoin-v1-infrastructure.png
 title: Notes on Payjoin V1 Infrastructure
 description: A guide on setting up a payjoin receiver on signet
 date: 2024-05-22

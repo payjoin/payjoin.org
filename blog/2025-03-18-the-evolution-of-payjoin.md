@@ -1,4 +1,5 @@
 ---
+image: /img/og/2025-03-18-the-evolution-of-payjoin.png
 title: "The Evolution of Payjoin: From Two-Party Protocol to Multiparty Framework"
 description: "Learn how Payjoin is evolving from a simple two-party protocol into a sophisticated multiparty transaction batching framework"
 date: "2025-03-18"

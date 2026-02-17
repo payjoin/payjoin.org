@@ -4,7 +4,7 @@ description: Payjoin Foundation is now a recognized 501(c)(3) nonprofit organiza
 date: 2026-02-12
 authors: dangould
 tags: [Announcement, Foundation]
-image: /img/og-501c3.png
+image: /img/og/2026-02-12-payjoin-foundation-501c3.png
 ---
 
 Payjoin Foundation has received approval from the Internal Revenue Service recognizing the Foundation as tax-exempt under Section 501(c)(3) of the Internal Revenue Code effective July 23, 2025. We announce it now because we have just received the determination letter from the IRS. We can now accept tax-deductible charitable contributions to support our mission to advance practical privacy in peer-to-peer digital transactions. We're finalizing our online donation flow; if you'd like to contribute now, please see our [donate page](/donate).

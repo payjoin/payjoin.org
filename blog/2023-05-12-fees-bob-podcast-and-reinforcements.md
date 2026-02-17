@@ -1,4 +1,5 @@
 ---
+image: /img/og/2023-05-12-fees-bob-podcast-and-reinforcements.png
 title: Fees, BOB Radio, and Reinforcements
 description: Just an update
 date: 2023-05-12

@@ -1,4 +1,5 @@
 ---
+image: /img/og/2023-04-14-now-accepting-payjoin.png
 title: Now Accepting Payjoin
 description: An old bitcoin privacy technique gets its wings
 date: 2023-04-14

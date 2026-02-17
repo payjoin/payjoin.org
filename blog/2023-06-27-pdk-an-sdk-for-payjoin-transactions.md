@@ -1,4 +1,5 @@
 ---
+image: /img/og/2023-06-27-pdk-an-sdk-for-payjoin-transactions.png
 title: "PDK: A Payjoin SDK"
 description: Learn how PDK makes using Payjoin easy and the direction it will develop in our new blog.
 date: 2023-06-27

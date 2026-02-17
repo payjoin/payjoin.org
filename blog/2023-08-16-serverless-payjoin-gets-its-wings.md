@@ -1,4 +1,5 @@
 ---
+image: /img/og/2023-08-16-serverless-payjoin-gets-its-wings.png
 title: Serverless Payjoin Gets its Wings
 description: We've got resources and lots of contributors. Time to find consensus.
 date: 2023-08-16
