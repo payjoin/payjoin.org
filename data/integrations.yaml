@@ -657,8 +657,8 @@
     feasibility: 3
     maintenance: 5
   spec_feedback: rigorous
-  blocker: C# bindings
-  notes: "Massive exchange, huge signal if they adopt. Relationship in place but no C# bindings yet (not hard). No other exchange example - BB Exchange first would increase feasibility. Operating business that would spread the model. High maintenance - they'd have demands."
+  blocker: their_engineering_time
+  notes: "Massive exchange, huge signal if they adopt. C# bindings now merged (payjoin-ffi). No other exchange example - BB Exchange first would increase feasibility. Operating business that would spread the model. High maintenance - they'd have demands. Strike upgrading BTCPay from 8.0 to 10.0 imminently."
   contact:
     name: Tom Kirkpatrick
     last_contact: null
@@ -756,24 +756,29 @@
 # BTCPay Server - Payment Processor
 -
   name: BTCPay Server
+  tracking_issue: https://github.com/payjoin/rust-payjoin/pull/1318
   class: payment_processor
-  status: engaged
+  status: draft
   language: "C#, Rust"
   custody: self_custodial
   estimated_value: "$6,000.00"
   owner:
-    internal: null
-    external: Nicolas Dorier
+    internal: Chavic
+    external: Rockstar, Nicolas Dorier
   scores:
     leverage: 4
-    feasibility: 2
+    feasibility: 3
     maintenance: 1
   spec_feedback: real_usage
-  blocker: C# bindings
-  notes: "Almost as big as an exchange for merchant infra. Need C# bindings, evaluating plugin approach. Culture can be odd but they'd maintain it. Lots of users but limited use case except cold wallet stuff. Dennis @d11n also knows some."
+  blocker: plugin scoping and prototype
+  notes: "C# UniFFI bindings merged (payjoin-ffi). Plugin architecture confirmed viable 2026-03-03 with Rockstar: plugin encapsulates payjoin, overrides native BTCPay payjoin, v2 only. Hot wallet + cold descriptor field for output substitution forwarding. Fallback: periodic hot->cold sweep or threshold-based hot/cold output selection per invoice size (needs design). Reference plugin: MarkPaid. Target BTCPayServer 10.0 (Strike upgrading from 8.0 imminently). Open design questions: PayjoinMonitoringTimespan interaction, hot/cold threshold logic, invoice lifecycle edge cases for donation use case. Dependency chain: Chavic bindings (done) -> plugin prototype -> Rockstar code review -> deeper buy-in. Nicolas reference still open (engaged, not committed)."
   contact:
-    name: Nicolas Dorier
-    last_contact: null
+    name: Rockstar, Nicolas Dorier
+    last_contact: 2026-03-03
+  next_artifact:
+    type: prototype
+    description: "BTCPay plugin prototype using payjoin-ffi C# bindings"
+    url: null
   added: "December 5, 2022 2:21 AM"
 # bitmask-core - On Chain Wallet (status uncertain)
 -
@@ -931,8 +936,8 @@
     feasibility: 4
     spec_feedback: already_covered
     maintenance: 1
-  blocker: C# bindings
-  notes: "Already kind of supports Payjoin (v1) so incremental leverage is low. Easy-ish update - just need C# bindings and copy another on-chain's arch with db. Do they have a real db?"
+  blocker: their_engineering_time
+  notes: "Already kind of supports Payjoin (v1) so incremental leverage is low. C# bindings now merged (payjoin-ffi). Easy-ish update - copy another on-chain's arch with db. Do they have a real db?"
   contact:
     name: Max Hillebrand
     last_contact: null
