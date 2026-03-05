@@ -93,7 +93,7 @@ Questions? Reach out at payjoin.org or open a Discussion on GitHub.
 ## Footer
 payjoin.org · github.com/payjoin/rust-payjoin · BIP 77
 
-### Recommended config
+## Recommended config
 
 ```toml
 # Payjoin Mailroom recommended configuration
