@@ -112,7 +112,7 @@ domains = ["your-domain.example.com"]
 # Contact addresses for the ACME account
 contact = ["mailto:contact@example.com"]
 
-# --- Telemetry (requires `--telemetry` feature) ---
+# --- Telemetry (requires `telemetry` feature) ---
 [telemetry]
 # OpenTelemetry Protocol (OTLP) endpoint to export telemetry to
 endpoint = "https://otlp-gateway-prod-us-west-0.grafana.net/otlp"
