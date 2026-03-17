@@ -46,6 +46,8 @@ We don't need a sprawling network of operators. Fewer directories means a larger
 ### Trust Model: YOU SEE NOTHING
 All payjoin payloads are end-to-end encrypted with HPKE. The directory cannot read, forge, or correlate transaction contents. The OHTTP relay only sees encrypted blobs and never learns who is paying whom. No loopbacks between relay and directory roles. **You never touch bitcoin. You never see transactions. Zero custody risk.**
 
+V2 (BIP 77) payloads are fully end-to-end encrypted. V1 backwards-compatible requests (BIP 78) are plaintext: the directory can see sender IP addresses and transaction contents. V1 support is transitional and will be removed as wallets upgrade to V2. Operators who want the strongest privacy guarantees can disable V1 in configuration.
+
 ### What You Need
 
 | Requirement | Details |
@@ -68,7 +70,7 @@ Think of a CDN or encrypted email relay. You forward opaque, encrypted blobs bet
 payjoin-mailroom ships with built-in OFAC address list filtering and configurable IP address filtering. For backwards-compatible plaintext v1 requests, the service can screen Bitcoin addresses directly. BIP 77 encrypted sessions are opaque by design, so address screening is not possible, but IP filtering applies to all requests regardless of protocol version. Operators can enforce their own compliance policies without any changes to the protocol.
 
 **What data does the operator see?**
-Aggregate metrics only: raw mailbox counts (roughly two per payjoin session). The operator never sees payload contents, Bitcoin addresses, or sender/receiver identity. OHTTP blinds client IP from the directory, and all payloads are encrypted end-to-end. This is less visibility than even Signal has running their own infrastructure, since Signal registers phone numbers and sees payload sizes. payjoin-mailroom does neither.
+Aggregate metrics only: raw mailbox counts (roughly two per payjoin session). The operator never sees payload contents, Bitcoin addresses, or sender/receiver identity. OHTTP blinds client IP from the directory, and all payloads are encrypted end-to-end. The exception is V1 backwards-compatible requests, which are plaintext. V1 is transitional and can be disabled in configuration. This is less visibility than even Signal has running their own infrastructure, since Signal registers phone numbers and sees payload sizes. payjoin-mailroom does neither.
 
 **Is there a revenue model?**
 Public-good infrastructure. Running a mailroom is a reputation signal that your organization takes Bitcoin privacy seriously. The BIP includes optional DoS-prevention auth tokens for the future, but current load is minimal.
@@ -127,8 +129,11 @@ operator_domain = "your-domain.example.com"
 # ISO 3166-1 alpha-2 country codes whose requests should be blocked.
 blocked_regions = ["CU", "IR", "KP", "SY"]
 
-# --- V1 protocol ---
-# Uncomment the [v1] section to enable V1 fallback support.
+# --- V1 backwards compatibility (transitional) ---
+# WARNING: V1 requests are NOT encrypted. The directory can see sender IP
+# addresses and full transaction contents for V1 requests. V1 support exists
+# for backwards compatibility with wallets that haven't upgraded to V2.
+# Disable this section for the strongest privacy guarantees.
 # (address screening requires `access-control` feature)
 [v1]
 # URL to periodically fetch an updated blocked-address list from.
