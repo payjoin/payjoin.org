@@ -36,7 +36,7 @@ The goal of chain analysis against a PayJoin is therefore:
 
 ## Example 1: Ashigaru PayJoin
 
-**Transaction:** [`8dba6657...`](https://mempool.space/fr/testnet/tx/8dba6657ab9bb44824b3317c8cc3f333c2f465d3668c678691a091cdd6e5984c)
+**Transaction:** [`8dba6657...`](https://mempool.space/testnet/tx/8dba6657ab9bb44824b3317c8cc3f333c2f465d3668c678691a091cdd6e5984c)
 
 Inspecting the transaction at the field level reveals nothing immediately suspicious. Both inputs share the same nSequence, the same P2WPKH scriptpubkey type, and superficially similar witness stacks. The signal emerges from the signature bytes directly.
 
@@ -73,7 +73,7 @@ The round-number prior and the receiver-contributes-smaller-input convention bot
 
 ## Example 3: Cake Wallet → Bull Bitcoin Mobile PayJoin
 
-**Transaction:** [`8fb80573...`](https://mempool.bullbitcoin.com/tx/8fb80573d8871efee060a34dcb97fd12d5229444b7262b26358cd84912a04a75)
+**Transaction:** [`8fb80573...`](https://mempool.space/tx/8fb80573d8871efee060a34dcb97fd12d5229444b7262b26358cd84912a04a75)
 
 This is where things get interesting.
 
@@ -81,9 +81,9 @@ Both inputs carry nSequence = `0x01`. Cake Wallet sets a relative timelock via B
 
 Value conservation, however, is decisive. Output 0 is 29,358 sat; output 1 is 429,919 sat. Input 1 is 19,358 sat. Assignment 1 gives a payment of exactly **10,000 sat** (a perfectly round number), with output 0 being that payment and input 1 being the receiver's contributing UTXO. Assignment 2 yields a payment of 410,561 sat, which is not round. The round-number hypothesis here is overwhelming. Furthermore, the receiver's input (19,358 sat) is smaller than the sender's change (429,919 sat), consistent with UIH2: the sender had no UTXO small enough to contribute without producing large change, while the receiver's UTXO cleanly covers the payment increment. The partition is clear: output 0 (29,358) is the payment, input 1 (19,358) is the receiver's UTXO, output 1 (429,919) is the sender's change.
 
-The inter-transaction layer then re-affirms the input partitioning analysis. The prior transaction for **input 0** ([`9ecd77ab...`](https://mempool.bullbitcoin.com/tx/9ecd77ab2115f12fd6d5ff46271f0a5e04ed03b267d6431f7b0991e0f0e23ef9#vout=1)) has one input carrying nSequence = `0x01` and the other carrying `nSequence::MAX`. This asymmetry partitions that transaction's inputs and, by value conservation, identifies the 440,337 sat output as belonging to the party using nSequence = `0x01`, which flows directly into the PayJoin as input 0.
+The inter-transaction layer then re-affirms the input partitioning analysis. The prior transaction for **input 0** ([`9ecd77ab...`](https://mempool.space/tx/9ecd77ab2115f12fd6d5ff46271f0a5e04ed03b267d6431f7b0991e0f0e23ef9#vout=1)) has one input carrying nSequence = `0x01` and the other carrying `nSequence::MAX`. This asymmetry partitions that transaction's inputs and, by value conservation, identifies the 440,337 sat output as belonging to the party using nSequence = `0x01`, which flows directly into the PayJoin as input 0.
 
-The prior transaction for **input 1** ([`3fbe1713...`](https://mempool.bullbitcoin.com/tx/3fbe17132477ae6e38709b5e8e12ff5054fc66b4dd03568fea92a7a5bac18a84#vout=1)) uses only `nSequence::MAX` across all inputs. This is consistent with Bull Bitcoin Mobile's standard behavior, confirming this UTXO belongs to the receiver.
+The prior transaction for **input 1** ([`3fbe1713...`](https://mempool.space/tx/3fbe17132477ae6e38709b5e8e12ff5054fc66b4dd03568fea92a7a5bac18a84#vout=1)) uses only `nSequence::MAX` across all inputs. This is consistent with Bull Bitcoin Mobile's standard behavior, confirming this UTXO belongs to the receiver.
 
 ```
 ┌──────────────────────────┐
