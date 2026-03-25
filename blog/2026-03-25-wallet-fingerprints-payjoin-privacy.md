@@ -1,7 +1,7 @@
 ---
 title: "How Wallet Fingerprints Damage Payjoin Privacy"
 description: "Wallet software leaves subtle fingerprints in transactions. This post analyzes how those fingerprints can deanonymize Payjoin transactions through real-world examples."
-date: "2026-03-23"
+date: "2026-03-25"
 authors:
   - arminsabouri
 tags:
@@ -27,7 +27,7 @@ If sender and receiver use different wallet software, their fingerprints may rev
 
 Wallet fingerprint signals operate at two levels:
 
-- **Intra-transaction** signals help partition inputs and outputs by owner within a single transaction. Which outputs are change (returned to sender) and which are payments (sent to receiver)? Correct change identification is critical because it connects the sender's current transaction to their next one. Fingerprints may reveal this directly: change outputs may inherit distinctive traits from the sender's software.
+- **Intra-transaction** signals help partition inputs and outputs by owner within a single transaction. Which outputs are change (returned to sender) and which are transfers (sent to receiver)? Correct change identification is critical because it connects the sender's current transaction to their next one. Fingerprints may reveal this directly: change outputs may inherit distinctive traits from the sender's software.
 - **Inter-transaction** signals operate across the transaction graph:
   - **Backward:** Each input was created by some prior transaction that may carry its own fingerprint.
   - **Forward:** Each output may eventually be spent in a future transaction, revealing fingerprints.
@@ -67,7 +67,7 @@ The Payjoin is decomposed: an input/output ownership partition is inferred and t
 
 **Transaction:** [`3c5436f1...`](https://mutinynet.com/tx/3c5436f1edf7d4c32a5ccf2448c1e963f52bb8a0fb6f8688d7e78a14e1cbe80b)
 
-Both inputs are P2TR key-path spends. Under [BIP-341](https://github.com/bitcoin/bips/blob/master/bip-0341.mediawiki), the default sighash is SIGHASH_ALL and the sighash byte may be omitted. Omitting it is the canonical form. Both options are consensus-valid. Input 0's witness is **64 bytes**. The sighash byte is omitted. Input 1's witness is **65 bytes**. An explicit `0x01` SIGHASH_ALL byte is appended. Including an explicit SIGHASH_ALL byte is typically a bug rather than an intentional policy.
+Both inputs are P2TR key path spends. Under [Taproot spending rules applying to P2TR](https://github.com/bitcoin/bips/blob/master/bip-0341.mediawiki), the default sighash is SIGHASH_ALL and the sighash byte may be omitted. Omitting it is the canonical form. Both options are consensus-valid. Input 0's witness is **64 bytes**. The sighash byte is omitted. Input 1's witness is **65 bytes**. An explicit `0x01` SIGHASH_ALL byte is appended. Including an explicit SIGHASH_ALL byte is typically a bug rather than an intentional policy.
 
 Two inputs from the same wallet would apply a consistent sighash policy. The inconsistency partitions the inputs: Party A owns the input with the omitted sighash byte, Party B owns the input with the explicit sighash byte.
 
@@ -148,7 +148,7 @@ Both fingerprints persist across the transaction graph. Cake's `0x01` traces bac
 
 ## Conclusions
 
-These observations teach us that Payjoin's privacy preservation extends only as far as the uniformity of the participating wallets. Fingerprint uniformity at the transaction level is necessary but not sufficient. Any dimension on which the sender and receiver diverge becomes a partition signal. The analyst's job reduces to finding those divergences in wallet behaviors, and the transaction graph provides arbitrarily many observations to find them in.
+These observations teach us that Payjoin's privacy preservation extends only as far as the homogeneity of the participating wallets's fingerprints. Fingerprint homogeneity at the transaction level is necessary but not sufficient. Any dimension on which the sender and receiver diverge becomes a partition signal. The analyst's job reduces to finding those divergences in wallet behaviors, and the transaction graph provides arbitrarily many observations to find them in.
 
 While some of these wallet fingerprints are relatively [trivial to eliminate](https://github.com/cake-tech/cake_wallet/pull/3077), others are intrinsic to a particular wallet's design choices and goals and can't just be "fixed". Wallet developers should be aware of these potential privacy leaks when integrating Payjoin into their wallets.
 
