@@ -148,7 +148,7 @@ Both fingerprints persist across the transaction graph. Cake's `0x01` traces bac
 
 ## Conclusions
 
-These observations teach us that Payjoin's privacy preservation extends only as far as the homogeneity of the participating wallets's fingerprints. Fingerprint homogeneity at the transaction level is necessary but not sufficient. Any dimension on which the sender and receiver diverge becomes a partition signal. The analyst's job reduces to finding those divergences in wallet behaviors, and the transaction graph provides arbitrarily many observations to find them in.
+These observations teach us that Payjoin's privacy preservation extends only as far as the homogeneity of the participating wallets' fingerprints. Fingerprint homogeneity at the transaction level is necessary but not sufficient. Any dimension on which the sender and receiver diverge becomes a partition signal. The analyst's job reduces to finding those divergences in wallet behaviors, and the transaction graph provides arbitrarily many observations to find them in.
 
 While some of these wallet fingerprints are relatively [trivial to eliminate](https://github.com/cake-tech/cake_wallet/pull/3077), others are intrinsic to a particular wallet's design choices and goals and can't just be "fixed". Wallet developers should be aware of these potential privacy leaks when integrating Payjoin into their wallets.
 
