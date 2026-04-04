@@ -44,9 +44,9 @@ The goal of chain analysis against a Payjoin is therefore:
 
 Inspecting the transaction at the field level reveals nothing immediately suspicious. Both inputs share the same nSequence, the same P2WPKH scriptpubkey type, and superficially similar witness stacks. The signal emerges from the signature bytes directly.
 
-Input 0's DER-encoded signature is **71 bytes**. The r-value is 32 bytes with no leading zero pad, meaning r < 2^255. This is a grinded, low-R signature. Input 1's signature is **72 bytes** (the r-value requires a leading `0x00` pad, meaning r ≥ 2^255). This is an ungrinded, high-R signature. A single wallet running a consistent signing policy would either grind all signatures or grind none. Observing one of each is a strong signal that two different signing implementations contributed inputs.
+Input 0's DER-encoded signature is 71 bytes (low-r). Input 1's signature is 72 bytes (high-r). A grinding wallet always produces low-r signatures; a non-grinding wallet produces them 50% of the time. So a single low-r/high-r pair within one transaction is not strong evidence of collaboration. However, if outputs from a cluster that consistently grinds appear alongside high-r inputs, this is stronger evidence that two wallets contributed inputs.
 
-This signature asymmetry partitions the inputs: Party A owns the low-R input, Party B owns the high-R input. With input values of 50,000 and 3,999,216 sats, we can test both output assignments and see which one is more likely:
+Taking the signature asymmetry as a candidate partition: Party A owns the low-r input, Party B owns the high-r input. With input values of 50,000 and 3,999,216 sats, we can test both output assignments:
 
 **Assignment 1:** Output 0 (9,752 sat) = Party A's output, Output 1 (4,039,216 sat) = Party B's output
 
