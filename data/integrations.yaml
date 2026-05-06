@@ -780,6 +780,42 @@
     description: "BTCPay plugin prototype using payjoin-ffi C# bindings"
     url: null
   added: "December 5, 2022 2:21 AM"
+# OpenNode - Payment Processor
+-
+  name: OpenNode
+  tracking_issue: null
+  class: payment_processor
+  status: engaged
+  language: "TypeScript, JavaScript"
+  custody: custodial
+  capabilities:
+    sending: true
+    receive_consolidation: true
+    cut_through: true
+    channel_open: false
+    async_status: false
+    fallback: true
+    ohttp_relay_rotation: false
+  native_http_client: true
+  sync_method: custodial
+  blocker: product_priority_and_legal
+  owner:
+    internal: Spacebear
+    external: "Peter Marcano @ OpenNode"
+  scores:
+    leverage: 4
+    feasibility: 2
+    maintenance: 2
+  spec_feedback: real_usage
+  notes: "Peter Marcano (web dev) signaled personal interest but flagged product priority and legal/compliance as business-side blockers. Notably open to running a Payjoin directory/mailroom server. Custodial merchant payment processor: sending (payouts), receive_consolidation, and cut-through (merchant settlement forwarding) all in scope."
+  contact:
+    name: Peter Marcano
+    last_contact: 2026-04-29
+  next_artifact:
+    type: null
+    description: "Pre-artifact, needs business-side sign-off before concrete deliverable"
+    url: null
+  added: "February 9, 2023 10:11 PM"
 # bitmask-core - On Chain Wallet (status uncertain)
 -
   name: bitmask-core
@@ -1066,20 +1102,6 @@
   added: "February 3, 2023 4:27 AM"
   bounty: null
   language: TypeScript
--
-  name: OpenNode
-  status: Contacted
-  priority: null
-  estimated_value: null
-  company: null
-  last_contact: null
-  expected_close: null
-  phone: null
-  email: null
-  account_owner: null
-  added: "February 9, 2023 10:11 PM"
-  bounty: null
-  language: null
 -
   name: Louis Liu
   status: Contacted
