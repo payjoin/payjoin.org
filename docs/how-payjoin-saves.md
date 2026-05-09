@@ -25,7 +25,7 @@ Exchange 2 btc  ->  1 btc to Carol
                    ~1 btc minus fees to Exchange
 ```
 
-Each transaction would cost the exchange 𝑏 + 𝑖 + 2𝑜, and they would pass the fees onto their customers in order to make a profit. The sum of these costs would be 3𝑏 + 3𝑖 + 6𝑜, which would come out of the final ~2 BTC change the exchange keeps in the end. We're also ignoring some fees 𝑖 that would need to be paid to spend the change output in the future.
+Each transaction would cost the exchange 𝑏 + 𝑖 + 2𝑜, and they would pass the fees onto their customers in order to make a profit. The sum of these costs would be 3𝑏 + 3𝑖 + 6𝑜, which would come out of the final ~1 BTC change the exchange keeps in the end. We're also ignoring some fees 𝑖 that would need to be paid to spend the change output in the future.
 
 ## Old-School Payment Batching
 
