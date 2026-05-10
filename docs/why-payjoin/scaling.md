@@ -10,7 +10,7 @@ The simplest way to scale any database is batching, which is exactly what Payjoi
 Payjoin enables multiple distinct parties to combine what would otherwise be distinct transaction intents into a joint transaction which lets them share transaction data they would otherwise both need to pay to add to the chain.
 
 ## Your Typical Payjoin
-In a basic bitcoin transaction, a sender spends some bitcoin to a new transaction output paying someone and makes change from their funds at the same time. A third party looking at the transaction on chain could assume all input to a transaction must have come from that sender.
+In a basic bitcoin transaction, a sender spends some bitcoin to a new transaction output paying someone and makes change from their funds at the same time. A third party looking at the transaction on chain could assume all inputs to a transaction must have come from that sender.
 
 In Payjoin, the sender and receiver both contribute funds, breaking Satoshi's assumption. The payment amount plus receiver input amount both go to the receiver and the sender gets change. Because bitcoin is stored in distinct transaction outputs, and not accounts, such a transaction looks the same as one where a sender spent multiple inputs to a receiver and made change. By breaking the assumption from the whitepaper, Payjoin makes it much harder to be sure about who got paid how much.
 
