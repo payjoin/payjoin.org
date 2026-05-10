@@ -61,7 +61,7 @@ Exchange ~3 btc  ->  2 btc to Erin
 Exchange  4 btc ->    1 btc to Alice
                       1 btc to Bob
                       1 btc to Carol
-                     ~2 btc minus fees to Exchange
+                     ~1 btc minus fees to Exchange
 ```
 
 The combined cost of these two withdrawals is 2𝑏 + 2𝑖 + 6𝑜. They also create 2 change outputs, which the exchange will have to pay 2𝑖 fees to spend in the future. Payjoin lets the exchange fund withdrawals with Dave's deposit in the same transaction:
