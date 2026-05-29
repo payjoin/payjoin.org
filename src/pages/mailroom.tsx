@@ -290,6 +290,18 @@ export default function Mailroom(): JSX.Element {
               paying whom. No loopbacks between relay and directory roles.
             </p>
             <p>
+              One scenario deserves naming plainly: if the relay and the
+              directory collude, they can together correlate a client's IP
+              address (visible to the relay) with a session identifier
+              (visible to the directory) and the timing of message exchanges.
+              They still cannot decrypt payloads, see counterparties,
+              addresses, amounts, or the eventual transaction; payloads are
+              padded to a fixed size so post and poll bodies are
+              size-indistinguishable. The defense is operator separation:
+              relay and directory are operated by different entities, curated
+              by the Payjoin Foundation.
+            </p>
+            <p>
               <strong>
                 You never touch bitcoin. You never see transactions. Zero
                 custody risk.
