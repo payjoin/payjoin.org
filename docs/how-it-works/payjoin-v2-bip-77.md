@@ -49,7 +49,7 @@ sequenceDiagram
 
 :::info
 
-All requests made to the directory by the sender or receiver are done using [OHTTP](#oblivous-http-ohttp), so that the directory doesn't know any of their identifying metadata. OHTTP is explained below.
+All requests made to the directory by the sender or receiver are done using [OHTTP](#oblivious-http-ohttp), so that the directory doesn't know any of their identifying metadata. OHTTP is explained below.
 
 :::
 
@@ -66,7 +66,7 @@ A Payjoin v2 transaction takes the following steps:
 
 Each message between Sender/Receiver client and Directory happens over OHTTP to protect metadata.
 
-### Oblivous HTTP (OHTTP)
+### Oblivious HTTP (OHTTP)
 
 [Oblivious HTTP](https://www.ietf.org/rfc/rfc9458.html) works by separating knowledge of the client's IP address metadata the request contents. There are four actors in the OHTTP architecture:
 

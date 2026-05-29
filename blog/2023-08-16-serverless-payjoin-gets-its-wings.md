@@ -186,7 +186,7 @@ the time a payjoin was coordinated and the time it made it into mempools
 or on chain. Unfortunately this doesn't keep the relay from linking the
 IPs to senders and receivers.
 
-A hopeful alternative might be Oblivous HTTP. [OHTTP is a relatively new
+A hopeful alternative might be Oblivious HTTP. [OHTTP is a relatively new
 IETF
 standard](https://ietf-wg-ohai.github.io/oblivious-http/draft-ietf-ohai-ohttp.html)
 that works on the same principles as Tor, but without the complexity of
