@@ -83,6 +83,23 @@ Bull Bitcoin (first mobile wallet with BIP 77 send + receive), Cake Wallet, and 
 github.com/payjoin/rust-payjoin/tree/master/payjoin-mailroom
 Questions? Reach out at payjoin.org or open a Discussion on GitHub.
 
+## Build Process
+
+The PDF is generated from `mailroom-brief.html`, which is the styled HTML version of this markdown.
+
+```bash
+# 1. Edit MAILROOM_BRIEF.md (this file) with content changes
+# 2. Apply changes to mailroom-brief.html (the styled HTML source)
+# 3. Open mailroom-brief.html in a browser
+# 4. Print to PDF (Cmd+P / Ctrl+P → Save as PDF)
+#    - Use "Letter" page size
+#    - Margins: ~0.65in top/bottom, ~0.75in left/right (built into @page CSS)
+#    - Background graphics: ON (for the pink trust box and CTA)
+# 5. Save as static/mailroom-brief-v2.pdf
+```
+
+The HTML has `@page` CSS that handles print layout. Do NOT use wkhtmltopdf or headless Chrome — the `@page` styles are tuned for browser print dialog.
+
 ## Design Notes
 - The document was originally a 2-page Word doc with professional layout
 - The "Trust Model" box has a pink/magenta accent background

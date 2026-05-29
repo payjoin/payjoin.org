@@ -220,6 +220,7 @@
     <h2>Trust Model: YOU SEE NOTHING</h2>
     <p>All Async Payjoin payloads are end-to-end encrypted with HPKE. The directory cannot read, forge, or correlate transaction contents. The OHTTP relay only sees encrypted blobs and never learns who is paying whom. No loopbacks between relay and directory roles.</p>
     <p><strong>You never touch bitcoin. You never see transactions. Zero custody risk.</strong></p>
+    <p style="margin-top: 8px; font-size: 9pt; color: #555;">V2 (BIP 77) payloads are fully end-to-end encrypted. V1 backwards-compatible requests (BIP 78) are plaintext: the directory can see sender IP addresses and transaction contents. V1 support is transitional and will be removed as wallets upgrade to V2. Operators who want the strongest privacy guarantees can disable V1 in configuration.</p>
   </div>
 </div>
 
@@ -254,12 +255,12 @@
 
   <div class="faq-item">
     <p class="faq-q">What about OFAC compliance?</p>
-    <p class="faq-a">payjoin-mailroom supports configurable IP address filtering for all requests regardless of protocol version. Async Payjoin sessions are encrypted end-to-end and opaque by design. For optional legacy v1 backwards-compatibility, where requests are plaintext, additional direct address screening is built in. Operators can enforce their own compliance policies without any changes to the protocol.</p>
+    <p class="faq-a">payjoin-mailroom ships with built-in OFAC address list filtering and configurable IP address filtering. For backwards-compatible plaintext v1 requests, the service can screen Bitcoin addresses directly. BIP 77 encrypted sessions are opaque by design, so address screening is not possible, but IP filtering applies to all requests regardless of protocol version. Operators can enforce their own compliance policies without any changes to the protocol.</p>
   </div>
 
   <div class="faq-item">
     <p class="faq-q">What data does the operator see?</p>
-    <p class="faq-a">Aggregate metrics only: raw mailbox counts (roughly two per payjoin session). The operator doesn't see payload contents, Bitcoin addresses, or sender/receiver identity. OHTTP blinds client IP from the directory, and all payloads are encrypted end-to-end. This is less visibility than even Signal has running their own infrastructure, since Signal registers phone numbers and sees payload sizes. payjoin-mailroom does neither.</p>
+    <p class="faq-a">Aggregate metrics only: raw mailbox counts (roughly two per payjoin session). The operator never sees payload contents, Bitcoin addresses, or sender/receiver identity. OHTTP blinds client IP from the directory, and all payloads are encrypted end-to-end. The exception is V1 backwards-compatible requests, which are plaintext. V1 is transitional and can be disabled in configuration. This is less visibility than even Signal has running their own infrastructure, since Signal registers phone numbers and sees payload sizes. payjoin-mailroom does neither.</p>
   </div>
 
   <div class="faq-item">
