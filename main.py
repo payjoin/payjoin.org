@@ -10,6 +10,13 @@ def define_env(env):
     # Filter out None entries and calculate priority score
     integrations = [i for i in integrations if i is not None]
 
+    # Strip private CRM fields so they can never reach the rendered (public) site.
+    # The canonical YAML retains them; they are removed only from template-facing data.
+    PRIVATE_FIELDS = ('email', 'phone', 'estimated_value', 'expected_close', 'account_owner')
+    for i in integrations:
+        for f in PRIVATE_FIELDS:
+            i.pop(f, None)
+
     for i in integrations:
         if i.get('scores'):
             s = i['scores']

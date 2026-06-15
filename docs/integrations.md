@@ -32,8 +32,8 @@
 
 ### Prospect ({{ integrations_by_status('prospect') | list | length }})
 
-| Name | Company | Est. Value |
-|------|---------|------------|
+| Name | Company |
+|------|---------|
 {% for i in integrations_by_status('prospect') -%}
-| {{ i.name or i.company or '-' }} | {{ i.company or '-' }} | {{ i.estimated_value or '-' }} |
+| {{ i.name or i.company or '-' }} | {{ i.company or '-' }} |
 {% endfor %}
