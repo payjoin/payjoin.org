@@ -36,8 +36,9 @@ def define_env(env):
 
     @env.macro
     def integrations_by_status(status):
-        """Return integrations filtered by status"""
-        return [i for i in integrations if i.get('status') == status]
+        """Return integrations filtered by status (case-insensitive)."""
+        s = (status or '').lower()
+        return [i for i in integrations if (i.get('status') or '').lower() == s]
 
     @env.macro
     def unscored_integrations():

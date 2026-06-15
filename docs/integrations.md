@@ -22,11 +22,11 @@
 | {{ i.name or i.company or '-' }} | {{ i.language or '-' }} | {{ i.contact.name if i.contact else '-' }} |
 {% endfor %}
 
-### Contacted ({{ integrations_by_status('Contacted') | list | length }})
+### Contacted ({{ integrations_by_status('contacted') | list | length }})
 
 | Name | Company | Language |
 |------|---------|----------|
-{% for i in integrations_by_status('Contacted') -%}
+{% for i in integrations_by_status('contacted') -%}
 | {{ i.name or '-' }} | {{ i.company or '-' }} | {{ i.language or '-' }} |
 {% endfor %}
 
