@@ -1,0 +1,155 @@
+- id: mpj-psbt-lattice
+  title: PSBT join semi-lattice type
+  area: multiparty-payjoin
+  type: spec
+  status: in_progress
+  scores:
+    impact: 5
+    tractability: 3
+    visibility: 3
+    maintenance: 2
+  blocker:
+    kind: design_review
+    owner: Dan Gould
+    next_action: Draft spec outline and trait list
+    expected_unblock_date: null
+  deliverable:
+    artifact: Design spec + trait API notes
+    target_date: 2026-03-15
+    grant_alignment: Multiparty Payjoin V3
+  evidence_paths:
+    - research-docs/general/research-milestones.md
+    - research-docs/general/research_goals.md
+
+- id: cost-model
+  title: Cost function and optimization framework
+  area: multiparty-payjoin
+  type: research_question
+  status: in_progress
+  scores:
+    impact: 5
+    tractability: 2
+    visibility: 3
+    maintenance: 3
+  blocker:
+    kind: model_definition
+    owner: Dan Gould
+    next_action: Define cost terms and example wallet strategies
+    expected_unblock_date: null
+  deliverable:
+    artifact: Cost model writeup + example scenarios
+    target_date: 2026-04-01
+    grant_alignment: Multiparty Payjoin V3
+  evidence_paths:
+    - research-docs/general/research-milestones.md
+
+- id: privacy-metrics
+  title: Privacy metrics and evaluation framework
+  area: privacy-metrics
+  type: research_question
+  status: backlog
+  scores:
+    impact: 4
+    tractability: 3
+    visibility: 4
+    maintenance: 3
+  blocker:
+    kind: dataset_access
+    owner: Dan Gould
+    next_action: Identify datasets and baseline heuristics
+    expected_unblock_date: null
+  deliverable:
+    artifact: Metrics definition + evaluation plan
+    target_date: 2026-05-01
+    grant_alignment: Privacy metrics toolkit
+  evidence_paths:
+    - research-docs/general/research-milestones.md
+    - research-docs/general/research_goals.md
+
+- id: coalition-formation
+  title: Coalition formation protocol
+  area: multiparty-payjoin
+  type: protocol
+  status: blocked
+  scores:
+    impact: 5
+    tractability: 2
+    visibility: 2
+    maintenance: 4
+  blocker:
+    kind: protocol_design
+    owner: Dan Gould
+    next_action: Enumerate protocol steps and threat model
+    expected_unblock_date: null
+  deliverable:
+    artifact: Protocol sketch + threat model
+    target_date: 2026-06-15
+    grant_alignment: Multiparty Payjoin V3
+  evidence_paths:
+    - research-docs/general/research-milestones.md
+
+- id: tx-graph-framework
+  title: Transaction graph analysis framework
+  area: tx-graph
+  type: implementation
+  status: backlog
+  scores:
+    impact: 4
+    tractability: 2
+    visibility: 5
+    maintenance: 4
+  blocker:
+    kind: tooling_scope
+    owner: Dan Gould
+    next_action: Define minimal feature set and data model
+    expected_unblock_date: null
+  deliverable:
+    artifact: Framework architecture doc
+    target_date: 2026-07-01
+    grant_alignment: Privacy metrics toolkit
+  evidence_paths:
+    - research-docs/general/research_goals.md
+
+- id: tx-graph-structure
+  title: Transaction graph structure simulations
+  area: tx-graph
+  type: experiment
+  status: backlog
+  scores:
+    impact: 3
+    tractability: 3
+    visibility: 4
+    maintenance: 2
+  blocker:
+    kind: simulation_plan
+    owner: Dan Gould
+    next_action: Draft simulation parameters and metrics
+    expected_unblock_date: null
+  deliverable:
+    artifact: Simulation plan + baseline results
+    target_date: 2026-08-01
+    grant_alignment: Privacy metrics toolkit
+  evidence_paths:
+    - research-docs/general/research_goals.md
+
+- id: light-client-privacy
+  title: Light client privacy preserving reads
+  area: light-clients
+  type: research_question
+  status: backlog
+  scores:
+    impact: 3
+    tractability: 2
+    visibility: 3
+    maintenance: 2
+  blocker:
+    kind: scope_definition
+    owner: Dan Gould
+    next_action: Separate PIR vs OHTTP components
+    expected_unblock_date: null
+  deliverable:
+    artifact: Problem statement + option matrix
+    target_date: 2026-09-01
+    grant_alignment: Light client privacy
+  evidence_paths:
+    - research-docs/general/research_goals.md

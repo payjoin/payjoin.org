@@ -1,7 +1,7 @@
 import yaml
 
 def define_env(env):
-    """Define variables and macros for mkdocs-macros"""
+    """Define variables and macros for mkdocs-macros."""
 
     # Load integrations data
     with open('data/integrations.yaml', 'r') as f:
@@ -53,3 +53,55 @@ def define_env(env):
         if len(text) <= length:
             return text
         return text[:length].rsplit(' ', 1)[0] + '…'
+
+    # Load research data
+    with open('data/research.yaml', 'r') as f:
+        research_items = yaml.safe_load(f)
+
+    research_items = [r for r in research_items if r is not None]
+
+    for r in research_items:
+        scores = r.get('scores')
+        if scores:
+            impact = scores.get('impact', 0)
+            tractability = scores.get('tractability', 0)
+            visibility = scores.get('visibility', 0)
+            maintenance = scores.get('maintenance', 0)
+            r['priority_score'] = (5 * impact) + (3 * tractability) + (2 * visibility) - maintenance
+        else:
+            r['priority_score'] = None
+
+    env.variables['research_items'] = research_items
+    env.variables['research_statuses'] = [
+        'backlog',
+        'in_progress',
+        'blocked',
+        'review',
+        'published',
+    ]
+
+    @env.macro
+    def scored_research():
+        """Return research items with scores, sorted by priority."""
+        scored = [r for r in research_items if r.get('scores')]
+        return sorted(scored, key=lambda x: x.get('priority_score', 0), reverse=True)
+
+    @env.macro
+    def research_by_status(status):
+        """Return research items filtered by status."""
+        return [r for r in research_items if r.get('status') == status]
+
+    @env.macro
+    def research_by_blocker_kind():
+        """Return research items grouped by blocker kind."""
+        buckets = {}
+        for r in research_items:
+            blocker = r.get('blocker') or {}
+            kind = blocker.get('kind') or 'none'
+            buckets.setdefault(kind, []).append(r)
+        return buckets
+
+    @env.macro
+    def grant_items():
+        """Return research items that have deliverables."""
+        return [r for r in research_items if r.get('deliverable')]
