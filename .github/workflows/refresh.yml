@@ -1,0 +1,57 @@
+name: Refresh tracker auto-state
+
+# Nightly freshness loop (Phase 1). Reads upstream issue/PR/discussion state for every
+# tracking_issue and commits data/auto-state.yaml to master, which Cloudflare Pages rebuilds.
+on:
+  schedule:
+    # 00:17 UTC = ~08:17 Asia/Taipei (UTC+8, no DST). :17 dodges the contended top-of-hour
+    # tick where GitHub delays/drops scheduled jobs. Treat arrival as approximate.
+    - cron: '17 0 * * *'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: tracker-refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install deps
+        run: pip install pyyaml
+
+      # Fail loudly on run 1 if the credential is missing/expired/mis-scoped, BEFORE the sweep.
+      - name: Credential probe
+        env:
+          GH_TOKEN: ${{ secrets.PAYJOIN_TRACKER_PAT }}
+        run: python scripts/refresh.py --probe
+
+      - name: Refresh auto-state
+        env:
+          GH_TOKEN: ${{ secrets.PAYJOIN_TRACKER_PAT }}
+        run: python scripts/refresh.py
+
+      # Direct-commit machine-verifiable facts to master (no PR chore). Commits ONLY on change,
+      # so quiet days leave no commit. CF Pages rebuilds on the push.
+      - name: Commit if changed
+        run: |
+          git add data/auto-state.yaml
+          if git diff --cached --quiet -- data/auto-state.yaml; then
+            echo "No upstream changes — nothing to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "chore: refresh tracker auto-state"
+          git push origin HEAD:master || {
+            git pull --rebase origin master && git push origin HEAD:master
+          }
