@@ -20,6 +20,8 @@ plugins:
 nav:
   - Home: index.md
   - Integrations: integrations.md
+  - Research: research.md
+  - Grants: grants.md
 
 markdown_extensions:
   - tables

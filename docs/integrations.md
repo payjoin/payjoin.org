@@ -22,18 +22,18 @@
 | {{ i.name or i.company or '-' }} | {{ i.language or '-' }} | {{ i.contact.name if i.contact else '-' }} |
 {% endfor %}
 
-### Contacted ({{ integrations_by_status('Contacted') | list | length }})
+### Contacted ({{ integrations_by_status('contacted') | list | length }})
 
 | Name | Company | Language |
 |------|---------|----------|
-{% for i in integrations_by_status('Contacted') -%}
+{% for i in integrations_by_status('contacted') -%}
 | {{ i.name or '-' }} | {{ i.company or '-' }} | {{ i.language or '-' }} |
 {% endfor %}
 
 ### Prospect ({{ integrations_by_status('prospect') | list | length }})
 
-| Name | Company | Est. Value |
-|------|---------|------------|
+| Name | Company |
+|------|---------|
 {% for i in integrations_by_status('prospect') -%}
-| {{ i.name or i.company or '-' }} | {{ i.company or '-' }} | {{ i.estimated_value or '-' }} |
+| {{ i.name or i.company or '-' }} | {{ i.company or '-' }} |
 {% endfor %}
