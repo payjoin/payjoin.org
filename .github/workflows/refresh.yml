@@ -40,18 +40,19 @@ jobs:
           GH_TOKEN: ${{ secrets.PAYJOIN_TRACKER_PAT }}
         run: python scripts/refresh.py
 
-      # Direct-commit machine-verifiable facts to master (no PR chore). Commits ONLY on change,
-      # so quiet days leave no commit. CF Pages rebuilds on the push.
+      # Direct-commit machine-verifiable facts + the digest to master (no PR chore). The digest
+      # carries the UTC date, so it changes ~daily (heartbeat + keeps the cron from auto-disabling);
+      # same-day reruns with no upstream change are idempotent -> no commit. CF Pages rebuilds on push.
       - name: Commit if changed
         run: |
-          git add data/auto-state.yaml
-          if git diff --cached --quiet -- data/auto-state.yaml; then
-            echo "No upstream changes — nothing to commit."
+          git add data/auto-state.yaml docs/digest.md
+          if git diff --cached --quiet; then
+            echo "No changes — nothing to commit."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git commit -m "chore: refresh tracker auto-state"
+          git commit -m "chore: refresh tracker auto-state + digest"
           git push origin HEAD:master || {
             git pull --rebase origin master && git push origin HEAD:master
           }

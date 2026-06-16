@@ -19,6 +19,7 @@ plugins:
 
 nav:
   - Home: index.md
+  - Digest: digest.md
   - Integrations: integrations.md
   - Research: research.md
   - Grants: grants.md
