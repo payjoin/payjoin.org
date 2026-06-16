@@ -1,3 +1,4 @@
+import os
 import yaml
 
 def define_env(env):
@@ -24,6 +25,16 @@ def define_env(env):
         else:
             i['priority_score'] = None
 
+    # Join machine-collected upstream state (data/auto-state.yaml), if present.
+    # Written nightly by scripts/refresh.py, keyed by tracking_issue URL. Optional —
+    # the build works whether or not the file exists yet.
+    auto_state = {}
+    if os.path.exists('data/auto-state.yaml'):
+        with open('data/auto-state.yaml', 'r') as f:
+            auto_state = yaml.safe_load(f) or {}
+    for i in integrations:
+        i['auto'] = auto_state.get(i.get('tracking_issue'))
+
     # Make available as variable
     env.variables['integrations'] = integrations
 
@@ -39,6 +50,12 @@ def define_env(env):
         """Return integrations filtered by status (case-insensitive)."""
         s = (status or '').lower()
         return [i for i in integrations if (i.get('status') or '').lower() == s]
+
+    @env.macro
+    def recently_changed(limit=15):
+        """Tracked integrations with upstream activity, newest first (needs auto-state)."""
+        tracked = [i for i in integrations if i.get('auto') and i['auto'].get('last_activity')]
+        return sorted(tracked, key=lambda x: x['auto']['last_activity'], reverse=True)[:limit]
 
     @env.macro
     def unscored_integrations():

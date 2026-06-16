@@ -37,3 +37,20 @@
 {% for i in integrations_by_status('prospect') -%}
 | {{ i.name or i.company or '-' }} | {{ i.company or '-' }} |
 {% endfor %}
+
+---
+
+## Recently changed (auto-tracked)
+
+_Upstream issue / PR / discussion activity, refreshed nightly by `scripts/refresh.py`._
+
+{% set rc = recently_changed(15) %}
+{% if rc %}
+| Integration | Upstream | State | Last activity |
+|-------------|----------|-------|---------------|
+{% for i in rc -%}
+| {{ i.name }} | [{{ i.auto.kind }}]({{ i.tracking_issue }}) | {{ i.auto.state or '—' }} | {{ i.auto.last_activity[:10] }} |
+{% endfor %}
+{% else %}
+_No auto-tracked activity yet — run the **Refresh tracker auto-state** workflow._
+{% endif %}
