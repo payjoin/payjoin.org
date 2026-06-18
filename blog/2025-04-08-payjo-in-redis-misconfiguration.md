@@ -7,6 +7,11 @@ authors: nothingmuch
 tags: [security]
 ---
 
+Disclaimer: the author indicated redis and docker compose were a liability
+before, helped with the incident response, mitigation and removal of these
+liabilities afterwards, has never had any access to the payjo.in infrastructure
+and is not responsible for the misconfiguration or misdiagnosis of this
+specific vulnerability.
 
 Due to a docker misconfiguration, the `payjo.in` directory server had an open
 redis database, allowing unauthorized parties to observe exchanges between pairs
