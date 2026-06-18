@@ -90,7 +90,23 @@ def _checkin_lines(checkins):
     return out
 
 
-def render(old, new, names, date_str, checkins=None):
+def _candidate_lines(candidates):
+    """Markdown lines for newly-discovered external payjoin activity (empty if none)."""
+    if not candidates:
+        return []
+    out = ["", "## New activity outside tracked repos", "",
+           "_payjoin issues/PRs in repos we don't watch yet — triage in `data/candidates.yaml`._", ""]
+    cap = 12
+    for c in candidates[:cap]:
+        out.append("- [%s](%s) · %s · ⭐%s · %s — %s" % (
+            c["repo"], c["url"], c.get("kind", "?"), c.get("stars", 0),
+            (c.get("updated_at") or "")[:10], _trunc(c.get("title"), 80)))
+    if len(candidates) > cap:
+        out.append("- _+%d more in `data/candidates.yaml`_" % (len(candidates) - cap))
+    return out
+
+
+def render(old, new, names, date_str, checkins=None, candidates=None):
     """Build the digest markdown string. date_str is the UTC date (YYYY-MM-DD)."""
     d = compute_delta(old, new)
     out = ["# Daily digest", "",
@@ -149,6 +165,7 @@ def render(old, new, names, date_str, checkins=None):
             out.append("")
 
     out += _checkin_lines(checkins)
+    out += _candidate_lines(candidates)
     return "\n".join(out).rstrip() + "\n"
 
 
@@ -176,6 +193,10 @@ def selftest():
     md = render(new, new, {}, "2026-06-16", checkins=checkins)
     assert "## Check-in follow-through" in md and "rust-payjoin#1610" in md, md
     assert "To follow up" in md and "bob" in md and "ghost" not in md, md
+    cands = [{"repo": "BlueWallet/BlueWallet", "url": "https://github.com/BlueWallet/BlueWallet/issues/1",
+              "kind": "issue", "stars": 3224, "updated_at": "2026-06-18T00:00:00Z", "title": "Payjoin support"}]
+    md = render(new, new, {}, "2026-06-18", candidates=cands)
+    assert "## New activity outside tracked repos" in md and "BlueWallet/BlueWallet" in md and "⭐3224" in md, md
     print("digest selftest passed")
     return 0
 

@@ -45,7 +45,7 @@ jobs:
       # same-day reruns with no upstream change are idempotent -> no commit. CF Pages rebuilds on push.
       - name: Commit if changed
         run: |
-          git add data/auto-state.yaml docs/digest.md
+          git add data/auto-state.yaml docs/digest.md data/candidates.yaml
           if git diff --cached --quiet; then
             echo "No changes — nothing to commit."
             exit 0
