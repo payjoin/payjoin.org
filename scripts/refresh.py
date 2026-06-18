@@ -20,6 +20,7 @@ import re
 import sys
 import urllib.request
 
+import checkins  # scripts/checkins.py — weekly check-in follow-through (Phase 3)
 import digest  # scripts/digest.py — pure digest renderer (sits beside this file on sys.path)
 
 GRAPHQL_URL = "https://api.github.com/graphql"
@@ -193,10 +194,12 @@ def main(argv):
         yaml.safe_dump(new, f, sort_keys=True, default_flow_style=False, allow_unicode=True)
     print("wrote %s (%d tracked items)" % (AUTO_STATE, len(new)))
 
-    # Digest: the day-over-day delta (old vs new), rendered to a page read once each morning.
+    # Digest: the day-over-day delta (old vs new) plus weekly check-in follow-through,
+    # rendered to a page read once each morning.
     date_str = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    checkin_data = checkins.gather(token)  # None on failure -> section omitted, digest still renders
     with open(DIGEST_MD, "w") as f:
-        f.write(digest.render(old, new, names, date_str))
+        f.write(digest.render(old, new, names, date_str, checkins=checkin_data))
     print("wrote %s" % DIGEST_MD)
     return 0
 
