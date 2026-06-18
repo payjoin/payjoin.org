@@ -1,0 +1,10 @@
+# Repos to permanently exclude from discovery (data/candidates.yaml).
+#
+# The bot already auto-excludes: repos with a tracking_issue, payjoin org repos, and forks.
+# Add anything else you never want surfaced — e.g. a high-traffic repo that mentions payjoin
+# in passing, or a tracked integration whose repo activity you don't want in the digest.
+#
+# Entries are "owner/repo" (exact) or a bare "repo-name" (matches any owner).
+repos: []
+  # - someorg/noisy-repo
+  # - awesome-bitcoin   # a list repo that mentions payjoin in passing

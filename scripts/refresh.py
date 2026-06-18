@@ -22,6 +22,7 @@ import urllib.request
 
 import checkins  # scripts/checkins.py — weekly check-in follow-through (Phase 3)
 import digest  # scripts/digest.py — pure digest renderer (sits beside this file on sys.path)
+import discover  # scripts/discover.py — external candidate discovery (Phase 4)
 
 GRAPHQL_URL = "https://api.github.com/graphql"
 INTEGRATIONS = "data/integrations.yaml"
@@ -198,8 +199,14 @@ def main(argv):
     # rendered to a page read once each morning.
     date_str = datetime.now(timezone.utc).strftime("%Y-%m-%d")
     checkin_data = checkins.gather(token)  # None on failure -> section omitted, digest still renders
+    try:
+        candidate_data = discover.update(token, yaml, date_str)  # writes data/candidates.yaml
+    except Exception as e:
+        sys.stderr.write("discover.update failed: %s\n" % e)
+        candidate_data = None
     with open(DIGEST_MD, "w") as f:
-        f.write(digest.render(old, new, names, date_str, checkins=checkin_data))
+        f.write(digest.render(old, new, names, date_str,
+                              checkins=checkin_data, candidates=candidate_data))
     print("wrote %s" % DIGEST_MD)
     return 0
 
