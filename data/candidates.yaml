@@ -5,7 +5,32 @@
   kind: pr
   title: Refactoring v0.11 into v0.11.1 in style of v0.12 simplifications
   stars: 222
-  updated_at: '2026-06-19T01:44:35Z'
+  updated_at: '2026-06-20T00:57:48Z'
+  first_seen: '2026-06-19'
+  status: new
+- url: https://github.com/BlueWallet/BlueWallet/issues/3659
+  repo: BlueWallet/BlueWallet
+  kind: issue
+  title: Dependency Dashboard
+  stars: 3228
+  updated_at: '2026-06-19T21:11:35Z'
+  first_seen: '2026-06-19'
+  status: new
+- url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2304
+  repo: SatoshiPortal/bullbitcoin-mobile
+  kind: pr
+  title: 'feat: Coins (UTXO) view with freeze/unfreeze only, on a new bull_ui design
+    system (#760)'
+  stars: 181
+  updated_at: '2026-06-19T11:56:04Z'
+  first_seen: '2026-06-19'
+  status: new
+- url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2293
+  repo: SatoshiPortal/bullbitcoin-mobile
+  kind: pr
+  title: 'refactor(errors): establish user-facing error sanitization pattern (#1895)'
+  stars: 181
+  updated_at: '2026-06-19T08:43:47Z'
   first_seen: '2026-06-19'
   status: new
 - url: https://github.com/bitcointranscripts/bitcointranscripts/pull/672
@@ -13,7 +38,15 @@
   kind: pr
   title: Add supercharging-transactions-with-async-payjoin review to tabconf/2024
   stars: 110
-  updated_at: '2026-06-18T22:14:54Z'
+  updated_at: '2026-06-19T07:57:40Z'
+  first_seen: '2026-06-19'
+  status: new
+- url: https://github.com/SatoshiPortal/lwk-dart/pull/74
+  repo: SatoshiPortal/lwk-dart
+  kind: pr
+  title: Update lwk from 0.17.0 to 0.18.0
+  stars: 17
+  updated_at: '2026-06-19T07:28:14Z'
   first_seen: '2026-06-19'
   status: new
 - url: https://github.com/Horus-Org/payjoin-react-native/issues/2
@@ -22,22 +55,6 @@
   title: Dependency Dashboard
   stars: 3
   updated_at: '2026-06-18T21:47:37Z'
-  first_seen: '2026-06-19'
-  status: new
-- url: https://github.com/BlueWallet/BlueWallet/issues/3659
-  repo: BlueWallet/BlueWallet
-  kind: issue
-  title: Dependency Dashboard
-  stars: 3226
-  updated_at: '2026-06-18T15:42:11Z'
-  first_seen: '2026-06-19'
-  status: new
-- url: https://github.com/SatoshiPortal/lwk-dart/pull/74
-  repo: SatoshiPortal/lwk-dart
-  kind: pr
-  title: Update lwk from 0.17.0 to 0.18.0
-  stars: 17
-  updated_at: '2026-06-18T15:40:18Z'
   first_seen: '2026-06-19'
   status: new
 - url: https://github.com/thesimplekid/cdk-bark-payment-procssor/pull/4
@@ -81,28 +98,11 @@
   updated_at: '2026-06-18T11:24:59Z'
   first_seen: '2026-06-19'
   status: new
-- url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2293
-  repo: SatoshiPortal/bullbitcoin-mobile
-  kind: pr
-  title: 'refactor(errors): establish user-facing error sanitization pattern (#1895)'
-  stars: 181
-  updated_at: '2026-06-18T09:35:15Z'
-  first_seen: '2026-06-19'
-  status: new
-- url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2304
-  repo: SatoshiPortal/bullbitcoin-mobile
-  kind: pr
-  title: 'feat: Coins (UTXO) view with freeze/unfreeze only, on a new bull_ui design
-    system (#760)'
-  stars: 181
-  updated_at: '2026-06-18T09:10:43Z'
-  first_seen: '2026-06-19'
-  status: new
 - url: https://github.com/cake-tech/cake_wallet/pull/3304
   repo: cake-tech/cake_wallet
   kind: pr
   title: 'fix: Payjoin receiver skips UIH2 avoidance, always contributes unspent[0]'
-  stars: 1713
+  stars: 1716
   updated_at: '2026-06-18T08:46:28Z'
   first_seen: '2026-06-19'
   status: new
@@ -110,7 +110,7 @@
   repo: cake-tech/cake_wallet
   kind: issue
   title: Payjoin receiver skips UIH2 avoidance, always contributes unspent[0]
-  stars: 1713
+  stars: 1716
   updated_at: '2026-06-18T08:45:10Z'
   first_seen: '2026-06-19'
   status: new
@@ -288,7 +288,7 @@
   repo: cake-tech/cake_wallet
   kind: issue
   title: 'RBF nsequence: non-canonical 0x01, only on inputs[0]'
-  stars: 1713
+  stars: 1716
   updated_at: '2026-06-05T19:46:29Z'
   first_seen: '2026-06-19'
   status: new
