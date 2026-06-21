@@ -1,19 +1,19 @@
 # Discovered payjoin activity outside tracked repos. Bot appends; you own `status`.
 # status: new | watching | dismissed | promoted  (bot only adds 'new')
-- url: https://github.com/RGB-WG/rgb-core/pull/288
-  repo: RGB-WG/rgb-core
-  kind: pr
-  title: Refactoring v0.11 into v0.11.1 in style of v0.12 simplifications
-  stars: 222
-  updated_at: '2026-06-20T00:57:48Z'
-  first_seen: '2026-06-19'
-  status: new
 - url: https://github.com/BlueWallet/BlueWallet/issues/3659
   repo: BlueWallet/BlueWallet
   kind: issue
   title: Dependency Dashboard
   stars: 3228
-  updated_at: '2026-06-19T21:11:35Z'
+  updated_at: '2026-06-20T20:34:08Z'
+  first_seen: '2026-06-19'
+  status: new
+- url: https://github.com/RGB-WG/rgb-core/pull/288
+  repo: RGB-WG/rgb-core
+  kind: pr
+  title: Refactoring v0.11 into v0.11.1 in style of v0.12 simplifications
+  stars: 222
+  updated_at: '2026-06-20T06:20:26Z'
   first_seen: '2026-06-19'
   status: new
 - url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2304
@@ -21,7 +21,7 @@
   kind: pr
   title: 'feat: Coins (UTXO) view with freeze/unfreeze only, on a new bull_ui design
     system (#760)'
-  stars: 181
+  stars: 182
   updated_at: '2026-06-19T11:56:04Z'
   first_seen: '2026-06-19'
   status: new
@@ -29,7 +29,7 @@
   repo: SatoshiPortal/bullbitcoin-mobile
   kind: pr
   title: 'refactor(errors): establish user-facing error sanitization pattern (#1895)'
-  stars: 181
+  stars: 182
   updated_at: '2026-06-19T08:43:47Z'
   first_seen: '2026-06-19'
   status: new
@@ -102,7 +102,7 @@
   repo: cake-tech/cake_wallet
   kind: pr
   title: 'fix: Payjoin receiver skips UIH2 avoidance, always contributes unspent[0]'
-  stars: 1716
+  stars: 1721
   updated_at: '2026-06-18T08:46:28Z'
   first_seen: '2026-06-19'
   status: new
@@ -110,7 +110,7 @@
   repo: cake-tech/cake_wallet
   kind: issue
   title: Payjoin receiver skips UIH2 avoidance, always contributes unspent[0]
-  stars: 1716
+  stars: 1721
   updated_at: '2026-06-18T08:45:10Z'
   first_seen: '2026-06-19'
   status: new
@@ -126,7 +126,7 @@
   repo: SatoshiPortal/bullbitcoin-mobile
   kind: pr
   title: refactor transaction details page items
-  stars: 181
+  stars: 182
   updated_at: '2026-06-17T20:43:36Z'
   first_seen: '2026-06-19'
   status: new
@@ -174,7 +174,7 @@
   repo: SatoshiPortal/bullbitcoin-mobile
   kind: pr
   title: 'fix(fees): sub-1 sat/vByte fees via mempool precise endpoint (#2133)'
-  stars: 181
+  stars: 182
   updated_at: '2026-06-15T15:31:42Z'
   first_seen: '2026-06-19'
   status: new
@@ -182,7 +182,7 @@
   repo: SatoshiPortal/bullbitcoin-mobile
   kind: issue
   title: Swap status displays as "pending" after successful completion
-  stars: 181
+  stars: 182
   updated_at: '2026-06-15T11:01:10Z'
   first_seen: '2026-06-19'
   status: new
@@ -190,7 +190,7 @@
   repo: SatoshiPortal/bullbitcoin-mobile
   kind: issue
   title: 'Master UTXO Issue: Manual Coin Selection Support'
-  stars: 181
+  stars: 182
   updated_at: '2026-06-15T10:57:23Z'
   first_seen: '2026-06-19'
   status: new
@@ -207,7 +207,7 @@
   repo: SatoshiPortal/bullbitcoin-mobile
   kind: issue
   title: Build issue with Payjoin in a fresh dev environment
-  stars: 181
+  stars: 182
   updated_at: '2026-06-12T12:26:42Z'
   first_seen: '2026-06-19'
   status: new
@@ -216,7 +216,7 @@
   kind: issue
   title: Payjoin sender stuck on "Coordinating a payjoin transaction" screen after
     receiver updates
-  stars: 181
+  stars: 182
   updated_at: '2026-06-12T09:05:07Z'
   first_seen: '2026-06-19'
   status: new
@@ -224,7 +224,7 @@
   repo: SatoshiPortal/bullbitcoin-mobile
   kind: issue
   title: Payjoin Improvement Plan
-  stars: 181
+  stars: 182
   updated_at: '2026-06-11T06:13:02Z'
   first_seen: '2026-06-19'
   status: new
@@ -232,7 +232,7 @@
   repo: SatoshiPortal/bullbitcoin-mobile
   kind: issue
   title: Very slow transaction loading
-  stars: 181
+  stars: 182
   updated_at: '2026-06-11T05:49:41Z'
   first_seen: '2026-06-19'
   status: new
@@ -240,7 +240,7 @@
   repo: SatoshiPortal/bullbitcoin-mobile
   kind: issue
   title: App allows me to reuse UTXO used in payjoin request
-  stars: 181
+  stars: 182
   updated_at: '2026-06-11T05:46:52Z'
   first_seen: '2026-06-19'
   status: new
@@ -248,7 +248,7 @@
   repo: SatoshiPortal/bullbitcoin-mobile
   kind: issue
   title: On-chain receive flow ignores requested amount
-  stars: 181
+  stars: 182
   updated_at: '2026-06-10T08:26:40Z'
   first_seen: '2026-06-19'
   status: new
@@ -256,7 +256,7 @@
   repo: SatoshiPortal/bullbitcoin-mobile
   kind: issue
   title: Payjoin details status update
-  stars: 181
+  stars: 182
   updated_at: '2026-06-10T08:03:15Z'
   first_seen: '2026-06-19'
   status: new
@@ -264,7 +264,7 @@
   repo: SatoshiPortal/bullbitcoin-mobile
   kind: issue
   title: CSV Export for All Wallet Transactions
-  stars: 181
+  stars: 182
   updated_at: '2026-06-10T08:02:53Z'
   first_seen: '2026-06-19'
   status: new
@@ -272,7 +272,7 @@
   repo: SatoshiPortal/bullbitcoin-mobile
   kind: issue
   title: More useful details on broadcast screen
-  stars: 181
+  stars: 182
   updated_at: '2026-06-10T08:02:51Z'
   first_seen: '2026-06-19'
   status: new
@@ -280,7 +280,7 @@
   repo: SatoshiPortal/bullbitcoin-mobile
   kind: issue
   title: Follow up migration to Flutter 3.44.X
-  stars: 181
+  stars: 182
   updated_at: '2026-06-09T08:56:47Z'
   first_seen: '2026-06-19'
   status: new
@@ -288,7 +288,7 @@
   repo: cake-tech/cake_wallet
   kind: issue
   title: 'RBF nsequence: non-canonical 0x01, only on inputs[0]'
-  stars: 1716
+  stars: 1721
   updated_at: '2026-06-05T19:46:29Z'
   first_seen: '2026-06-19'
   status: new
@@ -320,7 +320,7 @@
   repo: getfloresta/Floresta
   kind: issue
   title: sendrawtransaction accepts unsigned transactions and returns a txid
-  stars: 416
+  stars: 417
   updated_at: '2026-05-26T19:57:50Z'
   first_seen: '2026-06-19'
   status: new
