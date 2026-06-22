@@ -4,8 +4,8 @@
   repo: BlueWallet/BlueWallet
   kind: issue
   title: Dependency Dashboard
-  stars: 3228
-  updated_at: '2026-06-20T20:34:08Z'
+  stars: 3229
+  updated_at: '2026-06-22T04:54:58Z'
   first_seen: '2026-06-19'
   status: new
 - url: https://github.com/RGB-WG/rgb-core/pull/288
@@ -102,7 +102,7 @@
   repo: cake-tech/cake_wallet
   kind: pr
   title: 'fix: Payjoin receiver skips UIH2 avoidance, always contributes unspent[0]'
-  stars: 1721
+  stars: 1723
   updated_at: '2026-06-18T08:46:28Z'
   first_seen: '2026-06-19'
   status: new
@@ -110,7 +110,7 @@
   repo: cake-tech/cake_wallet
   kind: issue
   title: Payjoin receiver skips UIH2 avoidance, always contributes unspent[0]
-  stars: 1721
+  stars: 1723
   updated_at: '2026-06-18T08:45:10Z'
   first_seen: '2026-06-19'
   status: new
@@ -288,7 +288,7 @@
   repo: cake-tech/cake_wallet
   kind: issue
   title: 'RBF nsequence: non-canonical 0x01, only on inputs[0]'
-  stars: 1721
+  stars: 1723
   updated_at: '2026-06-05T19:46:29Z'
   first_seen: '2026-06-19'
   status: new
@@ -304,7 +304,7 @@
   repo: sparrowwallet/sparrow
   kind: issue
   title: PayJoin v2 (BIP77)
-  stars: 2023
+  stars: 2024
   updated_at: '2026-06-01T09:53:06Z'
   first_seen: '2026-06-19'
   status: new
@@ -320,7 +320,7 @@
   repo: getfloresta/Floresta
   kind: issue
   title: sendrawtransaction accepts unsigned transactions and returns a txid
-  stars: 417
+  stars: 418
   updated_at: '2026-05-26T19:57:50Z'
   first_seen: '2026-06-19'
   status: new
