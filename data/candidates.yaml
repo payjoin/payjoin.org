@@ -1,19 +1,43 @@
 # Discovered payjoin activity outside tracked repos. Bot appends; you own `status`.
 # status: new | watching | dismissed | promoted  (bot only adds 'new')
+- url: https://github.com/NordSecurity/uniffi-bindgen-cs/pull/163
+  repo: NordSecurity/uniffi-bindgen-cs
+  kind: pr
+  title: Upgrade uniffi-rs from 0.29.4 to 0.31.0
+  stars: 172
+  updated_at: '2026-06-23T02:20:39Z'
+  first_seen: '2026-06-19'
+  status: new
 - url: https://github.com/BlueWallet/BlueWallet/issues/3659
   repo: BlueWallet/BlueWallet
   kind: issue
   title: Dependency Dashboard
   stars: 3229
-  updated_at: '2026-06-22T04:54:58Z'
+  updated_at: '2026-06-22T21:49:04Z'
   first_seen: '2026-06-19'
   status: new
-- url: https://github.com/RGB-WG/rgb-core/pull/288
-  repo: RGB-WG/rgb-core
+- url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2293
+  repo: SatoshiPortal/bullbitcoin-mobile
   kind: pr
-  title: Refactoring v0.11 into v0.11.1 in style of v0.12 simplifications
-  stars: 222
-  updated_at: '2026-06-20T06:20:26Z'
+  title: 'refactor(errors): establish user-facing error sanitization pattern (#1895)'
+  stars: 182
+  updated_at: '2026-06-22T19:59:54Z'
+  first_seen: '2026-06-19'
+  status: new
+- url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2041
+  repo: SatoshiPortal/bullbitcoin-mobile
+  kind: pr
+  title: Upgrade payjoin
+  stars: 182
+  updated_at: '2026-06-22T19:14:51Z'
+  first_seen: '2026-06-23'
+  status: new
+- url: https://github.com/Horus-Org/payjoin-react-native/issues/2
+  repo: Horus-Org/payjoin-react-native
+  kind: issue
+  title: Dependency Dashboard
+  stars: 3
+  updated_at: '2026-06-22T18:08:39Z'
   first_seen: '2026-06-19'
   status: new
 - url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2304
@@ -22,15 +46,23 @@
   title: 'feat: Coins (UTXO) view with freeze/unfreeze only, on a new bull_ui design
     system (#760)'
   stars: 182
-  updated_at: '2026-06-19T11:56:04Z'
+  updated_at: '2026-06-22T14:16:39Z'
   first_seen: '2026-06-19'
   status: new
-- url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2293
+- url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2326
   repo: SatoshiPortal/bullbitcoin-mobile
   kind: pr
-  title: 'refactor(errors): establish user-facing error sanitization pattern (#1895)'
+  title: refactor txn details screen (wip)
   stars: 182
-  updated_at: '2026-06-19T08:43:47Z'
+  updated_at: '2026-06-22T07:55:28Z'
+  first_seen: '2026-06-23'
+  status: new
+- url: https://github.com/RGB-WG/rgb-core/pull/288
+  repo: RGB-WG/rgb-core
+  kind: pr
+  title: Refactoring v0.11 into v0.11.1 in style of v0.12 simplifications
+  stars: 222
+  updated_at: '2026-06-20T06:20:26Z'
   first_seen: '2026-06-19'
   status: new
 - url: https://github.com/bitcointranscripts/bitcointranscripts/pull/672
@@ -47,14 +79,6 @@
   title: Update lwk from 0.17.0 to 0.18.0
   stars: 17
   updated_at: '2026-06-19T07:28:14Z'
-  first_seen: '2026-06-19'
-  status: new
-- url: https://github.com/Horus-Org/payjoin-react-native/issues/2
-  repo: Horus-Org/payjoin-react-native
-  kind: issue
-  title: Dependency Dashboard
-  stars: 3
-  updated_at: '2026-06-18T21:47:37Z'
   first_seen: '2026-06-19'
   status: new
 - url: https://github.com/thesimplekid/cdk-bark-payment-procssor/pull/4
@@ -102,7 +126,7 @@
   repo: cake-tech/cake_wallet
   kind: pr
   title: 'fix: Payjoin receiver skips UIH2 avoidance, always contributes unspent[0]'
-  stars: 1723
+  stars: 1725
   updated_at: '2026-06-18T08:46:28Z'
   first_seen: '2026-06-19'
   status: new
@@ -110,16 +134,8 @@
   repo: cake-tech/cake_wallet
   kind: issue
   title: Payjoin receiver skips UIH2 avoidance, always contributes unspent[0]
-  stars: 1723
+  stars: 1725
   updated_at: '2026-06-18T08:45:10Z'
-  first_seen: '2026-06-19'
-  status: new
-- url: https://github.com/NordSecurity/uniffi-bindgen-cs/pull/163
-  repo: NordSecurity/uniffi-bindgen-cs
-  kind: pr
-  title: Upgrade uniffi-rs from 0.29.4 to 0.31.0
-  stars: 172
-  updated_at: '2026-06-17T20:58:10Z'
   first_seen: '2026-06-19'
   status: new
 - url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/1945
@@ -158,7 +174,7 @@
   repo: bitcoindevkit/bdk_wallet
   kind: pr
   title: Implement `create_psbt` for Wallet
-  stars: 50
+  stars: 51
   updated_at: '2026-06-16T14:51:16Z'
   first_seen: '2026-06-19'
   status: new
@@ -288,7 +304,7 @@
   repo: cake-tech/cake_wallet
   kind: issue
   title: 'RBF nsequence: non-canonical 0x01, only on inputs[0]'
-  stars: 1723
+  stars: 1725
   updated_at: '2026-06-05T19:46:29Z'
   first_seen: '2026-06-19'
   status: new
@@ -304,7 +320,7 @@
   repo: sparrowwallet/sparrow
   kind: issue
   title: PayJoin v2 (BIP77)
-  stars: 2024
+  stars: 2025
   updated_at: '2026-06-01T09:53:06Z'
   first_seen: '2026-06-19'
   status: new
