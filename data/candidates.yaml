@@ -1,11 +1,11 @@
 # Discovered payjoin activity outside tracked repos. Bot appends; you own `status`.
 # status: new | watching | dismissed | promoted  (bot only adds 'new')
-- url: https://github.com/BlueWallet/BlueWallet/issues/3659
-  repo: BlueWallet/BlueWallet
+- url: https://github.com/Horus-Org/payjoin-react-native/issues/2
+  repo: Horus-Org/payjoin-react-native
   kind: issue
   title: Dependency Dashboard
-  stars: 3229
-  updated_at: '2026-06-23T22:11:55Z'
+  stars: 3
+  updated_at: '2026-06-24T17:41:27Z'
   first_seen: '2026-06-19'
   status: new
 - url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2199
@@ -13,15 +13,7 @@
   kind: pr
   title: 'fix(fees): sub-1 sat/vByte fees via mempool precise endpoint (#2133)'
   stars: 183
-  updated_at: '2026-06-23T19:13:01Z'
-  first_seen: '2026-06-19'
-  status: new
-- url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2293
-  repo: SatoshiPortal/bullbitcoin-mobile
-  kind: pr
-  title: 'refactor(errors): establish user-facing error sanitization pattern (#1895)'
-  stars: 183
-  updated_at: '2026-06-23T19:05:04Z'
+  updated_at: '2026-06-24T13:29:19Z'
   first_seen: '2026-06-19'
   status: new
 - url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2304
@@ -30,7 +22,23 @@
   title: 'feat: Coins (UTXO) view with freeze/unfreeze only, on a new bull_ui design
     system (#760)'
   stars: 183
-  updated_at: '2026-06-23T16:23:52Z'
+  updated_at: '2026-06-24T12:45:38Z'
+  first_seen: '2026-06-19'
+  status: new
+- url: https://github.com/BlueWallet/BlueWallet/issues/3659
+  repo: BlueWallet/BlueWallet
+  kind: issue
+  title: Dependency Dashboard
+  stars: 3227
+  updated_at: '2026-06-23T22:11:55Z'
+  first_seen: '2026-06-19'
+  status: new
+- url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2293
+  repo: SatoshiPortal/bullbitcoin-mobile
+  kind: pr
+  title: 'refactor(errors): establish user-facing error sanitization pattern (#1895)'
+  stars: 183
+  updated_at: '2026-06-23T19:05:04Z'
   first_seen: '2026-06-19'
   status: new
 - url: https://github.com/NordSecurity/uniffi-bindgen-cs/pull/163
@@ -48,14 +56,6 @@
   stars: 183
   updated_at: '2026-06-22T19:14:51Z'
   first_seen: '2026-06-23'
-  status: new
-- url: https://github.com/Horus-Org/payjoin-react-native/issues/2
-  repo: Horus-Org/payjoin-react-native
-  kind: issue
-  title: Dependency Dashboard
-  stars: 3
-  updated_at: '2026-06-22T18:08:39Z'
-  first_seen: '2026-06-19'
   status: new
 - url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2326
   repo: SatoshiPortal/bullbitcoin-mobile
@@ -118,7 +118,7 @@
   kind: pr
   title: 'cdk-axum: Proof-of-Reserves /audit endpoint + experimental-features info
     page'
-  stars: 223
+  stars: 224
   updated_at: '2026-06-18T12:20:56Z'
   first_seen: '2026-06-19'
   status: new
@@ -134,7 +134,7 @@
   repo: cake-tech/cake_wallet
   kind: pr
   title: 'fix: Payjoin receiver skips UIH2 avoidance, always contributes unspent[0]'
-  stars: 1727
+  stars: 1728
   updated_at: '2026-06-18T08:46:28Z'
   first_seen: '2026-06-19'
   status: new
@@ -142,7 +142,7 @@
   repo: cake-tech/cake_wallet
   kind: issue
   title: Payjoin receiver skips UIH2 avoidance, always contributes unspent[0]
-  stars: 1727
+  stars: 1728
   updated_at: '2026-06-18T08:45:10Z'
   first_seen: '2026-06-19'
   status: new
@@ -190,7 +190,7 @@
   repo: cashubtc/cdk
   kind: pr
   title: Payjoin
-  stars: 223
+  stars: 224
   updated_at: '2026-06-16T10:47:15Z'
   first_seen: '2026-06-19'
   status: new
@@ -304,7 +304,7 @@
   repo: cake-tech/cake_wallet
   kind: issue
   title: 'RBF nsequence: non-canonical 0x01, only on inputs[0]'
-  stars: 1727
+  stars: 1728
   updated_at: '2026-06-05T19:46:29Z'
   first_seen: '2026-06-19'
   status: new
@@ -336,7 +336,7 @@
   repo: getfloresta/Floresta
   kind: issue
   title: sendrawtransaction accepts unsigned transactions and returns a txid
-  stars: 418
+  stars: 417
   updated_at: '2026-05-26T19:57:50Z'
   first_seen: '2026-06-19'
   status: new
