@@ -1,11 +1,59 @@
 # Discovered payjoin activity outside tracked repos. Bot appends; you own `status`.
 # status: new | watching | dismissed | promoted  (bot only adds 'new')
+- url: https://github.com/BlueWallet/BlueWallet/issues/3659
+  repo: BlueWallet/BlueWallet
+  kind: issue
+  title: Dependency Dashboard
+  stars: 3228
+  updated_at: '2026-06-25T18:05:22Z'
+  first_seen: '2026-06-19'
+  status: new
+- url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2293
+  repo: SatoshiPortal/bullbitcoin-mobile
+  kind: pr
+  title: 'refactor(errors): establish user-facing error sanitization pattern (#1895)'
+  stars: 183
+  updated_at: '2026-06-25T17:02:42Z'
+  first_seen: '2026-06-19'
+  status: new
+- url: https://github.com/bitcoindevkit/bdk_wallet/pull/297
+  repo: bitcoindevkit/bdk_wallet
+  kind: pr
+  title: Implement `create_psbt` for Wallet
+  stars: 51
+  updated_at: '2026-06-25T15:29:57Z'
+  first_seen: '2026-06-19'
+  status: new
+- url: https://github.com/alpenlabs/bitcoind-async-client/issues/125
+  repo: alpenlabs/bitcoind-async-client
+  kind: issue
+  title: Add Wallet::send (Bitcoin Core's send RPC)
+  stars: 23
+  updated_at: '2026-06-25T15:24:02Z'
+  first_seen: '2026-06-26'
+  status: new
+- url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2326
+  repo: SatoshiPortal/bullbitcoin-mobile
+  kind: pr
+  title: refactor txn details screen
+  stars: 183
+  updated_at: '2026-06-25T12:52:37Z'
+  first_seen: '2026-06-23'
+  status: new
+- url: https://github.com/FabricLabs/hub.fabric.pub/pull/14
+  repo: FabricLabs/hub.fabric.pub
+  kind: pr
+  title: RC1 & Sensemaker
+  stars: 2
+  updated_at: '2026-06-25T11:38:39Z'
+  first_seen: '2026-06-26'
+  status: new
 - url: https://github.com/Horus-Org/payjoin-react-native/issues/2
   repo: Horus-Org/payjoin-react-native
   kind: issue
   title: Dependency Dashboard
   stars: 3
-  updated_at: '2026-06-24T17:41:27Z'
+  updated_at: '2026-06-25T09:34:57Z'
   first_seen: '2026-06-19'
   status: new
 - url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2199
@@ -25,22 +73,6 @@
   updated_at: '2026-06-24T12:45:38Z'
   first_seen: '2026-06-19'
   status: new
-- url: https://github.com/BlueWallet/BlueWallet/issues/3659
-  repo: BlueWallet/BlueWallet
-  kind: issue
-  title: Dependency Dashboard
-  stars: 3227
-  updated_at: '2026-06-23T22:11:55Z'
-  first_seen: '2026-06-19'
-  status: new
-- url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2293
-  repo: SatoshiPortal/bullbitcoin-mobile
-  kind: pr
-  title: 'refactor(errors): establish user-facing error sanitization pattern (#1895)'
-  stars: 183
-  updated_at: '2026-06-23T19:05:04Z'
-  first_seen: '2026-06-19'
-  status: new
 - url: https://github.com/NordSecurity/uniffi-bindgen-cs/pull/163
   repo: NordSecurity/uniffi-bindgen-cs
   kind: pr
@@ -55,14 +87,6 @@
   title: Upgrade payjoin
   stars: 183
   updated_at: '2026-06-22T19:14:51Z'
-  first_seen: '2026-06-23'
-  status: new
-- url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2326
-  repo: SatoshiPortal/bullbitcoin-mobile
-  kind: pr
-  title: refactor txn details screen (wip)
-  stars: 183
-  updated_at: '2026-06-22T07:55:28Z'
   first_seen: '2026-06-23'
   status: new
 - url: https://github.com/RGB-WG/rgb-core/pull/288
@@ -134,7 +158,7 @@
   repo: cake-tech/cake_wallet
   kind: pr
   title: 'fix: Payjoin receiver skips UIH2 avoidance, always contributes unspent[0]'
-  stars: 1728
+  stars: 1727
   updated_at: '2026-06-18T08:46:28Z'
   first_seen: '2026-06-19'
   status: new
@@ -142,7 +166,7 @@
   repo: cake-tech/cake_wallet
   kind: issue
   title: Payjoin receiver skips UIH2 avoidance, always contributes unspent[0]
-  stars: 1728
+  stars: 1727
   updated_at: '2026-06-18T08:45:10Z'
   first_seen: '2026-06-19'
   status: new
@@ -174,16 +198,8 @@
   repo: andotherstuff/nostr-compass
   kind: pr
   title: Remove joinmarket-ng from coverage; add NIP-34 scope rule
-  stars: 10
+  stars: 11
   updated_at: '2026-06-16T16:07:09Z'
-  first_seen: '2026-06-19'
-  status: new
-- url: https://github.com/bitcoindevkit/bdk_wallet/pull/297
-  repo: bitcoindevkit/bdk_wallet
-  kind: pr
-  title: Implement `create_psbt` for Wallet
-  stars: 51
-  updated_at: '2026-06-16T14:51:16Z'
   first_seen: '2026-06-19'
   status: new
 - url: https://github.com/cashubtc/cdk/pull/2049
@@ -304,7 +320,7 @@
   repo: cake-tech/cake_wallet
   kind: issue
   title: 'RBF nsequence: non-canonical 0x01, only on inputs[0]'
-  stars: 1728
+  stars: 1727
   updated_at: '2026-06-05T19:46:29Z'
   first_seen: '2026-06-19'
   status: new
@@ -320,7 +336,7 @@
   repo: sparrowwallet/sparrow
   kind: issue
   title: PayJoin v2 (BIP77)
-  stars: 2025
+  stars: 2026
   updated_at: '2026-06-01T09:53:06Z'
   first_seen: '2026-06-19'
   status: new
