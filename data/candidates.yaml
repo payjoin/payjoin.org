@@ -1,11 +1,27 @@
 # Discovered payjoin activity outside tracked repos. Bot appends; you own `status`.
 # status: new | watching | dismissed | promoted  (bot only adds 'new')
+- url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2293
+  repo: SatoshiPortal/bullbitcoin-mobile
+  kind: pr
+  title: 'refactor(errors): establish user-facing error sanitization pattern (#1895)'
+  stars: 184
+  updated_at: '2026-06-27T13:46:35Z'
+  first_seen: '2026-06-19'
+  status: new
+- url: https://github.com/bitcoindevkit/bdk_wallet/pull/297
+  repo: bitcoindevkit/bdk_wallet
+  kind: pr
+  title: Implement `create_psbt` for Wallet
+  stars: 51
+  updated_at: '2026-06-27T07:11:37Z'
+  first_seen: '2026-06-19'
+  status: new
 - url: https://github.com/BlueWallet/BlueWallet/issues/3659
   repo: BlueWallet/BlueWallet
   kind: issue
   title: Dependency Dashboard
-  stars: 3227
-  updated_at: '2026-06-27T01:10:36Z'
+  stars: 3228
+  updated_at: '2026-06-27T05:02:29Z'
   first_seen: '2026-06-19'
   status: new
 - url: https://github.com/BoltzExchange/boltz-backend/pull/1430
@@ -14,14 +30,6 @@
   title: Payjoin integration
   stars: 180
   updated_at: '2026-06-26T22:21:15Z'
-  first_seen: '2026-06-19'
-  status: new
-- url: https://github.com/bitcoindevkit/bdk_wallet/pull/297
-  repo: bitcoindevkit/bdk_wallet
-  kind: pr
-  title: Implement `create_psbt` for Wallet
-  stars: 51
-  updated_at: '2026-06-26T14:16:58Z'
   first_seen: '2026-06-19'
   status: new
 - url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2041
@@ -55,14 +63,6 @@
   stars: 1
   updated_at: '2026-06-26T07:42:16Z'
   first_seen: '2026-06-27'
-  status: new
-- url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2293
-  repo: SatoshiPortal/bullbitcoin-mobile
-  kind: pr
-  title: 'refactor(errors): establish user-facing error sanitization pattern (#1895)'
-  stars: 184
-  updated_at: '2026-06-25T17:02:42Z'
-  first_seen: '2026-06-19'
   status: new
 - url: https://github.com/alpenlabs/bitcoind-async-client/issues/125
   repo: alpenlabs/bitcoind-async-client
@@ -117,7 +117,7 @@
   repo: NordSecurity/uniffi-bindgen-cs
   kind: pr
   title: Upgrade uniffi-rs from 0.29.4 to 0.31.0
-  stars: 173
+  stars: 174
   updated_at: '2026-06-23T08:51:40Z'
   first_seen: '2026-06-19'
   status: new
@@ -182,7 +182,7 @@
   repo: cake-tech/cake_wallet
   kind: pr
   title: 'fix: Payjoin receiver skips UIH2 avoidance, always contributes unspent[0]'
-  stars: 1732
+  stars: 1734
   updated_at: '2026-06-18T08:46:28Z'
   first_seen: '2026-06-19'
   status: new
@@ -190,7 +190,7 @@
   repo: cake-tech/cake_wallet
   kind: issue
   title: Payjoin receiver skips UIH2 avoidance, always contributes unspent[0]
-  stars: 1732
+  stars: 1734
   updated_at: '2026-06-18T08:45:10Z'
   first_seen: '2026-06-19'
   status: new
@@ -206,7 +206,7 @@
   repo: NordSecurity/uniffi-bindgen-cs
   kind: pr
   title: Upgrade to UniFFI 0.30 and close C# parity gaps
-  stars: 173
+  stars: 174
   updated_at: '2026-06-17T18:33:30Z'
   first_seen: '2026-06-19'
   status: new
@@ -336,7 +336,7 @@
   repo: cake-tech/cake_wallet
   kind: issue
   title: 'RBF nsequence: non-canonical 0x01, only on inputs[0]'
-  stars: 1732
+  stars: 1734
   updated_at: '2026-06-05T19:46:29Z'
   first_seen: '2026-06-19'
   status: new
@@ -352,7 +352,7 @@
   repo: sparrowwallet/sparrow
   kind: issue
   title: PayJoin v2 (BIP77)
-  stars: 2028
+  stars: 2026
   updated_at: '2026-06-01T09:53:06Z'
   first_seen: '2026-06-19'
   status: new
