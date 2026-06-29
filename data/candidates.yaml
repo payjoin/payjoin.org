@@ -1,27 +1,35 @@
 # Discovered payjoin activity outside tracked repos. Bot appends; you own `status`.
 # status: new | watching | dismissed | promoted  (bot only adds 'new')
-- url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2293
-  repo: SatoshiPortal/bullbitcoin-mobile
-  kind: pr
-  title: 'refactor(errors): establish user-facing error sanitization pattern (#1895)'
-  stars: 184
-  updated_at: '2026-06-27T13:46:35Z'
-  first_seen: '2026-06-19'
-  status: new
-- url: https://github.com/bitcoindevkit/bdk_wallet/pull/297
-  repo: bitcoindevkit/bdk_wallet
-  kind: pr
-  title: Implement `create_psbt` for Wallet
-  stars: 51
-  updated_at: '2026-06-27T07:11:37Z'
-  first_seen: '2026-06-19'
+- url: https://github.com/bitcoin-dot-org/Bitcoin.org/issues/4832
+  repo: bitcoin-dot-org/Bitcoin.org
+  kind: issue
+  title: 'Protect your privacy: modernizing dated sections, seeking direction on scope'
+  stars: 1764
+  updated_at: '2026-06-28T23:42:45Z'
+  first_seen: '2026-06-29'
   status: new
 - url: https://github.com/BlueWallet/BlueWallet/issues/3659
   repo: BlueWallet/BlueWallet
   kind: issue
   title: Dependency Dashboard
   stars: 3228
-  updated_at: '2026-06-27T05:02:29Z'
+  updated_at: '2026-06-28T21:46:28Z'
+  first_seen: '2026-06-19'
+  status: new
+- url: https://github.com/bitcoindevkit/bdk_wallet/pull/297
+  repo: bitcoindevkit/bdk_wallet
+  kind: pr
+  title: Implement `create_psbt` for Wallet
+  stars: 52
+  updated_at: '2026-06-28T10:04:46Z'
+  first_seen: '2026-06-19'
+  status: new
+- url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2293
+  repo: SatoshiPortal/bullbitcoin-mobile
+  kind: pr
+  title: 'refactor(errors): establish user-facing error sanitization pattern (#1895)'
+  stars: 184
+  updated_at: '2026-06-27T13:46:35Z'
   first_seen: '2026-06-19'
   status: new
 - url: https://github.com/BoltzExchange/boltz-backend/pull/1430
@@ -182,7 +190,7 @@
   repo: cake-tech/cake_wallet
   kind: pr
   title: 'fix: Payjoin receiver skips UIH2 avoidance, always contributes unspent[0]'
-  stars: 1734
+  stars: 1736
   updated_at: '2026-06-18T08:46:28Z'
   first_seen: '2026-06-19'
   status: new
@@ -190,7 +198,7 @@
   repo: cake-tech/cake_wallet
   kind: issue
   title: Payjoin receiver skips UIH2 avoidance, always contributes unspent[0]
-  stars: 1734
+  stars: 1736
   updated_at: '2026-06-18T08:45:10Z'
   first_seen: '2026-06-19'
   status: new
@@ -336,7 +344,7 @@
   repo: cake-tech/cake_wallet
   kind: issue
   title: 'RBF nsequence: non-canonical 0x01, only on inputs[0]'
-  stars: 1734
+  stars: 1736
   updated_at: '2026-06-05T19:46:29Z'
   first_seen: '2026-06-19'
   status: new
@@ -352,7 +360,7 @@
   repo: sparrowwallet/sparrow
   kind: issue
   title: PayJoin v2 (BIP77)
-  stars: 2026
+  stars: 2027
   updated_at: '2026-06-01T09:53:06Z'
   first_seen: '2026-06-19'
   status: new
