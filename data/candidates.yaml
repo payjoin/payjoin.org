@@ -1,28 +1,44 @@
 # Discovered payjoin activity outside tracked repos. Bot appends; you own `status`.
 # status: new | watching | dismissed | promoted  (bot only adds 'new')
-- url: https://github.com/bitcoin-dot-org/Bitcoin.org/issues/4832
-  repo: bitcoin-dot-org/Bitcoin.org
-  kind: issue
-  title: 'Protect your privacy: modernizing dated sections, seeking direction on scope'
-  stars: 1764
-  updated_at: '2026-06-28T23:42:45Z'
-  first_seen: '2026-06-29'
+- url: https://github.com/bitcoindevkit/bdk_wallet/pull/297
+  repo: bitcoindevkit/bdk_wallet
+  kind: pr
+  title: Implement `create_psbt` for Wallet
+  stars: 52
+  updated_at: '2026-06-30T01:42:21Z'
+  first_seen: '2026-06-19'
   status: new
 - url: https://github.com/BlueWallet/BlueWallet/issues/3659
   repo: BlueWallet/BlueWallet
   kind: issue
   title: Dependency Dashboard
   stars: 3228
-  updated_at: '2026-06-28T21:46:28Z'
+  updated_at: '2026-06-29T23:08:25Z'
   first_seen: '2026-06-19'
   status: new
-- url: https://github.com/bitcoindevkit/bdk_wallet/pull/297
-  repo: bitcoindevkit/bdk_wallet
+- url: https://github.com/bitcoindevkit/bdk-ffi/pull/1040
+  repo: bitcoindevkit/bdk-ffi
   kind: pr
-  title: Implement `create_psbt` for Wallet
-  stars: 52
-  updated_at: '2026-06-28T10:04:46Z'
-  first_seen: '2026-06-19'
+  title: 'chore: bump uniffi to 0.31.2'
+  stars: 127
+  updated_at: '2026-06-29T15:38:52Z'
+  first_seen: '2026-06-30'
+  status: new
+- url: https://github.com/nkatha23/siriscore/issues/31
+  repo: nkatha23/siriscore
+  kind: issue
+  title: 'H11: Payjoin opportunity — detect BIP-77 endpoint in recipient BIP-21 URI'
+  stars: 1
+  updated_at: '2026-06-29T09:11:35Z'
+  first_seen: '2026-06-27'
+  status: new
+- url: https://github.com/bitcoin-dot-org/Bitcoin.org/issues/4832
+  repo: bitcoin-dot-org/Bitcoin.org
+  kind: issue
+  title: 'Protect your privacy: modernizing dated sections, seeking direction on scope'
+  stars: 1763
+  updated_at: '2026-06-28T23:42:45Z'
+  first_seen: '2026-06-29'
   status: new
 - url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2293
   repo: SatoshiPortal/bullbitcoin-mobile
@@ -62,14 +78,6 @@
   title: 'Glossary: keyword search and expanded terms for Learn panel'
   stars: 1
   updated_at: '2026-06-26T07:42:54Z'
-  first_seen: '2026-06-27'
-  status: new
-- url: https://github.com/nkatha23/siriscore/issues/31
-  repo: nkatha23/siriscore
-  kind: issue
-  title: 'H11: Payjoin opportunity — detect BIP-77 endpoint in recipient BIP-21 URI'
-  stars: 1
-  updated_at: '2026-06-26T07:42:16Z'
   first_seen: '2026-06-27'
   status: new
 - url: https://github.com/alpenlabs/bitcoind-async-client/issues/125
@@ -182,7 +190,7 @@
   repo: bitcoin-dot-org/Bitcoin.org
   kind: pr
   title: 'feat: add BULL by Bull Bitcoin'
-  stars: 1764
+  stars: 1763
   updated_at: '2026-06-18T11:24:59Z'
   first_seen: '2026-06-19'
   status: new
