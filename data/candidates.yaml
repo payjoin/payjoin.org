@@ -1,19 +1,102 @@
 # Discovered payjoin activity outside tracked repos. Bot appends; you own `status`.
 # status: new | watching | dismissed | promoted  (bot only adds 'new')
-- url: https://github.com/bitcoindevkit/bdk_wallet/pull/297
-  repo: bitcoindevkit/bdk_wallet
+- url: https://github.com/bitcoinaustria/kassiber/pull/170
+  repo: bitcoinaustria/kassiber
   kind: pr
-  title: Implement `create_psbt` for Wallet
-  stars: 52
-  updated_at: '2026-06-30T01:42:21Z'
+  title: 'Source of funds: auto-assembled cross-layer dossier + app-wide UI honesty
+    redo'
+  stars: 4
+  updated_at: '2026-07-01T04:31:43Z'
   first_seen: '2026-06-19'
+  status: new
+- url: https://github.com/bitcoinaustria/kassiber/pull/274
+  repo: bitcoinaustria/kassiber
+  kind: pr
+  title: 'Round-2 self-transfer audit follow-up (to #266): fix 4 edge cases, track
+    the open P1'
+  stars: 4
+  updated_at: '2026-06-30T19:38:45Z'
+  first_seen: '2026-07-01'
+  status: new
+- url: https://github.com/bitcoinaustria/kassiber/issues/282
+  repo: bitcoinaustria/kassiber
+  kind: issue
+  title: Coinjoin / equal-output mix detection as a non-authoritative review hint
+  stars: 4
+  updated_at: '2026-06-30T17:03:45Z'
+  first_seen: '2026-07-01'
   status: new
 - url: https://github.com/BlueWallet/BlueWallet/issues/3659
   repo: BlueWallet/BlueWallet
   kind: issue
   title: Dependency Dashboard
   stars: 3228
-  updated_at: '2026-06-29T23:08:25Z'
+  updated_at: '2026-06-30T16:39:24Z'
+  first_seen: '2026-06-19'
+  status: new
+- url: https://github.com/cake-tech/cake_wallet/issues/3173
+  repo: cake-tech/cake_wallet
+  kind: issue
+  title: Upgrade payjoin bindings to use payjoin_ffi
+  stars: 1738
+  updated_at: '2026-06-30T15:04:30Z'
+  first_seen: '2026-07-01'
+  status: new
+- url: https://github.com/bitcoindevkit/bdk-dart/pull/101
+  repo: bitcoindevkit/bdk-dart
+  kind: pr
+  title: 'chore(deps): bump bdk-ffi to uniffi 0.31.2'
+  stars: 11
+  updated_at: '2026-06-30T14:36:45Z'
+  first_seen: '2026-07-01'
+  status: new
+- url: https://github.com/bitcoindevkit/bdk_wallet/pull/297
+  repo: bitcoindevkit/bdk_wallet
+  kind: pr
+  title: Implement `create_psbt` for Wallet
+  stars: 53
+  updated_at: '2026-06-30T14:18:27Z'
+  first_seen: '2026-06-19'
+  status: new
+- url: https://github.com/nkatha23/siriscore/issues/31
+  repo: nkatha23/siriscore
+  kind: issue
+  title: 'H11: Payjoin opportunity — detect BIP-77 endpoint in recipient BIP-21 URI'
+  stars: 1
+  updated_at: '2026-06-30T12:20:11Z'
+  first_seen: '2026-06-27'
+  status: new
+- url: https://github.com/nkatha23/siriscore/pull/44
+  repo: nkatha23/siriscore
+  kind: pr
+  title: 'feat: coinjoin and Payjoin awareness heuristics (H9, H10, H11)'
+  stars: 1
+  updated_at: '2026-06-30T12:19:26Z'
+  first_seen: '2026-07-01'
+  status: new
+- url: https://github.com/Horus-Org/payjoin-react-native/issues/2
+  repo: Horus-Org/payjoin-react-native
+  kind: issue
+  title: Dependency Dashboard
+  stars: 3
+  updated_at: '2026-06-30T10:51:25Z'
+  first_seen: '2026-06-19'
+  status: new
+- url: https://github.com/alpenlabs/bitcoind-async-client/issues/125
+  repo: alpenlabs/bitcoind-async-client
+  kind: issue
+  title: Add Wallet::send (Bitcoin Core's send RPC)
+  stars: 23
+  updated_at: '2026-06-30T09:24:40Z'
+  first_seen: '2026-06-26'
+  status: new
+- url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2304
+  repo: SatoshiPortal/bullbitcoin-mobile
+  kind: pr
+  title: 'feat: Coins (UTXO) view with freeze/unfreeze only, on a new bull_ui design
+    system (#760)'
+  stars: 184
+  updated_at: '2026-06-30T08:42:49Z'
   first_seen: '2026-06-19'
   status: new
 - url: https://github.com/bitcoindevkit/bdk-ffi/pull/1040
@@ -23,14 +106,6 @@
   stars: 127
   updated_at: '2026-06-29T15:38:52Z'
   first_seen: '2026-06-30'
-  status: new
-- url: https://github.com/nkatha23/siriscore/issues/31
-  repo: nkatha23/siriscore
-  kind: issue
-  title: 'H11: Payjoin opportunity — detect BIP-77 endpoint in recipient BIP-21 URI'
-  stars: 1
-  updated_at: '2026-06-29T09:11:35Z'
-  first_seen: '2026-06-27'
   status: new
 - url: https://github.com/bitcoin-dot-org/Bitcoin.org/issues/4832
   repo: bitcoin-dot-org/Bitcoin.org
@@ -52,7 +127,7 @@
   repo: BoltzExchange/boltz-backend
   kind: pr
   title: Payjoin integration
-  stars: 180
+  stars: 181
   updated_at: '2026-06-26T22:21:15Z'
   first_seen: '2026-06-19'
   status: new
@@ -80,14 +155,6 @@
   updated_at: '2026-06-26T07:42:54Z'
   first_seen: '2026-06-27'
   status: new
-- url: https://github.com/alpenlabs/bitcoind-async-client/issues/125
-  repo: alpenlabs/bitcoind-async-client
-  kind: issue
-  title: Add Wallet::send (Bitcoin Core's send RPC)
-  stars: 23
-  updated_at: '2026-06-25T15:24:02Z'
-  first_seen: '2026-06-26'
-  status: new
 - url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2326
   repo: SatoshiPortal/bullbitcoin-mobile
   kind: pr
@@ -104,29 +171,12 @@
   updated_at: '2026-06-25T11:38:39Z'
   first_seen: '2026-06-26'
   status: new
-- url: https://github.com/Horus-Org/payjoin-react-native/issues/2
-  repo: Horus-Org/payjoin-react-native
-  kind: issue
-  title: Dependency Dashboard
-  stars: 3
-  updated_at: '2026-06-25T09:34:57Z'
-  first_seen: '2026-06-19'
-  status: new
 - url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2199
   repo: SatoshiPortal/bullbitcoin-mobile
   kind: pr
   title: 'fix(fees): sub-1 sat/vByte fees via mempool precise endpoint (#2133)'
   stars: 184
   updated_at: '2026-06-24T13:29:19Z'
-  first_seen: '2026-06-19'
-  status: new
-- url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2304
-  repo: SatoshiPortal/bullbitcoin-mobile
-  kind: pr
-  title: 'feat: Coins (UTXO) view with freeze/unfreeze only, on a new bull_ui design
-    system (#760)'
-  stars: 184
-  updated_at: '2026-06-24T12:45:38Z'
   first_seen: '2026-06-19'
   status: new
 - url: https://github.com/NordSecurity/uniffi-bindgen-cs/pull/163
@@ -206,7 +256,7 @@
   repo: cake-tech/cake_wallet
   kind: issue
   title: Payjoin receiver skips UIH2 avoidance, always contributes unspent[0]
-  stars: 1736
+  stars: 1738
   updated_at: '2026-06-18T08:45:10Z'
   first_seen: '2026-06-19'
   status: new
@@ -256,15 +306,6 @@
   title: 'Master UTXO Issue: Manual Coin Selection Support'
   stars: 184
   updated_at: '2026-06-15T10:57:23Z'
-  first_seen: '2026-06-19'
-  status: new
-- url: https://github.com/bitcoinaustria/kassiber/pull/170
-  repo: bitcoinaustria/kassiber
-  kind: pr
-  title: 'Source of funds: auto-assembled cross-layer dossier + app-wide UI honesty
-    redo'
-  stars: 4
-  updated_at: '2026-06-14T10:44:21Z'
   first_seen: '2026-06-19'
   status: new
 - url: https://github.com/SatoshiPortal/bullbitcoin-mobile/issues/2207
@@ -352,7 +393,7 @@
   repo: cake-tech/cake_wallet
   kind: issue
   title: 'RBF nsequence: non-canonical 0x01, only on inputs[0]'
-  stars: 1736
+  stars: 1738
   updated_at: '2026-06-05T19:46:29Z'
   first_seen: '2026-06-19'
   status: new
