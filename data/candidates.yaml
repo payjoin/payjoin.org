@@ -1,13 +1,61 @@
 # Discovered payjoin activity outside tracked repos. Bot appends; you own `status`.
 # status: new | watching | dismissed | promoted  (bot only adds 'new')
+- url: https://github.com/bitcoinaustria/kassiber/pull/316
+  repo: bitcoinaustria/kassiber
+  kind: pr
+  title: '[codex] Add regtest integration harness'
+  stars: 4
+  updated_at: '2026-07-02T04:17:37Z'
+  first_seen: '2026-07-02'
+  status: new
+- url: https://github.com/cashubtc/cdk/pull/2049
+  repo: cashubtc/cdk
+  kind: pr
+  title: Payjoin
+  stars: 224
+  updated_at: '2026-07-01T15:53:23Z'
+  first_seen: '2026-06-19'
+  status: new
 - url: https://github.com/bitcoinaustria/kassiber/pull/170
   repo: bitcoinaustria/kassiber
   kind: pr
   title: 'Source of funds: auto-assembled cross-layer dossier + app-wide UI honesty
     redo'
   stars: 4
-  updated_at: '2026-07-01T04:31:43Z'
+  updated_at: '2026-07-01T12:33:36Z'
   first_seen: '2026-06-19'
+  status: new
+- url: https://github.com/Blockstream/green_android/issues/296
+  repo: Blockstream/green_android
+  kind: issue
+  title: Parsing BIP21 incorrectly
+  stars: 262
+  updated_at: '2026-07-01T11:15:09Z'
+  first_seen: '2026-07-02'
+  status: new
+- url: https://github.com/siri-score/siriscore/pull/46
+  repo: siri-score/siriscore
+  kind: pr
+  title: 'feat: coinjoin and Payjoin awareness heuristics (H9, H10, H11)'
+  stars: 2
+  updated_at: '2026-07-01T10:59:59Z'
+  first_seen: '2026-07-02'
+  status: new
+- url: https://github.com/spesmilo/electrum-protocol/issues/11
+  repo: spesmilo/electrum-protocol
+  kind: issue
+  title: Add support for `testmempoolaccept`
+  stars: 17
+  updated_at: '2026-07-01T10:39:35Z'
+  first_seen: '2026-06-19'
+  status: new
+- url: https://github.com/bitcoinaustria/kassiber/issues/282
+  repo: bitcoinaustria/kassiber
+  kind: issue
+  title: Coinjoin / equal-output mix detection as a non-authoritative review hint
+  stars: 4
+  updated_at: '2026-07-01T05:53:23Z'
+  first_seen: '2026-07-01'
   status: new
 - url: https://github.com/bitcoinaustria/kassiber/pull/274
   repo: bitcoinaustria/kassiber
@@ -16,14 +64,6 @@
     the open P1'
   stars: 4
   updated_at: '2026-06-30T19:38:45Z'
-  first_seen: '2026-07-01'
-  status: new
-- url: https://github.com/bitcoinaustria/kassiber/issues/282
-  repo: bitcoinaustria/kassiber
-  kind: issue
-  title: Coinjoin / equal-output mix detection as a non-authoritative review hint
-  stars: 4
-  updated_at: '2026-06-30T17:03:45Z'
   first_seen: '2026-07-01'
   status: new
 - url: https://github.com/BlueWallet/BlueWallet/issues/3659
@@ -66,6 +106,14 @@
   updated_at: '2026-06-30T12:20:11Z'
   first_seen: '2026-06-27'
   status: new
+- url: https://github.com/siri-score/siriscore/issues/31
+  repo: siri-score/siriscore
+  kind: issue
+  title: 'H11: Payjoin opportunity — detect BIP-77 endpoint in recipient BIP-21 URI'
+  stars: 2
+  updated_at: '2026-06-30T12:20:11Z'
+  first_seen: '2026-07-02'
+  status: new
 - url: https://github.com/nkatha23/siriscore/pull/44
   repo: nkatha23/siriscore
   kind: pr
@@ -73,6 +121,14 @@
   stars: 1
   updated_at: '2026-06-30T12:19:26Z'
   first_seen: '2026-07-01'
+  status: new
+- url: https://github.com/siri-score/siriscore/pull/44
+  repo: siri-score/siriscore
+  kind: pr
+  title: 'feat: coinjoin and Payjoin awareness heuristics (H9, H10, H11)'
+  stars: 2
+  updated_at: '2026-06-30T12:19:26Z'
+  first_seen: '2026-07-02'
   status: new
 - url: https://github.com/Horus-Org/payjoin-react-native/issues/2
   repo: Horus-Org/payjoin-react-native
@@ -127,7 +183,7 @@
   repo: BoltzExchange/boltz-backend
   kind: pr
   title: Payjoin integration
-  stars: 181
+  stars: 183
   updated_at: '2026-06-26T22:21:15Z'
   first_seen: '2026-06-19'
   status: new
@@ -154,6 +210,14 @@
   stars: 1
   updated_at: '2026-06-26T07:42:54Z'
   first_seen: '2026-06-27'
+  status: new
+- url: https://github.com/siri-score/siriscore/issues/42
+  repo: siri-score/siriscore
+  kind: issue
+  title: 'Glossary: keyword search and expanded terms for Learn panel'
+  stars: 2
+  updated_at: '2026-06-26T07:42:54Z'
+  first_seen: '2026-07-02'
   status: new
 - url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2326
   repo: SatoshiPortal/bullbitcoin-mobile
@@ -284,14 +348,6 @@
   updated_at: '2026-06-16T16:07:09Z'
   first_seen: '2026-06-19'
   status: new
-- url: https://github.com/cashubtc/cdk/pull/2049
-  repo: cashubtc/cdk
-  kind: pr
-  title: Payjoin
-  stars: 224
-  updated_at: '2026-06-16T10:47:15Z'
-  first_seen: '2026-06-19'
-  status: new
 - url: https://github.com/SatoshiPortal/bullbitcoin-mobile/issues/2235
   repo: SatoshiPortal/bullbitcoin-mobile
   kind: issue
@@ -411,14 +467,6 @@
   title: PayJoin v2 (BIP77)
   stars: 2027
   updated_at: '2026-06-01T09:53:06Z'
-  first_seen: '2026-06-19'
-  status: new
-- url: https://github.com/spesmilo/electrum-protocol/issues/11
-  repo: spesmilo/electrum-protocol
-  kind: issue
-  title: Add support for `testmempoolaccept`
-  stars: 17
-  updated_at: '2026-05-28T13:10:04Z'
   first_seen: '2026-06-19'
   status: new
 - url: https://github.com/getfloresta/Floresta/issues/1084
