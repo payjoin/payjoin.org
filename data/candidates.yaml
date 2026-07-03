@@ -1,20 +1,84 @@
 # Discovered payjoin activity outside tracked repos. Bot appends; you own `status`.
 # status: new | watching | dismissed | promoted  (bot only adds 'new')
+- url: https://github.com/BlueWallet/BlueWallet/issues/3659
+  repo: BlueWallet/BlueWallet
+  kind: issue
+  title: Dependency Dashboard
+  stars: 3229
+  updated_at: '2026-07-03T02:00:25Z'
+  first_seen: '2026-06-19'
+  status: new
+- url: https://github.com/netasset/anonscore/pull/49
+  repo: netasset/anonscore
+  kind: pr
+  title: 'Wallet directory: add Cake + Ginger, annotate Silent Payments support'
+  stars: 0
+  updated_at: '2026-07-02T21:36:41Z'
+  first_seen: '2026-07-03'
+  status: new
+- url: https://github.com/netasset/anonscore/pull/46
+  repo: netasset/anonscore
+  kind: pr
+  title: 'Heuristics: fix the post-2024 CoinJoin landscape, add Payjoin recommendation'
+  stars: 0
+  updated_at: '2026-07-02T20:26:46Z'
+  first_seen: '2026-07-03'
+  status: new
+- url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2394
+  repo: SatoshiPortal/bullbitcoin-mobile
+  kind: pr
+  title: Refactor secrets
+  stars: 184
+  updated_at: '2026-07-02T20:10:01Z'
+  first_seen: '2026-07-03'
+  status: new
+- url: https://github.com/cake-tech/cake_wallet/pull/3363
+  repo: cake-tech/cake_wallet
+  kind: pr
+  title: WIP Payjoin upgrade to native dart bindings via payjoin_ffi
+  stars: 1741
+  updated_at: '2026-07-02T18:29:50Z'
+  first_seen: '2026-07-03'
+  status: new
+- url: https://github.com/bitcoindevkit/coin-select/pull/47
+  repo: bitcoindevkit/coin-select
+  kind: pr
+  title: 'feat(metrics): add ChangelessWaste for privacy-driven coin selection'
+  stars: 18
+  updated_at: '2026-07-02T17:24:30Z'
+  first_seen: '2026-07-03'
+  status: new
 - url: https://github.com/bitcoinaustria/kassiber/pull/316
   repo: bitcoinaustria/kassiber
   kind: pr
   title: '[codex] Add regtest integration harness'
   stars: 4
-  updated_at: '2026-07-02T04:17:37Z'
+  updated_at: '2026-07-02T16:50:41Z'
   first_seen: '2026-07-02'
   status: new
 - url: https://github.com/cashubtc/cdk/pull/2049
   repo: cashubtc/cdk
   kind: pr
   title: Payjoin
-  stars: 224
-  updated_at: '2026-07-01T15:53:23Z'
+  stars: 226
+  updated_at: '2026-07-02T13:50:57Z'
   first_seen: '2026-06-19'
+  status: new
+- url: https://github.com/cake-tech/cake_wallet/pull/3362
+  repo: cake-tech/cake_wallet
+  kind: pr
+  title: Set anti-fee-sniping locktime on bitcoin sends
+  stars: 1741
+  updated_at: '2026-07-02T12:58:56Z'
+  first_seen: '2026-07-03'
+  status: new
+- url: https://github.com/cake-tech/cake_wallet/issues/3361
+  repo: cake-tech/cake_wallet
+  kind: issue
+  title: Bitcoin sends use nLockTime = 0 (anti-fee-sniping + payjoin fingerprint)
+  stars: 1741
+  updated_at: '2026-07-02T12:54:46Z'
+  first_seen: '2026-07-03'
   status: new
 - url: https://github.com/bitcoinaustria/kassiber/pull/170
   repo: bitcoinaustria/kassiber
@@ -37,7 +101,7 @@
   repo: siri-score/siriscore
   kind: pr
   title: 'feat: coinjoin and Payjoin awareness heuristics (H9, H10, H11)'
-  stars: 2
+  stars: 3
   updated_at: '2026-07-01T10:59:59Z'
   first_seen: '2026-07-02'
   status: new
@@ -66,19 +130,11 @@
   updated_at: '2026-06-30T19:38:45Z'
   first_seen: '2026-07-01'
   status: new
-- url: https://github.com/BlueWallet/BlueWallet/issues/3659
-  repo: BlueWallet/BlueWallet
-  kind: issue
-  title: Dependency Dashboard
-  stars: 3228
-  updated_at: '2026-06-30T16:39:24Z'
-  first_seen: '2026-06-19'
-  status: new
 - url: https://github.com/cake-tech/cake_wallet/issues/3173
   repo: cake-tech/cake_wallet
   kind: issue
   title: Upgrade payjoin bindings to use payjoin_ffi
-  stars: 1738
+  stars: 1741
   updated_at: '2026-06-30T15:04:30Z'
   first_seen: '2026-07-01'
   status: new
@@ -110,7 +166,7 @@
   repo: siri-score/siriscore
   kind: issue
   title: 'H11: Payjoin opportunity — detect BIP-77 endpoint in recipient BIP-21 URI'
-  stars: 2
+  stars: 3
   updated_at: '2026-06-30T12:20:11Z'
   first_seen: '2026-07-02'
   status: new
@@ -126,7 +182,7 @@
   repo: siri-score/siriscore
   kind: pr
   title: 'feat: coinjoin and Payjoin awareness heuristics (H9, H10, H11)'
-  stars: 2
+  stars: 3
   updated_at: '2026-06-30T12:19:26Z'
   first_seen: '2026-07-02'
   status: new
@@ -215,7 +271,7 @@
   repo: siri-score/siriscore
   kind: issue
   title: 'Glossary: keyword search and expanded terms for Learn panel'
-  stars: 2
+  stars: 3
   updated_at: '2026-06-26T07:42:54Z'
   first_seen: '2026-07-02'
   status: new
@@ -320,7 +376,7 @@
   repo: cake-tech/cake_wallet
   kind: issue
   title: Payjoin receiver skips UIH2 avoidance, always contributes unspent[0]
-  stars: 1738
+  stars: 1741
   updated_at: '2026-06-18T08:45:10Z'
   first_seen: '2026-06-19'
   status: new
