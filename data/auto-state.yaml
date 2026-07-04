@@ -69,8 +69,8 @@ https://github.com/bitcoindevkit/bdk-cli/pull/156:
   title: 'add payjoin support '
 https://github.com/bitcoinppl/cove:
   kind: repo
-  last_activity: '2026-07-03T00:17:59Z'
-  open_issues: 82
+  last_activity: '2026-07-03T20:44:09Z'
+  open_issues: 83
   state: ACTIVE
 https://github.com/blinkbitcoin/blink-mobile/issues/3355:
   comments: 2
@@ -135,9 +135,9 @@ https://github.com/payjoin/rust-payjoin/issues/1206:
   state: OPEN
   title: Bull Bitcoin x Payjoin Tracking Issue
 https://github.com/payjoin/rust-payjoin/issues/942:
-  comments: 8
+  comments: 9
   kind: issue
-  last_activity: '2026-02-18T02:18:44Z'
+  last_activity: '2026-07-03T19:54:55Z'
   state: OPEN
   title: Add no_std support
 https://github.com/spesmilo/electrum/issues/6585:
