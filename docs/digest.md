@@ -1,11 +1,11 @@
 # Daily digest
 
-_As of 2026-07-04 (UTC) · tracking 25 upstream items_
+_As of 2026-07-05 (UTC) · tracking 25 upstream items_
 
 ## Activity
 
-- **Cove** — [repo](https://github.com/bitcoinppl/cove) — updated 2026-07-03
-- **Ledger Live** — [issue #942](https://github.com/payjoin/rust-payjoin/issues/942) — 8→9 comments, updated 2026-07-03
+- **BTCPay Server** — [repo](https://github.com/ValeraFinebits/btcpayserver-payjoin-plugin) — updated 2026-07-04
+- **Cove** — [repo](https://github.com/bitcoinppl/cove) — updated 2026-07-04
 
 
 ## Check-in follow-through
@@ -37,16 +37,16 @@ _To follow up — committed, but no merged PRs/issues in public org repos since 
 
 _payjoin issues/PRs in repos we don't watch yet — triage in `data/candidates.yaml`._
 
-- [BlueWallet/BlueWallet](https://github.com/BlueWallet/BlueWallet/issues/3659) · issue · ⭐3229 · 2026-07-03 — Dependency Dashboard
+- [cashubtc/nuts](https://github.com/cashubtc/nuts/pull/376) · pr · ⭐234 · 2026-07-04 — NUT-XX: Payjoin
+- [BlueWallet/BlueWallet](https://github.com/BlueWallet/BlueWallet/issues/3659) · issue · ⭐3229 · 2026-07-04 — Dependency Dashboard
 - [bitcoinaustria/kassiber](https://github.com/bitcoinaustria/kassiber/pull/350) · pr · ⭐4 · 2026-07-03 — [codex] Fix wallet book balances and ownership transfers
 - [RGB-WG/rgb-core](https://github.com/RGB-WG/rgb-core/pull/288) · pr · ⭐222 · 2026-07-03 — Refactoring v0.11 into v0.11.1 in style of v0.12 simplifications
 - [netasset/anonscore](https://github.com/netasset/anonscore/pull/49) · pr · ⭐0 · 2026-07-02 — Wallet directory: add Cake + Ginger, annotate Silent Payments support
 - [netasset/anonscore](https://github.com/netasset/anonscore/pull/46) · pr · ⭐0 · 2026-07-02 — Heuristics: fix the post-2024 CoinJoin landscape, add Payjoin recommendation
 - [SatoshiPortal/bullbitcoin-mobile](https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2394) · pr · ⭐184 · 2026-07-02 — Refactor secrets
-- [cake-tech/cake_wallet](https://github.com/cake-tech/cake_wallet/pull/3363) · pr · ⭐1743 · 2026-07-02 — WIP Payjoin upgrade to native dart bindings via payjoin_ffi
+- [cake-tech/cake_wallet](https://github.com/cake-tech/cake_wallet/pull/3363) · pr · ⭐1744 · 2026-07-02 — WIP Payjoin upgrade to native dart bindings via payjoin_ffi
 - [bitcoindevkit/coin-select](https://github.com/bitcoindevkit/coin-select/pull/47) · pr · ⭐18 · 2026-07-02 — feat(metrics): add ChangelessWaste for privacy-driven coin selection
 - [bitcoinaustria/kassiber](https://github.com/bitcoinaustria/kassiber/pull/316) · pr · ⭐4 · 2026-07-02 — [codex] Add regtest integration harness
 - [cashubtc/cdk](https://github.com/cashubtc/cdk/pull/2049) · pr · ⭐226 · 2026-07-02 — Payjoin
-- [cake-tech/cake_wallet](https://github.com/cake-tech/cake_wallet/pull/3362) · pr · ⭐1743 · 2026-07-02 — Set anti-fee-sniping locktime on bitcoin sends
-- [cake-tech/cake_wallet](https://github.com/cake-tech/cake_wallet/issues/3361) · issue · ⭐1743 · 2026-07-02 — Bitcoin sends use nLockTime = 0 (anti-fee-sniping + payjoin fingerprint)
-- _+56 more in `data/candidates.yaml`_
+- [cake-tech/cake_wallet](https://github.com/cake-tech/cake_wallet/pull/3362) · pr · ⭐1744 · 2026-07-02 — Set anti-fee-sniping locktime on bitcoin sends
+- _+57 more in `data/candidates.yaml`_
