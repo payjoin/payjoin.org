@@ -1,19 +1,43 @@
 # Discovered payjoin activity outside tracked repos. Bot appends; you own `status`.
 # status: new | watching | dismissed | promoted  (bot only adds 'new')
+- url: https://github.com/cake-tech/cake_wallet/issues/3361
+  repo: cake-tech/cake_wallet
+  kind: issue
+  title: Bitcoin sends use nLockTime = 0 (anti-fee-sniping + payjoin fingerprint)
+  stars: 1752
+  updated_at: '2026-07-07T01:39:20Z'
+  first_seen: '2026-07-03'
+  status: new
 - url: https://github.com/BlueWallet/BlueWallet/issues/3659
   repo: BlueWallet/BlueWallet
   kind: issue
   title: Dependency Dashboard
   stars: 3229
-  updated_at: '2026-07-06T01:44:37Z'
+  updated_at: '2026-07-06T22:42:28Z'
   first_seen: '2026-06-19'
+  status: new
+- url: https://github.com/cake-tech/cake_wallet/pull/3363
+  repo: cake-tech/cake_wallet
+  kind: pr
+  title: WIP Payjoin upgrade to native dart bindings via payjoin_ffi
+  stars: 1752
+  updated_at: '2026-07-06T14:40:59Z'
+  first_seen: '2026-07-03'
+  status: new
+- url: https://github.com/TumaBitcoiner/TumaBitcoiner.github.io/pull/18
+  repo: TumaBitcoiner/TumaBitcoiner.github.io
+  kind: pr
+  title: Add four contributions (July 6)
+  stars: 1
+  updated_at: '2026-07-06T14:40:20Z'
+  first_seen: '2026-07-07'
   status: new
 - url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2394
   repo: SatoshiPortal/bullbitcoin-mobile
   kind: pr
   title: Refactor secrets
   stars: 184
-  updated_at: '2026-07-05T21:11:15Z'
+  updated_at: '2026-07-06T06:09:56Z'
   first_seen: '2026-07-03'
   status: new
 - url: https://github.com/BitcoinDesign/Meta/issues/810
@@ -64,14 +88,6 @@
   updated_at: '2026-07-02T20:26:46Z'
   first_seen: '2026-07-03'
   status: new
-- url: https://github.com/cake-tech/cake_wallet/pull/3363
-  repo: cake-tech/cake_wallet
-  kind: pr
-  title: WIP Payjoin upgrade to native dart bindings via payjoin_ffi
-  stars: 1747
-  updated_at: '2026-07-02T18:29:50Z'
-  first_seen: '2026-07-03'
-  status: new
 - url: https://github.com/bitcoindevkit/coin-select/pull/47
   repo: bitcoindevkit/coin-select
   kind: pr
@@ -100,16 +116,8 @@
   repo: cake-tech/cake_wallet
   kind: pr
   title: Set anti-fee-sniping locktime on bitcoin sends
-  stars: 1747
+  stars: 1752
   updated_at: '2026-07-02T12:58:56Z'
-  first_seen: '2026-07-03'
-  status: new
-- url: https://github.com/cake-tech/cake_wallet/issues/3361
-  repo: cake-tech/cake_wallet
-  kind: issue
-  title: Bitcoin sends use nLockTime = 0 (anti-fee-sniping + payjoin fingerprint)
-  stars: 1747
-  updated_at: '2026-07-02T12:54:46Z'
   first_seen: '2026-07-03'
   status: new
 - url: https://github.com/bitcoinaustria/kassiber/pull/170
@@ -166,7 +174,7 @@
   repo: cake-tech/cake_wallet
   kind: issue
   title: Upgrade payjoin bindings to use payjoin_ffi
-  stars: 1747
+  stars: 1752
   updated_at: '2026-06-30T15:04:30Z'
   first_seen: '2026-07-01'
   status: new
@@ -400,7 +408,7 @@
   repo: cake-tech/cake_wallet
   kind: issue
   title: Payjoin receiver skips UIH2 avoidance, always contributes unspent[0]
-  stars: 1747
+  stars: 1752
   updated_at: '2026-06-18T08:45:10Z'
   first_seen: '2026-06-19'
   status: new
