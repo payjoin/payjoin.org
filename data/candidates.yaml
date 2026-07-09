@@ -1,5 +1,61 @@
 # Discovered payjoin activity outside tracked repos. Bot appends; you own `status`.
 # status: new | watching | dismissed | promoted  (bot only adds 'new')
+- url: https://github.com/BlueWallet/BlueWallet/issues/3659
+  repo: BlueWallet/BlueWallet
+  kind: issue
+  title: Dependency Dashboard
+  stars: 3231
+  updated_at: '2026-07-08T22:14:45Z'
+  first_seen: '2026-06-19'
+  status: new
+- url: https://github.com/cake-tech/cake_wallet/issues/2494
+  repo: cake-tech/cake_wallet
+  kind: issue
+  title: Sparrow user payjoin fails because of changed nLocktime
+  stars: 1761
+  updated_at: '2026-07-08T19:00:39Z'
+  first_seen: '2026-07-09'
+  status: new
+- url: https://github.com/cake-tech/cake_wallet/issues/3302
+  repo: cake-tech/cake_wallet
+  kind: issue
+  title: 'RBF nsequence: non-canonical 0x01, only on inputs[0]'
+  stars: 1761
+  updated_at: '2026-07-08T18:37:09Z'
+  first_seen: '2026-06-19'
+  status: new
+- url: https://github.com/cashubtc/cashu-ts/issues/761
+  repo: cashubtc/cashu-ts
+  kind: issue
+  title: Cashu-TS Development Meeting — 2026-07-08
+  stars: 105
+  updated_at: '2026-07-08T14:09:21Z'
+  first_seen: '2026-07-09'
+  status: new
+- url: https://github.com/cake-tech/cake_wallet/pull/3381
+  repo: cake-tech/cake_wallet
+  kind: pr
+  title: 'feat: pin all dependencies to git sources'
+  stars: 1761
+  updated_at: '2026-07-08T12:28:38Z'
+  first_seen: '2026-07-09'
+  status: new
+- url: https://github.com/Horus-Org/payjoin-react-native/issues/2
+  repo: Horus-Org/payjoin-react-native
+  kind: issue
+  title: Dependency Dashboard
+  stars: 3
+  updated_at: '2026-07-08T10:17:07Z'
+  first_seen: '2026-06-19'
+  status: new
+- url: https://github.com/bitcoindevkit/coin-select/pull/47
+  repo: bitcoindevkit/coin-select
+  kind: pr
+  title: 'feat(metrics): add ChangelessWaste for privacy-driven coin selection'
+  stars: 18
+  updated_at: '2026-07-08T08:38:01Z'
+  first_seen: '2026-07-03'
+  status: new
 - url: https://github.com/netasset/anonscore/pull/79
   repo: netasset/anonscore
   kind: pr
@@ -8,19 +64,11 @@
   updated_at: '2026-07-07T22:47:35Z'
   first_seen: '2026-07-08'
   status: new
-- url: https://github.com/BlueWallet/BlueWallet/issues/3659
-  repo: BlueWallet/BlueWallet
-  kind: issue
-  title: Dependency Dashboard
-  stars: 3230
-  updated_at: '2026-07-07T21:20:18Z'
-  first_seen: '2026-06-19'
-  status: new
 - url: https://github.com/cake-tech/cake_wallet/issues/3378
   repo: cake-tech/cake_wallet
   kind: issue
   title: Bitcoin sends order inputs by BIP-69
-  stars: 1757
+  stars: 1761
   updated_at: '2026-07-07T19:24:26Z'
   first_seen: '2026-07-08'
   status: new
@@ -28,7 +76,7 @@
   repo: cake-tech/cake_wallet
   kind: pr
   title: Shuffle input order on bitcoin sends
-  stars: 1757
+  stars: 1761
   updated_at: '2026-07-07T19:17:15Z'
   first_seen: '2026-07-08'
   status: new
@@ -36,7 +84,7 @@
   repo: cake-tech/cake_wallet
   kind: issue
   title: Bitcoin sends place change output deterministically last
-  stars: 1757
+  stars: 1761
   updated_at: '2026-07-07T18:43:56Z'
   first_seen: '2026-07-08'
   status: new
@@ -44,7 +92,7 @@
   repo: cake-tech/cake_wallet
   kind: pr
   title: Set anti-fee-sniping locktime on bitcoin sends
-  stars: 1757
+  stars: 1761
   updated_at: '2026-07-07T18:29:27Z'
   first_seen: '2026-07-03'
   status: new
@@ -60,23 +108,15 @@
   repo: cake-tech/cake_wallet
   kind: pr
   title: Shuffle output order on bitcoin sends
-  stars: 1757
+  stars: 1761
   updated_at: '2026-07-07T18:02:44Z'
   first_seen: '2026-07-08'
-  status: new
-- url: https://github.com/bitcoindevkit/coin-select/pull/47
-  repo: bitcoindevkit/coin-select
-  kind: pr
-  title: 'feat(metrics): add ChangelessWaste for privacy-driven coin selection'
-  stars: 18
-  updated_at: '2026-07-07T15:33:48Z'
-  first_seen: '2026-07-03'
   status: new
 - url: https://github.com/cake-tech/cake_wallet/pull/3363
   repo: cake-tech/cake_wallet
   kind: pr
   title: WIP Payjoin upgrade to native dart bindings via payjoin_ffi
-  stars: 1757
+  stars: 1761
   updated_at: '2026-07-07T12:02:54Z'
   first_seen: '2026-07-03'
   status: new
@@ -84,7 +124,7 @@
   repo: cake-tech/cake_wallet
   kind: issue
   title: Bitcoin sends use nLockTime = 0 (anti-fee-sniping + payjoin fingerprint)
-  stars: 1757
+  stars: 1761
   updated_at: '2026-07-07T01:39:20Z'
   first_seen: '2026-07-03'
   status: new
@@ -222,7 +262,7 @@
   repo: cake-tech/cake_wallet
   kind: issue
   title: Upgrade payjoin bindings to use payjoin_ffi
-  stars: 1757
+  stars: 1761
   updated_at: '2026-06-30T15:04:30Z'
   first_seen: '2026-07-01'
   status: new
@@ -274,14 +314,6 @@
   updated_at: '2026-06-30T12:19:26Z'
   first_seen: '2026-07-02'
   status: new
-- url: https://github.com/Horus-Org/payjoin-react-native/issues/2
-  repo: Horus-Org/payjoin-react-native
-  kind: issue
-  title: Dependency Dashboard
-  stars: 3
-  updated_at: '2026-06-30T10:51:25Z'
-  first_seen: '2026-06-19'
-  status: new
 - url: https://github.com/alpenlabs/bitcoind-async-client/issues/125
   repo: alpenlabs/bitcoind-async-client
   kind: issue
@@ -311,7 +343,7 @@
   repo: bitcoin-dot-org/Bitcoin.org
   kind: issue
   title: 'Protect your privacy: modernizing dated sections, seeking direction on scope'
-  stars: 1763
+  stars: 1762
   updated_at: '2026-06-28T23:42:45Z'
   first_seen: '2026-06-29'
   status: new
@@ -456,7 +488,7 @@
   repo: cake-tech/cake_wallet
   kind: issue
   title: Payjoin receiver skips UIH2 avoidance, always contributes unspent[0]
-  stars: 1757
+  stars: 1761
   updated_at: '2026-06-18T08:45:10Z'
   first_seen: '2026-06-19'
   status: new
@@ -579,14 +611,6 @@
   title: Follow up migration to Flutter 3.44.X
   stars: 184
   updated_at: '2026-06-09T08:56:47Z'
-  first_seen: '2026-06-19'
-  status: new
-- url: https://github.com/cake-tech/cake_wallet/issues/3302
-  repo: cake-tech/cake_wallet
-  kind: issue
-  title: 'RBF nsequence: non-canonical 0x01, only on inputs[0]'
-  stars: 1738
-  updated_at: '2026-06-05T19:46:29Z'
   first_seen: '2026-06-19'
   status: new
 - url: https://github.com/mrtnetwork/bitcoin_base/issues/22

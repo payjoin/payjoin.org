@@ -1,12 +1,12 @@
 # Daily digest
 
-_As of 2026-07-08 (UTC) · tracking 25 upstream items_
+_As of 2026-07-09 (UTC) · tracking 25 upstream items_
 
 ## Activity
 
-- **BTCPay Server** — [repo](https://github.com/ValeraFinebits/btcpayserver-payjoin-plugin) — updated 2026-07-07
+- **BTCPay Server** — [repo](https://github.com/ValeraFinebits/btcpayserver-payjoin-plugin) — updated 2026-07-08
 - **Cove** — [repo](https://github.com/bitcoinppl/cove) — updated 2026-07-08
-- **Liana** — [pull #2011](https://github.com/wizardsardine/liana/pull/2011) — updated 2026-07-07
+- **Liana** — [pull #2011](https://github.com/wizardsardine/liana/pull/2011) — updated 2026-07-09
 
 
 ## Check-in follow-through
@@ -26,9 +26,9 @@ _2026-06-29 · [thread](https://github.com/orgs/payjoin/discussions/1691)_
 - **Mshehu5** — committed: "working on seperating #1514 code to main crate and cli (current code is only in cli)"
     - shipped: —
 - **spacebear21** — committed: "- payjoin 1.0 - rebase & update bull bitcoin mobile PR"
-    - shipped: [rust-payjoin#1713](https://github.com/payjoin/rust-payjoin/pull/1713), [rust-payjoin#1711](https://github.com/payjoin/rust-payjoin/pull/1711), [rust-payjoin#1701](https://github.com/payjoin/rust-payjoin/pull/1701)
+    - shipped: [rust-payjoin#1713](https://github.com/payjoin/rust-payjoin/pull/1713), [rust-payjoin#1711](https://github.com/payjoin/rust-payjoin/pull/1711), [rust-payjoin#1703](https://github.com/payjoin/rust-payjoin/pull/1703), [rust-payjoin#1702](https://github.com/payjoin/rust-payjoin/pull/1702), [rust-payjoin#1701](https://github.com/payjoin/rust-payjoin/pull/1701)
 - **xstoicunicornx** — committed: —
-    - shipped: [rust-payjoin#1709](https://github.com/payjoin/rust-payjoin/issues/1709)
+    - shipped: [rust-payjoin#1714](https://github.com/payjoin/rust-payjoin/issues/1714), [rust-payjoin#1709](https://github.com/payjoin/rust-payjoin/issues/1709)
 - **zealsham** — committed: "* Doing mostly PR reviews this week"
     - shipped: —
 
@@ -42,16 +42,16 @@ _To follow up — committed, but no merged PRs/issues in public org repos since 
 
 _payjoin issues/PRs in repos we don't watch yet — triage in `data/candidates.yaml`._
 
+- [BlueWallet/BlueWallet](https://github.com/BlueWallet/BlueWallet/issues/3659) · issue · ⭐3231 · 2026-07-08 — Dependency Dashboard
+- [cake-tech/cake_wallet](https://github.com/cake-tech/cake_wallet/issues/2494) · issue · ⭐1761 · 2026-07-08 — Sparrow user payjoin fails because of changed nLocktime
+- [cake-tech/cake_wallet](https://github.com/cake-tech/cake_wallet/issues/3302) · issue · ⭐1761 · 2026-07-08 — RBF nsequence: non-canonical 0x01, only on inputs[0]
+- [cashubtc/cashu-ts](https://github.com/cashubtc/cashu-ts/issues/761) · issue · ⭐105 · 2026-07-08 — Cashu-TS Development Meeting — 2026-07-08
+- [cake-tech/cake_wallet](https://github.com/cake-tech/cake_wallet/pull/3381) · pr · ⭐1761 · 2026-07-08 — feat: pin all dependencies to git sources
+- [Horus-Org/payjoin-react-native](https://github.com/Horus-Org/payjoin-react-native/issues/2) · issue · ⭐3 · 2026-07-08 — Dependency Dashboard
+- [bitcoindevkit/coin-select](https://github.com/bitcoindevkit/coin-select/pull/47) · pr · ⭐18 · 2026-07-08 — feat(metrics): add ChangelessWaste for privacy-driven coin selection
 - [netasset/anonscore](https://github.com/netasset/anonscore/pull/79) · pr · ⭐0 · 2026-07-07 — Cluster Exposure — the common-input heuristic, computed in-browser
-- [BlueWallet/BlueWallet](https://github.com/BlueWallet/BlueWallet/issues/3659) · issue · ⭐3230 · 2026-07-07 — Dependency Dashboard
-- [cake-tech/cake_wallet](https://github.com/cake-tech/cake_wallet/issues/3378) · issue · ⭐1757 · 2026-07-07 — Bitcoin sends order inputs by BIP-69
-- [cake-tech/cake_wallet](https://github.com/cake-tech/cake_wallet/pull/3379) · pr · ⭐1757 · 2026-07-07 — Shuffle input order on bitcoin sends
-- [cake-tech/cake_wallet](https://github.com/cake-tech/cake_wallet/issues/3376) · issue · ⭐1757 · 2026-07-07 — Bitcoin sends place change output deterministically last
-- [cake-tech/cake_wallet](https://github.com/cake-tech/cake_wallet/pull/3362) · pr · ⭐1757 · 2026-07-07 — Set anti-fee-sniping locktime on bitcoin sends
-- [SatoshiPortal/bullbitcoin-mobile](https://github.com/SatoshiPortal/bullbitcoin-mobile/issues/2416) · issue · ⭐185 · 2026-07-07 — payjoin improments
-- [cake-tech/cake_wallet](https://github.com/cake-tech/cake_wallet/pull/3377) · pr · ⭐1757 · 2026-07-07 — Shuffle output order on bitcoin sends
-- [bitcoindevkit/coin-select](https://github.com/bitcoindevkit/coin-select/pull/47) · pr · ⭐18 · 2026-07-07 — feat(metrics): add ChangelessWaste for privacy-driven coin selection
-- [cake-tech/cake_wallet](https://github.com/cake-tech/cake_wallet/pull/3363) · pr · ⭐1757 · 2026-07-07 — WIP Payjoin upgrade to native dart bindings via payjoin_ffi
-- [cake-tech/cake_wallet](https://github.com/cake-tech/cake_wallet/issues/3361) · issue · ⭐1757 · 2026-07-07 — Bitcoin sends use nLockTime = 0 (anti-fee-sniping + payjoin fingerprint)
-- [TumaBitcoiner/TumaBitcoiner.github.io](https://github.com/TumaBitcoiner/TumaBitcoiner.github.io/pull/18) · pr · ⭐1 · 2026-07-06 — Add four contributions (July 6)
-- _+65 more in `data/candidates.yaml`_
+- [cake-tech/cake_wallet](https://github.com/cake-tech/cake_wallet/issues/3378) · issue · ⭐1761 · 2026-07-07 — Bitcoin sends order inputs by BIP-69
+- [cake-tech/cake_wallet](https://github.com/cake-tech/cake_wallet/pull/3379) · pr · ⭐1761 · 2026-07-07 — Shuffle input order on bitcoin sends
+- [cake-tech/cake_wallet](https://github.com/cake-tech/cake_wallet/issues/3376) · issue · ⭐1761 · 2026-07-07 — Bitcoin sends place change output deterministically last
+- [cake-tech/cake_wallet](https://github.com/cake-tech/cake_wallet/pull/3362) · pr · ⭐1761 · 2026-07-07 — Set anti-fee-sniping locktime on bitcoin sends
+- _+68 more in `data/candidates.yaml`_
