@@ -69,7 +69,7 @@ https://github.com/bitcoindevkit/bdk-cli/pull/156:
   title: 'add payjoin support '
 https://github.com/bitcoinppl/cove:
   kind: repo
-  last_activity: '2026-07-08T21:16:02Z'
+  last_activity: '2026-07-10T03:03:53Z'
   open_issues: 83
   state: ACTIVE
 https://github.com/blinkbitcoin/blink-mobile/issues/3355:
@@ -118,7 +118,7 @@ https://github.com/joinmarket-webui/jam/issues/406:
 https://github.com/lightningdevkit/ldk-node/pull/746:
   comments: 136
   kind: pull
-  last_activity: '2026-06-23T11:38:35Z'
+  last_activity: '2026-07-09T18:04:30Z'
   merged: false
   state: OPEN
   title: Add Payjoin Receiver Support (BIP 77)
