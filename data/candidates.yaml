@@ -5,7 +5,7 @@
   kind: pr
   title: Refactoring v0.11 into v0.11.1 in style of v0.12 simplifications
   stars: 222
-  updated_at: '2026-07-10T03:17:13Z'
+  updated_at: '2026-07-11T00:13:46Z'
   first_seen: '2026-06-19'
   status: new
 - url: https://github.com/BlueWallet/BlueWallet/issues/3659
@@ -13,8 +13,72 @@
   kind: issue
   title: Dependency Dashboard
   stars: 3232
-  updated_at: '2026-07-09T22:31:44Z'
+  updated_at: '2026-07-10T21:31:41Z'
   first_seen: '2026-06-19'
+  status: new
+- url: https://github.com/SatoshiPortal/bullbitcoin-mobile/issues/2430
+  repo: SatoshiPortal/bullbitcoin-mobile
+  kind: issue
+  title: Payjoin receiver can contribute unconfirmed (0-conf) inputs
+  stars: 186
+  updated_at: '2026-07-10T17:05:34Z'
+  first_seen: '2026-07-10'
+  status: new
+- url: https://github.com/cake-tech/cake_wallet/pull/3381
+  repo: cake-tech/cake_wallet
+  kind: pr
+  title: 'feat: pin all dependencies to git sources'
+  stars: 1763
+  updated_at: '2026-07-10T15:50:36Z'
+  first_seen: '2026-07-09'
+  status: new
+- url: https://github.com/cake-tech/cake_wallet/issues/3388
+  repo: cake-tech/cake_wallet
+  kind: issue
+  title: Payjoin receiver can contribute unconfirmed (0-conf) inputs
+  stars: 1763
+  updated_at: '2026-07-10T15:23:30Z'
+  first_seen: '2026-07-10'
+  status: new
+- url: https://github.com/cake-tech/cake_wallet/pull/3389
+  repo: cake-tech/cake_wallet
+  kind: pr
+  title: 'payjoin: exclude 0-conf inputs from receiver candidates'
+  stars: 1763
+  updated_at: '2026-07-10T15:23:29Z'
+  first_seen: '2026-07-10'
+  status: new
+- url: https://github.com/mimblewimble/grin/pull/3904
+  repo: mimblewimble/grin
+  kind: pr
+  title: 'docs: accurate input/output linking in grin4bitcoiners.md'
+  stars: 5091
+  updated_at: '2026-07-10T14:25:05Z'
+  first_seen: '2026-07-11'
+  status: new
+- url: https://github.com/LedgerHQ/app-bitcoin/pull/512
+  repo: LedgerHQ/app-bitcoin
+  kind: pr
+  title: Trustworthy sign_psbt amount/fee display for non-default sighash
+  stars: 105
+  updated_at: '2026-07-10T09:54:03Z'
+  first_seen: '2026-07-11'
+  status: new
+- url: https://github.com/LedgerHQ/app-bitcoin/issues/520
+  repo: LedgerHQ/app-bitcoin
+  kind: issue
+  title: PayJoin display for default-sighash (SIGHASH_ALL)
+  stars: 105
+  updated_at: '2026-07-10T09:44:36Z'
+  first_seen: '2026-07-11'
+  status: new
+- url: https://github.com/bitcoinaustria/kassiber/pull/411
+  repo: bitcoinaustria/kassiber
+  kind: pr
+  title: Improve regtest demo realism
+  stars: 4
+  updated_at: '2026-07-10T06:43:58Z'
+  first_seen: '2026-07-11'
   status: new
 - url: https://github.com/cake-tech/cake_wallet/issues/2989
   repo: cake-tech/cake_wallet
@@ -24,36 +88,12 @@
   updated_at: '2026-07-09T22:18:07Z'
   first_seen: '2026-07-10'
   status: new
-- url: https://github.com/SatoshiPortal/bullbitcoin-mobile/issues/2430
-  repo: SatoshiPortal/bullbitcoin-mobile
-  kind: issue
-  title: Payjoin receiver can contribute unconfirmed (0-conf) inputs
-  stars: 186
-  updated_at: '2026-07-09T19:48:17Z'
-  first_seen: '2026-07-10'
-  status: new
 - url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2431
   repo: SatoshiPortal/bullbitcoin-mobile
   kind: pr
   title: 'payjoin: exclude 0-conf inputs from receiver candidates'
   stars: 186
   updated_at: '2026-07-09T19:41:56Z'
-  first_seen: '2026-07-10'
-  status: new
-- url: https://github.com/cake-tech/cake_wallet/pull/3389
-  repo: cake-tech/cake_wallet
-  kind: pr
-  title: 'payjoin: exclude 0-conf inputs from receiver candidates'
-  stars: 1763
-  updated_at: '2026-07-09T19:35:02Z'
-  first_seen: '2026-07-10'
-  status: new
-- url: https://github.com/cake-tech/cake_wallet/issues/3388
-  repo: cake-tech/cake_wallet
-  kind: issue
-  title: Payjoin receiver can contribute unconfirmed (0-conf) inputs
-  stars: 1763
-  updated_at: '2026-07-09T19:21:48Z'
   first_seen: '2026-07-10'
   status: new
 - url: https://github.com/cake-tech/cake_wallet/pull/3385
@@ -102,14 +142,6 @@
   title: Cashu-TS Development Meeting — 2026-07-08
   stars: 105
   updated_at: '2026-07-08T14:09:21Z'
-  first_seen: '2026-07-09'
-  status: new
-- url: https://github.com/cake-tech/cake_wallet/pull/3381
-  repo: cake-tech/cake_wallet
-  kind: pr
-  title: 'feat: pin all dependencies to git sources'
-  stars: 1763
-  updated_at: '2026-07-08T12:28:38Z'
   first_seen: '2026-07-09'
   status: new
 - url: https://github.com/Horus-Org/payjoin-react-native/issues/2
