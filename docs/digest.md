@@ -1,10 +1,10 @@
 # Daily digest
 
-_As of 2026-07-11 (UTC) · tracking 25 upstream items_
+_As of 2026-07-12 (UTC) · tracking 25 upstream items_
 
 ## Activity
 
-- **Cove** — [repo](https://github.com/bitcoinppl/cove) — updated 2026-07-10
+- **BTCPay Server** — [repo](https://github.com/ValeraFinebits/btcpayserver-payjoin-plugin) — updated 2026-07-11
 
 
 ## Check-in follow-through
@@ -41,15 +41,15 @@ _To follow up — committed, but no merged PRs/issues in public org repos since 
 _payjoin issues/PRs in repos we don't watch yet — triage in `data/candidates.yaml`._
 
 - [RGB-WG/rgb-core](https://github.com/RGB-WG/rgb-core/pull/288) · pr · ⭐222 · 2026-07-11 — Refactoring v0.11 into v0.11.1 in style of v0.12 simplifications
-- [BlueWallet/BlueWallet](https://github.com/BlueWallet/BlueWallet/issues/3659) · issue · ⭐3232 · 2026-07-10 — Dependency Dashboard
+- [SatoshiPortal/bullbitcoin-mobile](https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2041) · pr · ⭐186 · 2026-07-11 — Upgrade payjoin
+- [BlueWallet/BlueWallet](https://github.com/BlueWallet/BlueWallet/issues/3659) · issue · ⭐3232 · 2026-07-11 — Dependency Dashboard
+- [mrtnetwork/bitcoin_base](https://github.com/mrtnetwork/bitcoin_base/issues/23) · issue · ⭐38 · 2026-07-11 — Builders don't expose a locktime param
+- [mrtnetwork/bitcoin_base](https://github.com/mrtnetwork/bitcoin_base/issues/22) · issue · ⭐38 · 2026-07-11 — RBF nsequence: non-canonical 0x01, only on inputs[0]
+- [mrtnetwork/bitcoin_base](https://github.com/mrtnetwork/bitcoin_base/pull/21) · pr · ⭐38 · 2026-07-11 — Fix RBF nsequence: canonical value, all inputs
+- [Jolah1/bitpilot](https://github.com/Jolah1/bitpilot/pull/25) · pr · ⭐1 · 2026-07-11 — curriculum: expand Privacy tree from 3 → 12 lessons
 - [SatoshiPortal/bullbitcoin-mobile](https://github.com/SatoshiPortal/bullbitcoin-mobile/issues/2430) · issue · ⭐186 · 2026-07-10 — Payjoin receiver can contribute unconfirmed (0-conf) inputs
-- [cake-tech/cake_wallet](https://github.com/cake-tech/cake_wallet/pull/3381) · pr · ⭐1763 · 2026-07-10 — feat: pin all dependencies to git sources
-- [cake-tech/cake_wallet](https://github.com/cake-tech/cake_wallet/issues/3388) · issue · ⭐1763 · 2026-07-10 — Payjoin receiver can contribute unconfirmed (0-conf) inputs
-- [cake-tech/cake_wallet](https://github.com/cake-tech/cake_wallet/pull/3389) · pr · ⭐1763 · 2026-07-10 — payjoin: exclude 0-conf inputs from receiver candidates
+- [cake-tech/cake_wallet](https://github.com/cake-tech/cake_wallet/pull/3381) · pr · ⭐1764 · 2026-07-10 — feat: pin all dependencies to git sources
+- [cake-tech/cake_wallet](https://github.com/cake-tech/cake_wallet/issues/3388) · issue · ⭐1764 · 2026-07-10 — Payjoin receiver can contribute unconfirmed (0-conf) inputs
+- [cake-tech/cake_wallet](https://github.com/cake-tech/cake_wallet/pull/3389) · pr · ⭐1764 · 2026-07-10 — payjoin: exclude 0-conf inputs from receiver candidates
 - [mimblewimble/grin](https://github.com/mimblewimble/grin/pull/3904) · pr · ⭐5091 · 2026-07-10 — docs: accurate input/output linking in grin4bitcoiners.md
-- [LedgerHQ/app-bitcoin](https://github.com/LedgerHQ/app-bitcoin/pull/512) · pr · ⭐105 · 2026-07-10 — Trustworthy sign_psbt amount/fee display for non-default sighash
-- [LedgerHQ/app-bitcoin](https://github.com/LedgerHQ/app-bitcoin/issues/520) · issue · ⭐105 · 2026-07-10 — PayJoin display for default-sighash (SIGHASH_ALL)
-- [bitcoinaustria/kassiber](https://github.com/bitcoinaustria/kassiber/pull/411) · pr · ⭐4 · 2026-07-10 — Improve regtest demo realism
-- [cake-tech/cake_wallet](https://github.com/cake-tech/cake_wallet/issues/2989) · issue · ⭐1763 · 2026-07-09 — 6.0: payjoin notice on litecoin receive
-- [SatoshiPortal/bullbitcoin-mobile](https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2431) · pr · ⭐186 · 2026-07-09 — payjoin: exclude 0-conf inputs from receiver candidates
-- _+78 more in `data/candidates.yaml`_
+- _+81 more in `data/candidates.yaml`_
