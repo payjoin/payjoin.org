@@ -1,11 +1,11 @@
 # Discovered payjoin activity outside tracked repos. Bot appends; you own `status`.
 # status: new | watching | dismissed | promoted  (bot only adds 'new')
-- url: https://github.com/RGB-WG/rgb-core/pull/288
-  repo: RGB-WG/rgb-core
-  kind: pr
-  title: Refactoring v0.11 into v0.11.1 in style of v0.12 simplifications
-  stars: 222
-  updated_at: '2026-07-11T18:45:36Z'
+- url: https://github.com/BlueWallet/BlueWallet/issues/3659
+  repo: BlueWallet/BlueWallet
+  kind: issue
+  title: Dependency Dashboard
+  stars: 3234
+  updated_at: '2026-07-13T01:45:46Z'
   first_seen: '2026-06-19'
   status: new
 - url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2041
@@ -13,15 +13,15 @@
   kind: pr
   title: Upgrade payjoin
   stars: 186
-  updated_at: '2026-07-11T18:13:29Z'
+  updated_at: '2026-07-12T21:38:36Z'
   first_seen: '2026-06-23'
   status: new
-- url: https://github.com/BlueWallet/BlueWallet/issues/3659
-  repo: BlueWallet/BlueWallet
-  kind: issue
-  title: Dependency Dashboard
-  stars: 3232
-  updated_at: '2026-07-11T16:50:08Z'
+- url: https://github.com/RGB-WG/rgb-core/pull/288
+  repo: RGB-WG/rgb-core
+  kind: pr
+  title: Refactoring v0.11 into v0.11.1 in style of v0.12 simplifications
+  stars: 222
+  updated_at: '2026-07-12T19:06:55Z'
   first_seen: '2026-06-19'
   status: new
 - url: https://github.com/mrtnetwork/bitcoin_base/issues/23
@@ -68,7 +68,7 @@
   repo: cake-tech/cake_wallet
   kind: pr
   title: 'feat: pin all dependencies to git sources'
-  stars: 1764
+  stars: 1765
   updated_at: '2026-07-10T15:50:36Z'
   first_seen: '2026-07-09'
   status: new
@@ -76,7 +76,7 @@
   repo: cake-tech/cake_wallet
   kind: issue
   title: Payjoin receiver can contribute unconfirmed (0-conf) inputs
-  stars: 1764
+  stars: 1765
   updated_at: '2026-07-10T15:23:30Z'
   first_seen: '2026-07-10'
   status: new
@@ -84,7 +84,7 @@
   repo: cake-tech/cake_wallet
   kind: pr
   title: 'payjoin: exclude 0-conf inputs from receiver candidates'
-  stars: 1764
+  stars: 1765
   updated_at: '2026-07-10T15:23:29Z'
   first_seen: '2026-07-10'
   status: new
@@ -124,7 +124,7 @@
   repo: cake-tech/cake_wallet
   kind: issue
   title: '6.0: payjoin notice on litecoin receive'
-  stars: 1764
+  stars: 1765
   updated_at: '2026-07-09T22:18:07Z'
   first_seen: '2026-07-10'
   status: new
@@ -140,7 +140,7 @@
   repo: cake-tech/cake_wallet
   kind: pr
   title: Set anti-fee-sniping locktime (exact-tip) on bitcoin sends
-  stars: 1764
+  stars: 1765
   updated_at: '2026-07-09T14:55:03Z'
   first_seen: '2026-07-10'
   status: new
@@ -148,7 +148,7 @@
   repo: cake-tech/cake_wallet
   kind: pr
   title: Set anti-fee-sniping locktime on bitcoin sends
-  stars: 1764
+  stars: 1765
   updated_at: '2026-07-09T14:36:12Z'
   first_seen: '2026-07-03'
   status: new
@@ -156,7 +156,7 @@
   repo: cake-tech/cake_wallet
   kind: issue
   title: Sparrow user payjoin fails because of changed nLocktime
-  stars: 1764
+  stars: 1765
   updated_at: '2026-07-08T19:00:39Z'
   first_seen: '2026-07-09'
   status: new
@@ -164,7 +164,7 @@
   repo: cake-tech/cake_wallet
   kind: issue
   title: 'RBF nsequence: non-canonical 0x01, only on inputs[0]'
-  stars: 1764
+  stars: 1765
   updated_at: '2026-07-08T18:37:09Z'
   first_seen: '2026-06-19'
   status: new
@@ -204,7 +204,7 @@
   repo: cake-tech/cake_wallet
   kind: issue
   title: Bitcoin sends order inputs by BIP-69
-  stars: 1764
+  stars: 1765
   updated_at: '2026-07-07T19:24:26Z'
   first_seen: '2026-07-08'
   status: new
@@ -212,7 +212,7 @@
   repo: cake-tech/cake_wallet
   kind: pr
   title: Shuffle input order on bitcoin sends
-  stars: 1764
+  stars: 1765
   updated_at: '2026-07-07T19:17:15Z'
   first_seen: '2026-07-08'
   status: new
@@ -220,7 +220,7 @@
   repo: cake-tech/cake_wallet
   kind: issue
   title: Bitcoin sends place change output deterministically last
-  stars: 1764
+  stars: 1765
   updated_at: '2026-07-07T18:43:56Z'
   first_seen: '2026-07-08'
   status: new
@@ -236,7 +236,7 @@
   repo: cake-tech/cake_wallet
   kind: pr
   title: Shuffle output order on bitcoin sends
-  stars: 1764
+  stars: 1765
   updated_at: '2026-07-07T18:02:44Z'
   first_seen: '2026-07-08'
   status: new
@@ -244,7 +244,7 @@
   repo: cake-tech/cake_wallet
   kind: pr
   title: WIP Payjoin upgrade to native dart bindings via payjoin_ffi
-  stars: 1764
+  stars: 1765
   updated_at: '2026-07-07T12:02:54Z'
   first_seen: '2026-07-03'
   status: new
@@ -252,7 +252,7 @@
   repo: cake-tech/cake_wallet
   kind: issue
   title: Bitcoin sends use nLockTime = 0 (anti-fee-sniping + payjoin fingerprint)
-  stars: 1764
+  stars: 1765
   updated_at: '2026-07-07T01:39:20Z'
   first_seen: '2026-07-03'
   status: new
@@ -382,7 +382,7 @@
   repo: cake-tech/cake_wallet
   kind: issue
   title: Upgrade payjoin bindings to use payjoin_ffi
-  stars: 1764
+  stars: 1765
   updated_at: '2026-06-30T15:04:30Z'
   first_seen: '2026-07-01'
   status: new
@@ -600,7 +600,7 @@
   repo: cake-tech/cake_wallet
   kind: issue
   title: Payjoin receiver skips UIH2 avoidance, always contributes unspent[0]
-  stars: 1764
+  stars: 1765
   updated_at: '2026-06-18T08:45:10Z'
   first_seen: '2026-06-19'
   status: new
