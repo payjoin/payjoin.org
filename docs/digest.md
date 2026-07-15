@@ -1,11 +1,10 @@
 # Daily digest
 
-_As of 2026-07-14 (UTC) · tracking 25 upstream items_
+_As of 2026-07-15 (UTC) · tracking 25 upstream items_
 
 ## Activity
 
-- **BTCPay Server** — [repo](https://github.com/ValeraFinebits/btcpayserver-payjoin-plugin) — updated 2026-07-13
-- **Cove** — [repo](https://github.com/bitcoinppl/cove) — updated 2026-07-13
+- **Cove** — [repo](https://github.com/bitcoinppl/cove) — updated 2026-07-15
 
 
 ## Check-in follow-through
@@ -15,7 +14,7 @@ _2026-07-06 · [thread](https://github.com/orgs/payjoin/discussions/1712)_
 - **bc1cindy** — committed: —
     - shipped: [rust-payjoin#1722](https://github.com/payjoin/rust-payjoin/issues/1722)
 - **benalleng** — committed: "- review and helping move the payjoin crate PRs along"
-    - shipped: [rust-payjoin#1735](https://github.com/payjoin/rust-payjoin/pull/1735), [rust-payjoin#1727](https://github.com/payjoin/rust-payjoin/pull/1727)
+    - shipped: [rust-payjoin#1735](https://github.com/payjoin/rust-payjoin/pull/1735), [rust-payjoin#1727](https://github.com/payjoin/rust-payjoin/pull/1727), [rust-payjoin#1700](https://github.com/payjoin/rust-payjoin/pull/1700)
 - **chavic** — committed: "- Land the correctness-pass tail. Every remaining audit has a PR; merge the stack in order. - Probably release C# packages, unblocked by…"
     - shipped: [rust-payjoin#1725](https://github.com/payjoin/rust-payjoin/pull/1725), [rust-payjoin#1723](https://github.com/payjoin/rust-payjoin/pull/1723)
 - **DanGould** — committed: "we MUST ship releases this week and then I must focus on operational duties."
@@ -39,16 +38,16 @@ _To follow up — committed, but no merged PRs/issues in public org repos since 
 
 _payjoin issues/PRs in repos we don't watch yet — triage in `data/candidates.yaml`._
 
-- [cake-tech/cake_wallet](https://github.com/cake-tech/cake_wallet/issues/3378) · issue · ⭐1768 · 2026-07-14 — Bitcoin sends order inputs by BIP-69
-- [cake-tech/cake_wallet](https://github.com/cake-tech/cake_wallet/pull/3379) · pr · ⭐1768 · 2026-07-14 — Shuffle input order on bitcoin sends
-- [SatoshiPortal/bullbitcoin-mobile](https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2443) · pr · ⭐186 · 2026-07-13 — feat(payjoin): upgrade to official `payjoin` pub.dev bindings, drop isolate…
+- [SatoshiPortal/bullbitcoin-mobile](https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2451) · pr · ⭐186 · 2026-07-15 — feat: payjoin hardening
+- [BlueWallet/BlueWallet](https://github.com/BlueWallet/BlueWallet/issues/3659) · issue · ⭐3234 · 2026-07-14 — Dependency Dashboard
+- [cake-tech/cake_wallet](https://github.com/cake-tech/cake_wallet/pull/3363) · pr · ⭐1770 · 2026-07-14 — WIP Payjoin upgrade to native dart bindings via payjoin_ffi
+- [cake-tech/cake_wallet](https://github.com/cake-tech/cake_wallet/pull/3381) · pr · ⭐1770 · 2026-07-14 — feat: pin all dependencies to git sources
+- [SatoshiPortal/bullbitcoin-mobile](https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2449) · pr · ⭐186 · 2026-07-14 — feat: payjoin labels
+- [bitcoin-dot-org/Bitcoin.org](https://github.com/bitcoin-dot-org/Bitcoin.org/pull/4555) · pr · ⭐1765 · 2026-07-14 — feat: add BULL by Bull Bitcoin
+- [SatoshiPortal/bullbitcoin-mobile](https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2443) · pr · ⭐186 · 2026-07-14 — feat(payjoin): upgrade to official `payjoin` pub.dev bindings, drop isolate…
+- [SatoshiPortal/payjoin](https://github.com/SatoshiPortal/payjoin/issues/7) · issue · ⭐0 · 2026-07-14 — Make receiver seen-input claims durable and atomic across replicas
+- [cake-tech/cake_wallet](https://github.com/cake-tech/cake_wallet/issues/3378) · issue · ⭐1770 · 2026-07-14 — Bitcoin sends order inputs by BIP-69
+- [cake-tech/cake_wallet](https://github.com/cake-tech/cake_wallet/pull/3379) · pr · ⭐1770 · 2026-07-14 — Shuffle input order on bitcoin sends
 - [RGB-WG/rgb-core](https://github.com/RGB-WG/rgb-core/pull/288) · pr · ⭐222 · 2026-07-13 — Refactoring v0.11 into v0.11.1 in style of v0.12 simplifications
-- [cake-tech/cake_wallet](https://github.com/cake-tech/cake_wallet/pull/3363) · pr · ⭐1768 · 2026-07-13 — WIP Payjoin upgrade to native dart bindings via payjoin_ffi
 - [SatoshiPortal/payjoin](https://github.com/SatoshiPortal/payjoin/issues/9) · issue · ⭐0 · 2026-07-13 — Prevent direct Payjoin snowballing in receiver input selection
-- [SatoshiPortal/payjoin](https://github.com/SatoshiPortal/payjoin/issues/6) · issue · ⭐0 · 2026-07-13 — Separate proposed and observed txids and complete the receiver fallback…
-- [SatoshiPortal/payjoin](https://github.com/SatoshiPortal/payjoin/issues/8) · issue · ⭐0 · 2026-07-13 — Track and release receiver input reservations across the Payjoin lifecycle
-- [SatoshiPortal/payjoin](https://github.com/SatoshiPortal/payjoin/issues/7) · issue · ⭐0 · 2026-07-13 — Make receiver seen-input claims durable and atomic across replicas
-- [BlueWallet/BlueWallet](https://github.com/BlueWallet/BlueWallet/issues/3659) · issue · ⭐3233 · 2026-07-13 — Dependency Dashboard
-- [cashubtc/cdk](https://github.com/cashubtc/cdk/pull/2049) · pr · ⭐226 · 2026-07-13 — Payjoin
-- [bitcoindevkit/bdk_wallet](https://github.com/bitcoindevkit/bdk_wallet/issues/103) · issue · ⭐53 · 2026-07-13 — wallet: target a pre-defined utxo set composition by adjusting change outputs
-- _+88 more in `data/candidates.yaml`_
+- _+90 more in `data/candidates.yaml`_
