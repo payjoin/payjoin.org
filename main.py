@@ -25,6 +25,18 @@ def define_env(env):
         else:
             i['priority_score'] = None
 
+        sync_privacy = i.get('sync_privacy') or {}
+        sync_scores = sync_privacy.get('scores')
+        if sync_scores:
+            i['sync_privacy_score'] = (
+                5 * sync_scores.get('privacy_leakage', 0)
+                + 3 * sync_scores.get('ohttp_tractability', 0)
+                + 2 * sync_scores.get('payjoin_coupling', 0)
+                - sync_scores.get('maintenance', 0)
+            )
+        else:
+            i['sync_privacy_score'] = None
+
     # Join machine-collected upstream state (data/auto-state.yaml), if present.
     # Written nightly by scripts/refresh.py, keyed by tracking_issue URL. Optional —
     # the build works whether or not the file exists yet.
@@ -61,6 +73,12 @@ def define_env(env):
     def unscored_integrations():
         """Return integrations without scores"""
         return [i for i in integrations if not i.get('scores')]
+
+    @env.macro
+    def sync_privacy_opportunities():
+        """Return integrations with sync privacy scores, sorted by priority."""
+        scored = [i for i in integrations if i.get('sync_privacy_score') is not None]
+        return sorted(scored, key=lambda x: x.get('sync_privacy_score', 0), reverse=True)
 
     @env.filter
     def score_color(value, inverted=False):
