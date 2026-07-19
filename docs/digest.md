@@ -1,11 +1,10 @@
 # Daily digest
 
-_As of 2026-07-18 (UTC) · tracking 25 upstream items_
+_As of 2026-07-19 (UTC) · tracking 25 upstream items_
 
-## Activity
+No upstream changes since the last refresh.
 
-- **BTCPay Server** — [repo](https://github.com/ValeraFinebits/btcpayserver-payjoin-plugin) — updated 2026-07-17
-
+Most recently active: **BTCPay Server** — [repo](https://github.com/ValeraFinebits/btcpayserver-payjoin-plugin) — last activity 2026-07-17
 
 ## Check-in follow-through
 
@@ -38,16 +37,16 @@ _To follow up — committed, but no merged PRs/issues in public org repos since 
 
 _payjoin issues/PRs in repos we don't watch yet — triage in `data/candidates.yaml`._
 
-- [mempoolsurfclub/mempoolsurfclub](https://github.com/mempoolsurfclub/mempoolsurfclub/pull/36) · pr · ⭐0 · 2026-07-18 — Draft Essentials guides MSC-GUIDE-013 through MSC-GUIDE-016
+- [cake-tech/cake_wallet](https://github.com/cake-tech/cake_wallet/pull/3377) · pr · ⭐1792 · 2026-07-18 — Shuffle output order on bitcoin sends
+- [cake-tech/cake_wallet](https://github.com/cake-tech/cake_wallet/pull/3385) · pr · ⭐1792 · 2026-07-18 — Set anti-fee-sniping locktime (exact-tip) on bitcoin sends
+- [cake-tech/cake_wallet](https://github.com/cake-tech/cake_wallet/pull/3408) · pr · ⭐1792 · 2026-07-18 — Privacy: randomized coin selection (BnB changeless + single random draw)
+- [BlueWallet/BlueWallet](https://github.com/BlueWallet/BlueWallet/issues/3659) · issue · ⭐3238 · 2026-07-18 — Dependency Dashboard
+- [BitcoinDesign/Meta](https://github.com/BitcoinDesign/Meta/issues/810) · issue · ⭐206 · 2026-07-18 — Cake wallet silent payments collab tracker
 - [rust-bitcoin/corepc](https://github.com/rust-bitcoin/corepc/pull/533) · pr · ⭐57 · 2026-07-18 — bitreq: add SOCKS5 proxy support
-- [cake-tech/cake_wallet](https://github.com/cake-tech/cake_wallet/pull/3363) · pr · ⭐1789 · 2026-07-17 — WIP Payjoin upgrade to native dart bindings via payjoin_ffi
-- [BlueWallet/BlueWallet](https://github.com/BlueWallet/BlueWallet/issues/3659) · issue · ⭐3237 · 2026-07-17 — Dependency Dashboard
+- [bitcoindevkit/bdk_wallet](https://github.com/bitcoindevkit/bdk_wallet/pull/297) · pr · ⭐54 · 2026-07-18 — Implement `create_psbt` for Wallet
+- [Jolah1/bitpilot](https://github.com/Jolah1/bitpilot/issues/79) · issue · ⭐1 · 2026-07-18 — Privacy path: 0 of 12 missions have a hands-on step
+- [mempoolsurfclub/mempoolsurfclub](https://github.com/mempoolsurfclub/mempoolsurfclub/pull/36) · pr · ⭐0 · 2026-07-18 — Draft Essentials guides MSC-GUIDE-013 through MSC-GUIDE-016
+- [cake-tech/cake_wallet](https://github.com/cake-tech/cake_wallet/pull/3363) · pr · ⭐1792 · 2026-07-17 — WIP Payjoin upgrade to native dart bindings via payjoin_ffi
 - [LedgerHQ/app-bitcoin](https://github.com/LedgerHQ/app-bitcoin/pull/512) · pr · ⭐105 · 2026-07-17 — Trustworthy sign_psbt amount/fee display for non-default sighash
 - [SatoshiPortal/bullbitcoin-mobile](https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2443) · pr · ⭐186 · 2026-07-17 — feat(payjoin): upgrade to official `payjoin` pub.dev bindings, drop isolate…
-- [SatoshiPortal/bullbitcoin-mobile](https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2451) · pr · ⭐186 · 2026-07-17 — feat: payjoin hardening
-- [SatoshiPortal/bullbitcoin-mobile](https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2461) · pr · ⭐186 · 2026-07-17 — feat(payjoin): upgrade, settings, anti-probing hardening, and…
-- [LedgerHQ/app-bitcoin](https://github.com/LedgerHQ/app-bitcoin/issues/520) · issue · ⭐105 · 2026-07-16 — Acknowledge in UI amount of external inputs when present
-- [bitcoinops/bitcoinops.github.io](https://github.com/bitcoinops/bitcoinops.github.io/pull/2816) · pr · ⭐311 · 2026-07-15 — matrix: Add BIP352 send support for Wasabi
-- [cake-tech/cake_wallet](https://github.com/cake-tech/cake_wallet/pull/3385) · pr · ⭐1789 · 2026-07-15 — Set anti-fee-sniping locktime (exact-tip) on bitcoin sends
-- [cake-tech/cake_wallet](https://github.com/cake-tech/cake_wallet/pull/3377) · pr · ⭐1789 · 2026-07-15 — Shuffle output order on bitcoin sends
-- _+100 more in `data/candidates.yaml`_
+- _+101 more in `data/candidates.yaml`_
