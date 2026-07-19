@@ -449,7 +449,30 @@
     receive_consolidation: true
     cut_through: possible
     channel_open: false
-  sync_method: esplora
+  sync_method: electrum
+  sync_privacy:
+    stage: ohttp_candidate
+    current_backend: electrum
+    query_shape: wallet_full_scan
+    client_ip_protection: tor_optional
+    backend_clustering_risk: high
+    payjoin_regression_risk: high
+    target_sequence:
+      - non_sync_esplora_ohttp
+      - broadcast_ohttp
+      - per_request_sync_ohttp
+      - timing_shape_obfuscation
+      - multi_backend_splitting
+    scores:
+      privacy_leakage: 5
+      ohttp_tractability: 4
+      payjoin_coupling: 5
+      maintenance: 3
+    next_artifact:
+      type: design_doc
+      description: "OHTTP chain-access migration plan for BB Mobile"
+      url: null
+    notes: "Local source check against SatoshiPortal/bullbitcoin-mobile origin/main on 2026-07-19: Bitcoin wallet sync uses BDK full_scan over Electrum; default settings seed Tor proxy off, though Tor proxy is supported. Move Esplora-shaped one-off lookups and broadcast first, then request-granular sync."
   blocker: our_engineering_time
   owner:
     internal: Spacebear
@@ -523,6 +546,29 @@
     fallback: false
     ohttp_relay_rotation: false
   sync_method: esplora
+  sync_privacy:
+    stage: ohttp_candidate
+    current_backend: esplora
+    query_shape: per_address_history
+    client_ip_protection: unknown
+    backend_clustering_risk: high
+    payjoin_regression_risk: medium
+    target_sequence:
+      - non_sync_esplora_ohttp
+      - broadcast_ohttp
+      - per_request_sync_ohttp
+      - timing_shape_obfuscation
+      - multi_backend_splitting
+    scores:
+      privacy_leakage: 4
+      ohttp_tractability: 4
+      payjoin_coupling: 3
+      maintenance: 2
+    next_artifact:
+      type: note
+      description: "Confirm Envoy chain-access path and OHTTP fit"
+      url: null
+    notes: "Tracker records Esplora sync. Lower Payjoin coupling than hot mobile wallets because Passport/Envoy is hardware-wallet-shaped, but the Esplora request substrate should generalize from BB Mobile/Cake."
   blocker: reopening_relationship_cold_wallet_example
   owner:
     internal: Dan Gould
@@ -583,6 +629,29 @@
     cut_through: false
     channel_open: false
   sync_method: esplora
+  sync_privacy:
+    stage: ohttp_candidate
+    current_backend: esplora
+    query_shape: per_address_history
+    client_ip_protection: unknown
+    backend_clustering_risk: high
+    payjoin_regression_risk: high
+    target_sequence:
+      - non_sync_esplora_ohttp
+      - broadcast_ohttp
+      - per_request_sync_ohttp
+      - timing_shape_obfuscation
+      - multi_backend_splitting
+    scores:
+      privacy_leakage: 5
+      ohttp_tractability: 4
+      payjoin_coupling: 5
+      maintenance: 3
+    next_artifact:
+      type: design_doc
+      description: "Cake OHTTP Esplora/broadcast migration sketch"
+      url: null
+    notes: "Tracker records Esplora sync and planned native HTTP client. Privacy-wallet audience and mobile light-client shape make this a high-value follow-on after BB Mobile proves the relay/backend pattern."
   blocker: their_engineering_time_and_our_release
   owner:
     internal: Spacebear
@@ -896,6 +965,25 @@
     fallback: false
     ohttp_relay_rotation: true
   sync_method: full_node
+  sync_privacy:
+    stage: client_side_discovery
+    current_backend: full_node
+    query_shape: local_node
+    client_ip_protection: local_node
+    backend_clustering_risk: low
+    payjoin_regression_risk: low
+    target_sequence:
+      - broadcast_ohttp
+    scores:
+      privacy_leakage: 1
+      ohttp_tractability: 1
+      payjoin_coupling: 1
+      maintenance: 1
+    next_artifact:
+      type: none
+      description: "Keep as privacy baseline"
+      url: null
+    notes: "Reference implementation uses a full-node model, so it is mostly a baseline for not leaking wallet discovery to third-party chain APIs. OHTTP remains relevant for Payjoin transport and optional broadcast experiments."
   blocker: fallback_pr
   owner:
     internal: Zealsham
@@ -963,6 +1051,26 @@
   language: "C#, UniFFI"
   custody: self_custodial
   native_http_client: true
+  sync_privacy:
+    stage: unassessed
+    current_backend: client_side_filters
+    query_shape: privacy_wallet_discovery
+    client_ip_protection: tor_default_expected
+    backend_clustering_risk: low
+    payjoin_regression_risk: medium
+    target_sequence:
+      - broadcast_ohttp
+      - confirm_chain_access_model
+    scores:
+      privacy_leakage: 2
+      ohttp_tractability: 2
+      payjoin_coupling: 3
+      maintenance: 2
+    next_artifact:
+      type: research
+      description: "Confirm Wasabi chain-access and broadcast privacy model"
+      url: null
+    notes: "Privacy-sensitive desktop wallet; do not assume the same Esplora/Electrum leakage model as mobile light clients. Track mostly to avoid payjoin/broadcast regressions and confirm whether any OHTTP work is useful."
   estimated_value: "$5,000.00"
   owner:
     internal: null
@@ -984,6 +1092,27 @@
   status: engaged
   language: "Kotlin, Java"
   custody: self_custodial
+  sync_method: "electrum or full_node"
+  sync_privacy:
+    stage: leaky_known
+    current_backend: user_configurable
+    query_shape: electrum_wallet_scan_or_full_node
+    client_ip_protection: user_configurable
+    backend_clustering_risk: medium
+    payjoin_regression_risk: medium
+    target_sequence:
+      - broadcast_ohttp
+      - document_safe_backend_modes
+    scores:
+      privacy_leakage: 3
+      ohttp_tractability: 2
+      payjoin_coupling: 3
+      maintenance: 3
+    next_artifact:
+      type: research
+      description: "Map Sparrow payjoin UX to backend modes"
+      url: null
+    notes: "Sparrow users often choose their own backend, so priority is lower than mobile defaults. Still worth tracking because Electrum mode can cluster wallet scans and full-node mode is the desired baseline."
   scores:
     leverage: 5
     feasibility: 3
@@ -1423,6 +1552,27 @@
   language: Python
   custody: self_custodial
   native_http_client: true
+  sync_method: electrum
+  sync_privacy:
+    stage: leaky_known
+    current_backend: electrum
+    query_shape: wallet_server_session
+    client_ip_protection: proxy_optional
+    backend_clustering_risk: high
+    payjoin_regression_risk: medium
+    target_sequence:
+      - broadcast_ohttp
+      - document_plugin_privacy_limits
+    scores:
+      privacy_leakage: 4
+      ohttp_tractability: 2
+      payjoin_coupling: 3
+      maintenance: 2
+    next_artifact:
+      type: research
+      description: "Confirm plugin-level access to broadcast and server routing"
+      url: null
+    notes: "Electrum's normal server model is wallet-session-shaped and not naturally per-request OHTTP. Treat as a privacy risk to document around the plugin; direct OHTTP sync work is less tractable than Esplora clients."
   owner:
     internal: null
     external: null
@@ -1455,6 +1605,27 @@
     fallback: false
     ohttp_relay_rotation: false
   sync_method: esplora
+  sync_privacy:
+    stage: ohttp_candidate
+    current_backend: esplora
+    query_shape: wallet_scan
+    client_ip_protection: none_by_default
+    backend_clustering_risk: medium
+    payjoin_regression_risk: medium
+    target_sequence:
+      - broadcast_ohttp
+      - per_request_sync_ohttp
+      - timing_shape_obfuscation
+    scores:
+      privacy_leakage: 3
+      ohttp_tractability: 5
+      payjoin_coupling: 2
+      maintenance: 1
+    next_artifact:
+      type: prototype
+      description: "BDK Esplora-over-OHTTP reference prototype"
+      url: null
+    notes: "Testing tool, but a good low-maintenance proving ground for Esplora/OHTTP APIs that would later feed mobile wallets."
   blocker: async_status
   owner:
     internal: Brandon Lucas
@@ -1845,6 +2016,26 @@
     fallback: false
     ohttp_relay_rotation: false
   sync_method: electrum
+  sync_privacy:
+    stage: leaky_known
+    current_backend: electrum
+    query_shape: wallet_server_session
+    client_ip_protection: user_configurable
+    backend_clustering_risk: high
+    payjoin_regression_risk: medium
+    target_sequence:
+      - broadcast_ohttp
+      - document_safe_backend_modes
+    scores:
+      privacy_leakage: 4
+      ohttp_tractability: 2
+      payjoin_coupling: 3
+      maintenance: 3
+    next_artifact:
+      type: research
+      description: "Confirm Liana backend modes and payjoin broadcast path"
+      url: null
+    notes: "Electrum-backed desktop wallet. OHTTP sync is not a quick win unless the chain-access layer changes shape; immediate value is broadcast privacy and clear backend-mode guidance."
   blocker: ben_review_and_db_migration
   owner:
     internal: Ben Allen
@@ -2042,6 +2233,26 @@
   language: "C++"
   custody: self_custodial
   native_http_client: false
+  sync_method: full_node
+  sync_privacy:
+    stage: client_side_discovery
+    current_backend: full_node
+    query_shape: local_node
+    client_ip_protection: local_node
+    backend_clustering_risk: low
+    payjoin_regression_risk: low
+    target_sequence:
+      - none
+    scores:
+      privacy_leakage: 1
+      ohttp_tractability: 1
+      payjoin_coupling: 1
+      maintenance: 1
+    next_artifact:
+      type: none
+      description: "Use as full-node privacy baseline"
+      url: null
+    notes: "Bitcoin Core is the baseline: wallet discovery is local, so sync privacy should not distract from Payjoin integration work."
   owner:
     internal: null
     external: W0xit
@@ -2074,6 +2285,28 @@
     fallback: false
     ohttp_relay_rotation: false
   sync_method: "esplora, electrum, or full_node"
+  sync_privacy:
+    stage: ohttp_candidate
+    current_backend: "esplora, electrum, or full_node"
+    query_shape: configurable_light_client_or_full_node
+    client_ip_protection: backend_dependent
+    backend_clustering_risk: high
+    payjoin_regression_risk: high
+    target_sequence:
+      - broadcast_ohttp
+      - per_request_sync_ohttp
+      - timing_shape_obfuscation
+      - multi_backend_splitting
+    scores:
+      privacy_leakage: 4
+      ohttp_tractability: 4
+      payjoin_coupling: 4
+      maintenance: 3
+    next_artifact:
+      type: design_doc
+      description: "LDK-Node chain-source privacy modes for payjoin channel opens"
+      url: null
+    notes: "Channel-open payjoin can be undermined by chain-source lookups if the app uses Esplora/Electrum defaults. Configurability means full-node mode is fine, but mobile/app integrations need OHTTP guidance."
   blocker: async_persist_api_pr
   owner:
     internal: Spacebear
@@ -2259,6 +2492,27 @@
   status: engaged
   language: "Swift, Kotlin"
   custody: self_custodial
+  sync_privacy:
+    stage: unassessed
+    current_backend: unknown
+    query_shape: mobile_light_client_expected
+    client_ip_protection: unknown
+    backend_clustering_risk: medium
+    payjoin_regression_risk: medium
+    target_sequence:
+      - confirm_chain_access_model
+      - broadcast_ohttp
+      - non_sync_esplora_ohttp
+    scores:
+      privacy_leakage: 3
+      ohttp_tractability: 3
+      payjoin_coupling: 3
+      maintenance: 2
+    next_artifact:
+      type: research
+      description: "Identify Cove chain backend and native HTTP path"
+      url: null
+    notes: "Mobile wallet with unknown chain-access model in the tracker. Keep as a replication target once BB Mobile/Cake establish a pattern."
   scores:
     leverage: 2
     feasibility: 3

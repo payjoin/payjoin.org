@@ -68,6 +68,34 @@ Does the integration use a native HTTP client (fetch)? `true`, `false`, or `plan
 ### Sync Method
 Document how the integration syncs: `full node`, `electrum`, `esplora`, `SPV`, `custodial`, etc.
 
+### Sync Privacy
+Track whether normal chain access preserves or undermines the privacy Payjoin
+creates. This is an overlay, not a replacement for Payjoin priority.
+
+Use these stages:
+
+| Stage | Meaning |
+|-------|---------|
+| `unassessed` | Sync/backend shape unknown |
+| `leaky_known` | Backend clustering risk is understood |
+| `ohttp_candidate` | Requests can plausibly move behind OHTTP |
+| `lookup_private` | Non-sync Esplora-style lookups use OHTTP |
+| `broadcast_private` | Transaction broadcast uses OHTTP |
+| `sync_sharded` | Sync queries are split per request/backend |
+| `sync_hardened` | Timing, padding, and backend diversity reduce clustering |
+| `client_side_discovery` | Compact-filter/SPV/full-node style discovery target |
+
+Score sync privacy opportunities 1-5 on:
+
+| Factor | Weight | Description |
+|--------|--------|-------------|
+| **Privacy leakage** | 5x | How badly current sync clusters wallet activity |
+| **OHTTP tractability** | 3x | How easy it is to put relevant requests behind OHTTP |
+| **Payjoin coupling** | 2x | How much chain access can undo Payjoin privacy |
+| **Maintenance** | -1x | Lower is better: backend, retry, UX, support burden |
+
+**Formula**: `5L + 3T + 2C - M`
+
 ### Error Handling
 Qualitative notes on how failures are handled. Examples:
 - "Retry-safe with idempotent requests"
@@ -153,6 +181,26 @@ capabilities:
   fallback: false
   ohttp_relay_rotation: false
 sync_method: esplora
+sync_privacy:
+  stage: ohttp_candidate
+  current_backend: esplora
+  query_shape: per_address_history
+  client_ip_protection: tor_optional
+  backend_clustering_risk: high
+  target_sequence:
+    - non_sync_esplora_ohttp
+    - broadcast_ohttp
+    - per_request_sync_ohttp
+    - timing_shape_obfuscation
+    - multi_backend_splitting
+  scores:
+    privacy_leakage: 5
+    ohttp_tractability: 4
+    payjoin_coupling: 5
+    maintenance: 3
+  next_artifact:
+    type: design_doc
+    description: "OHTTP sync privacy migration plan"
 blocker: their_engineering_time
 owner:
   internal: Spacebear

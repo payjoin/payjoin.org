@@ -12,6 +12,24 @@
 
 ---
 
+## Sync Privacy Opportunities
+
+**Score = 5🔎 + 3🧅 + 2🔗 − 🔧** | 🔎 Leakage · 🧅 OHTTP fit · 🔗 Payjoin coupling · 🔧 Maintenance
+
+This ranks where chain-access privacy work most protects, or prevents regressions
+from, a Payjoin integration. It is a sequencing overlay: Payjoin priority remains
+primary unless normal wallet sync would immediately re-cluster the activity Payjoin
+just tried to hide.
+
+| Name | Stage | Score | Backend | Risk | Target |
+|------|-------|------:|---------|------|--------|
+{% for i in sync_privacy_opportunities() -%}
+{% set sp = i.sync_privacy -%}
+| {% if i.tracking_issue %}[**{{ i.name }}**]({{ i.tracking_issue }}){% else %}**{{ i.name }}**{% endif %} | {{ sp.stage or 'unassessed' }} | {{ i.sync_privacy_score }} | {{ sp.current_backend or i.sync_method or 'unknown' }} | {{ sp.backend_clustering_risk or 'unknown' }} | {{ sp.next_artifact.description if sp.next_artifact else 'Define next artifact' }} |
+{% endfor %}
+
+---
+
 ## Unscored Integrations
 
 ### Engaged ({{ integrations_by_status('engaged') | rejectattr('scores', 'defined') | list | length }})
