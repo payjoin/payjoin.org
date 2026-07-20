@@ -1,18 +1,34 @@
 # Discovered payjoin activity outside tracked repos. Bot appends; you own `status`.
 # status: new | watching | dismissed | promoted  (bot only adds 'new')
+- url: https://github.com/BlueWallet/BlueWallet/issues/3659
+  repo: BlueWallet/BlueWallet
+  kind: issue
+  title: Dependency Dashboard
+  stars: 3239
+  updated_at: '2026-07-20T03:58:53Z'
+  first_seen: '2026-06-19'
+  status: new
 - url: https://github.com/cake-tech/cake_wallet/pull/3377
   repo: cake-tech/cake_wallet
   kind: pr
   title: Shuffle output order on bitcoin sends
-  stars: 1792
-  updated_at: '2026-07-18T20:37:26Z'
+  stars: 1793
+  updated_at: '2026-07-20T00:13:31Z'
   first_seen: '2026-07-08'
+  status: new
+- url: https://github.com/bitcointranscripts/bitcointranscripts/pull/660
+  repo: bitcointranscripts/bitcointranscripts
+  kind: pr
+  title: Add lightning-privacy-splice-panel review to bitcoin-review-podcast
+  stars: 110
+  updated_at: '2026-07-19T17:15:35Z'
+  first_seen: '2026-07-20'
   status: new
 - url: https://github.com/cake-tech/cake_wallet/pull/3385
   repo: cake-tech/cake_wallet
   kind: pr
   title: Set anti-fee-sniping locktime (exact-tip) on bitcoin sends
-  stars: 1792
+  stars: 1793
   updated_at: '2026-07-18T20:35:05Z'
   first_seen: '2026-07-10'
   status: new
@@ -20,17 +36,9 @@
   repo: cake-tech/cake_wallet
   kind: pr
   title: 'Privacy: randomized coin selection (BnB changeless + single random draw)'
-  stars: 1792
+  stars: 1793
   updated_at: '2026-07-18T20:32:35Z'
   first_seen: '2026-07-16'
-  status: new
-- url: https://github.com/BlueWallet/BlueWallet/issues/3659
-  repo: BlueWallet/BlueWallet
-  kind: issue
-  title: Dependency Dashboard
-  stars: 3238
-  updated_at: '2026-07-18T18:56:41Z'
-  first_seen: '2026-06-19'
   status: new
 - url: https://github.com/BitcoinDesign/Meta/issues/810
   repo: BitcoinDesign/Meta
@@ -76,7 +84,7 @@
   repo: cake-tech/cake_wallet
   kind: pr
   title: WIP Payjoin upgrade to native dart bindings via payjoin_ffi
-  stars: 1792
+  stars: 1793
   updated_at: '2026-07-17T22:28:19Z'
   first_seen: '2026-07-03'
   status: new
@@ -231,7 +239,7 @@
   repo: cake-tech/cake_wallet
   kind: pr
   title: 'feat: pin all dependencies to git sources'
-  stars: 1792
+  stars: 1793
   updated_at: '2026-07-14T18:58:50Z'
   first_seen: '2026-07-09'
   status: new
@@ -247,7 +255,7 @@
   repo: bitcoin-dot-org/Bitcoin.org
   kind: pr
   title: 'feat: add BULL by Bull Bitcoin'
-  stars: 1769
+  stars: 1770
   updated_at: '2026-07-14T15:36:00Z'
   first_seen: '2026-06-19'
   status: new
@@ -263,7 +271,7 @@
   repo: cake-tech/cake_wallet
   kind: issue
   title: Bitcoin sends order inputs by BIP-69
-  stars: 1792
+  stars: 1793
   updated_at: '2026-07-14T02:39:04Z'
   first_seen: '2026-07-08'
   status: new
@@ -271,7 +279,7 @@
   repo: cake-tech/cake_wallet
   kind: pr
   title: Shuffle input order on bitcoin sends
-  stars: 1792
+  stars: 1793
   updated_at: '2026-07-14T02:39:04Z'
   first_seen: '2026-07-08'
   status: new
@@ -375,7 +383,7 @@
   repo: cake-tech/cake_wallet
   kind: issue
   title: Payjoin receiver can contribute unconfirmed (0-conf) inputs
-  stars: 1792
+  stars: 1793
   updated_at: '2026-07-10T15:23:30Z'
   first_seen: '2026-07-10'
   status: new
@@ -407,7 +415,7 @@
   repo: cake-tech/cake_wallet
   kind: issue
   title: '6.0: payjoin notice on litecoin receive'
-  stars: 1792
+  stars: 1793
   updated_at: '2026-07-09T22:18:07Z'
   first_seen: '2026-07-10'
   status: new
@@ -431,7 +439,7 @@
   repo: cake-tech/cake_wallet
   kind: issue
   title: Sparrow user payjoin fails because of changed nLocktime
-  stars: 1792
+  stars: 1793
   updated_at: '2026-07-08T19:00:39Z'
   first_seen: '2026-07-09'
   status: new
@@ -439,7 +447,7 @@
   repo: cake-tech/cake_wallet
   kind: issue
   title: 'RBF nsequence: non-canonical 0x01, only on inputs[0]'
-  stars: 1792
+  stars: 1793
   updated_at: '2026-07-08T18:37:09Z'
   first_seen: '2026-06-19'
   status: new
@@ -471,7 +479,7 @@
   repo: cake-tech/cake_wallet
   kind: issue
   title: Bitcoin sends place change output deterministically last
-  stars: 1792
+  stars: 1793
   updated_at: '2026-07-07T18:43:56Z'
   first_seen: '2026-07-08'
   status: new
@@ -479,7 +487,7 @@
   repo: cake-tech/cake_wallet
   kind: issue
   title: Bitcoin sends use nLockTime = 0 (anti-fee-sniping + payjoin fingerprint)
-  stars: 1792
+  stars: 1793
   updated_at: '2026-07-07T01:39:20Z'
   first_seen: '2026-07-03'
   status: new
