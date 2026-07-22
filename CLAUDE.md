@@ -245,12 +245,27 @@ refresh machine facts in place, never touch the human-owned `status`
 (`new` | `watching` | `dismissed` | `promoted`). Rows marked `dismissed` are hidden from
 the site; `watching`/`promoted` are never aged out.
 
-**Two views, different jobs.** The **Digest** (`docs/digest.md`) is the delta you read
-once a day: a row appears when first discovered, and again only if it went quiet for
-`RESURFACE_DAYS` (7) and then moved. The **Outside activity** page (`docs/outside.md`)
-is the browsable archive — every row, grouped by the day the activity happened, newest
-first, with the page TOC acting as a date jump-list. Look back a week there, not in the
-digest.
+**Three views, different jobs.**
+
+| Page | Question it answers | Written by | When |
+|---|---|---|---|
+| `docs/digest.md` | What moved since yesterday? | `scripts/refresh.py` | nightly, 00:17 UTC |
+| `docs/weekly.md` | What happened since we last met? | `scripts/weekly.py` | Tuesdays, 12:00 UTC |
+| `docs/outside.md` | What happened on *that* day? | rendered from the archives at build time | every build |
+
+The digest surfaces a row when first discovered, and again only if it went quiet for
+`RESURFACE_DAYS` (7) and then moved. The Outside activity page is the browsable archive —
+every row, grouped by the day the activity happened, newest first, with the page TOC acting
+as a date jump-list. Look back a week there, not in the digest.
+
+The **weekly digest** is the agenda for the Tuesday check-in call (21:30 UTC+8 = 13:30 UTC);
+it renders at 12:00 UTC, ~90 minutes ahead. It leads with tracked integrations because that
+is the order the meeting runs in, then summarises the week's outside activity one line per
+repo, then the check-in follow-through. Week-over-week state is diffed against
+`data/auto-state-weekly.yaml`, a snapshot rolled forward at the end of each weekly run —
+diffing the nightly snapshot instead would only ever show a single day of movement. The
+snapshot is rolled forward only after a successful render, so a failed run repeats the same
+window rather than swallowing a week.
 
 Retention differs by volume: GitHub rows age out after `discover.RETENTION_DAYS` (180)
 because commits are a firehose; news keeps `news.RETENTION_DAYS` (10 years) because
@@ -282,8 +297,33 @@ Offline checks for every collector (no token, no network):
 python scripts/discover.py --selftest
 python scripts/news.py --selftest
 python scripts/digest.py --selftest
+python scripts/weekly.py --selftest
 python scripts/refresh.py --selftest
 ```
+
+---
+
+## Hosting and visibility
+
+**The repository is private. The site is public.** It is served by Cloudflare Pages at
+`integrations-tracker.pages.dev`, rebuilt on every push to `master`.
+
+That asymmetry is load-bearing. `data/integrations.yaml` holds CRM fields — deal values,
+emails, phone numbers, account owners — and the only thing keeping them off the open
+internet is the `PRIVATE_FIELDS` tuple in `main.py`, which strips them from the
+template-facing copy at build time. **Any new page that renders integration rows must go
+through that same filtered data**; reading the YAML directly in a template would publish
+the CRM. The outside-activity archives (`candidates.yaml`, `news.yaml`) carry no private
+fields and are derived entirely from public sources.
+
+If the site is ever put behind Cloudflare Access, note that grant and board reports
+(OpenSats Q1, Spiral Q1, the Feb 2026 board update) link `/integrations/` publicly as
+evidence of work — gating that path breaks those links, while gating `/digest`, `/weekly`
+and `/outside` does not.
+
+`.github/workflows/deploy.yml` is dead code: it triggers on pushes to `main`, the default
+branch is `master`, and GitHub Pages is disabled on the repo (`has_pages: false`). Cloudflare
+Pages does the deploying.
 
 ---
 
