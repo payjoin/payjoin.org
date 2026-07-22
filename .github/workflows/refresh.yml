@@ -1,7 +1,15 @@
 name: Refresh tracker auto-state
 
-# Nightly freshness loop (Phase 1). Reads upstream issue/PR/discussion state for every
-# tracking_issue and commits data/auto-state.yaml to master, which Cloudflare Pages rebuilds.
+# Nightly freshness loop. Reads upstream issue/PR/discussion state for every tracking_issue,
+# sweeps for payjoin activity outside the org (GitHub issues/PRs/commits/repos, plus press,
+# forums and newsletters), and commits the data files to master, which Cloudflare Pages
+# rebuilds.
+#
+# Something substantial just happened and you don't want to wait for the cron? Trigger it by
+# hand — Actions tab -> "Refresh tracker auto-state" -> "Run workflow", or:
+#     gh workflow run refresh.yml -R payjoin/integrations-tracker
+# Re-running is safe: rows are merged by URL, so a mid-day run refreshes facts rather than
+# adding duplicates.
 on:
   schedule:
     # 00:17 UTC = ~08:17 Asia/Taipei (UTC+8, no DST). :17 dodges the contended top-of-hour
@@ -45,7 +53,7 @@ jobs:
       # same-day reruns with no upstream change are idempotent -> no commit. CF Pages rebuilds on push.
       - name: Commit if changed
         run: |
-          git add data/auto-state.yaml docs/digest.md data/candidates.yaml
+          git add data/auto-state.yaml docs/digest.md data/candidates.yaml data/news.yaml
           if git diff --cached --quiet; then
             echo "No changes — nothing to commit."
             exit 0
