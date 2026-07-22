@@ -1,0 +1,63 @@
+name: Weekly check-in digest
+
+# Agenda for the Tuesday check-in call, which sits at 21:30 UTC+8 = 13:30 UTC.
+# Runs at 12:00 UTC, ~90 minutes ahead, so the page is fresh when the call opens but a
+# failure still leaves time to trigger a manual re-run before anyone needs it.
+#
+# The sweep runs first so the week's outside activity is current, then the weekly page is
+# rendered from the committed archives — the daily and weekly views therefore always agree
+# about what happened.
+on:
+  schedule:
+    - cron: '0 12 * * 2'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: tracker-refresh   # shares the nightly's group: never write the data files twice at once
+  cancel-in-progress: false
+
+jobs:
+  weekly:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install deps
+        run: pip install pyyaml
+
+      - name: Credential probe
+        env:
+          GH_TOKEN: ${{ secrets.PAYJOIN_TRACKER_PAT }}
+        run: python scripts/refresh.py --probe
+
+      - name: Refresh auto-state and outside activity
+        env:
+          GH_TOKEN: ${{ secrets.PAYJOIN_TRACKER_PAT }}
+        run: python scripts/refresh.py
+
+      - name: Render the weekly digest
+        env:
+          GH_TOKEN: ${{ secrets.PAYJOIN_TRACKER_PAT }}
+        run: python scripts/weekly.py
+
+      - name: Commit if changed
+        run: |
+          git add data/auto-state.yaml data/auto-state-weekly.yaml data/candidates.yaml \
+                  data/news.yaml docs/digest.md docs/weekly.md
+          if git diff --cached --quiet; then
+            echo "No changes — nothing to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "chore: weekly check-in digest"
+          git push origin HEAD:master || {
+            git pull --rebase origin master && git push origin HEAD:master
+          }
