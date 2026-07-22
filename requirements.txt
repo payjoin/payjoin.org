@@ -1,0 +1,13 @@
+# Build dependencies for the MkDocs site, installed by the Cloudflare Pages build.
+#
+# Declaring them here rather than inline in the Cloudflare build command keeps the build
+# inputs under review and lets them survive the project being recreated — they were lost
+# exactly that way when the project moved Cloudflare accounts.
+#
+# mkdocs-material pulls in mkdocs itself and pymdown-extensions (mkdocs.yml uses
+# pymdownx.details and pymdownx.superfences). mkdocs-macros-plugin is what loads main.py,
+# which renders the integrations tables and the outside-activity archive; without it the
+# build fails on an unknown 'macros' plugin.
+mkdocs-material
+mkdocs-macros-plugin
+pyyaml
