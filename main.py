@@ -1,6 +1,98 @@
 import os
 import yaml
 
+# Kinds the Outside activity page knows how to label, in the order they read best.
+_OUTSIDE_KINDS = (
+    ('pr', 'PR', 'PRs'),
+    ('issue', 'issue', 'issues'),
+    ('commit', 'commit', 'commits'),
+    ('repo', 'repo', 'repos'),
+    ('article', 'article', 'articles'),
+    ('forum', 'forum post', 'forum posts'),
+    ('newsletter', 'newsletter', 'newsletters'),
+    ('hn', 'HN post', 'HN posts'),
+)
+_KIND_LABEL = {k: (one, many) for k, one, many in _OUTSIDE_KINDS}
+
+
+def _load_rows(path):
+    """Read one of the collector archives. Missing file is normal (first run) -> []."""
+    if not os.path.exists(path):
+        return []
+    with open(path, 'r') as f:
+        return [r for r in (yaml.safe_load(f) or []) if r and r.get('url')]
+
+
+def _summarise(rows):
+    """'5 PRs, 1 issue' for a bucket of rows."""
+    counts = {}
+    for r in rows:
+        counts[r.get('kind') or 'item'] = counts.get(r.get('kind') or 'item', 0) + 1
+    parts = []
+    for kind, one, many in _OUTSIDE_KINDS:
+        n = counts.get(kind)
+        if n:
+            parts.append('%d %s' % (n, one if n == 1 else many))
+    for kind, n in sorted(counts.items()):
+        if kind not in _KIND_LABEL:
+            parts.append('%d %s' % (n, kind))
+    return ', '.join(parts)
+
+
+def build_outside_days(candidates, news, max_days=90):
+    """Group every archived outside-activity row into a day-by-day feed, newest first.
+
+    The digest answers "what is new today"; this answers "what happened the week I was
+    heads-down", which is why it groups by the day the activity happened (updated_at)
+    rather than the day we noticed it. Rows you have dismissed drop out entirely.
+
+    Returns [{date, count, summary, repos: [...], news: [...]}], newest day first.
+    """
+    days = {}
+    for row in candidates:
+        if row.get('status') == 'dismissed':
+            continue
+        day = (row.get('updated_at') or '')[:10]
+        if not day:
+            continue
+        bucket = days.setdefault(day, {'repos': {}, 'news': []})
+        bucket['repos'].setdefault(row.get('repo') or '?', []).append(row)
+    for row in news:
+        if row.get('status') == 'dismissed':
+            continue
+        day = (row.get('updated_at') or '')[:10]
+        if not day:
+            continue
+        days.setdefault(day, {'repos': {}, 'news': []})['news'].append(row)
+
+    out = []
+    for day in sorted(days, reverse=True)[:max_days]:
+        bucket = days[day]
+        repos = []
+        for name, rows in bucket['repos'].items():
+            rows.sort(key=lambda r: r.get('updated_at') or '', reverse=True)
+            repos.append({
+                'name': name,
+                'url': 'https://github.com/%s' % name,
+                'stars': max((r.get('stars') or 0) for r in rows),
+                'summary': _summarise(rows),
+                'entries': rows,
+                'newest': rows[0].get('updated_at') or '',
+            })
+        # Busiest repos first, then most recent — the day reads top-down by significance.
+        repos.sort(key=lambda r: (len(r['entries']), r['newest']), reverse=True)
+        stories = sorted(bucket['news'], key=lambda r: r.get('updated_at') or '', reverse=True)
+        rows_today = [r for repo in repos for r in repo['entries']] + stories
+        out.append({
+            'date': day,
+            'count': len(rows_today),
+            'summary': _summarise(rows_today),
+            'repos': repos,
+            'news': stories,
+        })
+    return out
+
+
 def define_env(env):
     """Define variables and macros for mkdocs-macros."""
 
@@ -49,6 +141,37 @@ def define_env(env):
 
     # Make available as variable
     env.variables['integrations'] = integrations
+
+    # Outside-activity archives, written nightly by scripts/discover.py + scripts/news.py.
+    # Both are optional: the site builds before either has ever run.
+    outside_candidates = _load_rows('data/candidates.yaml')
+    outside_news = _load_rows('data/news.yaml')
+
+    @env.macro
+    def outside_days(max_days=90):
+        """Day-by-day feed of payjoin activity outside the org (see build_outside_days)."""
+        return build_outside_days(outside_candidates, outside_news, max_days=max_days)
+
+    @env.macro
+    def outside_totals():
+        """Headline counts for the Outside activity page."""
+        live = [r for r in outside_candidates + outside_news if r.get('status') != 'dismissed']
+        dated = sorted((r.get('updated_at') or '')[:10] for r in live if r.get('updated_at'))
+        # NB: no key may be called 'items' — Jinja resolves `totals.items` to dict.items().
+        return {
+            'count': len(live),
+            'repos': len({r.get('repo') for r in outside_candidates
+                          if r.get('status') != 'dismissed' and r.get('repo')}),
+            'stories': len([r for r in outside_news if r.get('status') != 'dismissed']),
+            'since': dated[0] if dated else None,
+            'until': dated[-1] if dated else None,
+            'summary': _summarise(live),
+        }
+
+    @env.macro
+    def kind_label(kind):
+        """Singular display label for an activity kind ('pr' -> 'PR')."""
+        return _KIND_LABEL.get(kind, (kind or 'item', ''))[0]
 
     # Filter helpers
     @env.macro

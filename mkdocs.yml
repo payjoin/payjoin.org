@@ -20,6 +20,7 @@ plugins:
 nav:
   - Home: index.md
   - Digest: digest.md
+  - Outside activity: outside.md
   - Integrations: integrations.md
   - Research: research.md
   - Grants: grants.md
