@@ -230,6 +230,63 @@ contact:
 
 ---
 
+## Outside activity (keyword sweep)
+
+Tracks everything mentioning **payjoin** outside the `payjoin` org, so ecosystem work
+doesn't have to be noticed by hand.
+
+| Collector | Source | Writes | Kinds |
+|---|---|---|---|
+| `scripts/discover.py` | GitHub GraphQL issue/PR search + REST commit + repo search | `data/candidates.yaml` | `issue` `pr` `commit` `repo` |
+| `scripts/news.py` | Google News RSS, Delving Bitcoin, Bitcoin Optech, Hacker News | `data/news.yaml` | `article` `forum` `newsletter` `hn` |
+
+Both archives use one row shape and one merge rule (`discover.merge`): dedupe by URL,
+refresh machine facts in place, never touch the human-owned `status`
+(`new` | `watching` | `dismissed` | `promoted`). Rows marked `dismissed` are hidden from
+the site; `watching`/`promoted` are never aged out.
+
+**Two views, different jobs.** The **Digest** (`docs/digest.md`) is the delta you read
+once a day: a row appears when first discovered, and again only if it went quiet for
+`RESURFACE_DAYS` (7) and then moved. The **Outside activity** page (`docs/outside.md`)
+is the browsable archive — every row, grouped by the day the activity happened, newest
+first, with the page TOC acting as a date jump-list. Look back a week there, not in the
+digest.
+
+Retention differs by volume: GitHub rows age out after `discover.RETENTION_DAYS` (180)
+because commits are a firehose; news keeps `news.RETENTION_DAYS` (10 years) because
+payjoin press is a few dozen items a year and the canonical explainers stay useful.
+
+**Forcing a refresh** (substantial news, don't want to wait for the 00:17 UTC cron):
+
+```bash
+gh workflow run refresh.yml -R payjoin/integrations-tracker
+```
+
+Re-running mid-day is safe — merging is by URL, so it refreshes rather than duplicates.
+
+**Noise control**: add a repo to `data/discovery-denylist.yaml` (`owner/repo` for one repo,
+a bare `repo-name` to match any owner), or set a row's `status: dismissed`.
+
+**Not collected**, so nobody re-investigates blind:
+
+| Source | Why not |
+|---|---|
+| GitHub wikis | `type=wikis` is web-UI only; `GET /search/wikis` returns 404. Would need scraping an authenticated session. |
+| Reddit | `search.json` serves an HTML block page to datacenter IPs; needs OAuth credentials. |
+| Nostr | NIP-50 relays (`relay.nostr.band`, `search.nos.today`, `relay.damus.io`) were unreachable from the collector host — timeout / ENETUNREACH. |
+| X | No keyless read path since the free API tier closed. |
+
+Offline checks for every collector (no token, no network):
+
+```bash
+python scripts/discover.py --selftest
+python scripts/news.py --selftest
+python scripts/digest.py --selftest
+python scripts/refresh.py --selftest
+```
+
+---
+
 ## Site Structure
 
 ```
