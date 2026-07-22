@@ -90,23 +90,82 @@ def _checkin_lines(checkins):
     return out
 
 
-def _candidate_lines(candidates):
-    """Markdown lines for newly-discovered external payjoin activity (empty if none)."""
-    if not candidates:
+_KIND_NOUN = {"pr": "PR", "issue": "issue", "commit": "commit", "repo": "repo"}
+
+
+def group_by_repo(rows):
+    """Bucket GitHub rows by repo, newest first, repos ordered by their newest item.
+
+    One repo landing seven payjoin PRs in a day used to eat the whole section; grouped, it
+    is a single line with a count.
+    """
+    buckets = {}
+    for r in rows:
+        buckets.setdefault(r.get("repo") or "?", []).append(r)
+    for items in buckets.values():
+        items.sort(key=lambda r: r.get("updated_at") or "", reverse=True)
+    return sorted(buckets.items(),
+                  key=lambda kv: kv[1][0].get("updated_at") or "", reverse=True)
+
+
+def summarise_kinds(rows):
+    """'5 PRs, 1 issue' — what happened in this repo, without listing every row."""
+    counts = {}
+    for r in rows:
+        counts[r.get("kind") or "?"] = counts.get(r.get("kind") or "?", 0) + 1
+    parts = []
+    for kind in ("pr", "issue", "commit", "repo"):
+        n = counts.get(kind)
+        if n:
+            noun = _KIND_NOUN[kind]
+            parts.append("%d %s%s" % (n, noun, "s" if n > 1 and noun != "repo" else ""))
+    for kind, n in sorted(counts.items()):
+        if kind not in _KIND_NOUN:
+            parts.append("%d %s" % (n, kind))
+    return ", ".join(parts)
+
+
+def _outside_lines(candidates, news, repo_cap=10, item_cap=3):
+    """Markdown for outside-the-org payjoin activity worth a look today (empty if none).
+
+    Only rows the collectors chose to surface reach here — first sighting, or movement
+    after a quiet week. Everything else lives on the Outside activity page.
+    """
+    candidates, news = candidates or [], news or []
+    if not (candidates or news):
         return []
-    out = ["", "## New activity outside tracked repos", "",
-           "_payjoin issues/PRs in repos we don't watch yet — triage in `data/candidates.yaml`._", ""]
-    cap = 12
-    for c in candidates[:cap]:
-        out.append("- [%s](%s) · %s · ⭐%s · %s — %s" % (
-            c["repo"], c["url"], c.get("kind", "?"), c.get("stars", 0),
-            (c.get("updated_at") or "")[:10], _trunc(c.get("title"), 80)))
-    if len(candidates) > cap:
-        out.append("- _+%d more in `data/candidates.yaml`_" % (len(candidates) - cap))
+    out = ["", "## Outside activity", "",
+           "_New since yesterday, plus anything that woke up after a quiet week. "
+           "Full history: [Outside activity](outside.md)._", ""]
+
+    groups = group_by_repo(candidates)
+    for repo, items in groups[:repo_cap]:
+        stars = max((i.get("stars") or 0) for i in items)
+        flag = " · _back after a quiet spell_" if any(i.get("resurfaced") for i in items) else ""
+        out.append("- **%s** ⭐%s — %s%s" % (repo, stars, summarise_kinds(items), flag))
+        for i in items[:item_cap]:
+            out.append("    - [%s](%s) %s" % (_KIND_NOUN.get(i.get("kind"), "item"), i["url"],
+                                              _trunc(i.get("title"), 80)))
+        if len(items) > item_cap:
+            out.append("    - _+%d more_" % (len(items) - item_cap))
+    if len(groups) > repo_cap:
+        out.append("- _+%d more repos on the [Outside activity](outside.md) page_"
+                   % (len(groups) - repo_cap))
+
+    if news:
+        out += ["", "**Off GitHub**", ""]
+        for n in news[:repo_cap]:
+            flag = " · _back after a quiet spell_" if n.get("resurfaced") else ""
+            out.append("- [%s](%s) · %s · %s%s" % (
+                _trunc(n.get("title"), 80), n["url"], n.get("outlet") or "?",
+                (n.get("updated_at") or "")[:10], flag))
+        if len(news) > repo_cap:
+            out.append("- _+%d more on the [Outside activity](outside.md) page_"
+                       % (len(news) - repo_cap))
     return out
 
 
-def render(old, new, names, date_str, checkins=None, candidates=None):
+def render(old, new, names, date_str, checkins=None, candidates=None, news=None):
     """Build the digest markdown string. date_str is the UTC date (YYYY-MM-DD)."""
     d = compute_delta(old, new)
     out = ["# Daily digest", "",
@@ -165,7 +224,7 @@ def render(old, new, names, date_str, checkins=None, candidates=None):
             out.append("")
 
     out += _checkin_lines(checkins)
-    out += _candidate_lines(candidates)
+    out += _outside_lines(candidates, news)
     return "\n".join(out).rstrip() + "\n"
 
 
@@ -193,10 +252,37 @@ def selftest():
     md = render(new, new, {}, "2026-06-16", checkins=checkins)
     assert "## Check-in follow-through" in md and "rust-payjoin#1610" in md, md
     assert "To follow up" in md and "bob" in md and "ghost" not in md, md
-    cands = [{"repo": "BlueWallet/BlueWallet", "url": "https://github.com/BlueWallet/BlueWallet/issues/1",
-              "kind": "issue", "stars": 3224, "updated_at": "2026-06-18T00:00:00Z", "title": "Payjoin support"}]
+    # Outside activity: a repo burst collapses to one grouped line instead of seven rows.
+    burst = [{"repo": "SatoshiPortal/bullbitcoin-mobile", "kind": "pr", "stars": 186,
+              "url": "https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/%d" % n,
+              "updated_at": "2026-06-18T0%d:00:00Z" % n, "title": "payjoin work %d" % n}
+             for n in range(1, 6)]
+    burst.append({"repo": "SatoshiPortal/bullbitcoin-mobile", "kind": "issue", "stars": 186,
+                  "url": "https://github.com/SatoshiPortal/bullbitcoin-mobile/issues/9",
+                  "updated_at": "2026-06-18T00:30:00Z", "title": "payjoin notes"})
+    cands = burst + [{"repo": "BlueWallet/BlueWallet", "kind": "issue", "stars": 3224,
+                      "url": "https://github.com/BlueWallet/BlueWallet/issues/1",
+                      "updated_at": "2026-06-17T00:00:00Z", "title": "Payjoin support",
+                      "resurfaced": True}]
     md = render(new, new, {}, "2026-06-18", candidates=cands)
-    assert "## New activity outside tracked repos" in md and "BlueWallet/BlueWallet" in md and "⭐3224" in md, md
+    assert "## Outside activity" in md and "⭐3224" in md, md
+    assert "5 PRs, 1 issue" in md, md                       # burst summarised, not enumerated
+    assert md.count("bullbitcoin-mobile/pull/") == 3, md    # capped detail lines
+    assert "+3 more" in md, md
+    assert "back after a quiet spell" in md, md             # resurfacing is called out
+    assert "[Outside activity](outside.md)" in md, md       # the archive is one click away
+
+    # Off-GitHub stories render with their outlet.
+    md = render(new, new, {}, "2026-06-18", news=[
+        {"url": "https://bitcoinmagazine.com/x", "kind": "article", "outlet": "Bitcoin Magazine",
+         "title": "Is Async Payjoin the HTTPS of Bitcoin?", "updated_at": "2026-06-18T00:00:00Z"}])
+    assert "**Off GitHub**" in md and "Bitcoin Magazine" in md, md
+
+    # Grouping/summary helpers hold on mixed input.
+    assert summarise_kinds([{"kind": "commit"}, {"kind": "commit"}, {"kind": "repo"}]) == \
+        "2 commits, 1 repo"
+    assert [r for r, _ in group_by_repo(cands)][0] == "SatoshiPortal/bullbitcoin-mobile"
+    assert render(new, new, {}, "2026-06-18").count("## Outside activity") == 0  # quiet day
     print("digest selftest passed")
     return 0
 
