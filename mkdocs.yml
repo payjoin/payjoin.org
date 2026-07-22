@@ -20,6 +20,7 @@ plugins:
 nav:
   - Home: index.md
   - Digest: digest.md
+  - Weekly: weekly.md
   - Outside activity: outside.md
   - Integrations: integrations.md
   - Research: research.md
