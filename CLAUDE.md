@@ -306,7 +306,16 @@ python scripts/refresh.py --selftest
 ## Hosting and visibility
 
 **The repository is private. The site is public.** It is served by Cloudflare Pages at
-`integrations-tracker.pages.dev`, rebuilt on every push to `master`.
+`integrations-tracker.pages.dev`, rebuilt on every push to `master`. The project lives in the
+foundation Cloudflare account (`dan@payjoin.org`, under the `payjoin.org` organization) — it
+was moved there from a personal account in July 2026.
+
+Build inputs are declared in `requirements.txt`, so the Cloudflare build command is a fixed
+`pip install -r requirements.txt && mkdocs build` with output directory `site` and production
+branch `master`. Keep them in the repo: they previously lived only in a dashboard field and
+were lost when the project changed accounts. Getting the production branch wrong is the
+classic failure here — Cloudflare defaults it to `main`, which builds every push as a preview
+and leaves the production URL serving nothing.
 
 That asymmetry is load-bearing. `data/integrations.yaml` holds CRM fields — deal values,
 emails, phone numbers, account owners — and the only thing keeping them off the open
@@ -316,14 +325,25 @@ through that same filtered data**; reading the YAML directly in a template would
 the CRM. The outside-activity archives (`candidates.yaml`, `news.yaml`) carry no private
 fields and are derived entirely from public sources.
 
-If the site is ever put behind Cloudflare Access, note that grant and board reports
-(OpenSats Q1, Spiral Q1, the Feb 2026 board update) link `/integrations/` publicly as
-evidence of work — gating that path breaks those links, while gating `/digest`, `/weekly`
-and `/outside` does not.
+If the site is ever put behind Cloudflare Access, three things matter:
 
-`.github/workflows/deploy.yml` is dead code: it triggers on pushes to `main`, the default
-branch is `master`, and GitHub Pages is disabled on the repo (`has_pages: false`). Cloudflare
-Pages does the deploying.
+- Grant and board reports (OpenSats Q1, Spiral Q1, the Feb 2026 board update) link
+  `/integrations/` publicly as evidence of work. Gating that path breaks those links; gating
+  `/digest`, `/weekly` and `/outside` does not.
+- **Gate the site root and add Bypass carve-outs** rather than gating those three pages
+  individually. MkDocs publishes a site-wide search index at `/search/search_index.json`
+  whose entries include the full text of the digest, weekly and outside pages, so gating them
+  page-by-page leaves their contents readable in that one file. The carve-outs must include
+  `/assets` and `/stylesheets`, or `/integrations/` renders unstyled for anonymous visitors.
+- **Every hostname serving the site must be gated**, not just the canonical one. An un-gated
+  second hostname — a custom domain added later, or the preview deployments — makes the
+  policy bypassable.
+
+**GitHub Pages is not an option** and should not be reattempted: Pages access control
+requires GitHub Enterprise Cloud, so a site published from this private repo would be public
+with no allowlist. A `deploy.yml` targeting GitHub Pages existed until July 2026 but had
+never run — it triggered on `main` while the default branch is `master`, and Pages was
+disabled on the repo.
 
 ---
 
