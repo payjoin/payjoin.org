@@ -11,6 +11,7 @@ _OUTSIDE_KINDS = (
     ('forum', 'forum post', 'forum posts'),
     ('newsletter', 'newsletter', 'newsletters'),
     ('hn', 'HN post', 'HN posts'),
+    ('mailing-list', 'mailing list post', 'mailing list posts'),
 )
 _KIND_LABEL = {k: (one, many) for k, one, many in _OUTSIDE_KINDS}
 

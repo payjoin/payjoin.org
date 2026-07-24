@@ -238,7 +238,7 @@ doesn't have to be noticed by hand.
 | Collector | Source | Writes | Kinds |
 |---|---|---|---|
 | `scripts/discover.py` | GitHub GraphQL issue/PR search + REST commit + repo search | `data/candidates.yaml` | `issue` `pr` `commit` `repo` |
-| `scripts/news.py` | Google News RSS, Delving Bitcoin, Bitcoin Optech, Hacker News | `data/news.yaml` | `article` `forum` `newsletter` `hn` |
+| `scripts/news.py` | Google News RSS, Delving Bitcoin, Bitcoin Optech, Hacker News, bitcoindev mailing list (gnusha public-inbox) | `data/news.yaml` | `article` `forum` `newsletter` `hn` `mailing-list` |
 
 Both archives use one row shape and one merge rule (`discover.merge`): dedupe by URL,
 refresh machine facts in place, never touch the human-owned `status`
