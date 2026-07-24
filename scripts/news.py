@@ -19,10 +19,15 @@ Two extra dedupe passes matter here:
   * normalised headline — the same wire story runs at a dozen outlets under one headline.
 
 Deliberately not collected, with the reason recorded so nobody re-litigates it blind:
-  Reddit  — search.json returns an HTML block page to datacenter IPs; needs OAuth creds.
-  Nostr   — NIP-50 relays (relay.nostr.band, search.nos.today, relay.damus.io) are not
-            reachable from the collector host; probe failed with timeout / ENETUNREACH.
-  X       — no keyless read path since the free API tier closed.
+  Reddit      — search.json returns an HTML block page to datacenter IPs; needs OAuth.
+  Nostr       — NIP-50 relays (relay.nostr.band, search.nos.today, relay.damus.io) are not
+                reachable from the collector host; probe failed with timeout / ENETUNREACH.
+  X           — no keyless read path since the free API tier closed.
+  Bitcoin Talk— board/topic RSS (index.php?action=.xml;type=rss) sits behind Cloudflare's
+                "Just a moment…" JS challenge: a datacenter GET gets HTTP 403 + a challenge
+                page, not the feed (same wall as Reddit). Would need a browser/session, and
+                SMF has no keyword-search feed anyway — only recent-posts-per-board. Left out
+                rather than shipped as a collector that 403s silently every night.
 
 Offline checks: python scripts/news.py --selftest
 """
