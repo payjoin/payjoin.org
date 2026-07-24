@@ -238,7 +238,7 @@ doesn't have to be noticed by hand.
 | Collector | Source | Writes | Kinds |
 |---|---|---|---|
 | `scripts/discover.py` | GitHub GraphQL issue/PR search + REST commit + repo search | `data/candidates.yaml` | `issue` `pr` `commit` `repo` |
-| `scripts/news.py` | Google News RSS, Delving Bitcoin, Bitcoin Optech, Hacker News | `data/news.yaml` | `article` `forum` `newsletter` `hn` |
+| `scripts/news.py` | Google News RSS, Delving Bitcoin, Bitcoin Optech, Hacker News, bitcoindev mailing list (gnusha public-inbox) | `data/news.yaml` | `article` `forum` `newsletter` `hn` `mailing-list` |
 
 Both archives use one row shape and one merge rule (`discover.merge`): dedupe by URL,
 refresh machine facts in place, never touch the human-owned `status`
@@ -290,6 +290,7 @@ a bare `repo-name` to match any owner), or set a row's `status: dismissed`.
 | Reddit | `search.json` serves an HTML block page to datacenter IPs; needs OAuth credentials. |
 | Nostr | NIP-50 relays (`relay.nostr.band`, `search.nos.today`, `relay.damus.io`) were unreachable from the collector host — timeout / ENETUNREACH. |
 | X | No keyless read path since the free API tier closed. |
+| Bitcoin Talk | Board/topic RSS (`index.php?action=.xml;type=rss`) is behind Cloudflare's "Just a moment…" JS challenge — a datacenter GET returns HTTP 403 + a challenge page, not the feed. SMF also has no keyword-search feed, only recent-posts-per-board. Would need a browser/authenticated session. |
 
 Offline checks for every collector (no token, no network):
 

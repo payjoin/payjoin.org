@@ -7,6 +7,7 @@ Collectors (all keyless, all read-only):
   delving    Delving Bitcoin Discourse search.json     -> kind 'forum'
   optech     Bitcoin Optech feed, payjoin items only   -> kind 'newsletter'
   hn         Hacker News (Algolia) search              -> kind 'hn'
+  bitcoindev gnusha public-inbox Atom (mailing list)   -> kind 'mailing-list'
 
 Results land in data/news.yaml using the same record shape and the same merge/surfacing
 rules as data/candidates.yaml (see scripts/discover.py), so a story is shown once when
@@ -18,10 +19,15 @@ Two extra dedupe passes matter here:
   * normalised headline — the same wire story runs at a dozen outlets under one headline.
 
 Deliberately not collected, with the reason recorded so nobody re-litigates it blind:
-  Reddit  — search.json returns an HTML block page to datacenter IPs; needs OAuth creds.
-  Nostr   — NIP-50 relays (relay.nostr.band, search.nos.today, relay.damus.io) are not
-            reachable from the collector host; probe failed with timeout / ENETUNREACH.
-  X       — no keyless read path since the free API tier closed.
+  Reddit      — search.json returns an HTML block page to datacenter IPs; needs OAuth.
+  Nostr       — NIP-50 relays (relay.nostr.band, search.nos.today, relay.damus.io) are not
+                reachable from the collector host; probe failed with timeout / ENETUNREACH.
+  X           — no keyless read path since the free API tier closed.
+  Bitcoin Talk— board/topic RSS (index.php?action=.xml;type=rss) sits behind Cloudflare's
+                "Just a moment…" JS challenge: a datacenter GET gets HTTP 403 + a challenge
+                page, not the feed (same wall as Reddit). Would need a browser/session, and
+                SMF has no keyword-search feed anyway — only recent-posts-per-board. Left out
+                rather than shipped as a collector that 403s silently every night.
 
 Offline checks: python scripts/news.py --selftest
 """
@@ -33,7 +39,12 @@ import urllib.request
 import xml.etree.ElementTree as ET
 
 NEWS_FILE = "data/news.yaml"
-KEYWORD = "payjoin"
+
+# What counts as a payjoin mention. "payjoin" is the marketing term; the BIP numbers catch
+# protocol threads — chiefly Optech and the mailing list — that cite "BIP 77" (async
+# payjoin) or "BIP 78" (serverless payjoin) without ever writing the word. The trailing \b
+# stops "BIP 778"/"bip77x"; [\s-]? matches "bip77", "bip 77" and "bip-77" alike.
+KEYWORD_RE = re.compile(r"payjoin|bip[\s-]?7[78]\b", re.I)
 
 # Press about payjoin runs to a few dozen items a year, so nothing needs ageing out — and
 # the handful of canonical write-ups (the Bitcoin Magazine explainers, the Cake Wallet
@@ -45,6 +56,13 @@ GOOGLE_NEWS = "https://news.google.com/rss/search?q=payjoin&hl=en-US&gl=US&ceid=
 DELVING = "https://delvingbitcoin.org/search.json?q=" + urllib.parse.quote("payjoin order:latest")
 OPTECH = "https://bitcoinops.org/feed.xml"
 HN = ("https://hn.algolia.com/api/v1/search_by_date?query=payjoin&tags=story&hitsPerPage=50")
+# gnusha public-inbox mirror of the bitcoindev list; `x=A` returns an Atom search feed.
+# Query stays on "payjoin" rather than "payjoin OR bip77 OR bip78": every BIP 77/78 thread
+# is *about* payjoin and says so somewhere, and a bare-BIP query pulls in unrelated BIP
+# drafts (BIP 340, …) that the client filter would only have to throw back out again.
+GNUSHA = "https://gnusha.org/pi/bitcoindev/?q=" + urllib.parse.quote("payjoin") + "&x=A"
+
+_ATOM = "{http://www.w3.org/2005/Atom}"
 
 UA = "payjoin-integrations-tracker-news"
 
@@ -110,13 +128,13 @@ def _rec(url, kind, outlet, title, updated_at):
 
 
 def _mentions(*fields):
-    """True when any field literally contains the keyword.
+    """True when any field mentions payjoin or a payjoin BIP number (77/78).
 
     Load-bearing for Hacker News: Algolia applies typo-tolerant OR matching, so a bare
-    `query=payjoin` returns thousands of unrelated stories. Only a literal check keeps
+    `query=payjoin` returns thousands of unrelated stories. Only this explicit check keeps
     that source honest, and it is cheap insurance on the others.
     """
-    return any(KEYWORD in (f or "").lower() for f in fields)
+    return any(KEYWORD_RE.search(f or "") for f in fields)
 
 
 def parse_google_news(xml_text):
@@ -189,11 +207,52 @@ def parse_hn(json_text):
     return out
 
 
+def _clean_subject(title):
+    """Strip the list tag and any stack of Re:/Fwd: prefixes so a thread folds to one row."""
+    t = " ".join((title or "").split())
+    while True:
+        n = re.sub(r"^\s*(re|fwd|aw)\s*:\s*", "", t, flags=re.I)
+        n = re.sub(r"^\s*\[bitcoindev\]\s*", "", n, flags=re.I)
+        if n == t:
+            return t.strip()
+        t = n
+
+
+def parse_mailinglist(xml_text):
+    """gnusha public-inbox Atom (bitcoindev) -> one mailing-list record per thread.
+
+    A live thread is many 'Re:' messages, each at its own message-id URL; folding by cleaned
+    subject keeps a single row pointing at the newest post. Entries carry the full message
+    body in <content>, so the keyword filter sees quoted BIP numbers, not just the subject.
+    """
+    root = ET.fromstring(xml_text)
+    by_thread = {}
+    for e in root.iter(_ATOM + "entry"):
+        title = e.findtext(_ATOM + "title") or ""
+        content_el = e.find(_ATOM + "content")
+        content = "".join(content_el.itertext()) if content_el is not None else ""
+        if not _mentions(title, content):
+            continue
+        link_el = e.find(_ATOM + "link")
+        link = link_el.get("href") if link_el is not None else ""
+        if not link:
+            continue
+        subject = _clean_subject(title)
+        updated = _iso8601(e.findtext(_ATOM + "updated") or "")
+        key = re.sub(r"[^a-z0-9]+", " ", subject.lower()).strip()
+        prev = by_thread.get(key)
+        if prev is None or updated > prev[0]:
+            by_thread[key] = (updated,
+                              _rec(link, "mailing-list", "bitcoindev", subject, updated))
+    return [rec for _, rec in by_thread.values()]
+
+
 SOURCES = (
     ("google-news", GOOGLE_NEWS, parse_google_news),
     ("delving", DELVING, parse_delving),
     ("optech", OPTECH, parse_optech),
     ("hacker-news", HN, parse_hn),
+    ("bitcoindev", GNUSHA, parse_mailinglist),
 )
 
 
@@ -247,6 +306,14 @@ def update(yaml, today, discover):
 
 
 def selftest():
+    # Keyword match: "payjoin" plus the BIP numbers, case-insensitive and space/hyphen
+    # tolerant; the trailing \b must not let "BIP 778" or "bip77x" through.
+    assert _mentions("A note on PayJoin v2")
+    assert _mentions("", "quotes BIP 77 for async") and _mentions("re: BIP-78 proposal")
+    assert _mentions("bip77 relay design")
+    assert not _mentions("BIP 778 covers something else") and not _mentions("bip340 aggregation")
+    assert not _mentions("unrelated coinjoin thread", None)
+
     # Canonicalisation: tracking junk and trailing slashes must not fork one story into many.
     assert (canonical_url("https://x.com/a/b/?utm_source=news&id=7#top")
             == "https://x.com/a/b?id=7")
@@ -304,6 +371,36 @@ def selftest():
     h = parse_hn(hn)
     assert len(h) == 1 and h[0]["title"] == "Payjoin explained", h
     assert h[0]["updated_at"] == "2026-07-01T10:00:00Z", h
+
+    # Mailing list: a thread's Re: replies fold to one row at the newest post; the keyword
+    # can live in the body (<content>) rather than the subject; off-topic threads drop.
+    ml = """<?xml version="1.0"?><feed xmlns="http://www.w3.org/2005/Atom">
+      <entry><title>Re: [bitcoindev] Re: v2 relay rotation</title>
+        <link href="https://gnusha.org/pi/bitcoindev/msg-b/"/>
+        <updated>2026-07-09T14:29:56Z</updated>
+        <content type="text">More on the payjoin directory design.</content></entry>
+      <entry><title>[bitcoindev] v2 relay rotation</title>
+        <link href="https://gnusha.org/pi/bitcoindev/msg-a/"/>
+        <updated>2026-07-07T00:00:00Z</updated>
+        <content type="text">Kicking off a payjoin thread.</content></entry>
+      <entry><title>[bitcoindev] BIP 340 aggregation</title>
+        <link href="https://gnusha.org/pi/bitcoindev/msg-c/"/>
+        <updated>2026-07-08T00:00:00Z</updated>
+        <content type="text">Nothing relevant to this tracker.</content></entry>
+    </feed>"""
+    m = parse_mailinglist(ml)
+    assert len(m) == 1, m                                  # two replies fold to one thread
+    assert m[0]["title"] == "v2 relay rotation", m         # Re:/[bitcoindev] stripped
+    assert m[0]["url"] == "https://gnusha.org/pi/bitcoindev/msg-b", m  # newest post wins (slash canonicalised off)
+    assert m[0]["updated_at"] == "2026-07-09T14:29:56Z" and m[0]["kind"] == "mailing-list", m
+    assert m[0]["outlet"] == "bitcoindev", m
+    # body-only match survives even when the subject never says payjoin
+    ml2 = """<?xml version="1.0"?><feed xmlns="http://www.w3.org/2005/Atom">
+      <entry><title>[bitcoindev] a question about receiver flow</title>
+        <link href="https://gnusha.org/pi/bitcoindev/q/"/>
+        <updated>2026-07-01T00:00:00Z</updated>
+        <content type="text">This concerns BIP 78 and its fallback.</content></entry></feed>"""
+    assert len(parse_mailinglist(ml2)) == 1, "BIP-number body match must be kept"
 
     # A record with no headline key still dedupes by URL alone.
     assert len(dedupe([_rec("https://a/1", "article", "o", "", "x"),
