@@ -33,7 +33,12 @@ import urllib.request
 import xml.etree.ElementTree as ET
 
 NEWS_FILE = "data/news.yaml"
-KEYWORD = "payjoin"
+
+# What counts as a payjoin mention. "payjoin" is the marketing term; the BIP numbers catch
+# protocol threads — chiefly Optech and the mailing list — that cite "BIP 77" (async
+# payjoin) or "BIP 78" (serverless payjoin) without ever writing the word. The trailing \b
+# stops "BIP 778"/"bip77x"; [\s-]? matches "bip77", "bip 77" and "bip-77" alike.
+KEYWORD_RE = re.compile(r"payjoin|bip[\s-]?7[78]\b", re.I)
 
 # Press about payjoin runs to a few dozen items a year, so nothing needs ageing out — and
 # the handful of canonical write-ups (the Bitcoin Magazine explainers, the Cake Wallet
@@ -110,13 +115,13 @@ def _rec(url, kind, outlet, title, updated_at):
 
 
 def _mentions(*fields):
-    """True when any field literally contains the keyword.
+    """True when any field mentions payjoin or a payjoin BIP number (77/78).
 
     Load-bearing for Hacker News: Algolia applies typo-tolerant OR matching, so a bare
-    `query=payjoin` returns thousands of unrelated stories. Only a literal check keeps
+    `query=payjoin` returns thousands of unrelated stories. Only this explicit check keeps
     that source honest, and it is cheap insurance on the others.
     """
-    return any(KEYWORD in (f or "").lower() for f in fields)
+    return any(KEYWORD_RE.search(f or "") for f in fields)
 
 
 def parse_google_news(xml_text):
@@ -247,6 +252,14 @@ def update(yaml, today, discover):
 
 
 def selftest():
+    # Keyword match: "payjoin" plus the BIP numbers, case-insensitive and space/hyphen
+    # tolerant; the trailing \b must not let "BIP 778" or "bip77x" through.
+    assert _mentions("A note on PayJoin v2")
+    assert _mentions("", "quotes BIP 77 for async") and _mentions("re: BIP-78 proposal")
+    assert _mentions("bip77 relay design")
+    assert not _mentions("BIP 778 covers something else") and not _mentions("bip340 aggregation")
+    assert not _mentions("unrelated coinjoin thread", None)
+
     # Canonicalisation: tracking junk and trailing slashes must not fork one story into many.
     assert (canonical_url("https://x.com/a/b/?utm_source=news&id=7#top")
             == "https://x.com/a/b?id=7")
