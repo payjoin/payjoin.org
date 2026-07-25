@@ -1,16 +1,136 @@
 # Payjoin activity outside tracked repos (issues, PRs, commits, new repos).
 # Bot appends and refreshes facts; you own `status`.
 # status: new | watching | dismissed | promoted  (bot only adds 'new')
+- url: https://github.com/SatoshiPortal/bullbitcoin-mobile/issues/2246
+  repo: SatoshiPortal/bullbitcoin-mobile
+  kind: issue
+  title: Payjoin sender stuck on "Coordinating a payjoin transaction" screen after
+    receiver updates
+  stars: 187
+  updated_at: '2026-07-24T20:47:35Z'
+  first_seen: '2026-06-19'
+  status: new
+  last_surfaced: '2026-07-23'
+- url: https://github.com/SatoshiPortal/bullbitcoin-mobile/issues/782
+  repo: SatoshiPortal/bullbitcoin-mobile
+  kind: issue
+  title: Allow user to view payjoin settings
+  stars: 187
+  updated_at: '2026-07-24T20:11:32Z'
+  first_seen: '2026-07-16'
+  status: new
+  last_surfaced: '2026-07-25'
+  resurfaced: true
+- url: https://github.com/Horus-Org/payjoin-react-native/issues/2
+  repo: Horus-Org/payjoin-react-native
+  kind: issue
+  title: Dependency Dashboard
+  stars: 3
+  updated_at: '2026-07-24T19:40:39Z'
+  first_seen: '2026-06-19'
+  status: new
+  last_surfaced: '2026-07-23'
+- url: https://github.com/LedgerHQ/app-bitcoin/pull/528
+  repo: LedgerHQ/app-bitcoin
+  kind: pr
+  title: Display external input amounts and net-spend
+  stars: 105
+  updated_at: '2026-07-24T17:39:19Z'
+  first_seen: '2026-07-21'
+  status: new
+  last_surfaced: '2026-07-24'
+- url: https://github.com/LedgerHQ/app-bitcoin/issues/520
+  repo: LedgerHQ/app-bitcoin
+  kind: issue
+  title: Acknowledge in UI amount of external inputs when present
+  stars: 105
+  updated_at: '2026-07-24T17:39:17Z'
+  first_seen: '2026-07-11'
+  status: new
+  last_surfaced: '2026-07-25'
+  resurfaced: true
 - url: https://github.com/BlueWallet/BlueWallet/issues/3659
   repo: BlueWallet/BlueWallet
   kind: issue
   title: Dependency Dashboard
-  stars: 3240
-  updated_at: '2026-07-24T00:42:41Z'
+  stars: 3244
+  updated_at: '2026-07-24T17:00:28Z'
   first_seen: '2026-06-19'
   status: new
   last_surfaced: '2026-07-24'
+- url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2506
+  repo: SatoshiPortal/bullbitcoin-mobile
+  kind: pr
+  title: Pin payjoin crate to 1.0.0-rc.5 via SatoshiPortal fork
+  stars: 187
+  updated_at: '2026-07-24T15:19:18Z'
+  first_seen: '2026-07-25'
+  status: new
+  last_surfaced: '2026-07-25'
+- url: https://github.com/CypherBoxLLC/Cypher-Box/pull/151
+  repo: CypherBoxLLC/Cypher-Box
+  kind: pr
+  title: 'fix(send): verify LNURL-pay invoices + payjoin endpoints on custodial sends'
+  stars: 12
+  updated_at: '2026-07-24T14:03:19Z'
+  first_seen: '2026-07-22'
+  status: new
+  last_surfaced: '2026-07-25'
   resurfaced: true
+- url: https://github.com/cake-tech/cake_wallet/pull/3363
+  repo: cake-tech/cake_wallet
+  kind: pr
+  title: WIP Payjoin upgrade to native dart bindings via payjoin_ffi
+  stars: 1808
+  updated_at: '2026-07-24T13:59:33Z'
+  first_seen: '2026-07-03'
+  status: new
+  last_surfaced: '2026-07-23'
+- url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2499
+  repo: SatoshiPortal/bullbitcoin-mobile
+  kind: pr
+  title: Payjoin Fixes (Requires review)
+  stars: 187
+  updated_at: '2026-07-24T13:32:29Z'
+  first_seen: '2026-07-24'
+  status: new
+  last_surfaced: '2026-07-24'
+- url: https://github.com/SatoshiPortal/bullbitcoin-mobile/commit/7c1d1f729ed0bd16633834eb0f0dc4e6742dfd55
+  repo: SatoshiPortal/bullbitcoin-mobile
+  kind: commit
+  title: 'fix: re-check payjoin setting after in-flight session creation'
+  stars: 0
+  updated_at: '2026-07-24T12:12:39Z'
+  first_seen: '2026-07-25'
+  status: new
+  last_surfaced: '2026-07-25'
+- url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2483
+  repo: SatoshiPortal/bullbitcoin-mobile
+  kind: pr
+  title: 'fix(export): use UTC timestamps in CSV export'
+  stars: 187
+  updated_at: '2026-07-24T09:09:57Z'
+  first_seen: '2026-07-25'
+  status: new
+  last_surfaced: '2026-07-25'
+- url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2504
+  repo: SatoshiPortal/bullbitcoin-mobile
+  kind: pr
+  title: Recover stranded payjoin stack (pj/01-06)
+  stars: 187
+  updated_at: '2026-07-24T09:09:56Z'
+  first_seen: '2026-07-25'
+  status: new
+  last_surfaced: '2026-07-25'
+- url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2484
+  repo: SatoshiPortal/bullbitcoin-mobile
+  kind: pr
+  title: 'feat(announcements): dismissible home announcement carousel'
+  stars: 187
+  updated_at: '2026-07-24T09:08:51Z'
+  first_seen: '2026-07-21'
+  status: new
+  last_surfaced: '2026-07-23'
 - url: https://github.com/joinmarket-ng/joinmarket-ng/issues/568
   repo: joinmarket-ng/joinmarket-ng
   kind: issue
@@ -74,35 +194,15 @@
   first_seen: '2026-07-24'
   status: new
   last_surfaced: '2026-07-24'
-- url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2499
+- url: https://github.com/SatoshiPortal/bullbitcoin-mobile/commit/9b4b7652d4cacc951dfebb7d32cc496e254d4472
   repo: SatoshiPortal/bullbitcoin-mobile
-  kind: pr
-  title: Payjoin Fixes (Requires review)
-  stars: 187
-  updated_at: '2026-07-23T15:34:21Z'
-  first_seen: '2026-07-24'
+  kind: commit
+  title: 'feat: gate payjoin receiver creation on the payjoin-enabled setting'
+  stars: 0
+  updated_at: '2026-07-23T15:34:00Z'
+  first_seen: '2026-07-25'
   status: new
-  last_surfaced: '2026-07-24'
-- url: https://github.com/LedgerHQ/app-bitcoin/pull/528
-  repo: LedgerHQ/app-bitcoin
-  kind: pr
-  title: Display external input amounts and net-spend
-  stars: 105
-  updated_at: '2026-07-23T12:15:53Z'
-  first_seen: '2026-07-21'
-  status: new
-  last_surfaced: '2026-07-24'
-  resurfaced: true
-- url: https://github.com/SatoshiPortal/bullbitcoin-mobile/issues/2246
-  repo: SatoshiPortal/bullbitcoin-mobile
-  kind: issue
-  title: Payjoin sender stuck on "Coordinating a payjoin transaction" screen after
-    receiver updates
-  stars: 187
-  updated_at: '2026-07-23T03:39:19Z'
-  first_seen: '2026-06-19'
-  status: new
-  last_surfaced: '2026-07-23'
+  last_surfaced: '2026-07-25'
 - url: https://github.com/rust-bitcoin/corepc/pull/533
   repo: rust-bitcoin/corepc
   kind: pr
@@ -110,15 +210,6 @@
   stars: 57
   updated_at: '2026-07-23T03:20:39Z'
   first_seen: '2026-07-18'
-  status: new
-  last_surfaced: '2026-07-23'
-- url: https://github.com/cake-tech/cake_wallet/pull/3363
-  repo: cake-tech/cake_wallet
-  kind: pr
-  title: WIP Payjoin upgrade to native dart bindings via payjoin_ffi
-  stars: 1807
-  updated_at: '2026-07-22T18:58:16Z'
-  first_seen: '2026-07-03'
   status: new
   last_surfaced: '2026-07-23'
 - url: https://github.com/mimblewimble/grin-wallet/pull/754
@@ -130,20 +221,11 @@
   first_seen: '2026-07-23'
   status: new
   last_surfaced: '2026-07-23'
-- url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2484
-  repo: SatoshiPortal/bullbitcoin-mobile
-  kind: pr
-  title: 'feat(announcements): dismissible home announcement carousel'
-  stars: 187
-  updated_at: '2026-07-22T14:56:37Z'
-  first_seen: '2026-07-21'
-  status: new
-  last_surfaced: '2026-07-23'
 - url: https://github.com/cake-tech/cake_wallet/pull/3385
   repo: cake-tech/cake_wallet
   kind: pr
   title: Set anti-fee-sniping locktime (exact-tip) on bitcoin sends
-  stars: 1807
+  stars: 1808
   updated_at: '2026-07-22T13:32:49Z'
   first_seen: '2026-07-10'
   status: new
@@ -152,7 +234,7 @@
   repo: cake-tech/cake_wallet
   kind: pr
   title: 'Privacy: randomized coin selection (BnB changeless + single random draw)'
-  stars: 1807
+  stars: 1808
   updated_at: '2026-07-22T13:29:57Z'
   first_seen: '2026-07-16'
   status: new
@@ -161,7 +243,7 @@
   repo: cake-tech/cake_wallet
   kind: pr
   title: Shuffle change output on hardware wallet and Bitcoin Cash sends
-  stars: 1807
+  stars: 1808
   updated_at: '2026-07-22T13:28:00Z'
   first_seen: '2026-07-23'
   status: new
@@ -173,15 +255,6 @@
   stars: 3
   updated_at: '2026-07-22T05:46:01Z'
   first_seen: '2026-07-23'
-  status: new
-  last_surfaced: '2026-07-23'
-- url: https://github.com/Horus-Org/payjoin-react-native/issues/2
-  repo: Horus-Org/payjoin-react-native
-  kind: issue
-  title: Dependency Dashboard
-  stars: 3
-  updated_at: '2026-07-22T05:46:00Z'
-  first_seen: '2026-06-19'
   status: new
   last_surfaced: '2026-07-23'
 - url: https://github.com/SatoshiPortal/payjoin/issues/9
@@ -209,14 +282,15 @@
   updated_at: '2026-07-21T23:28:47Z'
   first_seen: '2026-07-22'
   status: new
-- url: https://github.com/CypherBoxLLC/Cypher-Box/pull/151
+- url: https://github.com/CypherBoxLLC/Cypher-Box/commit/1fdaed97dcc5e85f00887b0baab9b8a5e4e61bb0
   repo: CypherBoxLLC/Cypher-Box
-  kind: pr
+  kind: commit
   title: 'fix(send): verify LNURL-pay invoices + payjoin endpoints on custodial sends'
-  stars: 12
-  updated_at: '2026-07-21T21:25:06Z'
-  first_seen: '2026-07-22'
+  stars: 0
+  updated_at: '2026-07-21T21:25:01Z'
+  first_seen: '2026-07-25'
   status: new
+  last_surfaced: '2026-07-25'
 - url: https://github.com/SatoshiPortal/bullbitcoin-mobile/issues/2487
   repo: SatoshiPortal/bullbitcoin-mobile
   kind: issue
@@ -249,6 +323,16 @@
   updated_at: '2026-07-21T12:33:01Z'
   first_seen: '2026-07-21'
   status: new
+- url: https://github.com/SatoshiPortal/bullbitcoin-mobile/commit/007700bfb2abbde7698c10fbbb889b3f5f369cf0
+  repo: SatoshiPortal/bullbitcoin-mobile
+  kind: commit
+  title: 'fix(receive): confirmed-balance eligibility, payjoin toggle race, and settings-fetch
+    stuck-loading gap'
+  stars: 0
+  updated_at: '2026-07-21T12:24:55Z'
+  first_seen: '2026-07-25'
+  status: new
+  last_surfaced: '2026-07-25'
 - url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2479
   repo: SatoshiPortal/bullbitcoin-mobile
   kind: pr
@@ -257,6 +341,15 @@
   updated_at: '2026-07-21T10:14:51Z'
   first_seen: '2026-07-21'
   status: new
+- url: https://github.com/SatoshiPortal/bullbitcoin-mobile/commit/916dbabd8adb7d2f727d41a5df184e5d018a6312
+  repo: SatoshiPortal/bullbitcoin-mobile
+  kind: commit
+  title: 'fix(send): guard payjoin success against a sending-step race; fix docblock'
+  stars: 0
+  updated_at: '2026-07-21T09:56:47Z'
+  first_seen: '2026-07-25'
+  status: new
+  last_surfaced: '2026-07-25'
 - url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2478
   repo: SatoshiPortal/bullbitcoin-mobile
   kind: pr
@@ -265,6 +358,15 @@
   updated_at: '2026-07-21T08:49:56Z'
   first_seen: '2026-07-21'
   status: new
+- url: https://github.com/SatoshiPortal/bullbitcoin-mobile/commit/0df2bbe5e4c55ecdb1ef98d91a0ecd26d90c19d0
+  repo: SatoshiPortal/bullbitcoin-mobile
+  kind: commit
+  title: 'test(payjoin): stub fetchSenders in repository test setup'
+  stars: 0
+  updated_at: '2026-07-21T08:48:19Z'
+  first_seen: '2026-07-25'
+  status: new
+  last_surfaced: '2026-07-25'
 - url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2477
   repo: SatoshiPortal/bullbitcoin-mobile
   kind: pr
@@ -282,6 +384,15 @@
   updated_at: '2026-07-21T06:32:58Z'
   first_seen: '2026-07-14'
   status: new
+- url: https://github.com/SatoshiPortal/bullbitcoin-mobile/commit/110a6b2bf1f08f5ed75399cc0ed921d4091c1e77
+  repo: SatoshiPortal/bullbitcoin-mobile
+  kind: commit
+  title: 'feat(announcements): dismissible home announcement carousel'
+  stars: 0
+  updated_at: '2026-07-21T02:04:12Z'
+  first_seen: '2026-07-25'
+  status: new
+  last_surfaced: '2026-07-25'
 - url: https://github.com/SatoshiPortal/payjoin/issues/6
   repo: SatoshiPortal/payjoin
   kind: issue
@@ -315,6 +426,33 @@
   updated_at: '2026-07-20T20:44:02Z'
   first_seen: '2026-07-15'
   status: new
+- url: https://github.com/SatoshiPortal/bullbitcoin-mobile/commit/31d5b2fbe5238b1b935e848e2fbe0c34c78948f0
+  repo: SatoshiPortal/bullbitcoin-mobile
+  kind: commit
+  title: 'feat(receive): payjoin on/off toggle chip in the receive TopBar'
+  stars: 0
+  updated_at: '2026-07-20T20:31:57Z'
+  first_seen: '2026-07-25'
+  status: new
+  last_surfaced: '2026-07-25'
+- url: https://github.com/SatoshiPortal/bullbitcoin-mobile/commit/69134024daa5f054af2b5ab6f69fb5b6b5753cbb
+  repo: SatoshiPortal/bullbitcoin-mobile
+  kind: commit
+  title: 'feat(core): let TopBar host a custom trailing action widget'
+  stars: 0
+  updated_at: '2026-07-20T20:29:20Z'
+  first_seen: '2026-07-25'
+  status: new
+  last_surfaced: '2026-07-25'
+- url: https://github.com/SatoshiPortal/bullbitcoin-mobile/commit/8a0e24cafbb80f80cc38e76a7597de6a21b175e3
+  repo: SatoshiPortal/bullbitcoin-mobile
+  kind: commit
+  title: 'fix(status): report payjoin as disabled, not offline, when off'
+  stars: 0
+  updated_at: '2026-07-20T20:04:23Z'
+  first_seen: '2026-07-25'
+  status: new
+  last_surfaced: '2026-07-25'
 - url: https://github.com/caarloshenriq/payjoin-no-std-harness
   repo: caarloshenriq/payjoin-no-std-harness
   kind: repo
@@ -325,6 +463,15 @@
   first_seen: '2026-07-23'
   status: new
   last_surfaced: '2026-07-23'
+- url: https://github.com/SatoshiPortal/bullbitcoin-mobile/commit/c057e49a9bb303efc1143b9291ac0bb9946b0477
+  repo: SatoshiPortal/bullbitcoin-mobile
+  kind: commit
+  title: 'feat(settings): live-react to the payjoin enabled setting'
+  stars: 0
+  updated_at: '2026-07-20T20:01:26Z'
+  first_seen: '2026-07-25'
+  status: new
+  last_surfaced: '2026-07-25'
 - url: https://github.com/caarloshenriq/payjoin-no-std-harness/commit/866735b18c4f64477c52b88f7942129ee5ed8aa1
   repo: caarloshenriq/payjoin-no-std-harness
   kind: commit
@@ -334,6 +481,132 @@
   first_seen: '2026-07-23'
   status: new
   last_surfaced: '2026-07-23'
+- url: https://github.com/SatoshiPortal/bullbitcoin-mobile/commit/73d996cf3b22d4e591515ac2c0581c7b18d34617
+  repo: SatoshiPortal/bullbitcoin-mobile
+  kind: commit
+  title: 'fix(transactions): refresh payjoin details and land on the broadcast tx'
+  stars: 0
+  updated_at: '2026-07-20T14:08:08Z'
+  first_seen: '2026-07-25'
+  status: new
+  last_surfaced: '2026-07-25'
+- url: https://github.com/SatoshiPortal/bullbitcoin-mobile/commit/d1319dae5f81fe275b587182e4f19594446b463a
+  repo: SatoshiPortal/bullbitcoin-mobile
+  kind: commit
+  title: 'feat(transactions): derive shown payjoin status from the broadcast tx'
+  stars: 0
+  updated_at: '2026-07-20T14:07:44Z'
+  first_seen: '2026-07-25'
+  status: new
+  last_surfaced: '2026-07-25'
+- url: https://github.com/SatoshiPortal/bullbitcoin-mobile/commit/f84b95f8deb00c91aa47fe59bf3b22173aaa9305
+  repo: SatoshiPortal/bullbitcoin-mobile
+  kind: commit
+  title: 'feat(receive): terminal payjoin screen flavors and leave-on-completion'
+  stars: 0
+  updated_at: '2026-07-20T14:04:29Z'
+  first_seen: '2026-07-25'
+  status: new
+  last_surfaced: '2026-07-25'
+- url: https://github.com/SatoshiPortal/bullbitcoin-mobile/commit/2bca53dde429c5ad3e3b303f92ca9be72a7774b4
+  repo: SatoshiPortal/bullbitcoin-mobile
+  kind: commit
+  title: 'fix(receive): payjoin gating, navigation ownership and watcher guards'
+  stars: 0
+  updated_at: '2026-07-20T14:04:16Z'
+  first_seen: '2026-07-25'
+  status: new
+  last_surfaced: '2026-07-25'
+- url: https://github.com/SatoshiPortal/bullbitcoin-mobile/commit/e96468bcbaa50635cf74e82a569740516de387c0
+  repo: SatoshiPortal/bullbitcoin-mobile
+  kind: commit
+  title: 'feat(send): payjoin confirm indicator, fallback notice and countdown'
+  stars: 0
+  updated_at: '2026-07-20T14:01:18Z'
+  first_seen: '2026-07-25'
+  status: new
+  last_surfaced: '2026-07-25'
+- url: https://github.com/SatoshiPortal/bullbitcoin-mobile/commit/40ef27f01691f987e609b1bca08feeedc0aad703
+  repo: SatoshiPortal/bullbitcoin-mobile
+  kind: commit
+  title: 'fix(send): resolve stuck payjoin send flow and gate on the setting (#2246)'
+  stars: 0
+  updated_at: '2026-07-20T14:00:38Z'
+  first_seen: '2026-07-25'
+  status: new
+  last_surfaced: '2026-07-25'
+- url: https://github.com/SatoshiPortal/bullbitcoin-mobile/commit/4aee1145d6311f2530ac8843f7ea323baf2f4ae3
+  repo: SatoshiPortal/bullbitcoin-mobile
+  kind: commit
+  title: 'feat(payjoin): session-resolution engine (watchers, fallback, resume)'
+  stars: 0
+  updated_at: '2026-07-20T13:58:43Z'
+  first_seen: '2026-07-25'
+  status: new
+  last_surfaced: '2026-07-25'
+- url: https://github.com/SatoshiPortal/bullbitcoin-mobile/commit/ee947f2ee68d01835f7f4d7c6b6dd041a7fcf46b
+  repo: SatoshiPortal/bullbitcoin-mobile
+  kind: commit
+  title: 'feat(payjoin): datasource lifecycle and terminal-flag queries'
+  stars: 0
+  updated_at: '2026-07-20T13:58:25Z'
+  first_seen: '2026-07-25'
+  status: new
+  last_surfaced: '2026-07-25'
+- url: https://github.com/SatoshiPortal/bullbitcoin-mobile/commit/d5564442b2087c3c1fab9a5f4d31547398b7dfc4
+  repo: SatoshiPortal/bullbitcoin-mobile
+  kind: commit
+  title: 'feat(wallet): Result-returning GetWalletTransactionUsecase'
+  stars: 0
+  updated_at: '2026-07-20T13:58:13Z'
+  first_seen: '2026-07-25'
+  status: new
+  last_surfaced: '2026-07-25'
+- url: https://github.com/SatoshiPortal/bullbitcoin-mobile/commit/6907e30855ac14b87b8b1f89a43ae7b2c8e17c04
+  repo: SatoshiPortal/bullbitcoin-mobile
+  kind: commit
+  title: 'feat(payjoin): let the watch use-case emit sender updates'
+  stars: 0
+  updated_at: '2026-07-20T13:57:51Z'
+  first_seen: '2026-07-25'
+  status: new
+  last_surfaced: '2026-07-25'
+- url: https://github.com/SatoshiPortal/bullbitcoin-mobile/commit/de565d32a6ac626d06dee1c03de0411b789d4012
+  repo: SatoshiPortal/bullbitcoin-mobile
+  kind: commit
+  title: 'feat(settings): payjoin settings screen with enable/min-amount/expiry'
+  stars: 0
+  updated_at: '2026-07-20T13:54:24Z'
+  first_seen: '2026-07-25'
+  status: new
+  last_surfaced: '2026-07-25'
+- url: https://github.com/SatoshiPortal/bullbitcoin-mobile/commit/0cf2c9ebdf5045b10af71ec4f59a6bdd8a8b4051
+  repo: SatoshiPortal/bullbitcoin-mobile
+  kind: commit
+  title: 'feat(payjoin): explicit aborted status backed by an isAborted flag'
+  stars: 0
+  updated_at: '2026-07-20T13:54:11Z'
+  first_seen: '2026-07-25'
+  status: new
+  last_surfaced: '2026-07-25'
+- url: https://github.com/SatoshiPortal/bullbitcoin-mobile/commit/89fad5a1174fab9808e4c6255631f66f79b2525b
+  repo: SatoshiPortal/bullbitcoin-mobile
+  kind: commit
+  title: 'feat(settings): plumb payjoin enabled/min-amount/expiry through settings'
+  stars: 0
+  updated_at: '2026-07-20T13:53:53Z'
+  first_seen: '2026-07-25'
+  status: new
+  last_surfaced: '2026-07-25'
+- url: https://github.com/SatoshiPortal/bullbitcoin-mobile/commit/3cb98699b8f845a2a3fa05e35b4ce757f9389cfe
+  repo: SatoshiPortal/bullbitcoin-mobile
+  kind: commit
+  title: 'feat(settings): add payjoin columns and the v14 DB migration'
+  stars: 0
+  updated_at: '2026-07-20T13:53:40Z'
+  first_seen: '2026-07-25'
+  status: new
+  last_surfaced: '2026-07-25'
 - url: https://github.com/bitcoin-dot-org/Bitcoin.org/pull/4555
   repo: bitcoin-dot-org/Bitcoin.org
   kind: pr
@@ -370,7 +643,7 @@
   repo: cake-tech/cake_wallet
   kind: pr
   title: Shuffle output order on bitcoin sends
-  stars: 1807
+  stars: 1808
   updated_at: '2026-07-20T00:13:31Z'
   first_seen: '2026-07-08'
   status: new
@@ -468,14 +741,6 @@
   first_seen: '2026-07-23'
   status: new
   last_surfaced: '2026-07-23'
-- url: https://github.com/LedgerHQ/app-bitcoin/issues/520
-  repo: LedgerHQ/app-bitcoin
-  kind: issue
-  title: Acknowledge in UI amount of external inputs when present
-  stars: 105
-  updated_at: '2026-07-16T14:27:24Z'
-  first_seen: '2026-07-11'
-  status: new
 - url: https://github.com/bitcoinops/bitcoinops.github.io/pull/2816
   repo: bitcoinops/bitcoinops.github.io
   kind: pr
@@ -515,14 +780,6 @@
   title: Better Payjoin Status
   stars: 187
   updated_at: '2026-07-15T15:56:23Z'
-  first_seen: '2026-07-16'
-  status: new
-- url: https://github.com/SatoshiPortal/bullbitcoin-mobile/issues/782
-  repo: SatoshiPortal/bullbitcoin-mobile
-  kind: issue
-  title: Allow user to view payjoin settings
-  stars: 187
-  updated_at: '2026-07-15T15:55:29Z'
   first_seen: '2026-07-16'
   status: new
 - url: https://github.com/SatoshiPortal/bullbitcoin-mobile/issues/1814
@@ -580,7 +837,7 @@
   repo: cake-tech/cake_wallet
   kind: pr
   title: 'feat: pin all dependencies to git sources'
-  stars: 1807
+  stars: 1808
   updated_at: '2026-07-14T18:58:50Z'
   first_seen: '2026-07-09'
   status: new
@@ -614,7 +871,7 @@
   repo: cake-tech/cake_wallet
   kind: issue
   title: Bitcoin sends order inputs by BIP-69
-  stars: 1807
+  stars: 1808
   updated_at: '2026-07-14T02:39:04Z'
   first_seen: '2026-07-08'
   status: new
@@ -622,7 +879,7 @@
   repo: cake-tech/cake_wallet
   kind: pr
   title: Shuffle input order on bitcoin sends
-  stars: 1807
+  stars: 1808
   updated_at: '2026-07-14T02:39:04Z'
   first_seen: '2026-07-08'
   status: new
@@ -818,7 +1075,7 @@
   repo: cake-tech/cake_wallet
   kind: issue
   title: Payjoin receiver can contribute unconfirmed (0-conf) inputs
-  stars: 1807
+  stars: 1808
   updated_at: '2026-07-10T15:23:30Z'
   first_seen: '2026-07-10'
   status: new
@@ -826,7 +1083,7 @@
   repo: cake-tech/cake_wallet
   kind: pr
   title: 'payjoin: exclude 0-conf inputs from receiver candidates'
-  stars: 1807
+  stars: 1808
   updated_at: '2026-07-10T15:23:29Z'
   first_seen: '2026-07-10'
   status: new
@@ -843,7 +1100,7 @@
   repo: mimblewimble/grin
   kind: pr
   title: 'docs: accurate input/output linking in grin4bitcoiners.md'
-  stars: 5092
+  stars: 5093
   updated_at: '2026-07-10T14:25:05Z'
   first_seen: '2026-07-11'
   status: new
@@ -859,7 +1116,7 @@
   repo: cake-tech/cake_wallet
   kind: issue
   title: '6.0: payjoin notice on litecoin receive'
-  stars: 1807
+  stars: 1808
   updated_at: '2026-07-09T22:18:07Z'
   first_seen: '2026-07-10'
   status: new
@@ -875,7 +1132,7 @@
   repo: cake-tech/cake_wallet
   kind: pr
   title: Set anti-fee-sniping locktime on bitcoin sends
-  stars: 1807
+  stars: 1808
   updated_at: '2026-07-09T14:36:12Z'
   first_seen: '2026-07-03'
   status: new
@@ -883,7 +1140,7 @@
   repo: cake-tech/cake_wallet
   kind: issue
   title: Sparrow user payjoin fails because of changed nLocktime
-  stars: 1807
+  stars: 1808
   updated_at: '2026-07-08T19:00:39Z'
   first_seen: '2026-07-09'
   status: new
@@ -891,7 +1148,7 @@
   repo: cake-tech/cake_wallet
   kind: issue
   title: 'RBF nsequence: non-canonical 0x01, only on inputs[0]'
-  stars: 1807
+  stars: 1808
   updated_at: '2026-07-08T18:37:09Z'
   first_seen: '2026-06-19'
   status: new
@@ -932,7 +1189,7 @@
   repo: cake-tech/cake_wallet
   kind: issue
   title: Bitcoin sends place change output deterministically last
-  stars: 1807
+  stars: 1808
   updated_at: '2026-07-07T18:43:56Z'
   first_seen: '2026-07-08'
   status: new
@@ -940,7 +1197,7 @@
   repo: cake-tech/cake_wallet
   kind: issue
   title: Bitcoin sends use nLockTime = 0 (anti-fee-sniping + payjoin fingerprint)
-  stars: 1807
+  stars: 1808
   updated_at: '2026-07-07T01:39:20Z'
   first_seen: '2026-07-03'
   status: new
@@ -1118,7 +1375,7 @@
   repo: cake-tech/cake_wallet
   kind: issue
   title: Upgrade payjoin bindings to use payjoin_ffi
-  stars: 1807
+  stars: 1808
   updated_at: '2026-06-30T15:04:30Z'
   first_seen: '2026-07-01'
   status: new
@@ -1384,7 +1641,7 @@
   repo: cake-tech/cake_wallet
   kind: issue
   title: Payjoin receiver skips UIH2 avoidance, always contributes unspent[0]
-  stars: 1807
+  stars: 1808
   updated_at: '2026-06-18T08:45:10Z'
   first_seen: '2026-06-19'
   status: new
@@ -1723,7 +1980,7 @@
   repo: sparrowwallet/sparrow
   kind: issue
   title: PayJoin v2 (BIP77)
-  stars: 2047
+  stars: 2050
   updated_at: '2026-06-01T09:53:06Z'
   first_seen: '2026-06-19'
   status: new
@@ -2731,7 +2988,7 @@
   repo: kaspanet/rusty-kaspa
   kind: issue
   title: Toccata Opcode Testing Report — TN12 Field Results
-  stars: 840
+  stars: 841
   updated_at: '2026-05-04T15:13:12Z'
   first_seen: '2026-07-23'
   status: new

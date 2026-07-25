@@ -33,6 +33,14 @@
   first_seen: '2026-07-23'
   status: new
   last_surfaced: '2026-07-23'
+- url: https://gnusha.org/pi/bitcoindev/tSYH-B4F91BsIzpl_FqPIhxO2xkoDmzbqz097XD41wJGmeHM7Cbt5JP0uqic9aicjM7Hhhr5F_4WEORFyHKYHowqemy0yeVr9p_vnaQhYYM=@protonmail.com
+  kind: mailing-list
+  outlet: bitcoindev
+  title: 'BIP draft: Full-Aggregation of BIP 340 Signatures'
+  updated_at: '2026-07-09T14:29:56Z'
+  first_seen: '2026-07-25'
+  status: new
+  last_surfaced: '2026-07-25'
 - url: https://bitcoinops.org/en/podcast/2026/06/23
   kind: newsletter
   outlet: Bitcoin Optech
@@ -41,6 +49,15 @@
   first_seen: '2026-07-23'
   status: new
   last_surfaced: '2026-07-23'
+- url: https://gnusha.org/pi/bitcoindev/740f74db-c7eb-40df-948a-84fc4c821b38n@googlegroups.com
+  kind: mailing-list
+  outlet: bitcoindev
+  title: '[BIP Draft] Blind Relay: Stateless Encrypted WebSocket Coordination for
+    PSBTs'
+  updated_at: '2026-04-17T17:56:43Z'
+  first_seen: '2026-07-25'
+  status: new
+  last_surfaced: '2026-07-25'
 - url: https://delvingbitcoin.org/t/2354
   kind: forum
   outlet: Delving Bitcoin
@@ -98,6 +115,30 @@
   first_seen: '2026-07-23'
   status: new
   last_surfaced: '2026-07-23'
+- url: https://gnusha.org/pi/bitcoindev/CAHLj6=OxUUempwziiFdo2eqEhiTHsobgdT+eDDx_y64bHBGiqA@mail.gmail.com
+  kind: mailing-list
+  outlet: bitcoindev
+  title: Post Quantum Signatures and Scaling Bitcoin
+  updated_at: '2025-04-06T11:47:28Z'
+  first_seen: '2026-07-25'
+  status: new
+  last_surfaced: '2026-07-25'
+- url: https://gnusha.org/pi/bitcoindev/CALiT-ZrRc3WMiudK4fDj9zs8AJntPBvxRS1=510R7QChFfnrCA@mail.gmail.com
+  kind: mailing-list
+  outlet: bitcoindev
+  title: UTXO probing attack using payjoin
+  updated_at: '2025-03-31T09:43:25Z'
+  first_seen: '2026-07-25'
+  status: new
+  last_surfaced: '2026-07-25'
+- url: https://gnusha.org/pi/bitcoindev/f7529867-466c-4438-8c41-e9d2222bd1d3n@googlegroups.com
+  kind: mailing-list
+  outlet: bitcoindev
+  title: 'Octojoin: Payjoin with no interaction between sender and recipient'
+  updated_at: '2024-07-14T13:01:31Z'
+  first_seen: '2026-07-25'
+  status: new
+  last_surfaced: '2026-07-25'
 - url: https://delvingbitcoin.org/t/824
   kind: forum
   outlet: Delving Bitcoin
@@ -122,6 +163,14 @@
   first_seen: '2026-07-23'
   status: new
   last_surfaced: '2026-07-23'
+- url: https://gnusha.org/pi/bitcoindev/f9ac65db-9756-4c85-b376-6b6a286a2b2cn@googlegroups.com
+  kind: mailing-list
+  outlet: bitcoindev
+  title: Analysis of Replacement Cycling Attacks Risks on L2s (beyond LN)
+  updated_at: '2024-05-25T08:57:07Z'
+  first_seen: '2026-07-25'
+  status: new
+  last_surfaced: '2026-07-25'
 - url: https://delvingbitcoin.org/t/749
   kind: forum
   outlet: Delving Bitcoin
@@ -146,3 +195,275 @@
   first_seen: '2026-07-23'
   status: new
   last_surfaced: '2026-07-23'
+- url: https://gnusha.org/pi/bitcoindev/34eaef2a-b53f-4622-a620-a3bc5161cbf7@mattcorallo.com
+  kind: mailing-list
+  outlet: bitcoindev
+  title: Mapping Human-Readable Names to Payment Instructions
+  updated_at: '2024-02-13T21:12:47Z'
+  first_seen: '2026-07-25'
+  status: new
+  last_surfaced: '2026-07-25'
+- url: https://gnusha.org/pi/bitcoindev/CALZpt+EOQEttscM4ncKiUG810DQkzgjFwp6noLh68tSsnHPATw@mail.gmail.com
+  kind: mailing-list
+  outlet: bitcoindev
+  title: '[bitcoin-dev] Full Disclosure: CVE-2023-40231 / CVE-2023-40232 / CVE-2023-40233
+    / CVE-2023-40234 "All your mempool are belong to us"'
+  updated_at: '2023-11-02T04:46:47Z'
+  first_seen: '2026-07-25'
+  status: new
+  last_surfaced: '2026-07-25'
+- url: https://gnusha.org/pi/bitcoindev/CALZpt+FaYop1J5Zi=42F4jCScfiPL3AZ98HWtW82Qd8ZQG=aMg@mail.gmail.com
+  kind: mailing-list
+  outlet: bitcoindev
+  title: '[bitcoin-dev] [Lightning-dev] Full Disclosure: CVE-2023-40231 / CVE-2023-40232
+    / CVE-2023-40233 / CVE-2023-40234 "All your mempool are belong to us"'
+  updated_at: '2023-10-19T19:33:39Z'
+  first_seen: '2026-07-25'
+  status: new
+  last_surfaced: '2026-07-25'
+- url: https://gnusha.org/pi/bitcoindev/8qSa5NNuqF64Yg-R-OvO34IYBI0efPOUYYGrFBwvhsDuRMdQzcA6joTi0BNdBkoGgZQgBut257mfwX1e-bDdExlmcxdtRrSjCtWYPBlne6M=@protonmail.com
+  kind: mailing-list
+  outlet: bitcoindev
+  title: '[bitcoin-dev] Serverless Payjoin'
+  updated_at: '2023-08-20T17:13:55Z'
+  first_seen: '2026-07-25'
+  status: new
+  last_surfaced: '2026-07-25'
+- url: https://gnusha.org/pi/bitcoindev/92588478-9239-4D85-89E5-B6EDE3068FCF@ngould.dev
+  kind: mailing-list
+  outlet: bitcoindev
+  title: '[bitcoin-dev] BIP for Serverless Payjoin'
+  updated_at: '2023-08-13T12:50:39Z'
+  first_seen: '2026-07-25'
+  status: new
+  last_surfaced: '2026-07-25'
+- url: https://gnusha.org/pi/bitcoindev/CACrqygAPKUUYxWbV0XwrRN9U1sNEGCkv+iWwA8MiLLjN_+dASQ@mail.gmail.com
+  kind: mailing-list
+  outlet: bitcoindev
+  title: '[bitcoin-dev] BIP for Serverless Payjoin (AdamISZ)'
+  updated_at: '2023-08-12T01:05:21Z'
+  first_seen: '2026-07-25'
+  status: new
+  last_surfaced: '2026-07-25'
+- url: https://gnusha.org/pi/bitcoindev/gNqstz2gG2bdspIr45ZGMxqGFQ0Xpv6NBvAsPsb8YCK8NRZf5Bs3lTYAL_AR-9M25og-mk4W7npP8F7_Gd4GZ1WUQifkMYgoIseEZ_RRbR8=@protonmail.com
+  kind: mailing-list
+  outlet: bitcoindev
+  title: '[bitcoin-dev] Fw: Re: BIP for Serverless Payjoin'
+  updated_at: '2023-08-10T14:57:22Z'
+  first_seen: '2026-07-25'
+  status: new
+  last_surfaced: '2026-07-25'
+- url: https://gnusha.org/pi/bitcoindev/EQsyuwTpcGBPNNTpCdDzZr4mWC99WoNQLxt5_vSpBCVUZ-dfbGJOrAUh4aLZ7LBkDjpRtEsPTi11xCn4NfY4z18ljbrbsx6GIUgJaK_APxI=@protonmail.com
+  kind: mailing-list
+  outlet: bitcoindev
+  title: '[bitcoin-dev] postr: p2n payjoin using nostr'
+  updated_at: '2023-06-12T19:29:05Z'
+  first_seen: '2026-07-25'
+  status: new
+  last_surfaced: '2026-07-25'
+- url: https://gnusha.org/pi/bitcoindev/A8AC6028-2B20-4D0E-934B-03CC228A9CCC@ngould.dev
+  kind: mailing-list
+  outlet: bitcoindev
+  title: '[bitcoin-dev] Interactive Payment Batching w/ Payjoin'
+  updated_at: '2023-05-10T15:33:32Z'
+  first_seen: '2026-07-25'
+  status: new
+  last_surfaced: '2026-07-25'
+- url: https://gnusha.org/pi/bitcoindev/8E6C6EB5-8B7B-4197-9103-B1C52F9D9968@ngould.dev
+  kind: mailing-list
+  outlet: bitcoindev
+  title: '[bitcoin-dev] Fwd: P2EP Lightning PayJoin'
+  updated_at: '2022-11-08T03:03:48Z'
+  first_seen: '2026-07-25'
+  status: new
+  last_surfaced: '2026-07-25'
+- url: https://gnusha.org/pi/bitcoindev/1-euAstnYmNT7A9s0rniXdimmudFXODjkXiYXLK1hx1W7f_2rBLD1lPpaNi9Vx9tq2oahdCs6wDuXMy9SR6WfRTYzl2vDxSi6IVQLELKNLs=@protonmail.com
+  kind: mailing-list
+  outlet: bitcoindev
+  title: '[bitcoin-dev] Trustless Address Server – Outsourcing handing out addresses
+    to prevent address reuse'
+  updated_at: '2022-10-17T23:26:29Z'
+  first_seen: '2026-07-25'
+  status: new
+  last_surfaced: '2026-07-25'
+- url: https://gnusha.org/pi/bitcoindev/fd3a433b-9e95-194e-bf91-47b61f981d1b@towardsliberty.com
+  kind: mailing-list
+  outlet: bitcoindev
+  title: '[bitcoin-dev] WabiSabi P2EP / Wormhole 2.0'
+  updated_at: '2022-03-30T11:58:46Z'
+  first_seen: '2026-07-25'
+  status: new
+  last_surfaced: '2026-07-25'
+- url: https://gnusha.org/pi/bitcoindev/Mtz0y_---3-2@tutanota.de
+  kind: mailing-list
+  outlet: bitcoindev
+  title: '[bitcoin-dev] Bob-Pays-For-Transaction'
+  updated_at: '2022-01-21T23:45:39Z'
+  first_seen: '2026-07-25'
+  status: new
+  last_surfaced: '2026-07-25'
+- url: https://gnusha.org/pi/bitcoindev/472cb1f4-33c8-33c8-9889-e0867f45d558@riseup.net
+  kind: mailing-list
+  outlet: bitcoindev
+  title: '[bitcoin-dev] BIP proposal: Anti-fee-sniping protection with nSequence in
+    taproot transactions to improve privacy for off-chain protocols'
+  updated_at: '2021-06-29T09:26:09Z'
+  first_seen: '2026-07-25'
+  status: new
+  last_surfaced: '2026-07-25'
+- url: https://gnusha.org/pi/bitcoindev/SL2P216MB00898333D5525E5096B249659D979@SL2P216MB0089.KORP216.PROD.OUTLOOK.COM
+  kind: mailing-list
+  outlet: bitcoindev
+  title: '[bitcoin-dev] Taproot NACK'
+  updated_at: '2021-03-04T09:42:30Z'
+  first_seen: '2026-07-25'
+  status: new
+  last_surfaced: '2026-07-25'
+- url: https://gnusha.org/pi/bitcoindev/828e0ad4-8fe6-7db9-630f-daae51c04c3a@riseup.net
+  kind: mailing-list
+  outlet: bitcoindev
+  title: '[bitcoin-dev] PayJoin adoption'
+  updated_at: '2021-01-19T15:44:31Z'
+  first_seen: '2026-07-25'
+  status: new
+  last_surfaced: '2026-07-25'
+- url: https://gnusha.org/pi/bitcoindev/MKaHlj_--3-2@tutanota.de
+  kind: mailing-list
+  outlet: bitcoindev
+  title: '[bitcoin-dev] bips.txt format for all Bitcoin projects'
+  updated_at: '2020-10-26T19:03:24Z'
+  first_seen: '2026-07-25'
+  status: new
+  last_surfaced: '2026-07-25'
+- url: https://gnusha.org/pi/bitcoindev/be095fe7-77ca-f471-43e4-981076f48ed2@riseup.net
+  kind: mailing-list
+  outlet: bitcoindev
+  title: '[bitcoin-dev] Detailed protocol design for routed multi-transaction CoinSwap
+    appendium'
+  updated_at: '2020-10-03T10:36:31Z'
+  first_seen: '2026-07-25'
+  status: new
+  last_surfaced: '2026-07-25'
+- url: https://gnusha.org/pi/bitcoindev/CAL00YY2qAWiUf28GZnweHpgtCE8pao5p83CtrsrA5Kgx_6ZKEw@mail.gmail.com
+  kind: mailing-list
+  outlet: bitcoindev
+  title: '[bitcoin-dev] Detailed protocol design for routed multi-transaction CoinSwap'
+  updated_at: '2020-09-06T03:07:00Z'
+  first_seen: '2026-07-25'
+  status: new
+  last_surfaced: '2026-07-25'
+- url: https://gnusha.org/pi/bitcoindev/bc0SG26C9FUzZO4l9cGDtbBGb0lrhsxrcvDoJXpJGUbyKEUq3eE3vLwTu_WufWOsN6DK3lPcKttNdEa9h7_tqixk12sBVErMi0YYF_HNBGo=@protonmail.com
+  kind: mailing-list
+  outlet: bitcoindev
+  title: '[bitcoin-dev] reviving op_difficulty'
+  updated_at: '2020-08-17T23:14:15Z'
+  first_seen: '2026-07-25'
+  status: new
+  last_surfaced: '2026-07-25'
+- url: https://gnusha.org/pi/bitcoindev/5cdc9a4a-6382-6b1f-fb34-58fa3f5eece0@gmail.com
+  kind: mailing-list
+  outlet: bitcoindev
+  title: '[bitcoin-dev] Design for a CoinSwap implementation for massively improving
+    Bitcoin privacy and fungibility'
+  updated_at: '2020-06-19T15:31:29Z'
+  first_seen: '2026-07-25'
+  status: new
+  last_surfaced: '2026-07-25'
+- url: https://gnusha.org/pi/bitcoindev/m-yAKsQ52s-bYOrtEXVwETAcJ8sSbJt0k9WDN1ueidJ01IaEHRJtq9Odffmz_2utLxPfmI418x58aFc3vKBpOD2FKqgeCUAn1mvI1OSyGRY=@protonmail.com
+  kind: mailing-list
+  outlet: bitcoindev
+  title: '[bitcoin-dev] CoinPool, exploring generic payment pools for Fun and Privacy'
+  updated_at: '2020-06-13T00:45:27Z'
+  first_seen: '2026-07-25'
+  status: new
+  last_surfaced: '2026-07-25'
+- url: https://gnusha.org/pi/bitcoindev/CAEPKjgf8nhxn031ra4vqfJW7WV8RKdxhDtixMQnxcPD0NaSreg@mail.gmail.com
+  kind: mailing-list
+  outlet: bitcoindev
+  title: '[bitcoin-dev] Tainting, CoinJoin, PayJoin, CoinSwap'
+  updated_at: '2020-06-11T11:21:10Z'
+  first_seen: '2026-07-25'
+  status: new
+  last_surfaced: '2026-07-25'
+- url: https://gnusha.org/pi/bitcoindev/2b0d2414-49d8-8a11-0934-170601b09a74@riseup.net
+  kind: mailing-list
+  outlet: bitcoindev
+  title: '[bitcoin-dev] Question about PayJoin effectiveness'
+  updated_at: '2020-06-10T17:49:24Z'
+  first_seen: '2026-07-25'
+  status: new
+  last_surfaced: '2026-07-25'
+- url: https://gnusha.org/pi/bitcoindev/M8G151E--3-2@tutanota.de
+  kind: mailing-list
+  outlet: bitcoindev
+  title: '[bitcoin-dev] Post-mix(coinjoin) usage with multisig and cpfp in bitcoin
+    core wallet'
+  updated_at: '2020-05-26T12:50:17Z'
+  first_seen: '2026-07-25'
+  status: new
+  last_surfaced: '2026-07-25'
+- url: https://gnusha.org/pi/bitcoindev/CA+1nnrkq2zq_PFoUyNadE7KMncbv30M=Kr-Ek4nDfnJvgDHrfQ@mail.gmail.com
+  kind: mailing-list
+  outlet: bitcoindev
+  title: '[bitcoin-dev] BIP Number request for a simple payjoin proposal'
+  updated_at: '2020-05-16T19:46:51Z'
+  first_seen: '2026-07-25'
+  status: new
+  last_surfaced: '2026-07-25'
+- url: https://gnusha.org/pi/bitcoindev/fCI9QUCx0irTdZQdFEooMeQK3lx0PO6S6JDhu8hIi6tCRXXqAKfHlVtlY5K6jS9KdYY_3IWCE5MiAhjwmdbm0vqzrmt1HAfu2qZVh0dCXOw=@protonmail.com
+  kind: mailing-list
+  outlet: bitcoindev
+  title: '[bitcoin-dev] Fwd: (Semi)Traceless 2-party coinjoin off-chain protocol using
+    schnorr signatures'
+  updated_at: '2020-05-04T08:28:51Z'
+  first_seen: '2026-07-25'
+  status: new
+  last_surfaced: '2026-07-25'
+- url: https://gnusha.org/pi/bitcoindev/hWBM2yvN6QhN97j2qjFV_yWmCaRtCJ3cqO-LXRcKEZu89kzOaaQPmfRCuEq4uZe07WHKNNa5dZ7X1PqK4hd_9X5cxR8SuD0lWtUG-fVdIFA=@protonmail.com
+  kind: mailing-list
+  outlet: bitcoindev
+  title: '[bitcoin-dev] Payswap'
+  updated_at: '2020-01-24T10:12:03Z'
+  first_seen: '2026-07-25'
+  status: new
+  last_surfaced: '2026-07-25'
+- url: https://gnusha.org/pi/bitcoindev/BoxdwCcItqGY7JSaG245SNsgO6ijaeruqzdSUvSomOJLMHM33L8lRXPKE4e38g3DewzUEwbGNu7o2V5l9z2A48HrRpubm0U4zgpUecaXW60=@protonmail.com
+  kind: mailing-list
+  outlet: bitcoindev
+  title: '[bitcoin-dev] Smaller "Bitcoin address" accounts in the blockchain.'
+  updated_at: '2019-10-04T06:45:45Z'
+  first_seen: '2026-07-25'
+  status: new
+  last_surfaced: '2026-07-25'
+- url: https://gnusha.org/pi/bitcoindev/kZwZOekiYq3oxv7wgNj57KJqpOP0a2lkwM-TXsROtIDW5M8VunVV7majgvia4uo_bF3LxJn-8IOYN3IHBy25gjEN-OmPt-T47068L6s5ycE=@protonmail.com
+  kind: mailing-list
+  outlet: bitcoindev
+  title: '[bitcoin-dev] CoinJoin Jigsaw'
+  updated_at: '2019-04-22T19:23:02Z'
+  first_seen: '2026-07-25'
+  status: new
+  last_surfaced: '2026-07-25'
+- url: https://gnusha.org/pi/bitcoindev/kgldTB03owVUYGhhQln85x7tzZSqKD7VgfXwERpVpXP2IJ1dpBzahYZ7DkFhKqbdGWsS-2GO1ZiUnPBmjW6sfcm8I3hxAnOSyckrI4_HyTc=@protonmail.com
+  kind: mailing-list
+  outlet: bitcoindev
+  title: '[bitcoin-dev] Payjoin2swap: Enabling Payjoin Without Merchant Purchases'
+  updated_at: '2019-04-22T17:06:50Z'
+  first_seen: '2026-07-25'
+  status: new
+  last_surfaced: '2026-07-25'
+- url: https://gnusha.org/pi/bitcoindev/8lijztpZXhFjjVzlRV1LGtSulNfgYNiZzRmzpO7epoZRjwswnAtqne9TsEpGOqNxL6NTTH-G4xUrusKRjG-Rl7Y5cAOCtvEXiC5QDbWne7U=@protonmail.com
+  kind: mailing-list
+  outlet: bitcoindev
+  title: '[bitcoin-dev] Payjoin privacy with the receiver of the transaction'
+  updated_at: '2019-03-22T16:05:21Z'
+  first_seen: '2026-07-25'
+  status: new
+  last_surfaced: '2026-07-25'
+- url: https://gnusha.org/pi/bitcoindev/q_EImVoLLoTdTZI0kPb4olI3FFjIMx9Uj0O8acFefNbsMtU7K25wWz69Alm-jbwZ8SEV1U3Y6Re3705Xi2zQb5129MbtjEVE8dT_JtSSfmA=@protonmail.com
+  kind: mailing-list
+  outlet: bitcoindev
+  title: '[bitcoin-dev] bustapay BIP :: a practical sender/receiver coinjoin protocol'
+  updated_at: '2019-01-30T08:34:55Z'
+  first_seen: '2026-07-25'
+  status: new
+  last_surfaced: '2026-07-25'
