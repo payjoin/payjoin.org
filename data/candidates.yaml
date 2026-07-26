@@ -1,6 +1,214 @@
 # Payjoin activity outside tracked repos (issues, PRs, commits, new repos).
 # Bot appends and refreshes facts; you own `status`.
 # status: new | watching | dismissed | promoted  (bot only adds 'new')
+- url: https://github.com/fungi-protocol/tx-graph-privacy-vibes/commit/6569c369d8f66a0ddc5c42bbe08f46519c23da9b
+  repo: fungi-protocol/tx-graph-privacy-vibes
+  kind: commit
+  title: 'settlement insiders: what they learn depends on the protocol'
+  stars: 0
+  updated_at: '2026-07-26T02:53:10Z'
+  first_seen: '2026-07-26'
+  status: new
+  last_surfaced: '2026-07-26'
+- url: https://github.com/fungi-protocol/tx-graph-privacy-vibes/commit/896a1b3d01535a35a44a57b511eda21f3c20a277
+  repo: fungi-protocol/tx-graph-privacy-vibes
+  kind: commit
+  title: heuristics enter the story when the story needs them
+  stars: 0
+  updated_at: '2026-07-26T02:34:17Z'
+  first_seen: '2026-07-26'
+  status: new
+  last_surfaced: '2026-07-26'
+- url: https://github.com/fungi-protocol/tx-graph-privacy-vibes/commit/be7e6b35b563c9289f9acf6faadbe6dbdaec10a7
+  repo: fungi-protocol/tx-graph-privacy-vibes
+  kind: commit
+  title: 'ground truth of funding: record each output''s funders at construction'
+  stars: 0
+  updated_at: '2026-07-26T01:44:49Z'
+  first_seen: '2026-07-26'
+  status: new
+  last_surfaced: '2026-07-26'
+- url: https://github.com/Resolvr-io/apogee/pull/41
+  repo: Resolvr-io/apogee
+  kind: pr
+  title: 'Swap: password step-up, stale-quote guard, quote TTL, LowBalance detail'
+  stars: 4
+  updated_at: '2026-07-26T00:56:21Z'
+  first_seen: '2026-07-26'
+  status: new
+  last_surfaced: '2026-07-26'
+- url: https://github.com/Resolvr-io/apogee/commit/a3561982557298c5111fbaf3805c3c37aae27400
+  repo: Resolvr-io/apogee
+  kind: commit
+  title: 'Swap: password step-up, stale-quote guard, quote TTL, LowBalance detail
+    (#41)'
+  stars: 0
+  updated_at: '2026-07-26T00:56:19Z'
+  first_seen: '2026-07-26'
+  status: new
+  last_surfaced: '2026-07-26'
+- url: https://github.com/BlueWallet/BlueWallet/issues/3659
+  repo: BlueWallet/BlueWallet
+  kind: issue
+  title: Dependency Dashboard
+  stars: 3244
+  updated_at: '2026-07-26T00:42:30Z'
+  first_seen: '2026-06-19'
+  status: new
+  last_surfaced: '2026-07-24'
+- url: https://github.com/cake-tech/cake_wallet/issues/3376
+  repo: cake-tech/cake_wallet
+  kind: issue
+  title: Bitcoin sends place change output deterministically last
+  stars: 1809
+  updated_at: '2026-07-26T00:30:43Z'
+  first_seen: '2026-07-08'
+  status: new
+  last_surfaced: '2026-07-26'
+  resurfaced: true
+- url: https://github.com/cake-tech/cake_wallet/pull/3432
+  repo: cake-tech/cake_wallet
+  kind: pr
+  title: Shuffle change output on hardware wallet and Bitcoin Cash sends
+  stars: 1809
+  updated_at: '2026-07-26T00:30:42Z'
+  first_seen: '2026-07-23'
+  status: new
+  last_surfaced: '2026-07-23'
+- url: https://github.com/fungi-protocol/tx-graph-privacy-vibes/commit/1472a7649fd489569c1eae62d4742a853cd43f6f
+  repo: fungi-protocol/tx-graph-privacy-vibes
+  kind: commit
+  title: 'tutorial: card view for every transaction-zoomed step, payjoin through the
+    coinjoin introduction'
+  stars: 0
+  updated_at: '2026-07-25T23:59:22Z'
+  first_seen: '2026-07-26'
+  status: new
+  last_surfaced: '2026-07-26'
+- url: https://github.com/fungi-protocol/tx-graph-privacy-vibes/commit/c0e04f97160c89102181bfc8b32cf69b76372a21
+  repo: fungi-protocol/tx-graph-privacy-vibes
+  kind: commit
+  title: 'coinjoin chapter: the model generalizes CIOH; denomination step in card
+    view'
+  stars: 0
+  updated_at: '2026-07-25T23:40:24Z'
+  first_seen: '2026-07-26'
+  status: new
+  last_surfaced: '2026-07-26'
+- url: https://github.com/fungi-protocol/tx-graph-privacy-vibes/commit/e9ab64d3b683446f2ca301f6c7402f33731ad939
+  repo: fungi-protocol/tx-graph-privacy-vibes
+  kind: commit
+  title: 'settlement + payjoin steers: precise nets, protocol-led insiders, chapters
+    keep the clock honest'
+  stars: 0
+  updated_at: '2026-07-25T23:35:38Z'
+  first_seen: '2026-07-26'
+  status: new
+  last_surfaced: '2026-07-26'
+- url: https://github.com/fungi-protocol/tx-graph-privacy-vibes/commit/77f4d0b6d8e11d3db77bb8b37b629206bec02b75
+  repo: fungi-protocol/tx-graph-privacy-vibes
+  kind: commit
+  title: 'payjoin chapter: stay in card view through the counterparty step'
+  stars: 0
+  updated_at: '2026-07-25T23:21:15Z'
+  first_seen: '2026-07-26'
+  status: new
+  last_surfaced: '2026-07-26'
+- url: https://github.com/fungi-protocol/tx-graph-privacy-vibes/commit/aef4e4b7156e14cc43cc6f54d9b340b0cd295817
+  repo: fungi-protocol/tx-graph-privacy-vibes
+  kind: commit
+  title: 'payjoin intro: end the coordination sentence at "every time"'
+  stars: 0
+  updated_at: '2026-07-25T23:19:36Z'
+  first_seen: '2026-07-26'
+  status: new
+  last_surfaced: '2026-07-26'
+- url: https://github.com/fungi-protocol/tx-graph-privacy-vibes/commit/8029a5a2b9569431b496bd52f585b37cb2ce652d
+  repo: fungi-protocol/tx-graph-privacy-vibes
+  kind: commit
+  title: 'intersection chapter: aux-info knowledge grant with computed decay branches
+    (#38)'
+  stars: 0
+  updated_at: '2026-07-25T23:02:27Z'
+  first_seen: '2026-07-26'
+  status: new
+  last_surfaced: '2026-07-26'
+- url: https://github.com/fungi-protocol/tx-graph-privacy-vibes/commit/5a99f4a39e56a690037329c3f6c9d4c9f1e495d2
+  repo: fungi-protocol/tx-graph-privacy-vibes
+  kind: commit
+  title: 'payjoin chapter: honest entropy, detection against the prior map, many-senders
+    ladder (#36)'
+  stars: 0
+  updated_at: '2026-07-25T22:09:08Z'
+  first_seen: '2026-07-26'
+  status: new
+  last_surfaced: '2026-07-26'
+- url: https://github.com/fungi-protocol/tx-graph-privacy-vibes/commit/d18a4e41bb765941b5feec1df0600392fe16e969
+  repo: fungi-protocol/tx-graph-privacy-vibes
+  kind: commit
+  title: 'settlement chapter: display the verdict, teach offsetting; payjoin claim
+    scoped to the model'
+  stars: 0
+  updated_at: '2026-07-25T20:35:32Z'
+  first_seen: '2026-07-26'
+  status: new
+  last_surfaced: '2026-07-26'
+- url: https://github.com/fungi-protocol/tx-graph-privacy-vibes/commit/6d18afd265a69b34de734a17509007f511de4c51
+  repo: fungi-protocol/tx-graph-privacy-vibes
+  kind: commit
+  title: 'prose fidelity sweep: settlement and coinjoin chapters say what the analysis
+    says'
+  stars: 0
+  updated_at: '2026-07-25T19:54:30Z'
+  first_seen: '2026-07-26'
+  status: new
+  last_surfaced: '2026-07-26'
+- url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2509
+  repo: SatoshiPortal/bullbitcoin-mobile
+  kind: pr
+  title: Payjoin UX updates from clean-install testing
+  stars: 187
+  updated_at: '2026-07-25T19:02:09Z'
+  first_seen: '2026-07-26'
+  status: new
+  last_surfaced: '2026-07-26'
+- url: https://github.com/fungi-protocol/tx-graph-privacy-vibes/commit/165fb6703888159627432c23b539940ce9cbee18
+  repo: fungi-protocol/tx-graph-privacy-vibes
+  kind: commit
+  title: 'tutorial: the payjoin chapter holds its exhibit up to the light'
+  stars: 0
+  updated_at: '2026-07-25T17:30:52Z'
+  first_seen: '2026-07-26'
+  status: new
+  last_surfaced: '2026-07-26'
+- url: https://github.com/Conxian/conxius-wallet/pull/451
+  repo: Conxian/conxius-wallet
+  kind: pr
+  title: 'feat: add fail-closed wallet value-operation gate'
+  stars: 0
+  updated_at: '2026-07-25T10:30:13Z'
+  first_seen: '2026-07-26'
+  status: new
+  last_surfaced: '2026-07-26'
+- url: https://github.com/Conxian/conxius-wallet/pull/452
+  repo: Conxian/conxius-wallet
+  kind: pr
+  title: 'fix(wallet): centralize and quarantine value operations'
+  stars: 0
+  updated_at: '2026-07-25T10:06:55Z'
+  first_seen: '2026-07-26'
+  status: new
+  last_surfaced: '2026-07-26'
+- url: https://github.com/fungi-protocol/tx-graph-privacy-vibes/commit/6efab4481fb83460b0ac8500939e8053a0be4771
+  repo: fungi-protocol/tx-graph-privacy-vibes
+  kind: commit
+  title: 'M2: payjoin — obligations with deadlines, cost-weighted choice, the heuristic
+    lies'
+  stars: 0
+  updated_at: '2026-07-25T04:01:07Z'
+  first_seen: '2026-07-26'
+  status: new
+  last_surfaced: '2026-07-26'
 - url: https://github.com/SatoshiPortal/bullbitcoin-mobile/issues/2246
   repo: SatoshiPortal/bullbitcoin-mobile
   kind: issue
@@ -20,7 +228,6 @@
   first_seen: '2026-07-16'
   status: new
   last_surfaced: '2026-07-25'
-  resurfaced: true
 - url: https://github.com/Horus-Org/payjoin-react-native/issues/2
   repo: Horus-Org/payjoin-react-native
   kind: issue
@@ -48,16 +255,6 @@
   first_seen: '2026-07-11'
   status: new
   last_surfaced: '2026-07-25'
-  resurfaced: true
-- url: https://github.com/BlueWallet/BlueWallet/issues/3659
-  repo: BlueWallet/BlueWallet
-  kind: issue
-  title: Dependency Dashboard
-  stars: 3244
-  updated_at: '2026-07-24T17:00:28Z'
-  first_seen: '2026-06-19'
-  status: new
-  last_surfaced: '2026-07-24'
 - url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2506
   repo: SatoshiPortal/bullbitcoin-mobile
   kind: pr
@@ -76,12 +273,11 @@
   first_seen: '2026-07-22'
   status: new
   last_surfaced: '2026-07-25'
-  resurfaced: true
 - url: https://github.com/cake-tech/cake_wallet/pull/3363
   repo: cake-tech/cake_wallet
   kind: pr
   title: WIP Payjoin upgrade to native dart bindings via payjoin_ffi
-  stars: 1808
+  stars: 1809
   updated_at: '2026-07-24T13:59:33Z'
   first_seen: '2026-07-03'
   status: new
@@ -225,7 +421,7 @@
   repo: cake-tech/cake_wallet
   kind: pr
   title: Set anti-fee-sniping locktime (exact-tip) on bitcoin sends
-  stars: 1808
+  stars: 1809
   updated_at: '2026-07-22T13:32:49Z'
   first_seen: '2026-07-10'
   status: new
@@ -234,18 +430,9 @@
   repo: cake-tech/cake_wallet
   kind: pr
   title: 'Privacy: randomized coin selection (BnB changeless + single random draw)'
-  stars: 1808
+  stars: 1809
   updated_at: '2026-07-22T13:29:57Z'
   first_seen: '2026-07-16'
-  status: new
-  last_surfaced: '2026-07-23'
-- url: https://github.com/cake-tech/cake_wallet/pull/3432
-  repo: cake-tech/cake_wallet
-  kind: pr
-  title: Shuffle change output on hardware wallet and Bitcoin Cash sends
-  stars: 1808
-  updated_at: '2026-07-22T13:28:00Z'
-  first_seen: '2026-07-23'
   status: new
   last_surfaced: '2026-07-23'
 - url: https://github.com/Horus-Org/payjoin-react-native
@@ -643,7 +830,7 @@
   repo: cake-tech/cake_wallet
   kind: pr
   title: Shuffle output order on bitcoin sends
-  stars: 1808
+  stars: 1809
   updated_at: '2026-07-20T00:13:31Z'
   first_seen: '2026-07-08'
   status: new
@@ -837,7 +1024,7 @@
   repo: cake-tech/cake_wallet
   kind: pr
   title: 'feat: pin all dependencies to git sources'
-  stars: 1808
+  stars: 1809
   updated_at: '2026-07-14T18:58:50Z'
   first_seen: '2026-07-09'
   status: new
@@ -871,7 +1058,7 @@
   repo: cake-tech/cake_wallet
   kind: issue
   title: Bitcoin sends order inputs by BIP-69
-  stars: 1808
+  stars: 1809
   updated_at: '2026-07-14T02:39:04Z'
   first_seen: '2026-07-08'
   status: new
@@ -879,7 +1066,7 @@
   repo: cake-tech/cake_wallet
   kind: pr
   title: Shuffle input order on bitcoin sends
-  stars: 1808
+  stars: 1809
   updated_at: '2026-07-14T02:39:04Z'
   first_seen: '2026-07-08'
   status: new
@@ -1075,7 +1262,7 @@
   repo: cake-tech/cake_wallet
   kind: issue
   title: Payjoin receiver can contribute unconfirmed (0-conf) inputs
-  stars: 1808
+  stars: 1809
   updated_at: '2026-07-10T15:23:30Z'
   first_seen: '2026-07-10'
   status: new
@@ -1083,7 +1270,7 @@
   repo: cake-tech/cake_wallet
   kind: pr
   title: 'payjoin: exclude 0-conf inputs from receiver candidates'
-  stars: 1808
+  stars: 1809
   updated_at: '2026-07-10T15:23:29Z'
   first_seen: '2026-07-10'
   status: new
@@ -1096,6 +1283,15 @@
   first_seen: '2026-07-23'
   status: new
   last_surfaced: '2026-07-23'
+- url: https://github.com/davidcreated/cake_wallet/commit/43bc0b67bf4c89b1f1d11eee416febcf62be0a50
+  repo: davidcreated/cake_wallet
+  kind: commit
+  title: 'payjoin: exclude 0-conf inputs from receiver candidates (#3389)'
+  stars: 0
+  updated_at: '2026-07-10T15:23:28Z'
+  first_seen: '2026-07-26'
+  status: new
+  last_surfaced: '2026-07-26'
 - url: https://github.com/mimblewimble/grin/pull/3904
   repo: mimblewimble/grin
   kind: pr
@@ -1116,7 +1312,7 @@
   repo: cake-tech/cake_wallet
   kind: issue
   title: '6.0: payjoin notice on litecoin receive'
-  stars: 1808
+  stars: 1809
   updated_at: '2026-07-09T22:18:07Z'
   first_seen: '2026-07-10'
   status: new
@@ -1132,7 +1328,7 @@
   repo: cake-tech/cake_wallet
   kind: pr
   title: Set anti-fee-sniping locktime on bitcoin sends
-  stars: 1808
+  stars: 1809
   updated_at: '2026-07-09T14:36:12Z'
   first_seen: '2026-07-03'
   status: new
@@ -1140,7 +1336,7 @@
   repo: cake-tech/cake_wallet
   kind: issue
   title: Sparrow user payjoin fails because of changed nLocktime
-  stars: 1808
+  stars: 1809
   updated_at: '2026-07-08T19:00:39Z'
   first_seen: '2026-07-09'
   status: new
@@ -1148,7 +1344,7 @@
   repo: cake-tech/cake_wallet
   kind: issue
   title: 'RBF nsequence: non-canonical 0x01, only on inputs[0]'
-  stars: 1808
+  stars: 1809
   updated_at: '2026-07-08T18:37:09Z'
   first_seen: '2026-06-19'
   status: new
@@ -1185,19 +1381,11 @@
   updated_at: '2026-07-07T22:47:35Z'
   first_seen: '2026-07-08'
   status: new
-- url: https://github.com/cake-tech/cake_wallet/issues/3376
-  repo: cake-tech/cake_wallet
-  kind: issue
-  title: Bitcoin sends place change output deterministically last
-  stars: 1808
-  updated_at: '2026-07-07T18:43:56Z'
-  first_seen: '2026-07-08'
-  status: new
 - url: https://github.com/cake-tech/cake_wallet/issues/3361
   repo: cake-tech/cake_wallet
   kind: issue
   title: Bitcoin sends use nLockTime = 0 (anti-fee-sniping + payjoin fingerprint)
-  stars: 1808
+  stars: 1809
   updated_at: '2026-07-07T01:39:20Z'
   first_seen: '2026-07-03'
   status: new
@@ -1324,7 +1512,7 @@
   repo: siri-score/siriscore
   kind: pr
   title: 'feat: coinjoin and Payjoin awareness heuristics (H9, H10, H11)'
-  stars: 5
+  stars: 6
   updated_at: '2026-07-01T10:59:59Z'
   first_seen: '2026-07-02'
   status: new
@@ -1375,7 +1563,7 @@
   repo: cake-tech/cake_wallet
   kind: issue
   title: Upgrade payjoin bindings to use payjoin_ffi
-  stars: 1808
+  stars: 1809
   updated_at: '2026-06-30T15:04:30Z'
   first_seen: '2026-07-01'
   status: new
@@ -1399,7 +1587,7 @@
   repo: siri-score/siriscore
   kind: issue
   title: 'H11: Payjoin opportunity — detect BIP-77 endpoint in recipient BIP-21 URI'
-  stars: 5
+  stars: 6
   updated_at: '2026-06-30T12:20:11Z'
   first_seen: '2026-07-02'
   status: new
@@ -1415,7 +1603,7 @@
   repo: siri-score/siriscore
   kind: pr
   title: 'feat: coinjoin and Payjoin awareness heuristics (H9, H10, H11)'
-  stars: 5
+  stars: 6
   updated_at: '2026-06-30T12:19:26Z'
   first_seen: '2026-07-02'
   status: new
@@ -1507,7 +1695,7 @@
   repo: siri-score/siriscore
   kind: issue
   title: 'Glossary: keyword search and expanded terms for Learn panel'
-  stars: 5
+  stars: 6
   updated_at: '2026-06-26T07:42:54Z'
   first_seen: '2026-07-02'
   status: new
@@ -1641,7 +1829,7 @@
   repo: cake-tech/cake_wallet
   kind: issue
   title: Payjoin receiver skips UIH2 avoidance, always contributes unspent[0]
-  stars: 1808
+  stars: 1809
   updated_at: '2026-06-18T08:45:10Z'
   first_seen: '2026-06-19'
   status: new
@@ -1654,6 +1842,15 @@
   first_seen: '2026-07-23'
   status: new
   last_surfaced: '2026-07-23'
+- url: https://github.com/davidcreated/cake_wallet/commit/874d724c67ce7d804524e1f2a31f445998e5392a
+  repo: davidcreated/cake_wallet
+  kind: commit
+  title: 'fix: avoid UIH2 fingerprint in payjoin receiver input selection (#3304)'
+  stars: 0
+  updated_at: '2026-06-18T08:45:08Z'
+  first_seen: '2026-07-26'
+  status: new
+  last_surfaced: '2026-07-26'
 - url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/1945
   repo: SatoshiPortal/bullbitcoin-mobile
   kind: pr
@@ -2984,6 +3181,15 @@
   first_seen: '2026-07-23'
   status: new
   last_surfaced: '2026-07-23'
+- url: https://github.com/davidcreated/cake_wallet/commit/acf64a2468db2dd0431b077a1180370ffb11c23d
+  repo: davidcreated/cake_wallet
+  kind: commit
+  title: 'feat: Auto fetch wallet tokens in solana wallets (#2983)'
+  stars: 0
+  updated_at: '2026-05-04T17:55:18Z'
+  first_seen: '2026-07-26'
+  status: new
+  last_surfaced: '2026-07-26'
 - url: https://github.com/kaspanet/rusty-kaspa/issues/983
   repo: kaspanet/rusty-kaspa
   kind: issue
