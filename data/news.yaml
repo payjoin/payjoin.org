@@ -1,6 +1,14 @@
 # Payjoin mentions off GitHub (press, forums, newsletters).
 # Bot appends and refreshes facts; you own `status`.
 # status: new | watching | dismissed | promoted  (bot only adds 'new')
+- url: https://delvingbitcoin.org/t/2743
+  kind: forum
+  outlet: Delving Bitcoin
+  title: Silent Payments Sender - BIP352 plugin for Electrum
+  updated_at: '2026-07-26T15:30:35Z'
+  first_seen: '2026-07-27'
+  status: new
+  last_surfaced: '2026-07-27'
 - url: https://news.google.com/rss/articles/CBMijwFBVV95cUxPYkFzSGNrVm93eUpNUnZCb0RmUXZqVUVISTBzUzEwZTRKUWVrQ0JPNEllTFdDMjZtZVBXeHZ3elVPQVdKcTJ3OHVkNTBqT083UnE0dmw3ZWl0YUxsZEwySm5mUDA3czRzTGl1YWFQVXlFTWNSUHNXQ2E5QTFIMERrdThzMkJrVkFuZG9RajdhWQ?oc=5
   kind: article
   outlet: Traders Union
