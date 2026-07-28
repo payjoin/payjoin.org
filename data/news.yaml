@@ -115,6 +115,14 @@
   first_seen: '2026-07-23'
   status: new
   last_surfaced: '2026-07-23'
+- url: https://news.google.com/rss/articles/CBMitAFBVV95cUxQUWRfSjdZZjZqNXBoTU1ZMDEzNThkRTJnWlBuR25xU1FTcGFFQTU5aWhhSVN6Y1hIRDNOdUdYMHM2Y1kwbWhiZzVUUEJlNmtQNXQ1My1QclMtc2ZXeFJnbDY3N0tCblF0dWFOdWIzUU45cGFJOE5KOXNRTTZvbGdaX0tWLVFaMV9GX3kyaUhnV3o4QnRIMHhCRmVlYnhxZDVZOXUwaDdxMjJCYTV1d25SSGxVcjM?oc=5
+  kind: article
+  outlet: CryptoRank
+  title: Ben Allen Receives Maelstrom Bitcoin Developer Grant to Advance Payjoin Tech
+  updated_at: '2025-05-20T07:00:00Z'
+  first_seen: '2026-07-28'
+  status: new
+  last_surfaced: '2026-07-28'
 - url: https://delvingbitcoin.org/t/1584
   kind: forum
   outlet: Delving Bitcoin
