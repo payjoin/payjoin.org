@@ -179,6 +179,10 @@ const config: Config = {
           title: "More",
           items: [
             {
+              label: "Foundation",
+              to: "/foundation"
+            },
+            {
               label: "Press",
               to: "/press"
             },
