@@ -1,12 +1,10 @@
 # Daily digest
 
-_As of 2026-07-28 (UTC) · tracking 25 upstream items_
+_As of 2026-07-29 (UTC) · tracking 25 upstream items_
 
 ## Activity
 
-- **BTCPay Server** — [repo](https://github.com/ValeraFinebits/btcpayserver-payjoin-plugin) — updated 2026-07-28
-- **Wasabi** — [issue #13628](https://github.com/WalletWasabi/WalletWasabi/issues/13628) — 0→2 comments, updated 2026-07-28
-- **Cove** — [repo](https://github.com/bitcoinppl/cove) — updated 2026-07-28
+- **Cove** — [repo](https://github.com/bitcoinppl/cove) — updated 2026-07-29
 
 
 ## Check-in follow-through
@@ -35,14 +33,6 @@ _To follow up — committed, but no merged PRs/issues in public org repos since 
 
 _New since yesterday, plus anything that woke up after a quiet week. Full history: [Outside activity](outside.md)._
 
-- **cashubtc/cdk** ⭐226 — 1 PR · _back after a quiet spell_
-    - [PR](https://github.com/cashubtc/cdk/pull/2049) Payjoin
-- **SatoshiPortal/bullbitcoin-mobile** ⭐188 — 2 issues · _back after a quiet spell_
-    - [issue](https://github.com/SatoshiPortal/bullbitcoin-mobile/issues/947) Better Payjoin Status
-    - [issue](https://github.com/SatoshiPortal/bullbitcoin-mobile/issues/1584) Default payjoin settings
-- **SatoshiPortal/payjoin** ⭐0 — 1 commit
-    - [commit](https://github.com/SatoshiPortal/payjoin/commit/823aa3262587b26a64f8e0eb73f00ebcc4eb2145) fix: throw in PsbtInput create failed whole payjoin
-- **caarloshenriq/payjoin-blackpill-test** ⭐0 — 1 commit
-    - [commit](https://github.com/caarloshenriq/payjoin-blackpill-test/commit/515add7e4fde4ffc029f921b782ab0757d90341c) Switch payjoin dependency from path to git
-- **arminsabouri/walletfingerprints.info** ⭐0 — 1 commit
-    - [commit](https://github.com/arminsabouri/walletfingerprints.info/commit/9feac7843a7c82ee597761814656c6bfccd1d2a1) Make copy less payjoin-specific, keep payjoin link
+- **SatoshiPortal/bullbitcoin-mobile** ⭐188 — 1 PR, 1 commit
+    - [PR](https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2513) fix(payjoin): harden session recovery and convergence
+    - [commit](https://github.com/SatoshiPortal/bullbitcoin-mobile/commit/aa712f61aca0104c5bbc39ab91309818e2000751) fix: pin payjoin package to SatoshiPortal fork with payjoin crate at 1.0.0-rc.5
