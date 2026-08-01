@@ -6,10 +6,83 @@
   kind: pr
   title: 'feat(payjoin): complete Exchange integration and extract workspace package'
   stars: 188
-  updated_at: '2026-07-31T02:21:13Z'
+  updated_at: '2026-07-31T22:21:20Z'
   first_seen: '2026-07-31'
   status: new
   last_surfaced: '2026-07-31'
+- url: https://github.com/fungi-protocol/lumen-fingerprints/commit/c5baa04dbf61cfa5625b9a977fa74fa4785f8f66
+  repo: fungi-protocol/lumen-fingerprints
+  kind: commit
+  title: docs + license
+  stars: 0
+  updated_at: '2026-07-31T19:58:31Z'
+  first_seen: '2026-08-01'
+  status: new
+  last_surfaced: '2026-08-01'
+- url: https://github.com/bitcoin-core/HWI/pull/590
+  repo: bitcoin-core/HWI
+  kind: pr
+  title: 'trezor: restore support for external inputs'
+  stars: 596
+  updated_at: '2026-07-31T18:41:40Z'
+  first_seen: '2026-08-01'
+  status: new
+  last_surfaced: '2026-08-01'
+- url: https://github.com/Psycarlo/react-native-payjoin
+  repo: Psycarlo/react-native-payjoin
+  kind: repo
+  title: Scale Bitcoin, save fees, and preserve privacy with one tiny library
+  stars: 1
+  updated_at: '2026-07-31T17:41:53Z'
+  first_seen: '2026-08-01'
+  status: new
+  last_surfaced: '2026-08-01'
+- url: https://github.com/Psycarlo/react-native-payjoin/pull/2
+  repo: Psycarlo/react-native-payjoin
+  kind: pr
+  title: Release 0.1.1
+  stars: 1
+  updated_at: '2026-07-31T17:30:02Z'
+  first_seen: '2026-08-01'
+  status: new
+  last_surfaced: '2026-08-01'
+- url: https://github.com/cake-tech/cake_wallet/pull/3465
+  repo: cake-tech/cake_wallet
+  kind: pr
+  title: 'a11y: decorative/meaningful image semantics, labeled icon buttons, audible
+    addresses'
+  stars: 1821
+  updated_at: '2026-07-31T15:59:48Z'
+  first_seen: '2026-08-01'
+  status: new
+  last_surfaced: '2026-08-01'
+- url: https://github.com/BlueWallet/BlueWallet/issues/3659
+  repo: BlueWallet/BlueWallet
+  kind: issue
+  title: Dependency Dashboard
+  stars: 3247
+  updated_at: '2026-07-31T15:39:35Z'
+  first_seen: '2026-06-19'
+  status: new
+  last_surfaced: '2026-07-31'
+- url: https://github.com/satsigner/satsigner/pull/467
+  repo: satsigner/satsigner
+  kind: pr
+  title: 'feat: Payjoin, UTXO tooling, explorer, and UI polish'
+  stars: 52
+  updated_at: '2026-07-31T09:34:41Z'
+  first_seen: '2026-08-01'
+  status: new
+  last_surfaced: '2026-08-01'
+- url: https://github.com/Nervos-Community-Catalyst/CKBuilder-projects/issues/27
+  repo: Nervos-Community-Catalyst/CKBuilder-projects
+  kind: issue
+  title: fiber-payjoin-kit — Collaborative Payjoin Privacy for CKB Fiber Network
+  stars: 5
+  updated_at: '2026-07-31T08:28:42Z'
+  first_seen: '2026-07-30'
+  status: new
+  last_surfaced: '2026-07-30'
 - url: https://github.com/Horus-Org/payjoin-react-native
   repo: Horus-Org/payjoin-react-native
   kind: repo
@@ -19,16 +92,6 @@
   first_seen: '2026-07-23'
   status: new
   last_surfaced: '2026-07-31'
-  resurfaced: true
-- url: https://github.com/Nervos-Community-Catalyst/CKBuilder-projects/issues/27
-  repo: Nervos-Community-Catalyst/CKBuilder-projects
-  kind: issue
-  title: fiber-payjoin-kit — Collaborative Payjoin Privacy for CKB Fiber Network
-  stars: 5
-  updated_at: '2026-07-30T17:52:40Z'
-  first_seen: '2026-07-30'
-  status: new
-  last_surfaced: '2026-07-30'
 - url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2538
   repo: SatoshiPortal/bullbitcoin-mobile
   kind: pr
@@ -47,16 +110,6 @@
   first_seen: '2026-07-29'
   status: new
   last_surfaced: '2026-07-29'
-- url: https://github.com/BlueWallet/BlueWallet/issues/3659
-  repo: BlueWallet/BlueWallet
-  kind: issue
-  title: Dependency Dashboard
-  stars: 3247
-  updated_at: '2026-07-30T14:09:43Z'
-  first_seen: '2026-06-19'
-  status: new
-  last_surfaced: '2026-07-31'
-  resurfaced: true
 - url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2509
   repo: SatoshiPortal/bullbitcoin-mobile
   kind: pr
@@ -84,7 +137,6 @@
   first_seen: '2026-07-23'
   status: new
   last_surfaced: '2026-07-31'
-  resurfaced: true
 - url: https://github.com/SatoshiPortal/payjoin/commit/b292a978031892b830b4ce03fab7686efcce3c84
   repo: SatoshiPortal/payjoin
   kind: commit
@@ -116,7 +168,7 @@
   repo: cake-tech/cake_wallet
   kind: pr
   title: WIP Payjoin upgrade to native dart bindings via payjoin_ffi
-  stars: 1819
+  stars: 1821
   updated_at: '2026-07-29T19:35:15Z'
   first_seen: '2026-07-03'
   status: new
@@ -262,7 +314,7 @@
   repo: trezor/trezor-suite
   kind: issue
   title: Transaction type identification
-  stars: 1024
+  stars: 1027
   updated_at: '2026-07-27T18:44:29Z'
   first_seen: '2026-07-28'
   status: new
@@ -548,7 +600,7 @@
   repo: cake-tech/cake_wallet
   kind: issue
   title: Bitcoin sends place change output deterministically last
-  stars: 1819
+  stars: 1821
   updated_at: '2026-07-26T00:30:43Z'
   first_seen: '2026-07-08'
   status: new
@@ -557,7 +609,7 @@
   repo: cake-tech/cake_wallet
   kind: pr
   title: Shuffle change output on hardware wallet and Bitcoin Cash sends
-  stars: 1819
+  stars: 1821
   updated_at: '2026-07-26T00:30:42Z'
   first_seen: '2026-07-23'
   status: new
@@ -746,7 +798,7 @@
   repo: CypherBoxLLC/Cypher-Box
   kind: pr
   title: 'fix(send): verify LNURL-pay invoices + payjoin endpoints on custodial sends'
-  stars: 12
+  stars: 13
   updated_at: '2026-07-24T14:03:19Z'
   first_seen: '2026-07-22'
   status: new
@@ -881,7 +933,7 @@
   repo: cake-tech/cake_wallet
   kind: pr
   title: Set anti-fee-sniping locktime (exact-tip) on bitcoin sends
-  stars: 1819
+  stars: 1821
   updated_at: '2026-07-22T13:32:49Z'
   first_seen: '2026-07-10'
   status: new
@@ -890,7 +942,7 @@
   repo: cake-tech/cake_wallet
   kind: pr
   title: 'Privacy: randomized coin selection (BnB changeless + single random draw)'
-  stars: 1819
+  stars: 1821
   updated_at: '2026-07-22T13:29:57Z'
   first_seen: '2026-07-16'
   status: new
@@ -1254,7 +1306,7 @@
   repo: cake-tech/cake_wallet
   kind: pr
   title: Shuffle output order on bitcoin sends
-  stars: 1819
+  stars: 1821
   updated_at: '2026-07-20T00:13:31Z'
   first_seen: '2026-07-08'
   status: new
@@ -1364,7 +1416,7 @@
   repo: getfloresta/Floresta
   kind: issue
   title: sendrawtransaction accepts unsigned transactions and returns a txid
-  stars: 424
+  stars: 425
   updated_at: '2026-07-15T17:52:10Z'
   first_seen: '2026-06-19'
   status: new
@@ -1432,7 +1484,7 @@
   repo: cake-tech/cake_wallet
   kind: pr
   title: 'feat: pin all dependencies to git sources'
-  stars: 1819
+  stars: 1821
   updated_at: '2026-07-14T18:58:50Z'
   first_seen: '2026-07-09'
   status: new
@@ -1466,7 +1518,7 @@
   repo: cake-tech/cake_wallet
   kind: issue
   title: Bitcoin sends order inputs by BIP-69
-  stars: 1819
+  stars: 1821
   updated_at: '2026-07-14T02:39:04Z'
   first_seen: '2026-07-08'
   status: new
@@ -1474,7 +1526,7 @@
   repo: cake-tech/cake_wallet
   kind: pr
   title: Shuffle input order on bitcoin sends
-  stars: 1819
+  stars: 1821
   updated_at: '2026-07-14T02:39:04Z'
   first_seen: '2026-07-08'
   status: new
@@ -1662,7 +1714,7 @@
   repo: cake-tech/cake_wallet
   kind: issue
   title: Payjoin receiver can contribute unconfirmed (0-conf) inputs
-  stars: 1819
+  stars: 1821
   updated_at: '2026-07-10T15:23:30Z'
   first_seen: '2026-07-10'
   status: new
@@ -1670,7 +1722,7 @@
   repo: cake-tech/cake_wallet
   kind: pr
   title: 'payjoin: exclude 0-conf inputs from receiver candidates'
-  stars: 1819
+  stars: 1821
   updated_at: '2026-07-10T15:23:29Z'
   first_seen: '2026-07-10'
   status: new
@@ -1696,7 +1748,7 @@
   repo: mimblewimble/grin
   kind: pr
   title: 'docs: accurate input/output linking in grin4bitcoiners.md'
-  stars: 5093
+  stars: 5094
   updated_at: '2026-07-10T14:25:05Z'
   first_seen: '2026-07-11'
   status: new
@@ -1712,7 +1764,7 @@
   repo: cake-tech/cake_wallet
   kind: issue
   title: '6.0: payjoin notice on litecoin receive'
-  stars: 1819
+  stars: 1821
   updated_at: '2026-07-09T22:18:07Z'
   first_seen: '2026-07-10'
   status: new
@@ -1728,7 +1780,7 @@
   repo: cake-tech/cake_wallet
   kind: pr
   title: Set anti-fee-sniping locktime on bitcoin sends
-  stars: 1819
+  stars: 1821
   updated_at: '2026-07-09T14:36:12Z'
   first_seen: '2026-07-03'
   status: new
@@ -1736,7 +1788,7 @@
   repo: cake-tech/cake_wallet
   kind: issue
   title: Sparrow user payjoin fails because of changed nLocktime
-  stars: 1819
+  stars: 1821
   updated_at: '2026-07-08T19:00:39Z'
   first_seen: '2026-07-09'
   status: new
@@ -1744,7 +1796,7 @@
   repo: cake-tech/cake_wallet
   kind: issue
   title: 'RBF nsequence: non-canonical 0x01, only on inputs[0]'
-  stars: 1819
+  stars: 1821
   updated_at: '2026-07-08T18:37:09Z'
   first_seen: '2026-06-19'
   status: new
@@ -1785,7 +1837,7 @@
   repo: cake-tech/cake_wallet
   kind: issue
   title: Bitcoin sends use nLockTime = 0 (anti-fee-sniping + payjoin fingerprint)
-  stars: 1819
+  stars: 1821
   updated_at: '2026-07-07T01:39:20Z'
   first_seen: '2026-07-03'
   status: new
@@ -1963,7 +2015,7 @@
   repo: cake-tech/cake_wallet
   kind: issue
   title: Upgrade payjoin bindings to use payjoin_ffi
-  stars: 1819
+  stars: 1821
   updated_at: '2026-06-30T15:04:30Z'
   first_seen: '2026-07-01'
   status: new
@@ -2221,7 +2273,7 @@
   repo: cake-tech/cake_wallet
   kind: issue
   title: Payjoin receiver skips UIH2 avoidance, always contributes unspent[0]
-  stars: 1819
+  stars: 1821
   updated_at: '2026-06-18T08:45:10Z'
   first_seen: '2026-06-19'
   status: new
@@ -2569,7 +2621,7 @@
   repo: sparrowwallet/sparrow
   kind: issue
   title: PayJoin v2 (BIP77)
-  stars: 2052
+  stars: 2056
   updated_at: '2026-06-01T09:53:06Z'
   first_seen: '2026-06-19'
   status: new
@@ -2812,6 +2864,15 @@
   first_seen: '2026-07-23'
   status: new
   last_surfaced: '2026-07-23'
+- url: https://github.com/nekoguntai-castle/sanctuary/commit/31379041078cd32f121393fafd6fc8c5c80b9e00
+  repo: nekoguntai-castle/sanctuary
+  kind: commit
+  title: Tighten Payjoin attempt validation
+  stars: 0
+  updated_at: '2026-05-16T17:10:22Z'
+  first_seen: '2026-08-01'
+  status: new
+  last_surfaced: '2026-08-01'
 - url: https://github.com/Such-Software/hash-wallet/commit/04ed46aca35d8e9dc0b922a846ca72202098bf6b
   repo: Such-Software/hash-wallet
   kind: commit
