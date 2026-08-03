@@ -1,6 +1,42 @@
 # Payjoin activity outside tracked repos (issues, PRs, commits, new repos).
 # Bot appends and refreshes facts; you own `status`.
 # status: new | watching | dismissed | promoted  (bot only adds 'new')
+- url: https://github.com/BlueWallet/BlueWallet/issues/3659
+  repo: BlueWallet/BlueWallet
+  kind: issue
+  title: Dependency Dashboard
+  stars: 3251
+  updated_at: '2026-08-02T21:53:59Z'
+  first_seen: '2026-06-19'
+  status: new
+  last_surfaced: '2026-07-31'
+- url: https://github.com/23BeatsOff/limestone-city-bitcoin/pull/37
+  repo: 23BeatsOff/limestone-city-bitcoin
+  kind: pr
+  title: Add Privacy guides (batch 2 of the guide library)
+  stars: 0
+  updated_at: '2026-08-02T11:29:58Z'
+  first_seen: '2026-08-03'
+  status: new
+  last_surfaced: '2026-08-03'
+- url: https://github.com/23BeatsOff/limestone-city-bitcoin/commit/7f29ee072fbff8f6989835e5cf6409b9625bbbbd
+  repo: 23BeatsOff/limestone-city-bitcoin
+  kind: commit
+  title: Add Privacy guide category (3 guides) to Technical Resources
+  stars: 0
+  updated_at: '2026-08-02T11:17:39Z'
+  first_seen: '2026-08-03'
+  status: new
+  last_surfaced: '2026-08-03'
+- url: https://github.com/Limen-Neural/engram-parser/pull/44
+  repo: Limen-Neural/engram-parser
+  kind: pr
+  title: 'feat: GGUF v3 parser, IQ wire layouts, and T1 large MoE pilots (#7)'
+  stars: 0
+  updated_at: '2026-08-02T08:05:28Z'
+  first_seen: '2026-08-03'
+  status: new
+  last_surfaced: '2026-08-03'
 - url: https://github.com/RGB-WG/rgb-core/pull/288
   repo: RGB-WG/rgb-core
   kind: pr
@@ -10,7 +46,6 @@
   first_seen: '2026-06-19'
   status: new
   last_surfaced: '2026-08-02'
-  resurfaced: true
 - url: https://github.com/hotpixelgroup/bitcoin4plebs/commit/86593d9131ea17cdfe9429edabb8175d2cc78828
   repo: hotpixelgroup/bitcoin4plebs
   kind: commit
@@ -20,15 +55,6 @@
   first_seen: '2026-08-02'
   status: new
   last_surfaced: '2026-08-02'
-- url: https://github.com/BlueWallet/BlueWallet/issues/3659
-  repo: BlueWallet/BlueWallet
-  kind: issue
-  title: Dependency Dashboard
-  stars: 3248
-  updated_at: '2026-08-01T20:28:27Z'
-  first_seen: '2026-06-19'
-  status: new
-  last_surfaced: '2026-07-31'
 - url: https://github.com/hashhog/camlcoin/pull/6
   repo: hashhog/camlcoin
   kind: pr
@@ -38,7 +64,6 @@
   first_seen: '2026-07-22'
   status: new
   last_surfaced: '2026-08-02'
-  resurfaced: true
 - url: https://github.com/nekoguntai-castle/sanctuary/commit/1a9f9ad8532b505c763e4cd53269153688276aa4
   repo: nekoguntai-castle/sanctuary
   kind: commit
@@ -106,7 +131,7 @@
   repo: bitcoin-core/HWI
   kind: pr
   title: 'trezor: restore support for external inputs'
-  stars: 596
+  stars: 597
   updated_at: '2026-07-31T18:41:40Z'
   first_seen: '2026-08-01'
   status: new
@@ -370,7 +395,7 @@
   repo: trezor/trezor-suite
   kind: issue
   title: Transaction type identification
-  stars: 1027
+  stars: 1029
   updated_at: '2026-07-27T18:44:29Z'
   first_seen: '2026-07-28'
   status: new
@@ -1788,7 +1813,7 @@
   repo: mimblewimble/grin
   kind: pr
   title: 'docs: accurate input/output linking in grin4bitcoiners.md'
-  stars: 5094
+  stars: 5093
   updated_at: '2026-07-10T14:25:05Z'
   first_seen: '2026-07-11'
   status: new
@@ -2661,7 +2686,7 @@
   repo: sparrowwallet/sparrow
   kind: issue
   title: PayJoin v2 (BIP77)
-  stars: 2062
+  stars: 2066
   updated_at: '2026-06-01T09:53:06Z'
   first_seen: '2026-06-19'
   status: new
@@ -3561,7 +3586,7 @@
   repo: BitBoxSwiss/bitbox02-firmware
   kind: issue
   title: '[Feature Request] Add support for signing a PSBT with external inputs'
-  stars: 367
+  stars: 368
   updated_at: '2026-05-11T18:01:14Z'
   first_seen: '2026-07-23'
   status: new
