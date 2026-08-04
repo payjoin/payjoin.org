@@ -1,6 +1,25 @@
 # Payjoin activity outside tracked repos (issues, PRs, commits, new repos).
 # Bot appends and refreshes facts; you own `status`.
 # status: new | watching | dismissed | promoted  (bot only adds 'new')
+- url: https://github.com/sparrowwallet/sparrow/commit/32f7e58f9eb5a9bb89fc9db6d1125fe3e26b2099
+  repo: sparrowwallet/sparrow
+  kind: commit
+  title: improve validation of payjoin proposals, and accept a substituted payment
+    output where a change output is present
+  stars: 0
+  updated_at: '2026-08-04T11:14:56Z'
+  first_seen: '2026-08-04'
+  status: new
+  last_surfaced: '2026-08-04'
+- url: https://github.com/satsigner/satsigner/pull/467
+  repo: satsigner/satsigner
+  kind: pr
+  title: 'feat: Payjoin, UTXO tooling, explorer, and UI polish'
+  stars: 52
+  updated_at: '2026-08-04T08:32:52Z'
+  first_seen: '2026-08-01'
+  status: new
+  last_surfaced: '2026-08-01'
 - url: https://github.com/cake-tech/cake_wallet/pull/3482
   repo: cake-tech/cake_wallet
   kind: pr
@@ -10,20 +29,11 @@
   first_seen: '2026-08-04'
   status: new
   last_surfaced: '2026-08-04'
-- url: https://github.com/satsigner/satsigner/pull/467
-  repo: satsigner/satsigner
-  kind: pr
-  title: 'feat: Payjoin, UTXO tooling, explorer, and UI polish'
-  stars: 52
-  updated_at: '2026-08-03T20:07:31Z'
-  first_seen: '2026-08-01'
-  status: new
-  last_surfaced: '2026-08-01'
 - url: https://github.com/BlueWallet/BlueWallet/issues/3659
   repo: BlueWallet/BlueWallet
   kind: issue
   title: Dependency Dashboard
-  stars: 3254
+  stars: 3255
   updated_at: '2026-08-03T19:47:26Z'
   first_seen: '2026-06-19'
   status: new
@@ -37,7 +47,6 @@
   first_seen: '2026-07-28'
   status: new
   last_surfaced: '2026-08-04'
-  resurfaced: true
 - url: https://github.com/rust-lang/crates.io-index/commit/1277b61c4b95317f4fda189efe9e7d65e19ab6e9
   repo: rust-lang/crates.io-index
   kind: commit
@@ -1858,7 +1867,7 @@
   repo: bitcoinaustria/kassiber
   kind: pr
   title: Improve regtest demo realism
-  stars: 7
+  stars: 6
   updated_at: '2026-07-10T06:43:58Z'
   first_seen: '2026-07-11'
   status: new
@@ -2091,7 +2100,7 @@
   repo: bitcoinaustria/kassiber
   kind: issue
   title: Coinjoin / equal-output mix detection as a non-authoritative review hint
-  stars: 7
+  stars: 6
   updated_at: '2026-07-01T05:53:23Z'
   first_seen: '2026-07-01'
   status: new
@@ -2723,7 +2732,7 @@
   repo: sparrowwallet/sparrow
   kind: issue
   title: PayJoin v2 (BIP77)
-  stars: 2070
+  stars: 2071
   updated_at: '2026-06-01T09:53:06Z'
   first_seen: '2026-06-19'
   status: new

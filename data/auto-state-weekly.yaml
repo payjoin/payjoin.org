@@ -33,13 +33,13 @@ https://github.com/GaloyMoney/bria/issues/266:
   title: Use Payjoin to Improve Batching
 https://github.com/ValeraFinebits/btcpayserver-payjoin-plugin:
   kind: repo
-  last_activity: '2026-07-28T10:29:48Z'
-  open_issues: 14
+  last_activity: '2026-08-04T10:23:35Z'
+  open_issues: 16
   state: ACTIVE
 https://github.com/WalletWasabi/WalletWasabi/issues/13628:
-  comments: 2
+  comments: 4
   kind: issue
-  last_activity: '2026-07-28T04:42:46Z'
+  last_activity: '2026-07-31T16:09:56Z'
   state: OPEN
   title: BIP-77 support
 https://github.com/andreasgriffin/bitcoin-safe/issues/221:
@@ -69,8 +69,8 @@ https://github.com/bitcoindevkit/bdk-cli/pull/156:
   title: 'add payjoin support '
 https://github.com/bitcoinppl/cove:
   kind: repo
-  last_activity: '2026-07-28T03:39:53Z'
-  open_issues: 86
+  last_activity: '2026-08-02T05:19:46Z'
+  open_issues: 90
   state: ACTIVE
 https://github.com/blinkbitcoin/blink-mobile/issues/3355:
   comments: 2
