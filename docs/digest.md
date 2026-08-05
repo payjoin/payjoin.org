@@ -1,10 +1,11 @@
 # Daily digest
 
-_As of 2026-08-04 (UTC) · tracking 25 upstream items_
+_As of 2026-08-05 (UTC) · tracking 25 upstream items_
 
 ## Activity
 
-- **BTCPay Server** — [repo](https://github.com/ValeraFinebits/btcpayserver-payjoin-plugin) — updated 2026-08-04
+- **Cove** — [repo](https://github.com/bitcoinppl/cove) — updated 2026-08-04
+- **LDK-Node** — [pull #746](https://github.com/lightningdevkit/ldk-node/pull/746) — updated 2026-08-04
 
 
 ## Check-in follow-through
@@ -20,7 +21,7 @@ _2026-07-27 · [thread](https://github.com/orgs/payjoin/discussions/1765)_
 - **DanGould** — committed: "- Getting the Wasabi integration PRs up (prolific integrations are my committed north star for the year), and work in general across the…"
     - shipped: [payjoin.org#147](https://github.com/payjoin/payjoin.org/pull/147), [rust-payjoin#1777](https://github.com/payjoin/rust-payjoin/pull/1777), [rust-payjoin#1771](https://github.com/payjoin/rust-payjoin/pull/1771), [rust-payjoin#1774](https://github.com/payjoin/rust-payjoin/issues/1774)
 - **spacebear21** — committed: "- #1766 - 1.0 release ™️"
-    - shipped: [rust-payjoin#1786](https://github.com/payjoin/rust-payjoin/pull/1786), [rust-payjoin#1782](https://github.com/payjoin/rust-payjoin/pull/1782), [rust-payjoin#1770](https://github.com/payjoin/rust-payjoin/pull/1770), [rust-payjoin#1781](https://github.com/payjoin/rust-payjoin/issues/1781)
+    - shipped: [rust-payjoin#1786](https://github.com/payjoin/rust-payjoin/pull/1786), [rust-payjoin#1782](https://github.com/payjoin/rust-payjoin/pull/1782), [rust-payjoin#1770](https://github.com/payjoin/rust-payjoin/pull/1770), [rust-payjoin#1788](https://github.com/payjoin/rust-payjoin/issues/1788), [rust-payjoin#1781](https://github.com/payjoin/rust-payjoin/issues/1781)
 - **xstoicunicornx** — committed: "- Continue cake wallet testing - Issue review"
     - shipped: [rust-payjoin#1710](https://github.com/payjoin/rust-payjoin/pull/1710), [rust-payjoin#1653](https://github.com/payjoin/rust-payjoin/pull/1653)
 - **zealsham** — committed: "- Follow up on #1754 - Review #1769 starting of with those tasks to get my engine running again, will definitely do more than that this…"
@@ -30,10 +31,3 @@ _To follow up — committed, but no merged PRs/issues in public org repos since 
 
 - **caarloshenriq** — "- Write CI for…"
 - **zealsham** — "- Follow up on #1754 - Review #1769 starting of with those tasks to get my engine running…"
-
-## Outside activity
-
-_New since yesterday, plus anything that woke up after a quiet week. Full history: [Outside activity](outside.md)._
-
-- **sparrowwallet/sparrow** ⭐0 — 1 commit
-    - [commit](https://github.com/sparrowwallet/sparrow/commit/32f7e58f9eb5a9bb89fc9db6d1125fe3e26b2099) improve validation of payjoin proposals, and accept a substituted payment…

@@ -1,6 +1,42 @@
 # Payjoin activity outside tracked repos (issues, PRs, commits, new repos).
 # Bot appends and refreshes facts; you own `status`.
 # status: new | watching | dismissed | promoted  (bot only adds 'new')
+- url: https://github.com/satsigner/satsigner/pull/467
+  repo: satsigner/satsigner
+  kind: pr
+  title: 'feat: Payjoin, UTXO tooling, explorer, and UI polish'
+  stars: 52
+  updated_at: '2026-08-04T23:27:21Z'
+  first_seen: '2026-08-01'
+  status: new
+  last_surfaced: '2026-08-01'
+- url: https://github.com/cake-tech/cake_wallet/pull/3363
+  repo: cake-tech/cake_wallet
+  kind: pr
+  title: WIP Payjoin upgrade to native dart bindings via payjoin_ffi
+  stars: 1825
+  updated_at: '2026-08-04T19:42:55Z'
+  first_seen: '2026-07-03'
+  status: new
+  last_surfaced: '2026-07-30'
+- url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2545
+  repo: SatoshiPortal/bullbitcoin-mobile
+  kind: pr
+  title: 'feat(payjoin): complete Exchange integration and extract workspace package'
+  stars: 188
+  updated_at: '2026-08-04T18:50:57Z'
+  first_seen: '2026-07-31'
+  status: new
+  last_surfaced: '2026-07-31'
+- url: https://github.com/Nervos-Community-Catalyst/CKBuilder-projects/issues/27
+  repo: Nervos-Community-Catalyst/CKBuilder-projects
+  kind: issue
+  title: fiber-payjoin-kit — Collaborative Payjoin Privacy for CKB Fiber Network
+  stars: 6
+  updated_at: '2026-08-04T17:01:00Z'
+  first_seen: '2026-07-30'
+  status: new
+  last_surfaced: '2026-07-30'
 - url: https://github.com/sparrowwallet/sparrow/commit/32f7e58f9eb5a9bb89fc9db6d1125fe3e26b2099
   repo: sparrowwallet/sparrow
   kind: commit
@@ -11,15 +47,6 @@
   first_seen: '2026-08-04'
   status: new
   last_surfaced: '2026-08-04'
-- url: https://github.com/satsigner/satsigner/pull/467
-  repo: satsigner/satsigner
-  kind: pr
-  title: 'feat: Payjoin, UTXO tooling, explorer, and UI polish'
-  stars: 52
-  updated_at: '2026-08-04T08:32:52Z'
-  first_seen: '2026-08-01'
-  status: new
-  last_surfaced: '2026-08-01'
 - url: https://github.com/cake-tech/cake_wallet/pull/3482
   repo: cake-tech/cake_wallet
   kind: pr
@@ -33,7 +60,7 @@
   repo: BlueWallet/BlueWallet
   kind: issue
   title: Dependency Dashboard
-  stars: 3255
+  stars: 3256
   updated_at: '2026-08-03T19:47:26Z'
   first_seen: '2026-06-19'
   status: new
@@ -56,24 +83,6 @@
   first_seen: '2026-08-04'
   status: new
   last_surfaced: '2026-08-04'
-- url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2545
-  repo: SatoshiPortal/bullbitcoin-mobile
-  kind: pr
-  title: 'feat(payjoin): complete Exchange integration and extract workspace package'
-  stars: 188
-  updated_at: '2026-08-03T16:44:33Z'
-  first_seen: '2026-07-31'
-  status: new
-  last_surfaced: '2026-07-31'
-- url: https://github.com/Nervos-Community-Catalyst/CKBuilder-projects/issues/27
-  repo: Nervos-Community-Catalyst/CKBuilder-projects
-  kind: issue
-  title: fiber-payjoin-kit — Collaborative Payjoin Privacy for CKB Fiber Network
-  stars: 6
-  updated_at: '2026-08-03T15:59:51Z'
-  first_seen: '2026-07-30'
-  status: new
-  last_surfaced: '2026-07-30'
 - url: https://github.com/ThreatFlux/threatflux-binary-analysis/pull/16
   repo: ThreatFlux/threatflux-binary-analysis
   kind: pr
@@ -204,7 +213,7 @@
   repo: bitcoin-core/HWI
   kind: pr
   title: 'trezor: restore support for external inputs'
-  stars: 597
+  stars: 599
   updated_at: '2026-07-31T18:41:40Z'
   first_seen: '2026-08-01'
   status: new
@@ -298,15 +307,6 @@
   stars: 0
   updated_at: '2026-07-29T22:48:52Z'
   first_seen: '2026-07-30'
-  status: new
-  last_surfaced: '2026-07-30'
-- url: https://github.com/cake-tech/cake_wallet/pull/3363
-  repo: cake-tech/cake_wallet
-  kind: pr
-  title: WIP Payjoin upgrade to native dart bindings via payjoin_ffi
-  stars: 1825
-  updated_at: '2026-07-29T19:35:15Z'
-  first_seen: '2026-07-03'
   status: new
   last_surfaced: '2026-07-30'
 - url: https://github.com/mimblewimble/grin-wallet/pull/754
@@ -2732,7 +2732,7 @@
   repo: sparrowwallet/sparrow
   kind: issue
   title: PayJoin v2 (BIP77)
-  stars: 2071
+  stars: 2072
   updated_at: '2026-06-01T09:53:06Z'
   first_seen: '2026-06-19'
   status: new
