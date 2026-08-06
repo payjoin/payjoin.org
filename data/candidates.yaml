@@ -1,24 +1,107 @@
 # Payjoin activity outside tracked repos (issues, PRs, commits, new repos).
 # Bot appends and refreshes facts; you own `status`.
 # status: new | watching | dismissed | promoted  (bot only adds 'new')
+- url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2561
+  repo: SatoshiPortal/bullbitcoin-mobile
+  kind: pr
+  title: 'fix(security): audit remediations, and remove Ark'
+  stars: 188
+  updated_at: '2026-08-06T02:46:45Z'
+  first_seen: '2026-08-06'
+  status: new
+  last_surfaced: '2026-08-06'
+- url: https://github.com/BlueWallet/BlueWallet/issues/3659
+  repo: BlueWallet/BlueWallet
+  kind: issue
+  title: Dependency Dashboard
+  stars: 3258
+  updated_at: '2026-08-05T22:07:24Z'
+  first_seen: '2026-06-19'
+  status: new
+  last_surfaced: '2026-07-31'
+- url: https://github.com/rust-lang/crates.io-index/commit/ea9e2bbce3ca8c38212a0b77b8a9c628d787f668
+  repo: rust-lang/crates.io-index
+  kind: commit
+  title: Update crate `payjoin-cli`
+  stars: 0
+  updated_at: '2026-08-05T19:39:34Z'
+  first_seen: '2026-08-06'
+  status: new
+  last_surfaced: '2026-08-06'
+- url: https://github.com/rust-lang/crates.io-index/commit/1e260bfba41b789f770544a52f89dd6ca3da6322
+  repo: rust-lang/crates.io-index
+  kind: commit
+  title: Update crate `payjoin`
+  stars: 0
+  updated_at: '2026-08-05T19:26:15Z'
+  first_seen: '2026-08-06'
+  status: new
+  last_surfaced: '2026-08-06'
+- url: https://github.com/fungi-protocol/docs/pull/11
+  repo: fungi-protocol/docs
+  kind: pr
+  title: Add honest overview
+  stars: 2
+  updated_at: '2026-08-05T19:15:33Z'
+  first_seen: '2026-08-06'
+  status: new
+  last_surfaced: '2026-08-06'
+- url: https://github.com/RadVladdy/bitcoinkeys-guide/commit/1fba1d8562ae99d0d648128a47f38ac55781c531
+  repo: RadVladdy/bitcoinkeys-guide
+  kind: commit
+  title: The optional privacy tools get pages instead of a footnote
+  stars: 0
+  updated_at: '2026-08-05T18:03:46Z'
+  first_seen: '2026-08-06'
+  status: new
+  last_surfaced: '2026-08-06'
+- url: https://github.com/cake-tech/cake_wallet/pull/3363
+  repo: cake-tech/cake_wallet
+  kind: pr
+  title: WIP Payjoin upgrade to native dart bindings via payjoin_ffi
+  stars: 1826
+  updated_at: '2026-08-05T16:14:58Z'
+  first_seen: '2026-07-03'
+  status: new
+  last_surfaced: '2026-08-06'
+  resurfaced: true
+- url: https://github.com/cake-tech/cake_wallet/pull/3465
+  repo: cake-tech/cake_wallet
+  kind: pr
+  title: 'a11y: decorative/meaningful image semantics, labeled icon buttons, audible
+    addresses'
+  stars: 1826
+  updated_at: '2026-08-05T10:19:09Z'
+  first_seen: '2026-08-01'
+  status: new
+  last_surfaced: '2026-08-01'
 - url: https://github.com/satsigner/satsigner/pull/467
   repo: satsigner/satsigner
   kind: pr
   title: 'feat: Payjoin, UTXO tooling, explorer, and UI polish'
   stars: 52
-  updated_at: '2026-08-04T23:27:21Z'
+  updated_at: '2026-08-05T08:59:03Z'
   first_seen: '2026-08-01'
   status: new
   last_surfaced: '2026-08-01'
-- url: https://github.com/cake-tech/cake_wallet/pull/3363
+- url: https://github.com/cake-tech/cake_wallet/commit/930397cbe66c48f083431ec6afbeeb27cb0737ed
+  repo: cake-tech/cake_wallet
+  kind: commit
+  title: 'a11y: receive flow semantics (copy control, pickers, selection state) (#3467)'
+  stars: 0
+  updated_at: '2026-08-05T07:16:58Z'
+  first_seen: '2026-08-06'
+  status: new
+  last_surfaced: '2026-08-06'
+- url: https://github.com/cake-tech/cake_wallet/pull/3482
   repo: cake-tech/cake_wallet
   kind: pr
-  title: WIP Payjoin upgrade to native dart bindings via payjoin_ffi
-  stars: 1825
-  updated_at: '2026-08-04T19:42:55Z'
-  first_seen: '2026-07-03'
+  title: 'security: fail closed when the app is paused behind an in-app browser'
+  stars: 1826
+  updated_at: '2026-08-05T06:43:37Z'
+  first_seen: '2026-08-04'
   status: new
-  last_surfaced: '2026-07-30'
+  last_surfaced: '2026-08-04'
 - url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2545
   repo: SatoshiPortal/bullbitcoin-mobile
   kind: pr
@@ -47,24 +130,24 @@
   first_seen: '2026-08-04'
   status: new
   last_surfaced: '2026-08-04'
-- url: https://github.com/cake-tech/cake_wallet/pull/3482
-  repo: cake-tech/cake_wallet
-  kind: pr
-  title: 'security: fail closed when the app is paused behind an in-app browser'
-  stars: 1825
-  updated_at: '2026-08-03T22:20:48Z'
-  first_seen: '2026-08-04'
+- url: https://github.com/satsigner/satsigner/commit/f4ae1024449f5e4a64c99826ea9fbed9087e7d71
+  repo: satsigner/satsigner
+  kind: commit
+  title: 'fix(payjoin): key receiver checkInputsNotOwned by outpoint'
+  stars: 0
+  updated_at: '2026-08-04T08:32:49Z'
+  first_seen: '2026-08-06'
   status: new
-  last_surfaced: '2026-08-04'
-- url: https://github.com/BlueWallet/BlueWallet/issues/3659
-  repo: BlueWallet/BlueWallet
-  kind: issue
-  title: Dependency Dashboard
-  stars: 3256
-  updated_at: '2026-08-03T19:47:26Z'
-  first_seen: '2026-06-19'
+  last_surfaced: '2026-08-06'
+- url: https://github.com/satsigner/satsigner/commit/a63d7d48bd4ca96935b77ab6acca51d138fe3d2f
+  repo: satsigner/satsigner
+  kind: commit
+  title: 'refactor(payjoin): align utxo.group i18n with master'
+  stars: 0
+  updated_at: '2026-08-04T08:26:37Z'
+  first_seen: '2026-08-06'
   status: new
-  last_surfaced: '2026-07-31'
+  last_surfaced: '2026-08-06'
 - url: https://github.com/trezor/trezor-suite/issues/7851
   repo: trezor/trezor-suite
   kind: issue
@@ -74,6 +157,15 @@
   first_seen: '2026-07-28'
   status: new
   last_surfaced: '2026-08-04'
+- url: https://github.com/satsigner/satsigner/commit/5efc626f495850b986d5eb04e7024eef99b70634
+  repo: satsigner/satsigner
+  kind: commit
+  title: 'refactor(payjoin): delete dead usePayjoinSender hook'
+  stars: 0
+  updated_at: '2026-08-03T19:15:10Z'
+  first_seen: '2026-08-06'
+  status: new
+  last_surfaced: '2026-08-06'
 - url: https://github.com/rust-lang/crates.io-index/commit/1277b61c4b95317f4fda189efe9e7d65e19ab6e9
   repo: rust-lang/crates.io-index
   kind: commit
@@ -83,6 +175,24 @@
   first_seen: '2026-08-04'
   status: new
   last_surfaced: '2026-08-04'
+- url: https://github.com/satsigner/satsigner/commit/2579fa81b8dc38b9d1d8f1f3746d18c74812eb11
+  repo: satsigner/satsigner
+  kind: commit
+  title: 'fix(payjoin): anchor payee amount and bound sender change in validator'
+  stars: 0
+  updated_at: '2026-08-03T18:45:13Z'
+  first_seen: '2026-08-06'
+  status: new
+  last_surfaced: '2026-08-06'
+- url: https://github.com/satsigner/satsigner/commit/58ec167c45464179f238df320704a95f8b579a2a
+  repo: satsigner/satsigner
+  kind: commit
+  title: 'fix(payjoin): enforce BIP78 receiver checks on the online path'
+  stars: 0
+  updated_at: '2026-08-03T18:01:10Z'
+  first_seen: '2026-08-06'
+  status: new
+  last_surfaced: '2026-08-06'
 - url: https://github.com/ThreatFlux/threatflux-binary-analysis/pull/16
   repo: ThreatFlux/threatflux-binary-analysis
   kind: pr
@@ -101,6 +211,15 @@
   first_seen: '2026-07-30'
   status: new
   last_surfaced: '2026-07-30'
+- url: https://github.com/satsigner/satsigner/commit/a38d2b3446b74b26b24bb9729b8f9bf97585480a
+  repo: satsigner/satsigner
+  kind: commit
+  title: Merge upstream/master into feature/payjoin
+  stars: 0
+  updated_at: '2026-08-03T12:43:27Z'
+  first_seen: '2026-08-06'
+  status: new
+  last_surfaced: '2026-08-06'
 - url: https://github.com/rmems/engram-parser/pull/44
   repo: rmems/engram-parser
   kind: pr
@@ -173,6 +292,15 @@
   first_seen: '2026-08-02'
   status: new
   last_surfaced: '2026-08-02'
+- url: https://github.com/satsigner/satsigner/commit/372ff68afa1ee90e5ca9d0b6e1c1922a02e1759e
+  repo: satsigner/satsigner
+  kind: commit
+  title: 'refactor(payjoin): replace workspace package with react-native-payjoin 0.2.0'
+  stars: 0
+  updated_at: '2026-08-01T16:18:33Z'
+  first_seen: '2026-08-06'
+  status: new
+  last_surfaced: '2026-08-06'
 - url: https://github.com/Psycarlo/react-native-payjoin
   repo: Psycarlo/react-native-payjoin
   kind: repo
@@ -227,16 +355,51 @@
   first_seen: '2026-08-01'
   status: new
   last_surfaced: '2026-08-01'
-- url: https://github.com/cake-tech/cake_wallet/pull/3465
-  repo: cake-tech/cake_wallet
-  kind: pr
-  title: 'a11y: decorative/meaningful image semantics, labeled icon buttons, audible
-    addresses'
-  stars: 1825
-  updated_at: '2026-07-31T15:59:48Z'
-  first_seen: '2026-08-01'
+- url: https://github.com/satsigner/satsigner/commit/72349852a4c2b3e9f9c6478f5405f006ecfb8e0c
+  repo: satsigner/satsigner
+  kind: commit
+  title: Merge upstream/master into feature/payjoin
+  stars: 0
+  updated_at: '2026-07-31T09:23:53Z'
+  first_seen: '2026-08-06'
   status: new
-  last_surfaced: '2026-08-01'
+  last_surfaced: '2026-08-06'
+- url: https://github.com/satsigner/satsigner/commit/af37eaae631b817e21ca88b90d1bc4d8f888234c
+  repo: satsigner/satsigner
+  kind: commit
+  title: 'feat(payjoin): add Signet live roundtrip developer diagnostics'
+  stars: 0
+  updated_at: '2026-07-31T06:00:08Z'
+  first_seen: '2026-08-06'
+  status: new
+  last_surfaced: '2026-08-06'
+- url: https://github.com/satsigner/satsigner/commit/a4d817fc955f038fc3a7741e89b736b0328fd3ee
+  repo: satsigner/satsigner
+  kind: commit
+  title: 'feat(payjoin): wire manual offline PSBT handoff into send and receive'
+  stars: 0
+  updated_at: '2026-07-31T06:00:08Z'
+  first_seen: '2026-08-06'
+  status: new
+  last_surfaced: '2026-08-06'
+- url: https://github.com/satsigner/satsigner/commit/e956384dc9d00a3ad080fc15fa13b0f86fb85779
+  repo: satsigner/satsigner
+  kind: commit
+  title: 'feat(payjoin): add directory vs manual coordination mode settings'
+  stars: 0
+  updated_at: '2026-07-31T06:00:08Z'
+  first_seen: '2026-08-06'
+  status: new
+  last_surfaced: '2026-08-06'
+- url: https://github.com/satsigner/satsigner/commit/40a1cf1fa92e33d62fbba7ba3dc029c7f300b0fc
+  repo: satsigner/satsigner
+  kind: commit
+  title: 'feat(payjoin): add manual offline receiver contribute/finalize APIs'
+  stars: 0
+  updated_at: '2026-07-31T06:00:07Z'
+  first_seen: '2026-08-06'
+  status: new
+  last_surfaced: '2026-08-06'
 - url: https://github.com/Horus-Org/payjoin-react-native
   repo: Horus-Org/payjoin-react-native
   kind: repo
@@ -518,6 +681,15 @@
   first_seen: '2026-07-28'
   status: new
   last_surfaced: '2026-07-28'
+- url: https://github.com/satsigner/satsigner/commit/693063525d52ba766a0c57ad871663362d428857
+  repo: satsigner/satsigner
+  kind: commit
+  title: 'feat(payjoin): harden sessions with TTL and receiver state helpers'
+  stars: 0
+  updated_at: '2026-07-27T11:55:49Z'
+  first_seen: '2026-08-06'
+  status: new
+  last_surfaced: '2026-08-06'
 - url: https://github.com/joinmarket-webui/jamdocs/pull/57
   repo: joinmarket-webui/jamdocs
   kind: pr
@@ -727,7 +899,7 @@
   repo: cake-tech/cake_wallet
   kind: issue
   title: Bitcoin sends place change output deterministically last
-  stars: 1825
+  stars: 1826
   updated_at: '2026-07-26T00:30:43Z'
   first_seen: '2026-07-08'
   status: new
@@ -736,7 +908,7 @@
   repo: cake-tech/cake_wallet
   kind: pr
   title: Shuffle change output on hardware wallet and Bitcoin Cash sends
-  stars: 1825
+  stars: 1826
   updated_at: '2026-07-26T00:30:42Z'
   first_seen: '2026-07-23'
   status: new
@@ -979,7 +1151,7 @@
   repo: joinmarket-ng/joinmarket-ng
   kind: issue
   title: 'The Black Hole: 6 Mix Depth Concept [4H]'
-  stars: 65
+  stars: 66
   updated_at: '2026-07-23T23:10:41Z'
   first_seen: '2026-07-23'
   status: new
@@ -1047,6 +1219,96 @@
   first_seen: '2026-07-18'
   status: new
   last_surfaced: '2026-07-23'
+- url: https://github.com/satsigner/satsigner/commit/fb82100a6102b3ad6607e9a44d455667f75cf29e
+  repo: satsigner/satsigner
+  kind: commit
+  title: 'refactor: simplify payjoin receive hook and screen'
+  stars: 0
+  updated_at: '2026-07-23T03:12:07Z'
+  first_seen: '2026-08-06'
+  status: new
+  last_surfaced: '2026-08-06'
+- url: https://github.com/satsigner/satsigner/commit/555fe6a88f0d62b9817c6debca44740167e76bc5
+  repo: satsigner/satsigner
+  kind: commit
+  title: 'refactor: extract payjoin receive resume and QR helpers'
+  stars: 0
+  updated_at: '2026-07-23T03:12:06Z'
+  first_seen: '2026-08-06'
+  status: new
+  last_surfaced: '2026-08-06'
+- url: https://github.com/satsigner/satsigner/commit/5472d776064ff08bb665e58c22bc8f941026b957
+  repo: satsigner/satsigner
+  kind: commit
+  title: 'fix: clear typecheck and ultracite issues in payjoin path'
+  stars: 0
+  updated_at: '2026-07-23T03:12:01Z'
+  first_seen: '2026-08-06'
+  status: new
+  last_surfaced: '2026-08-06'
+- url: https://github.com/satsigner/satsigner/commit/5b7bedc0b74cd4cbbd80b59c3a7427779ff9e811
+  repo: satsigner/satsigner
+  kind: commit
+  title: 'chore: add payjoin Android meminfo snapshot script'
+  stars: 0
+  updated_at: '2026-07-23T02:03:59Z'
+  first_seen: '2026-08-06'
+  status: new
+  last_surfaced: '2026-08-06'
+- url: https://github.com/satsigner/satsigner/commit/0d1364c87fdb55c6c94154553d50b718f90c58a3
+  repo: satsigner/satsigner
+  kind: commit
+  title: 'feat: show payjoin invoice details on send preview'
+  stars: 0
+  updated_at: '2026-07-23T02:03:59Z'
+  first_seen: '2026-08-06'
+  status: new
+  last_surfaced: '2026-08-06'
+- url: https://github.com/satsigner/satsigner/commit/858cfe3e4128765d1b1e71fe6ee08c341257f4bb
+  repo: satsigner/satsigner
+  kind: commit
+  title: 'fix: pin receive address to the active payjoin session'
+  stars: 0
+  updated_at: '2026-07-23T02:03:59Z'
+  first_seen: '2026-08-06'
+  status: new
+  last_surfaced: '2026-08-06'
+- url: https://github.com/satsigner/satsigner/commit/3d3996b5c15cbbb61ec90522358cb090db21552d
+  repo: satsigner/satsigner
+  kind: commit
+  title: 'fix: harden payjoin resume and dead-session fallback'
+  stars: 0
+  updated_at: '2026-07-23T02:03:59Z'
+  first_seen: '2026-08-06'
+  status: new
+  last_surfaced: '2026-08-06'
+- url: https://github.com/satsigner/satsigner/commit/50cc445d5f5cbf96a030d372be40b53a84ef27d0
+  repo: satsigner/satsigner
+  kind: commit
+  title: 'feat: parse BIP77 EX expiry from payjoin endpoints'
+  stars: 0
+  updated_at: '2026-07-23T02:03:58Z'
+  first_seen: '2026-08-06'
+  status: new
+  last_surfaced: '2026-08-06'
+- url: https://github.com/satsigner/satsigner/commit/beeba5c72b7e1fcb4443de415bf5b968356041fe
+  repo: satsigner/satsigner
+  kind: commit
+  title: 'fix: wait for fee estimate before URI UTXO auto-select'
+  stars: 0
+  updated_at: '2026-07-23T02:03:58Z'
+  first_seen: '2026-08-06'
+  status: new
+  last_surfaced: '2026-08-06'
+- url: https://github.com/satsigner/satsigner/commit/b6c9ff22b45cf3330b357c64db5e69c3e4b1c48b
+  repo: satsigner/satsigner
+  kind: commit
+  title: 'fix: strip terminal payjoin blobs and clear expired sessions'
+  stars: 0
+  updated_at: '2026-07-23T02:03:58Z'
+  first_seen: '2026-08-06'
+  status: new
+  last_surfaced: '2026-08-06'
 - url: https://github.com/arminsabouri/walletfingerprints.info/commit/9feac7843a7c82ee597761814656c6bfccd1d2a1
   repo: arminsabouri/walletfingerprints.info
   kind: commit
@@ -1060,7 +1322,7 @@
   repo: cake-tech/cake_wallet
   kind: pr
   title: Set anti-fee-sniping locktime (exact-tip) on bitcoin sends
-  stars: 1825
+  stars: 1826
   updated_at: '2026-07-22T13:32:49Z'
   first_seen: '2026-07-10'
   status: new
@@ -1069,11 +1331,56 @@
   repo: cake-tech/cake_wallet
   kind: pr
   title: 'Privacy: randomized coin selection (BnB changeless + single random draw)'
-  stars: 1825
+  stars: 1826
   updated_at: '2026-07-22T13:29:57Z'
   first_seen: '2026-07-16'
   status: new
   last_surfaced: '2026-07-23'
+- url: https://github.com/satsigner/satsigner/commit/f232e5c3ef9a52819fae9e0c30be3fb6dcac8b23
+  repo: satsigner/satsigner
+  kind: commit
+  title: 'test: expand Maestro payjoin e2e flows'
+  stars: 0
+  updated_at: '2026-07-22T10:21:38Z'
+  first_seen: '2026-08-06'
+  status: new
+  last_surfaced: '2026-08-06'
+- url: https://github.com/satsigner/satsigner/commit/cbf34b7363d86249994e666e7d66afb115004098
+  repo: satsigner/satsigner
+  kind: commit
+  title: 'feat: improve payjoin send preview and negotiation UI'
+  stars: 0
+  updated_at: '2026-07-22T10:21:38Z'
+  first_seen: '2026-08-06'
+  status: new
+  last_surfaced: '2026-08-06'
+- url: https://github.com/satsigner/satsigner/commit/2308838f007337e3e9bff3d3decb0437783d0d41
+  repo: satsigner/satsigner
+  kind: commit
+  title: 'fix: persist receive amount on payjoin sessions'
+  stars: 0
+  updated_at: '2026-07-22T10:21:17Z'
+  first_seen: '2026-08-06'
+  status: new
+  last_surfaced: '2026-08-06'
+- url: https://github.com/satsigner/satsigner/commit/48dba29aad261c79c7801ff0761f76c2be7be4c8
+  repo: satsigner/satsigner
+  kind: commit
+  title: 'fix: harden payjoin API, signing, and ownership annotation'
+  stars: 0
+  updated_at: '2026-07-22T10:21:08Z'
+  first_seen: '2026-08-06'
+  status: new
+  last_surfaced: '2026-08-06'
+- url: https://github.com/satsigner/satsigner/commit/e7a861f779e2914447a6598563e7c75b5c042840
+  repo: satsigner/satsigner
+  kind: commit
+  title: 'fix: keep payjoin native sessions across OHTTP failures'
+  stars: 0
+  updated_at: '2026-07-22T10:20:57Z'
+  first_seen: '2026-08-06'
+  status: new
+  last_surfaced: '2026-08-06'
 - url: https://github.com/SatoshiPortal/payjoin/issues/9
   repo: SatoshiPortal/payjoin
   kind: issue
@@ -1184,6 +1491,60 @@
   updated_at: '2026-07-21T06:32:58Z'
   first_seen: '2026-07-14'
   status: new
+- url: https://github.com/satsigner/satsigner/commit/7453bf175637a3c7cbc48dd40d12a2d9df72a1b8
+  repo: satsigner/satsigner
+  kind: commit
+  title: 'feat: classify Payjoin mixed ownership in transaction UI'
+  stars: 0
+  updated_at: '2026-07-21T04:05:17Z'
+  first_seen: '2026-08-06'
+  status: new
+  last_surfaced: '2026-08-06'
+- url: https://github.com/satsigner/satsigner/commit/79f8ff8864447f0775584329f82db344ea9efe06
+  repo: satsigner/satsigner
+  kind: commit
+  title: 'fix: stabilize Payjoin receive polling and session UX'
+  stars: 0
+  updated_at: '2026-07-21T04:05:09Z'
+  first_seen: '2026-08-06'
+  status: new
+  last_surfaced: '2026-08-06'
+- url: https://github.com/satsigner/satsigner/commit/1080311510a5a8ae5c0fea1f0de00d619ab742a6
+  repo: satsigner/satsigner
+  kind: commit
+  title: 'fix: harden payjoin native HTTP and proposal finalize'
+  stars: 0
+  updated_at: '2026-07-21T04:05:02Z'
+  first_seen: '2026-08-06'
+  status: new
+  last_surfaced: '2026-08-06'
+- url: https://github.com/satsigner/satsigner/commit/6e3fd871810aab3a607b57305fb0fa92a50ee4d2
+  repo: satsigner/satsigner
+  kind: commit
+  title: 'test: add Maestro Android e2e harness for payjoin'
+  stars: 0
+  updated_at: '2026-07-21T02:36:19Z'
+  first_seen: '2026-08-06'
+  status: new
+  last_surfaced: '2026-08-06'
+- url: https://github.com/satsigner/satsigner/commit/f11fe1ff6dbf185a4ef95fd8c179116232ec686c
+  repo: satsigner/satsigner
+  kind: commit
+  title: 'feat: integrate Payjoin BIP77/BIP78 send and receive'
+  stars: 0
+  updated_at: '2026-07-21T02:36:10Z'
+  first_seen: '2026-08-06'
+  status: new
+  last_surfaced: '2026-08-06'
+- url: https://github.com/satsigner/satsigner/commit/8c7a85bdc4dd2a7add503cc39f618edb251adf3a
+  repo: satsigner/satsigner
+  kind: commit
+  title: 'feat: add react-native-payjoin UniFFI package'
+  stars: 0
+  updated_at: '2026-07-21T02:36:02Z'
+  first_seen: '2026-08-06'
+  status: new
+  last_surfaced: '2026-08-06'
 - url: https://github.com/SatoshiPortal/bullbitcoin-mobile/commit/110a6b2bf1f08f5ed75399cc0ed921d4091c1e77
   repo: SatoshiPortal/bullbitcoin-mobile
   kind: commit
@@ -1425,7 +1786,7 @@
   repo: cake-tech/cake_wallet
   kind: pr
   title: Shuffle output order on bitcoin sends
-  stars: 1825
+  stars: 1826
   updated_at: '2026-07-20T00:13:31Z'
   first_seen: '2026-07-08'
   status: new
@@ -1603,7 +1964,7 @@
   repo: cake-tech/cake_wallet
   kind: pr
   title: 'feat: pin all dependencies to git sources'
-  stars: 1825
+  stars: 1826
   updated_at: '2026-07-14T18:58:50Z'
   first_seen: '2026-07-09'
   status: new
@@ -1637,7 +1998,7 @@
   repo: cake-tech/cake_wallet
   kind: issue
   title: Bitcoin sends order inputs by BIP-69
-  stars: 1825
+  stars: 1826
   updated_at: '2026-07-14T02:39:04Z'
   first_seen: '2026-07-08'
   status: new
@@ -1645,7 +2006,7 @@
   repo: cake-tech/cake_wallet
   kind: pr
   title: Shuffle input order on bitcoin sends
-  stars: 1825
+  stars: 1826
   updated_at: '2026-07-14T02:39:04Z'
   first_seen: '2026-07-08'
   status: new
@@ -1825,7 +2186,7 @@
   repo: cake-tech/cake_wallet
   kind: issue
   title: Payjoin receiver can contribute unconfirmed (0-conf) inputs
-  stars: 1825
+  stars: 1826
   updated_at: '2026-07-10T15:23:30Z'
   first_seen: '2026-07-10'
   status: new
@@ -1833,7 +2194,7 @@
   repo: cake-tech/cake_wallet
   kind: pr
   title: 'payjoin: exclude 0-conf inputs from receiver candidates'
-  stars: 1825
+  stars: 1826
   updated_at: '2026-07-10T15:23:29Z'
   first_seen: '2026-07-10'
   status: new
@@ -1875,7 +2236,7 @@
   repo: cake-tech/cake_wallet
   kind: issue
   title: '6.0: payjoin notice on litecoin receive'
-  stars: 1825
+  stars: 1826
   updated_at: '2026-07-09T22:18:07Z'
   first_seen: '2026-07-10'
   status: new
@@ -1899,7 +2260,7 @@
   repo: cake-tech/cake_wallet
   kind: issue
   title: Sparrow user payjoin fails because of changed nLocktime
-  stars: 1825
+  stars: 1826
   updated_at: '2026-07-08T19:00:39Z'
   first_seen: '2026-07-09'
   status: new
@@ -1907,7 +2268,7 @@
   repo: cake-tech/cake_wallet
   kind: issue
   title: 'RBF nsequence: non-canonical 0x01, only on inputs[0]'
-  stars: 1825
+  stars: 1826
   updated_at: '2026-07-08T18:37:09Z'
   first_seen: '2026-06-19'
   status: new
@@ -1948,7 +2309,7 @@
   repo: cake-tech/cake_wallet
   kind: issue
   title: Bitcoin sends use nLockTime = 0 (anti-fee-sniping + payjoin fingerprint)
-  stars: 1825
+  stars: 1826
   updated_at: '2026-07-07T01:39:20Z'
   first_seen: '2026-07-03'
   status: new
@@ -2126,7 +2487,7 @@
   repo: cake-tech/cake_wallet
   kind: issue
   title: Upgrade payjoin bindings to use payjoin_ffi
-  stars: 1825
+  stars: 1826
   updated_at: '2026-06-30T15:04:30Z'
   first_seen: '2026-07-01'
   status: new
@@ -2384,7 +2745,7 @@
   repo: cake-tech/cake_wallet
   kind: issue
   title: Payjoin receiver skips UIH2 avoidance, always contributes unspent[0]
-  stars: 1825
+  stars: 1826
   updated_at: '2026-06-18T08:45:10Z'
   first_seen: '2026-06-19'
   status: new
@@ -2732,7 +3093,7 @@
   repo: sparrowwallet/sparrow
   kind: issue
   title: PayJoin v2 (BIP77)
-  stars: 2072
+  stars: 2074
   updated_at: '2026-06-01T09:53:06Z'
   first_seen: '2026-06-19'
   status: new

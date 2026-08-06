@@ -84,7 +84,7 @@
   last_surfaced: '2026-07-23'
 - url: https://news.google.com/rss/articles/CBMitwFBVV95cUxOWDdxUzNkelJCYzlVTEZrcVM1bmtqREJ1LTJUSTBjLXJUUTBscVJsLVM4akZyN295M1hDUnZoS1lOOC1NSUZoeTFEODRWTkpFdDJwV1FZZTZ2RlZxVms1ampRSTIySXBUeHhhWW9iYTFGVG52RkdaWmQxQ2NUWGdySmtuVVUybEZId3BpN29hYlJtSHBBOFpZUWppMDRwbWNQZjJLQWVWQm1LWkd3Z2FQSXFXQTVyU2s?oc=5
   kind: article
-  outlet: ForkLog
+  outlet: forklog.com
   title: 'The many faces of satoshis: CoinJoin, PayJoin, Silent Payments or mixers—what
     to choose in 2025'
   updated_at: '2025-10-10T07:00:00Z'
