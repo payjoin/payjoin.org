@@ -1,10 +1,10 @@
 # Daily digest
 
-_As of 2026-08-07 (UTC) · tracking 25 upstream items_
+_As of 2026-08-08 (UTC) · tracking 25 upstream items_
 
 ## Activity
 
-- **Cove** — [repo](https://github.com/bitcoinppl/cove) — updated 2026-08-06
+- **BTCPay Server** — [repo](https://github.com/ValeraFinebits/btcpayserver-payjoin-plugin) — updated 2026-08-07
 
 
 ## Check-in follow-through
@@ -34,24 +34,16 @@ _To follow up — committed, but no merged PRs/issues in public org repos since 
 
 _New since yesterday, plus anything that woke up after a quiet week. Full history: [Outside activity](outside.md)._
 
-- **FabricLabs/hub.fabric.pub** ⭐2 — 1 PR
-    - [PR](https://github.com/FabricLabs/hub.fabric.pub/pull/15) WIP: RSI
-- **BlueWallet/BlueWallet** ⭐3260 — 1 issue · _back after a quiet spell_
-    - [issue](https://github.com/BlueWallet/BlueWallet/issues/3659) Dependency Dashboard
-- **bitcoindevkit/bdk_wallet** ⭐54 — 1 PR · _back after a quiet spell_
-    - [PR](https://github.com/bitcoindevkit/bdk_wallet/pull/297) Implement `create_psbt` for Wallet
-- **SatoshiPortal/bullbitcoin-mobile** ⭐188 — 1 PR, 30 commits · _back after a quiet spell_
-    - [commit](https://github.com/SatoshiPortal/bullbitcoin-mobile/commit/99c3213fe5c310bf10f6843bf76decda43991c59) style(payjoin): apply dart format to local_payjoin_datasource
-    - [PR](https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2545) feat(payjoin): complete Exchange integration and extract workspace package
-    - [commit](https://github.com/SatoshiPortal/bullbitcoin-mobile/commit/6c5bd538b46ca9fddce01a5b31025ce29c942b77) fix(payjoin): carry the receiver fee cap into the package
-    - _+28 more_
-- **fungi-protocol/fungi** ⭐0 — 1 issue
-    - [issue](https://github.com/fungi-protocol/fungi/issues/7) Specify an anonymous linked-mailbox protocol
-- **adrianhimmel/muffintime** ⭐0 — 3 commits
-    - [commit](https://github.com/adrianhimmel/muffintime/commit/930397cbe66c48f083431ec6afbeeb27cb0737ed) a11y: receive flow semantics (copy control, pickers, selection state) (#3467)
-    - [commit](https://github.com/adrianhimmel/muffintime/commit/43bc0b67bf4c89b1f1d11eee416febcf62be0a50) payjoin: exclude 0-conf inputs from receiver candidates (#3389)
-    - [commit](https://github.com/adrianhimmel/muffintime/commit/874d724c67ce7d804524e1f2a31f445998e5392a) fix: avoid UIH2 fingerprint in payjoin receiver input selection (#3304)
-- **testingandnesting/muffintime** ⭐0 — 3 commits
-    - [commit](https://github.com/testingandnesting/muffintime/commit/930397cbe66c48f083431ec6afbeeb27cb0737ed) a11y: receive flow semantics (copy control, pickers, selection state) (#3467)
-    - [commit](https://github.com/testingandnesting/muffintime/commit/43bc0b67bf4c89b1f1d11eee416febcf62be0a50) payjoin: exclude 0-conf inputs from receiver candidates (#3389)
-    - [commit](https://github.com/testingandnesting/muffintime/commit/874d724c67ce7d804524e1f2a31f445998e5392a) fix: avoid UIH2 fingerprint in payjoin receiver input selection (#3304)
+- **coreyphillips/trezor-connect-rs** ⭐5 — 1 issue
+    - [issue](https://github.com/coreyphillips/trezor-connect-rs/issues/25) [Medium] Panic on malformed PSBT: out-of-bounds index into…
+- **KooshaPari/SessionLedger** ⭐0 — 1 PR
+    - [PR](https://github.com/KooshaPari/SessionLedger/pull/423) fix: restore CI self-check gates
+- **fungi-protocol/docs** ⭐4 — 1 PR
+    - [PR](https://github.com/fungi-protocol/docs/pull/17) Strawman ladder
+- **SatoshiPortal/bullbitcoin-mobile** ⭐188 — 1 PR
+    - [PR](https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2569) docs(security): document payjoin invariants and SECURITY.md maintenance rule
+- **satsigner/satsigner** ⭐52 — 1 PR, 1 issue
+    - [PR](https://github.com/satsigner/satsigner/pull/479) Update react-native-payjoin to 0.3.0
+    - [issue](https://github.com/satsigner/satsigner/issues/478) Update to react-native-payjoin v0.3.0
+- **Psycarlo/react-native-payjoin** ⭐2 — 1 repo · _back after a quiet spell_
+    - [repo](https://github.com/Psycarlo/react-native-payjoin) Scale Bitcoin, save fees, and preserve privacy with one tiny library
