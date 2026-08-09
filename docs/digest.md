@@ -1,10 +1,10 @@
 # Daily digest
 
-_As of 2026-08-08 (UTC) · tracking 25 upstream items_
+_As of 2026-08-09 (UTC) · tracking 25 upstream items_
 
 ## Activity
 
-- **BTCPay Server** — [repo](https://github.com/ValeraFinebits/btcpayserver-payjoin-plugin) — updated 2026-08-07
+- **BTCPay Server** — [repo](https://github.com/ValeraFinebits/btcpayserver-payjoin-plugin) — updated 2026-08-08
 
 
 ## Check-in follow-through
@@ -34,16 +34,10 @@ _To follow up — committed, but no merged PRs/issues in public org repos since 
 
 _New since yesterday, plus anything that woke up after a quiet week. Full history: [Outside activity](outside.md)._
 
-- **coreyphillips/trezor-connect-rs** ⭐5 — 1 issue
-    - [issue](https://github.com/coreyphillips/trezor-connect-rs/issues/25) [Medium] Panic on malformed PSBT: out-of-bounds index into…
-- **KooshaPari/SessionLedger** ⭐0 — 1 PR
-    - [PR](https://github.com/KooshaPari/SessionLedger/pull/423) fix: restore CI self-check gates
-- **fungi-protocol/docs** ⭐4 — 1 PR
-    - [PR](https://github.com/fungi-protocol/docs/pull/17) Strawman ladder
+- **satsigner/satsigner** ⭐52 — 1 PR, 1 commit
+    - [PR](https://github.com/satsigner/satsigner/pull/481) feat: Nostr DMs (NIP-04/17), security report channel, diagnostics, signing…
+    - [commit](https://github.com/satsigner/satsigner/commit/2d751b75ac130800b78a864af8848cc06542515e) chore: update react-native-payjoin
+- **mimblewimble/grin-wallet** ⭐194 — 1 PR · _back after a quiet spell_
+    - [PR](https://github.com/mimblewimble/grin-wallet/pull/754) Update contracts to current staging + fix #729
 - **SatoshiPortal/bullbitcoin-mobile** ⭐188 — 1 PR
-    - [PR](https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2569) docs(security): document payjoin invariants and SECURITY.md maintenance rule
-- **satsigner/satsigner** ⭐52 — 1 PR, 1 issue
-    - [PR](https://github.com/satsigner/satsigner/pull/479) Update react-native-payjoin to 0.3.0
-    - [issue](https://github.com/satsigner/satsigner/issues/478) Update to react-native-payjoin v0.3.0
-- **Psycarlo/react-native-payjoin** ⭐2 — 1 repo · _back after a quiet spell_
-    - [repo](https://github.com/Psycarlo/react-native-payjoin) Scale Bitcoin, save fees, and preserve privacy with one tiny library
+    - [PR](https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2576) feat(storage): encrypt local sqlite databases
