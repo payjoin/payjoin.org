@@ -1,43 +1,39 @@
 # Daily digest
 
-_As of 2026-08-09 (UTC) · tracking 25 upstream items_
+_As of 2026-08-10 (UTC) · tracking 25 upstream items_
 
-## Activity
+No upstream changes since the last refresh.
 
-- **BTCPay Server** — [repo](https://github.com/ValeraFinebits/btcpayserver-payjoin-plugin) — updated 2026-08-08
-
+Most recently active: **BTCPay Server** — [repo](https://github.com/ValeraFinebits/btcpayserver-payjoin-plugin) — last activity 2026-08-08
 
 ## Check-in follow-through
 
-_2026-07-27 · [thread](https://github.com/orgs/payjoin/discussions/1765)_
+_2026-08-03 · [thread](https://github.com/orgs/payjoin/discussions/1780)_
 
-- **benalleng** — committed: "- With the cake testnet finally figure out I got @xstoicunicornx 90% spun up on the environment to help test with more coins available to…"
-    - shipped: [rust-payjoin#1785](https://github.com/payjoin/rust-payjoin/pull/1785), [rust-payjoin#1784](https://github.com/payjoin/rust-payjoin/pull/1784), [rust-payjoin#1778](https://github.com/payjoin/rust-payjoin/pull/1778), [rust-payjoin#1783](https://github.com/payjoin/rust-payjoin/issues/1783)
-- **caarloshenriq** — committed: "- Write CI for [payjoin-blackpill-test](https://github.com/caarloshenriq/payjoin-blackpill-test) - Review PRs"
-    - shipped: [rust-payjoin#1791](https://github.com/payjoin/rust-payjoin/pull/1791)
-- **chavic** — committed: "- Wire the merged txid stability accessor…"
-    - shipped: [rust-payjoin#1764](https://github.com/payjoin/rust-payjoin/pull/1764), [rust-payjoin#1772](https://github.com/payjoin/rust-payjoin/issues/1772)
-- **DanGould** — committed: "- Getting the Wasabi integration PRs up (prolific integrations are my committed north star for the year), and work in general across the…"
-    - shipped: [payjoin.org#147](https://github.com/payjoin/payjoin.org/pull/147), [rust-payjoin#1777](https://github.com/payjoin/rust-payjoin/pull/1777), [rust-payjoin#1771](https://github.com/payjoin/rust-payjoin/pull/1771), [rust-payjoin#1774](https://github.com/payjoin/rust-payjoin/issues/1774)
-- **spacebear21** — committed: "- #1766 - 1.0 release ™️"
-    - shipped: [rust-payjoin#1800](https://github.com/payjoin/rust-payjoin/pull/1800), [rust-payjoin#1797](https://github.com/payjoin/rust-payjoin/pull/1797), [rust-payjoin#1795](https://github.com/payjoin/rust-payjoin/pull/1795), [rust-payjoin#1793](https://github.com/payjoin/rust-payjoin/pull/1793), [rust-payjoin#1790](https://github.com/payjoin/rust-payjoin/pull/1790), [rust-payjoin#1789](https://github.com/payjoin/rust-payjoin/pull/1789), +6 more
-- **xstoicunicornx** — committed: "- Continue cake wallet testing - Issue review"
-    - shipped: [rust-payjoin#1710](https://github.com/payjoin/rust-payjoin/pull/1710), [rust-payjoin#1653](https://github.com/payjoin/rust-payjoin/pull/1653)
-- **zealsham** — committed: "- Follow up on #1754 - Review #1769 starting of with those tasks to get my engine running again, will definitely do more than that this…"
+- **benalleng** — committed: "- 1.0 release? - review - We need to give the payjoin-bot access to write PRs again for our weekly update workflows"
+    - shipped: [rust-payjoin#1784](https://github.com/payjoin/rust-payjoin/pull/1784)
+- **chavic** — committed: —
+    - shipped: [rust-payjoin#1764](https://github.com/payjoin/rust-payjoin/pull/1764)
+- **DanGould** — committed: "Hand off dev, get to mailroom tasks"
+    - shipped: —
+- **spacebear21** — committed: —
+    - shipped: [rust-payjoin#1800](https://github.com/payjoin/rust-payjoin/pull/1800), [rust-payjoin#1797](https://github.com/payjoin/rust-payjoin/pull/1797), [rust-payjoin#1795](https://github.com/payjoin/rust-payjoin/pull/1795), [rust-payjoin#1793](https://github.com/payjoin/rust-payjoin/pull/1793), [rust-payjoin#1790](https://github.com/payjoin/rust-payjoin/pull/1790), [rust-payjoin#1789](https://github.com/payjoin/rust-payjoin/pull/1789), +3 more
+- **xstoicunicornx** — committed: "- Reviewing issues"
     - shipped: —
 
 _To follow up — committed, but no merged PRs/issues in public org repos since (could be fork, review, or off-GitHub work):_
 
-- **zealsham** — "- Follow up on #1754 - Review #1769 starting of with those tasks to get my engine running…"
+- **DanGould** — "Hand off dev, get to mailroom tasks"
+- **xstoicunicornx** — "- Reviewing issues"
 
 ## Outside activity
 
 _New since yesterday, plus anything that woke up after a quiet week. Full history: [Outside activity](outside.md)._
 
-- **satsigner/satsigner** ⭐52 — 1 PR, 1 commit
-    - [PR](https://github.com/satsigner/satsigner/pull/481) feat: Nostr DMs (NIP-04/17), security report channel, diagnostics, signing…
-    - [commit](https://github.com/satsigner/satsigner/commit/2d751b75ac130800b78a864af8848cc06542515e) chore: update react-native-payjoin
-- **mimblewimble/grin-wallet** ⭐194 — 1 PR · _back after a quiet spell_
-    - [PR](https://github.com/mimblewimble/grin-wallet/pull/754) Update contracts to current staging + fix #729
-- **SatoshiPortal/bullbitcoin-mobile** ⭐188 — 1 PR
-    - [PR](https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2576) feat(storage): encrypt local sqlite databases
+- **SatoshiPortal/bullbitcoin-mobile** ⭐188 — 1 issue · _back after a quiet spell_
+    - [issue](https://github.com/SatoshiPortal/bullbitcoin-mobile/issues/2430) Payjoin receiver can contribute unconfirmed (0-conf) inputs
+- **fungi-protocol/lumen-fingerprints** ⭐0 — 2 commits
+    - [commit](https://github.com/fungi-protocol/lumen-fingerprints/commit/345f8a0b071e479d461c8aa95f54826fd1889155) feat(catalogue): split payjoin-cli at 1.0.0-rc.0 locktime override
+    - [commit](https://github.com/fungi-protocol/lumen-fingerprints/commit/e03f327b65f33a664a4c846935b4d0bcd4003d38) feat(catalogue): version payjoin-cli entry
+- **nekoguntai-castle/sanctuary** ⭐0 — 1 commit
+    - [commit](https://github.com/nekoguntai-castle/sanctuary/commit/ebdf124d7c5271f67e7bbafa65a84d2310b80d37) fix: isolate Tor Payjoin ingress
