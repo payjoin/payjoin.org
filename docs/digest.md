@@ -4,9 +4,7 @@ _As of 2026-08-11 (UTC) · tracking 25 upstream items_
 
 ## Activity
 
-- **BTCPay Server** — [repo](https://github.com/ValeraFinebits/btcpayserver-payjoin-plugin) — updated 2026-08-10
-- **Cove** — [repo](https://github.com/bitcoinppl/cove) — updated 2026-08-10
-- **Ledger Live** — [issue #942](https://github.com/payjoin/rust-payjoin/issues/942) — 10→11 comments, updated 2026-08-10
+- **BTCPay Server** — [repo](https://github.com/ValeraFinebits/btcpayserver-payjoin-plugin) — updated 2026-08-11
 
 
 ## Check-in follow-through
@@ -32,14 +30,10 @@ _To follow up — committed, but no merged PRs/issues in public org repos since 
 
 _New since yesterday, plus anything that woke up after a quiet week. Full history: [Outside activity](outside.md)._
 
-- **greywolf8888/ZeroTrace** ⭐1 — 1 PR
-    - [PR](https://github.com/greywolf8888/ZeroTrace/pull/5) feat: establish the evidence-first ZeroTrace foundation
-- **SatoshiPortal/bullbitcoin-mobile** ⭐188 — 4 PRs, 2 commits
-    - [PR](https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2589) fix(buy): expire the payjoin payout session with the exchange
-    - [PR](https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2579) feat(tor): add isolated Tor infrastructure package
-    - [PR](https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2588) test(payjoin): stop the fixture burning testnet funds at 1000 sat/vB
-    - _+3 more_
-- **cashubtc/cdk** ⭐226 — 1 PR · _back after a quiet spell_
-    - [PR](https://github.com/cashubtc/cdk/pull/2049) Payjoin
-- **siri-score/siriscore** ⭐8 — 1 issue · _back after a quiet spell_
-    - [issue](https://github.com/siri-score/siriscore/issues/42) Glossary: keyword search and expanded terms for Learn panel
+- **trezor/trezor-suite** ⭐1029 — 1 PR
+    - [PR](https://github.com/trezor/trezor-suite/pull/31102) fix(suite): show sender account label for received native transfers
+- **Horus-Org/payjoin-react-native** ⭐3 — 1 issue · _back after a quiet spell_
+    - [issue](https://github.com/Horus-Org/payjoin-react-native/issues/2) Dependency Dashboard
+- **SatoshiPortal/bullbitcoin-mobile** ⭐188 — 1 PR, 1 commit
+    - [PR](https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2590) ci(payjoin): isolate funded testnet fixture
+    - [commit](https://github.com/SatoshiPortal/bullbitcoin-mobile/commit/bb3cd9b3dfc0eae5f6477020d006e5aff4956f84) ci(payjoin): isolate funded testnet fixture

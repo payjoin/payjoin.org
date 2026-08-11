@@ -1,6 +1,79 @@
 # Payjoin activity outside tracked repos (issues, PRs, commits, new repos).
 # Bot appends and refreshes facts; you own `status`.
 # status: new | watching | dismissed | promoted  (bot only adds 'new')
+- url: https://github.com/trezor/trezor-suite/pull/31102
+  repo: trezor/trezor-suite
+  kind: pr
+  title: 'fix(suite): show sender account label for received native transfers'
+  stars: 1029
+  updated_at: '2026-08-11T07:50:44Z'
+  first_seen: '2026-08-11'
+  status: new
+  last_surfaced: '2026-08-11'
+- url: https://github.com/BlueWallet/BlueWallet/issues/3659
+  repo: BlueWallet/BlueWallet
+  kind: issue
+  title: Dependency Dashboard
+  stars: 3268
+  updated_at: '2026-08-11T06:22:29Z'
+  first_seen: '2026-06-19'
+  status: new
+  last_surfaced: '2026-08-07'
+- url: https://github.com/Horus-Org/payjoin-react-native/issues/2
+  repo: Horus-Org/payjoin-react-native
+  kind: issue
+  title: Dependency Dashboard
+  stars: 3
+  updated_at: '2026-08-11T06:04:24Z'
+  first_seen: '2026-06-19'
+  status: new
+  last_surfaced: '2026-08-11'
+  resurfaced: true
+- url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2589
+  repo: SatoshiPortal/bullbitcoin-mobile
+  kind: pr
+  title: 'fix(buy): expire the payjoin payout session with the exchange'
+  stars: 188
+  updated_at: '2026-08-11T03:04:00Z'
+  first_seen: '2026-08-11'
+  status: new
+  last_surfaced: '2026-08-11'
+- url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2579
+  repo: SatoshiPortal/bullbitcoin-mobile
+  kind: pr
+  title: 'feat(tor): add isolated Tor infrastructure package'
+  stars: 188
+  updated_at: '2026-08-11T03:04:00Z'
+  first_seen: '2026-08-11'
+  status: new
+  last_surfaced: '2026-08-11'
+- url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2576
+  repo: SatoshiPortal/bullbitcoin-mobile
+  kind: pr
+  title: 'feat(storage): encrypt local sqlite databases'
+  stars: 188
+  updated_at: '2026-08-11T03:04:00Z'
+  first_seen: '2026-08-09'
+  status: new
+  last_surfaced: '2026-08-09'
+- url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2590
+  repo: SatoshiPortal/bullbitcoin-mobile
+  kind: pr
+  title: 'ci(payjoin): isolate funded testnet fixture'
+  stars: 188
+  updated_at: '2026-08-11T03:02:26Z'
+  first_seen: '2026-08-11'
+  status: new
+  last_surfaced: '2026-08-11'
+- url: https://github.com/SatoshiPortal/bullbitcoin-mobile/commit/bb3cd9b3dfc0eae5f6477020d006e5aff4956f84
+  repo: SatoshiPortal/bullbitcoin-mobile
+  kind: commit
+  title: 'ci(payjoin): isolate funded testnet fixture'
+  stars: 0
+  updated_at: '2026-08-11T02:50:49Z'
+  first_seen: '2026-08-11'
+  status: new
+  last_surfaced: '2026-08-11'
 - url: https://github.com/greywolf8888/ZeroTrace/pull/5
   repo: greywolf8888/ZeroTrace
   kind: pr
@@ -10,33 +83,6 @@
   first_seen: '2026-08-11'
   status: new
   last_surfaced: '2026-08-11'
-- url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2589
-  repo: SatoshiPortal/bullbitcoin-mobile
-  kind: pr
-  title: 'fix(buy): expire the payjoin payout session with the exchange'
-  stars: 188
-  updated_at: '2026-08-11T02:04:21Z'
-  first_seen: '2026-08-11'
-  status: new
-  last_surfaced: '2026-08-11'
-- url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2579
-  repo: SatoshiPortal/bullbitcoin-mobile
-  kind: pr
-  title: 'feat(tor): add isolated Tor infrastructure package'
-  stars: 188
-  updated_at: '2026-08-11T01:59:44Z'
-  first_seen: '2026-08-11'
-  status: new
-  last_surfaced: '2026-08-11'
-- url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2576
-  repo: SatoshiPortal/bullbitcoin-mobile
-  kind: pr
-  title: 'feat(storage): encrypt local sqlite databases'
-  stars: 188
-  updated_at: '2026-08-11T01:42:26Z'
-  first_seen: '2026-08-09'
-  status: new
-  last_surfaced: '2026-08-09'
 - url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2588
   repo: SatoshiPortal/bullbitcoin-mobile
   kind: pr
@@ -64,15 +110,6 @@
   first_seen: '2026-08-11'
   status: new
   last_surfaced: '2026-08-11'
-- url: https://github.com/BlueWallet/BlueWallet/issues/3659
-  repo: BlueWallet/BlueWallet
-  kind: issue
-  title: Dependency Dashboard
-  stars: 3268
-  updated_at: '2026-08-10T19:29:19Z'
-  first_seen: '2026-06-19'
-  status: new
-  last_surfaced: '2026-08-07'
 - url: https://github.com/SatoshiPortal/bullbitcoin-mobile/commit/d494b563487d0e54fc92789e5b5b03c75ecbcaa5
   repo: SatoshiPortal/bullbitcoin-mobile
   kind: commit
@@ -91,7 +128,6 @@
   first_seen: '2026-06-19'
   status: new
   last_surfaced: '2026-08-11'
-  resurfaced: true
 - url: https://github.com/siri-score/siriscore/issues/42
   repo: siri-score/siriscore
   kind: issue
@@ -101,7 +137,6 @@
   first_seen: '2026-07-02'
   status: new
   last_surfaced: '2026-08-11'
-  resurfaced: true
 - url: https://github.com/SatoshiPortal/bullbitcoin-mobile/issues/2430
   repo: SatoshiPortal/bullbitcoin-mobile
   kind: issue
@@ -1565,15 +1600,6 @@
   first_seen: '2026-06-19'
   status: new
   last_surfaced: '2026-07-23'
-- url: https://github.com/Horus-Org/payjoin-react-native/issues/2
-  repo: Horus-Org/payjoin-react-native
-  kind: issue
-  title: Dependency Dashboard
-  stars: 3
-  updated_at: '2026-07-24T19:40:39Z'
-  first_seen: '2026-06-19'
-  status: new
-  last_surfaced: '2026-07-23'
 - url: https://github.com/LedgerHQ/app-bitcoin/pull/528
   repo: LedgerHQ/app-bitcoin
   kind: pr
@@ -2396,7 +2422,7 @@
   repo: getfloresta/Floresta
   kind: issue
   title: sendrawtransaction accepts unsigned transactions and returns a txid
-  stars: 427
+  stars: 428
   updated_at: '2026-07-15T17:52:10Z'
   first_seen: '2026-06-19'
   status: new
@@ -3613,7 +3639,7 @@
   repo: sparrowwallet/sparrow
   kind: issue
   title: PayJoin v2 (BIP77)
-  stars: 2088
+  stars: 2089
   updated_at: '2026-06-01T09:53:06Z'
   first_seen: '2026-06-19'
   status: new
