@@ -1,10 +1,11 @@
 # Daily digest
 
-_As of 2026-08-13 (UTC) · tracking 25 upstream items_
+_As of 2026-08-14 (UTC) · tracking 25 upstream items_
 
 ## Activity
 
-- **BTCPay Server** — [repo](https://github.com/ValeraFinebits/btcpayserver-payjoin-plugin) — updated 2026-08-12
+- **BTCPay Server** — [repo](https://github.com/ValeraFinebits/btcpayserver-payjoin-plugin) — updated 2026-08-13
+- **Cove** — [repo](https://github.com/bitcoinppl/cove) — updated 2026-08-13
 
 
 ## Check-in follow-through
@@ -30,24 +31,25 @@ _To follow up — committed, but no merged PRs/issues in public org repos since 
 
 _New since yesterday, plus anything that woke up after a quiet week. Full history: [Outside activity](outside.md)._
 
-- **SatoshiPortal/bullbitcoin-mobile** ⭐189 — 3 PRs, 2 issues, 1 commit
-    - [PR](https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2563) feat: swap provider substitution
-    - [PR](https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2668) refactor(transactions): speed up transfer progress and transaction details
-    - [PR](https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2669) fix: resolve 61 security audit findings, mitigate 7, document 5 upstream
-    - _+3 more_
-- **Psycarlo/react-native-payjoin** ⭐2 — 1 PR
-    - [PR](https://github.com/Psycarlo/react-native-payjoin/pull/7) Release: v0.5.0
-- **TriangleBitDevs/TriangleBitDevs.github.io** ⭐5 — 1 issue
-    - [issue](https://github.com/TriangleBitDevs/TriangleBitDevs.github.io/issues/58) Socratic Seminar 56
-- **Nervos-Community-Catalyst/CKBuilder-projects** ⭐6 — 1 issue · _back after a quiet spell_
-    - [issue](https://github.com/Nervos-Community-Catalyst/CKBuilder-projects/issues/27) fiber-payjoin-kit — Collaborative Payjoin Privacy for CKB Fiber Network
-- **ZeusLN/zeus** ⭐1398 — 1 issue
-    - [issue](https://github.com/ZeusLN/zeus/issues/3852) LDK Node: add Payjoin support
-- **atlantabitdevs/atlbit.dev** ⭐6 — 1 issue
-    - [issue](https://github.com/atlantabitdevs/atlbit.dev/issues/163) Bitcoin Socratic Seminar #54 - Topic Suggestions
-- **bitcoin-core/gui-qml** ⭐127 — 1 issue
-    - [issue](https://github.com/bitcoin-core/gui-qml/issues/853) Consider unifying activity rows that belong to the same underlying Bitcoin…
-- **rust-lang/crates.io-index** ⭐0 — 1 commit
-    - [commit](https://github.com/rust-lang/crates.io-index/commit/5f7f2a90b7e9bd76ce15f35b580b9fe40930d2fe) Update crate `payjoin`
-- **fungi-protocol/docs** ⭐4 — 1 PR · _back after a quiet spell_
-    - [PR](https://github.com/fungi-protocol/docs/pull/11) Add honest overview
+- **FabricLabs/hub.fabric.pub** ⭐2 — 1 PR · _back after a quiet spell_
+    - [PR](https://github.com/FabricLabs/hub.fabric.pub/pull/15) WIP: RSI
+- **SatoshiPortal/bullbitcoin-mobile** ⭐189 — 3 PRs, 10 commits
+    - [PR](https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2678) v6.13.0
+    - [PR](https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2676) feat(payjoin): add manual fallback broadcast
+    - [commit](https://github.com/SatoshiPortal/bullbitcoin-mobile/commit/ee78b686d457c3a37e7bd38baec01a243182c628) fix(payjoin): support fallback for exchange sessions
+    - _+10 more_
+- **cake-tech/cake_wallet** ⭐1845 — 3 PRs · _back after a quiet spell_
+    - [PR](https://github.com/cake-tech/cake_wallet/pull/3408) Privacy: randomized coin selection (BnB changeless + single random draw)
+    - [PR](https://github.com/cake-tech/cake_wallet/pull/3381) feat: pin all dependencies to git sources
+    - [PR](https://github.com/cake-tech/cake_wallet/pull/3385) Set anti-fee-sniping locktime (exact-tip) on bitcoin sends
+- **BlueWallet/BlueWallet** ⭐3267 — 1 issue · _back after a quiet spell_
+    - [issue](https://github.com/BlueWallet/BlueWallet/issues/3659) Dependency Dashboard
+- **openoms/joininbox** ⭐162 — 1 PR
+    - [PR](https://github.com/openoms/joininbox/pull/195) security: stop sourcing user-writable config as shell code
+- **ponthief/thrilla** ⭐0 — 2 commits
+    - [commit](https://github.com/ponthief/thrilla/commit/61f54d74fe2ad2c7b7b9ee254ab058724de266df) Inject backend config into Android build via react-native-config
+    - [commit](https://github.com/ponthief/thrilla/commit/a53f3b5de4fd1a3cc2d0e2116b565f2048a81fae) Inject backend config into Android build via react-native-config
+
+**Off GitHub**
+
+- [Stephan Livera: Payjoin wallet clusters may reveal clues if transacting outside…](https://news.google.com/rss/articles/CBMijgFBVV95cUxQUEFwdnZub2I5ZkFSRFN3S0dnbEdnaWZiWERPb0ZoUzBQeVJGSUlaeEhfRnp5Y0hGb2M2MkZZQUh3RTBsbkxYZnIzQ1RwR2JvWlUzeGIyV3ZheEl6dkZlai1pbmFTYzJldlZhenBhZ2I3TWZIazBncFdCUV9ibWdURnlnbnU0SW80MVNJYzV3?oc=5) · Traders Union · 2026-08-13

@@ -1,6 +1,15 @@
 # Payjoin mentions off GitHub (press, forums, newsletters).
 # Bot appends and refreshes facts; you own `status`.
 # status: new | watching | dismissed | promoted  (bot only adds 'new')
+- url: https://news.google.com/rss/articles/CBMijgFBVV95cUxQUEFwdnZub2I5ZkFSRFN3S0dnbEdnaWZiWERPb0ZoUzBQeVJGSUlaeEhfRnp5Y0hGb2M2MkZZQUh3RTBsbkxYZnIzQ1RwR2JvWlUzeGIyV3ZheEl6dkZlai1pbmFTYzJldlZhenBhZ2I3TWZIazBncFdCUV9ibWdURnlnbnU0SW80MVNJYzV3?oc=5
+  kind: article
+  outlet: Traders Union
+  title: 'Stephan Livera: Payjoin wallet clusters may reveal clues if transacting
+    outside payjoin'
+  updated_at: '2026-08-13T13:51:23Z'
+  first_seen: '2026-08-14'
+  status: new
+  last_surfaced: '2026-08-14'
 - url: https://delvingbitcoin.org/t/2743
   kind: forum
   outlet: Delving Bitcoin
