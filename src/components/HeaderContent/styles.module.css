@@ -1,8 +1,0 @@
-.logoImg {
-  height: 8vh;
-}
-
-.logoText {
-  @apply text-white text-2xl font-semibold;
-  white-space: nowrap;
-}

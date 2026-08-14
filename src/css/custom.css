@@ -27,6 +27,52 @@
 
 .footer--dark {
   --ifm-footer-background-color: #2a1520;
-  --ifm-footer-link-color: #ddd;
+  --ifm-footer-link-color: rgba(255, 255, 255, 0.6);
   --ifm-footer-title-color: #fff;
+
+  /* Hairline separating the footer from the closing section, which shares this
+     background colour and would otherwise run straight into it. */
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-bottom: 1rem;
+}
+
+/* Column headings read as labels rather than headings, matching the uppercase
+   eyebrows used in the page sections. */
+.footer--dark .footer__title {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.footer--dark .footer__link-item {
+  transition: color 200ms ease;
+}
+
+.footer--dark .footer__link-item:hover {
+  color: var(--ifm-color-primary);
+  text-decoration: none;
+}
+
+.footer--dark .footer__copyright {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+/* The wordmark below the footer supplies the closing rule, so the divider above
+   the copyright would read as a second, competing line. */
+.footer--dark .footer__bottom {
+  margin-top: 1rem;
+}
+
+/*
+ * Mobile menu drawer: over the hero the navbar is made transparent, and the
+ * sidebar inherits that, leaving the menu see-through over the page. Pin the
+ * sidebar to its default opaque background so it always looks the same, whether
+ * the hero is at the top or the page is scrolled.
+ */
+.navbar-sidebar {
+  --ifm-navbar-background-color: var(--ifm-background-surface-color);
+  background-color: var(--ifm-background-surface-color);
 }
