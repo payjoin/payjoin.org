@@ -1,10 +1,10 @@
 # Daily digest
 
-_As of 2026-08-15 (UTC) · tracking 25 upstream items_
+_As of 2026-08-16 (UTC) · tracking 25 upstream items_
 
 ## Activity
 
-- **BTCPay Server** — [repo](https://github.com/ValeraFinebits/btcpayserver-payjoin-plugin) — updated 2026-08-14
+- **BTCPay Server** — [repo](https://github.com/ValeraFinebits/btcpayserver-payjoin-plugin) — updated 2026-08-15
 
 
 ## Check-in follow-through
@@ -30,15 +30,13 @@ _To follow up — committed, but no merged PRs/issues in public org repos since 
 
 _New since yesterday, plus anything that woke up after a quiet week. Full history: [Outside activity](outside.md)._
 
-- **satsigner/satsigner** ⭐53 — 1 PR
-    - [PR](https://github.com/satsigner/satsigner/pull/485) Refactor replace magic numbers with meaningful constants
-- **ecash-com/ecash-wallet-mobile** ⭐0 — 1 commit
-    - [commit](https://github.com/ecash-com/ecash-wallet-mobile/commit/05e3f64bb6975d0690df22ab02f66bf8242923fe) BIP21: reject any URI carrying a req- param
-- **cake-tech/cake_wallet** ⭐1848 — 1 PR
-    - [PR](https://github.com/cake-tech/cake_wallet/pull/3520) Feat/bnb srd coin selection
-- **FabricLabs/hub.fabric.pub** ⭐2 — 1 PR · _back after a quiet spell_
-    - [PR](https://github.com/FabricLabs/hub.fabric.pub/pull/14) RC1 & Sensemaker
-- **MelbourneBitDevs/meetup** ⭐17 — 1 issue
-    - [issue](https://github.com/MelbourneBitDevs/meetup/issues/63) August 2026 Meeting Topics
-- **Blockstream/green_android** ⭐264 — 1 issue
-    - [issue](https://github.com/Blockstream/green_android/issues/241) [Feature Request]: Payjoin v2 support
+- **FabricLabs/hub.fabric.pub** ⭐2 — 1 PR
+    - [PR](https://github.com/FabricLabs/hub.fabric.pub/pull/16) Production Polish
+- **Such-Software/hash-wallet** ⭐0 — 1 commit
+    - [commit](https://github.com/Such-Software/hash-wallet/commit/71706314fb5594859c2f12d1fbb3bfed7e03e0d8) privacy: only domain-anchored address resolvers; drop Cake endpoints
+- **DanGould/silent-payjoin-demo** ⭐0 — 2 commits, 1 repo
+    - [repo](https://github.com/DanGould/silent-payjoin-demo) DanGould/silent-payjoin-demo
+    - [commit](https://github.com/DanGould/silent-payjoin-demo/commit/4c809747bc434336b548f56b19dcaf7404de92b3) Bump rust-payjoin pin to ff90280e
+    - [commit](https://github.com/DanGould/silent-payjoin-demo/commit/88347c4a2546ce504853086c1f1391b80d7a92fc) Run the silent payjoin demonstration from pinned sources
+- **Blockstream/green_android** ⭐265 — 1 issue · _back after a quiet spell_
+    - [issue](https://github.com/Blockstream/green_android/issues/296) Parsing BIP21 incorrectly
