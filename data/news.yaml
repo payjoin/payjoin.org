@@ -10,6 +10,14 @@
   first_seen: '2026-08-14'
   status: new
   last_surfaced: '2026-08-14'
+- url: https://bitcoinops.org/en/podcast/2026/08/11
+  kind: newsletter
+  outlet: Bitcoin Optech
+  title: 'Bitcoin Optech Newsletter #417 Recap Podcast'
+  updated_at: '2026-08-11T00:00:00Z'
+  first_seen: '2026-08-18'
+  status: new
+  last_surfaced: '2026-08-18'
 - url: https://delvingbitcoin.org/t/2743
   kind: forum
   outlet: Delving Bitcoin
