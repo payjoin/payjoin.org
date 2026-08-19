@@ -1,6 +1,103 @@
 # Payjoin activity outside tracked repos (issues, PRs, commits, new repos).
 # Bot appends and refreshes facts; you own `status`.
 # status: new | watching | dismissed | promoted  (bot only adds 'new')
+- url: https://github.com/bitcoin-dot-org/Bitcoin.org/pull/4555
+  repo: bitcoin-dot-org/Bitcoin.org
+  kind: pr
+  title: 'feat: add BULL by Bull Bitcoin'
+  stars: 1773
+  updated_at: '2026-08-19T01:41:15Z'
+  first_seen: '2026-06-19'
+  status: new
+  last_surfaced: '2026-08-19'
+  resurfaced: true
+- url: https://github.com/michxaal-tech/Silent-wallet/commit/7cc68986b8281f8d2fe28468312de3e1ff48fd6a
+  repo: michxaal-tech/Silent-wallet
+  kind: commit
+  title: 'Expand the core: multisig, inheritance, PayJoin, analysis, proofs, Cosmos'
+  stars: 0
+  updated_at: '2026-08-19T00:40:20Z'
+  first_seen: '2026-08-19'
+  status: new
+  last_surfaced: '2026-08-19'
+- url: https://github.com/satsigner/satsigner/pull/481
+  repo: satsigner/satsigner
+  kind: pr
+  title: 'feat: Nostr DMs (NIP-04/17), security report channel, diagnostics, signing
+    crash fixes'
+  stars: 53
+  updated_at: '2026-08-18T22:15:26Z'
+  first_seen: '2026-08-09'
+  status: new
+  last_surfaced: '2026-08-19'
+  resurfaced: true
+- url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2569
+  repo: SatoshiPortal/bullbitcoin-mobile
+  kind: pr
+  title: 'docs(security): document payjoin invariants and SECURITY.md maintenance
+    rule'
+  stars: 189
+  updated_at: '2026-08-18T19:46:00Z'
+  first_seen: '2026-08-08'
+  status: new
+  last_surfaced: '2026-08-19'
+  resurfaced: true
+- url: https://github.com/bitcoin-core/HWI/pull/590
+  repo: bitcoin-core/HWI
+  kind: pr
+  title: 'trezor: restore support for external inputs'
+  stars: 598
+  updated_at: '2026-08-18T18:06:52Z'
+  first_seen: '2026-08-01'
+  status: new
+  last_surfaced: '2026-08-19'
+  resurfaced: true
+- url: https://github.com/bitcoin-core/gui-qml/issues/853
+  repo: bitcoin-core/gui-qml
+  kind: issue
+  title: Consider unifying activity rows that belong to the same underlying Bitcoin
+    transaction
+  stars: 128
+  updated_at: '2026-08-18T18:00:11Z'
+  first_seen: '2026-08-13'
+  status: new
+  last_surfaced: '2026-08-13'
+- url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2579
+  repo: SatoshiPortal/bullbitcoin-mobile
+  kind: pr
+  title: 'feat(tor): add isolated Tor infrastructure package'
+  stars: 189
+  updated_at: '2026-08-18T15:05:34Z'
+  first_seen: '2026-08-11'
+  status: new
+  last_surfaced: '2026-08-18'
+- url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2689
+  repo: SatoshiPortal/bullbitcoin-mobile
+  kind: pr
+  title: 'fix: keep numeric input fields to a single line'
+  stars: 189
+  updated_at: '2026-08-18T15:04:07Z'
+  first_seen: '2026-08-19'
+  status: new
+  last_surfaced: '2026-08-19'
+- url: https://github.com/cake-tech/cake_wallet/pull/3381
+  repo: cake-tech/cake_wallet
+  kind: pr
+  title: 'feat: pin all dependencies to git sources'
+  stars: 1858
+  updated_at: '2026-08-18T14:34:06Z'
+  first_seen: '2026-07-09'
+  status: new
+  last_surfaced: '2026-08-14'
+- url: https://github.com/SatoshiPortal/bullbitcoin-mobile/issues/2688
+  repo: SatoshiPortal/bullbitcoin-mobile
+  kind: issue
+  title: '`Enter` adds empty lines in amount fields'
+  stars: 189
+  updated_at: '2026-08-18T14:13:23Z'
+  first_seen: '2026-08-19'
+  status: new
+  last_surfaced: '2026-08-19'
 - url: https://github.com/cake-tech/cake_wallet/pull/3363
   repo: cake-tech/cake_wallet
   kind: pr
@@ -10,16 +107,6 @@
   first_seen: '2026-07-03'
   status: new
   last_surfaced: '2026-08-18'
-- url: https://github.com/bitcoin-core/gui-qml/issues/853
-  repo: bitcoin-core/gui-qml
-  kind: issue
-  title: Consider unifying activity rows that belong to the same underlying Bitcoin
-    transaction
-  stars: 128
-  updated_at: '2026-08-18T11:28:53Z'
-  first_seen: '2026-08-13'
-  status: new
-  last_surfaced: '2026-08-13'
 - url: https://github.com/cake-tech/cake_wallet/pull/3532
   repo: cake-tech/cake_wallet
   kind: pr
@@ -39,7 +126,6 @@
   first_seen: '2026-06-19'
   status: new
   last_surfaced: '2026-08-18'
-  resurfaced: true
 - url: https://github.com/libbitcoin/libbitcoin-network/pull/860
   repo: libbitcoin/libbitcoin-network
   kind: pr
@@ -86,15 +172,6 @@
   first_seen: '2026-08-18'
   status: new
   last_surfaced: '2026-08-18'
-- url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2579
-  repo: SatoshiPortal/bullbitcoin-mobile
-  kind: pr
-  title: 'feat(tor): add isolated Tor infrastructure package'
-  stars: 189
-  updated_at: '2026-08-17T17:08:11Z'
-  first_seen: '2026-08-11'
-  status: new
-  last_surfaced: '2026-08-18'
 - url: https://github.com/syscoin/pali-wallet/pull/845
   repo: syscoin/pali-wallet
   kind: pr
@@ -131,15 +208,6 @@
   first_seen: '2026-08-18'
   status: new
   last_surfaced: '2026-08-18'
-- url: https://github.com/cake-tech/cake_wallet/pull/3381
-  repo: cake-tech/cake_wallet
-  kind: pr
-  title: 'feat: pin all dependencies to git sources'
-  stars: 1858
-  updated_at: '2026-08-17T12:07:48Z'
-  first_seen: '2026-07-09'
-  status: new
-  last_surfaced: '2026-08-14'
 - url: https://github.com/bitcoindevkit/bdk_wallet/issues/127
   repo: bitcoindevkit/bdk_wallet
   kind: issue
@@ -719,16 +787,6 @@
   first_seen: '2026-07-23'
   status: new
   last_surfaced: '2026-08-09'
-- url: https://github.com/satsigner/satsigner/pull/481
-  repo: satsigner/satsigner
-  kind: pr
-  title: 'feat: Nostr DMs (NIP-04/17), security report channel, diagnostics, signing
-    crash fixes'
-  stars: 53
-  updated_at: '2026-08-09T15:34:16Z'
-  first_seen: '2026-08-09'
-  status: new
-  last_surfaced: '2026-08-09'
 - url: https://github.com/nekoguntai-castle/sanctuary/commit/ebdf124d7c5271f67e7bbafa65a84d2310b80d37
   repo: nekoguntai-castle/sanctuary
   kind: commit
@@ -798,16 +856,6 @@
   title: Strawman ladder
   stars: 4
   updated_at: '2026-08-07T18:50:10Z'
-  first_seen: '2026-08-08'
-  status: new
-  last_surfaced: '2026-08-08'
-- url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2569
-  repo: SatoshiPortal/bullbitcoin-mobile
-  kind: pr
-  title: 'docs(security): document payjoin invariants and SECURITY.md maintenance
-    rule'
-  stars: 189
-  updated_at: '2026-08-07T17:47:03Z'
   first_seen: '2026-08-08'
   status: new
   last_surfaced: '2026-08-08'
@@ -1245,15 +1293,6 @@
   first_seen: '2026-08-07'
   status: new
   last_surfaced: '2026-08-07'
-- url: https://github.com/bitcoin-core/HWI/pull/590
-  repo: bitcoin-core/HWI
-  kind: pr
-  title: 'trezor: restore support for external inputs'
-  stars: 598
-  updated_at: '2026-07-31T18:41:40Z'
-  first_seen: '2026-08-01'
-  status: new
-  last_surfaced: '2026-08-01'
 - url: https://github.com/SatoshiPortal/bullbitcoin-mobile/commit/f2f83351473fbaf08ebcae8fc020d8dfe6938b24
   repo: SatoshiPortal/bullbitcoin-mobile
   kind: commit
@@ -1677,15 +1716,6 @@
   stars: 0
   updated_at: '2026-07-27T16:17:56Z'
   first_seen: '2026-07-28'
-  status: new
-  last_surfaced: '2026-07-28'
-- url: https://github.com/bitcoin-dot-org/Bitcoin.org/pull/4555
-  repo: bitcoin-dot-org/Bitcoin.org
-  kind: pr
-  title: 'feat: add BULL by Bull Bitcoin'
-  stars: 1773
-  updated_at: '2026-07-27T14:55:11Z'
-  first_seen: '2026-06-19'
   status: new
   last_surfaced: '2026-07-28'
 - url: https://github.com/caarloshenriq/payjoin-blackpill-test/commit/83dacb7b4621366645984cacaf8f60b3f4483b71
@@ -2813,6 +2843,15 @@
   updated_at: '2026-07-18T16:07:56Z'
   first_seen: '2026-07-06'
   status: new
+- url: https://github.com/SatoshiPortal/bullbitcoin-mobile/commit/04eeb3e64423fc9a68ca09eb723bf7ae8a459cf1
+  repo: SatoshiPortal/bullbitcoin-mobile
+  kind: commit
+  title: 'fix(wallet): enforce frozen-coin invariant and RBF default at repository'
+  stars: 0
+  updated_at: '2026-07-18T14:04:48Z'
+  first_seen: '2026-08-19'
+  status: new
+  last_surfaced: '2026-08-19'
 - url: https://github.com/Jolah1/bitpilot/issues/79
   repo: Jolah1/bitpilot
   kind: issue
