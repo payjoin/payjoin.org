@@ -1,6 +1,14 @@
 # Payjoin mentions off GitHub (press, forums, newsletters).
 # Bot appends and refreshes facts; you own `status`.
 # status: new | watching | dismissed | promoted  (bot only adds 'new')
+- url: https://bitcoinops.org/en/newsletters/2026/08/21
+  kind: newsletter
+  outlet: Bitcoin Optech
+  title: 'Bitcoin Optech Newsletter #419'
+  updated_at: '2026-08-21T00:00:00Z'
+  first_seen: '2026-08-22'
+  status: new
+  last_surfaced: '2026-08-22'
 - url: https://news.google.com/rss/articles/CBMijgFBVV95cUxQUEFwdnZub2I5ZkFSRFN3S0dnbEdnaWZiWERPb0ZoUzBQeVJGSUlaeEhfRnp5Y0hGb2M2MkZZQUh3RTBsbkxYZnIzQ1RwR2JvWlUzeGIyV3ZheEl6dkZlai1pbmFTYzJldlZhenBhZ2I3TWZIazBncFdCUV9ibWdURnlnbnU0SW80MVNJYzV3?oc=5
   kind: article
   outlet: Traders Union
