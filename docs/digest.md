@@ -1,11 +1,10 @@
 # Daily digest
 
-_As of 2026-08-22 (UTC) · tracking 25 upstream items_
+_As of 2026-08-23 (UTC) · tracking 25 upstream items_
 
 ## Activity
 
-- **BTCPay Server** — [repo](https://github.com/ValeraFinebits/btcpayserver-payjoin-plugin) — updated 2026-08-21
-- **Cove** — [repo](https://github.com/bitcoinppl/cove) — updated 2026-08-21
+- **BTCPay Server** — [repo](https://github.com/ValeraFinebits/btcpayserver-payjoin-plugin) — updated 2026-08-22
 
 
 ## Check-in follow-through
@@ -27,24 +26,17 @@ _2026-08-10 · [thread](https://github.com/orgs/payjoin/discussions/1803)_
 
 _New since yesterday, plus anything that woke up after a quiet week. Full history: [Outside activity](outside.md)._
 
-- **cashubtc/cdk** ⭐226 — 1 PR
-    - [PR](https://github.com/cashubtc/cdk/pull/2407) feat(payjoin): add backend-independent NUT-31 plumbing
-- **cake-tech/cake_wallet** ⭐1862 — 1 PR
-    - [PR](https://github.com/cake-tech/cake_wallet/pull/3472) Refactor swap logic and state management
-- **SatoshiPortal/bullbitcoin-mobile** ⭐189 — 1 PR, 4 issues · _back after a quiet spell_
-    - [issue](https://github.com/SatoshiPortal/bullbitcoin-mobile/issues/1446) Upgrade to Payjoin 1.0.0
-    - [issue](https://github.com/SatoshiPortal/bullbitcoin-mobile/issues/1814) Payjoin Improvement Plan
-    - [issue](https://github.com/SatoshiPortal/bullbitcoin-mobile/issues/947) Better Payjoin Status
-    - _+2 more_
-- **bitcoin-core/gui-qml** ⭐129 — 1 issue · _back after a quiet spell_
-    - [issue](https://github.com/bitcoin-core/gui-qml/issues/853) Consider unifying activity rows that belong to the same underlying Bitcoin…
-- **MelbourneBitDevs/meetup** ⭐17 — 1 issue · _back after a quiet spell_
-    - [issue](https://github.com/MelbourneBitDevs/meetup/issues/63) August 2026 Meeting Topics
-- **keychat-io/bark** ⭐0 — 1 commit
-    - [commit](https://github.com/keychat-io/bark/commit/783e0fb80a1c33972c235527b949c8e2de70e854) bark: accept an unfinalised board funding PSBT
-- **ark-bitcoin/bark** ⭐0 — 1 commit
-    - [commit](https://github.com/ark-bitcoin/bark/commit/783e0fb80a1c33972c235527b949c8e2de70e854) bark: accept an unfinalised board funding PSBT
-
-**Off GitHub**
-
-- [Bitcoin Optech Newsletter #419](https://bitcoinops.org/en/newsletters/2026/08/21) · Bitcoin Optech · 2026-08-21
+- **SatoshiPortal/bullbitcoin-mobile** ⭐189 — 3 PRs
+    - [PR](https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2708) feat(payjoin): independent Receive / Trade / Send payjoin settings
+    - [PR](https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2709) feat(payjoin): ownership fragment on mempool tx URLs
+    - [PR](https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2707) feat(payjoin): Bull Bitcoin directory + OHTTP relay with non-collusion rule
+- **lorenzolfm/floripabitdevs** ⭐4 — 1 issue
+    - [issue](https://github.com/lorenzolfm/floripabitdevs/issues/40) Tópicos setembro 2026
+- **AlxCheh/Bitcoin-Intel** ⭐1 — 1 PR, 2 commits
+    - [PR](https://github.com/AlxCheh/Bitcoin-Intel/pull/1015) docs: theory-chain-privacy — new THEORY_TOPICS.json entry
+    - [commit](https://github.com/AlxCheh/Bitcoin-Intel/commit/c014dbef362b71a4a888bfb42b2b2e7f00256048) docs: theory-chain-privacy — new THEORY_TOPICS.json entry (#1016)
+    - [commit](https://github.com/AlxCheh/Bitcoin-Intel/commit/865999eb1662893017c876a109eb9512f0344b53) docs: theory-chain-privacy — new THEORY_TOPICS.json entry (#1015)
+- **Yeats33/onekey-xmr-wallet** ⭐0 — 3 commits
+    - [commit](https://github.com/Yeats33/onekey-xmr-wallet/commit/930397cbe66c48f083431ec6afbeeb27cb0737ed) a11y: receive flow semantics (copy control, pickers, selection state) (#3467)
+    - [commit](https://github.com/Yeats33/onekey-xmr-wallet/commit/43bc0b67bf4c89b1f1d11eee416febcf62be0a50) payjoin: exclude 0-conf inputs from receiver candidates (#3389)
+    - [commit](https://github.com/Yeats33/onekey-xmr-wallet/commit/874d724c67ce7d804524e1f2a31f445998e5392a) fix: avoid UIH2 fingerprint in payjoin receiver input selection (#3304)
