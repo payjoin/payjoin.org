@@ -1,6 +1,14 @@
 # Payjoin mentions off GitHub (press, forums, newsletters).
 # Bot appends and refreshes facts; you own `status`.
 # status: new | watching | dismissed | promoted  (bot only adds 'new')
+- url: https://delvingbitcoin.org/t/2749
+  kind: forum
+  outlet: Delving Bitcoin
+  title: PQC output type discussion
+  updated_at: '2026-08-23T22:55:02Z'
+  first_seen: '2026-08-24'
+  status: new
+  last_surfaced: '2026-08-24'
 - url: https://bitcoinops.org/en/newsletters/2026/08/21
   kind: newsletter
   outlet: Bitcoin Optech
