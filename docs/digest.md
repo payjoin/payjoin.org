@@ -1,10 +1,11 @@
 # Daily digest
 
-_As of 2026-08-24 (UTC) · tracking 25 upstream items_
+_As of 2026-08-25 (UTC) · tracking 25 upstream items_
 
-No upstream changes since the last refresh.
+## Activity
 
-Most recently active: **BTCPay Server** — [repo](https://github.com/ValeraFinebits/btcpayserver-payjoin-plugin) — last activity 2026-08-22
+- **BTCPay Server** — [repo](https://github.com/ValeraFinebits/btcpayserver-payjoin-plugin) — updated 2026-08-24
+
 
 ## Check-in follow-through
 
@@ -25,20 +26,14 @@ _2026-08-17 · [thread](https://github.com/orgs/payjoin/discussions/1812)_
 
 _New since yesterday, plus anything that woke up after a quiet week. Full history: [Outside activity](outside.md)._
 
-- **SatoshiPortal/bullbitcoin-mobile** ⭐189 — 3 PRs, 1 issue
-    - [issue](https://github.com/SatoshiPortal/bullbitcoin-mobile/issues/2716) [tracking] Get Paid simplification upstream stack
-    - [PR](https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2713) feat(payjoin): ownership fragment on mempool tx URLs
-    - [PR](https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2712) feat(payjoin): independent Receive / Trade / Send payjoin settings
-    - _+1 more_
-- **TriangleBitDevs/TriangleBitDevs.github.io** ⭐5 — 1 issue · _back after a quiet spell_
-    - [issue](https://github.com/TriangleBitDevs/TriangleBitDevs.github.io/issues/58) Socratic Seminar 56
-- **hashhog/lunarblock** ⭐0 — 1 commit
-    - [commit](https://github.com/hashhog/lunarblock/commit/b75f86d1dca54cc3a8515212747dea7b5996be2c) fix(repo): make src/lunarblock relative so clones cannot write into the live…
-- **DineroLabs/dinero-v8** ⭐0 — 1 PR
-    - [PR](https://github.com/DineroLabs/dinero-v8/pull/282) rpc(wallet): gate send/spend paths on safe mode — closes spec Fatal item 3's…
-- **ekzyis/bark** ⭐0 — 1 commit
-    - [commit](https://github.com/ekzyis/bark/commit/783e0fb80a1c33972c235527b949c8e2de70e854) bark: accept an unfinalised board funding PSBT
-
-**Off GitHub**
-
-- [PQC output type discussion](https://delvingbitcoin.org/t/2749) · Delving Bitcoin · 2026-08-23
+- **bitcoin-dot-org/Bitcoin.org** ⭐1774 — 1 issue · _back after a quiet spell_
+    - [issue](https://github.com/bitcoin-dot-org/Bitcoin.org/issues/4832) Protect your privacy: modernizing dated sections, seeking direction on scope
+- **cake-tech/cake_wallet** ⭐1868 — 2 PRs · _back after a quiet spell_
+    - [PR](https://github.com/cake-tech/cake_wallet/pull/3532) Hide broken options in Bitcoin wallets without a private key
+    - [PR](https://github.com/cake-tech/cake_wallet/pull/3363) WIP Payjoin upgrade to native dart bindings via payjoin_ffi
+- **xstoicunicornx/react-native-payjoin** ⭐0 — 1 repo
+    - [repo](https://github.com/xstoicunicornx/react-native-payjoin) xstoicunicornx/react-native-payjoin
+- **alan-schramm/Sails-Protocol** ⭐0 — 1 commit
+    - [commit](https://github.com/alan-schramm/Sails-Protocol/commit/fd48b4f116db1af638c25bfac00f74347637f9ce) feat(settlement): close Gen-1 production safety foundations
+- **cratestack/cratestack** ⭐2 — 1 issue
+    - [issue](https://github.com/cratestack/cratestack/issues/716) cratestack_cbor exact-pins flutter_rust_bridge =2.12.0, blocking any app on a…
