@@ -1,17 +1,18 @@
 # Daily digest
 
-_As of 2026-08-25 (UTC) · tracking 25 upstream items_
+_As of 2026-08-26 (UTC) · tracking 25 upstream items_
 
-No upstream changes since the last refresh.
+## Activity
 
-Most recently active: **BTCPay Server** — [repo](https://github.com/ValeraFinebits/btcpayserver-payjoin-plugin) — last activity 2026-08-24
+- **Cove** — [repo](https://github.com/bitcoinppl/cove) — updated 2026-08-26
+
 
 ## Check-in follow-through
 
 _2026-08-17 · [thread](https://github.com/orgs/payjoin/discussions/1812)_
 
 - **benalleng** — committed: —
-    - shipped: [rust-payjoin#1825](https://github.com/payjoin/rust-payjoin/pull/1825)
+    - shipped: [rust-payjoin#1839](https://github.com/payjoin/rust-payjoin/pull/1839), [rust-payjoin#1838](https://github.com/payjoin/rust-payjoin/pull/1838), [rust-payjoin#1825](https://github.com/payjoin/rust-payjoin/pull/1825), [rust-payjoin#1844](https://github.com/payjoin/rust-payjoin/issues/1844), [rust-payjoin#1840](https://github.com/payjoin/rust-payjoin/issues/1840)
 - **caarloshenriq** — committed: "- Work on payjoin directory and ohttp-relay fuzz targets (#1267) - Review PRs"
     - shipped: [rust-payjoin#1826](https://github.com/payjoin/rust-payjoin/pull/1826)
 - **chavic** — committed: —
@@ -25,5 +26,13 @@ _2026-08-17 · [thread](https://github.com/orgs/payjoin/discussions/1812)_
 
 _New since yesterday, plus anything that woke up after a quiet week. Full history: [Outside activity](outside.md)._
 
-- **FabricLabs/hub.fabric.pub** ⭐2 — 1 PR · _back after a quiet spell_
-    - [PR](https://github.com/FabricLabs/hub.fabric.pub/pull/16) Production Polish
+- **BlueWallet/BlueWallet** ⭐3277 — 1 PR
+    - [PR](https://github.com/BlueWallet/BlueWallet/pull/8868) FIX: improve VoiceOver accessibility for controls
+- **fungi-protocol/docs** ⭐4 — 1 PR · _back after a quiet spell_
+    - [PR](https://github.com/fungi-protocol/docs/pull/17) Strawman ladder
+- **xstoicunicornx/react-native-payjoin** ⭐0 — 1 commit
+    - [commit](https://github.com/xstoicunicornx/react-native-payjoin/commit/1939d786a6dfbeea561682ec18547bc12f85dae7) create payjoin app
+- **payjoin/payjoin-workshop** ⭐0 — 1 repo
+    - [repo](https://github.com/payjoin/payjoin-workshop) payjoin/payjoin-workshop
+- **DanGould/payjoin-js-workshop** ⭐0 — 1 repo
+    - [repo](https://github.com/DanGould/payjoin-js-workshop) DanGould/payjoin-js-workshop
