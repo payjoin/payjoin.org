@@ -1,15 +1,128 @@
 # Payjoin activity outside tracked repos (issues, PRs, commits, new repos).
 # Bot appends and refreshes facts; you own `status`.
 # status: new | watching | dismissed | promoted  (bot only adds 'new')
+- url: https://github.com/cashubtc/cdk/pull/2407
+  repo: cashubtc/cdk
+  kind: pr
+  title: 'feat(payjoin): add backend-independent NUT-31 plumbing'
+  stars: 226
+  updated_at: '2026-08-28T10:54:27Z'
+  first_seen: '2026-08-22'
+  status: new
+  last_surfaced: '2026-08-22'
+- url: https://github.com/BlueWallet/BlueWallet/issues/3659
+  repo: BlueWallet/BlueWallet
+  kind: issue
+  title: Dependency Dashboard
+  stars: 3278
+  updated_at: '2026-08-28T09:38:48Z'
+  first_seen: '2026-06-19'
+  status: new
+  last_surfaced: '2026-08-28'
+  resurfaced: true
+- url: https://github.com/joinmarket-ng/joinmarket-ng/issues/568
+  repo: joinmarket-ng/joinmarket-ng
+  kind: issue
+  title: 'The Black Hole: 6 Mix Depth Concept [4H]'
+  stars: 71
+  updated_at: '2026-08-28T09:38:08Z'
+  first_seen: '2026-07-23'
+  status: new
+  last_surfaced: '2026-08-28'
+  resurfaced: true
+- url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2756
+  repo: SatoshiPortal/bullbitcoin-mobile
+  kind: pr
+  title: 'feat(send): support multiple bitcoin recipients'
+  stars: 190
+  updated_at: '2026-08-28T03:17:20Z'
+  first_seen: '2026-08-28'
+  status: new
+  last_surfaced: '2026-08-28'
+- url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2745
+  repo: SatoshiPortal/bullbitcoin-mobile
+  kind: pr
+  title: 'feat(coins): sweep selected bitcoin utxos'
+  stars: 190
+  updated_at: '2026-08-28T03:01:55Z'
+  first_seen: '2026-08-27'
+  status: new
+  last_surfaced: '2026-08-27'
+- url: https://github.com/SatoshiPortal/payjoin
+  repo: SatoshiPortal/payjoin
+  kind: repo
+  title: SatoshiPortal/payjoin
+  stars: 0
+  updated_at: '2026-08-28T02:15:47Z'
+  first_seen: '2026-07-23'
+  status: new
+  last_surfaced: '2026-08-28'
+  resurfaced: true
+- url: https://github.com/cake-tech/cake_wallet/issues/3572
+  repo: cake-tech/cake_wallet
+  kind: issue
+  title: Payjoin receiver reuses the same subdirectory (mailbox) across receives instead
+    of rotating it
+  stars: 1873
+  updated_at: '2026-08-28T02:03:16Z'
+  first_seen: '2026-08-28'
+  status: new
+  last_surfaced: '2026-08-28'
+- url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2752
+  repo: SatoshiPortal/bullbitcoin-mobile
+  kind: pr
+  title: v6.13.1
+  stars: 190
+  updated_at: '2026-08-28T00:56:19Z'
+  first_seen: '2026-08-28'
+  status: new
+  last_surfaced: '2026-08-28'
+- url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2754
+  repo: SatoshiPortal/bullbitcoin-mobile
+  kind: pr
+  title: 'feat: show wallet backup status and protected data'
+  stars: 190
+  updated_at: '2026-08-27T22:10:10Z'
+  first_seen: '2026-08-28'
+  status: new
+  last_surfaced: '2026-08-28'
 - url: https://github.com/satsigner/satsigner/pull/491
   repo: satsigner/satsigner
   kind: pr
   title: Board the Ark with payjoin
   stars: 53
-  updated_at: '2026-08-27T08:37:03Z'
+  updated_at: '2026-08-27T19:46:47Z'
   first_seen: '2026-08-27'
   status: new
   last_surfaced: '2026-08-27'
+- url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2537
+  repo: SatoshiPortal/bullbitcoin-mobile
+  kind: pr
+  title: 'refactor(dca): sanitize user-facing error messages'
+  stars: 190
+  updated_at: '2026-08-27T18:30:13Z'
+  first_seen: '2026-07-30'
+  status: new
+  last_surfaced: '2026-08-28'
+  resurfaced: true
+- url: https://github.com/TriangleBitDevs/TriangleBitDevs.github.io/issues/58
+  repo: TriangleBitDevs/TriangleBitDevs.github.io
+  kind: issue
+  title: Socratic Seminar 56
+  stars: 5
+  updated_at: '2026-08-27T15:31:48Z'
+  first_seen: '2026-08-13'
+  status: new
+  last_surfaced: '2026-08-24'
+- url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2736
+  repo: SatoshiPortal/bullbitcoin-mobile
+  kind: pr
+  title: 'fix(wallet): correct RBF fees and improve settings connectivity'
+  stars: 190
+  updated_at: '2026-08-27T14:32:58Z'
+  first_seen: '2026-08-28'
+  status: new
+  last_surfaced: '2026-08-28'
 - url: https://github.com/MelbourneBitDevs/meetup/issues/63
   repo: MelbourneBitDevs/meetup
   kind: issue
@@ -37,7 +150,6 @@
   first_seen: '2026-07-05'
   status: new
   last_surfaced: '2026-08-27'
-  resurfaced: true
 - url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/1978
   repo: SatoshiPortal/bullbitcoin-mobile
   kind: pr
@@ -53,15 +165,6 @@
   title: Swap electrum url
   stars: 190
   updated_at: '2026-08-27T05:06:58Z'
-  first_seen: '2026-08-27'
-  status: new
-  last_surfaced: '2026-08-27'
-- url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2745
-  repo: SatoshiPortal/bullbitcoin-mobile
-  kind: pr
-  title: 'feat(coins): sweep selected bitcoin utxos'
-  stars: 190
-  updated_at: '2026-08-27T04:37:30Z'
   first_seen: '2026-08-27'
   status: new
   last_surfaced: '2026-08-27'
@@ -83,15 +186,6 @@
   first_seen: '2026-08-27'
   status: new
   last_surfaced: '2026-08-27'
-- url: https://github.com/TriangleBitDevs/TriangleBitDevs.github.io/issues/58
-  repo: TriangleBitDevs/TriangleBitDevs.github.io
-  kind: issue
-  title: Socratic Seminar 56
-  stars: 5
-  updated_at: '2026-08-27T03:19:07Z'
-  first_seen: '2026-08-13'
-  status: new
-  last_surfaced: '2026-08-24'
 - url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2741
   repo: SatoshiPortal/bullbitcoin-mobile
   kind: pr
@@ -123,12 +217,11 @@
   repo: bitcoin-dot-org/Bitcoin.org
   kind: pr
   title: 'feat: add BULL by Bull Bitcoin'
-  stars: 1774
+  stars: 1775
   updated_at: '2026-08-26T20:43:18Z'
   first_seen: '2026-06-19'
   status: new
   last_surfaced: '2026-08-27'
-  resurfaced: true
 - url: https://github.com/payjoin/qa-assets
   repo: payjoin/qa-assets
   kind: repo
@@ -179,7 +272,7 @@
   repo: BlueWallet/BlueWallet
   kind: pr
   title: 'FIX: improve VoiceOver accessibility for controls'
-  stars: 3279
+  stars: 3278
   updated_at: '2026-08-26T06:23:50Z'
   first_seen: '2026-08-26'
   status: new
@@ -203,16 +296,6 @@
   first_seen: '2026-08-09'
   status: new
   last_surfaced: '2026-08-27'
-  resurfaced: true
-- url: https://github.com/BlueWallet/BlueWallet/issues/3659
-  repo: BlueWallet/BlueWallet
-  kind: issue
-  title: Dependency Dashboard
-  stars: 3279
-  updated_at: '2026-08-25T23:16:41Z'
-  first_seen: '2026-06-19'
-  status: new
-  last_surfaced: '2026-08-21'
 - url: https://github.com/fungi-protocol/docs/pull/17
   repo: fungi-protocol/docs
   kind: pr
@@ -280,7 +363,7 @@
   repo: bitcoin-dot-org/Bitcoin.org
   kind: issue
   title: 'Protect your privacy: modernizing dated sections, seeking direction on scope'
-  stars: 1774
+  stars: 1775
   updated_at: '2026-08-25T04:19:17Z'
   first_seen: '2026-06-29'
   status: new
@@ -414,15 +497,6 @@
   first_seen: '2026-08-23'
   status: new
   last_surfaced: '2026-08-23'
-- url: https://github.com/cashubtc/cdk/pull/2407
-  repo: cashubtc/cdk
-  kind: pr
-  title: 'feat(payjoin): add backend-independent NUT-31 plumbing'
-  stars: 226
-  updated_at: '2026-08-21T22:52:54Z'
-  first_seen: '2026-08-22'
-  status: new
-  last_surfaced: '2026-08-22'
 - url: https://github.com/cake-tech/cake_wallet/pull/3472
   repo: cake-tech/cake_wallet
   kind: pr
@@ -505,15 +579,6 @@
   first_seen: '2026-07-23'
   status: new
   last_surfaced: '2026-08-21'
-- url: https://github.com/joinmarket-ng/joinmarket-ng/issues/568
-  repo: joinmarket-ng/joinmarket-ng
-  kind: issue
-  title: 'The Black Hole: 6 Mix Depth Concept [4H]'
-  stars: 71
-  updated_at: '2026-08-20T16:02:00Z'
-  first_seen: '2026-07-23'
-  status: new
-  last_surfaced: '2026-08-17'
 - url: https://github.com/TumaBitcoiner/TumaBitcoiner.github.io/pull/27
   repo: TumaBitcoiner/TumaBitcoiner.github.io
   kind: pr
@@ -899,15 +964,6 @@
   first_seen: '2026-07-14'
   status: new
   last_surfaced: '2026-08-18'
-- url: https://github.com/SatoshiPortal/payjoin
-  repo: SatoshiPortal/payjoin
-  kind: repo
-  title: SatoshiPortal/payjoin
-  stars: 0
-  updated_at: '2026-08-17T04:55:57Z'
-  first_seen: '2026-07-23'
-  status: new
-  last_surfaced: '2026-08-18'
 - url: https://github.com/Such-Software/hash-wallet/commit/71706314fb5594859c2f12d1fbb3bfed7e03e0d8
   repo: Such-Software/hash-wallet
   kind: commit
@@ -1220,7 +1276,7 @@
   repo: ZeusLN/zeus
   kind: issue
   title: 'LDK Node: add Payjoin support'
-  stars: 1399
+  stars: 1400
   updated_at: '2026-08-12T18:50:18Z'
   first_seen: '2026-08-13'
   status: new
@@ -1744,7 +1800,7 @@
   repo: trezor/trezor-suite
   kind: issue
   title: Transaction type identification
-  stars: 1037
+  stars: 1038
   updated_at: '2026-08-03T19:32:35Z'
   first_seen: '2026-07-28'
   status: new
@@ -1794,15 +1850,6 @@
   first_seen: '2026-08-04'
   status: new
   last_surfaced: '2026-08-04'
-- url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2537
-  repo: SatoshiPortal/bullbitcoin-mobile
-  kind: pr
-  title: 'refactor(dca): sanitize user-facing error messages'
-  stars: 189
-  updated_at: '2026-08-03T13:47:15Z'
-  first_seen: '2026-07-30'
-  status: new
-  last_surfaced: '2026-07-30'
 - url: https://github.com/satsigner/satsigner/commit/a38d2b3446b74b26b24bb9729b8f9bf97585480a
   repo: satsigner/satsigner
   kind: commit
@@ -3553,7 +3600,7 @@
   repo: getfloresta/Floresta
   kind: issue
   title: sendrawtransaction accepts unsigned transactions and returns a txid
-  stars: 439
+  stars: 440
   updated_at: '2026-07-15T17:52:10Z'
   first_seen: '2026-06-19'
   status: new
