@@ -1,12 +1,10 @@
 # Daily digest
 
-_As of 2026-08-28 (UTC) · tracking 25 upstream items_
+_As of 2026-08-29 (UTC) · tracking 25 upstream items_
 
-## Activity
+No upstream changes since the last refresh.
 
-- **BTCPay Server** — [repo](https://github.com/ValeraFinebits/btcpayserver-payjoin-plugin) — updated 2026-08-27
-- **Cove** — [repo](https://github.com/bitcoinppl/cove) — updated 2026-08-27
-
+Most recently active: **Cove** — [repo](https://github.com/bitcoinppl/cove) — last activity 2026-08-27
 
 ## Check-in follow-through
 
@@ -27,16 +25,5 @@ _2026-08-17 · [thread](https://github.com/orgs/payjoin/discussions/1812)_
 
 _New since yesterday, plus anything that woke up after a quiet week. Full history: [Outside activity](outside.md)._
 
-- **BlueWallet/BlueWallet** ⭐3278 — 1 issue · _back after a quiet spell_
-    - [issue](https://github.com/BlueWallet/BlueWallet/issues/3659) Dependency Dashboard
-- **joinmarket-ng/joinmarket-ng** ⭐71 — 1 issue · _back after a quiet spell_
-    - [issue](https://github.com/joinmarket-ng/joinmarket-ng/issues/568) The Black Hole: 6 Mix Depth Concept [4H]
-- **SatoshiPortal/bullbitcoin-mobile** ⭐190 — 5 PRs · _back after a quiet spell_
-    - [PR](https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2756) feat(send): support multiple bitcoin recipients
-    - [PR](https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2752) v6.13.1
-    - [PR](https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2754) feat: show wallet backup status and protected data
-    - _+2 more_
-- **SatoshiPortal/payjoin** ⭐0 — 1 repo · _back after a quiet spell_
-    - [repo](https://github.com/SatoshiPortal/payjoin) SatoshiPortal/payjoin
-- **cake-tech/cake_wallet** ⭐1873 — 1 issue
-    - [issue](https://github.com/cake-tech/cake_wallet/issues/3572) Payjoin receiver reuses the same subdirectory (mailbox) across receives instead…
+- **MarxMad/brigada-educativa-bitcoin** ⭐0 — 1 commit
+    - [commit](https://github.com/MarxMad/brigada-educativa-bitcoin/commit/05560f54f82c0af739aa2a550c362c65af317f95) Arregla el QR de donación y limpia secciones de la página
