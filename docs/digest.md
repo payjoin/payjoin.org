@@ -1,6 +1,6 @@
 # Daily digest
 
-_As of 2026-08-29 (UTC) · tracking 25 upstream items_
+_As of 2026-08-30 (UTC) · tracking 25 upstream items_
 
 No upstream changes since the last refresh.
 
@@ -25,5 +25,15 @@ _2026-08-17 · [thread](https://github.com/orgs/payjoin/discussions/1812)_
 
 _New since yesterday, plus anything that woke up after a quiet week. Full history: [Outside activity](outside.md)._
 
-- **MarxMad/brigada-educativa-bitcoin** ⭐0 — 1 commit
-    - [commit](https://github.com/MarxMad/brigada-educativa-bitcoin/commit/05560f54f82c0af739aa2a550c362c65af317f95) Arregla el QR de donación y limpia secciones de la página
+- **SatoshiPortal/bullbitcoin-mobile** ⭐190 — 3 PRs
+    - [PR](https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2758) feat: add wallet data backup settings
+    - [PR](https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2733) feat: add encrypted wallet data backup and recovery
+    - [PR](https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2766) fix(send): stop coin control from spending unselected coins
+- **cryptoadvance/specter-diy** ⭐576 — 1 issue
+    - [issue](https://github.com/cryptoadvance/specter-diy/issues/290) [Feature Request]: Payjoin V2 support
+- **MelbourneBitDevs/meetup** ⭐17 — 1 issue · _back after a quiet spell_
+    - [issue](https://github.com/MelbourneBitDevs/meetup/issues/63) August 2026 Meeting Topics
+- **hashhog/lunarblock** ⭐0 — 1 commit
+    - [commit](https://github.com/hashhog/lunarblock/commit/84843592d29fa170da864c92688afbd816d4b7b4) chore: regenerate the five lunarblock/ modules that were copies, not shims
+- **hashhog/clearbit** ⭐0 — 1 commit
+    - [commit](https://github.com/hashhog/clearbit/commit/d4e38bb484960d5226202c4e57d6666c8b5b0e85) fix(rpc): serve the wait family on its own thread — one call stopped all RPC
