@@ -1,6 +1,6 @@
 # Daily digest
 
-_As of 2026-08-30 (UTC) · tracking 25 upstream items_
+_As of 2026-08-31 (UTC) · tracking 25 upstream items_
 
 No upstream changes since the last refresh.
 
@@ -8,32 +8,27 @@ Most recently active: **Cove** — [repo](https://github.com/bitcoinppl/cove) �
 
 ## Check-in follow-through
 
-_2026-08-17 · [thread](https://github.com/orgs/payjoin/discussions/1812)_
+_2026-08-24 · [thread](https://github.com/orgs/payjoin/discussions/1833)_
 
-- **benalleng** — committed: —
-    - shipped: [rust-payjoin#1843](https://github.com/payjoin/rust-payjoin/pull/1843), [rust-payjoin#1842](https://github.com/payjoin/rust-payjoin/pull/1842), [rust-payjoin#1839](https://github.com/payjoin/rust-payjoin/pull/1839), [rust-payjoin#1838](https://github.com/payjoin/rust-payjoin/pull/1838), [rust-payjoin#1825](https://github.com/payjoin/rust-payjoin/pull/1825), [rust-payjoin#1844](https://github.com/payjoin/rust-payjoin/issues/1844), +1 more
-- **caarloshenriq** — committed: "- Work on payjoin directory and ohttp-relay fuzz targets (#1267) - Review PRs"
-    - shipped: [rust-payjoin#1826](https://github.com/payjoin/rust-payjoin/pull/1826)
-- **chavic** — committed: —
-    - shipped: [uniffi-dart#158](https://github.com/Uniffi-Dart/uniffi-dart/pull/158)
-- **DanGould** — committed: —
-    - shipped: [rust-payjoin#1757](https://github.com/payjoin/rust-payjoin/pull/1757), [ohttp#7](https://github.com/payjoin/ohttp/issues/7), [ohttp#6](https://github.com/payjoin/ohttp/issues/6), [rust-payjoin#1818](https://github.com/payjoin/rust-payjoin/issues/1818), [rust-payjoin#1817](https://github.com/payjoin/rust-payjoin/issues/1817), [bitcoin_uri#12](https://github.com/payjoin/bitcoin_uri/issues/12)
-- **spacebear21** — committed: "- Bindings 1.0 releases - 2.0 tracking issue - Re-licensing"
-    - shipped: [rust-payjoin#1847](https://github.com/payjoin/rust-payjoin/pull/1847), [rust-payjoin#1831](https://github.com/payjoin/rust-payjoin/pull/1831), [rust-payjoin#1830](https://github.com/payjoin/rust-payjoin/pull/1830), [rust-payjoin#1829](https://github.com/payjoin/rust-payjoin/pull/1829), [rust-payjoin#1822](https://github.com/payjoin/rust-payjoin/pull/1822), [rust-payjoin#1821](https://github.com/payjoin/rust-payjoin/pull/1821), +5 more
+- **benalleng** — committed: "- Monitoring our scheduled workflows, review and moving the cake PR along with rebases"
+    - shipped: [rust-payjoin#1843](https://github.com/payjoin/rust-payjoin/pull/1843), [rust-payjoin#1842](https://github.com/payjoin/rust-payjoin/pull/1842), [rust-payjoin#1839](https://github.com/payjoin/rust-payjoin/pull/1839), [rust-payjoin#1838](https://github.com/payjoin/rust-payjoin/pull/1838), [rust-payjoin#1844](https://github.com/payjoin/rust-payjoin/issues/1844), [rust-payjoin#1840](https://github.com/payjoin/rust-payjoin/issues/1840)
+- **caarloshenriq** — committed: "- Continue working on #1267 - Review PRs"
+    - shipped: —
+- **spacebear21** — committed: —
+    - shipped: [rust-payjoin#1847](https://github.com/payjoin/rust-payjoin/pull/1847), [rust-payjoin#1831](https://github.com/payjoin/rust-payjoin/pull/1831), [rust-payjoin#1849](https://github.com/payjoin/rust-payjoin/issues/1849)
+
+_To follow up — committed, but no merged PRs/issues in public org repos since (could be fork, review, or off-GitHub work):_
+
+- **caarloshenriq** — "- Continue working on #1267 - Review PRs"
 
 ## Outside activity
 
 _New since yesterday, plus anything that woke up after a quiet week. Full history: [Outside activity](outside.md)._
 
-- **SatoshiPortal/bullbitcoin-mobile** ⭐190 — 3 PRs
-    - [PR](https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2758) feat: add wallet data backup settings
-    - [PR](https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2733) feat: add encrypted wallet data backup and recovery
-    - [PR](https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2766) fix(send): stop coin control from spending unselected coins
-- **cryptoadvance/specter-diy** ⭐576 — 1 issue
-    - [issue](https://github.com/cryptoadvance/specter-diy/issues/290) [Feature Request]: Payjoin V2 support
-- **MelbourneBitDevs/meetup** ⭐17 — 1 issue · _back after a quiet spell_
-    - [issue](https://github.com/MelbourneBitDevs/meetup/issues/63) August 2026 Meeting Topics
-- **hashhog/lunarblock** ⭐0 — 1 commit
-    - [commit](https://github.com/hashhog/lunarblock/commit/84843592d29fa170da864c92688afbd816d4b7b4) chore: regenerate the five lunarblock/ modules that were copies, not shims
-- **hashhog/clearbit** ⭐0 — 1 commit
-    - [commit](https://github.com/hashhog/clearbit/commit/d4e38bb484960d5226202c4e57d6666c8b5b0e85) fix(rpc): serve the wait family on its own thread — one call stopped all RPC
+- **hashhog/beamchain** ⭐0 — 2 commits
+    - [commit](https://github.com/hashhog/beamchain/commit/06851d58af26e4ebe071ec5f81fd8c4213dc5308) test: wallet tests get a private datadir — one leak caused all 5 #89 failures
+    - [commit](https://github.com/hashhog/beamchain/commit/7d72bd9b41282936c9f36252aaffccb62313ddda) test: run-all-eunit.sh — `rebar3 eunit` silently skips 101 of 139 test modules
+- **lorenzolfm/floripabitdevs** ⭐4 — 1 issue · _back after a quiet spell_
+    - [issue](https://github.com/lorenzolfm/floripabitdevs/issues/40) Tópicos setembro 2026
+- **cryptoadvance/specter-diy** ⭐581 — 1 issue
+    - [issue](https://github.com/cryptoadvance/specter-diy/issues/397) Issue Reduction: Audit of All 80 Open Issues (Classification & Priority Table)
