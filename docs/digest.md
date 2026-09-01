@@ -1,10 +1,12 @@
 # Daily digest
 
-_As of 2026-08-31 (UTC) · tracking 25 upstream items_
+_As of 2026-09-01 (UTC) · tracking 25 upstream items_
 
-No upstream changes since the last refresh.
+## Activity
 
-Most recently active: **Cove** — [repo](https://github.com/bitcoinppl/cove) — last activity 2026-08-27
+- **BTCPay Server** — [repo](https://github.com/ValeraFinebits/btcpayserver-payjoin-plugin) — updated 2026-08-31
+- **Cove** — [repo](https://github.com/bitcoinppl/cove) — updated 2026-08-31
+
 
 ## Check-in follow-through
 
@@ -25,10 +27,19 @@ _To follow up — committed, but no merged PRs/issues in public org repos since 
 
 _New since yesterday, plus anything that woke up after a quiet week. Full history: [Outside activity](outside.md)._
 
-- **hashhog/beamchain** ⭐0 — 2 commits
-    - [commit](https://github.com/hashhog/beamchain/commit/06851d58af26e4ebe071ec5f81fd8c4213dc5308) test: wallet tests get a private datadir — one leak caused all 5 #89 failures
-    - [commit](https://github.com/hashhog/beamchain/commit/7d72bd9b41282936c9f36252aaffccb62313ddda) test: run-all-eunit.sh — `rebar3 eunit` silently skips 101 of 139 test modules
-- **lorenzolfm/floripabitdevs** ⭐4 — 1 issue · _back after a quiet spell_
-    - [issue](https://github.com/lorenzolfm/floripabitdevs/issues/40) Tópicos setembro 2026
-- **cryptoadvance/specter-diy** ⭐581 — 1 issue
-    - [issue](https://github.com/cryptoadvance/specter-diy/issues/397) Issue Reduction: Audit of All 80 Open Issues (Classification & Priority Table)
+- **rust-bitcoin/corepc** ⭐59 — 2 issues
+    - [issue](https://github.com/rust-bitcoin/corepc/issues/473) feat(bitreq): API for custom root certificates at runtime
+    - [issue](https://github.com/rust-bitcoin/corepc/issues/472) feat(bitreq): HTTPS Proxy Support for HTTP CONNECT
+- **SatoshiPortal/bullbitcoin-mobile** ⭐191 — 5 PRs, 2 issues, 9 commits · _back after a quiet spell_
+    - [PR](https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2781) refactor(send): sanitize user facing errors
+    - [PR](https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2751) refactor(recoverbull): extract into melos feature package and harden backup…
+    - [PR](https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2780) chore: backport 6.13.1 fixes into develop
+    - _+13 more_
+- **mimblewimble/grin-wallet** ⭐194 — 1 PR · _back after a quiet spell_
+    - [PR](https://github.com/mimblewimble/grin-wallet/pull/754) Update contracts to current staging + fix #729
+- **breez/breez-sdk-liquid** ⭐76 — 1 issue
+    - [issue](https://github.com/breez/breez-sdk-liquid/issues/1106) Bump vendored secp256k1-zkp to pick up surjection/rangeproof nonce fixes
+- **FabricLabs/hub.fabric.pub** ⭐2 — 1 PR · _back after a quiet spell_
+    - [PR](https://github.com/FabricLabs/hub.fabric.pub/pull/16) Production Polish
+- **cashubtc/cdk-payment-processors** ⭐4 — 1 PR
+    - [PR](https://github.com/cashubtc/cdk-payment-processors/pull/11) feat: let payment processors advertise a subset of payment methods
