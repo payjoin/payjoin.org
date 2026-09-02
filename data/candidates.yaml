@@ -1,6 +1,88 @@
 # Payjoin activity outside tracked repos (issues, PRs, commits, new repos).
 # Bot appends and refreshes facts; you own `status`.
 # status: new | watching | dismissed | promoted  (bot only adds 'new')
+- url: https://github.com/moq-dev/moq/pull/3317
+  repo: moq-dev/moq
+  kind: pr
+  title: 'chore(quest): retire the Dart bindings quest and file its follow-ups'
+  stars: 1486
+  updated_at: '2026-09-02T03:24:06Z'
+  first_seen: '2026-09-02'
+  status: new
+  last_surfaced: '2026-09-02'
+- url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2784
+  repo: SatoshiPortal/bullbitcoin-mobile
+  kind: pr
+  title: 'refactor(sell): sanitize user-facing error messages'
+  stars: 191
+  updated_at: '2026-09-02T00:58:03Z'
+  first_seen: '2026-09-02'
+  status: new
+  last_surfaced: '2026-09-02'
+- url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2768
+  repo: SatoshiPortal/bullbitcoin-mobile
+  kind: pr
+  title: 'feat: add passphrase wallets with a private signing session'
+  stars: 191
+  updated_at: '2026-09-02T00:09:28Z'
+  first_seen: '2026-09-02'
+  status: new
+  last_surfaced: '2026-09-02'
+- url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2758
+  repo: SatoshiPortal/bullbitcoin-mobile
+  kind: pr
+  title: 'feat: add wallet data backup settings'
+  stars: 191
+  updated_at: '2026-09-01T21:33:51Z'
+  first_seen: '2026-08-30'
+  status: new
+  last_surfaced: '2026-08-30'
+- url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2733
+  repo: SatoshiPortal/bullbitcoin-mobile
+  kind: pr
+  title: 'feat: add encrypted wallet data backup and recovery'
+  stars: 191
+  updated_at: '2026-09-01T21:33:51Z'
+  first_seen: '2026-08-30'
+  status: new
+  last_surfaced: '2026-08-30'
+- url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2751
+  repo: SatoshiPortal/bullbitcoin-mobile
+  kind: pr
+  title: 'refactor(recoverbull): extract into melos feature package and harden backup
+    flows'
+  stars: 191
+  updated_at: '2026-09-01T21:19:49Z'
+  first_seen: '2026-09-01'
+  status: new
+  last_surfaced: '2026-09-01'
+- url: https://github.com/BlueWallet/BlueWallet/issues/3659
+  repo: BlueWallet/BlueWallet
+  kind: issue
+  title: Dependency Dashboard
+  stars: 3280
+  updated_at: '2026-09-01T20:37:53Z'
+  first_seen: '2026-06-19'
+  status: new
+  last_surfaced: '2026-08-28'
+- url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2781
+  repo: SatoshiPortal/bullbitcoin-mobile
+  kind: pr
+  title: 'refactor(send): sanitize user facing errors'
+  stars: 191
+  updated_at: '2026-09-01T20:09:27Z'
+  first_seen: '2026-09-01'
+  status: new
+  last_surfaced: '2026-09-01'
+- url: https://github.com/mimblewimble/grin-wallet/pull/754
+  repo: mimblewimble/grin-wallet
+  kind: pr
+  title: 'Update contracts to current staging + fix #729'
+  stars: 194
+  updated_at: '2026-09-01T18:51:18Z'
+  first_seen: '2026-07-23'
+  status: new
+  last_surfaced: '2026-09-01'
 - url: https://github.com/rust-bitcoin/corepc/issues/473
   repo: rust-bitcoin/corepc
   kind: issue
@@ -16,44 +98,6 @@
   title: 'feat(bitreq): HTTPS Proxy Support for HTTP CONNECT'
   stars: 59
   updated_at: '2026-09-01T15:28:43Z'
-  first_seen: '2026-09-01'
-  status: new
-  last_surfaced: '2026-09-01'
-- url: https://github.com/BlueWallet/BlueWallet/issues/3659
-  repo: BlueWallet/BlueWallet
-  kind: issue
-  title: Dependency Dashboard
-  stars: 3279
-  updated_at: '2026-09-01T15:03:24Z'
-  first_seen: '2026-06-19'
-  status: new
-  last_surfaced: '2026-08-28'
-- url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2781
-  repo: SatoshiPortal/bullbitcoin-mobile
-  kind: pr
-  title: 'refactor(send): sanitize user facing errors'
-  stars: 191
-  updated_at: '2026-09-01T14:57:26Z'
-  first_seen: '2026-09-01'
-  status: new
-  last_surfaced: '2026-09-01'
-- url: https://github.com/mimblewimble/grin-wallet/pull/754
-  repo: mimblewimble/grin-wallet
-  kind: pr
-  title: 'Update contracts to current staging + fix #729'
-  stars: 194
-  updated_at: '2026-09-01T14:14:13Z'
-  first_seen: '2026-07-23'
-  status: new
-  last_surfaced: '2026-09-01'
-  resurfaced: true
-- url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2751
-  repo: SatoshiPortal/bullbitcoin-mobile
-  kind: pr
-  title: 'refactor(recoverbull): extract into melos feature package and harden backup
-    flows'
-  stars: 191
-  updated_at: '2026-09-01T14:13:15Z'
   first_seen: '2026-09-01'
   status: new
   last_surfaced: '2026-09-01'
@@ -84,7 +128,6 @@
   first_seen: '2026-07-08'
   status: new
   last_surfaced: '2026-09-01'
-  resurfaced: true
 - url: https://github.com/SatoshiPortal/bullbitcoin-mobile/issues/2455
   repo: SatoshiPortal/bullbitcoin-mobile
   kind: issue
@@ -94,7 +137,6 @@
   first_seen: '2026-07-16'
   status: new
   last_surfaced: '2026-09-01'
-  resurfaced: true
 - url: https://github.com/FabricLabs/hub.fabric.pub/pull/16
   repo: FabricLabs/hub.fabric.pub
   kind: pr
@@ -104,7 +146,6 @@
   first_seen: '2026-08-16'
   status: new
   last_surfaced: '2026-09-01'
-  resurfaced: true
 - url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2713
   repo: SatoshiPortal/bullbitcoin-mobile
   kind: pr
@@ -114,7 +155,6 @@
   first_seen: '2026-08-24'
   status: new
   last_surfaced: '2026-09-01'
-  resurfaced: true
 - url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2779
   repo: SatoshiPortal/bullbitcoin-mobile
   kind: pr
@@ -179,24 +219,6 @@
   first_seen: '2026-08-31'
   status: new
   last_surfaced: '2026-08-31'
-- url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2758
-  repo: SatoshiPortal/bullbitcoin-mobile
-  kind: pr
-  title: 'feat: add wallet data backup settings'
-  stars: 191
-  updated_at: '2026-08-30T04:40:08Z'
-  first_seen: '2026-08-30'
-  status: new
-  last_surfaced: '2026-08-30'
-- url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2733
-  repo: SatoshiPortal/bullbitcoin-mobile
-  kind: pr
-  title: 'feat: add encrypted wallet data backup and recovery'
-  stars: 191
-  updated_at: '2026-08-30T04:40:06Z'
-  first_seen: '2026-08-30'
-  status: new
-  last_surfaced: '2026-08-30'
 - url: https://github.com/cryptoadvance/specter-diy/issues/290
   repo: cryptoadvance/specter-diy
   kind: issue
@@ -311,7 +333,7 @@
   kind: issue
   title: Payjoin receiver reuses the same subdirectory (mailbox) across receives instead
     of rotating it
-  stars: 1888
+  stars: 1889
   updated_at: '2026-08-28T02:03:16Z'
   first_seen: '2026-08-28'
   status: new
@@ -519,7 +541,7 @@
   repo: BlueWallet/BlueWallet
   kind: pr
   title: 'FIX: improve VoiceOver accessibility for controls'
-  stars: 3279
+  stars: 3280
   updated_at: '2026-08-26T06:23:50Z'
   first_seen: '2026-08-26'
   status: new
@@ -556,7 +578,7 @@
   repo: cake-tech/cake_wallet
   kind: pr
   title: WIP Payjoin upgrade to native dart bindings via payjoin_ffi
-  stars: 1888
+  stars: 1889
   updated_at: '2026-08-25T20:37:41Z'
   first_seen: '2026-07-03'
   status: new
@@ -610,7 +632,7 @@
   repo: cake-tech/cake_wallet
   kind: pr
   title: Hide broken options in Bitcoin wallets without a private key
-  stars: 1888
+  stars: 1889
   updated_at: '2026-08-24T20:25:02Z'
   first_seen: '2026-08-18'
   status: new
@@ -739,7 +761,7 @@
   repo: cake-tech/cake_wallet
   kind: pr
   title: Refactor swap logic and state management
-  stars: 1888
+  stars: 1889
   updated_at: '2026-08-21T20:25:39Z'
   first_seen: '2026-08-22'
   status: new
@@ -841,7 +863,7 @@
   kind: pr
   title: 'a11y: decorative/meaningful image semantics, labeled icon buttons, audible
     addresses'
-  stars: 1888
+  stars: 1889
   updated_at: '2026-08-20T14:40:11Z'
   first_seen: '2026-08-01'
   status: new
@@ -959,7 +981,7 @@
   repo: cake-tech/cake_wallet
   kind: pr
   title: Refactor Receive Flow - SDS
-  stars: 1888
+  stars: 1889
   updated_at: '2026-08-19T13:05:49Z'
   first_seen: '2026-08-20'
   status: new
@@ -968,7 +990,7 @@
   repo: cake-tech/cake_wallet
   kind: pr
   title: Feat/bnb srd coin selection
-  stars: 1888
+  stars: 1889
   updated_at: '2026-08-19T11:01:15Z'
   first_seen: '2026-08-15'
   status: new
@@ -977,7 +999,7 @@
   repo: cake-tech/cake_wallet
   kind: pr
   title: 'Privacy: randomized coin selection (BnB changeless + single random draw)'
-  stars: 1888
+  stars: 1889
   updated_at: '2026-08-19T10:51:47Z'
   first_seen: '2026-07-16'
   status: new
@@ -996,7 +1018,7 @@
   repo: cake-tech/cake_wallet
   kind: issue
   title: Bitcoin sends use nLockTime = 0 (anti-fee-sniping + payjoin fingerprint)
-  stars: 1888
+  stars: 1889
   updated_at: '2026-08-19T10:44:01Z'
   first_seen: '2026-07-03'
   status: new
@@ -1005,7 +1027,7 @@
   repo: cake-tech/cake_wallet
   kind: pr
   title: Set anti-fee-sniping locktime (exact-tip) on bitcoin sends
-  stars: 1888
+  stars: 1889
   updated_at: '2026-08-19T10:44:00Z'
   first_seen: '2026-07-10'
   status: new
@@ -1047,6 +1069,15 @@
   first_seen: '2026-08-20'
   status: new
   last_surfaced: '2026-08-20'
+- url: https://github.com/DeesNeez/selfcustody/commit/9a3f0ae36f8f6b7945c5d1069131aa34730defa9
+  repo: DeesNeez/selfcustody
+  kind: commit
+  title: Write the remaining 17 guides and finish the card treatment
+  stars: 0
+  updated_at: '2026-08-19T01:46:42Z'
+  first_seen: '2026-09-02'
+  status: new
+  last_surfaced: '2026-09-02'
 - url: https://github.com/michxaal-tech/Silent-wallet/commit/7cc68986b8281f8d2fe28468312de3e1ff48fd6a
   repo: michxaal-tech/Silent-wallet
   kind: commit
@@ -1106,7 +1137,7 @@
   repo: cake-tech/cake_wallet
   kind: pr
   title: 'feat: pin all dependencies to git sources'
-  stars: 1888
+  stars: 1889
   updated_at: '2026-08-18T14:34:06Z'
   first_seen: '2026-07-09'
   status: new
@@ -1224,7 +1255,7 @@
   repo: bitcoindevkit/bdk_wallet
   kind: issue
   title: Reintroduce a way verify a transaction
-  stars: 57
+  stars: 58
   updated_at: '2026-08-17T09:56:40Z'
   first_seen: '2026-07-14'
   status: new
@@ -2884,7 +2915,7 @@
   repo: cake-tech/cake_wallet
   kind: issue
   title: Bitcoin sends place change output deterministically last
-  stars: 1888
+  stars: 1889
   updated_at: '2026-07-26T00:30:43Z'
   first_seen: '2026-07-08'
   status: new
@@ -3865,7 +3896,7 @@
   repo: bitcoindevkit/bdk_wallet
   kind: issue
   title: 'wallet: target a pre-defined utxo set composition by adjusting change outputs'
-  stars: 57
+  stars: 58
   updated_at: '2026-07-15T17:03:35Z'
   first_seen: '2026-07-14'
   status: new
@@ -3927,7 +3958,7 @@
   repo: cake-tech/cake_wallet
   kind: issue
   title: Bitcoin sends order inputs by BIP-69
-  stars: 1888
+  stars: 1889
   updated_at: '2026-07-14T02:39:04Z'
   first_seen: '2026-07-08'
   status: new
@@ -4099,7 +4130,7 @@
   repo: cake-tech/cake_wallet
   kind: issue
   title: Payjoin receiver can contribute unconfirmed (0-conf) inputs
-  stars: 1888
+  stars: 1889
   updated_at: '2026-07-10T15:23:30Z'
   first_seen: '2026-07-10'
   status: new
@@ -4176,7 +4207,7 @@
   repo: cake-tech/cake_wallet
   kind: issue
   title: '6.0: payjoin notice on litecoin receive'
-  stars: 1888
+  stars: 1889
   updated_at: '2026-07-09T22:18:07Z'
   first_seen: '2026-07-10'
   status: new
@@ -4200,7 +4231,7 @@
   repo: cake-tech/cake_wallet
   kind: issue
   title: Sparrow user payjoin fails because of changed nLocktime
-  stars: 1888
+  stars: 1889
   updated_at: '2026-07-08T19:00:39Z'
   first_seen: '2026-07-09'
   status: new
@@ -4208,7 +4239,7 @@
   repo: cake-tech/cake_wallet
   kind: issue
   title: 'RBF nsequence: non-canonical 0x01, only on inputs[0]'
-  stars: 1888
+  stars: 1889
   updated_at: '2026-07-08T18:37:09Z'
   first_seen: '2026-06-19'
   status: new
@@ -4403,7 +4434,7 @@
   repo: cake-tech/cake_wallet
   kind: issue
   title: Upgrade payjoin bindings to use payjoin_ffi
-  stars: 1888
+  stars: 1889
   updated_at: '2026-06-30T15:04:30Z'
   first_seen: '2026-07-01'
   status: new
@@ -4628,7 +4659,7 @@
   repo: cake-tech/cake_wallet
   kind: issue
   title: Payjoin receiver skips UIH2 avoidance, always contributes unspent[0]
-  stars: 1888
+  stars: 1889
   updated_at: '2026-06-18T08:45:10Z'
   first_seen: '2026-06-19'
   status: new
