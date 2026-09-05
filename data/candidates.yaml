@@ -1,6 +1,99 @@
 # Payjoin activity outside tracked repos (issues, PRs, commits, new repos).
 # Bot appends and refreshes facts; you own `status`.
 # status: new | watching | dismissed | promoted  (bot only adds 'new')
+- url: https://github.com/TriangleBitDevs/TriangleBitDevs.github.io/issues/58
+  repo: TriangleBitDevs/TriangleBitDevs.github.io
+  kind: issue
+  title: Socratic Seminar 56
+  stars: 5
+  updated_at: '2026-09-05T03:32:27Z'
+  first_seen: '2026-08-13'
+  status: new
+  last_surfaced: '2026-09-03'
+- url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/1978
+  repo: SatoshiPortal/bullbitcoin-mobile
+  kind: pr
+  title: Create automated script for testing bull bitcoin mobile against payjoin-cli
+  stars: 191
+  updated_at: '2026-09-05T03:32:15Z'
+  first_seen: '2026-08-27'
+  status: new
+  last_surfaced: '2026-09-05'
+  resurfaced: true
+- url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2139
+  repo: SatoshiPortal/bullbitcoin-mobile
+  kind: pr
+  title: Swap electrum url
+  stars: 191
+  updated_at: '2026-09-05T03:32:06Z'
+  first_seen: '2026-08-27'
+  status: new
+  last_surfaced: '2026-09-05'
+  resurfaced: true
+- url: https://github.com/BlueWallet/BlueWallet/issues/3659
+  repo: BlueWallet/BlueWallet
+  kind: issue
+  title: Dependency Dashboard
+  stars: 3282
+  updated_at: '2026-09-04T22:39:37Z'
+  first_seen: '2026-06-19'
+  status: new
+  last_surfaced: '2026-09-04'
+- url: https://github.com/FabricLabs/hub.fabric.pub/pull/16
+  repo: FabricLabs/hub.fabric.pub
+  kind: pr
+  title: Production Polish
+  stars: 2
+  updated_at: '2026-09-04T22:02:18Z'
+  first_seen: '2026-08-16'
+  status: new
+  last_surfaced: '2026-09-01'
+- url: https://github.com/mimblewimble/grin-wallet/pull/754
+  repo: mimblewimble/grin-wallet
+  kind: pr
+  title: 'Update contracts to current staging + fix #729'
+  stars: 194
+  updated_at: '2026-09-04T19:35:39Z'
+  first_seen: '2026-07-23'
+  status: new
+  last_surfaced: '2026-09-01'
+- url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2795
+  repo: SatoshiPortal/bullbitcoin-mobile
+  kind: pr
+  title: 'refactor(pay): sanitize user-facing error messages'
+  stars: 191
+  updated_at: '2026-09-04T18:30:31Z'
+  first_seen: '2026-09-04'
+  status: new
+  last_surfaced: '2026-09-04'
+- url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2745
+  repo: SatoshiPortal/bullbitcoin-mobile
+  kind: pr
+  title: 'feat(coins): sweep selected bitcoin utxos'
+  stars: 191
+  updated_at: '2026-09-04T13:20:46Z'
+  first_seen: '2026-08-27'
+  status: new
+  last_surfaced: '2026-09-03'
+- url: https://github.com/cake-tech/cake_wallet/pull/3451
+  repo: cake-tech/cake_wallet
+  kind: pr
+  title: Refactor Receive Flow - SDS
+  stars: 1893
+  updated_at: '2026-09-04T07:31:25Z'
+  first_seen: '2026-08-20'
+  status: new
+  last_surfaced: '2026-09-05'
+  resurfaced: true
+- url: https://github.com/stealth-bitcoin/stealth/pull/30
+  repo: stealth-bitcoin/stealth
+  kind: pr
+  title: 'fix: make detector report output deterministic'
+  stars: 37
+  updated_at: '2026-09-04T04:47:52Z'
+  first_seen: '2026-09-05'
+  status: new
+  last_surfaced: '2026-09-05'
 - url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2797
   repo: SatoshiPortal/bullbitcoin-mobile
   kind: pr
@@ -19,32 +112,12 @@
   first_seen: '2026-08-26'
   status: new
   last_surfaced: '2026-09-04'
-  resurfaced: true
 - url: https://github.com/SatoshiPortal/bullbitcoin-mobile/issues/2796
   repo: SatoshiPortal/bullbitcoin-mobile
   kind: issue
   title: '[Feature]: Scan the silent payments wallet in the background sync task'
   stars: 191
   updated_at: '2026-09-04T01:04:23Z'
-  first_seen: '2026-09-04'
-  status: new
-  last_surfaced: '2026-09-04'
-- url: https://github.com/BlueWallet/BlueWallet/issues/3659
-  repo: BlueWallet/BlueWallet
-  kind: issue
-  title: Dependency Dashboard
-  stars: 3282
-  updated_at: '2026-09-04T01:03:10Z'
-  first_seen: '2026-06-19'
-  status: new
-  last_surfaced: '2026-09-04'
-  resurfaced: true
-- url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2795
-  repo: SatoshiPortal/bullbitcoin-mobile
-  kind: pr
-  title: 'refactor(pay): sanitize user-facing error messages'
-  stars: 191
-  updated_at: '2026-09-03T22:32:38Z'
   first_seen: '2026-09-04'
   status: new
   last_surfaced: '2026-09-04'
@@ -57,15 +130,6 @@
   first_seen: '2026-09-04'
   status: new
   last_surfaced: '2026-09-04'
-- url: https://github.com/FabricLabs/hub.fabric.pub/pull/16
-  repo: FabricLabs/hub.fabric.pub
-  kind: pr
-  title: Production Polish
-  stars: 2
-  updated_at: '2026-09-03T18:49:24Z'
-  first_seen: '2026-08-16'
-  status: new
-  last_surfaced: '2026-09-01'
 - url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2792
   repo: SatoshiPortal/bullbitcoin-mobile
   kind: pr
@@ -93,7 +157,6 @@
   first_seen: '2026-06-19'
   status: new
   last_surfaced: '2026-09-04'
-  resurfaced: true
 - url: https://github.com/jamespepper81/Website/issues/4
   repo: jamespepper81/Website
   kind: issue
@@ -112,15 +175,6 @@
   first_seen: '2026-08-28'
   status: new
   last_surfaced: '2026-08-28'
-- url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2745
-  repo: SatoshiPortal/bullbitcoin-mobile
-  kind: pr
-  title: 'feat(coins): sweep selected bitcoin utxos'
-  stars: 191
-  updated_at: '2026-09-03T02:21:17Z'
-  first_seen: '2026-08-27'
-  status: new
-  last_surfaced: '2026-09-03'
 - url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2703
   repo: SatoshiPortal/bullbitcoin-mobile
   kind: pr
@@ -128,15 +182,6 @@
   stars: 191
   updated_at: '2026-09-03T01:59:15Z'
   first_seen: '2026-09-03'
-  status: new
-  last_surfaced: '2026-09-03'
-- url: https://github.com/TriangleBitDevs/TriangleBitDevs.github.io/issues/58
-  repo: TriangleBitDevs/TriangleBitDevs.github.io
-  kind: issue
-  title: Socratic Seminar 56
-  stars: 5
-  updated_at: '2026-09-03T00:07:26Z'
-  first_seen: '2026-08-13'
   status: new
   last_surfaced: '2026-09-03'
 - url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2784
@@ -212,20 +257,11 @@
   first_seen: '2026-09-01'
   status: new
   last_surfaced: '2026-09-01'
-- url: https://github.com/mimblewimble/grin-wallet/pull/754
-  repo: mimblewimble/grin-wallet
-  kind: pr
-  title: 'Update contracts to current staging + fix #729'
-  stars: 194
-  updated_at: '2026-09-02T19:57:07Z'
-  first_seen: '2026-07-23'
-  status: new
-  last_surfaced: '2026-09-01'
 - url: https://github.com/moq-dev/moq/pull/3317
   repo: moq-dev/moq
   kind: pr
   title: 'chore(quest): retire the Dart bindings quest and file its follow-ups'
-  stars: 1490
+  stars: 1493
   updated_at: '2026-09-02T16:24:49Z'
   first_seen: '2026-09-02'
   status: new
@@ -284,6 +320,15 @@
   first_seen: '2026-09-01'
   status: new
   last_surfaced: '2026-09-01'
+- url: https://github.com/stealth-bitcoin/stealth/commit/3b9e0748cd72624d40a04dc205f73d28cb7002b1
+  repo: stealth-bitcoin/stealth
+  kind: commit
+  title: 'feat: recommend Payjoin in CIOH and consolidation corrections'
+  stars: 0
+  updated_at: '2026-09-01T11:46:13Z'
+  first_seen: '2026-09-05'
+  status: new
+  last_surfaced: '2026-09-05'
 - url: https://github.com/breez/breez-sdk-liquid/issues/1106
   repo: breez/breez-sdk-liquid
   kind: issue
@@ -365,6 +410,15 @@
   first_seen: '2026-09-04'
   status: new
   last_surfaced: '2026-09-04'
+- url: https://github.com/hashhog/beamchain/commit/8689f1de35966d49a9157118a406b2e82311678d
+  repo: hashhog/beamchain
+  kind: commit
+  title: 'test: wallet tests get a private datadir — one leak caused all 5 #89 failures'
+  stars: 0
+  updated_at: '2026-08-30T22:02:12Z'
+  first_seen: '2026-09-05'
+  status: new
+  last_surfaced: '2026-09-05'
 - url: https://github.com/hashhog/beamchain/commit/7d72bd9b41282936c9f36252aaffccb62313ddda
   repo: hashhog/beamchain
   kind: commit
@@ -383,6 +437,15 @@
   first_seen: '2026-09-04'
   status: new
   last_surfaced: '2026-09-04'
+- url: https://github.com/hashhog/beamchain/commit/c2345a91f6e4f3f037c84c9cbd8b87b8f43d2ecd
+  repo: hashhog/beamchain
+  kind: commit
+  title: 'test: run-all-eunit.sh — `rebar3 eunit` silently skips 101 of 139 test modules'
+  stars: 0
+  updated_at: '2026-08-30T21:20:07Z'
+  first_seen: '2026-09-05'
+  status: new
+  last_surfaced: '2026-09-05'
 - url: https://github.com/lorenzolfm/floripabitdevs/issues/40
   repo: lorenzolfm/floripabitdevs
   kind: issue
@@ -438,6 +501,15 @@
   first_seen: '2026-09-04'
   status: new
   last_surfaced: '2026-09-04'
+- url: https://github.com/hashhog/lunarblock/commit/fe5fd32262d99210faf8a11c477b90cc2ed105f6
+  repo: hashhog/lunarblock
+  kind: commit
+  title: 'chore: regenerate the five lunarblock/ modules that were copies, not shims'
+  stars: 0
+  updated_at: '2026-08-29T14:58:23Z'
+  first_seen: '2026-09-05'
+  status: new
+  last_surfaced: '2026-09-05'
 - url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2766
   repo: SatoshiPortal/bullbitcoin-mobile
   kind: pr
@@ -467,6 +539,16 @@
   first_seen: '2026-09-04'
   status: new
   last_surfaced: '2026-09-04'
+- url: https://github.com/hashhog/clearbit/commit/04dca52dab17eb0b149972198eb2ef1fd710aebf
+  repo: hashhog/clearbit
+  kind: commit
+  title: 'fix(rpc): serve the wait family on its own thread — one call stopped all
+    RPC'
+  stars: 0
+  updated_at: '2026-08-29T08:37:49Z'
+  first_seen: '2026-09-05'
+  status: new
+  last_surfaced: '2026-09-05'
 - url: https://github.com/MarxMad/brigada-educativa-bitcoin/commit/05560f54f82c0af739aa2a550c362c65af317f95
   repo: MarxMad/brigada-educativa-bitcoin
   kind: commit
@@ -498,7 +580,7 @@
   repo: joinmarket-ng/joinmarket-ng
   kind: issue
   title: 'The Black Hole: 6 Mix Depth Concept [4H]'
-  stars: 74
+  stars: 73
   updated_at: '2026-08-28T09:38:08Z'
   first_seen: '2026-07-23'
   status: new
@@ -583,24 +665,6 @@
   stars: 239
   updated_at: '2026-08-27T07:27:42Z'
   first_seen: '2026-07-05'
-  status: new
-  last_surfaced: '2026-08-27'
-- url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/1978
-  repo: SatoshiPortal/bullbitcoin-mobile
-  kind: pr
-  title: Create automated script for testing bull bitcoin mobile against payjoin-cli
-  stars: 191
-  updated_at: '2026-08-27T05:07:13Z'
-  first_seen: '2026-08-27'
-  status: new
-  last_surfaced: '2026-08-27'
-- url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2139
-  repo: SatoshiPortal/bullbitcoin-mobile
-  kind: pr
-  title: Swap electrum url
-  stars: 191
-  updated_at: '2026-08-27T05:06:58Z'
-  first_seen: '2026-08-27'
   status: new
   last_surfaced: '2026-08-27'
 - url: https://github.com/xstoicunicornx/react-native-payjoin
@@ -785,6 +849,25 @@
   first_seen: '2026-08-26'
   status: new
   last_surfaced: '2026-08-26'
+- url: https://github.com/AdamISZ/babilonia/commit/ae6b72f6d06cf013eff20a3f0a42e7d58589f664
+  repo: AdamISZ/babilonia
+  kind: commit
+  title: 'feat(agg_run): co-sign payjoin funding + all recovery paths on regtest (phase
+    6b)'
+  stars: 0
+  updated_at: '2026-08-25T17:51:59Z'
+  first_seen: '2026-09-05'
+  status: new
+  last_surfaced: '2026-09-05'
+- url: https://github.com/AdamISZ/babilonia/commit/f398774ff1e595f408a02c90849b802343d3e104
+  repo: AdamISZ/babilonia
+  kind: commit
+  title: 'feat(agg_run): live run-path over a Transport (phase 6b-i)'
+  stars: 0
+  updated_at: '2026-08-25T16:57:13Z'
+  first_seen: '2026-09-05'
+  status: new
+  last_surfaced: '2026-09-05'
 - url: https://github.com/bitcoin-dot-org/Bitcoin.org/issues/4832
   repo: bitcoin-dot-org/Bitcoin.org
   kind: issue
@@ -794,6 +877,15 @@
   first_seen: '2026-06-29'
   status: new
   last_surfaced: '2026-08-25'
+- url: https://github.com/AdamISZ/babilonia/commit/962aa87822cf634c80c4ff1cc12f5816f2a9a16e
+  repo: AdamISZ/babilonia
+  kind: commit
+  title: 'docs: central thesis — the receive asymmetry (why gambling ∩ bitcoin privacy)'
+  stars: 0
+  updated_at: '2026-08-24T21:29:04Z'
+  first_seen: '2026-09-05'
+  status: new
+  last_surfaced: '2026-09-05'
 - url: https://github.com/cake-tech/cake_wallet/pull/3532
   repo: cake-tech/cake_wallet
   kind: pr
@@ -842,6 +934,16 @@
   first_seen: '2026-09-04'
   status: new
   last_surfaced: '2026-09-04'
+- url: https://github.com/hashhog/lunarblock/commit/c0fe19db5e16614ec5627b31a5e4c5521f00cc29
+  repo: hashhog/lunarblock
+  kind: commit
+  title: 'fix(repo): make src/lunarblock relative so clones cannot write into the
+    live tree'
+  stars: 0
+  updated_at: '2026-08-23T17:29:31Z'
+  first_seen: '2026-09-05'
+  status: new
+  last_surfaced: '2026-09-05'
 - url: https://github.com/DineroLabs/dinero-v8/pull/282
   repo: DineroLabs/dinero-v8
   kind: pr
@@ -1150,15 +1252,6 @@
     inputs
   stars: 0
   updated_at: '2026-08-19T13:56:38Z'
-  first_seen: '2026-08-20'
-  status: new
-  last_surfaced: '2026-08-20'
-- url: https://github.com/cake-tech/cake_wallet/pull/3451
-  repo: cake-tech/cake_wallet
-  kind: pr
-  title: Refactor Receive Flow - SDS
-  stars: 1893
-  updated_at: '2026-08-19T13:05:49Z'
   first_seen: '2026-08-20'
   status: new
   last_surfaced: '2026-08-20'
@@ -2272,7 +2365,7 @@
   repo: trezor/trezor-suite
   kind: issue
   title: Transaction type identification
-  stars: 1038
+  stars: 1039
   updated_at: '2026-08-03T19:32:35Z'
   first_seen: '2026-07-28'
   status: new
