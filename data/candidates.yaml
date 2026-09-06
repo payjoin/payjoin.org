@@ -1,6 +1,97 @@
 # Payjoin activity outside tracked repos (issues, PRs, commits, new repos).
 # Bot appends and refreshes facts; you own `status`.
 # status: new | watching | dismissed | promoted  (bot only adds 'new')
+- url: https://github.com/ponthief/thrilla/pull/37
+  repo: ponthief/thrilla
+  kind: pr
+  title: Rotate sweep addresses, and sweep without the recovery phrase
+  stars: 0
+  updated_at: '2026-09-05T20:27:13Z'
+  first_seen: '2026-09-06'
+  status: new
+  last_surfaced: '2026-09-06'
+- url: https://github.com/ponthief/thrilla/commit/8189cfb679adbc78688531095a9d6f8f1315ed44
+  repo: ponthief/thrilla
+  kind: commit
+  title: Rotate sweep addresses, and sweep without the recovery phrase (#37)
+  stars: 0
+  updated_at: '2026-09-05T20:27:12Z'
+  first_seen: '2026-09-06'
+  status: new
+  last_surfaced: '2026-09-06'
+- url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2751
+  repo: SatoshiPortal/bullbitcoin-mobile
+  kind: pr
+  title: 'refactor(recoverbull): extract into melos feature package and harden backup
+    flows'
+  stars: 191
+  updated_at: '2026-09-05T19:13:18Z'
+  first_seen: '2026-09-01'
+  status: new
+  last_surfaced: '2026-09-01'
+- url: https://github.com/lorenzolfm/floripabitdevs/issues/40
+  repo: lorenzolfm/floripabitdevs
+  kind: issue
+  title: Tópicos setembro 2026
+  stars: 4
+  updated_at: '2026-09-05T18:45:09Z'
+  first_seen: '2026-08-23'
+  status: new
+  last_surfaced: '2026-08-31'
+- url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2802
+  repo: SatoshiPortal/bullbitcoin-mobile
+  kind: pr
+  title: 'feat(sync): isolate scalable multi-wallet synchronization'
+  stars: 191
+  updated_at: '2026-09-05T18:02:47Z'
+  first_seen: '2026-09-06'
+  status: new
+  last_surfaced: '2026-09-06'
+- url: https://github.com/FabricLabs/hub.fabric.pub/pull/16
+  repo: FabricLabs/hub.fabric.pub
+  kind: pr
+  title: Production Polish
+  stars: 2
+  updated_at: '2026-09-05T16:45:08Z'
+  first_seen: '2026-08-16'
+  status: new
+  last_surfaced: '2026-09-01'
+- url: https://github.com/bitcoinaustria/kassiber/pull/543
+  repo: bitcoinaustria/kassiber
+  kind: pr
+  title: Unify custody and source-of-funds review for agents, CLI and desktop
+  stars: 8
+  updated_at: '2026-09-05T15:32:45Z'
+  first_seen: '2026-09-06'
+  status: new
+  last_surfaced: '2026-09-06'
+- url: https://github.com/BlueWallet/BlueWallet/issues/3659
+  repo: BlueWallet/BlueWallet
+  kind: issue
+  title: Dependency Dashboard
+  stars: 3283
+  updated_at: '2026-09-05T15:24:46Z'
+  first_seen: '2026-06-19'
+  status: new
+  last_surfaced: '2026-09-04'
+- url: https://github.com/IronCoreLabs/uniffi-bindgen-java/issues/68
+  repo: IronCoreLabs/uniffi-bindgen-java
+  kind: issue
+  title: 0.4.3 for UniFFI 0.31? 0.4.2 emits invalid Java (already fixed on 0.5.0)
+  stars: 25
+  updated_at: '2026-09-05T13:19:43Z'
+  first_seen: '2026-09-06'
+  status: new
+  last_surfaced: '2026-09-06'
+- url: https://github.com/mimblewimble/grin-wallet/pull/754
+  repo: mimblewimble/grin-wallet
+  kind: pr
+  title: 'Update contracts to current staging + fix #729'
+  stars: 194
+  updated_at: '2026-09-05T11:19:08Z'
+  first_seen: '2026-07-23'
+  status: new
+  last_surfaced: '2026-09-01'
 - url: https://github.com/TriangleBitDevs/TriangleBitDevs.github.io/issues/58
   repo: TriangleBitDevs/TriangleBitDevs.github.io
   kind: issue
@@ -19,7 +110,6 @@
   first_seen: '2026-08-27'
   status: new
   last_surfaced: '2026-09-05'
-  resurfaced: true
 - url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2139
   repo: SatoshiPortal/bullbitcoin-mobile
   kind: pr
@@ -29,34 +119,6 @@
   first_seen: '2026-08-27'
   status: new
   last_surfaced: '2026-09-05'
-  resurfaced: true
-- url: https://github.com/BlueWallet/BlueWallet/issues/3659
-  repo: BlueWallet/BlueWallet
-  kind: issue
-  title: Dependency Dashboard
-  stars: 3282
-  updated_at: '2026-09-04T22:39:37Z'
-  first_seen: '2026-06-19'
-  status: new
-  last_surfaced: '2026-09-04'
-- url: https://github.com/FabricLabs/hub.fabric.pub/pull/16
-  repo: FabricLabs/hub.fabric.pub
-  kind: pr
-  title: Production Polish
-  stars: 2
-  updated_at: '2026-09-04T22:02:18Z'
-  first_seen: '2026-08-16'
-  status: new
-  last_surfaced: '2026-09-01'
-- url: https://github.com/mimblewimble/grin-wallet/pull/754
-  repo: mimblewimble/grin-wallet
-  kind: pr
-  title: 'Update contracts to current staging + fix #729'
-  stars: 194
-  updated_at: '2026-09-04T19:35:39Z'
-  first_seen: '2026-07-23'
-  status: new
-  last_surfaced: '2026-09-01'
 - url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2795
   repo: SatoshiPortal/bullbitcoin-mobile
   kind: pr
@@ -84,7 +146,16 @@
   first_seen: '2026-08-20'
   status: new
   last_surfaced: '2026-09-05'
-  resurfaced: true
+- url: https://github.com/jonbarkert135-cpu/ergeshah/commit/1b4be38b4fa155b18de6ca93e438f2185d62a5c6
+  repo: jonbarkert135-cpu/ergeshah
+  kind: commit
+  title: 'feat(transparency): a signed canary, a fingerprinting-surface rule, and
+    the query string dropped'
+  stars: 0
+  updated_at: '2026-09-04T06:35:14Z'
+  first_seen: '2026-09-06'
+  status: new
+  last_surfaced: '2026-09-06'
 - url: https://github.com/stealth-bitcoin/stealth/pull/30
   repo: stealth-bitcoin/stealth
   kind: pr
@@ -107,7 +178,7 @@
   repo: BlueWallet/BlueWallet
   kind: pr
   title: 'FIX: improve VoiceOver accessibility for controls'
-  stars: 3282
+  stars: 3283
   updated_at: '2026-09-04T02:55:48Z'
   first_seen: '2026-08-26'
   status: new
@@ -247,21 +318,11 @@
   first_seen: '2026-09-04'
   status: new
   last_surfaced: '2026-09-04'
-- url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2751
-  repo: SatoshiPortal/bullbitcoin-mobile
-  kind: pr
-  title: 'refactor(recoverbull): extract into melos feature package and harden backup
-    flows'
-  stars: 191
-  updated_at: '2026-09-02T20:52:09Z'
-  first_seen: '2026-09-01'
-  status: new
-  last_surfaced: '2026-09-01'
 - url: https://github.com/moq-dev/moq/pull/3317
   repo: moq-dev/moq
   kind: pr
   title: 'chore(quest): retire the Dart bindings quest and file its follow-ups'
-  stars: 1493
+  stars: 1496
   updated_at: '2026-09-02T16:24:49Z'
   first_seen: '2026-09-02'
   status: new
@@ -446,15 +507,6 @@
   first_seen: '2026-09-05'
   status: new
   last_surfaced: '2026-09-05'
-- url: https://github.com/lorenzolfm/floripabitdevs/issues/40
-  repo: lorenzolfm/floripabitdevs
-  kind: issue
-  title: Tópicos setembro 2026
-  stars: 4
-  updated_at: '2026-08-30T15:30:23Z'
-  first_seen: '2026-08-23'
-  status: new
-  last_surfaced: '2026-08-31'
 - url: https://github.com/cryptoadvance/specter-diy/issues/397
   repo: cryptoadvance/specter-diy
   kind: issue
@@ -2365,7 +2417,7 @@
   repo: trezor/trezor-suite
   kind: issue
   title: Transaction type identification
-  stars: 1039
+  stars: 1041
   updated_at: '2026-08-03T19:32:35Z'
   first_seen: '2026-07-28'
   status: new
@@ -4166,7 +4218,7 @@
   repo: getfloresta/Floresta
   kind: issue
   title: sendrawtransaction accepts unsigned transactions and returns a txid
-  stars: 440
+  stars: 441
   updated_at: '2026-07-15T17:52:10Z'
   first_seen: '2026-06-19'
   status: new
