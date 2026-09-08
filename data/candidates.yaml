@@ -1,21 +1,104 @@
 # Payjoin activity outside tracked repos (issues, PRs, commits, new repos).
 # Bot appends and refreshes facts; you own `status`.
 # status: new | watching | dismissed | promoted  (bot only adds 'new')
+- url: https://github.com/HackTricks-wiki/hacktricks/pull/2805
+  repo: HackTricks-wiki/hacktricks
+  kind: pr
+  title: Add offensive privacy, attribution-evasion and OPSEC section
+  stars: 12234
+  updated_at: '2026-09-07T23:22:55Z'
+  first_seen: '2026-09-08'
+  status: new
+  last_surfaced: '2026-09-08'
+- url: https://github.com/fungi-protocol/docs/pull/30
+  repo: fungi-protocol/docs
+  kind: pr
+  title: Edits to Collaborative Transaction Privacy
+  stars: 4
+  updated_at: '2026-09-07T22:48:41Z'
+  first_seen: '2026-09-08'
+  status: new
+  last_surfaced: '2026-09-08'
 - url: https://github.com/BlueWallet/BlueWallet/issues/3659
   repo: BlueWallet/BlueWallet
   kind: issue
   title: Dependency Dashboard
-  stars: 3283
-  updated_at: '2026-09-07T03:06:57Z'
+  stars: 3286
+  updated_at: '2026-09-07T22:38:00Z'
   first_seen: '2026-06-19'
   status: new
   last_surfaced: '2026-09-04'
+- url: https://github.com/SatoshiPortal/bullbitcoin-mobile/issues/2796
+  repo: SatoshiPortal/bullbitcoin-mobile
+  kind: issue
+  title: '[Feature]: Scan the silent payments wallet in the background sync task'
+  stars: 191
+  updated_at: '2026-09-07T22:19:34Z'
+  first_seen: '2026-09-04'
+  status: new
+  last_surfaced: '2026-09-04'
+- url: https://github.com/mimblewimble/grin-wallet/pull/754
+  repo: mimblewimble/grin-wallet
+  kind: pr
+  title: 'Update contracts to current staging + fix #729'
+  stars: 194
+  updated_at: '2026-09-07T20:11:21Z'
+  first_seen: '2026-07-23'
+  status: new
+  last_surfaced: '2026-09-08'
+  resurfaced: true
+- url: https://github.com/GingerPrivacy/GingerDoc/pull/7
+  repo: GingerPrivacy/GingerDoc
+  kind: pr
+  title: 'docs: explain receiving, sending and pending payments'
+  stars: 0
+  updated_at: '2026-09-07T18:03:59Z'
+  first_seen: '2026-09-08'
+  status: new
+  last_surfaced: '2026-09-08'
+- url: https://github.com/bitcoin-dot-org/Bitcoin.org/issues/4832
+  repo: bitcoin-dot-org/Bitcoin.org
+  kind: issue
+  title: 'Protect your privacy: modernizing dated sections, seeking direction on scope'
+  stars: 1777
+  updated_at: '2026-09-07T17:19:50Z'
+  first_seen: '2026-06-29'
+  status: new
+  last_surfaced: '2026-09-08'
+  resurfaced: true
+- url: https://github.com/NashBitDevs/nashbitdevs.org/issues/145
+  repo: NashBitDevs/nashbitdevs.org
+  kind: issue
+  title: 'Socratic Seminar #47'
+  stars: 10
+  updated_at: '2026-09-07T15:55:21Z'
+  first_seen: '2026-09-08'
+  status: new
+  last_surfaced: '2026-09-08'
+- url: https://github.com/bitcoinaustria/kassiber/pull/555
+  repo: bitcoinaustria/kassiber
+  kind: pr
+  title: Authorize bounded recurring Core acquisition and resumable block history
+  stars: 8
+  updated_at: '2026-09-07T13:19:42Z'
+  first_seen: '2026-09-08'
+  status: new
+  last_surfaced: '2026-09-08'
+- url: https://github.com/bitcoinaustria/kassiber/pull/551
+  repo: bitcoinaustria/kassiber
+  kind: pr
+  title: Build local chain investigations and guided source-of-funds reports
+  stars: 8
+  updated_at: '2026-09-07T12:44:14Z'
+  first_seen: '2026-09-07'
+  status: new
+  last_surfaced: '2026-09-07'
 - url: https://github.com/TriangleBitDevs/TriangleBitDevs.github.io/issues/58
   repo: TriangleBitDevs/TriangleBitDevs.github.io
   kind: issue
   title: Socratic Seminar 56
   stars: 5
-  updated_at: '2026-09-07T01:49:08Z'
+  updated_at: '2026-09-07T07:46:54Z'
   first_seen: '2026-08-13'
   status: new
   last_surfaced: '2026-09-03'
@@ -28,29 +111,20 @@
   first_seen: '2026-08-16'
   status: new
   last_surfaced: '2026-09-01'
-- url: https://github.com/bitcoinaustria/kassiber/pull/551
-  repo: bitcoinaustria/kassiber
-  kind: pr
-  title: Build local chain investigations and guided source-of-funds reports
-  stars: 8
-  updated_at: '2026-09-06T22:17:04Z'
-  first_seen: '2026-09-07'
+- url: https://github.com/hashhog/beamchain/commit/0252cda6650cd71f7bf90513bde6b67ea74bbe96
+  repo: hashhog/beamchain
+  kind: commit
+  title: 'fix: an ETS leak was cancelling 101 of 140 test modules, not test discovery'
+  stars: 0
+  updated_at: '2026-09-06T17:14:57Z'
+  first_seen: '2026-09-08'
   status: new
-  last_surfaced: '2026-09-07'
-- url: https://github.com/mimblewimble/grin-wallet/pull/754
-  repo: mimblewimble/grin-wallet
-  kind: pr
-  title: 'Update contracts to current staging + fix #729'
-  stars: 194
-  updated_at: '2026-09-06T18:22:22Z'
-  first_seen: '2026-07-23'
-  status: new
-  last_surfaced: '2026-09-01'
+  last_surfaced: '2026-09-08'
 - url: https://github.com/btcpayserver/btcpayserver/pull/7567
   repo: btcpayserver/btcpayserver
   kind: pr
   title: Encode payjoin errors in wallet status messages
-  stars: 7746
+  stars: 7748
   updated_at: '2026-09-06T14:45:26Z'
   first_seen: '2026-09-07'
   status: new
@@ -73,7 +147,6 @@
   first_seen: '2026-08-15'
   status: new
   last_surfaced: '2026-09-07'
-  resurfaced: true
 - url: https://github.com/infofixdeserts-max/onebazaar/commit/adc7e690c33fcd40fa38296a25122f4002941088
   repo: infofixdeserts-max/onebazaar
   kind: commit
@@ -188,7 +261,7 @@
   repo: cake-tech/cake_wallet
   kind: pr
   title: Refactor Receive Flow - SDS
-  stars: 1896
+  stars: 1897
   updated_at: '2026-09-04T07:31:25Z'
   first_seen: '2026-08-20'
   status: new
@@ -203,6 +276,16 @@
   first_seen: '2026-09-06'
   status: new
   last_surfaced: '2026-09-06'
+- url: https://github.com/jonbarkert135-cpu/ergeshah/commit/9ae228f80a9da30a0f0bf838c0dfc31068fd0797
+  repo: jonbarkert135-cpu/ergeshah
+  kind: commit
+  title: 'feat(transparency): a signed canary, a fingerprinting-surface rule, and
+    the query string dropped'
+  stars: 0
+  updated_at: '2026-09-04T06:35:14Z'
+  first_seen: '2026-09-08'
+  status: new
+  last_surfaced: '2026-09-08'
 - url: https://github.com/stealth-bitcoin/stealth/pull/30
   repo: stealth-bitcoin/stealth
   kind: pr
@@ -225,18 +308,9 @@
   repo: BlueWallet/BlueWallet
   kind: pr
   title: 'FIX: improve VoiceOver accessibility for controls'
-  stars: 3283
+  stars: 3286
   updated_at: '2026-09-04T02:55:48Z'
   first_seen: '2026-08-26'
-  status: new
-  last_surfaced: '2026-09-04'
-- url: https://github.com/SatoshiPortal/bullbitcoin-mobile/issues/2796
-  repo: SatoshiPortal/bullbitcoin-mobile
-  kind: issue
-  title: '[Feature]: Scan the silent payments wallet in the background sync task'
-  stars: 191
-  updated_at: '2026-09-04T01:04:23Z'
-  first_seen: '2026-09-04'
   status: new
   last_surfaced: '2026-09-04'
 - url: https://github.com/ZeusLN/zeus/issues/4562
@@ -270,7 +344,7 @@
   repo: cashubtc/cdk
   kind: pr
   title: Payjoin
-  stars: 228
+  stars: 229
   updated_at: '2026-09-03T08:55:28Z'
   first_seen: '2026-06-19'
   status: new
@@ -315,7 +389,7 @@
   repo: cashubtc/cashu-ts
   kind: issue
   title: Cashu-TS Development Meeting — 2026-09-02
-  stars: 106
+  stars: 107
   updated_at: '2026-09-02T21:31:16Z'
   first_seen: '2026-09-03'
   status: new
@@ -387,7 +461,7 @@
   repo: cashubtc/cdk-payment-processors
   kind: pr
   title: 'feat: let payment processors advertise a subset of payment methods'
-  stars: 4
+  stars: 5
   updated_at: '2026-09-02T10:39:58Z'
   first_seen: '2026-09-01'
   status: new
@@ -661,7 +735,7 @@
   repo: cashubtc/cdk
   kind: pr
   title: 'feat(payjoin): add backend-independent NUT-31 plumbing'
-  stars: 228
+  stars: 229
   updated_at: '2026-08-28T10:54:27Z'
   first_seen: '2026-08-22'
   status: new
@@ -689,7 +763,7 @@
   kind: issue
   title: Payjoin receiver reuses the same subdirectory (mailbox) across receives instead
     of rotating it
-  stars: 1896
+  stars: 1897
   updated_at: '2026-08-28T02:03:16Z'
   first_seen: '2026-08-28'
   status: new
@@ -752,7 +826,7 @@
   repo: cashubtc/nuts
   kind: pr
   title: 'NUT-XX: Payjoin'
-  stars: 239
+  stars: 240
   updated_at: '2026-08-27T07:27:42Z'
   first_seen: '2026-07-05'
   status: new
@@ -797,7 +871,7 @@
   repo: xstoicunicornx/browser-payjoin
   kind: repo
   title: a payjoin browser app
-  stars: 0
+  stars: 1
   updated_at: '2026-08-26T21:46:01Z'
   first_seen: '2026-07-23'
   status: new
@@ -898,7 +972,7 @@
   repo: cake-tech/cake_wallet
   kind: pr
   title: WIP Payjoin upgrade to native dart bindings via payjoin_ffi
-  stars: 1896
+  stars: 1897
   updated_at: '2026-08-25T20:37:41Z'
   first_seen: '2026-07-03'
   status: new
@@ -958,15 +1032,6 @@
   first_seen: '2026-09-05'
   status: new
   last_surfaced: '2026-09-05'
-- url: https://github.com/bitcoin-dot-org/Bitcoin.org/issues/4832
-  repo: bitcoin-dot-org/Bitcoin.org
-  kind: issue
-  title: 'Protect your privacy: modernizing dated sections, seeking direction on scope'
-  stars: 1777
-  updated_at: '2026-08-25T04:19:17Z'
-  first_seen: '2026-06-29'
-  status: new
-  last_surfaced: '2026-08-25'
 - url: https://github.com/AdamISZ/babilonia/commit/962aa87822cf634c80c4ff1cc12f5816f2a9a16e
   repo: AdamISZ/babilonia
   kind: commit
@@ -980,7 +1045,7 @@
   repo: cake-tech/cake_wallet
   kind: pr
   title: Hide broken options in Bitcoin wallets without a private key
-  stars: 1896
+  stars: 1897
   updated_at: '2026-08-24T20:25:02Z'
   first_seen: '2026-08-18'
   status: new
@@ -1129,7 +1194,7 @@
   repo: cake-tech/cake_wallet
   kind: pr
   title: Refactor swap logic and state management
-  stars: 1896
+  stars: 1897
   updated_at: '2026-08-21T20:25:39Z'
   first_seen: '2026-08-22'
   status: new
@@ -1231,7 +1296,7 @@
   kind: pr
   title: 'a11y: decorative/meaningful image semantics, labeled icon buttons, audible
     addresses'
-  stars: 1896
+  stars: 1897
   updated_at: '2026-08-20T14:40:11Z'
   first_seen: '2026-08-01'
   status: new
@@ -1377,7 +1442,7 @@
   repo: cake-tech/cake_wallet
   kind: issue
   title: Bitcoin sends use nLockTime = 0 (anti-fee-sniping + payjoin fingerprint)
-  stars: 1896
+  stars: 1897
   updated_at: '2026-08-19T10:44:01Z'
   first_seen: '2026-07-03'
   status: new
@@ -2455,7 +2520,7 @@
   repo: trezor/trezor-suite
   kind: issue
   title: Transaction type identification
-  stars: 1041
+  stars: 1042
   updated_at: '2026-08-03T19:32:35Z'
   first_seen: '2026-07-28'
   status: new
@@ -3283,7 +3348,7 @@
   repo: cake-tech/cake_wallet
   kind: issue
   title: Bitcoin sends place change output deterministically last
-  stars: 1896
+  stars: 1897
   updated_at: '2026-07-26T00:30:43Z'
   first_seen: '2026-07-08'
   status: new
@@ -4326,7 +4391,7 @@
   repo: cake-tech/cake_wallet
   kind: issue
   title: Bitcoin sends order inputs by BIP-69
-  stars: 1896
+  stars: 1897
   updated_at: '2026-07-14T02:39:04Z'
   first_seen: '2026-07-08'
   status: new
@@ -4498,7 +4563,7 @@
   repo: cake-tech/cake_wallet
   kind: issue
   title: Payjoin receiver can contribute unconfirmed (0-conf) inputs
-  stars: 1896
+  stars: 1897
   updated_at: '2026-07-10T15:23:30Z'
   first_seen: '2026-07-10'
   status: new
@@ -4575,7 +4640,7 @@
   repo: cake-tech/cake_wallet
   kind: issue
   title: '6.0: payjoin notice on litecoin receive'
-  stars: 1896
+  stars: 1897
   updated_at: '2026-07-09T22:18:07Z'
   first_seen: '2026-07-10'
   status: new
@@ -4599,7 +4664,7 @@
   repo: cake-tech/cake_wallet
   kind: issue
   title: Sparrow user payjoin fails because of changed nLocktime
-  stars: 1896
+  stars: 1897
   updated_at: '2026-07-08T19:00:39Z'
   first_seen: '2026-07-09'
   status: new
@@ -4607,7 +4672,7 @@
   repo: cake-tech/cake_wallet
   kind: issue
   title: 'RBF nsequence: non-canonical 0x01, only on inputs[0]'
-  stars: 1896
+  stars: 1897
   updated_at: '2026-07-08T18:37:09Z'
   first_seen: '2026-06-19'
   status: new
@@ -4615,7 +4680,7 @@
   repo: cashubtc/cashu-ts
   kind: issue
   title: Cashu-TS Development Meeting — 2026-07-08
-  stars: 106
+  stars: 107
   updated_at: '2026-07-08T14:09:21Z'
   first_seen: '2026-07-09'
   status: new
@@ -4802,7 +4867,7 @@
   repo: cake-tech/cake_wallet
   kind: issue
   title: Upgrade payjoin bindings to use payjoin_ffi
-  stars: 1896
+  stars: 1897
   updated_at: '2026-06-30T15:04:30Z'
   first_seen: '2026-07-01'
   status: new
