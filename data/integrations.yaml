@@ -10,7 +10,7 @@
     maintenance: 3
   spec_feedback: real_usage
   blocker: Evaluating async callbacks
-  notes: Rust wallet, needed async API (which we mostly have). Evaluating callback approach.
+  notes: "Rust wallet, needed async API (which we mostly have). Evaluating callback approach. Status check 2026-09-08: no payjoin mention anywhere in the lexe-app org; only rust-payjoin#816 (async callbacks, last activity 2025-12-15) relates. Nothing has moved since payjoin 1.0.0; the next step is ours (a note on the 1.1 API shape)."
   contact:
     name: Max Fang
   owner:
@@ -407,7 +407,7 @@
     fallback: false
     ohttp_relay_rotation: false
   sync_method: full_node
-  blocker: release_1.0
+  blocker: service_ownership_change
   scores:
     leverage: 5
     feasibility: 4
@@ -417,10 +417,11 @@
     name: Spacebear
     internal: true
     spof: null
+  notes: "Status check 2026-09-08: Boltz paused its service in August 2026 and the operation changed hands. Draft integration PR boltz-backend#1430 (pseudozach) last updated 2026-06-26; our own draft boltz-backend#892 open since June. payjoin 1.0.0 shipped 2026-08-12, so the earlier release blocker is gone. Nothing moves until the new operators confirm the payjoin work continues."
   next_artifact:
-    type: pr
-    description: "working PR"
-    url: null
+    type: issue
+    description: "Confirm with Boltz's new operators whether the payjoin integration continues; then rebase boltz-backend#1430"
+    url: https://github.com/BoltzExchange/boltz-backend/pull/1430
   estimated_value: "$20,000.00"
   bounty: "$800.00"
   added: "December 4, 2022 8:39 AM"
@@ -440,7 +441,7 @@
   name: Bull Bitcoin Mobile
   tracking_issue: https://github.com/payjoin/rust-payjoin/issues/1206
   class: on_chain_wallet
-  status: beta
+  status: live
   language: "Flutter, Rust"
   custody: self_custodial
   native_http_client: planned
@@ -473,22 +474,22 @@
       description: "OHTTP chain-access migration plan for BB Mobile"
       url: null
     notes: "Local source check against SatoshiPortal/bullbitcoin-mobile origin/main on 2026-07-19: Bitcoin wallet sync uses BDK full_scan over Electrum; default settings seed Tor proxy off, though Tor proxy is supported. Move Esplora-shaped one-off lookups and broadcast first, then request-granular sync."
-  blocker: our_engineering_time
+  blocker: their_directory_infra
   owner:
     internal: Spacebear
-    external: Francis
+    external: ethicnology
   scores:
     leverage: 5
     feasibility: 5
     maintenance: 3
   spec_feedback: real_usage
-  notes: "High leverage as reference implementation and close team relationship. First integration, guinea pig status increases maintenance. Real usage surfaces spec issues. 2026 uniffi migration: PR #2041 (open draft) swaps payjoin_flutter→published 'payjoin' uniffi dart package; isolates architecture dropped; CI integration tests merged on develop (#2237). Ben Allen owns the payjoin-cli regression harness (#1978); ethicnology drives CI/reproducible-build. Remaining: rebase onto develop + legacy persisted-session migration. Blocks Spiral handoff (BB must run off a third-party mailroom, not payjo.in)."
+  notes: "High leverage as reference implementation and close team relationship. Real usage surfaces spec issues. Status check 2026-09-08: the uniffi migration SHIPPED. PR #2041 merged 2026-07-11 into a staging branch, landed on develop via #2443 (07-21), released in v6.13.0 (2026-08-14); v6.13.1 stable 08-31. The old payjoin_flutter fork is gone; the app depends on an in-repo bull_payjoin package that pins the dart binding from a SatoshiPortal fork of rust-payjoin at the pre-rebase commit of rust-payjoin#1815 (lockfile 0.2.1+payjoin-1.0.0-rc.8). Reviewing #1815 lets them move to pub.dev payjoin 0.2.2+payjoin-1.0.0. Legacy persisted-session migration done (#2477). Directory default is still payjo.in; PR #2711 (BullishNode, 08-23) makes payjoin.bullbitcoin.com the default with payjo.in as fallback and adds ohttp.bullbitcoin.com, blocked on their infra going live plus one review round. Bull Bitcoin's team (ethicnology, i5hi, BullishNode) is doing the engineering; our side owes #1815 review and a design ACK on #2711. payjoin-cli regression harness #1978 is stale and closes automatically mid-September unless touched."
   next_artifact:
     type: pr
-    description: "Merge PR #2041 (uniffi swap; rebase onto develop + legacy session migration)"
-    url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2041
+    description: "Merge PR #2711 (own directory + relay as default); rust-payjoin#1815 review so the fork pin can go"
+    url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2711
   contact:
-    name: Francis
+    name: Francis; ethicnology (engineering)
     last_contact: 2026-06-04
   estimated_value: "$100,000.00"
   added: "December 4, 2022 8:58 AM"
@@ -569,22 +570,23 @@
       description: "Confirm Envoy chain-access path and OHTTP fit"
       url: null
     notes: "Tracker records Esplora sync. Lower Payjoin coupling than hot mobile wallets because Passport/Envoy is hardware-wallet-shaped, but the Esplora request substrate should generalize from BB Mobile/Cake."
-  blocker: reopening_relationship_cold_wallet_example
+  blocker: our_follow_up
   owner:
     internal: Dan Gould
-    external: Zach Herbert
+    external: icota
   scores:
     leverage: 2
     feasibility: 3
     maintenance: 1
   spec_feedback: already_covered
+  notes: "Status check 2026-09-08: our send PoC PR envoy#84 is a stale draft with two 2024 approvals. icota (2025-02-27) asked to wait for their BDK 1.0 migration and prefers using the PDK directly over the Flutter bindings; that migration shipped over a year ago. No contact from us since. Ball is in our court: reply on #84 with payjoin 1.0.0 and the dart 0.2.2 binding, or propose the PDK-direct path."
   next_artifact:
-    type: issue
-    description: "Payjoin integration tracking issue"
-    url: null
+    type: pr
+    description: "Reply on envoy#84 with the 1.0 path and ask icota which integration shape they want"
+    url: https://github.com/Foundation-Devices/envoy/pull/84
   contact:
-    name: Zach Herbert
-    last_contact: null
+    name: icota (Envoy lead); Zach Herbert
+    last_contact: 2025-06-30
   estimated_value: "$2,000.00"
   added: "December 4, 2022 8:59 AM"
 -
@@ -652,23 +654,23 @@
       description: "Cake OHTTP Esplora/broadcast migration sketch"
       url: null
     notes: "Tracker records Esplora sync and planned native HTTP client. Privacy-wallet audience and mobile light-client shape make this a high-value follow-on after BB Mobile proves the relay/backend pattern."
-  blocker: their_engineering_time_and_our_release
+  blocker: maintainer_review_latency
   owner:
-    internal: Spacebear
+    internal: Ben Allen
     external: Konstantin @ Cake
   scores:
     leverage: 5
     feasibility: 5
     maintenance: 2
   spec_feedback: real_usage
-  notes: "Big name in privacy wallet space. 500k users edges leverage to 5. Early adopter true fan - donates to project. Multi-coin (shitcoin) wallet limits leverage somewhat. Poor testing/feedback ability but low maintenance burden. 2026: still on deprecated konstantinullrich/payjoin-flutter FRB fork (dev@2026-06-08); uniffi (payjoin-ffi) migration spec'd and handed to Ben, not yet landed. 3 interop bugs diagnosed via manual testing 2026-03-19; bc1cindy contributing fixes (#3304, refs rust-payjoin #1597). rust-payjoin Dart-binding PR #1500 closed unmerged, #1532 merged — Cake doesn't consume that binding yet (still FRB), so no capability change today."
+  notes: "Big name in privacy wallet space. 500k users edges leverage to 5. Early adopter true fan - donates to project. Multi-coin wallet limits leverage somewhat. Status check 2026-09-08: shipping release v6.4.4 (09-04) still uses the konstantinullrich/payjoin-flutter fork pinned at a February commit, directory default payjo.in. Ben's uniffi migration PR #3363 (receiver side only) got a maintainer review from konstantinullrich on 08-04 (layering, Tor proxy wrapper, localization); Ben pushed fixes through 08-25 and has not re-requested review; the sender half is not started. bc1cindy landed four privacy fixes Jul–Aug (#3379 input shuffle, #3432 change shuffle, #3385 anti-fee-sniping locktime, #3408 randomized coin selection) plus #3304 and #3389. nSequence: #3077 merged in March; residual non-canonical value on inputs[0] (#3302) still open with no PR. New: #3572 (08-28) receiver reuses one mailbox across receives, unanswered."
   next_artifact:
     type: pr
-    description: "payjoin-ffi (uniffi) migration PR replacing konstantinullrich/payjoin-flutter fork"
-    url: null
+    description: "Re-request review on #3363, land receiver, then add the sender half; fix #3302"
+    url: https://github.com/cake-tech/cake_wallet/pull/3363
   contact:
     name: "Konstantin Ullrich (konstantinullrich)"
-    last_contact: 2026-06-06
+    last_contact: 2026-08-04
   estimated_value: "$100,000.00"
   added: "December 4, 2022 9:00 AM"
 -
@@ -764,11 +766,15 @@
     feasibility: 3
     maintenance: 4
   spec_feedback: already_covered
-  blocker: JS release / Channel Open example
-  notes: "Real users, popular self-custodial LN wallet, influential in sovereign crowd. JS bindings exist but LN bits might be tricky. Maybe swaps-to-payjoin easier than native integration. Unclear how it plays with LND/CLightning backends. Evan is eager when presented as easy to do. SF only 2 because JS - channels/wallets already fed back."
+  blocker: ldk_node_746
+  notes: "Real users, popular self-custodial LN wallet, influential in sovereign crowd. Status check 2026-09-08: xstoicunicornx opened zeus#4562 (09-03); kaloudis closed it the same day and pointed at zeus#3852 'LDK Node: add Payjoin support', where he had linked the payjoin 1.0 announcement on 08-12. Zeus wants payjoin through ldk-node, so the path runs through ldk-node#746, not through the JS bindings."
+  next_artifact:
+    type: pr
+    description: "ldk-node#746 merged and released; then a Zeus PR on zeus#3852"
+    url: https://github.com/ZeusLN/zeus/issues/3852
   contact:
     name: Evan Kaloudis
-    last_contact: null
+    last_contact: 2026-09-03
   added: "December 4, 2022 9:01 AM"
 -
   name: CZ
@@ -839,15 +845,15 @@
     feasibility: 3
     maintenance: 1
   spec_feedback: real_usage
-  blocker: v1_sender_compatibility
-  notes: "Plugin prototype LIVE at ValeraFinebits/btcpayserver-payjoin-plugin. ~30+ PRs merged through #45; alpha-checklist items (same-wallet test #14, CI tests #15, external-payer flow #16, restart-in-flight test #18) all merged. Payjoin v2 enabled by default (#43, merged 2026-06-07). Active work: v1-sender compatibility (v2 invoices fail for v1-only payers #38; silent v1 fallback when directory down #48; legacy-sender fix + invoice accounting PR #45) and adapting to rust-payjoin #1558 fallback typestate (#51). No GitHub release/tag cut yet. C# UniFFI bindings merged (payjoin-ffi). Plugin overrides native BTCPay payjoin, v2. Hot wallet + cold descriptor field for output-substitution forwarding. Reference plugin: MarkPaid. Target BTCPayServer 10.0. Open design questions: hot/cold threshold logic, invoice lifecycle edge cases for donation use case."
+  blocker: plugin_review_throughput
+  notes: "Status check 2026-09-08: the plugin is INSTALLABLE by operators from the official BTCPay Plugin Builder as 'Async Payjoin (Alpha)' 0.3.2 (published 2026-08-27, min BTCPay 2.4.0). Pre-releases v0.3.0-alpha.rc.1 (07-22) and v0.3.2-alpha.rc.2 (08-27) on GitHub. README still says testing only. First mainnet payjoin completed by ValeraFinebits (reported 2026-08-31). rc.2 was built from a cherry-pick branch 45 commits ahead of master: about a dozen green Valera PRs opened 08-11..08-31 have chavic as requested reviewer and none are reviewed, so master lags what operators install. chavic's sender-side PR #113 is on its fourth review round with Valera. Plugin compiles the C# binding from the rust-payjoin submodule (pinned 07-29), not from NuGet; NuGet Payjoin 0.1.0+payjoin-1.0.0 (stable) published 08-27. v1 fallback UX shipped in rc.2; #48 and #52 still open. Upstream btcpayserver#7567 (09-06) hardened the native v1 sender's error display and does not touch the plugin."
   contact:
     name: ValeraFinebits, Rockstar, Nicolas Dorier
-    last_contact: 2026-06-08
+    last_contact: 2026-08-31
   next_artifact:
     type: pr
-    description: "v1-sender compatibility fix (#45) + mainnet demo"
-    url: https://github.com/ValeraFinebits/btcpayserver-payjoin-plugin/pull/45
+    description: "Review Valera's open PRs so master catches rc.2; next release cut from master"
+    url: https://github.com/ValeraFinebits/btcpayserver-payjoin-plugin/pulls
   added: "December 5, 2022 2:21 AM"
 # OpenNode - Payment Processor
 -
@@ -1047,7 +1053,7 @@
   name: Wasabi
   tracking_issue: https://github.com/WalletWasabi/WalletWasabi/issues/13628
   class: on_chain_wallet
-  status: engaged
+  status: draft
   language: "C#, UniFFI"
   custody: self_custodial
   native_http_client: true
@@ -1073,18 +1079,22 @@
     notes: "Privacy-sensitive desktop wallet; do not assume the same Esplora/Electrum leakage model as mobile light clients. Track mostly to avoid payjoin/broadcast regressions and confirm whether any OHTTP work is useful."
   estimated_value: "$5,000.00"
   owner:
-    internal: null
-    external: Max Hillebrand
+    internal: Dan Gould
+    external: lontivero
   scores:
     leverage: 2
     feasibility: 4
     spec_feedback: already_covered
     maintenance: 1
-  blocker: their_engineering_time
-  notes: "Already kind of supports Payjoin (v1) so incremental leverage is low. C# bindings now merged (payjoin-ffi). Easy-ish update - copy another on-chain's arch with db. Do they have a real db?"
+  blocker: our_pr_stack_rebase
+  notes: "Status check 2026-09-08: BIP 77 lands as a five-PR stack. Merged in Wasabi master: #14876 (their parser fix, replacing our #14874) and our #14880 (recognize BIP 77 pj endpoints, preserve pjos; approved by lontivero 07-30, two days after opening). Not yet opened: the sender and receiver PRs, which exist only as branches (bip77-3-sender, bip77-4-receiver) on DanGould/WalletWasabi, now about 75 commits behind master and conflicting on Bip77UriParams.cs and packages.lock.json. The end-to-end demo (#14875, do-not-merge) is an open draft. Wasabi maintainers (lontivero, Carti-it, molnard, turbolay) ship daily and reviewed fast; all six weeks of silence are on our side. The sender branch pins NuGet 0.24.0-preview.1; a stable Payjoin NuGet exists since 08-27. Issue #13628 has no maintainer assignment."
+  next_artifact:
+    type: pr
+    description: "Rebase and open the sender PR (3 of 5) against master; request lontivero + Carti-it"
+    url: https://github.com/DanGould/WalletWasabi/tree/bip77-3-sender
   contact:
-    name: Max Hillebrand
-    last_contact: null
+    name: lontivero (reviewer); Max Hillebrand
+    last_contact: 2026-07-30
   added: "December 14, 2022 10:14 PM"
 # Sparrow - On Chain Wallet
 - name: Sparrow
@@ -1118,10 +1128,15 @@
     feasibility: 3
     maintenance: 3
   spec_feedback: already_covered
-  blocker: Kotlin bindings + Craig buy-in
-  notes: Everywhere, we use it. Need Kotlin bindings and convince Craig Raw to use it or roll it himself.
+  blocker: JVM bindings (rust-payjoin#1860) + Craig buy-in
+  notes: "Everywhere, we use it. Need JVM bindings and convince Craig Raw to use it or roll it himself. Status check 2026-09-08: rust-payjoin#1860 (ram0verflow, 09-05) asks for Java bindings to experiment with an unofficial Sparrow V2 build; chavic replied 09-06 and is splitting Kotlin into its own draft. uniffi-bindgen-java needs uniffi 0.32, payjoin-ffi is on 0.31.2. sparrow#1980 'PayJoin v2 (BIP77)' open since March with no reply from Craig."
+  next_artifact:
+    type: pr
+    description: "Kotlin/Java bindings draft from #1860; then a Sparrow prototype to show Craig"
+    url: https://github.com/payjoin/rust-payjoin/issues/1860
   contact:
-    name: Craig Raw
+    name: Craig Raw; ram0verflow (community)
+    last_contact: 2026-09-06
   owner:
     name: Dan Gould
     internal: true
@@ -1664,11 +1679,15 @@
     feasibility: 4
     spec_feedback: already_covered
     maintenance: 2
-  blocker: JS release / Channel Open example w/ 1.0
-  notes: "Smaller than Zeus, lower crowd. Higher feasibility than Zeus - just channel open on WASM. Basically nolooking on the phone, not a remote for other nodes. Question: how does this match with LDK-Node integration? Should be a little harder than LDK-Node."
+  blocker: react_native_bindings_1851
+  notes: "Smaller than Zeus, lower crowd. Higher feasibility than Zeus - just channel open. Status check 2026-09-08: last word on blixt#1262 is ours (2025-11-19) promising React Native bindings. Those now exist: xstoicunicornx/react-native-payjoin (08-27) and rust-payjoin#1851 (draft, concept ACK from spacebear 08-31). Nobody has gone back to Hampus."
+  next_artifact:
+    type: pr
+    description: "Take #1851 out of draft, then post the RN path on blixt#1262"
+    url: https://github.com/payjoin/rust-payjoin/pull/1851
   contact:
     name: Hampus
-    last_contact: "April 3, 2023"
+    last_contact: 2025-11-19
   added: "March 28, 2023 3:38 AM"
 -
   name: ZBD OBW
@@ -2036,7 +2055,7 @@
       description: "Confirm Liana backend modes and payjoin broadcast path"
       url: null
     notes: "Electrum-backed desktop wallet. OHTTP sync is not a quick win unless the chain-access layer changes shape; immediate value is broadcast privacy and clear backend-mode guidance."
-  blocker: ben_review_and_db_migration
+  blocker: rebase_to_1.0_and_db_migration
   owner:
     internal: Ben Allen
     external: "Pyth (Edouard, Antoine); xstoicunicornx, yashrajd (community testers)"
@@ -2045,21 +2064,21 @@
     feasibility: 3
     maintenance: 4
   spec_feedback: real_usage
-  notes: "Ben's receiver PR live at wizardsardine/liana#2011 (opened 2026-02-10, no longer a draft; under active maintainer review by pythcoiner). External testers active April 2026 (xstoicunicornx from BOSS Payjoin Showcase, yashrajd on UX). rust-payjoin payjoin-1.0.0-rc.3 (2026-06-08) ships Receive cancel() (#1470) + Send cancel() (#1496) + fallback typestates — the release Ben needed now exists (confirm he has pinned rc.3 rather than master). Send flow added 2026-06-01 (bip21 handling + payjoin-cli-sender/lianad-receiver integration test), unmerged. Recurring blocker: SQLite migration panic ('no such table: payjoin_receivers'); pythcoiner suggests giving the payjoin service its own DB. Earlier UX questions (amount-in-URI, expiration-in-settings) largely settled."
+  notes: "Ben's receiver PR wizardsardine/liana#2011 (opened 2026-02-10) with send flow added 06-01. Status check 2026-09-08: last commits 06-19; review thread (pythcoiner, benalleng, bc1cindy) went quiet 07-09; the PR now conflicts with master and predates payjoin 1.0.0. Still open: the SQLite migration panic ('no such table: payjoin_receivers'; pythcoiner suggests a separate DB for the payjoin service) and Ben's 06-19 feature-gate note. pythcoiner opened #2201 asking whether to enable payjoin for all policies (answered 07-14, follow-up 08-09). The reviewer is waiting on us."
   next_artifact:
     type: pr
-    description: "Address pythcoiner review + fix payjoin_receivers DB-migration panic; move WIP→ready"
+    description: "Rebase #2011 onto master, pin payjoin 1.0.0, fix the migration panic and feature gate, re-request pythcoiner"
     url: https://github.com/wizardsardine/liana/pull/2011
   contact:
     name: "Edouard, Antoine; pythcoiner (active reviewer)"
-    last_contact: 2026-06-09
+    last_contact: 2026-08-09
   added: "May 21, 2023 4:24 AM"
 # Bria (Galoy) - Exchange / Custodian (wallet infrastructure)
 -
   name: Bria
   tracking_issue: https://github.com/GaloyMoney/bria/issues/266
   class: exchange_custodian
-  status: draft
+  status: stalled
   language: Rust
   custody: custodial
   native_http_client: true
@@ -2072,7 +2091,7 @@
     fallback: false
     ohttp_relay_rotation: false
   sync_method: full_node
-  blocker: our_engineering_time
+  blocker: dormant_since_2023
   owner:
     internal: Dan Gould
     external: Justin Carter
@@ -2115,16 +2134,16 @@
     fallback: false
     ohttp_relay_rotation: false
   sync_method: custodial
-  blocker: bria_integration_first
+  blocker: awaiting_blink_reply
   owner:
     internal: Dan Gould
-    external: null
+    external: al-munazzim
   scores:
     leverage: 3
     feasibility: 3
     maintenance: 2
   spec_feedback: real_usage
-  notes: "Galoy-based community banking app (Bitcoin Beach wallet). Shares Bria payout backend with Galoy but has its own app backend. Payjoin integration likely flows through Bria for on-chain, so Bria landing first de-risks this. Real users in El Salvador and elsewhere give real_usage feedback. Leverage 3 because community banking is a distinct use case but not a massive multiplier. Feasibility 3 - depends on Bria landing but TypeScript app layer is straightforward. Maintenance 2 - custodial simplifies things."
+  notes: "Galoy-based community banking app (Bitcoin Beach wallet). Real users in El Salvador and elsewhere give real_usage feedback. Status check 2026-09-08: al-munazzim posted an integration plan on blink-mobile#3355 (2026-01-28); we asked whether Bria is still the on-chain backend (01-29) and have had no answer since. Bria itself (#266) has had no payjoin motion since 2023, so Blink no longer waits on Bria; it waits on Blink."
   next_artifact:
     type: issue
     description: "Payjoin support tracking issue"
@@ -2255,17 +2274,21 @@
     notes: "Bitcoin Core is the baseline: wallet discovery is local, so sync privacy should not distract from Payjoin integration work."
   owner:
     internal: null
-    external: W0xit
+    external: ValeraFinebits
   scores:
     leverage: 5
     feasibility: 2
     spec_feedback: rigorous
     maintenance: 3
-  blocker: C++ bindings (for PoC) OR UX Design story
-  notes: "THE reference implementation - maximum leverage if Core supports Payjoin. Have buy-in but it's hard. Can show PoC with C++ bindings to up feasibility over time. Rigorous spec feedback. Core has high maintenance but ideally handing it off."
+  blocker: cpp_bindings_review (rust-payjoin#1827) + upstream appetite
+  notes: "THE reference implementation - maximum leverage if Core supports Payjoin. Rigorous spec feedback. Status check 2026-09-08: ValeraFinebits has a sender-only branch feat/async-payjoin on their fork (11 commits, 08-28..09-01: rust-payjoin as a depends package, src/payjoin/client.{h,cpp}, wallet tests, a native Linux CI job), built on chavic's draft C++ bindings rust-payjoin#1827 (opened 08-20, reviewed only by Valera, no maintainer review). No upstream PR. bitcoin#33684 'Async Payjoin' has been quiet since 05-08, when stickies-v argued Core should not be an early adopter; the earlier PoC #32617 was closed. Fork is 105 commits behind master."
+  next_artifact:
+    type: pr
+    description: "Maintainer decision on #1827 (in-tree C++ bindings), then a rebased fork branch to point upstream at"
+    url: https://github.com/ValeraFinebits/bitcoin/tree/feat/async-payjoin
   contact:
-    name: W0xit
-    last_contact: null
+    name: ValeraFinebits; W0xit; achow101 (issue author)
+    last_contact: 2026-08-31
   added: "November 19, 2024 10:44 AM"
 # LDK-Node - Lightning
 -
@@ -2307,7 +2330,7 @@
       description: "LDK-Node chain-source privacy modes for payjoin channel opens"
       url: null
     notes: "Channel-open payjoin can be undermined by chain-source lookups if the app uses Esplora/Electrum defaults. Configurability means full-node mode is fine, but mobile/app integrations need OHTTP guidance."
-  blocker: async_persist_api_pr
+  blocker: ldk_node_0.9_milestone
   owner:
     internal: Spacebear
     external: "Rita Anene (Camillarhi)"
@@ -2316,14 +2339,14 @@
     feasibility: 4
     maintenance: 2
   spec_feedback: already_covered
-  notes: "Receiver-only Payjoin (BIP 77) in PR #746 by Rita Anene (Camillarhi), open since 2026-01; v2 receiver flow added 2026-06-01. Review active but all-COMMENTED (tnull, spacebear21, bc1cindy, Dan) — no approvals yet; merge blocked on a rebase (branch CONFLICTING) + async-persistence rework (rust-payjoin #1235). Adds receiver session store + Payjoin PaymentKind + event polling. Sender path not in scope."
+  notes: "Receiver-only Payjoin (BIP 77) in PR #746 by Rita Anene (Camillarhi), open since 2026-01; v2 receiver flow added 2026-06-01. Adds receiver session store + Payjoin PaymentKind + event polling. Sender path not in scope. Status check 2026-09-08: the async-persistence dependency (rust-payjoin#1235) merged in January and shipped in payjoin 1.0.0; ldk-node#791 (the other stated dependency) merged 07-09. tnull moved #746 to the 0.9 milestone on 06-23 and removed review requests. Last commit 07-22; branch conflicting and pinned pre-1.0. Zeus's integration path depends on this PR."
   next_artifact:
     type: pr
-    description: "Camillarhi's PR building on async persist API"
+    description: "Camillarhi rebases + bumps to payjoin 1.0.0; ask tnull about 0.9 timing"
     url: "https://github.com/lightningdevkit/ldk-node/pull/746"
   contact:
-    name: "Rita Anene (Camillarhi)"
-    last_contact: 2026-06-08
+    name: "Rita Anene (Camillarhi); tnull (maintainer)"
+    last_contact: 2026-07-22
   added: "November 19, 2024 10:55 AM"
 -
   name: null
@@ -2422,10 +2445,15 @@
     feasibility: 4
     maintenance: 2
   spec_feedback: already_covered
-  blocker: Python integration
-  notes: Desktop wallet, Python-based. We have Python bindings so feasibility is high.
+  blocker: unanswered_hw_signer_question
+  notes: "Desktop wallet, Python-based. We have Python bindings so feasibility is high. Status check 2026-09-08: on bitcoin-safe#221 Andreas raised (2025-10-15) that hardware-only signing makes the fallback-then-payjoin flow a double-sign UX problem. No reply from us in eleven months. That question, not the bindings, is the open item."
+  next_artifact:
+    type: issue
+    description: "Answer the hardware-signer / fallback question on #221"
+    url: https://github.com/andreasgriffin/bitcoin-safe/issues/221
   contact:
     name: Andreas Griffin
+    last_contact: 2025-10-15
   owner:
     name: Dan Gould
     internal: true
@@ -2489,9 +2517,15 @@
 - name: Cove
   tracking_issue: https://github.com/bitcoinppl/cove
   class: on_chain_wallet
-  status: engaged
-  language: "Swift, Kotlin"
+  status: beta
+  language: "Rust (uniffi to Swift/Kotlin in-house)"
   custody: self_custodial
+  native_http_client: true
+  capabilities:
+    sending: true
+    receive_consolidation: false
+    cut_through: false
+    channel_open: false
   sync_privacy:
     stage: unassessed
     current_backend: unknown
@@ -2518,10 +2552,14 @@
     feasibility: 3
     maintenance: 2
   spec_feedback: already_covered
-  blocker: Swift/Kotlin bindings
-  notes: Mobile Bitcoin wallet. Needs Swift and Kotlin bindings for integration.
+  blocker: bump_payjoin_0.25_to_1.0
+  notes: "Mobile Bitcoin wallet. Status check 2026-09-08: Cove consumes the payjoin Rust crate directly (no bindings needed) and SHIPPED a v2 sender: rust/src/manager/wallet_manager/payjoin.rs, sender session persistence (#809, 07-20), rust-layer gating (#838, 07-21), changelog 'Added Payjoin URI support'. Pinned payjoin 0.25.0, not 1.0. Open issues #779 (anti-probing) and #836 (error handling). No receive side. Nobody from us has been in contact."
+  next_artifact:
+    type: pr
+    description: "Cove bumps to payjoin 1.0.0; conversation with Praveen about receiving"
+    url: https://github.com/bitcoinppl/cove/blob/master/rust/src/manager/wallet_manager/payjoin.rs
   contact:
-    name: Praveen
+    name: Praveen Perera
   owner:
     name: Dan Gould
     internal: true
