@@ -1,12 +1,31 @@
 # Payjoin activity outside tracked repos (issues, PRs, commits, new repos).
 # Bot appends and refreshes facts; you own `status`.
 # status: new | watching | dismissed | promoted  (bot only adds 'new')
+- url: https://github.com/mimblewimble/grin-wallet/pull/754
+  repo: mimblewimble/grin-wallet
+  kind: pr
+  title: 'Update contracts to current staging + fix #729'
+  stars: 194
+  updated_at: '2026-09-08T16:03:27Z'
+  first_seen: '2026-07-23'
+  status: new
+  last_surfaced: '2026-09-08'
+- url: https://github.com/satsigner/satsigner/pull/491
+  repo: satsigner/satsigner
+  kind: pr
+  title: Board the Ark with payjoin
+  stars: 53
+  updated_at: '2026-09-08T10:53:34Z'
+  first_seen: '2026-08-27'
+  status: new
+  last_surfaced: '2026-09-08'
+  resurfaced: true
 - url: https://github.com/HackTricks-wiki/hacktricks/pull/2805
   repo: HackTricks-wiki/hacktricks
   kind: pr
   title: Add offensive privacy, attribution-evasion and OPSEC section
-  stars: 12234
-  updated_at: '2026-09-07T23:22:55Z'
+  stars: 12238
+  updated_at: '2026-09-08T10:40:02Z'
   first_seen: '2026-09-08'
   status: new
   last_surfaced: '2026-09-08'
@@ -15,15 +34,34 @@
   kind: pr
   title: Edits to Collaborative Transaction Privacy
   stars: 4
-  updated_at: '2026-09-07T22:48:41Z'
+  updated_at: '2026-09-08T09:38:19Z'
   first_seen: '2026-09-08'
   status: new
   last_surfaced: '2026-09-08'
+- url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2797
+  repo: SatoshiPortal/bullbitcoin-mobile
+  kind: pr
+  title: 'feat(coins): send selected bitcoin UTXOs'
+  stars: 191
+  updated_at: '2026-09-08T05:25:19Z'
+  first_seen: '2026-09-04'
+  status: new
+  last_surfaced: '2026-09-04'
+- url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2756
+  repo: SatoshiPortal/bullbitcoin-mobile
+  kind: pr
+  title: 'feat(send): support multiple bitcoin recipients'
+  stars: 191
+  updated_at: '2026-09-08T05:25:18Z'
+  first_seen: '2026-08-28'
+  status: new
+  last_surfaced: '2026-09-08'
+  resurfaced: true
 - url: https://github.com/BlueWallet/BlueWallet/issues/3659
   repo: BlueWallet/BlueWallet
   kind: issue
   title: Dependency Dashboard
-  stars: 3286
+  stars: 3287
   updated_at: '2026-09-07T22:38:00Z'
   first_seen: '2026-06-19'
   status: new
@@ -37,16 +75,6 @@
   first_seen: '2026-09-04'
   status: new
   last_surfaced: '2026-09-04'
-- url: https://github.com/mimblewimble/grin-wallet/pull/754
-  repo: mimblewimble/grin-wallet
-  kind: pr
-  title: 'Update contracts to current staging + fix #729'
-  stars: 194
-  updated_at: '2026-09-07T20:11:21Z'
-  first_seen: '2026-07-23'
-  status: new
-  last_surfaced: '2026-09-08'
-  resurfaced: true
 - url: https://github.com/GingerPrivacy/GingerDoc/pull/7
   repo: GingerPrivacy/GingerDoc
   kind: pr
@@ -65,7 +93,6 @@
   first_seen: '2026-06-29'
   status: new
   last_surfaced: '2026-09-08'
-  resurfaced: true
 - url: https://github.com/NashBitDevs/nashbitdevs.org/issues/145
   repo: NashBitDevs/nashbitdevs.org
   kind: issue
@@ -295,20 +322,11 @@
   first_seen: '2026-09-05'
   status: new
   last_surfaced: '2026-09-05'
-- url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2797
-  repo: SatoshiPortal/bullbitcoin-mobile
-  kind: pr
-  title: 'feat(coins): send selected bitcoin UTXOs'
-  stars: 191
-  updated_at: '2026-09-04T03:55:48Z'
-  first_seen: '2026-09-04'
-  status: new
-  last_surfaced: '2026-09-04'
 - url: https://github.com/BlueWallet/BlueWallet/pull/8868
   repo: BlueWallet/BlueWallet
   kind: pr
   title: 'FIX: improve VoiceOver accessibility for controls'
-  stars: 3286
+  stars: 3287
   updated_at: '2026-09-04T02:55:48Z'
   first_seen: '2026-08-26'
   status: new
@@ -358,15 +376,6 @@
   first_seen: '2026-09-04'
   status: new
   last_surfaced: '2026-09-04'
-- url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2756
-  repo: SatoshiPortal/bullbitcoin-mobile
-  kind: pr
-  title: 'feat(send): support multiple bitcoin recipients'
-  stars: 191
-  updated_at: '2026-09-03T03:01:25Z'
-  first_seen: '2026-08-28'
-  status: new
-  last_surfaced: '2026-08-28'
 - url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2703
   repo: SatoshiPortal/bullbitcoin-mobile
   kind: pr
@@ -443,7 +452,7 @@
   repo: moq-dev/moq
   kind: pr
   title: 'chore(quest): retire the Dart bindings quest and file its follow-ups'
-  stars: 1499
+  stars: 1502
   updated_at: '2026-09-02T16:24:49Z'
   first_seen: '2026-09-02'
   status: new
@@ -565,15 +574,6 @@
   first_seen: '2026-09-01'
   status: new
   last_surfaced: '2026-09-01'
-- url: https://github.com/satsigner/satsigner/pull/491
-  repo: satsigner/satsigner
-  kind: pr
-  title: Board the Ark with payjoin
-  stars: 53
-  updated_at: '2026-08-31T10:14:50Z'
-  first_seen: '2026-08-27'
-  status: new
-  last_surfaced: '2026-08-27'
 - url: https://github.com/hashhog/beamchain/commit/06851d58af26e4ebe071ec5f81fd8c4213dc5308
   repo: hashhog/beamchain
   kind: commit

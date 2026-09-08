@@ -1,6 +1,14 @@
 # Payjoin mentions off GitHub (press, forums, newsletters).
 # Bot appends and refreshes facts; you own `status`.
 # status: new | watching | dismissed | promoted  (bot only adds 'new')
+- url: https://bitcoinops.org/en/podcast/2026/09/01
+  kind: newsletter
+  outlet: Bitcoin Optech
+  title: 'Bitcoin Optech Newsletter #420 Recap Podcast'
+  updated_at: '2026-09-01T00:00:00Z'
+  first_seen: '2026-09-08'
+  status: new
+  last_surfaced: '2026-09-08'
 - url: https://delvingbitcoin.org/t/2749
   kind: forum
   outlet: Delving Bitcoin
