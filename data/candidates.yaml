@@ -1,6 +1,139 @@
 # Payjoin activity outside tracked repos (issues, PRs, commits, new repos).
 # Bot appends and refreshes facts; you own `status`.
 # status: new | watching | dismissed | promoted  (bot only adds 'new')
+- url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/1978
+  repo: SatoshiPortal/bullbitcoin-mobile
+  kind: pr
+  title: Create automated script for testing bull bitcoin mobile against payjoin-cli
+  stars: 194
+  updated_at: '2026-09-12T03:32:46Z'
+  first_seen: '2026-08-27'
+  status: new
+  last_surfaced: '2026-09-12'
+  resurfaced: true
+- url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2139
+  repo: SatoshiPortal/bullbitcoin-mobile
+  kind: pr
+  title: Swap electrum url
+  stars: 194
+  updated_at: '2026-09-12T03:32:36Z'
+  first_seen: '2026-08-27'
+  status: new
+  last_surfaced: '2026-09-12'
+  resurfaced: true
+- url: https://github.com/kiurakku/UmbrellaWallet/commit/eb05dedd7dd57e03d2663afa6db45dc8be3d96f6
+  repo: kiurakku/UmbrellaWallet
+  kind: commit
+  title: v4.7.0 — every chain's server is yours to choose, and three bugs found looking
+    into it (#80)
+  stars: 0
+  updated_at: '2026-09-11T21:14:07Z'
+  first_seen: '2026-09-12'
+  status: new
+  last_surfaced: '2026-09-12'
+- url: https://github.com/mimblewimble/grin-wallet/pull/754
+  repo: mimblewimble/grin-wallet
+  kind: pr
+  title: 'Update contracts to current staging + fix #729'
+  stars: 194
+  updated_at: '2026-09-11T20:22:42Z'
+  first_seen: '2026-07-23'
+  status: new
+  last_surfaced: '2026-09-08'
+- url: https://github.com/BlueWallet/BlueWallet/issues/3659
+  repo: BlueWallet/BlueWallet
+  kind: issue
+  title: Dependency Dashboard
+  stars: 3289
+  updated_at: '2026-09-11T19:35:54Z'
+  first_seen: '2026-06-19'
+  status: new
+  last_surfaced: '2026-09-11'
+- url: https://github.com/nostr-protocol/nips/pull/1952
+  repo: nostr-protocol/nips
+  kind: pr
+  title: Adding support for main bolt12 commands to NIP-47
+  stars: 3097
+  updated_at: '2026-09-11T18:28:33Z'
+  first_seen: '2026-09-12'
+  status: new
+  last_surfaced: '2026-09-12'
+- url: https://github.com/ILE-Labs/lightning-payjoin-kit
+  repo: ILE-Labs/lightning-payjoin-kit
+  kind: repo
+  title: lightning-payjoin-kit is an open-source asynchronous Rust library that brings
+    collaborative Payjoin privacy (BIP-78) nat
+  stars: 1
+  updated_at: '2026-09-11T17:59:12Z'
+  first_seen: '2026-07-23'
+  status: new
+  last_surfaced: '2026-09-12'
+  resurfaced: true
+- url: https://github.com/TriangleBitDevs/TriangleBitDevs.github.io/issues/58
+  repo: TriangleBitDevs/TriangleBitDevs.github.io
+  kind: issue
+  title: Socratic Seminar 56
+  stars: 5
+  updated_at: '2026-09-11T17:14:25Z'
+  first_seen: '2026-08-13'
+  status: new
+  last_surfaced: '2026-09-12'
+  resurfaced: true
+- url: https://github.com/payjoin/qa-assets
+  repo: payjoin/qa-assets
+  kind: repo
+  title: QA Assets (fuzz tests, serde test vectors, etc) for the rust-payjoin organization
+  stars: 2
+  updated_at: '2026-09-11T15:08:43Z'
+  first_seen: '2026-08-21'
+  status: new
+  last_surfaced: '2026-09-10'
+- url: https://github.com/treib-holdings/learnbitcoin-content/commit/76a9f70cd8470f0ef24aa594a39891c7f6cae943
+  repo: treib-holdings/learnbitcoin-content
+  kind: commit
+  title: 'privacy: fold in two BitcoinTalk corrections (Tornado Cash verdict, wallet
+    fingerprinting)'
+  stars: 0
+  updated_at: '2026-09-11T14:20:47Z'
+  first_seen: '2026-09-12'
+  status: new
+  last_surfaced: '2026-09-12'
+- url: https://github.com/Juniormind1/SatSage/pull/1
+  repo: Juniormind1/SatSage
+  kind: pr
+  title: SatSage 0.9.1 — CoinJoin-Herkunft, Marke, Core-Rollen
+  stars: 2
+  updated_at: '2026-09-11T13:03:58Z'
+  first_seen: '2026-09-12'
+  status: new
+  last_surfaced: '2026-09-12'
+- url: https://github.com/jlopp/lopp.net/pull/1231
+  repo: jlopp/lopp.net
+  kind: pr
+  title: 'privacy: drop hijacked coinjoins.org, add Privacy on Bitcoin chapter'
+  stars: 252
+  updated_at: '2026-09-11T12:53:24Z'
+  first_seen: '2026-09-12'
+  status: new
+  last_surfaced: '2026-09-12'
+- url: https://github.com/Juniormind1/SatSage/commit/0f6f5e14c21ef81e65dd814a0f1acddbb60a8597
+  repo: Juniormind1/SatSage
+  kind: commit
+  title: Classify coinjoins and trace only own mix inputs.
+  stars: 0
+  updated_at: '2026-09-11T09:46:23Z'
+  first_seen: '2026-09-12'
+  status: new
+  last_surfaced: '2026-09-12'
+- url: https://github.com/getumbrel/umbrel-apps/pull/6081
+  repo: getumbrel/umbrel-apps
+  kind: pr
+  title: Remove nolooking
+  stars: 773
+  updated_at: '2026-09-11T08:23:07Z'
+  first_seen: '2026-09-12'
+  status: new
+  last_surfaced: '2026-09-12'
 - url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2751
   repo: SatoshiPortal/bullbitcoin-mobile
   kind: pr
@@ -11,26 +144,6 @@
   first_seen: '2026-09-01'
   status: new
   last_surfaced: '2026-09-11'
-  resurfaced: true
-- url: https://github.com/BlueWallet/BlueWallet/issues/3659
-  repo: BlueWallet/BlueWallet
-  kind: issue
-  title: Dependency Dashboard
-  stars: 3289
-  updated_at: '2026-09-10T21:21:20Z'
-  first_seen: '2026-06-19'
-  status: new
-  last_surfaced: '2026-09-11'
-  resurfaced: true
-- url: https://github.com/payjoin/qa-assets
-  repo: payjoin/qa-assets
-  kind: repo
-  title: QA Assets (fuzz tests, serde test vectors, etc) for the rust-payjoin organization
-  stars: 2
-  updated_at: '2026-09-10T20:44:23Z'
-  first_seen: '2026-08-21'
-  status: new
-  last_surfaced: '2026-09-10'
 - url: https://github.com/zerionproject/Zerion/commit/802c4c12c4f3462b1502df95cf0c2dcd43f5b6f4
   repo: zerionproject/Zerion
   kind: commit
@@ -40,16 +153,24 @@
   first_seen: '2026-09-11'
   status: new
   last_surfaced: '2026-09-11'
+- url: https://github.com/ILE-Labs/lightning-payjoin-kit/commit/0710f91560afe983480a10f16d412935375fa63e
+  repo: ILE-Labs/lightning-payjoin-kit
+  kind: commit
+  title: 'docs: rewrite the README and mark the superseded documents'
+  stars: 0
+  updated_at: '2026-09-10T14:58:21Z'
+  first_seen: '2026-09-12'
+  status: new
+  last_surfaced: '2026-09-12'
 - url: https://github.com/cake-tech/cake_wallet/pull/3363
   repo: cake-tech/cake_wallet
   kind: pr
   title: WIP Payjoin upgrade to native dart bindings via payjoin_ffi
-  stars: 1902
+  stars: 1904
   updated_at: '2026-09-10T08:47:06Z'
   first_seen: '2026-07-03'
   status: new
   last_surfaced: '2026-09-11'
-  resurfaced: true
 - url: https://github.com/gosuda/bitcoin-rs/issues/816
   repo: gosuda/bitcoin-rs
   kind: issue
@@ -77,15 +198,6 @@
   first_seen: '2026-09-10'
   status: new
   last_surfaced: '2026-09-10'
-- url: https://github.com/mimblewimble/grin-wallet/pull/754
-  repo: mimblewimble/grin-wallet
-  kind: pr
-  title: 'Update contracts to current staging + fix #729'
-  stars: 194
-  updated_at: '2026-09-09T20:16:21Z'
-  first_seen: '2026-07-23'
-  status: new
-  last_surfaced: '2026-09-08'
 - url: https://github.com/fungi-protocol/docs/pull/30
   repo: fungi-protocol/docs
   kind: pr
@@ -126,7 +238,7 @@
   repo: cake-tech/cake_wallet
   kind: pr
   title: Refactor Receive Flow - SDS
-  stars: 1902
+  stars: 1904
   updated_at: '2026-09-09T10:51:10Z'
   first_seen: '2026-08-20'
   status: new
@@ -180,7 +292,7 @@
   repo: HackTricks-wiki/hacktricks
   kind: pr
   title: Add offensive privacy, attribution-evasion and OPSEC section
-  stars: 12248
+  stars: 12251
   updated_at: '2026-09-08T10:40:02Z'
   first_seen: '2026-09-08'
   status: new
@@ -239,15 +351,6 @@
   first_seen: '2026-09-07'
   status: new
   last_surfaced: '2026-09-07'
-- url: https://github.com/TriangleBitDevs/TriangleBitDevs.github.io/issues/58
-  repo: TriangleBitDevs/TriangleBitDevs.github.io
-  kind: issue
-  title: Socratic Seminar 56
-  stars: 5
-  updated_at: '2026-09-07T07:46:54Z'
-  first_seen: '2026-08-13'
-  status: new
-  last_surfaced: '2026-09-03'
 - url: https://github.com/FabricLabs/hub.fabric.pub/pull/16
   repo: FabricLabs/hub.fabric.pub
   kind: pr
@@ -270,7 +373,7 @@
   repo: btcpayserver/btcpayserver
   kind: pr
   title: Encode payjoin errors in wallet status messages
-  stars: 7754
+  stars: 7755
   updated_at: '2026-09-06T14:45:26Z'
   first_seen: '2026-09-07'
   status: new
@@ -343,29 +446,11 @@
   repo: IronCoreLabs/uniffi-bindgen-java
   kind: issue
   title: 0.4.3 for UniFFI 0.31? 0.4.2 emits invalid Java (already fixed on 0.5.0)
-  stars: 25
+  stars: 26
   updated_at: '2026-09-05T13:19:43Z'
   first_seen: '2026-09-06'
   status: new
   last_surfaced: '2026-09-06'
-- url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/1978
-  repo: SatoshiPortal/bullbitcoin-mobile
-  kind: pr
-  title: Create automated script for testing bull bitcoin mobile against payjoin-cli
-  stars: 194
-  updated_at: '2026-09-05T03:32:15Z'
-  first_seen: '2026-08-27'
-  status: new
-  last_surfaced: '2026-09-05'
-- url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2139
-  repo: SatoshiPortal/bullbitcoin-mobile
-  kind: pr
-  title: Swap electrum url
-  stars: 194
-  updated_at: '2026-09-05T03:32:06Z'
-  first_seen: '2026-08-27'
-  status: new
-  last_surfaced: '2026-09-05'
 - url: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2795
   repo: SatoshiPortal/bullbitcoin-mobile
   kind: pr
@@ -543,7 +628,7 @@
   repo: moq-dev/moq
   kind: pr
   title: 'chore(quest): retire the Dart bindings quest and file its follow-ups'
-  stars: 1512
+  stars: 1514
   updated_at: '2026-09-02T16:24:49Z'
   first_seen: '2026-09-02'
   status: new
@@ -724,7 +809,7 @@
   kind: issue
   title: 'Issue Reduction: Audit of All 80 Open Issues (Classification & Priority
     Table)'
-  stars: 584
+  stars: 585
   updated_at: '2026-08-30T08:02:47Z'
   first_seen: '2026-08-31'
   status: new
@@ -733,7 +818,7 @@
   repo: cryptoadvance/specter-diy
   kind: issue
   title: '[Feature Request]: Payjoin V2 support'
-  stars: 584
+  stars: 585
   updated_at: '2026-08-30T01:50:53Z'
   first_seen: '2026-08-30'
   status: new
@@ -854,7 +939,7 @@
   kind: issue
   title: Payjoin receiver reuses the same subdirectory (mailbox) across receives instead
     of rotating it
-  stars: 1902
+  stars: 1904
   updated_at: '2026-08-28T02:03:16Z'
   first_seen: '2026-08-28'
   status: new
@@ -1118,7 +1203,7 @@
   repo: cake-tech/cake_wallet
   kind: pr
   title: Hide broken options in Bitcoin wallets without a private key
-  stars: 1902
+  stars: 1904
   updated_at: '2026-08-24T20:25:02Z'
   first_seen: '2026-08-18'
   status: new
@@ -1515,7 +1600,7 @@
   repo: cake-tech/cake_wallet
   kind: issue
   title: Bitcoin sends use nLockTime = 0 (anti-fee-sniping + payjoin fingerprint)
-  stars: 1902
+  stars: 1904
   updated_at: '2026-08-19T10:44:01Z'
   first_seen: '2026-07-03'
   status: new
@@ -2593,7 +2678,7 @@
   repo: trezor/trezor-suite
   kind: issue
   title: Transaction type identification
-  stars: 1041
+  stars: 1042
   updated_at: '2026-08-03T19:32:35Z'
   first_seen: '2026-07-28'
   status: new
@@ -3421,7 +3506,7 @@
   repo: cake-tech/cake_wallet
   kind: issue
   title: Bitcoin sends place change output deterministically last
-  stars: 1902
+  stars: 1904
   updated_at: '2026-07-26T00:30:43Z'
   first_seen: '2026-07-08'
   status: new
@@ -4394,7 +4479,7 @@
   repo: getfloresta/Floresta
   kind: issue
   title: sendrawtransaction accepts unsigned transactions and returns a txid
-  stars: 441
+  stars: 442
   updated_at: '2026-07-15T17:52:10Z'
   first_seen: '2026-06-19'
   status: new
@@ -4464,7 +4549,7 @@
   repo: cake-tech/cake_wallet
   kind: issue
   title: Bitcoin sends order inputs by BIP-69
-  stars: 1902
+  stars: 1904
   updated_at: '2026-07-14T02:39:04Z'
   first_seen: '2026-07-08'
   status: new
@@ -4636,7 +4721,7 @@
   repo: cake-tech/cake_wallet
   kind: issue
   title: Payjoin receiver can contribute unconfirmed (0-conf) inputs
-  stars: 1902
+  stars: 1904
   updated_at: '2026-07-10T15:23:30Z'
   first_seen: '2026-07-10'
   status: new
@@ -4713,7 +4798,7 @@
   repo: cake-tech/cake_wallet
   kind: issue
   title: '6.0: payjoin notice on litecoin receive'
-  stars: 1902
+  stars: 1904
   updated_at: '2026-07-09T22:18:07Z'
   first_seen: '2026-07-10'
   status: new
@@ -4737,7 +4822,7 @@
   repo: cake-tech/cake_wallet
   kind: issue
   title: Sparrow user payjoin fails because of changed nLocktime
-  stars: 1902
+  stars: 1904
   updated_at: '2026-07-08T19:00:39Z'
   first_seen: '2026-07-09'
   status: new
@@ -4745,7 +4830,7 @@
   repo: cake-tech/cake_wallet
   kind: issue
   title: 'RBF nsequence: non-canonical 0x01, only on inputs[0]'
-  stars: 1902
+  stars: 1904
   updated_at: '2026-07-08T18:37:09Z'
   first_seen: '2026-06-19'
   status: new
@@ -4932,7 +5017,7 @@
   repo: cake-tech/cake_wallet
   kind: issue
   title: Upgrade payjoin bindings to use payjoin_ffi
-  stars: 1902
+  stars: 1904
   updated_at: '2026-06-30T15:04:30Z'
   first_seen: '2026-07-01'
   status: new
@@ -5363,16 +5448,6 @@
   title: 'fix: harden address owner sync and payjoin cleanup'
   stars: 0
   updated_at: '2026-06-06T02:19:28Z'
-  first_seen: '2026-07-23'
-  status: new
-  last_surfaced: '2026-07-23'
-- url: https://github.com/ILE-Labs/lightning-payjoin-kit
-  repo: ILE-Labs/lightning-payjoin-kit
-  kind: repo
-  title: lightning-payjoin-kit is an open-source asynchronous Rust library that brings
-    collaborative Payjoin privacy (BIP-78) nat
-  stars: 1
-  updated_at: '2026-06-05T11:00:21Z'
   first_seen: '2026-07-23'
   status: new
   last_surfaced: '2026-07-23'
