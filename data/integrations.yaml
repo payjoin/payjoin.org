@@ -1098,6 +1098,7 @@
   added: "December 14, 2022 10:14 PM"
 # Sparrow - On Chain Wallet
 - name: Sparrow
+  tracking_issue: https://github.com/sparrowwallet/sparrow/issues/1980
   class: on_chain_wallet
   status: engaged
   language: "Kotlin, Java"
@@ -1127,16 +1128,16 @@
     leverage: 5
     feasibility: 3
     maintenance: 3
-  spec_feedback: already_covered
-  blocker: JVM bindings (rust-payjoin#1860) + Craig buy-in
-  notes: "Everywhere, we use it. Need JVM bindings and convince Craig Raw to use it or roll it himself. Status check 2026-09-08: rust-payjoin#1860 (ram0verflow, 09-05) asks for Java bindings to experiment with an unofficial Sparrow V2 build; chavic replied 09-06 and is splitting Kotlin into its own draft. uniffi-bindgen-java needs uniffi 0.32, payjoin-ffi is on 0.31.2. sparrow#1980 'PayJoin v2 (BIP77)' open since March with no reply from Craig."
+  spec_feedback: rigorous
+  blocker: Craig's own engineering time; he rejected a new native library dependency
+  notes: "Everywhere, we use it. Craig Raw answered sparrow#1980 on 2026-09-16, his first word on payjoin v2: he strongly prefers a native Java implementation, is reducing the number of native libraries Sparrow carries, and says a feature of this scope is one he would want to implement himself because he maintains it indefinitely. He also said an independent implementation to test against is very useful. That closes the bindings path into Sparrow (rust-payjoin#1860/#1869 JVM bindings still serve other JVM consumers, and ram0verflow's sender-side spike is what drew the reply) and turns our leverage into spec quality: BIP 77 test vectors plus payjoin-cli as the reference to test a native Java build against. Prior state 2026-09-08: ram0verflow's bip77-sender-poc branch completed a regtest sender round trip against payjoin-cli, restoring sender PSBT metadata by outpoint per sparrow#1428."
   next_artifact:
-    type: pr
-    description: "Kotlin/Java bindings draft from #1860; then a Sparrow prototype to show Craig"
-    url: https://github.com/payjoin/rust-payjoin/issues/1860
+    type: test_vector
+    description: "BIP 77 test vectors + payjoin-cli as the independent implementation Craig can test a native Java build against"
+    url: https://github.com/sparrowwallet/sparrow/issues/1980
   contact:
-    name: Craig Raw; ram0verflow (community)
-    last_contact: 2026-09-06
+    name: Craig Raw (craigraw); ram0verflow (community)
+    last_contact: 2026-09-16
   owner:
     name: Dan Gould
     internal: true
