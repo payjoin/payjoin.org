@@ -435,6 +435,9 @@ export default function Mailroom(): JSX.Element {
             </a>
           </p>
           <p>
+            <a href="/mailroom-brief.pdf">Download this brief as a PDF</a>
+          </p>
+          <p>
             Questions? Reach out at{" "}
             <a href="https://payjoin.org">payjoin.org</a> or open a Discussion
             on{" "}
