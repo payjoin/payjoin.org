@@ -3,8 +3,8 @@ import Layout from "@theme/Layout";
 export default function Mailroom(): JSX.Element {
   return (
     <Layout
-      title="Infrastructure Partner Brief"
-      description="Deploy lightweight, zero-custody infrastructure that strengthens Bitcoin privacy for everyone"
+      title="Payjoin Mailroom"
+      description="The Payjoin mailroom operators list and the infrastructure partner brief"
     >
       <style>{`
         .mr-page {
@@ -139,6 +139,41 @@ export default function Mailroom(): JSX.Element {
         }
         .mr-table tr:last-child td {
           border-bottom: none;
+        }
+        .mr-ops-list {
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+          gap: 0.75rem;
+          margin-top: 1rem;
+        }
+        .mr-ops-card {
+          display: grid;
+          grid-template-columns: 1fr auto;
+          column-gap: 1rem;
+          row-gap: 0.15rem;
+          padding: 0.85rem 1rem;
+          background: rgba(255, 255, 255, 0.04);
+          border: 1px solid #2a2a2a;
+          border-radius: 8px;
+          font-size: 0.93rem;
+        }
+        .mr-ops-name {
+          color: #e0e0e0;
+          font-weight: 600;
+        }
+        .mr-ops-meta {
+          text-align: right;
+          color: #999;
+          font-size: 0.85rem;
+        }
+        .mr-ops-card a {
+          color: #ccc;
+          word-break: break-all;
+        }
+        .mr-ops-note {
+          font-size: 0.85rem !important;
+          color: #999 !important;
+          margin-top: 0.5rem;
         }
         .mr-faq-item {
           margin-bottom: 1.75rem;
@@ -290,6 +325,15 @@ export default function Mailroom(): JSX.Element {
               by the Payjoin Foundation.
             </p>
             <p>
+              The same separation applies to an operator's own wallet. If you
+              ship a wallet that syncs through your own Electrum, Esplora or
+              mempool backend, do not default it to your own directory. The
+              backend already sees the user's IP address, and your directory
+              would then see the same user's mailbox. That is the correlation
+              the relay exists to prevent. Default your wallet to other
+              operators' directories and let others default to yours.
+            </p>
+            <p>
               <strong>
                 You never touch bitcoin. You never see transactions. Zero
                 custody risk.
@@ -302,6 +346,83 @@ export default function Mailroom(): JSX.Element {
               contents. V1 is off unless an operator enables it.
             </p>
           </div>
+        </div>
+
+        <div className="mr-section" id="operators">
+          <h2>Payjoin Mailroom Operators</h2>
+          <p>
+            In every session the relay and the directory must be run by
+            different entities. The relay sees the client's IP address and no
+            content. The directory sees encrypted mailboxes and no IP
+            addresses. Neither can link a user to a transaction on its own. A
+            wallet must pair a relay and a directory from different registrable
+            domains, which is why each listed operator runs both roles under
+            one domain.
+          </p>
+          <p>
+            Wallets should use every listed operator, choosing a relay and a
+            directory at random for each session. A wallet that ships with its
+            own fixed subset is fingerprinted by that subset.
+          </p>
+          <p>
+            The canonical list is the Operators section of the{" "}
+            <a href="https://github.com/payjoin/rust-payjoin/blob/master/payjoin-mailroom/README.md#operators">
+              payjoin-mailroom README
+            </a>
+            . This page mirrors it.
+          </p>
+          <div className="mr-ops-list">
+            <div className="mr-ops-card">
+              <span className="mr-ops-name">Ava Chow</span>
+              <span className="mr-ops-meta">US</span>
+              <a href="https://payjoin.achow101.com">payjoin.achow101.com</a>
+              <span className="mr-ops-meta">v0.1.2</span>
+            </div>
+            <div className="mr-ops-card">
+              <span className="mr-ops-name">BOB Space</span>
+              <span className="mr-ops-meta">Thailand</span>
+              <a href="https://pj.bobspacebkk.com">pj.bobspacebkk.com</a>
+              <span className="mr-ops-meta">v0.1.2</span>
+            </div>
+            <div className="mr-ops-card">
+              <span className="mr-ops-name">Vinteum</span>
+              <span className="mr-ops-meta">Brazil</span>
+              <a href="https://payjoin.lab.vinteum.org">payjoin.lab.vinteum.org</a>
+              <span className="mr-ops-meta">v0.1.2</span>
+            </div>
+          </div>
+          <p className="mr-ops-note">
+            Each mailroom serves both roles from the one URL. Its OHTTP key
+            configuration is at /.well-known/ohttp-gateway under that URL.
+          </p>
+          <p>
+            <strong>Listing criteria.</strong> An operator runs both roles,
+            directory and relay, from one mailroom URL. It is run independently
+            of every other listed operator, with no shared owners, staff or
+            control, and its mailroom does not share infrastructure with
+            another entry. It runs a release within the last two minor versions
+            and gives the Payjoin Foundation a security contact that answers.
+            Opening the pull request is consent to be listed. Coarse aggregate
+            metrics will become a requirement once aggregate metrics reporting
+            ships in payjoin-mailroom.
+          </p>
+          <p>
+            <strong>Delisting.</strong> An entry is removed when it is
+            unreachable for 30 days, runs a version with an unpatched security
+            advisory, or there is evidence that it colludes with another entry.
+          </p>
+          <p>
+            <strong>How to get listed.</strong> Read this brief, run a
+            mailroom that meets the criteria, then{" "}
+            <a href="https://github.com/payjoin/rust-payjoin/edit/master/payjoin-mailroom/README.md">
+              open a pull request
+            </a>{" "}
+            adding a row to the README table from the row template there.
+            Send your security contact to hello@payjoin.org. It is not
+            published. Objections and questions are handled in the open on the pull
+            request. The Payjoin Foundation curates the list against the
+            published criteria.
+          </p>
         </div>
 
         <div className="mr-section">
