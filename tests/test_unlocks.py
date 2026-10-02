@@ -294,3 +294,45 @@ def test_payload_and_html_exclude_private_nodes():
     assert 'id="ug-data"' in html and "</script>" in html
     # the JSON cannot terminate its own script element
     assert "<\\/" in html or "</" not in html.split('id="ug-data">', 1)[1].split("</script>", 1)[0]
+
+
+# ----------------------------------------------------------------- editing
+
+def test_set_fields_edits_only_the_target_record():
+    text = (
+        "# header comment stays\n\n"
+        "- id: a\n  title: A\n  owner: \"\"\n  status: not-started\n  wave: 1\n  note: keep\n\n"
+        "- id: b\n  title: B\n  owner: \"\"\n  status: active\n  wave: 1\n  note: keep too\n"
+    )
+    out = unlocks.set_fields(text, "a", {"owner": "someone", "status": "done", "wave": "0"})
+    assert "# header comment stays" in out
+    assert "- id: a\n  title: A\n  owner: someone\n  status: done\n  wave: 0\n  note: keep" in out
+    assert "- id: b\n  title: B\n  owner: \"\"\n  status: active\n  wave: 1\n  note: keep too" in out
+    assert unlocks.set_fields(text, "a", {"owner": ""}) == text
+    with pytest.raises(KeyError):
+        unlocks.set_fields(text, "zzz", {"owner": "x"})
+    with pytest.raises(KeyError):
+        unlocks.set_fields(text, "a", {"blocks": "b"})
+
+
+def test_set_cli_reverts_an_invalid_change(tmp_path, monkeypatch, capsys):
+    yaml = pytest.importorskip("yaml")
+    monkeypatch.chdir(tmp_path)
+    (tmp_path / "data").mkdir()
+    with open("data/unlocks.yaml", "w") as f:
+        f.write("- id: a\n  title: A\n  kind: spec\n  wave: 1\n  public: true\n  owner: \"\"\n"
+                "  blocked_by: []\n  blocks: []\n  evidence: []\n  status: not-started\n  note: n\n")
+    assert unlocks.main(["set", "a", "owner=someone"]) == 0
+    assert "owner: someone" in open("data/unlocks.yaml").read()
+    with pytest.raises(SystemExit):
+        unlocks.main(["set", "a", "status=bogus"])
+    assert "status: not-started" in open("data/unlocks.yaml").read()
+
+
+def test_attention_flags_landed_evidence():
+    nodes = [{"id": "x", "title": "X", "kind": "spec", "wave": 1, "public": True, "owner": "o",
+              "blocked_by": [], "blocks": [], "evidence": ["https://github.com/o/r/pull/2"],
+              "status": "active", "note": ""}]
+    auto = unlocks.stamp(nodes, RECORDS, today="2026-06-09")
+    reasons = dict((n["id"], r) for n, r in unlocks.attention(nodes, auto))
+    assert "all evidence landed; mark done?" in reasons["x"]

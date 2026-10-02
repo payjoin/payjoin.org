@@ -356,10 +356,29 @@ To rebuild the sidecar from cached state without a token:
 nix develop -c python scripts/unlocks.py stamp --offline
 ```
 
+**Operating it.** Assigning, finishing and reprioritising are edits to one line of one
+record, and `set` makes them without opening the file:
+
+```bash
+nix develop -c python scripts/unlocks.py set test-vectors owner=chavic
+nix develop -c python scripts/unlocks.py set nuget-stable status=done
+nix develop -c python scripts/unlocks.py set go-binding-spike wave=3
+```
+
+It rewrites only that record's line, keeps comments and ordering, validates the graph and
+reverts if the change broke it. Commit the result. The node id is shown in the tooltip on the
+page. Settable fields: `owner`, `status`, `wave`, `note`; edges and evidence are edited by
+hand.
+
+Waves are the build order, not time boxes. Nothing moves between waves on its own; a wave
+is finished when every node in it is `done`, and the column header shows the count. When
+priorities change, move the node (`wave=N`). The refresh never changes `status`, but the
+attention list says "all evidence landed; mark done?" when every evidence PR of an open node
+is merged or closed, which is the cue to set it.
+
 **Adding a node**: append a record to `data/unlocks.yaml` with every field present (copy
 a neighbour), point `evidence` at the PR or issue that will move when the work moves, set
-`public` deliberately, run `check`, and open a PR. Mark a node `done` by hand when it ships;
-the refresh never changes `status`.
+`public` deliberately, run `check`, and open a PR.
 
 Tests live in `tests/` and run with `nix develop -c python -m pytest`. They cover the
 validator (dangling id, cycle, missing flags), the critical-path computation, offline

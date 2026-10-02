@@ -68,7 +68,11 @@
     var graph = document.getElementById('ug-graph');
     graph.innerHTML = D.waves.map(function (w) {
       var nodes = D.nodes.filter(function (n) { return n.wave === w.wave; });
-      return '<div class="ug-tier"><h4><span class="ug-wave">Wave ' + w.wave + '</span>' + esc(w.title) + '</h4>' +
+      var done = nodes.filter(function (n) { return n.status === 'done'; }).length;
+      var pct = nodes.length ? Math.round(done / nodes.length * 100) : 0;
+      return '<div class="ug-tier"><h4><span class="ug-wave">Wave ' + w.wave + '</span>' + esc(w.title) +
+        '<span class="ug-prog" title="' + done + ' of ' + nodes.length + ' done">' + done + '/' + nodes.length + '</span></h4>' +
+        '<div class="ug-bar" aria-hidden="true"><div class="ug-bar-fill" style="width:' + pct + '%"></div></div>' +
         nodes.map(function (n) {
           var meta = [n.kind, n.owner ? '@' + n.owner : 'unowned'];
           var idle = idleText(n);
@@ -105,6 +109,7 @@
         return '<a href="' + esc(e.url) + '">' + esc(e.ref) + '</a>' + (e.state && e.state !== 'unstamped' && e.state !== 'unknown' ? ' <span class="ug-muted">' + esc(e.state) + '</span>' : '');
       }).join(', ');
       tip.innerHTML = '<div class="ug-tip-t">' + esc(n.title) + '</div>' +
+        '<div class="ug-tip-id"><code>' + esc(n.id) + '</code> \u00B7 ' + esc(n.kind) + ' \u00B7 wave ' + n.wave + '</div>' +
         '<div class="ug-tip-r">' + chip(n.status) + (idleText(n) ? ' <span class="ug-muted">' + esc(idleText(n)) + '</span>' : '') + (n.last_activity ? ' <span class="ug-muted">last ' + esc(String(n.last_activity).slice(0, 10)) + '</span>' : '') + '</div>' +
         (n.note ? '<div class="ug-tip-n">' + esc(n.note) + '</div>' : '') +
         (evid ? '<div class="ug-tip-e">' + evid + '</div>' : '');

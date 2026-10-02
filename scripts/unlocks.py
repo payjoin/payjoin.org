@@ -15,6 +15,8 @@ Usage:
     python scripts/unlocks.py check                      # validate the graph; exit 1 on violations
     python scripts/unlocks.py stamp --offline [--today YYYY-MM-DD]
                                                          # rebuild the sidecar from cached state only
+    python scripts/unlocks.py set <id> owner=<handle> [status=done] [wave=N]
+                                                         # edit one node in place, then validate
     python scripts/unlocks.py --selftest                 # offline checks (no pyyaml needed)
 """
 import os
@@ -373,6 +375,9 @@ def attention(nodes, auto_nodes, idle_days=IDLE_DAYS):
                 reasons.append("no evidence")
         elif days > idle_days:
             reasons.append("idle %dd" % days)
+        states = [(entry.get("evidence") or {}).get(u, {}).get("state") for u in (n.get("evidence") or [])]
+        if states and all(st in ("merged", "closed") for st in states):
+            reasons.append("all evidence landed; mark done?")
         if reasons:
             out.append((n, reasons))
     return out
@@ -390,6 +395,40 @@ def short_ref(url):
     return parts[2] if len(parts) > 2 else url
 
 
+
+
+# ----------------------------------------------------------------- editing
+
+SETTABLE = ("owner", "status", "wave", "note")
+
+
+def set_fields(text, node_id, changes):
+    """Rewrite scalar fields of one record in the raw YAML text, keeping everything else
+    byte for byte (comments, ordering, blank lines). Returns the new text.
+
+    Only the simple one-line fields in SETTABLE are supported; edges and evidence are
+    edited by hand. Raises KeyError for an unknown node or missing field."""
+    lines = text.split("\n")
+    start = next((i for i, l in enumerate(lines) if l.rstrip() == "- id: %s" % node_id), None)
+    if start is None:
+        raise KeyError("no node with id %r" % node_id)
+    end = next((i for i in range(start + 1, len(lines)) if lines[i].startswith("- id: ")), len(lines))
+    for field, value in changes.items():
+        if field not in SETTABLE:
+            raise KeyError("field %r is not settable here (use the editor)" % field)
+        idx = next((i for i in range(start + 1, end) if lines[i].startswith("  %s:" % field)), None)
+        if idx is None:
+            raise KeyError("node %r has no %r line" % (node_id, field))
+        if field == "wave":
+            rendered = str(int(value))
+        elif field == "owner" and not value:
+            rendered = '""'
+        elif field in ("owner", "status") and re.match(r"^[A-Za-z0-9_.-]+$", str(value)):
+            rendered = str(value)
+        else:
+            rendered = '"%s"' % str(value).replace("\\", "\\\\").replace('"', '\\"')
+        lines[idx] = "  %s: %s" % (field, rendered)
+    return "\n".join(lines)
 
 # ----------------------------------------------------------------- page payload
 
@@ -565,6 +604,28 @@ def main(argv):
         print("wrote %s (%d nodes, %d with activity)" % (
             write_auto(stamped, today), len(stamped),
             sum(1 for v in stamped.values() if v["last_activity"])))
+        return 0
+    if cmd == "set":
+        # unlocks.py set <id> owner=<handle> [status=done] [wave=N] [note=...]
+        if len(argv) < 3 or any("=" not in a for a in argv[2:]):
+            sys.exit("usage: unlocks.py set <id> field=value [field=value ...]  (fields: %s)"
+                     % ", ".join(SETTABLE))
+        node_id = argv[1]
+        changes = dict(a.split("=", 1) for a in argv[2:])
+        with open(UNLOCKS) as f:
+            before = f.read()
+        try:
+            after = set_fields(before, node_id, changes)
+        except KeyError as e:
+            sys.exit("set: %s" % e)
+        with open(UNLOCKS, "w") as f:
+            f.write(after)
+        errors = validate(load_nodes())
+        if errors:
+            with open(UNLOCKS, "w") as f:
+                f.write(before)
+            sys.exit("set: reverted, the change made the graph invalid:\n  " + "\n  ".join(errors))
+        print("%s: %s" % (node_id, ", ".join("%s=%s" % kv for kv in changes.items())))
         return 0
     sys.exit(__doc__)
 
