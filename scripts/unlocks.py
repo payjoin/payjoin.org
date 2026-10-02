@@ -390,6 +390,113 @@ def short_ref(url):
     return parts[2] if len(parts) > 2 else url
 
 
+
+# ----------------------------------------------------------------- page payload
+
+WAVE_TITLES = {
+    0: "In flight",
+    1: "Shared spec artifacts",
+    2: "Bindings as unlocks",
+    3: "First movers",
+    4: "Institutional corridors",
+}
+
+
+def public_payload(nodes, auto_nodes, target="bip77-complete", idle_days=IDLE_DAYS,
+                   stamped_at=None):
+    """Everything the Unlocks page needs, computed over the public subgraph only.
+
+    Edges, the critical path and the attention list are all restricted to the nodes passed
+    in, so a caller that passes public_nodes() can embed the result on a public page: no
+    private id, title or note can appear in it.
+    """
+    nodes = sorted(nodes, key=lambda n: (n.get("wave", 9), n["id"]))
+    ids = {n["id"] for n in nodes}
+    pub_edges = [(a, b) for a, b in edges(nodes) if a in ids and b in ids]
+    path = longest_chain(nodes, target)
+    out_nodes = []
+    for n in nodes:
+        entry = auto_nodes.get(n["id"]) or {}
+        ev_state = entry.get("evidence") or {}
+        out_nodes.append({
+            "id": n["id"],
+            "title": n.get("title", n["id"]),
+            "kind": n.get("kind"),
+            "wave": n.get("wave"),
+            "owner": (n.get("owner") or "").strip(),
+            "status": n.get("status"),
+            "note": n.get("note") or "",
+            "days_idle": entry.get("days_idle"),
+            "last_activity": entry.get("last_activity"),
+            "evidence": [
+                {"url": u, "ref": short_ref(u),
+                 "state": (ev_state.get(u) or {}).get("state", "unstamped")}
+                for u in (n.get("evidence") or [])
+            ],
+            "blocked_by": sorted(a for a, b in pub_edges if b == n["id"]),
+            "blocks": sorted(b for a, b in pub_edges if a == n["id"]),
+        })
+    return {
+        "generated": date.today().isoformat(),
+        "stamped_at": stamped_at,
+        "idle_days": idle_days,
+        "target": target,
+        "waves": [{"wave": w, "title": WAVE_TITLES.get(w, "Wave %d" % w)}
+                  for w in WAVES if any(n.get("wave") == w for n in nodes)],
+        "nodes": out_nodes,
+        "edges": [list(e) for e in pub_edges],
+        "critical_path": path,
+        "attention": [{"id": n["id"], "reasons": reasons}
+                      for n, reasons in attention(nodes, auto_nodes, idle_days=idle_days)],
+    }
+
+
+def _h(s):
+    return (str(s).replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+            .replace('"', "&quot;"))
+
+
+def render_html(payload):
+    """The Unlocks page body: the payload as JSON for docs/javascripts/unlocks.js, plus a
+    server-rendered table so the page reads without JavaScript and is indexed by search.
+    JSON is escaped so it cannot close its own script element."""
+    import json
+    data = json.dumps(payload, separators=(",", ":")).replace("</", "<\\/")
+    by_id = {n["id"]: n for n in payload["nodes"]}
+    rows = []
+    for n in payload["nodes"]:
+        idle = "" if n["status"] == "done" or n["days_idle"] is None else "%dd" % n["days_idle"]
+        owner = ('<a href="https://github.com/%s">@%s</a>' % (_h(n["owner"]), _h(n["owner"]))
+                 if n["owner"] else '<span class="ug-muted">unowned</span>')
+        ev = ", ".join('<a href="%s">%s</a>%s' % (
+            _h(e["url"]), _h(e["ref"]),
+            "" if e["state"] in ("unstamped", "unknown") else " <span class=\"ug-muted\">(%s)</span>" % _h(e["state"]))
+            for e in n["evidence"])
+        rows.append(
+            '<tr data-id="%s"><td>%s</td><td class="ug-num">%s</td><td>%s</td><td>%s</td>'
+            '<td><span class="ug-status ug-s-%s">%s</span></td><td class="ug-num">%s</td><td>%s</td></tr>'
+            % (_h(n["id"]), _h(n["title"]), n["wave"], _h(n["kind"]), owner,
+               _h(n["status"]), _h(n["status"]), idle, ev))
+    path_html = " ".join(
+        '<li>%s</li>' % _h(by_id[i]["title"]) for i in payload["critical_path"] if i in by_id)
+    return (
+        '<div class="ug" id="unlock-graph" data-idle-days="%d">\n'
+        '<script type="application/json" id="ug-data">%s</script>\n'
+        '<div class="ug-tiles" id="ug-tiles"></div>\n'
+        '<div class="ug-card ug-gwrap"><div class="ug-tiers" id="ug-graph"></div>'
+        '<div class="ug-note" id="ug-focus">Hover a node to trace what feeds it and what it unlocks. Click to pin.</div></div>\n'
+        '<h2 id="critical-path">Critical path</h2>\n'
+        '<div class="ug-card"><ol class="ug-path" id="ug-path">%s</ol></div>\n'
+        '<h2 id="needs-a-person">Needs a person</h2>\n'
+        '<div class="ug-card" id="ug-attention"></div>\n'
+        '<h2 id="all-nodes">All nodes</h2>\n'
+        '<div class="ug-card ug-tablewrap"><table class="ug-table" id="ug-table"><thead><tr>'
+        '<th>Node</th><th>Wave</th><th>Kind</th><th>Owner</th><th>Status</th><th>Idle</th><th>Evidence</th>'
+        '</tr></thead><tbody>%s</tbody></table></div>\n'
+        '<div class="ug-tip" id="ug-tip" hidden></div>\n'
+        '</div>'
+        % (payload["idle_days"], data, path_html, "\n".join(rows)))
+
 # ----------------------------------------------------------------- CLI
 
 def selftest():

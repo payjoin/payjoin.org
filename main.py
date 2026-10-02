@@ -251,6 +251,13 @@ def define_env(env):
         return '```mermaid\n' + unlocks.render_mermaid(unlock_public, unlock_auto['nodes']) + '\n```'
 
     @env.macro
+    def unlock_graph(target='bip77-complete'):
+        """The Unlocks page body: interactive graph, tiles, critical path, attention, table."""
+        payload = unlocks.public_payload(unlock_public, unlock_auto['nodes'], target=target,
+                                         stamped_at=unlock_auto.get('stamped_at'))
+        return unlocks.render_html(payload)
+
+    @env.macro
     def unlock_critical_path(target='bip77-complete'):
         """Longest chain of blockers ending at target, over public nodes only."""
         by_id = {n['id']: n for n in unlock_public}

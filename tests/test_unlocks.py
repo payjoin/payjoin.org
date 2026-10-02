@@ -229,7 +229,9 @@ def test_page_template_never_emits_private_title(tmp_path, monkeypatch):
     assert PRIVATE_TITLE not in page
     assert "zebra" not in page
     assert "Fixed-ephemeral hook" in page and "BIP Complete" in page
-    assert "1. **Fixed-ephemeral hook**" in page  # critical path, computed
+    # critical path, computed: the server-rendered list starts at the hook
+    path_html = page.split('<ol class="ug-path"', 1)[1].split("</ol>", 1)[0]
+    assert path_html.lstrip().lstrip('id="ug-path">').lstrip().startswith("<li>Fixed-ephemeral hook</li>")
     assert "[rust-payjoin#" not in page  # fixture URLs only
     # Template-facing data must not contain the private node at all.
     assert all(n["public"] is True for n in env.macros["unlock_nodes"]())
@@ -269,3 +271,26 @@ def test_site_build_excludes_private_node_from_page_and_search_index(tmp_path):
             if name.endswith((".html", ".json", ".xml", ".txt", ".js")):
                 with open(path, errors="ignore") as f:
                     assert PRIVATE_TITLE not in f.read(), path
+
+
+# ----------------------------------------------------------------- page payload
+
+def test_payload_and_html_exclude_private_nodes():
+    nodes = fixture_nodes()
+    auto = unlocks.stamp(nodes, RECORDS, today="2026-10-02")
+    pub = unlocks.public_nodes(nodes)
+    payload = unlocks.public_payload(pub, auto, target="complete", stamped_at="2026-10-02")
+    ids = {n["id"] for n in payload["nodes"]}
+    assert "secret" not in ids
+    for a, b in payload["edges"]:
+        assert a in ids and b in ids
+    for n in payload["nodes"]:
+        assert all(x in ids for x in n["blocked_by"] + n["blocks"])
+    assert all(i in ids for i in payload["critical_path"])
+    assert all(a["id"] in ids for a in payload["attention"])
+    html = unlocks.render_html(payload)
+    assert PRIVATE_TITLE not in html
+    assert "zebra" not in html
+    assert 'id="ug-data"' in html and "</script>" in html
+    # the JSON cannot terminate its own script element
+    assert "<\\/" in html or "</" not in html.split('id="ug-data">', 1)[1].split("</script>", 1)[0]
