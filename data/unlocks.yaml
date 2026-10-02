@@ -1,0 +1,605 @@
+# The unlock graph: what has to ship, in what order, to get from today's artifacts to
+# 50,000 payjoins a week. One record per node. Human-owned; machine facts (last activity,
+# evidence state, days idle) live in data/unlocks-auto.yaml, written nightly.
+#
+# Fields
+#   id          stable slug, referenced by blocks/blocked_by
+#   title       what the node is
+#   kind        artifact | spec | binding | corridor | cohort | integration
+#   wave        0..4, the build order
+#   public      true -> rendered on the public site; false -> never leaves this repo
+#   owner       GitHub handle, or "" when nobody has claimed it
+#   blocked_by  ids that must finish before this one can
+#   blocks      ids this one holds up (declare an edge on either side; both is fine)
+#   evidence    URLs the nightly refresh stamps (GitHub issues, PRs, repos get live state)
+#   status      done | active | idle | not-started
+#   note        one line, human-owned
+#
+# Public rule: nodes about our own artifacts (releases, bindings, test vectors, spec PRs,
+# BIP status) are public, as are integrations already listed on the public Integrations
+# page. Anything naming a company that is not already public there, and anything that
+# reads as a pitch, stays private. When in doubt, private.
+#
+# Validate with: python scripts/unlocks.py check   (the site build runs the same check)
+
+# ---------------------------------------------------------------- wave 0: in flight
+
+- id: payjoin-1-0
+  title: payjoin 1.0.0 and its first binding releases
+  kind: artifact
+  wave: 0
+  public: true
+  owner: ""
+  blocked_by: []
+  blocks: [nuget-stable, npm-discoverability]
+  evidence:
+    - https://github.com/payjoin/rust-payjoin/releases/tag/payjoin-1.0.0
+    - https://github.com/payjoin/rust-payjoin/releases/tag/payjoin-csharp-0.1.0+payjoin-1.0.0
+    - https://github.com/payjoin/rust-payjoin/releases/tag/payjoin-javascript-0.2.0+payjoin-1.0.0
+  status: done
+  note: Tagged 2026-08-12 after ten months of release candidates; C# and JavaScript bindings followed on 08-27.
+
+- id: nuget-stable
+  title: C# NuGet stable listing
+  kind: binding
+  wave: 0
+  public: true
+  owner: ""
+  blocked_by: [payjoin-1-0]
+  blocks: [cs-cohort, elenpay-nodeguard]
+  evidence:
+    - https://www.nuget.org/packages/Payjoin
+  status: done
+  note: Stable package listed 2026-08-27; the earlier prerelease-only listing did not show up in default NuGet search.
+
+- id: npm-discoverability
+  title: npm WASM package discoverability
+  kind: binding
+  wave: 0
+  public: true
+  owner: ""
+  blocked_by: [payjoin-1-0]
+  blocks: [ts-cohort]
+  evidence: []
+  status: idle
+  note: README, keywords and positioning against the unmaintained BIP 78 payjoin-client package, which still gets most of the downloads. Not verified since August.
+
+- id: btcpay-plugin-release
+  title: BTCPay Server plugin alpha installable
+  kind: integration
+  wave: 0
+  public: true
+  owner: ""
+  blocked_by: []
+  blocks: [btcpay-corridor]
+  evidence:
+    - https://github.com/ValeraFinebits/btcpayserver-payjoin-plugin
+    - https://github.com/ValeraFinebits/btcpayserver-payjoin-plugin/pull/45
+  status: done
+  note: v0.3.2-alpha.rc.2 published 2026-08-27, built from a cherry-pick branch while upstream PRs waited for review.
+
+- id: bb-mobile-uniffi
+  title: Bull Bitcoin Mobile on the uniffi stack
+  kind: integration
+  wave: 0
+  public: true
+  owner: ""
+  blocked_by: []
+  blocks: [bb-corridor, receiver-population]
+  evidence:
+    - https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2041
+  status: done
+  note: Shipped in v6.13.0 from a fork pinned to a rust-payjoin branch that has not merged.
+
+- id: rp-1815-merge
+  title: Land the Dart reproducible-build branch Bull Bitcoin ships from
+  kind: artifact
+  wave: 0
+  public: true
+  owner: ""
+  blocked_by: []
+  blocks: [bb-corridor]
+  evidence:
+    - https://github.com/payjoin/rust-payjoin/pull/1815
+  status: active
+  note: Until this merges, Bull Bitcoin builds from a fork rather than from a release.
+
+- id: payjoin-1-2-train
+  title: payjoin 1.2.0 release train
+  kind: artifact
+  wave: 0
+  public: true
+  owner: ""
+  blocked_by: []
+  blocks: [bindings-1-2]
+  evidence:
+    - https://github.com/payjoin/rust-payjoin/pull/1931
+    - https://github.com/payjoin/rust-payjoin/pull/1932
+    - https://github.com/payjoin/rust-payjoin/pull/1934
+    - https://github.com/payjoin/rust-payjoin/pull/1935
+    - https://github.com/payjoin/rust-payjoin/pull/1936
+  status: active
+  note: payjoin 1.1.0 was tagged 2026-09-24 and no binding shipped it, so 1.2.0 is the first release since 1.0.0 that binding users will see.
+
+- id: bindings-1-2
+  title: Bindings publish payjoin 1.2.0 (Python, npm, NuGet, pub.dev)
+  kind: binding
+  wave: 0
+  public: true
+  owner: ""
+  blocked_by: [payjoin-1-2-train]
+  blocks: []
+  evidence:
+    - https://github.com/payjoin/rust-payjoin/pull/1935
+  status: active
+  note: Kotlin has nothing to tag; it has no publish job.
+
+- id: bb-corridor
+  title: Bull Bitcoin Mobile to Bull Bitcoin Exchange corridor
+  kind: corridor
+  wave: 0
+  public: true
+  owner: ""
+  blocked_by: [bb-mobile-uniffi, rp-1815-merge]
+  blocks: []
+  evidence: []
+  status: active
+  note: The reference corridor; both ends belong to one company.
+
+- id: btcpay-corridor
+  title: Consumer wallets to BTCPay Server merchants
+  kind: corridor
+  wave: 0
+  public: true
+  owner: ""
+  blocked_by: [btcpay-plugin-release]
+  blocks: [receiver-population]
+  evidence: []
+  status: active
+  note: The only corridor where both ends exist today; Bull Bitcoin and Cake already send.
+
+- id: wasabi-bip77
+  title: Wasabi BIP 77 series
+  kind: integration
+  wave: 0
+  public: true
+  owner: ""
+  blocked_by: []
+  blocks: [receiver-population]
+  evidence:
+    - https://github.com/WalletWasabi/WalletWasabi/pull/14876
+    - https://github.com/WalletWasabi/WalletWasabi/pull/14880
+    - https://github.com/WalletWasabi/WalletWasabi/pull/14875
+  status: active
+  note: Parts 1 and 2 of 5 merged in July 2026; the end-to-end demo PR is open.
+
+# ---------------------------------------------------------------- wave 1: shared spec artifacts
+
+- id: hpke-eph-hook
+  title: Fixed-ephemeral HPKE hook (make encap_with_eph public)
+  kind: artifact
+  wave: 1
+  public: true
+  owner: ""
+  blocked_by: []
+  blocks: [hpke-vectors]
+  evidence: []
+  status: not-started
+  note: encap_with_eph is still pub(crate) in bitcoin-hpke and rust-payjoin hardcodes OsRng, so nobody can produce deterministic vectors.
+
+- id: hpke-vectors
+  title: HPKE test vectors
+  kind: spec
+  wave: 1
+  public: true
+  owner: ""
+  blocked_by: [hpke-eph-hook]
+  blocks: [test-vectors]
+  evidence: []
+  status: not-started
+  note: The crypto layer is what outside engineers read first; ship these before the full suite.
+
+- id: test-vectors
+  title: BIP 77 test vectors (BIP 3 hard gate)
+  kind: spec
+  wave: 1
+  public: true
+  owner: ""
+  blocked_by: [hpke-vectors]
+  blocks: [bip77-complete, mode-b-cohort, crypto-garage, custody-rollout]
+  evidence: []
+  status: not-started
+  note: No vectors exist in rust-payjoin or in a bips PR. Most institutional readers consume vectors and spec status before code.
+
+- id: spec-prs
+  title: "Four BIP 77 spec PRs: request timing, OHTTP caching, OHTTP framing, pjv2 URI"
+  kind: spec
+  wave: 1
+  public: true
+  owner: ""
+  blocked_by: []
+  blocks: [bip77-complete]
+  evidence: []
+  status: not-started
+  note: Drafted as branches; none has been opened against bitcoin/bips.
+
+- id: bip77-complete
+  title: BIP 77 status Draft to Complete
+  kind: spec
+  wave: 1
+  public: true
+  owner: ""
+  blocked_by: [test-vectors, spec-prs]
+  blocks: [mode-b-cohort]
+  evidence: []
+  status: not-started
+  note: Spec status is the opening line of every institutional conversation.
+
+- id: batch-folding-note
+  title: Multi-receiver batch folding design note
+  kind: spec
+  wave: 1
+  public: true
+  owner: ""
+  blocked_by: []
+  blocks: [mode-b-cohort, braiins]
+  evidence: []
+  status: not-started
+  note: Folding N async sessions into one batch transaction is not in BIP 77 today and is the most common structural question from high-volume senders.
+
+- id: watch-only-note
+  title: Watch-only receiver boundary design note
+  kind: spec
+  wave: 1
+  public: true
+  owner: ""
+  blocked_by: []
+  blocks: []
+  evidence: []
+  status: not-started
+  note: What a receiver with no hot key cannot do, and what a minimal signer sidecar looks like.
+
+- id: travel-rule-note
+  title: VASP and travel-rule interaction design note
+  kind: spec
+  wave: 1
+  public: true
+  owner: ""
+  blocked_by: []
+  blocks: [exchange-rollout, upbit-travel-rule]
+  evidence: []
+  status: not-started
+  note: Receiver-contributed inputs and OHTTP indirection against address-ownership verification.
+
+- id: health-versions-endpoint
+  title: GET /health versions endpoint in the pjv2 spec
+  kind: spec
+  wave: 1
+  public: true
+  owner: ""
+  blocked_by: []
+  blocks: []
+  evidence: []
+  status: idle
+  note: Implemented in mailroom; the spec text waits on the pjv2 PR.
+
+# ---------------------------------------------------------------- wave 2: bindings as unlocks
+
+- id: jvm-binding
+  title: UniFFI Kotlin/JVM artifact on Maven Central
+  kind: binding
+  wave: 2
+  public: true
+  owner: ""
+  blocked_by: []
+  blocks: [jvm-cohort, general-bytes-extension]
+  evidence: []
+  status: not-started
+  note: Maven Central has zero payjoin artifacts. Sparrow's maintainer wants native Java rather than bindings, which weakens the wallet case for this node.
+
+- id: react-native
+  title: Official React Native target in payjoin-ffi
+  kind: binding
+  wave: 2
+  public: true
+  owner: ""
+  blocked_by: []
+  blocks: [rn-cohort, satsigner]
+  evidence:
+    - https://github.com/payjoin/rust-payjoin/pull/1851
+  status: active
+  note: Draft PR open since 2026-08-29.
+
+- id: go-binding-spike
+  title: Go binding spike (uniffi-bindgen-go)
+  kind: binding
+  wave: 2
+  public: true
+  owner: ""
+  blocked_by: []
+  blocks: [go-cohort]
+  evidence: []
+  status: not-started
+  note: The spike exists to find out whether uniffi-bindgen-go is production-grade.
+
+- id: c-header
+  title: C header packaging from the uniffi scaffolding
+  kind: binding
+  wave: 2
+  public: true
+  owner: ""
+  blocked_by: []
+  blocks: []
+  evidence: []
+  status: not-started
+  note: uniffi already emits the header; this is packaging.
+
+# ---------------------------------------------------------------- cohorts (private)
+
+- id: cs-cohort
+  title: "C# cohort: Wasabi, Ginger, BTCPay, Elenpay, PrivatePond"
+  kind: cohort
+  wave: 2
+  public: false
+  owner: ""
+  blocked_by: [nuget-stable]
+  blocks: [btcpay-corridor, receiver-population]
+  evidence: []
+  status: active
+  note: Wasabi and BTCPay are moving; the rest have not been approached.
+
+- id: ts-cohort
+  title: "TypeScript cohort: BitPay, Coinos, DFX, Lamassu, Boltz, Exodus, Blocktank"
+  kind: cohort
+  wave: 2
+  public: false
+  owner: ""
+  blocked_by: [npm-discoverability]
+  blocks: [ts-processors, lamassu-prototype]
+  evidence: []
+  status: not-started
+  note: ""
+
+- id: jvm-cohort
+  title: "JVM cohort: General Bytes CAS, Tangem, Bisq"
+  kind: cohort
+  wave: 2
+  public: false
+  owner: ""
+  blocked_by: [jvm-binding]
+  blocks: []
+  evidence: []
+  status: not-started
+  note: Structurally locked out until a JVM artifact exists.
+
+- id: rn-cohort
+  title: "React Native cohort: Satsigner, Peach, BlueWallet lineage"
+  kind: cohort
+  wave: 2
+  public: false
+  owner: ""
+  blocked_by: [react-native]
+  blocks: [receiver-population]
+  evidence: []
+  status: not-started
+  note: ""
+
+- id: go-cohort
+  title: "Go cohort: Luxor, Cordial, Anchorage, Loop, Muun, THORChain"
+  kind: cohort
+  wave: 2
+  public: false
+  owner: ""
+  blocked_by: [go-binding-spike]
+  blocks: []
+  evidence: []
+  status: not-started
+  note: Largest institutional surface, no explicit ask yet.
+
+- id: mode-b-cohort
+  title: "Mode B/C cohort: exchanges, pools and custodians that read PDK as a spec"
+  kind: cohort
+  wave: 4
+  public: false
+  owner: ""
+  blocked_by: [test-vectors, batch-folding-note, bip77-complete]
+  blocks: [exchange-rollout, custody-rollout]
+  evidence: []
+  status: not-started
+  note: 86 of the 135 candidates from the 2026-08-05 discovery run; they consume vectors and spec status before code.
+
+# ---------------------------------------------------------------- wave 3: first movers (private)
+
+- id: receiver-population
+  title: "Receiver population: Bull Bitcoin, Cake, Liana, LDK-Node, Wasabi"
+  kind: cohort
+  wave: 3
+  public: true
+  owner: ""
+  blocked_by: [btcpay-corridor, wasabi-bip77, bb-mobile-uniffi, cs-cohort, rn-cohort, bitkey-corridor]
+  blocks: [sender-integrations]
+  evidence: []
+  status: active
+  note: Sender-side integrations are inert until receivers exist; watch this count the way a marketplace watches its supply side.
+
+- id: bitkey-design-doc
+  title: Bitkey design doc
+  kind: integration
+  wave: 3
+  public: false
+  owner: ""
+  blocked_by: []
+  blocks: [bitkey-corridor]
+  evidence: []
+  status: not-started
+  note: One design doc into an org where the tracker already has allies.
+
+- id: bitkey-corridor
+  title: Cash App to Bitkey
+  kind: corridor
+  wave: 3
+  public: false
+  owner: ""
+  blocked_by: [bitkey-design-doc]
+  blocks: [receiver-population]
+  evidence: []
+  status: not-started
+  note: Single-org corridor; Rust core at both ends.
+
+- id: braiins
+  title: Braiins pool payouts
+  kind: integration
+  wave: 3
+  public: false
+  owner: ""
+  blocked_by: [receiver-population, batch-folding-note]
+  blocks: []
+  evidence: []
+  status: not-started
+  note: Rust shop with a standing fee spend on free on-chain payouts; first mover for pools.
+
+- id: lamassu-prototype
+  title: Lamassu prototype branch
+  kind: integration
+  wave: 3
+  public: false
+  owner: ""
+  blocked_by: [ts-cohort]
+  blocks: []
+  evidence: []
+  status: not-started
+  note: Open-source Node.js ATM software; the first payjoin-capable ATM demo.
+
+- id: general-bytes-extension
+  title: General Bytes CAS payjoin extension
+  kind: integration
+  wave: 3
+  public: false
+  owner: ""
+  blocked_by: [jvm-binding]
+  blocks: []
+  evidence: []
+  status: not-started
+  note: The Java extension API takes a payjoin extension without vendor cooperation once a JVM artifact exists.
+
+- id: broker-cluster
+  title: "Broker cluster: Pocket, Bitcoin Well, 21bitcoin, HardBlock, Bitonic"
+  kind: integration
+  wave: 3
+  public: false
+  owner: ""
+  blocked_by: [receiver-population]
+  blocks: []
+  evidence: []
+  status: not-started
+  note: Recurring scheduled sends to wallets that already receive; pick by response, interchangeable.
+
+- id: ts-processors
+  title: "TypeScript processors: DFX, Coinos, BitPay"
+  kind: integration
+  wave: 3
+  public: false
+  owner: ""
+  blocked_by: [ts-cohort]
+  blocks: []
+  evidence: []
+  status: not-started
+  note: DFX has an open NestJS backend, so a PR is reviewable.
+
+- id: crypto-garage
+  title: Crypto Garage custody
+  kind: integration
+  wave: 3
+  public: false
+  owner: ""
+  blocked_by: [test-vectors]
+  blocks: []
+  evidence: []
+  status: not-started
+  note: Ships Rust today; designing a custody system now for a 2027 launch.
+
+- id: elenpay-nodeguard
+  title: Elenpay NodeGuard
+  kind: integration
+  wave: 3
+  public: false
+  owner: ""
+  blocked_by: [nuget-stable]
+  blocks: []
+  evidence: []
+  status: not-started
+  note: C# treasury and channel-open PSBT pipeline; the NuGet binding exists.
+
+- id: satsigner
+  title: Satsigner
+  kind: integration
+  wave: 3
+  public: false
+  owner: ""
+  blocked_by: [react-native]
+  blocks: []
+  evidence: []
+  status: not-started
+  note: Cheapest integration on the list; its lead contributor already published a React Native payjoin library.
+
+# ---------------------------------------------------------------- wave 4: institutional (private)
+
+- id: sender-integrations
+  title: "Sender-side integrations: pools, ATMs, exchanges, payouts"
+  kind: corridor
+  wave: 4
+  public: false
+  owner: ""
+  blocked_by: [receiver-population]
+  blocks: []
+  evidence: []
+  status: not-started
+  note: The big-volume finds; all inert without receivers.
+
+- id: exchange-rollout
+  title: "Exchange withdrawal batches: Bitfinex first, then the batched-withdrawal one-pager"
+  kind: corridor
+  wave: 4
+  public: false
+  owner: ""
+  blocked_by: [receiver-population, travel-rule-note, mode-b-cohort]
+  blocks: []
+  evidence: []
+  status: not-started
+  note: Largest raw volume; needs a receiver population and the travel-rule analysis first.
+
+- id: custody-rollout
+  title: "Custody: Cordial, Fireblocks, Anchorage, Fidelity, BitGo"
+  kind: corridor
+  wave: 4
+  public: false
+  owner: ""
+  blocked_by: [test-vectors, mode-b-cohort]
+  blocks: []
+  evidence: []
+  status: not-started
+  note: Hand them test vectors, not code.
+
+- id: nicehash
+  title: NiceHash withdrawals
+  kind: integration
+  wave: 4
+  public: false
+  owner: ""
+  blocked_by: [receiver-population]
+  blocks: []
+  evidence: []
+  status: not-started
+  note: Exchange-shaped withdrawal target in the mining vertical.
+
+- id: upbit-travel-rule
+  title: Upbit travel-rule engagement as spec feedback
+  kind: integration
+  wave: 4
+  public: false
+  owner: ""
+  blocked_by: [travel-rule-note]
+  blocks: []
+  evidence: []
+  status: not-started
+  note: Spec feedback, not commercial work.
