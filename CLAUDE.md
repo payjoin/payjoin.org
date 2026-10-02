@@ -300,7 +300,71 @@ python scripts/news.py --selftest
 python scripts/digest.py --selftest
 python scripts/weekly.py --selftest
 python scripts/refresh.py --selftest
+python scripts/unlocks.py --selftest
 ```
+
+---
+
+## Unlock graph
+
+`data/unlocks.yaml` is the dependency graph from today's artifacts to the North Star: one
+record per node (a release, a binding, test vectors, a spec change, a corridor, a cohort of
+candidates), with `blocked_by` / `blocks` edges, evidence URLs, a hand-set `status` and an
+`owner`. It is rendered at `/unlocks/` as a mermaid graph plus tables, and it is the thing
+the weekly check-in should be read against: "what moves node X this week" rather than
+"are you blocked".
+
+| File | Owned by | Contents |
+|---|---|---|
+| `data/unlocks.yaml` | humans, via PR | id, title, kind, wave, public, owner, blocked_by, blocks, evidence, status, note |
+| `data/unlocks-auto.yaml` | `scripts/refresh.py` nightly | per node: `last_activity` (newest across its evidence URLs), `days_idle`, and the state of each URL (open / merged / closed / draft / active / archived / unstamped) |
+
+Field values: `kind` is `artifact | spec | binding | corridor | cohort | integration`;
+`wave` is `0`–`4` (the build order); `status` is `done | active | idle | not-started`.
+An edge may be declared on either side (`a.blocks: [b]` or `b.blocked_by: [a]`); the code
+takes the union. `owner` is a GitHub handle or empty. Leave it empty rather than guess:
+the page lists unowned nodes on purpose.
+
+**`public` is required on every node and is the visibility gate.** The repository is
+private and the site is public (next section). `main.py` drops every node that is not
+`public: true` before anything template-facing exists, so a private node never reaches a
+page, the mermaid source, or `search_index.json`. The rule for setting it: nodes about our
+own artifacts (releases, bindings, test vectors, spec PRs, BIP status, mailroom) are public,
+as are integrations already listed on the public Integrations page. Any node that names a
+company not already public there, and anything that reads as a pitch, is private. When
+unsure, private. Private nodes still participate in the private graph, but the public
+page's critical path and attention list are computed over public nodes only, so an edge
+through a private node is simply not drawn.
+
+**Validation runs at build time.** `main.py` calls `unlocks.validate` and raises on a
+dangling id, a cycle, a missing `public`, or a bad `kind` / `wave` / `status`, which fails
+`mkdocs build` (and therefore the Cloudflare deploy) instead of publishing a broken graph.
+Run the same check by hand before opening a PR:
+
+```bash
+nix develop -c python scripts/unlocks.py check
+```
+
+**Staleness** comes from the nightly refresh: `refresh.py` passes the auto-state records it
+already fetched to `unlocks.update`, fetches only the evidence URLs it did not know (one
+extra GraphQL request), and writes `data/unlocks-auto.yaml`, which the workflow commits
+alongside `auto-state.yaml`. Evidence URLs that are not GitHub issues, PRs, discussions or
+repos (release pages, package registries) are kept and shown but reported `unstamped`.
+To rebuild the sidecar from cached state without a token:
+
+```bash
+nix develop -c python scripts/unlocks.py stamp --offline
+```
+
+**Adding a node**: append a record to `data/unlocks.yaml` with every field present (copy
+a neighbour), point `evidence` at the PR or issue that will move when the work moves, set
+`public` deliberately, run `check`, and open a PR. Mark a node `done` by hand when it ships;
+the refresh never changes `status`.
+
+Tests live in `tests/` and run with `nix develop -c python -m pytest`. They cover the
+validator (dangling id, cycle, missing flags), the critical-path computation, offline
+stamping, and a private-node leak check that builds the site from a fixture and asserts the
+private title is absent from the page and from the search index.
 
 ---
 
@@ -355,9 +419,12 @@ disabled on the repo.
 ├── mkdocs.yml
 ├── docs/
 │   ├── index.md          # What this tracker is
-│   └── integrations.md   # Table rendered from YAML
+│   ├── integrations.md   # Table rendered from YAML
+│   └── unlocks.md        # Unlock graph rendered from YAML
 ├── data/
-│   └── integrations.yaml # Canonical data
+│   ├── integrations.yaml # Canonical data
+│   ├── unlocks.yaml      # Unlock graph (human-owned)
+│   └── unlocks-auto.yaml # Unlock graph staleness (bot-owned)
 └── .github/
     └── workflows/
         └── deploy.yml    # GitHub Pages deployment
