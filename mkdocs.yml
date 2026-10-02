@@ -13,6 +13,9 @@ theme:
 extra_css:
   - stylesheets/extra.css
 
+extra_javascript:
+  - javascripts/unlocks.js
+
 plugins:
   - search
   - macros
