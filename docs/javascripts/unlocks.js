@@ -112,7 +112,8 @@
         '<div class="ug-tip-id"><code>' + esc(n.id) + '</code> \u00B7 ' + esc(n.kind) + ' \u00B7 wave ' + n.wave + '</div>' +
         '<div class="ug-tip-r">' + chip(n.status) + (idleText(n) ? ' <span class="ug-muted">' + esc(idleText(n)) + '</span>' : '') + (n.last_activity ? ' <span class="ug-muted">last ' + esc(String(n.last_activity).slice(0, 10)) + '</span>' : '') + '</div>' +
         (n.note ? '<div class="ug-tip-n">' + esc(n.note) + '</div>' : '') +
-        (evid ? '<div class="ug-tip-e">' + evid + '</div>' : '');
+        (evid ? '<div class="ug-tip-e">' + evid + '</div>' : '') +
+        '<div class="ug-tip-cmd">claim: <code>' + esc(setCmd(n.id, 'owner', 'you')) + '</code><span class="ug-muted"> \u00B7 click the card to copy</span></div>';
       tip.hidden = false;
       moveTip(ev);
     }
@@ -122,6 +123,15 @@
       if (x + w > window.innerWidth - 8) x = ev.clientX - w - pad;
       if (y + h > window.innerHeight - 8) y = ev.clientY - h - pad;
       tip.style.left = x + 'px'; tip.style.top = y + 'px';
+    }
+    function setCmd(id, field, value) {
+      return 'python scripts/unlocks.py set ' + id + ' ' + field + '=' + value;
+    }
+    function copyText(s, el) {
+      if (!navigator.clipboard) return;
+      navigator.clipboard.writeText(s).then(function () {
+        focusEl.innerHTML = 'Copied <code>' + esc(s) + '</code>. Run it in the tracker repo, or use the "Set an unlock node" workflow in the Actions tab.';
+      }, function () {});
     }
     nodeEls.forEach(function (el) {
       el.addEventListener('mouseenter', function (ev) { if (!pinned) trace(el.dataset.id); showTip(byId[el.dataset.id], ev); });
@@ -133,6 +143,7 @@
         if (ev.target.closest('a')) return;
         if (pinned === el.dataset.id) { pinned = null; clear(); return; }
         pinned = el.dataset.id; trace(pinned);
+        copyText(setCmd(pinned, 'owner', 'you'), el);
       });
     });
     document.addEventListener('keydown', function (ev) { if (ev.key === 'Escape' && pinned) { pinned = null; clear(); } });

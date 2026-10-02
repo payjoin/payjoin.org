@@ -366,7 +366,9 @@ nix develop -c python scripts/unlocks.py set go-binding-spike wave=3
 ```
 
 It rewrites only that record's line, keeps comments and ordering, validates the graph and
-reverts if the change broke it. Commit the result. The node id is shown in the tooltip on the
+reverts if the change broke it. Commit the result. Without a checkout, the same edit runs from
+the Actions tab: workflow "Set an unlock node" (`.github/workflows/unlock-set.yml`), which
+commits to master as the bot and names the actor in the commit body. The node id is shown in the tooltip on the
 page. Settable fields: `owner`, `status`, `wave`, `note`; edges and evidence are edited by
 hand.
 

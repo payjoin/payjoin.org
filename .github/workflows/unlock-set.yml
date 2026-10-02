@@ -1,0 +1,71 @@
+name: Set an unlock node
+
+# Assign, finish or move one node of the unlock graph without a local checkout: Actions
+# tab -> "Set an unlock node" -> "Run workflow", or
+#     gh workflow run unlock-set.yml -R payjoin/integrations-tracker \
+#        -f id=test-vectors -f field=owner -f value=chavic
+# Runs scripts/unlocks.py set, which edits that one line, validates the graph and refuses
+# an invalid change, then commits to master. Cloudflare Pages rebuilds on push.
+on:
+  workflow_dispatch:
+    inputs:
+      id:
+        description: Node id (shown in the tooltip on the Unlocks page)
+        required: true
+        type: string
+      field:
+        description: Field to set
+        required: true
+        type: choice
+        options: [owner, status, wave, note]
+      value:
+        description: New value (owner = GitHub handle, empty to unassign; status = done | active | idle | not-started; wave = 0-4)
+        required: false
+        type: string
+        default: ""
+
+permissions:
+  contents: write
+
+concurrency:
+  group: tracker-refresh
+  cancel-in-progress: false
+
+jobs:
+  set:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install deps
+        run: pip install pyyaml
+
+      - name: Set the field
+        env:
+          NODE_ID: ${{ inputs.id }}
+          FIELD: ${{ inputs.field }}
+          VALUE: ${{ inputs.value }}
+        run: python scripts/unlocks.py set "$NODE_ID" "$FIELD=$VALUE"
+
+      - name: Commit
+        env:
+          NODE_ID: ${{ inputs.id }}
+          FIELD: ${{ inputs.field }}
+          VALUE: ${{ inputs.value }}
+          ACTOR: ${{ github.actor }}
+        run: |
+          git add data/unlocks.yaml
+          if git diff --cached --quiet; then
+            echo "No change."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "unlocks: $NODE_ID $FIELD=$VALUE" -m "Set from the Actions tab by $ACTOR."
+          git push origin HEAD:master || {
+            git pull --rebase origin master && git push origin HEAD:master
+          }

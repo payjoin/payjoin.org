@@ -86,4 +86,7 @@
 .ug-tip .ug-tip-r { display: flex; gap: 8px; align-items: center; margin-bottom: 4px; }
 .ug-tip .ug-tip-n { color: var(--ug-ink-2); margin-bottom: 4px; }
 .ug-tip .ug-tip-e a { color: var(--ug-accent); }
+.ug-tip .ug-tip-cmd { margin-top: 6px; padding-top: 6px; border-top: 1px solid var(--ug-ring); font-size: 0.6rem; color: var(--ug-ink-2); }
+.ug-tip .ug-tip-cmd code { font-size: 0.6rem; background: transparent; padding: 0; color: var(--md-default-fg-color); }
+.ug-howto code { font-size: 0.66rem; }
 @media (max-width: 600px) { .ug-tiers { min-width: 0; grid-template-columns: 1fr; } }
