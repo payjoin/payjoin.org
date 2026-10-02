@@ -1,5 +1,11 @@
 import os
+import sys
+
 import yaml
+
+# scripts/unlocks.py holds the unlock-graph logic shared with the nightly refresh.
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), 'scripts'))
+import unlocks  # noqa: E402
 
 # Kinds the Outside activity page knows how to label, in the order they read best.
 _OUTSIDE_KINDS = (
@@ -220,6 +226,53 @@ def define_env(env):
         if len(text) <= length:
             return text
         return text[:length].rsplit(' ', 1)[0] + '…'
+
+    # Unlock graph (data/unlocks.yaml + data/unlocks-auto.yaml). The site is public and
+    # the repository is not: private nodes are dropped here, before anything template-facing
+    # exists, the same way PRIVATE_FIELDS strips the CRM columns above. A broken graph
+    # (dangling id, cycle, missing public flag) fails the build rather than publishing.
+    unlock_errors = unlocks.validate(unlocks.load_nodes('data/unlocks.yaml'))
+    if unlock_errors:
+        raise ValueError('data/unlocks.yaml is invalid:\n  ' + '\n  '.join(unlock_errors))
+    unlock_public = unlocks.public_nodes(unlocks.load_nodes('data/unlocks.yaml'))
+    unlock_auto = unlocks.load_auto('data/unlocks-auto.yaml')
+    for n in unlock_public:
+        n['auto'] = unlock_auto['nodes'].get(n['id']) or {'last_activity': None, 'days_idle': None, 'evidence': {}}
+    unlock_public.sort(key=lambda n: (n.get('wave', 9), n['id']))
+
+    @env.macro
+    def unlock_nodes():
+        """Public unlock-graph nodes with their machine facts joined, in wave order."""
+        return unlock_public
+
+    @env.macro
+    def unlock_mermaid():
+        """The public unlock graph as a fenced mermaid block."""
+        return '```mermaid\n' + unlocks.render_mermaid(unlock_public, unlock_auto['nodes']) + '\n```'
+
+    @env.macro
+    def unlock_critical_path(target='bip77-complete'):
+        """Longest chain of blockers ending at target, over public nodes only."""
+        by_id = {n['id']: n for n in unlock_public}
+        return [by_id[i] for i in unlocks.longest_chain(unlock_public, target)]
+
+    @env.macro
+    def unlock_attention(idle_days=unlocks.IDLE_DAYS):
+        """Open public nodes with no owner, no evidence, or idle longer than idle_days."""
+        return unlocks.attention(unlock_public, unlock_auto['nodes'], idle_days=idle_days)
+
+    @env.macro
+    def unlock_idle_days():
+        return unlocks.IDLE_DAYS
+
+    @env.macro
+    def unlock_stamped_at():
+        return unlock_auto.get('stamped_at')
+
+    @env.filter
+    def short_ref(url):
+        """Compact label for an evidence URL ('rust-payjoin#1851', 'owner/repo')."""
+        return unlocks.short_ref(url)
 
     # Load research data
     with open('data/research.yaml', 'r') as f:

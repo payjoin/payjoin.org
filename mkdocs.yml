@@ -23,6 +23,7 @@ nav:
   - Weekly: weekly.md
   - Outside activity: outside.md
   - Integrations: integrations.md
+  - Unlocks: unlocks.md
   - Research: research.md
   - Grants: grants.md
 
@@ -30,4 +31,8 @@ markdown_extensions:
   - tables
   - admonition
   - pymdownx.details
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format

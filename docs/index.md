@@ -12,6 +12,8 @@ Weekly payjoin volume is the measure of success. Everything else this tracker co
 
 The target answers the challenge Greg Maxwell set in his 2013 thread [CoinJoin: Bitcoin privacy for the real world](https://bitcointalk.org/index.php?topic=279249.0) and its [bounty](https://bitcointalk.org/index.php?topic=279249.msg2983911#msg2983911) for "making improved transaction privacy a practical reality for Bitcoin users". 50,000 payjoins a week is what that practical reality looks like.
 
+The [Unlocks](unlocks.md) page is the path from here to 50,000/week: the artifacts that have to ship, what each one unblocks, and how long each has sat still.
+
 ## Data Source
 
 The canonical data lives in this repository at `data/integrations.yaml`. This YAML file is the single source of truth.
