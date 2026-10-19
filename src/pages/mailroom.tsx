@@ -510,13 +510,6 @@ export default function Mailroom(): JSX.Element {
             directory at random for each session. A wallet that ships with its
             own fixed subset is fingerprinted by that subset.
           </p>
-          <p>
-            The canonical list is the Operators section of the{" "}
-            <a href="https://github.com/payjoin/rust-payjoin/blob/master/payjoin-mailroom/README.md#operators">
-              payjoin-mailroom README
-            </a>
-            . This page mirrors it.
-          </p>
           <div className="mr-ops-list">
             <div className="mr-ops-card">
               <span className="mr-ops-name">Ava Chow</span>
@@ -562,11 +555,11 @@ export default function Mailroom(): JSX.Element {
           <p>
             <strong>How to get listed.</strong> Read this brief, run a
             mailroom that meets the criteria, then{" "}
-            <a href="https://github.com/payjoin/rust-payjoin/edit/master/payjoin-mailroom/README.md">
+            <a href="https://github.com/payjoin/payjoin.org/edit/master/src/pages/mailroom.tsx">
               open a pull request
             </a>{" "}
-            adding a row to the README table from the row template there.
-            Send your security contact to hello@payjoin.org. It is not
+            adding an operator card to this page, following the existing
+            ones. Send your security contact to hello@payjoin.org. It is not
             published. Objections and questions are handled in the open on the pull
             request. The Payjoin Foundation curates the list against the
             published criteria.
