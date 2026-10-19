@@ -362,8 +362,8 @@ export default function Mailroom(): JSX.Element {
           <p>
             The exact list of metrics, the rules that keep them coarse, and the
             tests that enforce those rules are in the{" "}
-            <a href="https://github.com/payjoin/rust-payjoin/blob/payjoin-mailroom-0.1.3/payjoin-mailroom/README.md#telemetry">
-              Telemetry section of the payjoin-mailroom 0.1.3 README
+            <a href="https://crates.io/crates/payjoin-mailroom#user-content-telemetry">
+              Telemetry section of the payjoin-mailroom README
             </a>
             . That section is the only description we maintain.
           </p>

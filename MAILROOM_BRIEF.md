@@ -51,7 +51,7 @@ V2 (BIP 77) payloads are fully end-to-end encrypted. V1 backwards-compatible req
 ### Aggregate Metrics: Four Integers a Week
 Listed operators report coarse aggregate metrics to the Payjoin Foundation. A mailroom built with the `telemetry` feature and configured with a `[telemetry]` section exports four counts a week, each covering the last completed Monday-to-Monday UTC week. The counts carry no IP addresses, mailbox IDs, endpoints or other attributes, only the service name and the domain the operator chooses. Logs are never exported.
 
-**Why this does not harm privacy.** Payjoin privacy depends on nobody being able to tie a user to a mailbox or a transaction. A weekly total across every user of a mailroom, exported after the week has closed, has no identifier, no timestamp finer than a week and no link to the chain. The exact list of metrics and the tests that enforce these rules are in the [Telemetry section of the payjoin-mailroom 0.1.3 README](https://github.com/payjoin/rust-payjoin/blob/payjoin-mailroom-0.1.3/payjoin-mailroom/README.md#telemetry).
+**Why this does not harm privacy.** Payjoin privacy depends on nobody being able to tie a user to a mailbox or a transaction. A weekly total across every user of a mailroom, exported after the week has closed, has no identifier, no timestamp finer than a week and no link to the chain. The exact list of metrics and the tests that enforce these rules are in the [Telemetry section of the payjoin-mailroom README](https://crates.io/crates/payjoin-mailroom#user-content-telemetry).
 
 ### What You Need
 
