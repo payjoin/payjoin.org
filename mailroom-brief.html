@@ -174,8 +174,9 @@
   }
   .footer a { color: #777; text-decoration: none; }
 
-  /* Page break hint between FAQ items to avoid orphans */
-  .section, .trust-box, .cta { break-inside: avoid; }
+  /* Keep boxes, the table and each FAQ item on one page; let long sections flow */
+  .trust-box, .req-table, .faq-item, .cta { break-inside: avoid; }
+  .section h2 { break-after: avoid; }
 </style>
 </head>
 <body>
