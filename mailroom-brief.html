@@ -174,8 +174,9 @@
   }
   .footer a { color: #777; text-decoration: none; }
 
-  /* Page break hint between FAQ items to avoid orphans */
-  .section, .trust-box, .cta { break-inside: avoid; }
+  /* Keep boxes, the table and each FAQ item on one page; let long sections flow */
+  .trust-box, .req-table, .faq-item, .cta { break-inside: avoid; }
+  .section h2 { break-after: avoid; }
 </style>
 </head>
 <body>
@@ -225,6 +226,12 @@
 </div>
 
 <div class="section">
+  <h2>Aggregate Metrics: Four Integers a Week</h2>
+  <p>Listed operators report coarse aggregate metrics to the Payjoin Foundation. A mailroom built with the <code>telemetry</code> feature and configured with a <code>[telemetry]</code> section exports four counts a week, each covering the last completed Monday-to-Monday UTC week. The counts carry no IP addresses, mailbox IDs, endpoints or other attributes, only the service name and the domain the operator chooses. Logs are never exported.</p>
+  <p><strong>Why this does not harm privacy.</strong> Payjoin privacy depends on nobody being able to tie a user to a mailbox or a transaction. A weekly total across every user of a mailroom, exported after the week has closed, has no identifier, no timestamp finer than a week and no link to the chain. The exact list of metrics and the tests that enforce these rules are in the <a href="https://crates.io/crates/payjoin-mailroom#user-content-telemetry">Telemetry section of the payjoin-mailroom README</a>.</p>
+</div>
+
+<div class="section">
   <h2>What You Need</h2>
   <table class="req-table">
     <thead>
@@ -236,6 +243,7 @@
       <tr><td><strong>Roles</strong></td><td>Listed operators run both roles, directory and relay, under one domain.</td></tr>
       <tr><td><strong>Storage</strong></td><td>Very minimal. Only config details are persisted. Payjoin payloads are ephemeral.</td></tr>
       <tr><td><strong>Deployment</strong></td><td>Docker image, Nix flake, or build from source. Inline config supported.</td></tr>
+      <tr><td><strong>Metrics</strong></td><td>Build with the <code>telemetry</code> feature and fill in the <code>[telemetry]</code> section. Four integers a week leave your server. Nothing else does.</td></tr>
       <tr><td><strong>Bitcoin Node</strong></td><td><strong>Not required.</strong> Pure relay infrastructure. No chain access needed.</td></tr>
     </tbody>
   </table>
@@ -261,7 +269,7 @@
 
   <div class="faq-item">
     <p class="faq-q">What data does the operator see?</p>
-    <p class="faq-a">Aggregate metrics only: raw mailbox counts (roughly two per payjoin session). The operator never sees payload contents, Bitcoin addresses, or sender/receiver identity. OHTTP blinds client IP from the directory, and all payloads are encrypted end-to-end. The exception is V1 backwards-compatible requests, which are plaintext. V1 is transitional and off unless an operator enables it. This is less visibility than even Signal has running their own infrastructure, since Signal registers phone numbers and sees payload sizes. payjoin-mailroom does neither.</p>
+    <p class="faq-a">Encrypted blobs and their own server logs. The directory sees fixed-size encrypted mailboxes and no IP addresses. The relay sees IP addresses and no content. The operator never sees payload contents, Bitcoin addresses, or sender/receiver identity. The exception is V1 backwards-compatible requests, which are plaintext. V1 is transitional and off unless an operator enables it. What leaves the server is four weekly integers, described under Aggregate Metrics. This is less visibility than even Signal has running their own infrastructure, since Signal registers phone numbers and sees payload sizes. payjoin-mailroom does neither.</p>
   </div>
 
   <div class="faq-item">

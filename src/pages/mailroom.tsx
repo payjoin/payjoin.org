@@ -348,6 +348,35 @@ export default function Mailroom(): JSX.Element {
           </div>
         </div>
 
+        <div className="mr-section" id="metrics">
+          <h2>Aggregate Metrics: Four Integers a Week</h2>
+          <p>
+            Listed operators report coarse aggregate metrics to the Payjoin
+            Foundation. A mailroom built with the <code>telemetry</code>{" "}
+            feature and configured with a <code>[telemetry]</code> section
+            exports four counts a week, each covering the last completed
+            Monday-to-Monday UTC week. The counts carry no IP addresses,
+            mailbox IDs, endpoints or other attributes, only the service name
+            and the domain the operator chooses. Logs are never exported.
+          </p>
+          <p>
+            The exact list of metrics, the rules that keep them coarse, and the
+            tests that enforce those rules are in the{" "}
+            <a href="https://crates.io/crates/payjoin-mailroom#user-content-telemetry">
+              Telemetry section of the payjoin-mailroom README
+            </a>
+            . That section is the only description we maintain.
+          </p>
+          <p>
+            <strong>Why this does not harm privacy.</strong> Payjoin privacy
+            depends on nobody being able to tie a user to a mailbox or a
+            transaction. A weekly total across every user of a mailroom,
+            exported after the week has closed, has no identifier, no
+            timestamp finer than a week and no link to the chain. The
+            Foundation publishes aggregate dashboards from these counts.
+          </p>
+        </div>
+
         <div className="mr-section" id="operators">
           <h2>Payjoin Mailroom Operators</h2>
           <p>
@@ -364,31 +393,18 @@ export default function Mailroom(): JSX.Element {
             directory at random for each session. A wallet that ships with its
             own fixed subset is fingerprinted by that subset.
           </p>
-          <p>
-            The canonical list is the Operators section of the{" "}
-            <a href="https://github.com/payjoin/rust-payjoin/blob/master/payjoin-mailroom/README.md#operators">
-              payjoin-mailroom README
-            </a>
-            . This page mirrors it.
-          </p>
           <div className="mr-ops-list">
-            <div className="mr-ops-card">
-              <span className="mr-ops-name">Ava Chow</span>
-              <span className="mr-ops-meta">US</span>
-              <a href="https://payjoin.achow101.com">payjoin.achow101.com</a>
-              <span className="mr-ops-meta">v0.1.2</span>
-            </div>
             <div className="mr-ops-card">
               <span className="mr-ops-name">BOB Space</span>
               <span className="mr-ops-meta">Thailand</span>
               <a href="https://pj.bobspacebkk.com">pj.bobspacebkk.com</a>
-              <span className="mr-ops-meta">v0.1.2</span>
+              <span className="mr-ops-meta">v0.1.3</span>
             </div>
             <div className="mr-ops-card">
               <span className="mr-ops-name">Vinteum</span>
               <span className="mr-ops-meta">Brazil</span>
               <a href="https://payjoin.lab.vinteum.org">payjoin.lab.vinteum.org</a>
-              <span className="mr-ops-meta">v0.1.2</span>
+              <span className="mr-ops-meta">v0.1.3</span>
             </div>
           </div>
           <p className="mr-ops-note">
@@ -402,9 +418,11 @@ export default function Mailroom(): JSX.Element {
             control, and its mailroom does not share infrastructure with
             another entry. It runs a release within the last two minor versions
             and gives the Payjoin Foundation a security contact that answers.
-            Opening the pull request is consent to be listed. Coarse aggregate
-            metrics will become a requirement once aggregate metrics reporting
-            ships in payjoin-mailroom.
+            Opening the pull request is consent to be listed. It reports
+            coarse aggregate metrics to the Foundation: the four weekly counts
+            described under{" "}
+            <a href="#metrics">Aggregate Metrics</a> above, enabled with the
+            telemetry feature and a <code>[telemetry]</code> section.
           </p>
           <p>
             <strong>Delisting.</strong> An entry is removed when it is
@@ -414,11 +432,11 @@ export default function Mailroom(): JSX.Element {
           <p>
             <strong>How to get listed.</strong> Read this brief, run a
             mailroom that meets the criteria, then{" "}
-            <a href="https://github.com/payjoin/rust-payjoin/edit/master/payjoin-mailroom/README.md">
+            <a href="https://github.com/payjoin/payjoin.org/edit/master/src/pages/mailroom.tsx">
               open a pull request
             </a>{" "}
-            adding a row to the README table from the row template there.
-            Send your security contact to hello@payjoin.org. It is not
+            adding an operator card to this page, following the existing
+            ones. Send your security contact to hello@payjoin.org. It is not
             published. Objections and questions are handled in the open on the pull
             request. The Payjoin Foundation curates the list against the
             published criteria.
@@ -466,6 +484,17 @@ export default function Mailroom(): JSX.Element {
                 <td>
                   Docker image, Nix flake, or build from source. Inline config
                   supported.
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <strong>Metrics</strong>
+                </td>
+                <td>
+                  Build with the telemetry feature and fill in the{" "}
+                  <code>[telemetry]</code> section. Four integers a week leave
+                  your server. Nothing else does. See{" "}
+                  <a href="#metrics">Aggregate Metrics</a>.
                 </td>
               </tr>
               <tr>
@@ -525,12 +554,15 @@ export default function Mailroom(): JSX.Element {
           <div className="mr-faq-item">
             <p className="mr-faq-q">What data does the operator see?</p>
             <p className="mr-faq-a">
-              Aggregate metrics only: raw mailbox counts (roughly two per
-              payjoin session). The operator doesn't see payload contents, Bitcoin
-              addresses, or sender/receiver identity. OHTTP blinds client IP
-              from the directory, and all payloads are encrypted end-to-end.
-              The exception is V1 requests, which are plaintext. V1 is off
-              unless an operator enables it. This is less visibility than even Signal has running their own
+              Encrypted blobs and their own server logs. The directory sees
+              fixed-size encrypted mailboxes and no IP addresses. The relay
+              sees IP addresses and no content. The operator never sees
+              payload contents, Bitcoin addresses, or sender/receiver
+              identity. The exception is V1 requests, which are plaintext. V1
+              is off unless an operator enables it. What leaves the server is
+              four weekly integers, described under{" "}
+              <a href="#metrics">Aggregate Metrics</a>. This is less
+              visibility than even Signal has running their own
               infrastructure, since Signal registers phone numbers and sees
               payload sizes. payjoin-mailroom does neither.
             </p>
