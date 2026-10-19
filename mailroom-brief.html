@@ -225,6 +225,15 @@
 </div>
 
 <div class="section">
+  <h2>Aggregate Metrics: Four Integers a Week</h2>
+  <p>payjoin-mailroom 0.1.3 reports coarse aggregate metrics to the Payjoin Foundation, and listed operators enable it. Build with the <code>telemetry</code> feature and add a <code>[telemetry]</code> section to the config. Without both, nothing is exported. Logs are never exported.</p>
+  <p><strong>What is collected.</strong> Four integers a week, each covering the most recently completed Monday-to-Monday UTC week: HTTP requests completed, HTTP requests started, mailbox entries written, and OHTTP bootstrap tunnels refused at the concurrency cap. Nothing else leaves your server.</p>
+  <p><strong>What is not collected.</strong> The data points carry no attributes: no IP address, mailbox ID, hostname, endpoint, method, status code or protocol version. No payload contents or sizes. No logs. Only the settled week is exported, so there is no live value to watch and no overlapping windows to difference for daily traffic. The export is labelled with exactly two attributes: the service name and the domain you choose. Counts are exact, including zero. Rounding would hide at most a few units from a passive viewer, and anyone able to send traffic could add a known amount and subtract it back out.</p>
+  <p><strong>Why this does not harm privacy.</strong> Payjoin privacy rests on nobody being able to tie a user to a mailbox or a transaction. A weekly total across every user of a mailroom, exported after the week has closed, carries no identifier, no timestamp finer than a week and no link to the chain, so it cannot be tied to anyone.</p>
+  <p><strong>Trust model.</strong> Users trust nothing new. Operators keep their per-request logs on their own machine and send the Foundation four integers a week, labelled with their domain. The Foundation receives those series and publishes aggregate dashboards from them. Each rule above is pinned by a unit test in the mailroom source, and the full description is the <a href="https://github.com/payjoin/rust-payjoin/blob/master/payjoin-mailroom/README.md#telemetry">Telemetry section of the payjoin-mailroom README</a>.</p>
+</div>
+
+<div class="section">
   <h2>What You Need</h2>
   <table class="req-table">
     <thead>
@@ -236,6 +245,7 @@
       <tr><td><strong>Roles</strong></td><td>Listed operators run both roles, directory and relay, under one domain.</td></tr>
       <tr><td><strong>Storage</strong></td><td>Very minimal. Only config details are persisted. Payjoin payloads are ephemeral.</td></tr>
       <tr><td><strong>Deployment</strong></td><td>Docker image, Nix flake, or build from source. Inline config supported.</td></tr>
+      <tr><td><strong>Metrics</strong></td><td>Build with the <code>telemetry</code> feature and fill in the <code>[telemetry]</code> section. Four integers a week leave your server. Nothing else does.</td></tr>
       <tr><td><strong>Bitcoin Node</strong></td><td><strong>Not required.</strong> Pure relay infrastructure. No chain access needed.</td></tr>
     </tbody>
   </table>
@@ -261,7 +271,7 @@
 
   <div class="faq-item">
     <p class="faq-q">What data does the operator see?</p>
-    <p class="faq-a">Aggregate metrics only: raw mailbox counts (roughly two per payjoin session). The operator never sees payload contents, Bitcoin addresses, or sender/receiver identity. OHTTP blinds client IP from the directory, and all payloads are encrypted end-to-end. The exception is V1 backwards-compatible requests, which are plaintext. V1 is transitional and off unless an operator enables it. This is less visibility than even Signal has running their own infrastructure, since Signal registers phone numbers and sees payload sizes. payjoin-mailroom does neither.</p>
+    <p class="faq-a">Encrypted blobs and their own server logs. The directory sees fixed-size encrypted mailboxes and no IP addresses. The relay sees IP addresses and no content. The operator never sees payload contents, Bitcoin addresses, or sender/receiver identity. The exception is V1 backwards-compatible requests, which are plaintext. V1 is transitional and off unless an operator enables it. What leaves the server is four weekly integers, described under Aggregate Metrics. This is less visibility than even Signal has running their own infrastructure, since Signal registers phone numbers and sees payload sizes. payjoin-mailroom does neither.</p>
   </div>
 
   <div class="faq-item">

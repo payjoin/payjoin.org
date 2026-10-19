@@ -48,6 +48,17 @@ The separation also applies to your own wallet. If your organization ships a wal
 
 V2 (BIP 77) payloads are fully end-to-end encrypted. V1 backwards-compatible requests (BIP 78) are plaintext, meaning the directory can see v1 sender IP addresses and transaction contents. V1 support is transitional and will be removed as wallets upgrade to V2. V1 is off unless an operator enables it.
 
+### Aggregate Metrics: Four Integers a Week
+payjoin-mailroom 0.1.3 reports coarse aggregate metrics to the Payjoin Foundation, and listed operators enable it. Build with the `telemetry` feature and add a `[telemetry]` section to the config. Without both, nothing is exported. Logs are never exported.
+
+**What is collected.** Four integers a week, each covering the most recently completed Monday-to-Monday UTC week: HTTP requests completed, HTTP requests started, mailbox entries written, and OHTTP bootstrap tunnels refused at the concurrency cap. Nothing else leaves your server.
+
+**What is not collected.** The data points carry no attributes: no IP address, mailbox ID, hostname, endpoint, method, status code or protocol version. No payload contents or sizes. No logs. Only the settled week is exported, so there is no live value to watch and no overlapping windows to difference for daily traffic. The export is labelled with exactly two attributes: the service name and the domain you choose. Counts are exact, including zero. Rounding would hide at most a few units from a passive viewer, and anyone able to send traffic could add a known amount and subtract it back out.
+
+**Why this does not harm privacy.** Payjoin privacy rests on nobody being able to tie a user to a mailbox or a transaction. A weekly total across every user of a mailroom, exported after the week has closed, carries no identifier, no timestamp finer than a week and no link to the chain, so it cannot be tied to anyone.
+
+**Trust model.** Users trust nothing new. Operators keep their per-request logs on their own machine and send the Foundation four integers a week, labelled with their domain. The Foundation receives those series and publishes aggregate dashboards from them. Each rule above is pinned by a unit test in the mailroom source, and the full description is the Telemetry section of the payjoin-mailroom README.
+
 ### What You Need
 
 | Requirement | Details |
@@ -57,6 +68,7 @@ V2 (BIP 77) payloads are fully end-to-end encrypted. V1 backwards-compatible req
 | Roles | Listed operators run both roles, directory and relay, under one domain. |
 | Storage | Very minimal. Only HPKE key material and config are persisted. Payjoin payloads are ephemeral. |
 | Deployment | Docker image, Nix flake, or build from source. Inline config supported. |
+| Metrics | Build with the `telemetry` feature and fill in the `[telemetry]` section. Four integers a week leave your server. Nothing else does. |
 | Bitcoin Node | **Not required.** Pure relay infrastructure. No chain access needed. |
 
 ### FAQ
@@ -71,7 +83,7 @@ Think of a CDN or encrypted email relay. You forward opaque, encrypted blobs bet
 payjoin-mailroom can screen plaintext V1 requests against a blocked-address list, such as the OFAC list, and can filter requests by IP address regardless of protocol version. BIP 77 sessions are encrypted end to end, so their contents cannot be screened. Operators can enforce their own compliance policies without any changes to the protocol.
 
 **What data does the operator see?**
-Aggregate metrics only: raw mailbox counts (roughly two per payjoin session). The operator never sees payload contents, Bitcoin addresses, or sender/receiver identity. OHTTP blinds client IP from the directory, and all payloads are encrypted end-to-end. The exception is V1 backwards-compatible requests, which are plaintext. V1 is transitional and off unless an operator enables it. This is less visibility than even Signal has running their own infrastructure, since Signal registers phone numbers and sees payload sizes. payjoin-mailroom does neither.
+Encrypted blobs and their own server logs. The directory sees fixed-size encrypted mailboxes and no IP addresses. The relay sees IP addresses and no content. The operator never sees payload contents, Bitcoin addresses, or sender/receiver identity. The exception is V1 backwards-compatible requests, which are plaintext. V1 is transitional and off unless an operator enables it. What leaves the server is four weekly integers, described under Aggregate Metrics. This is less visibility than even Signal has running their own infrastructure, since Signal registers phone numbers and sees payload sizes. payjoin-mailroom does neither.
 
 **Is there a revenue model?**
 Public-good infrastructure, and it is mutual. Your mailroom serves other wallets' users, and your own wallet's users rely on other operators' mailrooms. Running one is a reputation signal that your organization takes Bitcoin privacy seriously.
@@ -127,13 +139,17 @@ domains = ["your-domain.example.com"]
 contact = ["mailto:contact@example.com"]
 
 # --- Telemetry (requires `telemetry` feature) ---
+# Logs are never exported. What leaves this machine is described under
+# "Telemetry" in README.md: four settled-week counts, no attributes.
 [telemetry]
-# OpenTelemetry Protocol (OTLP) endpoint to export telemetry to
+# OpenTelemetry Protocol (OTLP) endpoint to export metrics to
 endpoint = "https://otlp-gateway-prod-us-west-0.grafana.net/otlp"
 # Authentication token for the OTLP endpoint (available upon request)
 auth_token = "<base64 instanceID:token>"
-# The domain you are running the payjoin-mailroom from.
-# This serves as an identifier for metrics collection.
+# Label attached to every exported metric. Chosen by you; your public domain
+# is expected and it is required. Run one mailroom process per value: two
+# processes sharing it each report their own share of the week to the same
+# series.
 operator_domain = "your-domain.example.com"
 
 # --- Access-control (requires `access-control` feature) ---
