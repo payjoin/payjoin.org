@@ -351,146 +351,29 @@ export default function Mailroom(): JSX.Element {
         <div className="mr-section" id="metrics">
           <h2>Aggregate Metrics: Four Integers a Week</h2>
           <p>
-            Aggregate metrics reporting shipped in payjoin-mailroom 0.1.3 and
-            is a listing requirement. It is optional in the software itself:
-            build with the <code>telemetry</code> feature and add a{" "}
-            <code>[telemetry]</code> section to the config. Without both,
-            nothing is exported. Logs are never exported either way. This
-            section states exactly what leaves your server, why it is safe for
-            users, and who sees it. The canonical description, and the one
-            that wins if this page lags behind, is the{" "}
-            <a href="https://github.com/payjoin/rust-payjoin/blob/master/payjoin-mailroom/README.md#telemetry">
-              Telemetry section of the payjoin-mailroom README
+            Listed operators report coarse aggregate metrics to the Payjoin
+            Foundation. A mailroom built with the <code>telemetry</code>{" "}
+            feature and configured with a <code>[telemetry]</code> section
+            exports four counts a week, each covering the last completed
+            Monday-to-Monday UTC week. The counts carry no IP addresses,
+            mailbox IDs, endpoints or other attributes, only the service name
+            and the domain the operator chooses. Logs are never exported.
+          </p>
+          <p>
+            The exact list of metrics, the rules that keep them coarse, and the
+            tests that enforce those rules are in the{" "}
+            <a href="https://github.com/payjoin/rust-payjoin/blob/payjoin-mailroom-0.1.3/payjoin-mailroom/README.md#telemetry">
+              Telemetry section of the payjoin-mailroom 0.1.3 README
             </a>
-            .
+            . That section is the only description we maintain.
           </p>
-          <p>
-            <strong>What is collected.</strong> Four integers per week. Each
-            covers the most recently completed Monday-to-Monday UTC week:
-          </p>
-          <table className="mr-table">
-            <thead>
-              <tr>
-                <th>Gauge</th>
-                <th>Meaning</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>
-                  <code>http_requests_weekly</code>
-                </td>
-                <td>HTTP requests completed</td>
-              </tr>
-              <tr>
-                <td>
-                  <code>http_requests_started_weekly</code>
-                </td>
-                <td>HTTP requests started</td>
-              </tr>
-              <tr>
-                <td>
-                  <code>db_entries_weekly</code>
-                </td>
-                <td>Mailbox entries written</td>
-              </tr>
-              <tr>
-                <td>
-                  <code>bootstrap_tunnel_sheds_weekly</code>
-                </td>
-                <td>OHTTP bootstrap tunnels refused at the concurrency cap</td>
-              </tr>
-            </tbody>
-          </table>
-          <p>
-            The data points carry no attributes. The export is labelled with
-            exactly two resource attributes: <code>service.name</code>, which
-            is always <code>payjoin-mailroom</code>, and{" "}
-            <code>operator.domain</code>, which you choose and which the
-            Foundation dashboards group by. Values are pushed once an hour,
-            and every push in a week carries the same settled value, so the
-            hourly cadence adds delivery attempts, not detail.
-          </p>
-          <p>
-            <strong>What is not collected.</strong>
-          </p>
-          <ul>
-            <li>
-              No IP addresses, mailbox IDs, hostnames, endpoints, HTTP methods,
-              status codes or protocol versions. None of these is attached to
-              any data point.
-            </li>
-            <li>
-              No payload contents and no payload sizes. Nothing about any
-              individual request is exported.
-            </li>
-            <li>
-              No live, daily or per-request figures. Only the settled week is
-              exported. The week in progress is never visible, so there is no
-              live value to watch and no overlapping windows to difference for
-              daily traffic.
-            </li>
-            <li>
-              No logs. Stdout logs stay on your machine whatever the log
-              format.
-            </li>
-            <li>
-              Nothing from the environment. The resource is built from an
-              empty resource, so <code>OTEL_RESOURCE_ATTRIBUTES</code> cannot
-              add anything to it.
-            </li>
-          </ul>
           <p>
             <strong>Why this does not harm privacy.</strong> Payjoin privacy
-            rests on an observer being unable to tie a particular user to a
-            particular mailbox or transaction. A weekly total of requests
-            across every user of a mailroom, exported only after the week has
-            closed, cannot be tied to anyone. It has no timestamp finer than a
-            week, no identifier, and no link to the chain. The counts are
-            exported exactly, including zero. Rounding or withholding small
-            values would hide at most a few units from a passive viewer, and
-            anyone able to send traffic can add a known amount and subtract it
-            back out, so exactness gives up nothing and keeps the numbers
-            honest.
-          </p>
-          <p>
-            <strong>Trust model.</strong>
-          </p>
-          <ul>
-            <li>
-              <strong>Users</strong> trust nothing new. Metrics add no
-              visibility into any session for the operator, the Foundation or
-              anyone else. The guarantees in the trust box above are
-              unchanged.
-            </li>
-            <li>
-              <strong>Operators</strong> keep their own per-request view on
-              stdout, plus a heartbeat line once a minute with requests in
-              flight, open bootstrap tunnels and, on Linux, the open file
-              descriptor count. None of it leaves the machine. What does leave
-              is the four integers above, labelled with the operator's chosen
-              domain, pushed over OTLP to the Foundation's endpoint with an
-              auth token issued on request.
-            </li>
-            <li>
-              <strong>The Payjoin Foundation</strong> receives those series and
-              publishes aggregate dashboards from them. Per-operator weekly
-              series are visible to Foundation dashboard editors and kept at
-              the stack's default retention.
-            </li>
-          </ul>
-          <p>
-            Each rule above is pinned by a unit test in{" "}
-            <code>src/metrics.rs</code> or <code>src/telemetry.rs</code>, and
-            the mailroom is open source. An operator building from source can
-            check the export surface rather than take this page's word for it.
-          </p>
-          <p className="mr-ops-note">
-            The four counters are persisted in <code>weekly_counts.txt</code>{" "}
-            under <code>storage_dir</code>, so a redeploy keeps the week. Run
-            one mailroom process per <code>operator_domain</code>. Two
-            processes sharing a value each report their own share of the week
-            to the same series.
+            depends on nobody being able to tie a user to a mailbox or a
+            transaction. A weekly total across every user of a mailroom,
+            exported after the week has closed, has no identifier, no
+            timestamp finer than a week and no link to the chain. The
+            Foundation publishes aggregate dashboards from these counts.
           </p>
         </div>
 

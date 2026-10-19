@@ -49,15 +49,9 @@ The separation also applies to your own wallet. If your organization ships a wal
 V2 (BIP 77) payloads are fully end-to-end encrypted. V1 backwards-compatible requests (BIP 78) are plaintext, meaning the directory can see v1 sender IP addresses and transaction contents. V1 support is transitional and will be removed as wallets upgrade to V2. V1 is off unless an operator enables it.
 
 ### Aggregate Metrics: Four Integers a Week
-payjoin-mailroom 0.1.3 reports coarse aggregate metrics to the Payjoin Foundation, and listed operators enable it. Build with the `telemetry` feature and add a `[telemetry]` section to the config. Without both, nothing is exported. Logs are never exported.
+Listed operators report coarse aggregate metrics to the Payjoin Foundation. A mailroom built with the `telemetry` feature and configured with a `[telemetry]` section exports four counts a week, each covering the last completed Monday-to-Monday UTC week. The counts carry no IP addresses, mailbox IDs, endpoints or other attributes, only the service name and the domain the operator chooses. Logs are never exported.
 
-**What is collected.** Four integers a week, each covering the most recently completed Monday-to-Monday UTC week: HTTP requests completed, HTTP requests started, mailbox entries written, and OHTTP bootstrap tunnels refused at the concurrency cap. Nothing else leaves your server.
-
-**What is not collected.** The data points carry no attributes: no IP address, mailbox ID, hostname, endpoint, method, status code or protocol version. No payload contents or sizes. No logs. Only the settled week is exported, so there is no live value to watch and no overlapping windows to difference for daily traffic. The export is labelled with exactly two attributes: the service name and the domain you choose. Counts are exact, including zero. Rounding would hide at most a few units from a passive viewer, and anyone able to send traffic could add a known amount and subtract it back out.
-
-**Why this does not harm privacy.** Payjoin privacy rests on nobody being able to tie a user to a mailbox or a transaction. A weekly total across every user of a mailroom, exported after the week has closed, carries no identifier, no timestamp finer than a week and no link to the chain, so it cannot be tied to anyone.
-
-**Trust model.** Users trust nothing new. Operators keep their per-request logs on their own machine and send the Foundation four integers a week, labelled with their domain. The Foundation receives those series and publishes aggregate dashboards from them. Each rule above is pinned by a unit test in the mailroom source, and the full description is the Telemetry section of the payjoin-mailroom README.
+**Why this does not harm privacy.** Payjoin privacy depends on nobody being able to tie a user to a mailbox or a transaction. A weekly total across every user of a mailroom, exported after the week has closed, has no identifier, no timestamp finer than a week and no link to the chain. The exact list of metrics and the tests that enforce these rules are in the [Telemetry section of the payjoin-mailroom 0.1.3 README](https://github.com/payjoin/rust-payjoin/blob/payjoin-mailroom-0.1.3/payjoin-mailroom/README.md#telemetry).
 
 ### What You Need
 
