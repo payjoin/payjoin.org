@@ -416,7 +416,7 @@ export default function Mailroom(): JSX.Element {
             control, and its mailroom does not share infrastructure with
             another entry. It runs a release within the last two minor versions
             and gives the Payjoin Foundation a security contact that answers.
-            Opening the pull request is consent to be listed. It reports
+            Opening the listing request is consent to be listed. It reports
             coarse aggregate metrics to the Foundation: the four weekly counts
             described under{" "}
             <a href="#metrics">Aggregate Metrics</a> above, enabled with the
@@ -430,14 +430,15 @@ export default function Mailroom(): JSX.Element {
           <p>
             <strong>How to get listed.</strong> Read this brief, run a
             mailroom that meets the criteria, then{" "}
-            <a href="https://github.com/payjoin/payjoin.org/edit/master/src/pages/mailroom.tsx">
-              open a pull request
-            </a>{" "}
-            adding an operator card to this page, following the existing
-            ones. Send your security contact to hello@payjoin.org. It is not
-            published. Objections and questions are handled in the open on the pull
-            request. The Payjoin Foundation curates the list against the
-            published criteria.
+            <a href="https://github.com/payjoin/payjoin.org/issues/new?template=mailroom-operator.yml">
+              open a listing request
+            </a>
+            . The form checks each criterion with you and shows how to open
+            the pull request that adds your card, if you want to do it
+            yourself. Send your security contact to hello@payjoin.org. It is
+            not published. Objections and questions are handled in the open
+            on the listing request. The Payjoin Foundation curates the list
+            against the published criteria.
           </p>
         </div>
 
