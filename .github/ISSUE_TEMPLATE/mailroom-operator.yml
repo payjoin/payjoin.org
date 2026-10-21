@@ -1,0 +1,80 @@
+name: Mailroom operator listing
+description: Ask to list your Payjoin mailroom on payjoin.org/mailroom
+title: "Mailroom operator: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form to ask for your mailroom to be added to the
+        [Payjoin Mailroom Operators](https://payjoin.org/mailroom#operators)
+        list. Review happens in the open on this issue. The Payjoin
+        Foundation curates the list against the published criteria.
+
+  - type: input
+    id: name
+    attributes:
+      label: Operator name
+      description: The name shown on your operator card.
+      placeholder: Example Org
+    validations:
+      required: true
+
+  - type: input
+    id: country
+    attributes:
+      label: Country
+      description: The country shown on your operator card.
+      placeholder: Brazil
+    validations:
+      required: true
+
+  - type: input
+    id: url
+    attributes:
+      label: Mailroom URL
+      description: The one URL that serves both the directory and the relay.
+      placeholder: https://payjoin.example.org
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: criteria
+    attributes:
+      label: Listing criteria
+      description: >
+        Each item is a requirement on
+        [payjoin.org/mailroom](https://payjoin.org/mailroom#operators).
+        Check every one that your mailroom meets today.
+      options:
+        - label: My mailroom serves both roles, directory and relay, from the one URL above.
+          required: true
+        - label: I run it independently of every other listed operator, with no shared owners, staff, control or infrastructure.
+          required: true
+        - label: It runs a payjoin-mailroom release within the last two minor versions.
+          required: true
+        - label: It reports aggregate metrics to the Payjoin Foundation, with telemetry enabled.
+          required: true
+        - label: I emailed a security contact that answers to hello@payjoin.org, not posted here.
+          required: true
+        - label: If I ship a wallet that syncs through my own backend, it does not default to my own directory.
+          required: true
+        - label: I have read the delisting rules, and I consent to my mailroom being listed publicly.
+          required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ## Optional: open the pull request yourself
+
+        A maintainer can add your card from this issue. To add it
+        yourself, [edit the mailroom page](https://github.com/payjoin/payjoin.org/edit/master/src/pages/mailroom.tsx),
+        add a card inside `mr-ops-list` in the same form as the
+        existing ones, and mention this issue in the pull request.
+
+        ```tsx
+        <div className="mr-ops-card">
+          <span className="mr-ops-name">Example Org</span>
+          <span className="mr-ops-meta">Brazil</span>
+          <a href="https://payjoin.example.org">payjoin.example.org</a>
+        </div>
+        ```
