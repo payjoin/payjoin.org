@@ -398,13 +398,11 @@ export default function Mailroom(): JSX.Element {
               <span className="mr-ops-name">BOB Space</span>
               <span className="mr-ops-meta">Thailand</span>
               <a href="https://pj.bobspacebkk.com">pj.bobspacebkk.com</a>
-              <span className="mr-ops-meta">v0.1.3</span>
             </div>
             <div className="mr-ops-card">
               <span className="mr-ops-name">Vinteum</span>
               <span className="mr-ops-meta">Brazil</span>
               <a href="https://payjoin.lab.vinteum.org">payjoin.lab.vinteum.org</a>
-              <span className="mr-ops-meta">v0.1.3</span>
             </div>
           </div>
           <p className="mr-ops-note">
