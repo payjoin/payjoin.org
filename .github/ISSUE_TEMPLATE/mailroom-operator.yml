@@ -5,10 +5,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Use this form to ask for your mailroom to be added to the
-        [Payjoin Mailroom Operators](https://payjoin.org/mailroom#operators)
-        list. Review happens in the open on this issue. The Payjoin
-        Foundation curates the list against the published criteria.
+        Use this form to ask for your mailroom to be added to the [Payjoin Mailroom Operators](https://payjoin.org/mailroom#operators) list. Review happens in the open on this issue. The Payjoin Foundation curates the list against the published criteria.
 
   - type: input
     id: name
@@ -66,10 +63,7 @@ body:
       value: |
         ## Optional: open the pull request yourself
 
-        A maintainer can add your card from this issue. To add it
-        yourself, [edit the mailroom page](https://github.com/payjoin/payjoin.org/edit/master/src/pages/mailroom.tsx),
-        add a card inside `mr-ops-list` in the same form as the
-        existing ones, and mention this issue in the pull request.
+        A maintainer can add your card from this issue. To add it yourself, [edit the mailroom page](https://github.com/payjoin/payjoin.org/edit/master/src/pages/mailroom.tsx), add a card inside `mr-ops-list` in the same form as the existing ones, and mention this issue in the pull request.
 
         ```tsx
         <div className="mr-ops-card">
