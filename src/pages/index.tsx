@@ -14,7 +14,10 @@ export default function Home(): JSX.Element {
       description="Scale Bitcoin, save fees, and preserve privacy all at once."
     >
       <main className="text-center bg-secondary">
-        <div className="flex flex-col items-center max-sm:gap-20">
+        {/* No gap between sections: each one paints its own full-bleed band and
+            carries its own vertical padding, so a gap here would show the page
+            background as a stripe between them. */}
+        <div className="flex flex-col items-center">
           <HeaderContent />
           <WhyPayjoin />
           <Testimonials />
