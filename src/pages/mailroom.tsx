@@ -400,6 +400,11 @@ export default function Mailroom(): JSX.Element {
               <a href="https://pj.bobspacebkk.com">pj.bobspacebkk.com</a>
             </div>
             <div className="mr-ops-card">
+              <span className="mr-ops-name">Plan ₿ Foundation</span>
+              <span className="mr-ops-meta">Switzerland</span>
+              <a href="https://pj.pow.plan-b.foundation">pj.pow.plan-b.foundation</a>
+            </div>
+            <div className="mr-ops-card">
               <span className="mr-ops-name">Vinteum</span>
               <span className="mr-ops-meta">Brazil</span>
               <a href="https://payjoin.lab.vinteum.org">payjoin.lab.vinteum.org</a>
