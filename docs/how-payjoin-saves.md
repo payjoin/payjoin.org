@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# How Can Payjoin Save 16% on Transaction Fees?
+# How Can Payjoin Save 23% on Transaction Fees?
 
 Payment batching is the most common way for high-volume settlement services like exchanges and payment processors to save fees. But it has been limited to one party, the sender, combining multiple sends together. Ideally, multiple types of transfers could all be combined together. Imagine your deposit to an exchange was batched with others' withdrawals. This combination saves significant overhead compared to making individual transfers, [scaling Bitcoin](./why-payjoin/scaling). Before Payjoin, one could assume all inputs to a transaction were owned by the sender. Payjoin breaks that [common input assumption](https://en.bitcoin.it/wiki/Common-input-ownership_heuristic) by including inputs owned by both sender and receiver, preserving [privacy](./why-payjoin/privacy) as a side effect. Implementing Payjoin batching is the next step to upgrade the whole Bitcoin network's scaling and privacy without any consensus change.
 
@@ -74,7 +74,7 @@ Exchange 3 btc      1 btc to Carol
                    ~2 btc minus fees to Exchange
 ```
 
-Which only cost 𝑏 + 2𝑖 + 5𝑜, saving 𝑏 + 𝑜 compared to when Payjoin isn't used. On top of this, the exchange only creates one change output, which will cost 𝑖 fees to spend in the future. So the real comparison is 𝑏 + 3𝑖 + 5𝑜 versus 2𝑏 + 4𝑖 + 6𝑜, saving 𝑏 + 𝑖 + 𝑜 compared to when Payjoin isn't used, saving 16.66% the costs of transaction in this case.
+Which only cost 𝑏 + 2𝑖 + 5𝑜, saving 𝑏 + 𝑜 compared to when Payjoin isn't used. On top of this, the exchange only creates one change output, which will cost 𝑖 fees to spend in the future. So the real comparison is 𝑏 + 3𝑖 + 5𝑜 versus 2𝑏 + 4𝑖 + 6𝑜, saving 𝑏 + 𝑖 + 𝑜 compared to when Payjoin isn't used. At reference segwit weights (𝑏 = 10.5 vB, 𝑖 = 68 vB, 𝑜 = 31 vB) that is 369.5 vB against a 479 vB baseline, about 23% of the transaction cost in this case.
 
 Since Dave's sweep to the exchange "[cut-through](./why-payjoin/scaling#transaction-cut-through)" to Alice, Bob, Carol, and Erin,
 
