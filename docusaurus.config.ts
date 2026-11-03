@@ -65,6 +65,10 @@ const config: Config = {
             to: '/docs/why-payjoin/privacy',
             from: '/privacy',
           },
+          {
+            to: 'https://github.com/DanGould/rust-payjoin/tree/silent-payjoin/spj-web',
+            from: '/sp',
+          },
         ],
       },
     ],
